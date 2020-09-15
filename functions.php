@@ -7,9 +7,9 @@
  * @package IPHAN_INRC
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'IPHAN_INRC_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'IPHAN_INRC_VERSION', '1.0.0' );
 }
 
 if ( ! function_exists( 'iphan_inrc_setup' ) ) :
@@ -140,16 +140,21 @@ add_action( 'widgets_init', 'iphan_inrc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function iphan_inrc_scripts() {
-	wp_enqueue_style( 'iphan_inrc-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION );
 	wp_style_add_data( 'iphan_inrc-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), IPHAN_INRC_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'iphan_inrc_scripts' );
+
+function iphan_inrc_add_google_fonts() {
+	wp_enqueue_style( 'iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), IPHAN_INRC_VERSION ); 
+}	 
+add_action( 'wp_enqueue_scripts', 'iphan_inrc_add_google_fonts' );
 
 /**
  * Implement the Custom Header feature.

@@ -56,6 +56,6 @@ function iphan_inrc_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function iphan_inrc_customize_preview_js() {
-	wp_enqueue_script( 'iphan_inrc-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'iphan_inrc-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), IPHAN_INRC_VERSION, true );
 }
 add_action( 'customize_preview_init', 'iphan_inrc_customize_preview_js' );
