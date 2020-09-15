@@ -387,6 +387,17 @@ html {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
+/* Container 
+--------------------------------------------- */
+.site-container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5.48%;
+	padding-right: 5.48%;
+	max-width: 1300px;
+	width: 100%;
+}
+
 /* Typography
 --------------------------------------------- */
 body,
@@ -648,23 +659,26 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .site-header {
+	background-color: #58020b;
+}
+
+.site-header .site-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #58020b;
 	color: #ffffff;
 	padding-top: 22px;
 	padding-bottom: 22px;
 }
 
-.site-header a,
-.site-header a:hover,
-.site-header a:focus,
-.site-header a:visited {
+.site-header .site-container a,
+.site-header .site-container a:hover,
+.site-header .site-container a:focus,
+.site-header .site-container a:visited {
 	color: #ffffff;
 }
 
-.site-header .site-title {
+.site-header .site-container .site-title {
 	margin: 0;
 }
 
@@ -681,14 +695,11 @@ textarea {
 	padding-left: 0;
 }
 
-.main-navigation ul > li > ul {
+.main-navigation ul ul.sub-menu {
 	border-top: 1px solid #d9d9d9;
 	border-left: 1px solid #d9d9d9;
 	border-right: 1px solid #d9d9d9;
 	border-bottom: 5px solid #58020b;
-}
-
-.main-navigation ul ul {
 	flex-direction: column;
 	background-color: #ffffff;
 	padding: 10px 20px;
@@ -697,14 +708,24 @@ textarea {
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
+	margin-top: 0px;
+	transition: margin 0.3s ease-out;
 }
 
-.main-navigation ul ul ul {
+.main-navigation ul ul.sub-menu::before {
+	content: '';
+	height: 10px;
+	width: 100%;
+	position: absolute;
+	top: -10px;
+}
+
+.main-navigation ul ul.sub-menu ul {
 	left: -999em;
 	top: 0;
 }
 
-.main-navigation ul ul li {
+.main-navigation ul ul.sub-menu li.menu-item {
 	text-align: right;
 	line-height: 1.5;
 	justify-content: flex-end;
@@ -713,28 +734,29 @@ textarea {
 	border: none;
 }
 
-.main-navigation ul ul li:not(:last-child) {
+.main-navigation ul ul.sub-menu li.menu-item:not(:last-child) {
 	border-bottom: 1px solid #bfbfbf;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.main-navigation ul ul.sub-menu li.menu-item:hover > ul,
+.main-navigation ul ul.sub-menu li.menu-item.focus > ul {
 	display: block;
 	left: auto;
 }
 
-.main-navigation ul ul li:hover {
+.main-navigation ul ul.sub-menu li.menu-item:hover {
 	border-color: #d9d9d9;
 }
 
-.main-navigation ul ul li:hover a {
+.main-navigation ul ul.sub-menu li.menu-item:hover a,
+.main-navigation ul ul.sub-menu li.menu-item:hover a:hover {
 	color: #58020b;
 }
 
-.main-navigation ul ul a,
-.main-navigation ul ul a:visited,
-.main-navigation ul ul a:focus,
-.main-navigation ul ul a:hover {
+.main-navigation ul ul.sub-menu li.menu-item a,
+.main-navigation ul ul.sub-menu li.menu-item a:visited,
+.main-navigation ul ul.sub-menu li.menu-item a:focus,
+.main-navigation ul ul.sub-menu li.menu-item a:hover {
 	white-space: nowrap;
 	min-width: 120px;
 	font-weight: 500;
@@ -746,6 +768,7 @@ textarea {
 .main-navigation ul li.focus > ul {
 	left: auto;
 	right: -1px;
+	margin-top: 10px;
 }
 
 .main-navigation ul > li {
@@ -754,6 +777,8 @@ textarea {
 	text-transform: uppercase;
 	padding: calc(0.25rem + 1px) 20px;
 	line-height: 1;
+	font-size: 1.125rem;
+	letter-spacing: 1px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -891,7 +916,7 @@ textarea {
 }
 
 .custom-logo-link img {
-	padding: 2px;
+	padding: 4px 2px;
 	height: 35px;
 	width: auto;
 }

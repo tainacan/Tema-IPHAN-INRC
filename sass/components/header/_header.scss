@@ -1,20 +1,23 @@
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: $color__vermelho1;
-    color: $color__branco;
-    padding-top: 22px;
-    padding-bottom: 22px; 
 
-    a,
-    a:hover,
-    a:focus,
-    a:visited {
-        color: $color__branco; 
-    }
+    .site-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color__branco;
+        padding-top: 22px;
+        padding-bottom: 22px; 
 
-    .site-title {
-        margin: 0;
+        a,
+        a:hover,
+        a:focus,
+        a:visited {
+            color: $color__branco; 
+        }
+
+        .site-title {
+            margin: 0;
+        }
     }
 }

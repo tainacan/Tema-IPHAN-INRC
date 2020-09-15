@@ -7,14 +7,11 @@
 		margin: 0;
 		padding-left: 0;
 
-		&>li>ul {
+		ul.sub-menu {
 			border-top: 1px solid $color__cinza3;
 			border-left: 1px solid $color__cinza3;
 			border-right: 1px solid $color__cinza3;
 			border-bottom: 5px solid $color__vermelho1;
-		}
-
-		ul {
 			flex-direction: column;
 			background-color: $color__branco;
 			padding: 10px 20px;
@@ -23,13 +20,23 @@
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
+			margin-top: 0px;
+			transition: margin 0.3s ease-out;
+
+			&::before {
+				content: '';
+				height: 10px;
+				width: 100%;
+				position: absolute;
+				top: -10px;
+			}
 
 			ul {
 				left: -999em;
 				top: 0;
 			}
 
-			li {
+			li.menu-item {
 				text-align: right;
 				line-height: 1.5;
 				justify-content: flex-end;
@@ -49,21 +56,21 @@
 				&:hover {
 					border-color: $color__cinza3;
 
-					a {
+					a,
+					a:hover {
 						color: $color__vermelho1;
 					}
 				}
-			}
-
-			a,
-			a:visited,
-			a:focus,
-			a:hover {
-				white-space: nowrap;
-				min-width: 120px;
-				font-weight: 500;
-				color: $color__cinza6;
-				text-transform: none;
+				a,
+				a:visited,
+				a:focus,
+				a:hover {
+					white-space: nowrap;
+					min-width: 120px;
+					font-weight: 500;
+					color: $color__cinza6;
+					text-transform: none;
+				}
 			}
 		}
 
@@ -71,6 +78,7 @@
 		li.focus > ul {
 			left: auto;
 			right: -1px;
+			margin-top: 10px;
 		}
 
 		&>li {
@@ -79,14 +87,13 @@
 			text-transform: uppercase;
 			padding: calc(0.25rem + 1px) 20px;
 			line-height: 1;
+			font-size: 1.125rem;
+			letter-spacing: 1px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
 	
-			&:hover > a,
-			&.focus > a {
-			}
 			&:hover,
 			&:focus {
 				border-color: $color__branco;
