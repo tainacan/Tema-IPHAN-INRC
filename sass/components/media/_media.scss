@@ -9,5 +9,11 @@
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-	display: inline-block;
+	display: flex;
+	
+	img { 
+		padding: 2px;
+		height: 35px;
+		width: auto;
+	}
 }

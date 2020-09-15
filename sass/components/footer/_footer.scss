@@ -1,0 +1,11 @@
+.site-footer {
+    background-image: linear-gradient(to right, $color__vermelho1, $color__vermelho2);
+    color: $color__branco; 
+
+    a,
+    a:hover,
+    a:focus,
+    a:visited {
+        color: $color__branco; 
+    }
+}

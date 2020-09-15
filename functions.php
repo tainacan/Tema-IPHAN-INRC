@@ -152,7 +152,7 @@ function iphan_inrc_scripts() {
 add_action( 'wp_enqueue_scripts', 'iphan_inrc_scripts' );
 
 function iphan_inrc_add_google_fonts() {
-	wp_enqueue_style( 'iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), IPHAN_INRC_VERSION ); 
+	wp_enqueue_style( 'iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), IPHAN_INRC_VERSION ); 
 }	 
 add_action( 'wp_enqueue_scripts', 'iphan_inrc_add_google_fonts' );
 

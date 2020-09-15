@@ -58,19 +58,12 @@ if ( ! function_exists( 'iphan_inrc_header_style' ) ) :
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
 			?>
-			.site-title,
-			.site-description {
-				position: absolute;
-				clip: rect(1px, 1px, 1px, 1px);
-				}
+			.site-title
 			<?php
 			// If the user has set a custom color for the text use that.
 		else :
 			?>
-			.site-title a,
-			.site-description {
-				color: #<?php echo esc_attr( $header_text_color ); ?>;
-			}
+			.site-title a
 		<?php endif; ?>
 		</style>
 		<?php

@@ -1,6 +1,5 @@
 .main-navigation {
 	display: block;
-	width: 100%;
 
 	ul {
 		display: none;
@@ -8,8 +7,17 @@
 		margin: 0;
 		padding-left: 0;
 
+		&>li>ul {
+			border-top: 1px solid $color__cinza3;
+			border-left: 1px solid $color__cinza3;
+			border-right: 1px solid $color__cinza3;
+			border-bottom: 5px solid $color__vermelho1;
+		}
+
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			flex-direction: column;
+			background-color: $color__branco;
+			padding: 10px 20px;
 			float: left;
 			position: absolute;
 			top: 100%;
@@ -22,38 +30,86 @@
 			}
 
 			li {
-
+				text-align: right;
+				line-height: 1.5;
+				justify-content: flex-end;
+				margin-right: 0 !important;
+				padding-right: 0 !important;
+				border: none;
+				
+				&:not(:last-child) {
+					border-bottom: 1px solid $color__cinza4;
+				}
+				
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
 					left: auto;
 				}
+				&:hover {
+					border-color: $color__cinza3;
+
+					a {
+						color: $color__vermelho1;
+					}
+				}
 			}
 
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
+			a,
+			a:visited,
+			a:focus,
+			a:hover {
+				white-space: nowrap;
+				min-width: 120px;
+				font-weight: 500;
+				color: $color__cinza6;
+				text-transform: none;
 			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+			right: -1px;
 		}
-	}
 
-	li {
-		position: relative;
+		&>li {
+			position: relative;
+			border: 1px solid $color__vermelho1;
+			text-transform: uppercase;
+			padding: calc(0.25rem + 1px) 20px;
+			line-height: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+	
+			&:hover > a,
+			&.focus > a {
+			}
+			&:hover,
+			&:focus {
+				border-color: $color__branco;
+			}
+	
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
 
-		&:hover > a,
-		&.focus > a {
+			&.menu-item-has-children {
+				padding-right: 25px;
+
+				&::after {
+					display: block;
+					content: '\0231C';
+					font-size: 1.5rem;
+					rotate: 225deg;
+					color: $color__branco;
+					position: relative;
+					right: -15px;
+					top: -0.3rem;
+				}
+			}
 		}
 	}
 

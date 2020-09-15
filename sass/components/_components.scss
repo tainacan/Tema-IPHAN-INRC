@@ -1,5 +1,9 @@
 /* Navigation
 --------------------------------------------- */
+@import "header/_header";
+
+/* Navigation
+--------------------------------------------- */
 @import "navigation/navigation";
 
 /* Posts and pages
@@ -25,3 +29,7 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+/* Footer
+--------------------------------------------- */
+@import "footer/_footer";
