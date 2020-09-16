@@ -12,6 +12,12 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+			<div id="secondary" class="site-container widget-area">
+				<?php dynamic_sidebar( 'footer-1' ); ?>
+			</div>
+		<?php endif; ?>
+		<div class="site-container"><hr></div>
 		<div class="site-container">
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'iphan_inrc' ) ); ?>">

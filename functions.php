@@ -124,8 +124,8 @@ add_action( 'after_setup_theme', 'iphan_inrc_content_width', 0 );
 function iphan_inrc_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'iphan_inrc' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Footer', 'iphan_inrc' ),
+			'id'            => 'footer-1',
 			'description'   => esc_html__( 'Add widgets here.', 'iphan_inrc' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -152,7 +152,7 @@ function iphan_inrc_scripts() {
 add_action( 'wp_enqueue_scripts', 'iphan_inrc_scripts' );
 
 function iphan_inrc_add_google_fonts() {
-	wp_enqueue_style( 'iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), IPHAN_INRC_VERSION ); 
+	wp_enqueue_style( 'iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), IPHAN_INRC_VERSION ); 
 }	 
 add_action( 'wp_enqueue_scripts', 'iphan_inrc_add_google_fonts' );
 

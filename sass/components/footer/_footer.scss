@@ -1,11 +1,44 @@
 .site-footer {
     background-image: linear-gradient(to right, $color__vermelho1, $color__vermelho2);
     color: $color__branco; 
+    font-family: $font__heading;
 
     a,
     a:hover,
     a:focus,
     a:visited {
         color: $color__branco; 
+    }
+
+    .widget-area {
+        padding-top: 70px; 
+        padding-bottom: calc(70px - 0.75em);
+        column-gap: $columns__margin;
+        column-count: 4;
+
+        &>.widget,
+        &>.widget div {
+            break-inside: avoid;
+        }
+
+        @media screen and (max-width: $screen__md) {
+            column-count: 3;
+        }
+        @media screen and (max-width: $screen__sm) {
+            column-count: 1;
+        }
+    }
+
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .site-info {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
