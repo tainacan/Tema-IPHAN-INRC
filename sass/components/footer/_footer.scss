@@ -1,4 +1,5 @@
 .site-footer {
+    margin-top: 150px;
     background-image: linear-gradient(to right, $color__vermelho1, $color__vermelho2);
     color: $color__branco; 
     font-family: $font__heading;
@@ -29,14 +30,16 @@
         }
     }
 
+
     hr {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        height: 2px;
+        margin: 0px;
+        color: $color__branco;
     }
 
     .site-info {
-        padding-top: 10px;
-        padding-bottom: 20px;
+        padding-top: 35px;
+        padding-bottom: 35px;
         display: flex;
         justify-content: space-between;
         align-items: center;

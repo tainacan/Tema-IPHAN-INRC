@@ -137,6 +137,11 @@
 .main-navigation.toggled ul {
 	display: block;
 }
+.menu-toggle {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
 
 @media screen and (min-width: 37.5em) {
 

@@ -816,6 +816,12 @@ textarea {
 	display: block;
 }
 
+.menu-toggle {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -854,11 +860,6 @@ textarea {
 --------------------------------------------- */
 .sticky {
 	display: block;
-}
-
-.post,
-.page {
-	margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -1032,6 +1033,7 @@ textarea {
 /* Footer
 --------------------------------------------- */
 .site-footer {
+	margin-top: 150px;
 	background-image: linear-gradient(to right, #58020b, #970620);
 	color: #ffffff;
 	font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -1069,13 +1071,14 @@ textarea {
 }
 
 .site-footer hr {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	height: 2px;
+	margin: 0px;
+	color: #ffffff;
 }
 
 .site-footer .site-info {
-	padding-top: 10px;
-	padding-bottom: 20px;
+	padding-top: 35px;
+	padding-bottom: 35px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

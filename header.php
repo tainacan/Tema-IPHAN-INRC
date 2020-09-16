@@ -45,7 +45,9 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'iphan_inrc' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php esc_html_e( 'Primary Menu', 'iphan_inrc' ); ?>">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.745 5.841" height="22.075" width="33.05"><path d="M.002 4.855l8.731.02-.002.966L0 5.82zm.006-2.433l8.731.02-.002.977L.006 3.4zM8.745.02l-.002.966L.01.966.013 0z" fill="#fff"/></svg>
+				</button>
 				<?php
 				wp_nav_menu(
 					array(
