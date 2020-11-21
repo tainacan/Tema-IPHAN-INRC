@@ -127,10 +127,10 @@ function iphan_inrc_widgets_init() {
 			'name'          => esc_html__( 'Footer', 'iphan_inrc' ),
 			'id'            => 'footer-1',
 			'description'   => esc_html__( 'Add widgets here.', 'iphan_inrc' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget %2$s" >',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'after_title'   => '<span class="plus-minus" aria-hidden="false">&nbsp +</span></h2>',
 		)
 	);
 }
@@ -142,6 +142,15 @@ add_action( 'widgets_init', 'iphan_inrc_widgets_init' );
 function iphan_inrc_scripts() {
 	wp_enqueue_style( 'iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION );
 	wp_style_add_data( 'iphan_inrc-style', 'rtl', 'replace' );
+	//instalação do bootstrap
+	wp_enqueue_style('boostrap','https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', array(),'','all');
+	wp_enqueue_script('jquery','https://code.jquery.com/jquery-3.3.1.slim.min.js', array(),null,true);
+    wp_enqueue_script('popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(),null,true);
+    wp_enqueue_script('bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array('jquery'),null,true);
+	
+	// Tainacan Icons
+	wp_register_style( 'TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '' );
+	wp_enqueue_style( 'TainacanIconsFont' );
 
 	wp_enqueue_script( 'iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), IPHAN_INRC_VERSION, true );
 
@@ -149,6 +158,7 @@ function iphan_inrc_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'iphan_inrc_scripts' );
 
 function iphan_inrc_add_google_fonts() {

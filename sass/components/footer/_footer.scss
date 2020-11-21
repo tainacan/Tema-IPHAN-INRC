@@ -1,47 +1,119 @@
 .site-footer {
     margin-top: 150px;
     background-image: linear-gradient(to right, $color__vermelho1, $color__vermelho2);
-    color: $color__branco; 
+    color: $color__branco;
     font-family: $font__heading;
-
     a,
     a:hover,
     a:focus,
     a:visited {
-        color: $color__branco; 
+        color: $color__branco;
     }
-
     .widget-area {
-        padding-top: 70px; 
-        padding-bottom: calc(70px - 0.75em);
-        column-gap: $columns__margin;
-        column-count: 4;
-
         &>.widget,
         &>.widget div {
             break-inside: avoid;
         }
-
-        @media screen and (max-width: $screen__md) {
-            column-count: 3;
-        }
-        @media screen and (max-width: $screen__sm) {
+        @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             column-count: 1;
+            padding-top: 20px;
+            justify-content: space-between;
+            flex-direction: column;
+            display: flex;
+        }
+        @media screen and (min-width: $screen__sm) {
+            .plus-minus {
+                display: none
+            }
+        }
+        @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+            column-count: 1;
+            padding-top: 20px;
+            justify-content: space-between;
+            flex-direction: row;
+            display: flex;
+        }
+        @media screen and (min-width: $screen__sm) {
+            column-count: 3;
+            padding-top: 70px;
+            padding-bottom: calc(70px - 0.75em);
+            justify-content: space-between;
+            flex-direction: row;
+            display: flex;
+        }
+        @media screen and (min-width: $screen__md) {
+            padding-top: 25px;
+            padding-bottom: calc(0px - 0.75em);
+            justify-content: space-between;
+            column-count: 4;
+            flex-direction: row;
+            display: flex;
+        }
+        ul {
+            @media screen and (max-width: $screen__sm) {
+                height: 0px;
+                overflow: hidden;
+                transition: height 0.8s;
+            }
+        }
+        .plus-minus {
+            @media screen and (max-width: $screen__sm) {
+                content: '+'
+            }
         }
     }
-
-
+    .widget-area:hover {
+        ul {
+            @media screen and (max-width: $screen__sm) and (orientation: portrait) {
+                height: 100%;
+                overflow: auto;
+                transition: height 1.2s;
+            }
+            @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+                height: 100%;
+                overflow: auto;
+                transition: height 1.2s;
+            }
+        }
+        .plus-minus {
+            @media screen and (max-width: $screen__sm) {
+                content: '-'
+            }
+        }
+    }
     hr {
         height: 2px;
         margin: 0px;
         color: $color__branco;
     }
-
     .site-info {
-        padding-top: 35px;
-        padding-bottom: 35px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .site-info i{
+        @media screen and (orientation: portrait) and (max-width:$screen__sm ){
+            font-size: 35px
+        }
+        @media screen and (orientation: landscape) and (max-width:$screen__sm ){
+            font-size: 35px
+        }
+        @media screen and (min-width: $screen__sm ){
+            font-size:35px
+        }
+    }
+
+    .site-info>.icons-footer{
+        margin-left: 5%
+    }
+    .site-info>.fonte-iphan {
+        font-size: 25px;
+    }
+    .collapse {
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.8s;
     }
 }
