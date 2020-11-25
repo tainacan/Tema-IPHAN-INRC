@@ -21,7 +21,7 @@
 		<div class="site-container">
 			<div class="site-info">
 					<span class="fonte-iphan">IPHAN</span>
-					<div class="icons-footer">
+					<div class="icons-footer row">
 						<a href="https://twitter.com/">
 					<i size="50px" class="tainacan-icon tainacan-icon-twitter"></i>
 					</a>
