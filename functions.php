@@ -127,7 +127,7 @@ function iphan_inrc_widgets_init() {
 			'name'          => esc_html__( 'Footer', 'iphan_inrc' ),
 			'id'            => 'footer-1',
 			'description'   => esc_html__( 'Add widgets here.', 'iphan_inrc' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s" >',
+			'before_widget' => '<section id="%1$s" class="widget %2$s col-sm-6 col-md-3" >',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '<span class="plus-minus" aria-hidden="false">&nbsp +</span></h2>',

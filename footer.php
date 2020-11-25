@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
-			<div id="secondary" class="site-container widget-area">
+			<div id="secondary" class="site-container widget-area row">
 				<?php dynamic_sidebar( 'footer-1' ); ?>
 			</div>
 		<?php endif; ?>

@@ -1,6 +1,6 @@
 .site-footer {
     margin-top: 150px;
-    background-image: linear-gradient(to right, $color__vermelho1, $color__vermelho2);
+    background-image: $gradiente__vermelho;
     color: $color__branco;
     font-family: $font__heading;
     a,
@@ -93,19 +93,18 @@
         justify-content: space-between;
         align-items: center;
     }
-    .site-info i{
-        @media screen and (orientation: portrait) and (max-width:$screen__sm ){
+    .site-info i {
+        @media screen and (orientation: portrait) and (max-width: $screen__sm) {
             font-size: 35px
         }
-        @media screen and (orientation: landscape) and (max-width:$screen__sm ){
+        @media screen and (orientation: landscape) and (max-width:$screen__sm) {
             font-size: 35px
         }
-        @media screen and (min-width: $screen__sm ){
-            font-size:35px
+        @media screen and (min-width: $screen__sm) {
+            font-size: 35px
         }
     }
-
-    .site-info>.icons-footer{
+    .site-info>.icons-footer {
         margin-left: 5%
     }
     .site-info>.fonte-iphan {
