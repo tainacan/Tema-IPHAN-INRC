@@ -390,8 +390,8 @@ html {
 /* Container 
 --------------------------------------------- */
 .site-container {
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: auto !important;
+	margin-right: auto !important;
 	padding-left: 5.48%;
 	padding-right: 5.48%;
 	max-width: 1300px;
@@ -673,10 +673,12 @@ textarea {
 .site-header .site-container a:focus,
 .site-header .site-container a:visited {
 	color: #ffffff;
+	text-decoration: none;
 }
 
 .site-header .site-container .site-title {
 	margin: 0;
+	text-transform: uppercase;
 }
 
 /* Navigation
@@ -770,7 +772,6 @@ textarea {
 
 .main-navigation ul > li {
 	position: relative;
-	border: 1px solid #58020b;
 	text-transform: uppercase;
 	padding: calc(0.25rem + 1px) 20px;
 	line-height: 1;
@@ -805,9 +806,47 @@ textarea {
 	top: -0.3rem;
 }
 
-.main-navigation a {
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.main-navigation .menu > ul {
+		position: absolute;
+		top: 18%;
+		left: 0%;
+		background-image: linear-gradient(to right, #58020b, #970620);
+		width: 100%;
+		height: 50%;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.main-navigation .menu > ul {
+		position: absolute;
+		top: 33%;
+		left: 0%;
+		background-image: linear-gradient(to right, #58020b, #970620);
+		width: 100%;
+		height: 70%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main-navigation ul > li {
+		justify-content: left;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.main-navigation ul > li {
+		margin-left: 3%;
+	}
+}
+
+a {
 	display: block;
 	text-decoration: none;
+}
+
+.menu > ul > li > a:hover {
+	text-decoration: underline;
 }
 
 /* Small menu. */
@@ -816,13 +855,37 @@ textarea {
 	display: block;
 }
 
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.menu-toggle > svg {
+		display: block;
+		position: absolute;
+		right: 5%;
+		top: 11%;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.menu-toggle > svg {
+		display: block;
+		position: absolute;
+		right: 5%;
+		top: 20%;
+	}
+}
+
 .menu-toggle {
 	background: transparent;
 	border: none;
 	cursor: pointer;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (max-width: 768px) {
+	button:focus {
+		outline: none !important;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -935,6 +998,114 @@ textarea {
 
 .widget ul a:not(:hover):not(:focus) {
 	text-decoration: none;
+}
+
+.widget .wp-calendar-table > caption {
+	color: #fff;
+	font-weight: bold;
+}
+
+.widget .search-field,
+.widget .search-field:active,
+.widget .search-field:focus {
+	border-radius: 15px;
+	border: none;
+}
+
+.widget label {
+	border: none;
+}
+
+.widget .search-form,
+.widget .search-form > label >,
+.widget .search-form > label > .search-field {
+	border: none;
+}
+
+/* .widget_calendar {
+    border: 1px #fff solid;
+}
+
+.widget_calendar::before {
+    font-family: "tainacan-icon tainacan-icon-calendar";
+} */
+.widget_calendar {
+	float: left;
+}
+
+#wp-calendar {
+	width: 100%;
+}
+
+#wp-calendar caption {
+	text-align: right;
+	color: #fff;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+#wp-calendar thead {
+	font-size: 10px;
+}
+
+#wp-calendar thead th {
+	padding-bottom: 10px;
+}
+
+#wp-calendar tbody {
+	color: #000;
+}
+
+#wp-calendar a:visited,
+#wp-calendar a {
+	color: #000;
+	text-decoration: underline;
+}
+
+#wp-calendar tbody td {
+	background: #f5f5f5;
+	border: 1px solid #fff;
+	text-align: center;
+	padding: 8px;
+}
+
+#wp-calendar tbody td:hover,
+#wp-calendar tbody a:hover {
+	background: #970620;
+	color: #fff;
+}
+
+#wp-calendar tbody .pad {
+	background: none;
+}
+
+#wp-calendar tfoot #next {
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+#wp-calendar tfoot #prev {
+	font-size: 10px;
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+
+.widget.widget_search .search-form .search-field {
+	position: absolute;
+	padding: 0 19px;
+	/*     background-image: url(assets/images/search.png); */
+	border: 0;
+	background-color: transparent;
+	right: 0px;
+	top: 29px;
+	color: #7a7a7a;
+	cursor: pointer;
+	font-size: 0px;
+	height: 17px;
+	width: 10px;
+	background-repeat: no-repeat;
 }
 
 /* Media

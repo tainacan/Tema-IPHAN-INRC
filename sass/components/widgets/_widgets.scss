@@ -66,6 +66,7 @@
     font-family: "tainacan-icon tainacan-icon-calendar";
 } */
 
+//begin calendar
 .widget_calendar {
     float: left;
 }
@@ -128,3 +129,23 @@
     text-transform: uppercase;
     padding-top: 10px;
 }
+
+//end calendar
+//begin search bar
+.widget.widget_search .search-form .search-field {
+    position: absolute;
+    padding: 0 19px;
+    /*     background-image: url(assets/images/search.png); */
+    border: 0;
+    background-color: transparent;
+    right: 0px;
+    top: 29px;
+    color: #7a7a7a;
+    cursor: pointer;
+    font-size: 0px;
+    height: 17px;
+    width: 10px;
+    background-repeat: no-repeat;
+}
+
+//end search bar
