@@ -1,55 +1,70 @@
 .widget {
     margin: 0 0 0.75em;
+
     // Make sure select elements fit in widgets.
     select {
         max-width: 100%;
     }
+
     h1 {
         font-size: 1.25rem;
         font-weight: 500;
     }
+
     h2 {
         font-size: 1.125rem;
         font-weight: 500;
     }
+
     h3 {
         font-size: 1.0rem;
         font-weight: 500;
     }
+
     h4 {
         font-size: 0.875rem;
         font-weight: 500;
     }
+
     h5 {
         font-size: 0.75rem;
         font-weight: 500;
     }
+
     h5 {
         font-size: 0.75rem;
         font-weight: normal;
     }
+
     ul {
         list-style: none;
         margin-left: 0;
         padding-left: 0;
+
         a:not(:hover):not(:focus) {
             text-decoration: none;
         }
     }
+
     .wp-calendar-table>caption {
         color: #fff;
         font-weight: bold;
+        text-transform: uppercase;
     }
+
     .search-field,
     .search-field:active,
     .search-field:focus {
         border-radius: 15px;
         border: none
     }
+
     label {
         border: none;
     }
+
     .search-submit {}
+
     .search-form,
     .search-form>label>,
     .search-form>label>.search-field {
@@ -66,6 +81,8 @@
     font-family: "tainacan-icon tainacan-icon-calendar";
 } */
 
+// begin calendar
+
 .widget_calendar {
     float: left;
 }
@@ -78,8 +95,17 @@
     text-align: right;
     color: #fff;
     font-size: 12px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+
+
+    @media screen and (max-width:$screen__sm) {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    @media screen and (min-width:$screen__sm) {
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
 }
 
 #wp-calendar thead {
@@ -104,7 +130,14 @@
     background: #f5f5f5;
     border: 1px solid #fff;
     text-align: center;
-    padding: 8px;
+    padding-left: 1%;
+    padding-bottom: 3%;
+}
+
+#wp-calendar table{
+    @media screen and (max-width:$screen__sm){
+        margin-bottom: 0px;
+    }
 }
 
 #wp-calendar tbody td:hover,
@@ -128,3 +161,26 @@
     text-transform: uppercase;
     padding-top: 10px;
 }
+
+//end calen dar
+
+//begin dropdown file
+
+.widget_archive select {
+    padding-bottom: 3%;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding-top: 2%;
+
+    @media screen and (min-width: $screen__sm) {
+        padding-right: 20%;
+        margin-top: 10%;
+    }
+
+    @media screen and (max-width:$screen__sm) {
+        padding-right: 45%;
+        vertical-align: middle;
+    }
+}
+
+.widget_archive option {}
