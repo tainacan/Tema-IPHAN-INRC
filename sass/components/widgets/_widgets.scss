@@ -70,6 +70,10 @@
     }
 }
 
+.widget-title {
+    text-transform: uppercase;
+}
+
 
 /* .widget_calendar {
     border: 1px #fff solid;
@@ -208,20 +212,33 @@
 //end dropdown file
 
 //begin search bar
+.widget.widget_search .search-form .search-submit {
+    display: none;
+}
+
+.widget.widget_search .search-form .search-submit {
+    display: none;
+}
+
 .widget.widget_search .search-form .search-field {
-    position: absolute;
-    padding: 0 19px;
-    /*     background-image: url(assets/images/search.png); */
-    border: 0;
-    background-color: transparent;
-    right: 0px;
-    top: 29px;
-    color: #7a7a7a;
-    cursor: pointer;
-    font-size: 0px;
-    height: 17px;
-    width: 10px;
-    background-repeat: no-repeat;
+    @media screen and (min-width: $screen__sm) {
+        width: 100%;
+        margin-top: 10%;
+        padding-left: 5%;
+        padding-right: 30%;
+        padding: 5px;
+    }
+
+    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+        position: relative;
+        width: 100%;
+        padding-left: 5%;
+        padding: 9px;
+        padding-right: 0%;
+        margin-left: 0%;
+        width: 330px;
+    }
+
 }
 
 //end search bar
@@ -301,7 +318,7 @@
 
 .gallery-columns-2,
 .gallery-columns-1 {
-    max-height: 250px;
+    max-height: 200px;
     max-width: 100%;
     overflow: auto;
     /* this will hide the scrollbar in mozilla based browsers */
@@ -362,3 +379,8 @@
 }
 
 //end media galery
+
+// Begin Search
+
+
+// End Search

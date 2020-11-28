@@ -619,7 +619,7 @@ input[type="color"],
 textarea {
 	color: #515151;
 	border: 1px solid #d9d9d9;
-	border-radius: 3px;
+	border-radius: 6px;
 	padding: 3px;
 }
 
@@ -1023,6 +1023,10 @@ a {
 	border: none;
 }
 
+.widget-title {
+	text-transform: uppercase;
+}
+
 /* .widget_calendar {
     border: 1px #fff solid;
 }
@@ -1164,20 +1168,34 @@ a {
 	}
 }
 
-.widget.widget_search .search-form .search-field {
-	position: absolute;
-	padding: 0 19px;
-	/*     background-image: url(assets/images/search.png); */
-	border: 0;
-	background-color: transparent;
-	right: 0px;
-	top: 29px;
-	color: #7a7a7a;
-	cursor: pointer;
-	font-size: 0px;
-	height: 17px;
-	width: 10px;
-	background-repeat: no-repeat;
+.widget.widget_search .search-form .search-submit {
+	display: none;
+}
+
+.widget.widget_search .search-form .search-submit {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.widget.widget_search .search-form .search-field {
+		width: 100%;
+		margin-top: 10%;
+		padding-left: 5%;
+		padding-right: 30%;
+		padding: 5px;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.widget.widget_search .search-form .search-field {
+		position: relative;
+		width: 100%;
+		padding-left: 5%;
+		padding: 9px;
+		padding-right: 0%;
+		margin-left: 0%;
+		width: 330px;
+	}
 }
 
 .widget_categories {
@@ -1260,7 +1278,7 @@ a {
 
 .gallery-columns-2,
 .gallery-columns-1 {
-	max-height: 250px;
+	max-height: 200px;
 	max-width: 100%;
 	overflow: auto;
 	/* this will hide the scrollbar in mozilla based browsers */
