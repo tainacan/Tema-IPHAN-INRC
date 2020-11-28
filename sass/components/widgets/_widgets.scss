@@ -167,6 +167,23 @@
     margin-bottom: 5%;
 }
 
+.widget_archive>ul>li>a {
+    text-transform: uppercase;
+}
+
+.widget_archive>ul>li {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: $screen__sm) {
+        margin-right: 30%;
+    }
+
+    @media screen and (max-width: $screen__sm) {
+        margin-right: 10%;
+    }
+}
+
 .widget_archive select {
     padding-bottom: 3%;
     text-transform: uppercase;

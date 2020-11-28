@@ -1116,6 +1116,27 @@ a {
 	margin-bottom: 5%;
 }
 
+.widget_archive > ul > li > a {
+	text-transform: uppercase;
+}
+
+.widget_archive > ul > li {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+	.widget_archive > ul > li {
+		margin-right: 30%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.widget_archive > ul > li {
+		margin-right: 10%;
+	}
+}
+
 .widget_archive select {
 	padding-bottom: 3%;
 	text-transform: uppercase;
