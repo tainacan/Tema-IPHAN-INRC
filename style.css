@@ -1125,7 +1125,7 @@ a {
 	justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
 	.widget_archive > ul > li {
 		margin-right: 30%;
 	}
@@ -1146,14 +1146,20 @@ a {
 
 @media screen and (min-width: 768px) {
 	.widget_archive select {
-		padding-right: 20%;
 		margin-top: 10%;
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
 	.widget_archive select {
-		padding-right: 45%;
+		width: 90%;
+		vertical-align: middle;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.widget_archive select {
+		width: 95%;
 		vertical-align: middle;
 	}
 }

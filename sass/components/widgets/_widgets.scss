@@ -175,7 +175,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (min-width: $screen__sm) {
+    @media screen and (min-width: $screen__sm) and (orientation: portrait){
         margin-right: 30%;
     }
 
@@ -191,12 +191,16 @@
     padding-top: 2%;
 
     @media screen and (min-width: $screen__sm) {
-        padding-right: 20%;
         margin-top: 10%;
     }
 
-    @media screen and (max-width:$screen__sm) {
-        padding-right: 45%;
+    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+        width: 90%;
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width:$screen__md) and (orientation: landscape) {
+        width: 95%;
         vertical-align: middle;
     }
 }
