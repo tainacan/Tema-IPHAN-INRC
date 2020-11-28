@@ -191,7 +191,7 @@
     padding-top: 2%;
 
     @media screen and (min-width: $screen__sm) {
-        margin-top: 10%;
+    /*     margin-top: 10%; */
     }
 
     @media screen and (max-width:$screen__sm) and (orientation: portrait) {
@@ -225,3 +225,49 @@
 }
 
 //end search bar
+
+// Begin Category
+
+.widget_categories {
+    margin-bottom: 5%;
+}
+
+.widget_categories>ul>li>a {
+    text-transform: uppercase;
+}
+
+.widget_categories>ul>li {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: $screen__sm) and (orientation: portrait){
+        margin-right: 30%;
+    }
+
+    @media screen and (max-width: $screen__sm) {
+        margin-right: 10%;
+    }
+}
+
+.widget_categories select {
+    padding-bottom: 3%;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding-top: 2%;
+
+    @media screen and (min-width: $screen__sm) {
+    /*     margin-top: 10%; */
+    }
+
+    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+        width: 90%;
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width:$screen__md) and (orientation: landscape) {
+        width: 95%;
+        vertical-align: middle;
+    }
+}
+
+//end Category
