@@ -175,7 +175,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (min-width: $screen__sm) and (orientation: portrait){
+    @media screen and (min-width: $screen__sm) and (orientation: portrait) {
         margin-right: 30%;
     }
 
@@ -191,7 +191,7 @@
     padding-top: 2%;
 
     @media screen and (min-width: $screen__sm) {
-    /*     margin-top: 10%; */
+        /*     margin-top: 10%; */
     }
 
     @media screen and (max-width:$screen__sm) and (orientation: portrait) {
@@ -240,7 +240,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (min-width: $screen__sm) and (orientation: portrait){
+    @media screen and (min-width: $screen__sm) and (orientation: portrait) {
         margin-right: 30%;
     }
 
@@ -256,7 +256,7 @@
     padding-top: 2%;
 
     @media screen and (min-width: $screen__sm) {
-    /*     margin-top: 10%; */
+        /*     margin-top: 10%; */
     }
 
     @media screen and (max-width:$screen__sm) and (orientation: portrait) {
@@ -271,3 +271,94 @@
 }
 
 //end Category
+
+//begin media galery
+.widget_media_gallery>div {
+    row-gap: 0%;
+    column-gap: 3%;
+}
+
+.widget_media_gallery figcaption {
+    flex-wrap: wrap;
+    max-width: 76px;
+    max-height: 100px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.widget_media_gallery figure img {
+    max-width: 76px;
+    max-height: 76px;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.gallery-icon {
+    @media screen and (max-width: $screen__sm) {
+        text-align: left;
+    }
+}
+
+.gallery-columns-2,
+.gallery-columns-1 {
+    max-height: 250px;
+    max-width: 100%;
+    overflow: auto;
+    /* this will hide the scrollbar in mozilla based browsers */
+    overflow: -moz-scrollbars-none;
+    /* this will hide the scrollbar in internet explorers */
+    -ms-overflow-style: none;
+}
+
+.gallery-columns-1 figure::-webkit-scrollbar,
+.gallery-columns-2 figure::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+.gallery-columns-1>figure,
+.gallery-columns-2>figure {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+.gallery-columns-3,
+.gallery-columns-4,
+.gallery-columns-5,
+.gallery-columns-6,
+.gallery-columns-7 .gallery-columns-8,
+.gallery-columns-9 {
+    max-height: 250px;
+    max-width: 100%;
+    overflow: auto;
+    /* this will hide the scrollbar in mozilla based browsers */
+    overflow: -moz-scrollbars-none;
+    /* this will hide the scrollbar in internet explorers */
+    -ms-overflow-style: none;
+}
+
+.gallery-columns-3 figure::-webkit-scrollbar,
+.gallery-columns-4 figure::-webkit-scrollbar,
+.gallery-columns-5 figure::-webkit-scrollbar,
+.gallery-columns-6 figure::-webkit-scrollbar,
+.gallery-columns-7 figure::-webkit-scrollbar,
+.gallery-columns-8 figure::-webkit-scrollbar,
+.gallery-columns-9 figure::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+.gallery-columns-3>figure,
+.gallery-columns-4>figure,
+.gallery-columns-5>figure,
+.gallery-columns-6>figure,
+.gallery-columns-7>figure,
+.gallery-columns-8>figure,
+.gallery-columns-9>figure {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+//end media galery
