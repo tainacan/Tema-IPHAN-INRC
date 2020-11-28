@@ -132,8 +132,8 @@
     padding-bottom: 3%;
 }
 
-#wp-calendar table{
-    @media screen and (max-width:$screen__sm){
+#wp-calendar table {
+    @media screen and (max-width:$screen__sm) {
         margin-bottom: 0px;
     }
 }
@@ -163,6 +163,9 @@
 //end calen dar
 
 //begin dropdown file
+.widget_archive {
+    margin-bottom: 5%;
+}
 
 .widget_archive select {
     padding-bottom: 3%;

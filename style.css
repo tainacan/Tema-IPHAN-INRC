@@ -1112,6 +1112,10 @@ a {
 	padding-top: 10px;
 }
 
+.widget_archive {
+	margin-bottom: 5%;
+}
+
 .widget_archive select {
 	padding-bottom: 3%;
 	text-transform: uppercase;
