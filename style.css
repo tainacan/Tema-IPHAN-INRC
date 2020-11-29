@@ -1361,6 +1361,14 @@ a {
 	margin-top: 10%;
 }
 
+.widget_text .textwidget {
+	margin-top: 10%;
+}
+
+.widget_text .textwidget ol {
+	margin-left: 0px;
+}
+
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley,

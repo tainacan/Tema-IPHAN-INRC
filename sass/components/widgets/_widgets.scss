@@ -408,10 +408,23 @@
 .widget_recent_comments ul {
     margin-top: 10%
 }
+
 //End Recent Coments
 
-//Begin CUstom HTML
-.widget_custom_html .custom-html-widget{
-margin-top: 10%;
+//Begin Custom HTML
+.widget_custom_html .custom-html-widget {
+    margin-top: 10%;
 }
-//End CUstom HTML
+
+//End Custom HTML
+
+//Begin Texto dissertativo
+.widget_text .textwidget {
+    margin-top: 10%;
+}
+
+.widget_text .textwidget ol {
+    margin-left: 0px;
+}
+
+//End Texto dissertativo
