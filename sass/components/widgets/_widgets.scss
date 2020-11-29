@@ -93,6 +93,11 @@
     width: 100%;
 }
 
+
+.calendar_wrap table {
+    margin-top: 10%;
+}
+
 #wp-calendar caption {
     text-align: right;
     color: #fff;
@@ -164,7 +169,7 @@
     padding-top: 10px;
 }
 
-//end calen dar
+//end calendar
 
 //begin dropdown file
 .widget_archive {
@@ -385,15 +390,28 @@
 
 // End Search
 
-// Begin Search
+// Begin Image
 .widget_media_image figure {
     width: 100%;
     margin-top: 14%;
 }
+
 .widget_media_image figcaption {
     text-align: left;
     max-height: 100px;
     overflow: hidden;
 }
 
-// End Search
+// End Image
+
+//Begin Recent Coments
+.widget_recent_comments ul {
+    margin-top: 10%
+}
+//End Recent Coments
+
+//Begin CUstom HTML
+.widget_custom_html .custom-html-widget{
+margin-top: 10%;
+}
+//End CUstom HTML

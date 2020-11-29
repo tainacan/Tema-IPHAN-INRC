@@ -1042,6 +1042,10 @@ a {
 	width: 100%;
 }
 
+.calendar_wrap table {
+	margin-top: 10%;
+}
+
 #wp-calendar caption {
 	text-align: right;
 	color: #fff;
@@ -1347,6 +1351,14 @@ a {
 	text-align: left;
 	max-height: 100px;
 	overflow: hidden;
+}
+
+.widget_recent_comments ul {
+	margin-top: 10%;
+}
+
+.widget_custom_html .custom-html-widget {
+	margin-top: 10%;
 }
 
 /* Media
