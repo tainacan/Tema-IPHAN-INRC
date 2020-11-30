@@ -831,6 +831,7 @@ textarea {
 @media screen and (max-width: 768px) {
 	.main-navigation ul > li {
 		justify-content: left;
+		margin-bottom: 1%;
 	}
 }
 
