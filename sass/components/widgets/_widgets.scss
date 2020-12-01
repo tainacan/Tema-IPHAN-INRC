@@ -47,7 +47,7 @@
     }
 
     .wp-calendar-table>caption {
-        color: #fff;
+        color: $color__branco;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -76,7 +76,7 @@
 
 
 /* .widget_calendar {
-    border: 1px #fff solid;
+    border: 1px $color__branco solid;
 }
 
 .widget_calendar::before {
@@ -100,7 +100,7 @@
 
 #wp-calendar caption {
     text-align: right;
-    color: #fff;
+    color: $color__branco;
     font-size: 12px;
 
 
@@ -134,8 +134,8 @@
 }
 
 #wp-calendar tbody td {
-    background: #f5f5f5;
-    border: 1px solid #fff;
+    background: $color__branco1;
+    border: 1px solid $color__branco;
     text-align: center;
     padding-left: 1%;
     padding-bottom: 3%;
@@ -154,7 +154,7 @@
 #wp-calendar tbody td:hover,
 #wp-calendar tbody a:hover {
     background: $color__vermelho2;
-    color: #fff
+    color: $color__branco
 }
 
 #wp-calendar tbody .pad {

@@ -856,7 +856,7 @@ textarea {
 
 @media screen and (min-width: 768px) {
 	.main-navigation ul > li :active {
-		border: 1px solid #fff;
+		border: 1px solid #ffffff;
 	}
 }
 
@@ -1127,7 +1127,7 @@ a {
 }
 
 .widget .wp-calendar-table > caption {
-	color: #fff;
+	color: #ffffff;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -1154,7 +1154,7 @@ a {
 }
 
 /* .widget_calendar {
-    border: 1px #fff solid;
+    border: 1px $color__branco solid;
 }
 
 .widget_calendar::before {
@@ -1174,7 +1174,7 @@ a {
 
 #wp-calendar caption {
 	text-align: right;
-	color: #fff;
+	color: #ffffff;
 	font-size: 12px;
 }
 
@@ -1212,7 +1212,7 @@ a {
 
 #wp-calendar tbody td {
 	background: #f5f5f5;
-	border: 1px solid #fff;
+	border: 1px solid #ffffff;
 	text-align: center;
 	padding-left: 1%;
 	padding-bottom: 3%;
@@ -1231,7 +1231,7 @@ a {
 #wp-calendar tbody td:hover,
 #wp-calendar tbody a:hover {
 	background: #970620;
-	color: #fff;
+	color: #ffffff;
 }
 
 #wp-calendar tbody .pad {

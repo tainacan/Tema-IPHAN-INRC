@@ -165,7 +165,7 @@
 
     ul>li :active {
         @media screen and (min-width: $screen__sm) {
-            border: 1px solid #fff
+            border: 1px solid $color__branco
         }
     }
 
@@ -233,7 +233,7 @@ a {
 
 .menu-toggle[aria-expanded="true"] {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-        background: #ffffff;
+        background: $color__branco;
         border: none;
         padding-top: 35px;
         padding-left: 30px;
