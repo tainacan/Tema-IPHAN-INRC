@@ -142,15 +142,33 @@
     }
 
     ul>li {
+        color: $color__vermelho1;
+
         @media screen and (max-width: $screen__sm) {
-            justify-content: left;
-            margin-bottom: 1%;
+            justify-content: right;
+            margin-bottom: 30px;
+            flex-direction: row-reverse;
         }
 
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             margin-left: 3%;
         }
+
+        &>a {
+            @media screen and (max-width: $screen__sm) {
+                color: $color__vermelho1 !important;
+                text-decoration: none !important;
+                font-weight: bold;
+            }
+        }
     }
+
+    ul>li :active {
+        @media screen and (min-width: $screen__sm) {
+            border: 1px solid #fff
+        }
+    }
+
 }
 
 a {
@@ -179,22 +197,86 @@ a {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         display: block;
         position: absolute;
-        right: 5%;
-        top: 11%;
+        right: 8%;
+        top: 12%;
+        z-index: 10;
     }
 
     @media screen and (max-width: $screen__sm) and (orientation: landscape) {
         display: block;
         position: absolute;
-        right: 5%;
-        top: 20%;
+        right: 7%;
+        top: 21.5%;
+    }
+
+    &>path[aria-expanded="true"] {
+        fill: $color__branco;
+    }
+
+    &>path[aria-expanded="false"] {
+        fill: $color__branco;
     }
 }
 
-.menu-toggle {
-    background: transparent;
-    border: none;
-    cursor: pointer;
+.menu-toggle[aria-expanded="true"]>svg>path {
+    @media screen and (max-width: $screen__sm) {
+        fill: $color__vermelho1;
+        ;
+    }
+}
+
+.menu-toggle[aria-expanded="false"]>svg>path {
+    @media screen and (max-width: $screen__sm) {
+        fill: $color__branco;
+    }
+}
+
+.menu-toggle[aria-expanded="true"] {
+    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
+        background: #ffffff;
+        border: none;
+        padding-top: 35px;
+        padding-left: 30px;
+        padding-right: 20px;
+        margin-left: 10px;
+        padding-bottom: 10px;
+        z-index: 2;
+    }
+
+    @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+        background: $color__branco;
+        border: none;
+        padding-top: 35px;
+        padding-left: 30px;
+        padding-right: 20px;
+        margin-left: 10px;
+        padding-bottom: 6px;
+        z-index: 2;
+    }
+}
+
+.menu-toggle[aria-expanded="false"] {
+    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
+        background: $color__vermelho1;
+        border: none;
+        padding-top: 35px;
+        padding-left: 30px;
+        padding-right: 20px;
+        margin-left: 10px;
+        padding-bottom: 6px;
+        z-index: 2;
+    }
+
+    @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+        background: $color__vermelho1;
+        border: none;
+        padding-top: 35px;
+        padding-left: 30px;
+        padding-right: 20px;
+        margin-left: 10px;
+        padding-bottom: 6px;
+        z-index: 2;
+    }
 }
 
 @media screen and (max-width: $screen__sm) {
@@ -236,18 +318,27 @@ a {
 
 .menu-menu-1-container {
     @media screen and (max-width:$screen__sm)and (orientation: landscape) {
-        margin-top: 5%;
+        margin-top: 4%;
         position: absolute;
         left: 0;
-        background: $color__vermelho1;
         width: 100%;
     }
 
+    &>ul {
+        @media screen and (max-width: $screen__sm) {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            z-index: 10;
+            background: $color__branco;
+            position: relative;
+        }
+    }
+
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-        margin-top: 9%;
+        margin-top: 7%;
         position: absolute;
         left: 0;
-        background: $color__vermelho1;
+        background: $color__branco;
         width: 100%;
     }
 
