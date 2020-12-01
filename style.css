@@ -1218,10 +1218,14 @@ a {
 	padding-bottom: 3%;
 }
 
-@media screen and (max-width: 768px) {
-	#wp-calendar table {
-		margin-bottom: 0px;
-	}
+#wp-calendar {
+	margin-bottom: 0px;
+}
+
+.wp-calendar-nav > span > a {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 #wp-calendar tbody td:hover,
