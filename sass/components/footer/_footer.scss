@@ -1,20 +1,24 @@
 .site-footer {
     z-index: 5;
-    margin-top: 150px;
+    margin-top: 70px;
     background-image: $gradiente__vermelho;
     color: $color__branco;
     font-family: $font__heading;
+
     a,
     a:hover,
     a:focus,
     a:visited {
         color: $color__branco;
     }
+
     .widget-area {
+
         &>.widget,
         &>.widget div {
             break-inside: avoid;
         }
+
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             column-count: 1;
             padding-top: 20px;
@@ -22,11 +26,13 @@
             flex-direction: column;
             display: flex;
         }
+
         @media screen and (min-width: $screen__sm) {
             .plus-minus {
                 display: none
             }
         }
+
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             column-count: 1;
             padding-top: 20px;
@@ -34,6 +40,7 @@
             flex-direction: row;
             display: flex;
         }
+
         @media screen and (min-width: $screen__sm) {
             column-count: 3;
             padding-top: 70px;
@@ -42,6 +49,7 @@
             flex-direction: row;
             display: flex;
         }
+
         @media screen and (min-width: $screen__md) {
             padding-top: 25px;
             padding-bottom: calc(0px - 0.75em);
@@ -50,6 +58,7 @@
             flex-direction: row;
             display: flex;
         }
+
         ul {
             @media screen and (max-width: $screen__sm) {
                 height: 0px;
@@ -57,12 +66,14 @@
                 transition: height 0.8s;
             }
         }
+
         .plus-minus {
             @media screen and (max-width: $screen__sm) {
                 content: '+'
             }
         }
     }
+
     .widget-area:hover {
         ul {
             @media screen and (max-width: $screen__sm) and (orientation: portrait) {
@@ -70,23 +81,27 @@
                 overflow: auto;
                 transition: height 1.2s;
             }
+
             @media screen and (max-width: $screen__sm) and (orientation: landscape) {
                 height: 100%;
                 overflow: auto;
                 transition: height 1.2s;
             }
         }
+
         .plus-minus {
             @media screen and (max-width: $screen__sm) {
                 content: '-'
             }
         }
     }
+
     hr {
         height: 2px;
         margin: 0px;
         color: $color__branco;
     }
+
     .site-info {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -94,26 +109,55 @@
         justify-content: space-between;
         align-items: center;
     }
+
     .site-info i {
         @media screen and (orientation: portrait) and (max-width: $screen__sm) {
             font-size: 35px
         }
+
         @media screen and (orientation: landscape) and (max-width:$screen__sm) {
             font-size: 35px
         }
+
         @media screen and (min-width: $screen__sm) {
             font-size: 35px
         }
     }
+
     .site-info>.icons-footer {
         margin-left: 5%
     }
+
     .site-info>.fonte-iphan {
         font-size: 25px;
     }
+
     .collapse {
         height: 0px;
         overflow: hidden;
         transition: height 0.8s;
+    }
+}
+
+.ScrolltoTop {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 3%;
+    margin-top: 3%;
+    margin-bottom: 0;
+
+    &>.iconScrollTop>.tainacan-icon-showmore:before {
+        transform: rotate(180deg);
+        border: 1px solid $color__vermelho1;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    &>a:hover {
+        color: #5e030d;
+    }
+
+    @media screen and (max-width: $screen__sm) {
+        display: none
     }
 }

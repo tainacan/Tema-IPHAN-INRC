@@ -1,4 +1,5 @@
 <?php
+
 /**
  * IPHAN INRC functions and definitions
  *
@@ -7,12 +8,12 @@
  * @package IPHAN_INRC
  */
 
-if ( ! defined( 'IPHAN_INRC_VERSION' ) ) {
+if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( 'IPHAN_INRC_VERSION', '1.0.0' );
+	define('IPHAN_INRC_VERSION', '1.0.0');
 }
 
-if ( ! function_exists( 'iphan_inrc_setup' ) ) :
+if (!function_exists('iphan_inrc_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,17 +21,18 @@ if ( ! function_exists( 'iphan_inrc_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function iphan_inrc_setup() {
+	function iphan_inrc_setup()
+	{
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on IPHAN INRC, use a find and replace
 		 * to change 'iphan_inrc' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'iphan_inrc', get_template_directory() . '/languages' );
+		load_theme_textdomain('iphan_inrc', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -38,19 +40,19 @@ if ( ! function_exists( 'iphan_inrc_setup' ) ) :
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'iphan_inrc' ),
+				'menu-1' => esc_html__('Primary', 'iphan_inrc'),
 			)
 		);
 
@@ -84,7 +86,7 @@ if ( ! function_exists( 'iphan_inrc_setup' ) ) :
 		);
 
 		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support('customize-selective-refresh-widgets');
 
 		/**
 		 * Add support for core custom logo.
@@ -102,7 +104,7 @@ if ( ! function_exists( 'iphan_inrc_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'iphan_inrc_setup' );
+add_action('after_setup_theme', 'iphan_inrc_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -111,22 +113,24 @@ add_action( 'after_setup_theme', 'iphan_inrc_setup' );
  *
  * @global int $content_width
  */
-function iphan_inrc_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'iphan_inrc_content_width', 640 );
+function iphan_inrc_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('iphan_inrc_content_width', 640);
 }
-add_action( 'after_setup_theme', 'iphan_inrc_content_width', 0 );
+add_action('after_setup_theme', 'iphan_inrc_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function iphan_inrc_widgets_init() {
+function iphan_inrc_widgets_init()
+{
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer', 'iphan_inrc' ),
+			'name'          => esc_html__('Footer', 'iphan_inrc'),
 			'id'            => 'footer-1',
-			'description'   => esc_html__( 'Add widgets here.', 'iphan_inrc' ),
+			'description'   => esc_html__('Add widgets here.', 'iphan_inrc'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s col-sm-6 col-md-3" >',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -134,37 +138,72 @@ function iphan_inrc_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'iphan_inrc_widgets_init' );
+add_action('widgets_init', 'iphan_inrc_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function iphan_inrc_scripts() {
-	wp_enqueue_style( 'iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION );
-	wp_style_add_data( 'iphan_inrc-style', 'rtl', 'replace' );
+function iphan_inrc_scripts()
+{
+	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
+	wp_style_add_data('iphan_inrc-style', 'rtl', 'replace');
 	//instalação do bootstrap
-	wp_enqueue_style('boostrap','https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', array(),'','all');
-	wp_enqueue_script('jquery','https://code.jquery.com/jquery-3.3.1.slim.min.js', array(),null,true);
-    wp_enqueue_script('popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(),null,true);
-    wp_enqueue_script('bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array('jquery'),null,true);
-	
+	wp_enqueue_style('boostrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', array(), '', 'all');
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', array(), null, true);
+	wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(), null, true);
+	wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array('jquery'), null, true);
+
 	// Tainacan Icons
-	wp_register_style( 'TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '' );
-	wp_enqueue_style( 'TainacanIconsFont' );
+	wp_register_style('TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '');
+	wp_enqueue_style('TainacanIconsFont');
 
-	wp_enqueue_script( 'iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), IPHAN_INRC_VERSION, true );
+	wp_enqueue_script('iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), IPHAN_INRC_VERSION, true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'iphan_inrc_scripts' );
+//Begin Widget pras redes sociais
 
-function iphan_inrc_add_google_fonts() {
-	wp_enqueue_style( 'iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), IPHAN_INRC_VERSION ); 
-}	 
-add_action( 'wp_enqueue_scripts', 'iphan_inrc_add_google_fonts' );
+
+/* class RedesSociaisWidget extends WP_Widget {
+
+public function __construct() {
+	$options = array(
+	‘classname’ => ‘custom_livescore_widget’,
+	‘description’ => ‘Redes Sociais’,
+);
+}
+
+parent::__construct(
+‘live_score_widget’, ‘Live Score Widget’, $options
+);
+}
+
+public function widget( $args, $instance ) {
+$args[‘after_title’];
+echo ‘Hello, World!’;
+
+// Keep this line
+echo $args[‘after_widget’];
+}
+}
+// Register the widget
+function my_register_custom_widget() {
+register_widget( Redes_Sociais_Widget );
+}
+add_action( ‘widgets_init’, ‘Redes Sociais’ ); */
+
+//End Widget pras redes sociais
+
+add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
+
+function iphan_inrc_add_google_fonts()
+{
+	wp_enqueue_style('iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), IPHAN_INRC_VERSION);
+}
+add_action('wp_enqueue_scripts', 'iphan_inrc_add_google_fonts');
 
 /**
  * Implement the Custom Header feature.
@@ -189,7 +228,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
+if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 

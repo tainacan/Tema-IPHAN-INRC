@@ -1046,6 +1046,18 @@ a {
 	}
 }
 
+.topbutton {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+	Z-index: 1;
+	content: "^";
+	background-repeat: no-repeat;
+	display: none;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -1601,7 +1613,7 @@ a {
 --------------------------------------------- */
 .site-footer {
 	z-index: 5;
-	margin-top: 150px;
+	margin-top: 70px;
 	background-image: linear-gradient(to right, #58020b, #970620);
 	color: #ffffff;
 	font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -1747,6 +1759,31 @@ a {
 	height: 0px;
 	overflow: hidden;
 	transition: height 0.8s;
+}
+
+.ScrolltoTop {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-right: 3%;
+	margin-top: 3%;
+	margin-bottom: 0;
+}
+
+.ScrolltoTop > .iconScrollTop > .tainacan-icon-showmore:before {
+	transform: rotate(180deg);
+	border: 1px solid #58020b;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.ScrolltoTop > a:hover {
+	color: #5e030d;
+}
+
+@media screen and (max-width: 768px) {
+	.ScrolltoTop {
+		display: none;
+	}
 }
 
 /*--------------------------------------------------------------
