@@ -110,7 +110,7 @@ jQuery(document).ready(function($){
             }
         });
      $('.topbutton').on('click', function(){
-            $('html, body').animate({scrollTop:-10}, speed);
+            $('html, body').animate({scrollTop:0}, speed);
             return false;
             });
 });
