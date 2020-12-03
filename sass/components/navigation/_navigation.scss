@@ -126,7 +126,7 @@
             position: absolute;
             top: 18%;
             left: 0%;
-            background-image: $gradiente__vermelho;
+            background-color: $color__branco;
             width: 100%;
             height: 50%;
         }
@@ -135,7 +135,7 @@
             position: absolute;
             top: 33%;
             left: 0%;
-            background-image: $gradiente__vermelho;
+            background-color: $color__branco;
             width: 100%;
             height: 70%;
         }
@@ -145,8 +145,9 @@
         color: $color__vermelho1;
 
         @media screen and (max-width: $screen__sm) {
-            justify-content: right;
+            margin-top: 30px;
             margin-bottom: 30px;
+            justify-content: right;
             flex-direction: row-reverse;
         }
 

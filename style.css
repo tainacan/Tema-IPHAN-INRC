@@ -811,7 +811,7 @@ textarea {
 		position: absolute;
 		top: 18%;
 		left: 0%;
-		background-image: linear-gradient(to right, #58020b, #970620);
+		background-color: #ffffff;
 		width: 100%;
 		height: 50%;
 	}
@@ -822,7 +822,7 @@ textarea {
 		position: absolute;
 		top: 33%;
 		left: 0%;
-		background-image: linear-gradient(to right, #58020b, #970620);
+		background-color: #ffffff;
 		width: 100%;
 		height: 70%;
 	}
@@ -834,8 +834,9 @@ textarea {
 
 @media screen and (max-width: 768px) {
 	.main-navigation ul > li {
-		justify-content: right;
+		margin-top: 30px;
 		margin-bottom: 30px;
+		justify-content: right;
 		flex-direction: row-reverse;
 	}
 }
