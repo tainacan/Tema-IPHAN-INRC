@@ -153,11 +153,11 @@
         padding-right: 4px;
     }
 
-    &>a:hover {
+    &>a, a:hover, a:visited {
         color: #5e030d;
     }
 
-    @media screen and (max-width: $screen__sm) {
+/*     @media screen and (max-width: $screen__sm) {
         display: none
-    }
+    } */
 }
