@@ -27,12 +27,27 @@ if ( function_exists( 'register_block_style' ) ) {
             )        
         );
 
+        register_block_style(            
+            'core/heading',            
+             array(                
+               'name'  => 'title-ipha-inverse',                
+               'label' =>  'Título IPHAN Invertido',            
+            )        
+        );
 
         register_block_style(            
             'core/column',            
              array(                
                'name'  => 'column-iphan',                
                'label' =>  'Coluna IPHAN ',            
+            )        
+        );
+
+        register_block_style(            
+            'core/column',            
+             array(                
+               'name'  => 'column-iphan-gray',                
+               'label' =>  'Coluna IPHAN com fundo cinza',            
             )        
         );
     }

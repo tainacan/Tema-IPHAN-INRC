@@ -1941,9 +1941,20 @@ a {
 	}
 }
 
+.is-style-title-ipha-inverse {
+	background: #58020b;
+	color: #ffffff;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 .is-style-column-iphan {
 	border: 1px solid #58020b;
 	padding: 10px;
+}
+
+.is-style-column-iphan-gray {
+	background-color: #d9d9d9;
 }
 
 /*# sourceMappingURL=style.css.map */
