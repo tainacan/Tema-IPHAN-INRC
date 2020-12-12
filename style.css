@@ -712,7 +712,7 @@ textarea {
 }
 
 .main-navigation ul ul.sub-menu::before {
-	content: '';
+	content: "";
 	height: 10px;
 	width: 100%;
 	position: absolute;
@@ -797,7 +797,7 @@ textarea {
 
 .main-navigation ul > li.menu-item-has-children::after {
 	display: block;
-	content: '\0231C';
+	content: "\0231C";
 	font-size: 1.5rem;
 	rotate: 225deg;
 	color: #ffffff;
@@ -829,6 +829,7 @@ textarea {
 }
 
 .main-navigation ul > li {
+	margin-right: 10px;
 	color: #58020b;
 }
 
@@ -838,6 +839,12 @@ textarea {
 		margin-bottom: 30px;
 		justify-content: right;
 		flex-direction: row-reverse;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.main-navigation ul > li {
+		border: 1px solid #ffffff;
 	}
 }
 
@@ -1052,7 +1059,7 @@ a {
 	position: fixed;
 	right: 5px;
 	bottom: 5px;
-	Z-index: 1;
+	z-index: 1;
 	content: "^";
 	background-repeat: no-repeat;
 	display: none;

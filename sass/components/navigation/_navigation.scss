@@ -24,7 +24,7 @@
             transition: margin 0.3s ease-out;
 
             &::before {
-                content: '';
+                content: "";
                 height: 10px;
                 width: 100%;
                 position: absolute;
@@ -48,8 +48,8 @@
                     border-bottom: 1px solid $color__cinza4;
                 }
 
-                &:hover>ul,
-                &.focus>ul {
+                &:hover > ul,
+                &.focus > ul {
                     display: block;
                     left: auto;
                 }
@@ -76,14 +76,14 @@
             }
         }
 
-        li:hover>ul,
-        li.focus>ul {
+        li:hover > ul,
+        li.focus > ul {
             left: auto;
             right: -1px;
             margin-top: 10px;
         }
 
-        &>li {
+        & > li {
             position: relative;
             text-transform: uppercase;
             padding: calc(0.25rem + 1px) 20px;
@@ -109,7 +109,7 @@
 
                 &::after {
                     display: block;
-                    content: '\0231C';
+                    content: "\0231C";
                     font-size: 1.5rem;
                     rotate: 225deg;
                     color: $color__branco;
@@ -121,7 +121,7 @@
         }
     }
 
-    .menu>ul {
+    .menu > ul {
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             position: absolute;
             top: 18%;
@@ -141,7 +141,8 @@
         }
     }
 
-    ul>li {
+    ul > li {
+        margin-right: 10px;
         color: $color__vermelho1;
 
         @media screen and (max-width: $screen__sm) {
@@ -150,12 +151,14 @@
             justify-content: right;
             flex-direction: row-reverse;
         }
-
+        @media screen and (min-width: $screen__sm) {
+            border: 1px solid $color__branco;
+        }
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             margin-left: 3%;
         }
 
-        &>a {
+        & > a {
             @media screen and (max-width: $screen__sm) {
                 color: $color__vermelho1 !important;
                 text-decoration: none !important;
@@ -164,12 +167,11 @@
         }
     }
 
-    ul>li :active {
+    ul > li :active {
         @media screen and (min-width: $screen__sm) {
-            border: 1px solid $color__branco
+            border: 1px solid $color__branco;
         }
     }
-
 }
 
 a {
@@ -177,15 +179,15 @@ a {
     text-decoration: none;
 }
 
-.menu>ul>li>a:hover {
+.menu > ul > li > a:hover {
     text-decoration: underline;
 }
 
-.current_page_item>a,
-.current-menu-item>a,
-.current_page_ancestor>a,
-.current-menu-ancestor>a {}
-
+.current_page_item > a,
+.current-menu-item > a,
+.current_page_ancestor > a,
+.current-menu-ancestor > a {
+}
 
 /* Small menu. */
 
@@ -194,7 +196,7 @@ a {
     display: block;
 }
 
-.menu-toggle>svg {
+.menu-toggle > svg {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         display: block;
         position: absolute;
@@ -210,23 +212,22 @@ a {
         top: 21.5%;
     }
 
-    &>path[aria-expanded="true"] {
+    & > path[aria-expanded="true"] {
         fill: $color__branco;
     }
 
-    &>path[aria-expanded="false"] {
+    & > path[aria-expanded="false"] {
         fill: $color__branco;
     }
 }
 
-.menu-toggle[aria-expanded="true"]>svg>path {
+.menu-toggle[aria-expanded="true"] > svg > path {
     @media screen and (max-width: $screen__sm) {
         fill: $color__vermelho1;
-        ;
     }
 }
 
-.menu-toggle[aria-expanded="false"]>svg>path {
+.menu-toggle[aria-expanded="false"] > svg > path {
     @media screen and (max-width: $screen__sm) {
         fill: $color__branco;
     }
@@ -282,7 +283,7 @@ a {
 
 @media screen and (max-width: $screen__sm) {
     button:focus {
-        outline: none !important
+        outline: none !important;
     }
 }
 
@@ -318,14 +319,14 @@ a {
 }
 
 .menu-menu-1-container {
-    @media screen and (max-width:$screen__sm)and (orientation: landscape) {
+    @media screen and (max-width: $screen__sm) and (orientation: landscape) {
         margin-top: 4%;
         position: absolute;
         left: 0;
         width: 100%;
     }
 
-    &>ul {
+    & > ul {
         @media screen and (max-width: $screen__sm) {
             padding-top: 50px;
             padding-bottom: 20px;
@@ -358,7 +359,7 @@ a {
     position: fixed;
     right: 5px;
     bottom: 5px;
-    Z-index: 1;
+    z-index: 1;
     content: "^";
     background-repeat: no-repeat;
     display: none;
