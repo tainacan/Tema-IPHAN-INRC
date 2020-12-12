@@ -1878,6 +1878,7 @@ a {
 
 .is-style-title-iphan {
 	color: #58020b;
+	text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {

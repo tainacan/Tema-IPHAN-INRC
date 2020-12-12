@@ -4,6 +4,7 @@
 
 .is-style-title-iphan {
     color: $color__vermelho1;
+    text-transform: uppercase;
 }
 .entry-content > .is-style-title-iphan::after {
     @media screen and (min-width: $screen__md) {
