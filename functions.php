@@ -106,7 +106,7 @@ if (!function_exists('iphan_inrc_setup')) :
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
 
-function iphan_inrc_init(){
+/* function iphan_inrc_init(){
 
 	register_block_style(            
 		'core/heading',            
@@ -116,7 +116,7 @@ function iphan_inrc_init(){
 		)        
 	);
 }
-add_action('init', 'iphan_inrc_init');
+add_action('init', 'iphan_inrc_init'); */
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -245,6 +245,9 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+//blocks styles
+require get_template_directory() . '/template-parts/block-styles.php';
 
 /**
  * Load Jetpack compatibility file.
