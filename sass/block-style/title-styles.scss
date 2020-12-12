@@ -1,0 +1,39 @@
+.entry-content > .is-style-title-iphan {
+    margin-bottom: 15px;
+}
+
+.entry-content > .is-style-title-iphan::after {
+    @media screen and (min-width: $screen__md) {
+        content: "";
+        position: absolute;
+        top: 29%;
+        height: 15px;
+        width: 4%;
+        border-bottom: 6px solid $color__vermelho1;
+        display: block;
+    }
+
+    @media screen and (max-width: $screen__md) and (orientation: landscape) {
+        content: "";
+        position: absolute;
+        width: 9%;
+        border-bottom: 6px solid #58020b;
+        display: block;
+    }
+
+    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
+        content: "";
+        position: absolute;
+        width: 18%;
+        border-bottom: 6px solid #58020b;
+        display: block;
+    }
+
+    @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+        content: "";
+        position: absolute;
+        width: 12%;
+        border-bottom: 6px solid #58020b;
+        display: block;
+    }
+}

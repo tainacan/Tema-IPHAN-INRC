@@ -106,6 +106,17 @@ if (!function_exists('iphan_inrc_setup')) :
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
 
+function iphan_inrc_init(){
+
+	register_block_style(            
+		'core/heading',            
+	 	array(                
+	   	'name'  => 'title-iphan',                
+	   	'label' =>  'Título IPHAN ',            
+		)        
+	);
+}
+add_action('init', 'iphan_inrc_init');
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -116,6 +127,9 @@ add_action('after_setup_theme', 'iphan_inrc_setup');
 function iphan_inrc_content_width()
 {
 	$GLOBALS['content_width'] = apply_filters('iphan_inrc_content_width', 640);
+	//block styles
+
+
 }
 add_action('after_setup_theme', 'iphan_inrc_content_width', 0);
 
@@ -140,6 +154,7 @@ function iphan_inrc_widgets_init()
 }
 add_action('widgets_init', 'iphan_inrc_widgets_init');
 
+
 /**
  * Enqueue scripts and styles.
  */
@@ -157,12 +172,16 @@ function iphan_inrc_scripts()
 	wp_register_style('TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '');
 	wp_enqueue_style('TainacanIconsFont');
 
+
 	wp_enqueue_script('iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), IPHAN_INRC_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 }
+
+
+
 
 //Begin Widget pras redes sociais
 
@@ -204,6 +223,8 @@ function iphan_inrc_add_google_fonts()
 	wp_enqueue_style('iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), IPHAN_INRC_VERSION);
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_add_google_fonts');
+
+
 
 /**
  * Implement the Custom Header feature.

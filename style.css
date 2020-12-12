@@ -52,7 +52,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
-/* Normalize
+/* Normalize 
 --------------------------------------------- */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1872,7 +1872,55 @@ a {
 	margin-bottom: 1.5em;
 }
 
-/* @import "./assets/tainacan-icons/css/tainacanicons.css";
-@import "./assets/tainacan-icons/css/tainacanicons.min.css";  */
+.entry-content > .is-style-title-iphan {
+	margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+	.entry-content > .is-style-title-iphan::after {
+		content: "";
+		position: absolute;
+		top: 29%;
+		height: 15px;
+		width: 4%;
+		border-bottom: 6px solid #58020b;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.entry-content > .is-style-title-iphan::after {
+		content: "";
+		position: absolute;
+		width: 9%;
+		border-bottom: 6px solid #58020b;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.entry-content > .is-style-title-iphan::after {
+		content: "";
+		position: absolute;
+		width: 18%;
+		border-bottom: 6px solid #58020b;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.entry-content > .is-style-title-iphan::after {
+		content: "";
+		position: absolute;
+		width: 12%;
+		border-bottom: 6px solid #58020b;
+		display: block;
+	}
+}
+
+.entry-content {
+	border: 1px solid #58020b;
+	padding: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */

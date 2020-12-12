@@ -57,7 +57,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Generic
 --------------------------------------------------------------*/
 
-/* Normalize
+/* Normalize 
 --------------------------------------------- */
 @import "generic/normalize";
 
@@ -95,7 +95,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "utilities/alignments";
 
-// tainacan icons
+// block styles
 
-/* @import "./assets/tainacan-icons/css/tainacanicons.css";
-@import "./assets/tainacan-icons/css/tainacanicons.min.css";  */
+@import "block-style/title-styles.scss";
+@import "block-style/box.scss";

@@ -34,5 +34,10 @@
 			}
 		} );
 	} );
-}( jQuery ) );
 
+	wp.blocks.registerBlockStyle( 'core/title', {
+		name: 'title-tainacan',
+		label: 'Title Tainacan',
+	 } );
+	 
+}( jQuery ) );
