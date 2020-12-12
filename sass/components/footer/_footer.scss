@@ -13,9 +13,8 @@
     }
 
     .widget-area {
-
-        &>.widget,
-        &>.widget div {
+        & > .widget,
+        & > .widget div {
             break-inside: avoid;
         }
 
@@ -29,7 +28,7 @@
 
         @media screen and (min-width: $screen__sm) {
             .plus-minus {
-                display: none
+                display: none;
             }
         }
 
@@ -69,7 +68,7 @@
 
         .plus-minus {
             @media screen and (max-width: $screen__sm) {
-                content: '+'
+                content: "+";
             }
         }
     }
@@ -91,7 +90,7 @@
 
         .plus-minus {
             @media screen and (max-width: $screen__sm) {
-                content: '-'
+                content: "-";
             }
         }
     }
@@ -112,23 +111,23 @@
 
     .site-info i {
         @media screen and (orientation: portrait) and (max-width: $screen__sm) {
-            font-size: 35px
+            font-size: 35px;
         }
 
-        @media screen and (orientation: landscape) and (max-width:$screen__sm) {
-            font-size: 35px
+        @media screen and (orientation: landscape) and (max-width: $screen__sm) {
+            font-size: 35px;
         }
 
         @media screen and (min-width: $screen__sm) {
-            font-size: 35px
+            font-size: 35px;
         }
     }
 
-    .site-info>.icons-footer {
-        margin-left: 5%
+    .site-info > .icons-footer {
+        margin-left: 5%;
     }
 
-    .site-info>.fonte-iphan {
+    .site-info > .fonte-iphan {
         font-size: 25px;
     }
 
@@ -146,18 +145,24 @@
     margin-top: 3%;
     margin-bottom: 0;
 
-    &>.iconScrollTop>.tainacan-icon-showmore:before {
+    & > .iconScrollTop > .tainacan-icon-showmore:before {
         transform: rotate(180deg);
         border: 1px solid $color__vermelho1;
         padding-left: 4px;
         padding-right: 4px;
     }
 
-    &>a, a:hover, a:visited {
+    & > a,
+    a:hover,
+    a:visited {
         color: #5e030d;
     }
 
-/*     @media screen and (max-width: $screen__sm) {
+    /*     @media screen and (max-width: $screen__sm) {
         display: none
     } */
+}
+
+.entry-footer {
+/*     display: none; */
 }

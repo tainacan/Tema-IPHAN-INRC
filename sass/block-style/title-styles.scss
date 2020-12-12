@@ -1,12 +1,13 @@
-.entry-content  .is-style-title-iphan {
+.entry-content .is-style-title-iphan-underscore {
     margin-bottom: 86px;
 }
 
-.is-style-title-iphan {
+.is-style-title-iphan,
+.is-style-title-iphan-underscore {
     color: $color__vermelho1;
     text-transform: uppercase;
 }
-.entry-content  .is-style-title-iphan::after {
+.entry-content .is-style-title-iphan-underscore::after {
     @media screen and (min-width: $screen__md) {
         content: "";
         position: absolute;

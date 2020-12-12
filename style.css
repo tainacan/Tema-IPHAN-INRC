@@ -681,6 +681,11 @@ textarea {
 	text-transform: uppercase;
 }
 
+.entry-meta,
+.entry-meta {
+	display: none;
+}
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -1696,7 +1701,7 @@ a {
 
 @media screen and (max-width: 768px) {
 	.site-footer .widget-area .plus-minus {
-		content: '+';
+		content: "+";
 	}
 }
 
@@ -1718,7 +1723,7 @@ a {
 
 @media screen and (max-width: 768px) {
 	.site-footer .widget-area:hover .plus-minus {
-		content: '-';
+		content: "-";
 	}
 }
 
@@ -1786,8 +1791,14 @@ a {
 	padding-right: 4px;
 }
 
-.ScrolltoTop > a, .ScrolltoTop a:hover, .ScrolltoTop a:visited {
+.ScrolltoTop > a,
+.ScrolltoTop a:hover,
+.ScrolltoTop a:visited {
 	color: #5e030d;
+}
+
+.entry-footer {
+	/*     display: none; */
 }
 
 /*--------------------------------------------------------------
@@ -1876,17 +1887,18 @@ a {
 	margin-bottom: 1.5em;
 }
 
-.entry-content .is-style-title-iphan {
+.entry-content .is-style-title-iphan-underscore {
 	margin-bottom: 86px;
 }
 
-.is-style-title-iphan {
+.is-style-title-iphan,
+.is-style-title-iphan-underscore {
 	color: #58020b;
 	text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {
-	.entry-content .is-style-title-iphan::after {
+	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
 		height: 15px;
@@ -1897,7 +1909,7 @@ a {
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
-	.entry-content .is-style-title-iphan::after {
+	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
 		width: 9%;
@@ -1908,7 +1920,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.entry-content .is-style-title-iphan::after {
+	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
 		width: 18%;
@@ -1919,7 +1931,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.entry-content .is-style-title-iphan::after {
+	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
 		width: 12%;
