@@ -18,5 +18,13 @@ if ( function_exists( 'register_block_style' ) ) {
                'label' =>  'Título IPHAN ',            
             )        
         );
+
+        register_block_style(            
+            'core/column',            
+             array(                
+               'name'  => 'column-iphan',                
+               'label' =>  'Coluna IPHAN ',            
+            )        
+        );
     }
 }add_action( 'init', 'iphan_block_styles' );

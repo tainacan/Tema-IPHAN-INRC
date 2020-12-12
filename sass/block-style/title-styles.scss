@@ -1,4 +1,4 @@
-.entry-content > .is-style-title-iphan {
+.entry-content  .is-style-title-iphan {
     margin-bottom: 86px;
 }
 
@@ -6,7 +6,7 @@
     color: $color__vermelho1;
     text-transform: uppercase;
 }
-.entry-content > .is-style-title-iphan::after {
+.entry-content  .is-style-title-iphan::after {
     @media screen and (min-width: $screen__md) {
         content: "";
         position: absolute;
