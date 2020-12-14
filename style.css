@@ -836,6 +836,9 @@ textarea {
 .main-navigation ul > li {
 	margin-right: 10px;
 	color: #58020b;
+	/*         @media screen and (min-width: $screen__sm) {
+            border: 1px solid $color__branco;
+        } */
 }
 
 @media screen and (max-width: 768px) {
@@ -844,12 +847,6 @@ textarea {
 		margin-bottom: 30px;
 		justify-content: right;
 		flex-direction: row-reverse;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.main-navigation ul > li {
-		border: 1px solid #ffffff;
 	}
 }
 
@@ -868,7 +865,7 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-	.main-navigation ul > li :active {
+	.main-navigation ul > li > a:hover {
 		border: 1px solid #ffffff;
 	}
 }
@@ -1791,10 +1788,18 @@ a {
 	padding-right: 4px;
 }
 
+.ScrolltoTop > .iconScrollTop > .tainacan-icon-showmore:before:hover {
+	border: 1px solid #ffffff;
+}
+
 .ScrolltoTop > a,
-.ScrolltoTop a:hover,
 .ScrolltoTop a:visited {
-	color: #5e030d;
+	color: #58020b;
+}
+
+.ScrolltoTop a:hover {
+	background-color: #58020b;
+	color: #ffffff;
 }
 
 .entry-footer {

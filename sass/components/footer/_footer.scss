@@ -151,18 +151,23 @@
         padding-left: 4px;
         padding-right: 4px;
     }
-
-    & > a,
-    a:hover,
-    a:visited {
-        color: #5e030d;
+    & > .iconScrollTop > .tainacan-icon-showmore:before:hover {
+        border: 1px solid $color__branco;
     }
 
+    & > a,
+    a:visited {
+        color: $color__vermelho1;
+    }
+    & a:hover {
+        background-color: $color__vermelho1;
+        color: $color__branco;
+    }
     /*     @media screen and (max-width: $screen__sm) {
         display: none
     } */
 }
 
 .entry-footer {
-/*     display: none; */
+    /*     display: none; */
 }

@@ -151,9 +151,9 @@
             justify-content: right;
             flex-direction: row-reverse;
         }
-        @media screen and (min-width: $screen__sm) {
+        /*         @media screen and (min-width: $screen__sm) {
             border: 1px solid $color__branco;
-        }
+        } */
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             margin-left: 3%;
         }
@@ -167,7 +167,7 @@
         }
     }
 
-    ul > li :active {
+    ul > li > a:hover {
         @media screen and (min-width: $screen__sm) {
             border: 1px solid $color__branco;
         }
