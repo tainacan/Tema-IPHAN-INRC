@@ -1,0 +1,41 @@
+
+.theme-items-list {
+    /* Form and Text styling */
+    --tainacan-input-color: #1d1d1d; /* Not quite black */
+    --tainacan-input-background-color: #fff;
+    --tainacan-input-border-color: #dbdbdb; /* Some input borders disabled state colors */
+    --tainacan-label-color: #454647;
+    --tainacan-info-color: #555758;
+    --tainacan-heading-color: #000;
+
+    /* Skeleton loading color */
+    --tainacan-skeleton-color: #eee;
+
+    /* Items */
+    --tainacan-item-background-color: #fff;
+    --tainacan-item-hover-background-color: #f2f2f2;
+    --tainacan-item-heading-hover-background-color: #dbdbdb;
+
+    /* Derived colors */
+    --tainacan-primary: #d9eced; /* Tooltips and selected dropwdown items background (not really a good name, as secondary is the most important color overall) */
+    --tainacan-secondary: #58020b; /* Link, active state, accent color! */
+    --tainacan-success: #25a189;
+    --tainacan-danger: #a23939; 
+    --tainacan-warning: #e69810;
+
+    /* Background */
+    --tainacan-background-color: #fff;
+
+    /* Font family and size */
+    --tainacan-font-family: Roboto, Source Sans, Helvetica, sans-serif;
+    --tainacan-base-font-size: 1em; /* 16px on most browsers, but not necessarly in your theme. The items list will get the next parent that has font-size value defined. */
+
+    /* Filter Menu Width when not a modal */
+    --tainacan-filter-menu-width-theme: 20%;
+
+    /* One column is 1/24 and it is used a lot in the horizontal space distribution */
+    --tainacan-one-column: 4.16667%;
+
+    /* Not really used in EVERY container, but a rather frequent value */
+    --tainacan-container-padding: 25px;
+}
