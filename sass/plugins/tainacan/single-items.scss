@@ -1,0 +1,1033 @@
+.tainacan-single-post {
+    .aside-thumbnail,
+    &.aside-thumbnail {
+        margin-left: 200px;
+        p {
+            font-size: 0.875rem;
+            font-weight: normal;
+            margin: 0;
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 60px 0 0px;
+        }
+
+        @media screen and (max-width: 1526px) {
+            margin-left: calc(4.166667% + 165px);
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-left: calc(4.166667% + 115px);
+        }
+    }
+    &.single-item-collection-banner {
+        margin-left: -4.16666667%;
+        margin-right: -4.1666667%;
+        margin-left:  calc(-1 * ((100vw - 100%)/2));
+        margin-right: calc(-1 * ((100vw - 100%)/2));
+        margin-top: -2.0rem;
+        position: relative;
+        width: 100%;
+        width: 100vw;
+
+        &>div {
+            padding: 8px 4.16666667% 12px 4.16666667%;
+            padding: 8px calc((100vw - 1400px)/2) 12px calc((100vw - 1400px)/2);
+        }
+        .t-bg-collection {
+            min-height: 4.16666667%;
+            min-height: 4.16666667vw;
+            position: relative;
+        }
+
+        .collection-name {
+            color: $color__branco;
+            margin-bottom: -2px;
+            margin-top: 38px;
+            a {
+                color: $color__branco;
+            }
+        }
+        .item-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            p, h1 {
+                display: inline-block;
+            }
+        }
+        .collection-thumbnail {
+            position: relative;
+            padding-top: 0;
+            padding-bottom: 0;
+            z-index: 9;
+            
+            img {
+                width: 185px;
+                height: 185px;
+                top: -88px;
+                border-width: 3px !important;
+
+                @media screen and (max-width: 1526px) {
+                    left: 4.1666667vw;
+                    top: -68px;
+                    height: 150px;
+                    width: 150px;
+                }
+                @media screen and (max-width: 768px) {
+                    top: -45px;
+                    height: 110px;
+                    width: 110px;
+                }
+            }
+            .image-placeholder {
+                width: 185px;
+                height: 185px;
+                top: -88px;
+                border-width: 3px !important;
+
+                @media screen and (max-width: 1526px) {
+                    left: 4.1666667vw;
+                    top: -68px;
+                    height: 150px;
+                    width: 150px;
+        
+                    h4 {
+                        font-size: 2.5rem !important;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    top: -45px;
+                    height: 110px;
+                    width: 110px;
+        
+                    h4 {
+                        font-size: 2.0rem !important;
+                    }
+                }
+        
+                h4 {
+                    font-size: 3rem;
+                }
+            }
+        }
+        .collection-header--share {
+            position: absolute;
+            float: left;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            top: initial;
+            
+            .btn {
+                max-width: 35px;
+                border: 2px solid $color__branco;
+                background: #2c2d2d;
+
+                .tainacan-icon {
+                    color: $color__branco;
+                    font-size: 1.25rem;
+                }
+            }
+            .icons {
+                position: relative;
+                top: 50%; 
+            }
+        }
+    }
+    header {
+        .header-meta {
+            color: $color__cinza6 !important;
+            font: {
+                size: 0.75rem;
+                weight: 400;
+            }
+            align-items: center;
+            @media screen {
+                @media (min-width: 768px){
+                    margin-top: -10px;
+                }
+            }
+            img {
+                height: 24px;
+                padding-left: 1rem;
+            }
+            .pagination {
+                margin: 0 0.1rem;
+                a:hover {
+                    text-decoration: none;
+                }
+                span {
+                    display: none;
+                }
+                i.tainacan-icon-viewtable::before {
+                    transform: scale(0.6);
+                }
+            }
+        }
+        img{
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .title-content-items {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: $color__vermelho1;
+        margin-left: 4.16666666667%;
+        margin-right: 4.16666666667%;
+        margin-bottom: 2rem;
+    }
+    header.tainacan-content {
+        min-height: auto;
+    }
+    .tainacan-content {
+        font-size: 1rem;
+        min-height: 32.5vh;
+        @media only screen and (min-height: 1080px) {
+            min-height: 50vh;
+        }
+        h1,
+        h2,
+        h3,
+        h5 {
+            font-weight: 600;
+        }
+        h4 {
+            font-style: italic;
+        }
+        h6 {
+            font-style: 400;
+        }
+        h1:not(.has-text-color),
+        h6:not(.has-text-color) {
+            color: $color__vermelho1;
+        }
+        h2:not(.has-text-color),
+        h3:not(.has-text-color),
+        h5:not(.has-text-color) {
+            color: $color__preto;
+        }
+        h4:not(.has-text-color) {
+            color:$color__cinza6;
+        }
+        h1:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size) {
+            font-size: 1.125rem;
+        }
+        h2:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size) {
+            font-size: 1.125rem;
+        }
+        h3:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size)  {
+            font-size: 1rem;
+        }
+        h4:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size)  {
+            font-size: 1rem;
+        }
+        h5:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size)  {
+            font-size: 0.875rem;
+        }
+        h6:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size)  {
+            font-size: 0.875rem;
+        }
+        pre:not(.wp-block-code) {
+            color: $color__cinza6;
+            font-size: 1rem;
+            font-weight: 400;
+            $color__branco-space: pre-line;
+        }
+        .wp-block-code {
+            code {
+                font-size: 0.875rem;
+                color: $color__vermelho1;
+                word-break: break-word;
+            }
+        }
+        .wp-block-quote {
+            margin: 3rem 8.33333%;
+            padding: 1rem;
+            p {
+                color: $color__cinza6;
+                font-size: 1rem;
+                font-weight: normal;
+            }
+            cite {
+                color: $color__cinza6;
+                display: block;
+                width: 100%;
+                text-align: right;
+                font-size: 1rem;
+                font-weight: 500;
+                font-style: italic;
+            }
+            &:not(.is-style-large) {
+                border-left: 2px solid $color__vermelho1;
+            }
+            &.is-style-large {
+                font-size: 1.375rem;
+            }
+        }
+        .wp-block-separator {
+            &:not(.has-background-color) {
+                border-color: $color__cinza4;
+            }
+            width: 50%;
+            max-width: 300px;
+            &.is-style-wide {
+                width: 100%;
+            }
+            &.is-style-dots {
+                &:not(.has-background-color)::before {
+                    color: $color__cinza4;
+                }
+                &::before {
+                    font-weight: 600;
+                }
+            }
+        }
+        .tainacan-group-heading {
+            h1:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size) { font-size: 1.6rem; }
+            h2:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size) { font-size: 1.5rem; }
+            h3:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size) { font-size: 1.25rem; }
+            h4:not(.has-huge-font-size):not(.has-large-font-size):not(.has-medium-font-size):not(.has-normal-font-size):not(.has-small-font-size) { font-size: 1.125rem; }
+            
+            h1:not(.has-text-color),
+            h2:not(.has-text-color),
+            h3:not(.has-text-color),
+            h4:not(.has-text-color) {
+                color: $color__vermelho1;
+            }
+            p {
+                font-style: italic;
+            }
+            p:not(.has-text-color) {
+                color: $color__cinza5;
+            }
+            hr.wp-block-separator:not(.is-style-wide) {
+                margin-left: 0;
+                max-width: 200px;
+            }
+            hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+                border-width: 2px;
+                height: 3px;
+            }
+        }
+        &>ul,
+        &>ol {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-left: 1.75rem;
+        }
+        .wp-block-media-text__content>ul,
+        .wp-block-media-text__content>ol {
+            margin-left: 1.75rem;
+        }
+        .table {
+            thead {
+                border-bottom: 1px solid $color__cinza4;
+                color: $color__cinza6;
+                th {
+                    font-weight: normal;
+                    font-size: 0.75rem;
+                }
+            }
+            tbody {
+                font-size: 0.875rem;
+                font-weight: 400;
+                color: $color__preto;
+            }
+        }
+        dl {
+            dd {
+                margin-left: 2rem;
+            }
+        }
+        address {
+            font-size: 0.875rem;
+            font-style: italic;
+        }
+        p {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            code {
+                border-radius: 5px; 
+                -moz-border-radius: 5px; 
+                -webkit-border-radius: 5px; 
+                border: 1px solid #BCBEC0;
+                padding: 2px;
+                font-size:12px;
+            }
+        }
+        img[class*="align"], 
+        img[class*="wp-image-"], 
+        .gallery {
+            .gallery-icon img {
+                padding: 6px;
+                max-width: 97.5%;
+                max-width: calc( 100% - 14px );
+            }
+        }
+        img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
+            height: auto;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            padding-top: .4rem;
+            &::after{
+                display: block;
+                clear: both;
+                content: "";
+            }
+        }
+        .wp-block-columns {
+            display: flex;
+            margin: 0;
+
+            .wp-block-column {
+                flex-basis: 100%;
+            }
+            .wp-block-column:not(:last-child) {
+                margin-right: 2.0833333%; // Half column
+            }
+            .wp-block-column:not(:first-child) {
+                margin-left: 2.0833333%; // Half column
+            }
+            @media only screen and (max-width: 576px) {
+                .wp-block-column:not(:last-child) {
+                    margin-right: 0;
+                }
+                .wp-block-column:not(:first-child) {
+                    margin-left: 0;
+                }
+            }
+        }
+        .alignleft {
+            float:left;
+            margin: 1rem 1rem 1rem 0;
+        }
+        .alignright {
+            float:right;
+            margin: 1rem 0 1rem 1rem;
+        }
+        @media only screen and (max-width: 576px) {
+            .alignleft, .alignright {
+                float: none;
+                text-align: center;
+                margin: 0;
+                img {
+                    width: 275px;
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            &.alignleft {
+                float: left;
+                margin-right: 1.625em;
+                margin-bottom: 1.625em;
+                @media only screen and (max-width: 576px) {
+                    display: block;
+                    float: none;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+            &.alignright {
+                float: right;
+                margin-left: 1.625em;
+                @media only screen and (max-width: 576px) {
+                    display: block;
+                    float: none;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+            &.size-full{
+                max-width: 97.5%;
+                width: auto;
+                height: auto;
+            }
+            &.aligncenter {
+                clear: both;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .wp-block-cover-image{
+            width: 99.5vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;  
+            @media only screen and (max-width: 1200px){
+                width: 100vw;
+            }
+        }
+        .wp-block-embed{
+            iframe{
+                width: 100%;
+            }
+        }
+        .wp-block-gallery{
+            .blocks-gallery-item{
+                figure{
+                    margin: 0 !important;
+                }
+                img {
+                    height: 100% !important;
+                }
+            }
+            @media (max-width: 768px){
+                padding-left: 0;
+            }
+        }
+        .wp-block-image {
+            &.is-resized {
+                img {
+                    max-width: none !important;
+                }
+            }
+            text-align: center;
+            figcaption {
+                color: inherit;
+                font-size: 0.875rem;
+                font-weight: 400;
+            }
+        }
+        .wp-block-pullquote {
+            margin: 3rem 0;
+            padding: 0;
+            
+            &:not(.is-style-solid-color) {
+                border-color:$color__vermelho1;
+                border-top-width: 2px;
+                border-bottom-width: 2px;
+                border-top-style: solid;
+                border-bottom-style: solid;
+            }
+
+            blockquote {
+                padding: 2rem 8.3333333%;
+                margin: 0;
+
+                p {
+                    font-size: 1.375rem;
+                    font-weight: 500;
+                }
+                :not(.has-text-color) p {
+                    color: $color__vermelho1;
+                }
+                cite {
+                    color: $color__cinza6;
+                    font-size: 1rem;
+                    font-weight: normal;
+                    font-style: italic;
+                    text-transform: none;
+                }
+            }
+        }
+        .wp-caption, .gallery-caption {
+            font-size: 0.8125rem;
+            max-width: 100%;
+            margin-top: 1em;
+            margin-bottom: 1.5em;
+            .wp-caption-text {
+                margin: 0.8075em 0;
+            }
+            img[class*="wp-image-"]{
+                height: auto;
+                margin: 2% 0;
+                width: 100%;
+            }
+        }
+        > p:last-child::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+        &.single-item-collection {
+            min-height: 10vh;
+            position: relative;
+
+            .tainacan-item-file-download {
+                position: absolute;
+                opacity: 0;
+                transform: scale(0);
+                border-radius: 24px;
+                width: 36px;
+                height: 36px;
+                bottom: -18px;
+                right: calc(50% - 18px);
+                cursor: pointer;
+                font-size: 0;
+                background-color: $color__vermelho1;
+                color: $color__branco;
+                transition: opacity 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
+
+                a {
+                    height: 38px;
+                    width: 38px;
+                    display: block;
+                    position: relative;
+                    z-index: 99;
+                }
+
+                &::after {
+                    position: relative;
+                    top: -38px;
+                    display: inline-block;
+                    font: normal normal normal 20px/1 "TainacanIcons";
+                    font-size: 1.25rem !important;
+                    line-height: 2.25rem;
+                    text-rendering: auto;
+                    vertical-align: middle;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-size: 1.25em;
+                    text-transform: none !important;
+                    letter-spacing: normal !important;
+                    content: 'download';
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .single-item-collection--document {
+                position: relative;
+                &:hover {
+                    .tainacan-item-file-download {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+                color: black;
+                font : {
+                    size: 0.875rem;
+                    weight: 400;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 10vh;
+
+                > iframe, img.attachment-large {
+                    display: block;
+                    height: auto;
+                    margin: 0 auto;
+                    border: none;
+                }
+                > audio {
+                    width: 95%;
+                }
+                > iframe {
+                    @media only screen and (min-width: 768px){
+                        min-height: 600px;
+                    }
+                    @media only screen and (max-width: 576px){
+                        min-height: 429px;
+                    }
+                }
+                .tainacan-embed-container{
+                    width: 100%;
+
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            .single-item-collection--attachments-prev,
+            .single-item-collection--attachments-next {
+                position: absolute;
+                display: block;
+                height: 33px;
+                width: 45px;
+                line-height: 0px;
+                font-size: 3.75rem;
+                color: $color__vermelho1;
+                cursor: pointer;
+                background: transparent;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                padding: 0;
+                border: none;
+                outline: none;
+            }
+
+            .single-item-collection--attachments-prev {
+                left: -50px;
+                @media only screen and (max-width: 380px) {
+                    right: -40px;
+                }
+                &.slick-disabled {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+            .single-item-collection--attachments-next {
+                right: -50px;
+                @media only screen and (max-width: 380px) {
+                    right: -40px;
+                }
+                &.slick-disabled {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+            .single-item-collection--gallery {
+                margin-bottom: 24px;
+                .slick-list  {
+                    overflow: visible;
+                }
+                .slick-track {
+                    display: flex;
+                    align-items: center;
+                }
+                .tainacan-content {
+                    margin: 0;
+                    img {
+                        max-height: 60vh;
+                        width: auto;
+                    }
+                    video {
+                        width: auto;
+                    }
+                    iframe {
+                        min-height: 200px;
+                        height: 60vh;
+                    }
+                }
+                .slick-slide {
+                    max-height: 60vh;
+                }
+                .single-item-collection--attachments-next .tainacan-icon-arrowright::before {
+                    content: 'next';
+                }
+                .single-item-collection--attachments-prev .tainacan-icon-arrowleft::before {
+                    content: 'previous';
+                }
+            }
+            .single-item-collection--gallery-items {
+                font-weight: normal;
+                transition: font-weight 0.3s ease;
+
+                img {
+                    border-bottom: 4px solid transparent;
+                    margin-bottom: 4px;
+                    transition: border 0.3s ease;
+                }
+                .slick-current{
+                    font-weight: bold;
+                    img {
+                        border-bottom: 4px solid $color__vermelho1;
+                    }
+                }   
+            }
+            .single-item-collection--attachments-file {
+                &:hover {
+                    .tainacan-item-file-download {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            } 
+            .single-item-collection--gallery-items,
+            .single-item-collection--attachments {
+                .single-item-collection--attachments-file {
+                    margin: 10px;
+                    text-align: center;
+                    display: inline-block;
+                    vertical-align: top;
+                    cursor: pointer;
+                    word-break: break-word;
+                    font-size: 0.875em;
+                    padding: 0 14px;
+                    
+                    @media only screen and (max-width: 380px) {
+                        margin: 10px 0;
+                    }
+
+                    img {
+                        width: 125px;
+                        height: 125px;
+                        display: inline-block;
+                        object-fit: cover;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    a {
+                        width: 100%;
+                        max-width: 125px;
+                        margin: 0 auto;
+                        display: inline-block;
+                        font-size: 0.875rem; 
+                        text-align: center;
+                        word-break: break-word;
+                        line-height: 1.5rem
+                    }
+                    a,
+                    a:focus,
+                    a:hover {
+                        outline: none;
+                        text-decoration: none;
+                        cursor: pointer;
+                        color: black;
+                    }
+                    .attachment-without-image img {
+                        padding: 36px;
+                        background-color: $color__cinza3;
+                        object-fit: contain;
+                    }
+                    .item-card--thumbnail {
+                        margin: 0 0 4px 0 !important;
+                    }
+                }
+            }
+            .single-item-collection--information{
+                .card{
+                    .item-card--thumbnail{
+                        height: auto;
+                        max-width: 250px;
+                        padding: 0;
+                    }
+                    h3{
+                        color: $color__preto;
+                        font-size: 0.875rem;
+                        font-weight: 700;
+                    }
+                    p {
+                        color: $color__preto;
+                        font-size: 0.75rem;
+                    }
+                    .item-card-link--sharing{
+                        margin-right: 0.5rem;
+                        margin-top: 0.25rem;
+                        img {
+                            padding: 0;
+                            max-width: 100%;
+                            width: 30px;
+                        }
+                    }
+                }
+                .s-item-collection--metadata {
+                    height: 100%;
+                    .card {
+                        box-shadow: none;
+                    }
+                    div {
+                        -webkit-column-break-inside: avoid;
+                        page-break-inside: avoid;
+                        break-inside: avoid;
+                        display: inline-block;
+                        width: 100%;
+                        &:last-child {
+                            -webkit-column-break-inside: auto;
+                            page-break-inside: auto;
+                            break-inside: auto;
+                            display: inline-block;
+                            width: 100%;
+                        }
+                    }
+                    @media only screen and (min-width: 768px) {
+                        -moz-column-count: 2;
+                        -moz-column-gap: 0;
+                        -moz-column-rule: none;
+                        -webkit-column-count: 2;
+                        -webkit-column-gap: 0;
+                        -webkit-column-rule: none;
+                        column-count: 2;
+                        column-gap: 4rem;;
+                        column-rule: none;
+                    }
+                    @media only screen and (min-width: 1366px) {
+                        -moz-column-count: 3;
+                        -moz-column-gap: 7rem;
+                        -moz-column-rule: none;
+                        -webkit-column-count: 3;
+                        -webkit-column-gap: 7rem;
+                        -webkit-column-rule: none;
+                        column-count: 3;
+                        column-gap: 7rem;
+                        column-rule: none;
+                    }
+                    h3 {
+                        color: $color__preto;
+                        font-size: 0.875rem;
+                        font-weight: 700;
+                        padding-right: 1rem;
+                        margin-bottom: 0.25rem;
+                        width: 100%;
+                        &:first-of-type:last-of-type {
+                            display: inline-block;
+                        }
+                    }
+                    h4,
+                    label {
+                        color: $color__cinza6;
+                        font-size: 0.85rem;
+                        font-weight: 500;
+                        padding-right: 0.875rem;
+                        width: 100%;
+                        &:first-of-type:last-of-type {
+                            display: inline-block;
+                        }
+                    }
+                    p {
+                        color: $color__preto;
+                        word-wrap: break-word;
+                        font: {
+                            size: 0.75rem;
+                            weight: 400;
+                        }
+                    }
+
+                    // Metadata type textarea has different separator
+                    .multivalue-separator {
+                        color: $color__cinza4;
+                        margin: 0 8px;    
+                    }
+                    .hierarchy-separator {
+                        color: $color__cinza4;  
+                    }
+                    .metadata-type-compound,
+                    .metadata-type-textarea {
+                        .multivalue-separator {
+                            display: block;
+                            max-height: 1px;
+                            width: 35px;
+                            background: $color__cinza4;
+                            content: none;
+                            color: transparent;
+                            margin: 0.875rem auto;
+                        }
+                    }
+                    .tainacan-compound-group {
+                        padding-left: 1.5rem;
+                        border-left: 1px solid $color__cinza1;
+                    }
+                }
+            }
+        }
+    
+        footer {
+            font-size: 0.875rem;
+            color: $color__preto;
+            font-weight: 400;
+        }
+    }
+}
+#breadcrumb-single-item-pagination {
+    font-size: 0.875rem;
+    height: 1.3rem;
+
+    .pagination {
+        margin-bottom: 0;
+        padding: 0;
+        &:last-child {
+            padding: 0 6px;
+        }
+        a span {
+            display: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+}
+#item-single-navigation {
+    flex-wrap: nowrap;
+    flex-grow: 2;
+    max-width: 50%;
+
+    @media screen and (max-width: 768px) {
+        & {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 986px) {
+        & {
+            max-width: 66%;
+        }
+    }
+
+    .pagination {
+        max-width: 50%;
+        flex-basis: 50%;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        padding: 0 12px;
+
+        &:first-child {
+            justify-content: flex-end;
+            a {
+                justify-content: flex-end;
+            }
+        }
+        &:last-child {
+            justify-content: flex-start;
+            a {
+                justify-content: flex-start;
+            }
+        }
+        &:not(:last-child):not(:first-child) {
+            margin-right: 0.1rem;
+            margin-left: 0.1rem;
+        }
+        span {
+            max-width: 75%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            $color__branco-space: nowrap;
+        }
+    }
+    a {
+        position: relative;
+        left: 0;
+        transition: left 0.3s ease;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    a[rel=prev]:hover {
+        left: -7px;
+    }
+    a[rel=next]:hover {
+        left: 7px;
+    }
+    a.has-small-thumbnail img {
+        height: 38px;
+        width: auto;
+        margin: 0.5rem;
+    }
+    a.has-large-thumbnail>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    a.has-large-thumbnail img {
+        height: 170px;
+        width: auto;
+        margin: 0.5rem;
+    }
+    @media screen and (max-width: 768px) {
+        a.has-large-thumbnail img {
+            height: 84px;
+        }
+    }
+}
