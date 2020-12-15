@@ -1067,6 +1067,36 @@ a {
 	display: none;
 }
 
+#ScrolltoTop {
+	position: fixed;
+	bottom: 15%;
+	right: 3%;
+	color: #58020b;
+	background-color: #ffffff;
+	animation: appear-from-bottom 0.2s ease;
+	display: none;
+}
+
+#ScrolltoTop > .tainacan-icon-showmore:before {
+	transform: rotate(180deg);
+	border: 1px solid #58020b;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#ScrolltoTop > .tainacan-icon-showmore:before:hover {
+	border: 1px solid #ffffff;
+}
+
+#ScrolltoTop:visited {
+	color: #58020b;
+}
+
+#ScrolltoTop:hover {
+	background-color: #58020b;
+	color: #ffffff;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -1768,38 +1798,6 @@ a {
 	height: 0px;
 	overflow: hidden;
 	transition: height 0.8s;
-}
-
-.ScrolltoTop {
-	display: flex;
-	flex-direction: row-reverse;
-	margin-right: 3%;
-	margin-top: 3%;
-	margin-bottom: 0;
-	/*     @media screen and (max-width: $screen__sm) {
-        display: none
-    } */
-}
-
-.ScrolltoTop > .iconScrollTop > .tainacan-icon-showmore:before {
-	transform: rotate(180deg);
-	border: 1px solid #58020b;
-	padding-left: 4px;
-	padding-right: 4px;
-}
-
-.ScrolltoTop > .iconScrollTop > .tainacan-icon-showmore:before:hover {
-	border: 1px solid #ffffff;
-}
-
-.ScrolltoTop > a,
-.ScrolltoTop a:visited {
-	color: #58020b;
-}
-
-.ScrolltoTop a:hover {
-	background-color: #58020b;
-	color: #ffffff;
 }
 
 .entry-footer {

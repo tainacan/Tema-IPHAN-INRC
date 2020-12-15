@@ -10,9 +10,6 @@
  */
 
 ?>
-	<div class="ScrolltoTop">
-	<a href="#" class="iconScrollTop"><i class="tainacan-icon tainacan-icon-showmore"></i></a>
-	</div>
 	<footer id="colophon" class="site-footer">
 		<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
 			<div id="secondary" class="site-container widget-area row">
