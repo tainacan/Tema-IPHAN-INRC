@@ -20,14 +20,6 @@ if ( function_exists( 'register_block_style' ) ) {
         );
 
         register_block_style(            
-            'core/heading',            
-             array(                
-               'name'  => 'title-iphan',                
-               'label' =>  'Título IPHAN',            
-            )        
-        );
-
-        register_block_style(            
             'core/column',            
              array(                
                'name'  => 'column-iphan',                

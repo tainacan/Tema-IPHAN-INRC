@@ -7,6 +7,12 @@
     color: $color__vermelho1;
     text-transform: uppercase;
 }
+
+h4::after,
+h5::after,
+h6::after {
+    display: none !important;
+}
 .entry-content .is-style-title-iphan-underscore::after {
     @media screen and (min-width: $screen__md) {
         content: "";

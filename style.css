@@ -1900,6 +1900,12 @@ textarea {
 	text-transform: uppercase;
 }
 
+h4::after,
+h5::after,
+h6::after {
+	display: none !important;
+}
+
 @media screen and (min-width: 1024px) {
 	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
