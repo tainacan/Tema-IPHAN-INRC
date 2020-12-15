@@ -1954,10 +1954,7 @@ textarea {
 .is-style-column-iphan {
 	border: 1px solid #58020b;
 	padding: 30px;
-}
-
-.is-style-column-iphan-gray {
-	background-color: #d9d9d9;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*# sourceMappingURL=style.css.map */
