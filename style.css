@@ -1949,17 +1949,15 @@ h6::after {
 	}
 }
 
-.is-style-title-ipha-inverse {
-	background: #58020b;
-	color: #ffffff;
-	padding-left: 15px;
-	padding-right: 15px;
+.is-style-title-iphan {
+	overflow-wrap: anywhere;
 }
 
 .is-style-column-iphan {
 	border: 1px solid #58020b;
 	padding: 30px;
 	background-color: rgba(255, 255, 255, 0.7);
+	overflow-wrap: anywhere;
 }
 
 /*# sourceMappingURL=style.css.map */
