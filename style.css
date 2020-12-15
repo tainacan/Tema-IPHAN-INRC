@@ -690,6 +690,7 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
 	display: block;
+	/* Small menu. */
 }
 
 .main-navigation ul {
@@ -816,7 +817,7 @@ textarea {
 		position: absolute;
 		top: 18%;
 		left: 0%;
-		background-color: #ffffff;
+		background-image: linear-gradient(to right, #58020b, #970620);
 		width: 100%;
 		height: 50%;
 	}
@@ -827,7 +828,7 @@ textarea {
 		position: absolute;
 		top: 33%;
 		left: 0%;
-		background-color: #ffffff;
+		background-image: linear-gradient(to right, #58020b, #970620);
 		width: 100%;
 		height: 70%;
 	}
@@ -870,23 +871,22 @@ textarea {
 	}
 }
 
-a {
+.main-navigation a {
 	display: block;
 	text-decoration: none;
 }
 
-.menu > ul > li > a:hover {
+.main-navigation .menu > ul > li > a:hover {
 	text-decoration: underline;
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation .menu-toggle,
+.main-navigation .main-navigation.toggled ul {
 	display: block;
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.menu-toggle > svg {
+	.main-navigation .menu-toggle > svg {
 		display: block;
 		position: absolute;
 		right: 8%;
@@ -896,7 +896,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.menu-toggle > svg {
+	.main-navigation .menu-toggle > svg {
 		display: block;
 		position: absolute;
 		right: 7%;
@@ -904,28 +904,28 @@ a {
 	}
 }
 
-.menu-toggle > svg > path[aria-expanded="true"] {
+.main-navigation .menu-toggle > svg > path[aria-expanded="true"] {
 	fill: #ffffff;
 }
 
-.menu-toggle > svg > path[aria-expanded="false"] {
+.main-navigation .menu-toggle > svg > path[aria-expanded="false"] {
 	fill: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
-	.menu-toggle[aria-expanded="true"] > svg > path {
+	.main-navigation .menu-toggle[aria-expanded="true"] > svg > path {
 		fill: #58020b;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.menu-toggle[aria-expanded="false"] > svg > path {
+	.main-navigation .menu-toggle[aria-expanded="false"] > svg > path {
 		fill: #ffffff;
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.menu-toggle[aria-expanded="true"] {
+	.main-navigation .menu-toggle[aria-expanded="true"] {
 		background: #ffffff;
 		border: none;
 		padding-top: 35px;
@@ -938,7 +938,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.menu-toggle[aria-expanded="true"] {
+	.main-navigation .menu-toggle[aria-expanded="true"] {
 		background: #ffffff;
 		border: none;
 		padding-top: 35px;
@@ -951,7 +951,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.menu-toggle[aria-expanded="false"] {
+	.main-navigation .menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		border: none;
 		padding-top: 35px;
@@ -964,7 +964,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.menu-toggle[aria-expanded="false"] {
+	.main-navigation .menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		border: none;
 		padding-top: 35px;
@@ -977,47 +977,47 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-	button:focus {
+	.main-navigation button:focus {
 		outline: none !important;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.menu-toggle {
+	.main-navigation .menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
+	.main-navigation .main-navigation ul {
 		display: flex;
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
+.site-main .main-navigation .comment-navigation, .site-main
+.main-navigation .posts-navigation, .site-main
+.main-navigation .post-navigation {
 	margin: 0 0 1.5em;
 }
 
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
+.main-navigation .comment-navigation .nav-links,
+.main-navigation .posts-navigation .nav-links,
+.main-navigation .post-navigation .nav-links {
 	display: flex;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.main-navigation .comment-navigation .nav-previous,
+.main-navigation .posts-navigation .nav-previous,
+.main-navigation .post-navigation .nav-previous {
 	flex: 1 0 50%;
 }
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
+.main-navigation .comment-navigation .nav-next,
+.main-navigation .posts-navigation .nav-next,
+.main-navigation .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.menu-menu-1-container {
+	.main-navigation .menu-menu-1-container {
 		margin-top: 4%;
 		position: absolute;
 		left: 0;
@@ -1026,7 +1026,7 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-	.menu-menu-1-container > ul {
+	.main-navigation .menu-menu-1-container > ul {
 		padding-top: 50px;
 		padding-bottom: 20px;
 		z-index: 10;
@@ -1036,7 +1036,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.menu-menu-1-container {
+	.main-navigation .menu-menu-1-container {
 		margin-top: 7%;
 		position: absolute;
 		left: 0;
@@ -1046,7 +1046,7 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-	.menu-menu-1-container {
+	.main-navigation .menu-menu-1-container {
 		margin-top: 5%;
 		position: absolute;
 		left: 0;
@@ -1055,7 +1055,7 @@ a {
 	}
 }
 
-.topbutton {
+.main-navigation .topbutton {
 	height: 50px;
 	width: 50px;
 	position: fixed;
@@ -1067,7 +1067,7 @@ a {
 	display: none;
 }
 
-#ScrolltoTop {
+.main-navigation #ScrolltoTop {
 	position: fixed;
 	bottom: 15%;
 	right: 3%;
@@ -1077,22 +1077,22 @@ a {
 	display: none;
 }
 
-#ScrolltoTop > .tainacan-icon-showmore:before {
+.main-navigation #ScrolltoTop > .tainacan-icon-showmore:before {
 	transform: rotate(180deg);
 	border: 1px solid #58020b;
 	padding-left: 4px;
 	padding-right: 4px;
 }
 
-#ScrolltoTop > .tainacan-icon-showmore:before:hover {
+.main-navigation #ScrolltoTop > .tainacan-icon-showmore:before:hover {
 	border: 1px solid #ffffff;
 }
 
-#ScrolltoTop:visited {
+.main-navigation #ScrolltoTop:visited {
 	color: #58020b;
 }
 
-#ScrolltoTop:hover {
+.main-navigation #ScrolltoTop:hover {
 	background-color: #58020b;
 	color: #ffffff;
 }

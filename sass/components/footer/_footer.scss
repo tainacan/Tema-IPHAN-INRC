@@ -4,14 +4,12 @@
     background-image: $gradiente__vermelho;
     color: $color__branco;
     font-family: $font__heading;
-
     a,
     a:hover,
     a:focus,
     a:visited {
         color: $color__branco;
     }
-
     .widget-area {
         & > .widget,
         & > .widget div {
@@ -39,7 +37,6 @@
             flex-direction: row;
             display: flex;
         }
-
         @media screen and (min-width: $screen__sm) {
             column-count: 3;
             padding-top: 70px;
@@ -48,7 +45,6 @@
             flex-direction: row;
             display: flex;
         }
-
         @media screen and (min-width: $screen__md) {
             padding-top: 25px;
             padding-bottom: calc(0px - 0.75em);
@@ -57,7 +53,6 @@
             flex-direction: row;
             display: flex;
         }
-
         ul {
             @media screen and (max-width: $screen__sm) {
                 height: 0px;
@@ -100,7 +95,6 @@
         margin: 0px;
         color: $color__branco;
     }
-
     .site-info {
         padding-top: 20px;
         padding-bottom: 20px;
