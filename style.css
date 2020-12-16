@@ -681,6 +681,10 @@ textarea {
 	text-transform: uppercase;
 }
 
+.site-header img {
+	max-width: 25%;
+}
+
 .entry-meta,
 .entry-meta {
 	display: none;
@@ -1851,6 +1855,24 @@ a {
 	height: 0px;
 	overflow: hidden;
 	transition: height 0.8s;
+}
+
+@media screen and (min-width: 768px) {
+	.site-footer > .site-container > .site-info > img {
+		max-width: 10%;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.site-footer > .site-container > .site-info > img {
+		max-width: 30%;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.site-footer > .site-container > .site-info > img {
+		max-width: 20%;
+	}
 }
 
 .entry-footer {

@@ -22,7 +22,8 @@
 	</div>
 	<div class="site-container">
 		<div class="site-info">
-			<span><img src="/assets/images/iphan_logo.png"></span>
+			<?php $template_directory = get_template_directory_uri(); ?>
+			<img src="<?php echo $template_directory; ?>/assets/images/iphan_logo.png" />
 
 			<div class="icons-footer row">
 				<a href="https://twitter.com/">

@@ -130,6 +130,17 @@
         overflow: hidden;
         transition: height 0.8s;
     }
+    > .site-container > .site-info > img {
+        @media screen and (min-width: $screen__sm) {
+            max-width: 10%;
+        }
+        @media screen and (max-width: $screen__sm) and (orientation: portrait) {
+            max-width: 30%;
+        }
+        @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+            max-width: 20%;
+        }
+    }
 }
 
 .entry-footer {
