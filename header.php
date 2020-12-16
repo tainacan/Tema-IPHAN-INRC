@@ -36,7 +36,7 @@
 				} else {
 					if ( is_front_page() && is_home() ) :
 						?>
-						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+						<h1 class="site-title"><img src="/assets/images/iphan_logo.png"></h1>
 						<?php
 					else :
 						?>
