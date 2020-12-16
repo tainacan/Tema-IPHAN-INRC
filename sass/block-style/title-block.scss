@@ -20,6 +20,7 @@ h6::after {
         width: 4%;
         border-bottom: 6px solid $color__vermelho1;
         display: block;
+        z-index: 10;
     }
 
     @media screen and (max-width: $screen__md) and (orientation: landscape) {
@@ -29,6 +30,7 @@ h6::after {
         height: 15px;
         border-bottom: 6px solid $color__vermelho1;
         display: block;
+        z-index: 10;
     }
 
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
@@ -38,6 +40,7 @@ h6::after {
         height: 15px;
         border-bottom: 6px solid $color__vermelho1;
         display: block;
+        z-index: 10;
     }
 
     @media screen and (max-width: $screen__sm) and (orientation: landscape) {
@@ -47,6 +50,7 @@ h6::after {
         height: 15px;
         border-bottom: 6px solid $color__vermelho1;
         display: block;
+        z-index: 10;
     }
 }
 

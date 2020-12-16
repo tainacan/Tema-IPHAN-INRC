@@ -690,7 +690,6 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
 	display: block;
-	/* Small menu. */
 }
 
 .main-navigation ul {
@@ -855,27 +854,28 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-	.main-navigation ul > li > a:hover {
+	.main-navigation ul > li > a {
 		border: 1px solid #ffffff;
+		padding: 5px;
 	}
 }
 
-.main-navigation a {
+a {
 	display: block;
 	text-decoration: none;
 }
 
-.main-navigation .menu > ul > li > a:hover {
-	text-decoration: underline;
-}
-
-.main-navigation .menu-toggle,
-.main-navigation .main-navigation.toggled ul {
+/*     .menu > ul > li > a:hover {
+        text-decoration: underline;
+    } */
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
 	display: block;
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.main-navigation .menu-toggle > svg {
+	.menu-toggle > svg {
 		display: block;
 		position: absolute;
 		right: 8%;
@@ -884,8 +884,18 @@ textarea {
 	}
 }
 
+@media screen and (max-width: 320px) and (orientation: portrait) {
+	.menu-toggle > svg {
+		display: block;
+		position: absolute;
+		right: 8%;
+		top: 13%;
+		z-index: 10;
+	}
+}
+
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.main-navigation .menu-toggle > svg {
+	.menu-toggle > svg {
 		display: block;
 		position: absolute;
 		right: 7%;
@@ -893,28 +903,28 @@ textarea {
 	}
 }
 
-.main-navigation .menu-toggle > svg > path[aria-expanded="true"] {
+.menu-toggle > svg > path[aria-expanded="true"] {
 	fill: #ffffff;
 }
 
-.main-navigation .menu-toggle > svg > path[aria-expanded="false"] {
+.menu-toggle > svg > path[aria-expanded="false"] {
 	fill: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
-	.main-navigation .menu-toggle[aria-expanded="true"] > svg > path {
+	.menu-toggle[aria-expanded="true"] > svg > path {
 		fill: #58020b;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.main-navigation .menu-toggle[aria-expanded="false"] > svg > path {
+	.menu-toggle[aria-expanded="false"] > svg > path {
 		fill: #ffffff;
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.main-navigation .menu-toggle[aria-expanded="true"] {
+	.menu-toggle[aria-expanded="true"] {
 		background: #ffffff;
 		border: none;
 		padding-top: 35px;
@@ -926,8 +936,22 @@ textarea {
 	}
 }
 
+@media screen and (max-width: 320px) and (orientation: portrait) {
+	.menu-toggle[aria-expanded="true"] {
+		background: #ffffff;
+		border: none;
+		padding-top: 35px;
+		padding-left: 30px;
+		padding-right: 22px;
+		margin-left: 10px;
+		padding-bottom: 10px;
+		margin-top: -25%;
+		z-index: 2;
+	}
+}
+
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.main-navigation .menu-toggle[aria-expanded="true"] {
+	.menu-toggle[aria-expanded="true"] {
 		background: #ffffff;
 		border: none;
 		padding-top: 35px;
@@ -940,7 +964,7 @@ textarea {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.main-navigation .menu-toggle[aria-expanded="false"] {
+	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		border: none;
 		padding-top: 35px;
@@ -953,7 +977,7 @@ textarea {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.main-navigation .menu-toggle[aria-expanded="false"] {
+	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		border: none;
 		padding-top: 35px;
@@ -966,47 +990,47 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
-	.main-navigation button:focus {
+	button:focus {
 		outline: none !important;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.main-navigation .menu-toggle {
+	.menu-toggle {
 		display: none;
 	}
-	.main-navigation .main-navigation ul {
+	.main-navigation ul {
 		display: flex;
 	}
 }
 
-.site-main .main-navigation .comment-navigation, .site-main
-.main-navigation .posts-navigation, .site-main
-.main-navigation .post-navigation {
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
 	margin: 0 0 1.5em;
 }
 
-.main-navigation .comment-navigation .nav-links,
-.main-navigation .posts-navigation .nav-links,
-.main-navigation .post-navigation .nav-links {
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
 	display: flex;
 }
 
-.main-navigation .comment-navigation .nav-previous,
-.main-navigation .posts-navigation .nav-previous,
-.main-navigation .post-navigation .nav-previous {
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
 	flex: 1 0 50%;
 }
 
-.main-navigation .comment-navigation .nav-next,
-.main-navigation .posts-navigation .nav-next,
-.main-navigation .post-navigation .nav-next {
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.main-navigation .menu-menu-1-container {
+	.menu-menu-1-container {
 		margin-top: 4%;
 		position: absolute;
 		left: 0;
@@ -1015,7 +1039,7 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
-	.main-navigation .menu-menu-1-container > ul {
+	.menu-menu-1-container > ul {
 		padding-top: 50px;
 		padding-bottom: 20px;
 		z-index: 10;
@@ -1025,7 +1049,7 @@ textarea {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.main-navigation .menu-menu-1-container {
+	.menu-menu-1-container {
 		margin-top: 7%;
 		position: absolute;
 		left: 0;
@@ -1035,7 +1059,7 @@ textarea {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-	.main-navigation .menu-menu-1-container {
+	.menu-menu-1-container {
 		margin-top: 5%;
 		position: absolute;
 		left: 0;
@@ -1044,7 +1068,7 @@ textarea {
 	}
 }
 
-.main-navigation .topbutton {
+.topbutton {
 	height: 50px;
 	width: 50px;
 	position: fixed;
@@ -1056,6 +1080,18 @@ textarea {
 	display: none;
 }
 
+@media screen and (max-width: 320px) and (orientation: portrait) {
+	.toggled .menu {
+		position: absolute;
+		top: 24%;
+		left: 0%;
+		background: #ffffff;
+		width: 100%;
+		height: 50%;
+		z-index: 20;
+	}
+}
+
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.toggled .menu {
 		position: absolute;
@@ -1064,6 +1100,7 @@ textarea {
 		background: #ffffff;
 		width: 100%;
 		height: 50%;
+		z-index: 20;
 	}
 }
 
@@ -1075,6 +1112,7 @@ textarea {
 		background: #ffffff;
 		width: 100%;
 		height: 70%;
+		z-index: 20;
 	}
 }
 
@@ -1928,6 +1966,7 @@ h6::after {
 		width: 4%;
 		border-bottom: 6px solid #58020b;
 		display: block;
+		z-index: 10;
 	}
 }
 
@@ -1939,6 +1978,7 @@ h6::after {
 		height: 15px;
 		border-bottom: 6px solid #58020b;
 		display: block;
+		z-index: 10;
 	}
 }
 
@@ -1950,6 +1990,7 @@ h6::after {
 		height: 15px;
 		border-bottom: 6px solid #58020b;
 		display: block;
+		z-index: 10;
 	}
 }
 
@@ -1961,6 +2002,7 @@ h6::after {
 		height: 15px;
 		border-bottom: 6px solid #58020b;
 		display: block;
+		z-index: 10;
 	}
 }
 
