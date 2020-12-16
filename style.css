@@ -694,10 +694,21 @@ textarea {
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.main-navigation ul {
+		display: block;
+	}
 }
 
 .main-navigation ul ul.sub-menu {
@@ -810,28 +821,6 @@ textarea {
 	position: relative;
 	right: -15px;
 	top: -0.3rem;
-}
-
-@media screen and (max-width: 768px) and (orientation: portrait) {
-	.main-navigation .menu > ul {
-		position: absolute;
-		top: 18%;
-		left: 0%;
-		background-image: linear-gradient(to right, #58020b, #970620);
-		width: 100%;
-		height: 50%;
-	}
-}
-
-@media screen and (max-width: 768px) and (orientation: landscape) {
-	.main-navigation .menu > ul {
-		position: absolute;
-		top: 33%;
-		left: 0%;
-		background-image: linear-gradient(to right, #58020b, #970620);
-		width: 100%;
-		height: 70%;
-	}
 }
 
 .main-navigation ul > li {
@@ -1065,6 +1054,32 @@ textarea {
 	content: "^";
 	background-repeat: no-repeat;
 	display: none;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.toggled .menu {
+		position: absolute;
+		top: 20%;
+		left: 0%;
+		background: #ffffff;
+		width: 100%;
+		height: 50%;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.toggled .menu {
+		position: absolute;
+		top: 35%;
+		left: 0%;
+		background: #ffffff;
+		width: 100%;
+		height: 70%;
+	}
+}
+
+.toggled ul {
+	display: block;
 }
 
 #ScrolltoTop {
