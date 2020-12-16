@@ -180,6 +180,11 @@ function iphan_inrc_scripts()
 	}
 }
 
+// Desativar cores personalizadas de Gutenberg
+add_theme_support('disable-custom-colors');
+// Desativar gradientes personalizados de Gutenberg
+add_theme_support('disable-custom-gradients');
+
 
 
 
@@ -249,10 +254,12 @@ require get_template_directory() . '/inc/customizer.php';
 //blocks styles
 require get_template_directory() . '/template-parts/block-styles.php';
 
+//color palette
+require get_template_directory() . '/template-parts/color-palette.php';
+
 /**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
