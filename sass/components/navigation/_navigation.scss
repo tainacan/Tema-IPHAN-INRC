@@ -162,9 +162,9 @@ a {
 .menu-toggle > svg {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         display: block;
-        position: absolute;
-        right: 8%;
-        top: 12%;
+/*         position: absolute; */
+/*         right: 8%;
+        top: 11.3%; */
         z-index: 10;
     }
 
@@ -208,19 +208,19 @@ a {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         background: $color__branco;
         border: none;
-        padding-top: 35px;
-        padding-left: 30px;
-        padding-right: 22px;
-        margin-left: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+/*         margin-left: 10px; */
         padding-bottom: 10px;
         z-index: 2;
     }
     @media screen and (max-width: $screen__xs) and (orientation: portrait) {
         background: $color__branco;
         border: none;
-        padding-top: 35px;
-        padding-left: 30px;
-        padding-right: 22px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         margin-left: 10px;
         padding-bottom: 10px;
         margin-top: -25%;
@@ -230,11 +230,11 @@ a {
     @media screen and (max-width: $screen__sm) and (orientation: landscape) {
         background: $color__branco;
         border: none;
-        padding-top: 35px;
-        padding-left: 30px;
-        padding-right: 22px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         margin-left: 10px;
-        padding-bottom: 6px;
+        padding-bottom: 10px;
         z-index: 2;
     }
 }
@@ -243,10 +243,10 @@ a {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         background: $color__vermelho1;
         border: none;
-        padding-top: 35px;
-        padding-left: 30px;
-        padding-right: 20px;
-        margin-left: 10px;
+         padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 10px; 
         padding-bottom: 6px;
         z-index: 2;
     }
@@ -254,9 +254,9 @@ a {
     @media screen and (max-width: $screen__sm) and (orientation: landscape) {
         background: $color__vermelho1;
         border: none;
-        padding-top: 35px;
-        padding-left: 30px;
-        padding-right: 20px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         margin-left: 10px;
         padding-bottom: 6px;
         z-index: 2;
