@@ -1,6 +1,6 @@
 .site-footer {
     z-index: 5;
-    margin-top: 70px;
+    margin-top: 4.375em;
     background-image: $gradiente__vermelho;
     color: $color__branco;
     font-family: $font__heading;
@@ -18,7 +18,7 @@
 
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             column-count: 1;
-            padding-top: 20px;
+            padding-top: 1.25em;
             justify-content: space-between;
             flex-direction: column;
             display: flex;
@@ -32,14 +32,14 @@
 
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             column-count: 1;
-            padding-top: 20px;
+            padding-top: 1.25em;
             justify-content: space-between;
             flex-direction: row;
             display: flex;
         }
         @media screen and (min-width: $screen__sm) {
             column-count: 3;
-            padding-top: 70px;
+            padding-top: 4.375em;
             padding-bottom: calc(70px - 0.75em);
             justify-content: space-between;
             flex-direction: row;
@@ -91,13 +91,13 @@
     } */
 
     hr {
-        height: 2px;
+        height: 0.125em;
         margin: 0px;
         color: $color__branco;
     }
     .site-info {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -105,15 +105,15 @@
 
     .site-info i {
         @media screen and (orientation: portrait) and (max-width: $screen__sm) {
-            font-size: 35px;
+            font-size: 2.1875em;
         }
 
         @media screen and (orientation: landscape) and (max-width: $screen__sm) {
-            font-size: 35px;
+            font-size: 2.1875em;
         }
 
         @media screen and (min-width: $screen__sm) {
-            font-size: 35px;
+            font-size: 2.1875em;
         }
     }
 
@@ -122,7 +122,7 @@
     }
 
     .site-info > .fonte-iphan {
-        font-size: 25px;
+        font-size: 1.5625em;
     }
 
 /*     .collapse {
