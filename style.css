@@ -1833,19 +1833,19 @@ a {
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
 	.site-footer .site-info i {
-		font-size: 35px;
+		font-size: 2.188rem;
 	}
 }
 
 @media screen and (orientation: landscape) and (max-width: 768px) {
 	.site-footer .site-info i {
-		font-size: 35px;
+		font-size: 2.188rem;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	.site-footer .site-info i {
-		font-size: 35px;
+		font-size: 2.188rem;
 	}
 }
 
@@ -1854,7 +1854,7 @@ a {
 }
 
 .site-footer .site-info > .fonte-iphan {
-	font-size: 25px;
+	font-size: 1.563rem;
 }
 
 @media screen and (min-width: 768px) {
