@@ -15,7 +15,10 @@ if ( function_exists( 'register_block_style' ) ) {
             'core/heading',            
              array(                
                'name'  => 'title-iphan-underscore',                
-               'label' =>  'Título IPHAN Sublinhado ',            
+               'label' =>  'Título IPHAN Sublinhado ', 
+                'isDefault' => true, 
+                'edit' => 'title-iphan-underscore',
+
             )        
         );
 
@@ -23,7 +26,8 @@ if ( function_exists( 'register_block_style' ) ) {
             'core/column',            
              array(                
                'name'  => 'column-iphan',                
-               'label' =>  'Coluna IPHAN ',            
+               'label' =>  'Coluna IPHAN ',    
+               'isDefault' => true,        
             )        
         );
 
@@ -31,7 +35,8 @@ if ( function_exists( 'register_block_style' ) ) {
             'core/group',            
              array(                
                'name'  => 'column-iphan',                
-               'label' =>  'Coluna IPHAN ',            
+               'label' =>  'Coluna IPHAN ',   
+               'isDefault' => true,         
             )        
         );
     }
