@@ -958,12 +958,13 @@ a {
 	.menu-toggle[aria-expanded="true"] {
 		background: #ffffff;
 		border: none;
-		padding-top: 10px;
-		padding-left: 10px;
+		padding-top: 20px;
+		padding-left: 45px;
 		padding-right: 10px;
 		margin-left: 10px;
-		padding-bottom: 10px;
+		padding-bottom: 22px;
 		z-index: 2;
+		margin-bottom: 5%;
 	}
 }
 

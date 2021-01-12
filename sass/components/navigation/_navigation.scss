@@ -230,12 +230,13 @@ a {
     @media screen and (max-width: $screen__sm) and (orientation: landscape) {
         background: $color__branco;
         border: none;
-        padding-top: 10px;
-        padding-left: 10px;
+        padding-top: 20px;
+        padding-left: 45px;
         padding-right: 10px;
         margin-left: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 22px;
         z-index: 2;
+        margin-bottom: 5%;
     }
 }
 
