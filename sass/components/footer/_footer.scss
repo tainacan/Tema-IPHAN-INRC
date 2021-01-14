@@ -155,12 +155,13 @@
 }
 
 .collapsible {
-    color: white;
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
+    @media only screen and (max-width: $screen__sm) {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+    }
 }
 
 .active,
@@ -168,7 +169,9 @@
 }
 
 .content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    @media only screen and (max-width: $screen__sm) {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
 }

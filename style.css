@@ -1892,19 +1892,22 @@ a {
 	}
 }
 
-.collapsible {
-	color: white;
-	cursor: pointer;
-	width: 100%;
-	border: none;
-	text-align: left;
-	outline: none;
+@media only screen and (max-width: 768px) {
+	.collapsible {
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+	}
 }
 
-.content {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+@media only screen and (max-width: 768px) {
+	.content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
 }
 
 /*--------------------------------------------------------------
