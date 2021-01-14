@@ -1909,6 +1909,23 @@ a {
 	}
 }
 
+/* Breadcrumbs
+--------------------------------------------- */
+.breadcrumbs {
+	background-color: #e8e8e8;
+	display: flex;
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
+.breadcrumbs > li {
+	list-style: none;
+}
+
+.breadcrumbs > li > a {
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

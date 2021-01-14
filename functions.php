@@ -261,6 +261,9 @@ require get_template_directory() . '/template-parts/block-styles.php';
 //color palette
 require get_template_directory() . '/template-parts/color-palette.php';
 
+//breadcrumb
+require get_template_directory() . '/template-parts/breadcrumb.php';
+
 /**
  * Load Jetpack compatibility file.
  */

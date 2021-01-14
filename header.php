@@ -66,3 +66,4 @@
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
+		<?php custom_breadcrumbs(); ?>

@@ -1,0 +1,14 @@
+.breadcrumbs {
+    background-color: $color__cinza2;
+    display: flex;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.breadcrumbs > li {
+    list-style: none;
+}
+
+.breadcrumbs > li > a {
+    text-decoration: none;
+}
