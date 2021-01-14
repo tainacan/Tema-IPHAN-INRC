@@ -4,7 +4,7 @@ function custom_breadcrumbs()
 {
 
     // Settings
-    $separator = '&nbsp/&nbsp';
+    $separator = '&nbsp&nbsp/&nbsp&nbsp';
     $breadcrums_id = 'breadcrumbs';
     $breadcrums_class = 'breadcrumbs';
     $home_title = 'Homepage';
@@ -19,9 +19,13 @@ function custom_breadcrumbs()
     if (!is_front_page()) {
 
         // Build the breadcrums
-        echo '<ul id="' . $breadcrums_id . '" class="' . $breadcrums_class . '">';
+        echo '<ul id="' . $breadcrums_id . '" class="' . $breadcrums_class . ' ">';
 
         // Home page
+        echo '
+        <a href="' . get_home_url() . '">
+        <i class="tainacan-icon tainacan-icon-home"></i>
+        </a>';
         echo '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . $home_title . '">' . $home_title . '</a></li>';
         echo '<li class="separator separator-home"> ' . $separator . ' </li>';
 

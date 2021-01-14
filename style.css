@@ -1911,11 +1911,20 @@ a {
 
 /* Breadcrumbs
 --------------------------------------------- */
-.breadcrumbs {
-	background-color: #e8e8e8;
-	display: flex;
-	padding-top: 14px;
-	padding-bottom: 14px;
+@media screen and (min-width: 768px) {
+	.breadcrumbs {
+		background-color: #e8e8e8;
+		display: flex;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.breadcrumbs {
+		display: none;
+	}
 }
 
 .breadcrumbs > li {
@@ -1924,6 +1933,17 @@ a {
 
 .breadcrumbs > li > a {
 	text-decoration: none;
+}
+
+.breadcrumbs a > i {
+	font-size: 1.7rem;
+	color: #58020b;
+}
+
+.breadcrumbs > a {
+	margin-right: 2%;
+	margin-top: -11px;
+	margin-left: 17%;
 }
 
 /*--------------------------------------------------------------

@@ -1,8 +1,14 @@
 .breadcrumbs {
-    background-color: $color__cinza2;
-    display: flex;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    @media screen and (min-width: $screen__sm) {
+        background-color: $color__cinza2;
+        display: flex;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        margin-left: 0px;
+    }
+    @media screen and (max-width: $screen__sm) {
+        display: none;
+    }
 }
 
 .breadcrumbs > li {
@@ -11,4 +17,14 @@
 
 .breadcrumbs > li > a {
     text-decoration: none;
+}
+.breadcrumbs a > i {
+    font-size: 1.7rem;
+    color: $color__vermelho1;
+}
+
+.breadcrumbs > a {
+    margin-right: 2%;
+    margin-top: -11px;
+    margin-left: 17%;
 }
