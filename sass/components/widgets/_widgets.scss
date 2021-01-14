@@ -1,43 +1,441 @@
 .widget {
-	margin: 0 0 0.75em;
+    margin: 0 0 0.75em;
 
-	// Make sure select elements fit in widgets.
-	select {
-		max-width: 100%;
-	}
+    // Make sure select elements fit in widgets.
+    select {
+        max-width: 100%;
+    }
 
-	h1 {
-		font-size: 1.25rem;
-		font-weight: 500;
-	}
-	h2 {
-		font-size: 1.125rem;
-		font-weight: 500;
-	}
-	h3 {
-		font-size: 1.0rem;
-		font-weight: 500;
-	}
-	h4 {
-		font-size: 0.875rem;
-		font-weight: 500;
-	}
-	h5 {
-		font-size: 0.75rem;
-		font-weight: 500;
-	}
-	h5 {
-		font-size: 0.75rem;
-		font-weight: normal;
-	}
+    h1 {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
 
-	ul {
-		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
+    h2 {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
 
-		a:not(:hover):not(:focus) {
-			text-decoration: none;
-		}
-	}
+    h3 {
+        font-size: 1.0rem;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: 0.75rem;
+        font-weight: normal;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+
+        a:not(:hover):not(:focus) {
+            text-decoration: none;
+        }
+    }
+
+    .wp-calendar-table>caption {
+        color: $color__branco;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .search-field,
+    .search-field:active,
+    .search-field:focus {
+        border-radius: 15px;
+        border: none
+    }
+
+    label {
+        border: none;
+    }
+
+    .search-form,
+    .search-form>label>,
+    .search-form>label>.search-field {
+        border: none
+    }
 }
+
+.widget-title {
+    text-transform: uppercase;
+}
+
+
+/* .widget_calendar {
+    border: 1px $color__branco solid;
+}
+
+.widget_calendar::before {
+    font-family: "tainacan-icon tainacan-icon-calendar";
+} */
+
+// begin calendar
+
+.widget_calendar {
+    float: left;
+}
+
+#wp-calendar {
+    width: 100%;
+}
+
+
+.calendar_wrap table {
+    margin-top: 10%;
+}
+
+#wp-calendar caption {
+    text-align: right;
+    color: $color__branco;
+    font-size: 12px;
+
+
+    @media screen and (max-width:$screen__sm) {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    @media screen and (min-width:$screen__sm) {
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}
+
+#wp-calendar thead {
+    font-size: 10px;
+}
+
+#wp-calendar thead th {
+    padding-bottom: 10px;
+}
+
+#wp-calendar tbody {
+    color: #000;
+}
+
+#wp-calendar a:visited,
+#wp-calendar a {
+    color: #000;
+    text-decoration: underline;
+}
+
+#wp-calendar tbody td {
+    background: $color__branco1;
+    border: 1px solid $color__branco;
+    text-align: center;
+    padding-left: 1%;
+    padding-bottom: 3%;
+}
+
+#wp-calendar {
+    margin-bottom: 0px;
+}
+
+.wp-calendar-nav>span>a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#wp-calendar tbody td:hover,
+#wp-calendar tbody a:hover {
+    background: $color__vermelho2;
+    color: $color__branco
+}
+
+#wp-calendar tbody .pad {
+    background: none;
+}
+
+#wp-calendar tfoot #next {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+#wp-calendar tfoot #prev {
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+//end calendar
+
+//begin dropdown file
+.widget_archive {
+    margin-bottom: 5%;
+}
+
+.widget_archive>ul>li>a {
+    text-transform: uppercase;
+}
+
+.widget_archive>ul>li {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: $screen__sm) and (orientation: portrait) {
+        margin-right: 30%;
+    }
+
+    @media screen and (max-width: $screen__sm) {
+        margin-right: 10%;
+    }
+}
+
+.widget_archive select {
+    padding-bottom: 3%;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding-top: 2%;
+
+    @media screen and (min-width: $screen__sm) {
+        /*     margin-top: 10%; */
+    }
+
+    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+        width: 90%;
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width:$screen__md) and (orientation: landscape) {
+        width: 95%;
+        vertical-align: middle;
+    }
+}
+
+//end dropdown file
+
+//begin search bar
+.widget.widget_search .search-form .search-submit {
+    display: none;
+}
+
+.widget.widget_search .search-form .search-submit {
+    display: none;
+}
+
+.widget.widget_search .search-form .search-field {
+    @media screen and (min-width: $screen__sm) {
+        width: 100%;
+        margin-top: 10%;
+        padding-left: 5%;
+        padding-right: 30%;
+        padding: 5px;
+    }
+
+    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+        position: relative;
+        width: 100%;
+        padding-left: 5%;
+        padding: 9px;
+        padding-right: 0%;
+        margin-left: 0%;
+        width: 330px;
+    }
+
+}
+
+//end search bar
+
+// Begin Category
+
+.widget_categories {
+    margin-bottom: 5%;
+}
+
+.widget_categories>ul>li>a {
+    text-transform: uppercase;
+}
+
+.widget_categories>ul>li {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: $screen__sm) and (orientation: portrait) {
+        margin-right: 30%;
+    }
+
+    @media screen and (max-width: $screen__sm) {
+        margin-right: 10%;
+    }
+}
+
+.widget_categories select {
+    padding-bottom: 3%;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding-top: 2%;
+
+    @media screen and (min-width: $screen__sm) {
+        /*     margin-top: 10%; */
+    }
+
+    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+        width: 90%;
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width:$screen__md) and (orientation: landscape) {
+        width: 95%;
+        vertical-align: middle;
+    }
+}
+
+//end Category
+
+//begin media galery
+.widget_media_gallery>div {
+    row-gap: 0%;
+    column-gap: 3%;
+}
+
+.widget_media_gallery figcaption {
+    flex-wrap: wrap;
+    max-width: 76px;
+    max-height: 100px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.widget_media_gallery figure img {
+    max-width: 76px;
+    max-height: 76px;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.gallery-icon {
+    @media screen and (max-width: $screen__sm) {
+        text-align: left;
+    }
+}
+
+.gallery-columns-2,
+.gallery-columns-1 {
+    max-height: 200px;
+    max-width: 100%;
+    overflow: auto;
+    /* this will hide the scrollbar in mozilla based browsers */
+    overflow: -moz-scrollbars-none;
+    /* this will hide the scrollbar in internet explorers */
+    -ms-overflow-style: none;
+}
+
+.gallery-columns-1 figure::-webkit-scrollbar,
+.gallery-columns-2 figure::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+.gallery-columns-1>figure,
+.gallery-columns-2>figure {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+.gallery-columns-3,
+.gallery-columns-4,
+.gallery-columns-5,
+.gallery-columns-6,
+.gallery-columns-7 .gallery-columns-8,
+.gallery-columns-9 {
+    max-height: 250px;
+    max-width: 100%;
+    overflow: auto;
+    /* this will hide the scrollbar in mozilla based browsers */
+    overflow: -moz-scrollbars-none;
+    /* this will hide the scrollbar in internet explorers */
+    -ms-overflow-style: none;
+}
+
+.gallery-columns-3 figure::-webkit-scrollbar,
+.gallery-columns-4 figure::-webkit-scrollbar,
+.gallery-columns-5 figure::-webkit-scrollbar,
+.gallery-columns-6 figure::-webkit-scrollbar,
+.gallery-columns-7 figure::-webkit-scrollbar,
+.gallery-columns-8 figure::-webkit-scrollbar,
+.gallery-columns-9 figure::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+.gallery-columns-3>figure,
+.gallery-columns-4>figure,
+.gallery-columns-5>figure,
+.gallery-columns-6>figure,
+.gallery-columns-7>figure,
+.gallery-columns-8>figure,
+.gallery-columns-9>figure {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+//end media galery
+
+// Begin Search
+
+
+// End Search
+
+// Begin Image
+.widget_media_image figure {
+    width: 100%;
+    margin-top: 14%;
+}
+
+.widget_media_image figcaption {
+    text-align: left;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+// End Image
+
+//Begin Recent Coments
+.widget_recent_comments ul {
+    margin-top: 10%
+}
+
+//End Recent Coments
+
+//Begin Custom HTML
+.widget_custom_html .custom-html-widget {
+    margin-top: 10%;
+}
+
+//End Custom HTML
+
+//Begin Texto dissertativo
+.widget_text .textwidget {
+    margin-top: 10%;
+}
+
+.widget_text .textwidget ol {
+    margin-left: 0px;
+}
+
+//End Texto dissertativo
+
+//Begin Audio
+.widget_media_audio .mejs-container {
+    margin-top: 10%;
+}
+
+//End Audio

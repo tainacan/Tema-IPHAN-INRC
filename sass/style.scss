@@ -57,7 +57,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Generic
 --------------------------------------------------------------*/
 
-/* Normalize
+/* Normalize 
 --------------------------------------------- */
 @import "generic/normalize";
 
@@ -99,3 +99,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+// block styles
+
+@import "block-style/title-block.scss";
+@import "block-style/column-block.scss";

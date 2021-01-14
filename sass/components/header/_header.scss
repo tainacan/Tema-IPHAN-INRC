@@ -1,23 +1,27 @@
 .site-header {
     background-color: $color__vermelho1;
-
     .site-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: $color__branco;
         padding-top: 22px;
-        padding-bottom: 22px; 
-
+        padding-bottom: 22px;
         a,
         a:hover,
         a:focus,
         a:visited {
-            color: $color__branco; 
+            color: $color__branco;
+            text-decoration: none;
         }
-
         .site-title {
             margin: 0;
+            text-transform: uppercase;
         }
     }
+}
+
+.entry-meta,
+.entry-meta {
+    display: none;
 }
