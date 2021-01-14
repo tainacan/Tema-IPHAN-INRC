@@ -1819,8 +1819,7 @@ a {
 	.site-footer .widget-area .plus-minus::after {
 		content: "+";
 		float: right;
-		margin-right: 20%;
-		margin-top: -7%;
+		margin-top: -9%;
 	}
 }
 
@@ -1828,8 +1827,7 @@ a {
 	.site-footer .widget-area .active .plus-minus::after {
 		content: "-";
 		float: right;
-		margin-right: 20%;
-		margin-top: -7%;
+		margin-top: -9%;
 	}
 }
 

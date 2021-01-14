@@ -65,16 +65,14 @@
             @media screen and (max-width: $screen__sm) {
                 content: "+";
                 float: right;
-                margin-right: 20%;
-                margin-top: -7%;
+                margin-top: -9%;
             }
         }
         .active .plus-minus::after {
             @media screen and (max-width: $screen__sm) {
                 content: "-";
                 float: right;
-                margin-right: 20%;
-                margin-top: -7%;
+                margin-top: -9%;
             }
         }
     }
