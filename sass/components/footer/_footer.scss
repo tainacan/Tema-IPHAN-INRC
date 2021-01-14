@@ -18,7 +18,7 @@
 
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             column-count: 1;
-            padding-top: 20px;
+            padding-top: 70px;
             justify-content: space-between;
             flex-direction: column;
             display: flex;
@@ -32,7 +32,7 @@
 
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             column-count: 1;
-            padding-top: 20px;
+            padding-top: 70px;
             justify-content: space-between;
             flex-direction: row;
             display: flex;
@@ -46,7 +46,7 @@
             display: flex;
         }
         @media screen and (min-width: $screen__md) {
-            padding-top: 25px;
+            padding-top: 70px;
             padding-bottom: calc(0px - 0.75em);
             justify-content: space-between;
             column-count: 4;

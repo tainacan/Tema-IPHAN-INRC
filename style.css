@@ -1770,7 +1770,7 @@ a {
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.site-footer .widget-area {
 		column-count: 1;
-		padding-top: 20px;
+		padding-top: 70px;
 		justify-content: space-between;
 		flex-direction: column;
 		display: flex;
@@ -1786,7 +1786,7 @@ a {
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.site-footer .widget-area {
 		column-count: 1;
-		padding-top: 20px;
+		padding-top: 70px;
 		justify-content: space-between;
 		flex-direction: row;
 		display: flex;
@@ -1806,7 +1806,7 @@ a {
 
 @media screen and (min-width: 1024px) {
 	.site-footer .widget-area {
-		padding-top: 25px;
+		padding-top: 70px;
 		padding-bottom: calc(0px - 0.75em);
 		justify-content: space-between;
 		column-count: 4;
