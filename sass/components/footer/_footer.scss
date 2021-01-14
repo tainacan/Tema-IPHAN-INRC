@@ -53,7 +53,7 @@
             flex-direction: row;
             display: flex;
         }
- /*        ul {
+        /*        ul {
             @media screen and (max-width: $screen__sm) {
                 height: 0px;
                 overflow: hidden;
@@ -61,14 +61,25 @@
             }
         } */
 
-        .plus-minus {
+        .plus-minus::after {
             @media screen and (max-width: $screen__sm) {
                 content: "+";
+                float: right;
+                margin-right: 20%;
+                margin-top: -10%;
+            }
+        }
+        .active .plus-minus::after {
+            @media screen and (max-width: $screen__sm) {
+                content: "-";
+                float: right;
+                margin-right: 20%;
+                margin-top: -10%;
             }
         }
     }
 
-/*     .widget-area:hover {
+    /*     .widget-area:hover {
         ul {
             @media screen and (max-width: $screen__sm) and (orientation: portrait) {
                 height: 100%;
@@ -125,7 +136,7 @@
         font-size: 1.563rem;
     }
 
-/*     .collapse {
+    /*     .collapse {
         height: 0px;
         overflow: hidden;
         transition: height 0.8s;
@@ -143,6 +154,21 @@
     }
 }
 
-.entry-footer {
-    /*     display: none; */
+.collapsible {
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+.active,
+.collapsible:hover {
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }

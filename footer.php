@@ -32,9 +32,9 @@
 				<a href="https://www.facebook.com/">
 					<i class="tainacan-icon tainacan-icon-facebook"></i>
 				</a>
-				<!-- 						<a href="https://www.instagram.com/">
+				<a href="https://www.instagram.com/">
 					<i class="tainacan-icon tainacan-icon-instagram"></i>
-					</a> -->
+				</a>
 			</div>
 		</div><!-- .site-info -->
 	</div><!-- .site-container -->

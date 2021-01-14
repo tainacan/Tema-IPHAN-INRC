@@ -147,9 +147,9 @@ function iphan_inrc_widgets_init()
 			'description'   => esc_html__('Add widgets here.', 'iphan_inrc'),
 			'before_widget' => '<section class="widget %2$s col-sm-6 col-md-3" >',
 			'after_widget'  => '</div></section>',
-			'before_title'  => '<h2 id="%1$s" class="widget-title">',
-			'after_title'   => '<a type="button" data-toggle="collapse" data-target="#widget" aria-expanded="false" class="plus-minus" >&nbsp +</a></h2><div id="widget" >',
-		)
+			'before_title'  => '<h2 class="widget-title collapsible">',
+			'after_title'   => '<a type="button" class="plus-minus"></a></h2><div class="content" >',
+			)
 	);
 }
 add_action('widgets_init', 'iphan_inrc_widgets_init');
