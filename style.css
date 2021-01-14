@@ -1092,7 +1092,7 @@ a {
 @media screen and (max-width: 320px) and (orientation: portrait) {
 	.toggled .menu {
 		position: absolute;
-		top: 24%;
+		top: 12%;
 		left: 0%;
 		background: #ffffff;
 		width: 100%;

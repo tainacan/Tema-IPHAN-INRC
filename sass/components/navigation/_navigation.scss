@@ -351,7 +351,7 @@ a {
     .menu {
         @media screen and (max-width: $screen__xs) and (orientation: portrait) {
             position: absolute;
-            top: 24%;
+            top: 12%;
             left: 0%;
             background: $color__branco;
             width: 100%;
