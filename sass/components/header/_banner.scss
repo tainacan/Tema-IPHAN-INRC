@@ -20,3 +20,9 @@
     font-weight: lighter;
     letter-spacing: 5px;
 }
+
+.site-title {
+    @media screen and (min-width: $screen__md) {
+        margin-bottom: 150px;
+    }
+}
