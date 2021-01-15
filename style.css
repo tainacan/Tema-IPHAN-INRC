@@ -2112,7 +2112,7 @@ a {
 
 .title-banner {
 	text-transform: uppercase;
-	background-color: #58020b;
+	background-color: RGB(88, 2, 11, 0.7);
 	color: #ffffff;
 	font-size: 5rem;
 	padding-left: 3%;
@@ -2125,6 +2125,7 @@ a {
 
 .title-banner:last-child {
 	font-weight: lighter;
+	letter-spacing: 5px;
 }
 
 /*--------------------------------------------------------------
