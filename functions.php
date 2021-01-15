@@ -267,6 +267,9 @@ require get_template_directory() . '/template-parts/color-palette.php';
 //banner bw
 require get_template_directory() . '/template-parts/banner-header-bw.php';
 
+//banner home
+require get_template_directory() . '/template-parts/banner-header-home.php';
+
 /**
  * Load Jetpack compatibility file.
  */

@@ -66,4 +66,11 @@
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
-		<?php custom_banner_bw(); ?>
+
+		<?php
+		if (is_front_page() && is_home()) {
+			custom_banner_home();
+		} else {
+			custom_banner_bw();
+		}
+		?>
