@@ -171,11 +171,14 @@ function iphan_inrc_scripts()
 	}
 }
 
-function admin_style()
-{
-	wp_enqueue_style('admin-styles', get_template_directory_uri() . '/style.css');
+//editor styles
+add_editor_style( 'editor-style.css' );
+add_theme_support( 'editor-styles' );
+add_action('admin_init', 'add_editor_style');
+
+function add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
 }
-add_action('admin_enqueue_scripts', 'admin_style');
 // Desativar cores personalizadas de Gutenberg
 add_theme_support('disable-custom-colors');
 // Desativar gradientes personalizados de Gutenberg
