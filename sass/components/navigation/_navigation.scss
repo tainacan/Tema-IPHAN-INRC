@@ -441,6 +441,7 @@ a {
     background-color: $color__branco;
     animation: appear-from-bottom 0.2s ease;
     display: none;
+    z-index: 9999;
 
     & > .tainacan-icon-showmore:before {
         transform: rotate(180deg);

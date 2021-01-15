@@ -1322,6 +1322,7 @@ a {
 	background-color: #ffffff;
 	animation: appear-from-bottom 0.2s ease;
 	display: none;
+	z-index: 9999;
 }
 
 #ScrolltoTop > .tainacan-icon-showmore:before {
