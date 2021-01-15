@@ -1,0 +1,19 @@
+.text-banner {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    line-height: 5rem;
+}
+.title-banner {
+    text-transform: uppercase;
+    background-color: $color__vermelho1;
+    color: $color__branco;
+    font-size: 5rem;
+}
+
+.title-banner:first-child {
+    font-weight: bold;
+}
+.title-banner:last-child {
+    font-weight: lighter;
+}

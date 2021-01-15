@@ -263,6 +263,9 @@ require get_template_directory() . '/template-parts/block-patterns.php';
 //color palette
 require get_template_directory() . '/template-parts/color-palette.php';
 
+//banner bw
+require get_template_directory() . '/template-parts/banner-header-bw.php';
+
 /**
  * Load Jetpack compatibility file.
  */
