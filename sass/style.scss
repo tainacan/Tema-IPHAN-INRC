@@ -71,6 +71,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "base/base";
 
 /*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layouts/no-sidebar";
+
+/*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 @import "components/components";
@@ -100,7 +105,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "utilities/alignments";
 
-// block styles
-
+// Block styles
+@import "block-style/editor-basics.scss";
 @import "block-style/title-block.scss";
 @import "block-style/column-block.scss";

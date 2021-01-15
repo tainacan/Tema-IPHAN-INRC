@@ -2,6 +2,12 @@ $size__site-main: 100%;
 
 $container__max-width: 1300px;
 $container__side-padding: 5.48%;
+$container__side-padding_x2: calc(2 * 5.48%);
+$container__side-padding_x-2: calc(-2 * 5.48%);
+
+$container__max-width_with_padding: calc(1300px - (2 * 5.48%));
+$container__max-width_without_margin: calc(100% + (2 * 5.48%));
+$container__max-width_without_margin_2x: calc(100% + (4 * 5.48%));
 
 $screen__xs: 320px;
 $screen__sm: 768px;

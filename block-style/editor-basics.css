@@ -1,0 +1,5 @@
+.wp-block {
+	max-width: calc($container__max-width - (2 * $container__side-padding));
+}
+
+/*# sourceMappingURL=editor-basics.css.map */
