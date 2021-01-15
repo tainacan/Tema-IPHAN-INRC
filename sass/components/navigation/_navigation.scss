@@ -1,5 +1,22 @@
 .main-navigation {
     display: block;
+
+    .menu > li > a {
+        @media screen and (max-width: $screen__md) {
+            margin-bottom: 20px;
+        }
+    }
+    .sub-menu > li > a {
+        @media screen and (max-width: $screen__md) {
+            margin-bottom: 10px;
+        }
+    }
+    .menu-item-has-children {
+        @media screen and (max-width: $screen__md) {
+            border-bottom: 1px solid $color__cinza4;
+            margin-left: 5%;
+        }
+    }
     ul {
         list-style: none;
         margin: 0;
@@ -11,40 +28,62 @@
             display: block;
         }
         ul.sub-menu {
-            border-top: 1px solid $color__cinza3;
-            border-left: 1px solid $color__cinza3;
-            border-right: 1px solid $color__cinza3;
-            border-bottom: 5px solid $color__vermelho1;
-            flex-direction: column;
-            background-color: $color__branco;
-            padding: 10px 20px;
-            float: left;
-            position: absolute;
-            top: 100%;
-            left: -999em;
-            z-index: 99999;
-            margin-top: 0px;
-            transition: margin 0.3s ease-out;
-            &::before {
-                content: "";
-                height: 10px;
-                width: 100%;
+            @media screen and (min-width: $screen__md) {
+                border-top: 1px solid $color__cinza3;
+                border-left: 1px solid $color__cinza3;
+                border-right: 1px solid $color__cinza3;
+                border-bottom: 5px solid $color__vermelho1;
+                flex-direction: column;
+                background-color: $color__branco;
+                padding: 10px 20px;
+                float: left;
                 position: absolute;
-                top: -10px;
+                top: 100%;
+                left: -999em;
+                z-index: 99999;
+                margin-top: 0px;
+                transition: margin 0.3s ease-out;
+                &::before {
+                    content: "";
+                    height: 10px;
+                    width: 100%;
+                    position: absolute;
+                    top: -10px;
+                }
+            }
+            @media screen and (max-width: $screen__md) {
+                > li {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+                > li > a {
+                    color: $color__cinza6 !important;
+                }
             }
             ul {
                 left: -999em;
                 top: 0;
             }
             li.menu-item {
-                text-align: right;
-                line-height: 1.5;
-                justify-content: flex-end;
-                margin-right: 0 !important;
-                padding-right: 0 !important;
-                border: none;
+                @media screen and (min-width: $screen__md) {
+                    text-align: right;
+                    line-height: 1.5;
+                    justify-content: flex-end;
+                    margin-right: 0 !important;
+                    padding-right: 0 !important;
+                    border: none;
+                }
+                @media screen and (max-width: $screen__md) {
+                    text-align: right;
+                    justify-content: flex-end;
+                    margin-right: 0 !important;
+                    padding-right: 0 !important;
+                    border: none;
+                }
                 &:not(:last-child) {
-                    border-bottom: 1px solid $color__cinza4;
+                    @media screen and (min-width: $screen__md) {
+                        border-bottom: 1px solid $color__cinza4;
+                    }
                 }
                 &:hover > ul,
                 &.focus > ul {
@@ -101,14 +140,17 @@
                     cursor: pointer;
                 }
                 &::after {
-                    display: block;
-                    content: "\0231C";
-                    font-size: 1.5rem;
-                    rotate: 225deg;
-                    color: $color__branco;
-                    position: relative;
-                    right: -15px;
-                    top: 0.3rem;
+                    @media screen and (min-width:$screen__md){
+                        display: block;
+                        content: "\0231C";
+                        font-size: 1.5rem;
+                        rotate: 225deg;
+                        color: $color__branco;
+                        position: relative;
+                        right: -15px;
+                        top: 0.3rem;
+                    }
+                    
                 }
             }
         }
@@ -123,6 +165,8 @@
             margin-bottom: 30px;
             justify-content: right;
             flex-direction: row-reverse;
+            display: grid;
+            text-align: right;
         }
         /*         @media screen and (min-width: $screen__sm) {
             border: 1px solid $color__branco;
