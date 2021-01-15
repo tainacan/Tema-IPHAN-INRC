@@ -104,11 +104,11 @@ if (!function_exists('iphan_inrc_setup')) :
 		);
 
 		/* Align wide and full */
-		add_theme_support( 'align-wide' );
+		add_theme_support('align-wide');
 
 		/* Editor Styles */
-		add_theme_support( 'editor-styles' );
-		add_editor_style( get_template_directory_uri().'/style.css' );
+		add_theme_support('editor-styles');
+		add_editor_style(get_template_directory_uri() . '/style.css');
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
@@ -178,12 +178,13 @@ function iphan_inrc_scripts()
 }
 
 //editor styles
-add_editor_style( 'editor-style.css' );
-add_theme_support( 'editor-styles' );
+add_editor_style('editor-style.css');
+add_theme_support('editor-styles');
 add_action('admin_init', 'add_editor_style');
 
-function add_editor_styles() {
-    add_editor_style( 'editor-style.css' );
+function add_editor_styles()
+{
+	add_editor_style('editor-style.css');
 }
 // Desativar cores personalizadas de Gutenberg
 add_theme_support('disable-custom-colors');
@@ -228,7 +229,7 @@ add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
 function iphan_inrc_add_google_fonts()
 {
-	wp_enqueue_style('iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), IPHAN_INRC_VERSION);
+	wp_enqueue_style('iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), IPHAN_INRC_VERSION);
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_add_google_fonts');
 
