@@ -6,11 +6,74 @@
 function iphan_block_pattern()
 {
     register_block_pattern(
-        'core/column',
+        'iphan/iphan-highlight-column-pattern',
         array(
-            'title'       => __('Two buttons', 'my-plugin'),
-            'description' => _x('Two horizontal buttons, the left button is filled in, and the right button is outlined.', 'Block pattern description', 'my-plugin'),
-            'content'     => "<!-- wp:buttons {\"align\":\"center\"} -->\n<div class=\"wp-block-buttons aligncenter\"><!-- wp:button {\"backgroundColor\":\"very-dark-gray\",\"borderRadius\":0} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-background has-very-dark-gray-background-color no-border-radius\">" . esc_html__('Button One', 'my-plugin') . "</a></div>\n<!-- /wp:button -->\n\n<!-- wp:button {\"textColor\":\"very-dark-gray\",\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-text-color has-very-dark-gray-color no-border-radius\">" . esc_html__('Button Two', 'my-plugin') . "</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->",
+            'title'       => __('IPHAN highlight column', 'iphan'),
+            'description' => _x('Column with red border', 'Block pattern description', 'iphan'),
+            'content'     => '
+            <!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top","className":"is-style-column-iphan"} -->
+<div class="wp-block-column is-vertically-aligned-top is-style-column-iphan"><!-- wp:heading {"level":1,"className":"is-style-title-iphan-underscore"} -->
+<h1 class="is-style-title-iphan-underscore">H1</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"className":"is-style-title-iphan-underscore"} -->
+<h2 class="is-style-title-iphan-underscore">H2</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3,"className":"is-style-title-iphan-underscore"} -->
+<h3 class="is-style-title-iphan-underscore">H3</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4,"className":"is-style-title-iphan-underscore"} -->
+<h4 class="is-style-title-iphan-underscore">H4</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5,"className":"is-style-title-iphan-underscore"} -->
+<h5 class="is-style-title-iphan-underscore">H5</h5>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":6,"className":"is-style-title-iphan-underscore"} -->
+<h6 class="is-style-title-iphan-underscore">H6</h6>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>dasouhdaisuhdaisouhdsauihdas</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"is-style-column-iphan-gray is-style-column-iphan"} -->
+<div class="wp-block-column is-style-column-iphan-gray is-style-column-iphan"><!-- wp:heading {"className":"is-style-title-iphan-underscore","backgroundColor":"cinza6","textColor":"preto"} -->
+<h2 class="is-style-title-iphan-underscore has-preto-color has-cinza-6-background-color has-text-color has-background">31231231231232131212qw</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>tfrtduftgypiuojémchrpoe hvporau hcporuha wpceuhr pwur apuwch </p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:paragraph -->
+<p>Texto escrito para estar </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"is-style-column-iphan"} -->
+<div class="wp-block-group is-style-column-iphan"><div class="wp-block-group__inner-container"><!-- wp:heading {"className":"is-style-title-iphan is-style-title-iphan-underscore"} -->
+<h2 class="is-style-title-iphan is-style-title-iphan-underscore">dasdasdasdasdasdas</h2>
+<!-- /wp:heading --></div></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>dasdasdasdasdasasdasdas</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>dasdasdasdsadsa</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"className":"is-style-title-iphan is-style-title-iphan-underscore"} -->
+<h2 class="is-style-title-iphan is-style-title-iphan-underscore">asdudhasihdasoiuhdasoiu</h2>
+<!-- /wp:heading -->'
         )
     );
 }
