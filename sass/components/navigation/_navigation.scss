@@ -1,7 +1,7 @@
 .main-navigation {
     display: block;
-    .menu{
-        @media screen and (max-width: $screen__md){
+    .menu {
+        @media screen and (max-width: $screen__md) {
             border-bottom: 5px solid $color__vermelho1;
         }
     }
@@ -144,17 +144,17 @@
                     cursor: pointer;
                 }
                 &::after {
-                    @media screen and (min-width:$screen__md){
+                    @media screen and (min-width: $screen__md) {
                         display: block;
                         content: "\0231C";
                         font-size: 1.5rem;
                         rotate: 225deg;
+                        transform: rotate(225deg);
                         color: $color__branco;
                         position: relative;
                         right: -15px;
                         top: 0.3rem;
                     }
-
                 }
             }
         }
