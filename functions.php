@@ -113,17 +113,7 @@ if (!function_exists('iphan_inrc_setup')) :
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
 
-/* function iphan_inrc_init(){
 
-	register_block_style(            
-		'core/heading',            
-	 	array(                
-	   	'name'  => 'title-iphan',                
-	   	'label' =>  'Título IPHAN ',            
-		)        
-	);
-}
-add_action('init', 'iphan_inrc_init'); */
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -196,8 +186,6 @@ add_action('admin_enqueue_scripts', 'admin_style');
 add_theme_support('disable-custom-colors');
 // Desativar gradientes personalizados de Gutenberg
 add_theme_support('disable-custom-gradients');
-
-
 
 
 //Begin Widget pras redes sociais
