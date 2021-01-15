@@ -1,15 +1,16 @@
 <?php
 
 /**
- * Block Styles
+ * Block Pattern
  */
 function iphan_block_pattern()
 {
     register_block_pattern(
-        'iphan/iphan-highlight-column-pattern',
+        'core/column-pattern',
         array(
-            'title'       => __('IPHAN highlight column', 'iphan'),
+            'title'       => __('IPHAN highlight column', 'IPHAN'),
             'description' => _x('Column with red border', 'Block pattern description', 'iphan'),
+            'categories' => array('columns'),
             'content'     => '
             <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top","className":"is-style-column-iphan"} -->
@@ -77,3 +78,4 @@ function iphan_block_pattern()
         )
     );
 }
+add_action('init', 'iphan_block_pattern');
