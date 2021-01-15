@@ -707,6 +707,12 @@ textarea {
 }
 
 @media screen and (max-width: 1024px) {
+	.main-navigation .menu {
+		border-bottom: 5px solid #58020b;
+	}
+}
+
+@media screen and (max-width: 1024px) {
 	.main-navigation .menu > li > a {
 		margin-bottom: 20px;
 	}

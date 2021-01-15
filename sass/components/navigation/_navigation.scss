@@ -1,6 +1,10 @@
 .main-navigation {
     display: block;
-
+    .menu{
+        @media screen and (max-width: $screen__md){
+            border-bottom: 5px solid $color__vermelho1;
+        }
+    }
     .menu > li > a {
         @media screen and (max-width: $screen__md) {
             margin-bottom: 20px;
@@ -150,7 +154,7 @@
                         right: -15px;
                         top: 0.3rem;
                     }
-                    
+
                 }
             }
         }
