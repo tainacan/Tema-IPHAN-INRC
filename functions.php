@@ -102,21 +102,18 @@ if (!function_exists('iphan_inrc_setup')) :
 				'flex-height' => true,
 			)
 		);
+
+		/* Align wide and full */
+		add_theme_support( 'align-wide' );
+
+		/* Editor Styles */
+		add_theme_support( 'editor-styles' );
+		add_editor_style( get_template_directory_uri().'/style.css' );
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
 
-/* function iphan_inrc_init(){
 
-	register_block_style(            
-		'core/heading',            
-	 	array(                
-	   	'name'  => 'title-iphan',                
-	   	'label' =>  'Título IPHAN ',            
-		)        
-	);
-}
-add_action('init', 'iphan_inrc_init'); */
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -145,10 +142,10 @@ function iphan_inrc_widgets_init()
 			'name'          => esc_html__('Footer', 'iphan_inrc'),
 			'id'            => 'footer-1',
 			'description'   => esc_html__('Add widgets here.', 'iphan_inrc'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s col-sm-6 col-md-3" >',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '<span class="plus-minus" aria-hidden="false">&nbsp +</span></h2>',
+			'before_widget' => '<section class="widget %2$s col-sm-6 col-md-3" >',
+			'after_widget'  => '</div></section>',
+			'before_title'  => '<h2 class="widget-title collapsible">',
+			'after_title'   => '<a type="button" class="plus-minus"></a></h2><div class="content" >',
 		)
 	);
 }
@@ -180,12 +177,15 @@ function iphan_inrc_scripts()
 	}
 }
 
+function admin_style()
+{
+	wp_enqueue_style('admin-styles', get_template_directory_uri() . '/style.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
 // Desativar cores personalizadas de Gutenberg
 add_theme_support('disable-custom-colors');
 // Desativar gradientes personalizados de Gutenberg
 add_theme_support('disable-custom-gradients');
-
-
 
 
 //Begin Widget pras redes sociais
@@ -253,6 +253,9 @@ require get_template_directory() . '/inc/customizer.php';
 
 //blocks styles
 require get_template_directory() . '/template-parts/block-styles.php';
+
+//blocks pattern
+require get_template_directory() . '/template-parts/block-patterns.php';
 
 //color palette
 require get_template_directory() . '/template-parts/color-palette.php';

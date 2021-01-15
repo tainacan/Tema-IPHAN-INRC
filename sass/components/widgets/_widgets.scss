@@ -101,7 +101,7 @@
 #wp-calendar caption {
     text-align: right;
     color: $color__branco;
-    font-size: 12px;
+    font-size: 0.75rem;
 
 
     @media screen and (max-width:$screen__sm) {
@@ -147,7 +147,7 @@
 
 .wp-calendar-nav>span>a {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
@@ -162,13 +162,13 @@
 }
 
 #wp-calendar tfoot #next {
-    font-size: 10px;
+    font-size: 0.625rem;
     text-transform: uppercase;
     text-align: right;
 }
 
 #wp-calendar tfoot #prev {
-    font-size: 10px;
+    font-size: 0.625rem;
     text-transform: uppercase;
     padding-top: 10px;
 }

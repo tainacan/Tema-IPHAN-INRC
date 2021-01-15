@@ -7,37 +7,42 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
-( function( $ ) {
+(function ($) {
 	// Site title.
-	wp.customize( 'blogname', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
-		} );
-	} );
+	wp.customize('blogname', function (value) {
+		value.bind(function (to) {
+			$('.site-title a').text(to);
+		});
+	});
 
 	// Header text color.
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title' ).css( {
+	wp.customize('header_textcolor', function (value) {
+		value.bind(function (to) {
+			if ('blank' === to) {
+				$('.site-title').css({
 					clip: 'rect(1px, 1px, 1px, 1px)',
 					position: 'absolute',
-				} );
+				});
 			} else {
-				$( '.site-title' ).css( {
+				$('.site-title').css({
 					clip: 'auto',
 					position: 'relative',
-				} );
-				$( '.site-title a' ).css( {
+				});
+				$('.site-title a').css({
 					color: to,
-				} );
+				});
 			}
-		} );
-	} );
+		});
+	});
 
-	wp.blocks.registerBlockStyle( 'core/title', {
+	wp.blocks.registerBlockStyle('core/title', {
 		name: 'title-tainacan',
 		label: 'Title Tainacan',
-	 } );
-	 
-}( jQuery ) );
+	});
+
+	const button = document.querySelector('button');
+	button.addEventListener('click', () => {
+		button.ariaExpanded = !JSON.parse(button.ariaExpanded);
+	})
+
+}(jQuery));

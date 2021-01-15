@@ -1,4 +1,10 @@
 .site-footer {
+    > .separator {
+        margin-top: 60px;
+    }
+    .widget:last-child {
+        margin-bottom: 0px !important;
+    }
     z-index: 5;
     margin-top: 70px;
     background-image: $gradiente__vermelho;
@@ -18,7 +24,7 @@
 
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             column-count: 1;
-            padding-top: 20px;
+            padding-top: 70px;
             justify-content: space-between;
             flex-direction: column;
             display: flex;
@@ -32,7 +38,7 @@
 
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             column-count: 1;
-            padding-top: 20px;
+            padding-top: 70px;
             justify-content: space-between;
             flex-direction: row;
             display: flex;
@@ -46,29 +52,38 @@
             display: flex;
         }
         @media screen and (min-width: $screen__md) {
-            padding-top: 25px;
+            padding-top: 70px;
             padding-bottom: calc(0px - 0.75em);
             justify-content: space-between;
             column-count: 4;
             flex-direction: row;
             display: flex;
         }
-        ul {
+        /*        ul {
             @media screen and (max-width: $screen__sm) {
                 height: 0px;
                 overflow: hidden;
                 transition: height 0.8s;
             }
-        }
+        } */
 
-        .plus-minus {
+        .plus-minus::after {
             @media screen and (max-width: $screen__sm) {
                 content: "+";
+                float: right;
+                margin-top: -9%;
+            }
+        }
+        .active .plus-minus::after {
+            @media screen and (max-width: $screen__sm) {
+                content: "-";
+                float: right;
+                margin-top: -9%;
             }
         }
     }
 
-    .widget-area:hover {
+    /*     .widget-area:hover {
         ul {
             @media screen and (max-width: $screen__sm) and (orientation: portrait) {
                 height: 100%;
@@ -88,7 +103,7 @@
                 content: "-";
             }
         }
-    }
+    } */
 
     hr {
         height: 2px;
@@ -105,15 +120,15 @@
 
     .site-info i {
         @media screen and (orientation: portrait) and (max-width: $screen__sm) {
-            font-size: 35px;
+            font-size: 2.188rem;
         }
 
         @media screen and (orientation: landscape) and (max-width: $screen__sm) {
-            font-size: 35px;
+            font-size: 2.188rem;
         }
 
         @media screen and (min-width: $screen__sm) {
-            font-size: 35px;
+            font-size: 2.188rem;
         }
     }
 
@@ -122,16 +137,45 @@
     }
 
     .site-info > .fonte-iphan {
-        font-size: 25px;
+        font-size: 1.563rem;
     }
 
-    .collapse {
+    /*     .collapse {
         height: 0px;
         overflow: hidden;
         transition: height 0.8s;
+    } */
+    > .site-container > .site-info > img {
+        @media screen and (min-width: $screen__sm) {
+            max-width: 10%;
+        }
+        @media screen and (max-width: $screen__sm) and (orientation: portrait) {
+            max-width: 30%;
+        }
+        @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+            max-width: 20%;
+        }
     }
 }
 
-.entry-footer {
-    /*     display: none; */
+.collapsible {
+    @media only screen and (max-width: $screen__sm) {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+    }
+}
+
+.active,
+.collapsible:hover {
+}
+
+.content {
+    @media only screen and (max-width: $screen__sm) {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
 }
