@@ -77,5 +77,32 @@ function iphan_block_pattern()
 <!-- /wp:heading -->'
         )
     );
+
+    register_block_pattern(
+        'core/group',
+        array(
+            'title'       => __('IPHAN highlight group', 'IPHAN'),
+            'description' => _x('group with red border', 'Block pattern description', 'iphan'),
+            'categories' => array('columns'),
+            'content'     => '
+<!-- wp:group {"className":"is-style-column-iphan"} -->
+<div class="wp-block-group is-style-column-iphan"><div class="wp-block-group__inner-container"><!-- wp:heading {"className":"is-style-title-iphan-underscore"} -->
+<h2 class="is-style-title-iphan-underscore">Título do BLoco</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Paragrafo do Grupo</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Paragrafo 2</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Paragrafo 3</p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:group -->'
+        )
+    );
 }
 add_action('init', 'iphan_block_pattern');
