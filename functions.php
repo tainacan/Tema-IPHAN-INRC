@@ -156,7 +156,7 @@ function iphan_inrc_widgets_init()
 			'after_widget'  => '</div></section>',
 			'before_title'  => '<h2 class="widget-title collapsible">',
 			'after_title'   => '<a type="button" class="plus-minus"></a></h2><div class="content" >',
-			)
+		)
 	);
 }
 add_action('widgets_init', 'iphan_inrc_widgets_init');
@@ -187,10 +187,11 @@ function iphan_inrc_scripts()
 	}
 }
 
-function admin_style() {
-	wp_enqueue_style('admin-styles', get_template_directory_uri().'/style.css');
-  }
-  add_action('admin_enqueue_scripts', 'admin_style');
+function admin_style()
+{
+	wp_enqueue_style('admin-styles', get_template_directory_uri() . '/style.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
 // Desativar cores personalizadas de Gutenberg
 add_theme_support('disable-custom-colors');
 // Desativar gradientes personalizados de Gutenberg
@@ -264,6 +265,9 @@ require get_template_directory() . '/inc/customizer.php';
 
 //blocks styles
 require get_template_directory() . '/template-parts/block-styles.php';
+
+//blocks pattern
+require get_template_directory() . '/template-parts/block-patterns.php';
 
 //color palette
 require get_template_directory() . '/template-parts/color-palette.php';

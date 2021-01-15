@@ -17,7 +17,7 @@
 			<?php dynamic_sidebar('footer-1'); ?>
 		</div>
 	<?php endif; ?>
-	<div class="site-container">
+	<div class="site-container separator">
 		<hr>
 	</div>
 	<div class="site-container">
