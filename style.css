@@ -894,7 +894,7 @@ a {
 @media screen and (max-width: 320px) and (orientation: portrait) {
 	.menu-toggle > svg {
 		display: block;
-		position: fixed;
+		position: absolute;
 		right: 8%;
 		top: -11%;
 		z-index: 10;
@@ -1743,6 +1743,14 @@ a {
         overflow: hidden;
         transition: height 0.8s;
     } */
+}
+
+.site-footer > .separator {
+	margin-top: 60px;
+}
+
+.site-footer .widget:last-child {
+	margin-bottom: 0px !important;
 }
 
 .site-footer a,

@@ -169,7 +169,7 @@ a {
 
     @media screen and (max-width: $screen__xs) and (orientation: portrait) {
         display: block;
-        position: fixed;
+        position: absolute;
         right: 8%;
         top: -11%;
         z-index: 10;

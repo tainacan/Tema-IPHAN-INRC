@@ -1,4 +1,10 @@
 .site-footer {
+    > .separator {
+        margin-top: 60px;
+    }
+    .widget:last-child {
+        margin-bottom: 0px !important;
+    }
     z-index: 5;
     margin-top: 70px;
     background-image: $gradiente__vermelho;
