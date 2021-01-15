@@ -2115,6 +2115,8 @@ a {
 	background-color: #58020b;
 	color: #ffffff;
 	font-size: 5rem;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
 .title-banner:first-child {
