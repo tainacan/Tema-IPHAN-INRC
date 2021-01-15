@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "editor-basics.css",
+	"sources": [
+		"../sass/block-style/editor-basics.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,SAAS,CAAC;CACN,SAAS,EAAE,4DAA4D;CAC1E"
+}

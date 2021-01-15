@@ -93,21 +93,27 @@ if (!function_exists('iphan_inrc_setup')) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
+
+		/* Align wide and full */
+		add_theme_support( 'align-wide' );
+
+		/* Editor Styles */
+		add_theme_support( 'editor-styles' );
+		add_editor_style( get_template_directory_uri().'/style.css' );
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
 
-/* function iphan_inrc_init(){
 
-	register_block_style(            
-		'core/heading',            
-	 	array(                
-	   	'name'  => 'title-iphan',                
-	   	'label' =>  'Título IPHAN ',            
-		)        
-	);
-}
-add_action('init', 'iphan_inrc_init'); */
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -183,8 +189,6 @@ function add_editor_styles() {
 add_theme_support('disable-custom-colors');
 // Desativar gradientes personalizados de Gutenberg
 add_theme_support('disable-custom-gradients');
-
-
 
 
 //Begin Widget pras redes sociais
