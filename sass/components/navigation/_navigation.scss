@@ -95,7 +95,11 @@
                 margin-right: 10px;
             }
             &.menu-item-has-children {
-                padding-right: 25px;
+                @media screen and (min-width: $screen__sm) {
+                    padding-right: 30px;
+                    border: 1px solid $color__branco;
+                    cursor: pointer;
+                }
                 &::after {
                     display: block;
                     content: "\0231C";
@@ -104,7 +108,7 @@
                     color: $color__branco;
                     position: relative;
                     right: -15px;
-                    top: -0.3rem;
+                    top: 0.3rem;
                 }
             }
         }
@@ -136,12 +140,12 @@
         }
     }
 
-    ul > li > a {
+    /*     ul > li > a {
         @media screen and (min-width: $screen__sm) {
             border: 1px solid $color__branco;
             padding: 5px;
         }
-    }
+    } */
 }
 
 a {
