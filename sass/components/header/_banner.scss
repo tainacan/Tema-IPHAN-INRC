@@ -2,19 +2,17 @@
     @media screen and (min-width: $screen__md) {
         position: absolute;
         top: 20%;
-        left: 10%;
+        left: 14%;
         line-height: 5rem;
     }
     @media screen and (max-width: $screen__md) and (orientation: portrait) {
         position: absolute;
         top: 25%;
-        left: 10%;
         line-height: 3rem;
     }
     @media screen and (max-width: $screen__md) and (orientation: landscape) {
         position: absolute;
         top: 40%;
-        left: 10%;
         line-height: 3rem;
     }
 }

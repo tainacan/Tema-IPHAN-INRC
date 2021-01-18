@@ -2108,7 +2108,7 @@ a {
 	.text-banner {
 		position: absolute;
 		top: 20%;
-		left: 10%;
+		left: 14%;
 		line-height: 5rem;
 	}
 }
@@ -2117,7 +2117,6 @@ a {
 	.text-banner {
 		position: absolute;
 		top: 25%;
-		left: 10%;
 		line-height: 3rem;
 	}
 }
@@ -2126,7 +2125,6 @@ a {
 	.text-banner {
 		position: absolute;
 		top: 40%;
-		left: 10%;
 		line-height: 3rem;
 	}
 }
