@@ -12,14 +12,20 @@
     font-size: 5rem;
     padding-left: 3%;
     padding-right: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .title-banner:first-child {
     font-weight: 800;
+    background-color: RGB(88, 2, 11, 0.7);
+    position: absolute;
 }
 .title-banner:last-child {
     font-weight: lighter;
     letter-spacing: 5px;
+    position: absolute;
+    margin-top: 90px;
 }
 
 .site-title {
