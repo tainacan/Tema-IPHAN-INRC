@@ -2104,11 +2104,31 @@ a {
 
 /* Header
 --------------------------------------------- */
-.text-banner {
-	position: absolute;
-	top: 20%;
-	left: 10%;
-	line-height: 5rem;
+@media screen and (min-width: 1024px) {
+	.text-banner {
+		position: absolute;
+		top: 20%;
+		left: 10%;
+		line-height: 5rem;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+	.text-banner {
+		position: absolute;
+		top: 25%;
+		left: 10%;
+		line-height: 3rem;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.text-banner {
+		position: absolute;
+		top: 40%;
+		left: 10%;
+		line-height: 3rem;
+	}
 }
 
 .title-banner {
@@ -2116,7 +2136,6 @@ a {
 	text-transform: uppercase;
 	background-color: RGB(88, 2, 11, 0.7);
 	color: #ffffff;
-	font-size: 5rem;
 	padding-left: 3%;
 	padding-right: 3%;
 	padding-left: 10px;
@@ -2129,16 +2148,46 @@ a {
 	position: absolute;
 }
 
+@media only screen and (min-width: 1024px) {
+	.title-banner:first-child {
+		font-size: 5rem;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.title-banner:first-child {
+		font-size: 3rem;
+	}
+}
+
 .title-banner:last-child {
 	font-weight: lighter;
-	letter-spacing: 5px;
 	position: absolute;
-	margin-top: 90px;
+}
+
+@media screen and (min-width: 1024px) {
+	.title-banner:last-child {
+		margin-top: 90px;
+		font-size: 4rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.title-banner:last-child {
+		margin-top: 55px;
+		font-size: 2.4rem;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.site-title {
 		margin-bottom: 150px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.site-title {
+		width: 100%;
 	}
 }
 

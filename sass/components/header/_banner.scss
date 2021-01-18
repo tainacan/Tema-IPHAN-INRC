@@ -1,15 +1,28 @@
 .text-banner {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    line-height: 5rem;
+    @media screen and (min-width: $screen__md) {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        line-height: 5rem;
+    }
+    @media screen and (max-width: $screen__md) and (orientation: portrait) {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        line-height: 3rem;
+    }
+    @media screen and (max-width: $screen__md) and (orientation: landscape) {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        line-height: 3rem;
+    }
 }
 .title-banner {
     font-family: "Rubik";
     text-transform: uppercase;
     background-color: RGB(88, 2, 11, 0.7);
     color: $color__branco;
-    font-size: 5rem;
     padding-left: 3%;
     padding-right: 3%;
     padding-left: 10px;
@@ -20,16 +33,31 @@
     font-weight: 800;
     background-color: RGB(88, 2, 11, 0.7);
     position: absolute;
+    @media only screen and (min-width: $screen__md) {
+        font-size: 5rem;
+    }
+    @media only screen and (max-width: $screen__md) {
+        font-size: 3rem;
+    }
 }
 .title-banner:last-child {
     font-weight: lighter;
-    letter-spacing: 5px;
     position: absolute;
-    margin-top: 90px;
+    @media screen and (min-width: $screen__md) {
+        margin-top: 90px;
+        font-size: 4rem;
+    }
+    @media screen and (max-width: $screen__md) {
+        margin-top: 55px;
+        font-size: 2.4rem;
+    }
 }
 
 .site-title {
     @media screen and (min-width: $screen__md) {
         margin-bottom: 150px;
+    }
+    @media screen and (max-width: $screen__md) and (orientation: landscape) {
+        width: 100%;
     }
 }
