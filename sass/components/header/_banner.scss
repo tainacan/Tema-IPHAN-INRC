@@ -32,6 +32,9 @@
     @media screen and (max-width: $screen__md) and (orientation: portrait) {
         top: 18% !important;
     }
+    @media screen and (max-width: $screen__xs) and (orientation: portrait) {
+        top: 25% !important;
+    }
 }
 .title-banner {
     font-family: "Rubik";
@@ -54,6 +57,9 @@
     @media only screen and (max-width: $screen__md) {
         font-size: 3rem;
     }
+    @media only screen and (max-width: $screen__xs) {
+        font-size: 2rem;
+    }
 }
 .title-banner:last-child {
     font-weight: lighter;
@@ -65,6 +71,10 @@
     @media screen and (max-width: $screen__md) {
         margin-top: 55px;
         font-size: 2.4rem;
+    }
+    @media screen and (max-width: $screen__md) {
+        margin-top: 55px;
+        font-size: 1.7rem;
     }
 }
 

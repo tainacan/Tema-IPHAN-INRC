@@ -2149,6 +2149,12 @@ a {
 	}
 }
 
+@media screen and (max-width: 320px) and (orientation: portrait) {
+	.text-banner {
+		top: 25% !important;
+	}
+}
+
 .title-banner {
 	font-family: "Rubik";
 	text-transform: uppercase;
@@ -2178,6 +2184,12 @@ a {
 	}
 }
 
+@media only screen and (max-width: 320px) {
+	.title-banner:first-child {
+		font-size: 2rem;
+	}
+}
+
 .title-banner:last-child {
 	font-weight: lighter;
 	position: absolute;
@@ -2194,6 +2206,13 @@ a {
 	.title-banner:last-child {
 		margin-top: 55px;
 		font-size: 2.4rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.title-banner:last-child {
+		margin-top: 55px;
+		font-size: 1.7rem;
 	}
 }
 
