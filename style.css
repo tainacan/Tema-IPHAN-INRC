@@ -2131,6 +2131,12 @@ a {
 	}
 }
 
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.text-banner-bw {
+		top: 30% !important;
+	}
+}
+
 .title-banner {
 	font-family: "Rubik";
 	text-transform: uppercase;

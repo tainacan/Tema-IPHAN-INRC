@@ -18,6 +18,12 @@
         line-height: 3rem;
     }
 }
+
+.text-banner-bw {
+    @media screen and (max-width: $screen__md) and (orientation: landscape) {
+        top: 30% !important;
+    }
+}
 .title-banner {
     font-family: "Rubik";
     text-transform: uppercase;
