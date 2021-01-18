@@ -2209,7 +2209,7 @@ a {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 320px) {
 	.title-banner:last-child {
 		margin-top: 55px;
 		font-size: 1.7rem;
