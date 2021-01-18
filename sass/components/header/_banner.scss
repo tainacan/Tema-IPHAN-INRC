@@ -5,6 +5,7 @@
     line-height: 5rem;
 }
 .title-banner {
+    font-family: "Rubik";
     text-transform: uppercase;
     background-color: RGB(88, 2, 11, 0.7);
     color: $color__branco;
@@ -14,7 +15,7 @@
 }
 
 .title-banner:first-child {
-    font-weight: bold;
+    font-weight: 800;
 }
 .title-banner:last-child {
     font-weight: lighter;
