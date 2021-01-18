@@ -66,4 +66,7 @@
     @media screen and (max-width: $screen__md) and (orientation: landscape) {
         width: 100%;
     }
+    @media screen and (max-width: $screen__md) and (orientation: portrait) {
+        width: 100%;
+    }
 }
