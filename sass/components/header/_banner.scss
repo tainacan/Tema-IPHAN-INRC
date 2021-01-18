@@ -95,10 +95,15 @@
     }
 }
 
-.banner {
-    @media only screen and (max-width: $screen__md) and (orientation: portrait) {
-        min-height: 200px;
-        width: 100%;
-        height: 100%;
-    }
+.banner-bw {
+    background-image: url(http://localhost/wp-content/themes/Tema-IPHAN-INRC/assets/images/banner-bw.jpg);
+    background-size: cover;
+    height: 100%;
+    min-height: 250px;
+}
+.banner-home {
+    background-image: url(http://localhost/wp-content/themes/Tema-IPHAN-INRC/assets/images/banner-home.png);
+    background-size: cover;
+    height: 100%;
+    min-height: 250px;
 }
