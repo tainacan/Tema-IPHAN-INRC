@@ -9,14 +9,14 @@ function diwp_theme_customizer_options($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'diwp_logo_control', array(
-        'label' => 'Upload Logo',
+        'label' => 'Upload de Redes Sociais para o Rodapé',
         'priority' => 20,
         'section' => 'title_tagline',
         'settings' => 'diwp_logo',
         'button_labels' => array( // All These labels are optional
-            'select' => 'Select Logo',
-            'remove' => 'Remove Logo',
-            'change' => 'Change Logo',
+            'select' => 'Selecione a imagem',
+            'remove' => 'Remover Imagem',
+            'change' => 'Alterar Imagem',
         )
     )));
 }
