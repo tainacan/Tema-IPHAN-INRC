@@ -35,6 +35,7 @@
 				<a href="https://www.instagram.com/">
 					<i class="tainacan-icon tainacan-icon-instagram"></i>
 				</a>
+				<img src="<?php echo get_theme_mod('diwp_logo'); ?>" />
 			</div>
 		</div><!-- .site-info -->
 	</div><!-- .site-container -->
