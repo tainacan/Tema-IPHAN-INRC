@@ -2,9 +2,9 @@
 
 function diwp_theme_customizer_options($wp_customize)
 {
-
+    $template_directory = get_template_directory_uri();
     $wp_customize->add_setting('diwp_logo', array(
-        'default' => get_theme_file_uri('assets/image/logo.jpg'), // Add Default Image URL 
+       /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
 
@@ -20,5 +20,6 @@ function diwp_theme_customizer_options($wp_customize)
         )
     )));
 }
-
 add_action('customize_register', 'diwp_theme_customizer_options');
+
+
