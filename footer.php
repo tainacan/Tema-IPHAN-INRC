@@ -37,12 +37,13 @@
 				</a>
 				<?php
 				$imagem = get_theme_mod('diwp_logo', '');
-				$link = get_theme_mod('link');
-				echo '<a href="' . $link . '">';
-				echo '<img src="' . $imagem . '"/>';
-				echo '</a>';
+				$link = get_theme_mod('setting_link', '');
+				if ($link !== '') {
+					echo '<a href="' . $link . '">';
+					echo '<img src="' . $imagem . '"/>';
+					echo '</a>';
+				}
 				?>
-
 			</div>
 		</div><!-- .site-info -->
 	</div><!-- .site-container -->

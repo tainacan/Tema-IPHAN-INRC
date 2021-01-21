@@ -8,7 +8,7 @@ function diwp_theme_customizer_options($wp_customize)
     ));
 
     $wp_customize->add_setting('setting_link', array(
-        'defaule' => 'a',
+        'default' => ''
     ));
     $wp_customize->add_control('link', array(
         'label' => 'Link',
