@@ -270,7 +270,7 @@ require get_template_directory() . '/template-parts/banner-header-bw.php';
 //banner home
 require get_template_directory() . '/template-parts/banner-header-home.php';
 
-//Redes Sociais no ROdapé
+//Redes Sociais no Rodapé
 require get_template_directory() . '/template-parts/redes-sociais-rodape.php';
 
 
