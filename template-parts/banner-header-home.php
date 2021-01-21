@@ -9,3 +9,4 @@ function custom_banner_home()
     echo '<span class="title-banner">nacional</span>';
     echo '</div></div>';
 }
+?>

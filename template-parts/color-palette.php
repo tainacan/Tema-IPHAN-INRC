@@ -86,3 +86,4 @@ add_theme_support('editor-color-palette', array(
         'color' => '#1e1e1e',
     ),
 ));
+?>

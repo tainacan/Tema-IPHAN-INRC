@@ -35,3 +35,4 @@ function diwp_theme_customizer_options($wp_customize)
 }
 /*  */
 add_action('customize_register', 'diwp_theme_customizer_options');
+?>
