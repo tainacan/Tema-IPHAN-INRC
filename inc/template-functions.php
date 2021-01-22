@@ -33,3 +33,4 @@ function iphan_inrc_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'iphan_inrc_pingback_header' );
+?>
