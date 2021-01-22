@@ -25,7 +25,7 @@
 			<?php $template_directory = get_template_directory_uri(); ?>
 			<img src="<?php echo $template_directory; ?>/assets/images/iphan_logo.png" />
 
-			<div class="icons-footer row">
+			<div class="icons-footer">
 				<?php
 				if (get_theme_mod('setting_link_1', '') !== '') {
 					echo '<a href="' . get_theme_mod('setting_link_1', '') . '?>">';

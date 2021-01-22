@@ -2059,9 +2059,11 @@ a {
 }
 
 .site-footer .site-info > .icons-footer {
+	display: flex;
+	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: nowrap;
-	margin-right: 2%;
+	padding-left: 12px;
 }
 
 .site-footer .site-info > .fonte-iphan {
@@ -2105,11 +2107,11 @@ a {
 }
 
 .imgFooter {
-	max-width: 50px;
-	max-height: 50px;
-	height: 30px;
-	width: 30px;
-	margin-left: 20%;
+	max-width: 35px;
+	max-height: 35px;
+	height: auto;
+	width: 35px;
+	padding-left: 20%;
 }
 
 .icons-footer > a:last-child > .imgFooter {
