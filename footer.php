@@ -26,21 +26,41 @@
 			<img src="<?php echo $template_directory; ?>/assets/images/iphan_logo.png" />
 
 			<div class="icons-footer row">
-				<a href="https://twitter.com/">
-					<i size="50px" class="tainacan-icon tainacan-icon-twitter"></i>
-				</a>
-				<a href="https://www.facebook.com/">
-					<i class="tainacan-icon tainacan-icon-facebook"></i>
-				</a>
-				<a href="https://www.instagram.com/">
-					<i class="tainacan-icon tainacan-icon-instagram"></i>
-				</a>
 				<?php
-				$imagem = get_theme_mod('diwp_logo', '');
-				$link = get_theme_mod('setting_link', '');
+				if (get_theme_mod('setting_link_1', '') !== '') {
+					echo '<a href="' . get_theme_mod('setting_link_1', '') . '?>">';
+					echo '<i size="50px" class="tainacan-icon tainacan-icon-twitter"></i>';
+					echo '</a>';
+				}
+				if (get_theme_mod('setting_link_2', '') !== '') {
+					echo '<a href="' . get_theme_mod('setting_link_2', '') . '?>">';
+					echo '<i size="50px" class="tainacan-icon tainacan-icon-facebook"></i>';
+					echo '</a>';
+				}
+				if (get_theme_mod('setting_link_3', '') !== '') {
+					echo '<a href="' . get_theme_mod('setting_link_3', '') . '?>">';
+					echo '<i size="50px" class="tainacan-icon tainacan-icon-instagram"></i>';
+					echo '</a>';
+				}
+				$imagem4 = get_theme_mod('iphan_logo_control_4', '');
+				$link4 = get_theme_mod('setting_link_4', '');
 				if ($link !== '') {
-					echo '<a href="' . $link . '">';
-					echo '<img src="' . $imagem . '"/>';
+					echo '<a href="' . $link4 . '">';
+					echo '<img src="' . $imagem4 . '"/>';
+					echo '</a>';
+				}
+				$imagem5 = get_theme_mod('iphan_logo_control_5', '');
+				$link5 = get_theme_mod('setting_link_5', '');
+				if ($link !== '') {
+					echo '<a href="' . $link5 . '">';
+					echo '<img src="' . $imagem5 . '"/>';
+					echo '</a>';
+				}
+				$imagem6 = get_theme_mod('iphan_logo_control_6', '');
+				$link6 = get_theme_mod('setting_link_6', '');
+				if ($link !== '') {
+					echo '<a href="' . $link6 . '">';
+					echo '<img src="' . $imagem6 . '"/>';
 					echo '</a>';
 				}
 				?>

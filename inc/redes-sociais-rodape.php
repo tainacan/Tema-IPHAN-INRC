@@ -1,31 +1,119 @@
 <?php
 
-function diwp_theme_customizer_options($wp_customize)
+function iphan_theme_customizer_options($wp_customize)
 {
     $template_directory = get_template_directory_uri();
+
     $wp_customize->add_section('social_section', array(
         'title'       => __('Redes Sociais', 'Tema_IPHAN_INRC'),
     ));
 
-    $wp_customize->add_setting('setting_link', array(
+
+    $wp_customize->add_setting('setting_link_1', array(
         'default' => ''
     ));
-    $wp_customize->add_control('link', array(
-        'label' => 'Link',
+    $wp_customize->add_control('link_1', array(
+        'label' => 'Link do Twitter' ,
         'type' => 'text',
         'section' => 'social_section',
-        'settings' => 'setting_link',
+        'settings' => 'setting_link_1',
     ));
-
-    $wp_customize->add_setting('diwp_logo', array(
+    $wp_customize->add_setting('iphan_logo_1', array(
         /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'diwp_logo_control', array(
-        'label' => 'Upload de Redes Sociais para o Rodapé',
+    $wp_customize->add_setting('setting_link_2', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('link_2', array(
+        'label' => 'Link do Facebook',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_link_2',
+    ));
+    $wp_customize->add_setting('iphan_logo_2', array(
+        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+    $wp_customize->add_setting('setting_link_3', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('link_3', array(
+        'label' => 'Link do Instagram',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_link_3',
+    ));
+    $wp_customize->add_setting('iphan_logo_3', array(
+        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+    $wp_customize->add_setting('setting_link_4', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('link_4', array(
+        'label' => 'Link da nova rede social',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_link_4',
+    ));
+    $wp_customize->add_setting('iphan_logo_4', array(
+        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_4', array(
+        'label' => 'Upload de imagem da nova rede social 1',
         'priority' => 20,
         'section' => 'social_section',
-        'settings' => 'diwp_logo',
+        'settings' => 'iphan_logo_4',
+        'button_labels' => array( // All These labels are optional
+            'select' => 'Selecione a imagem',
+            'remove' => 'Remover Imagem',
+            'change' => 'Alterar Imagem',
+        )
+    )));
+    $wp_customize->add_setting('setting_link_5', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('link_5', array(
+        'label' => 'Link da nova rede social',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_link_5',
+    ));
+    $wp_customize->add_setting('iphan_logo_5', array(
+        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_5', array(
+        'label' => 'Upload de imagem da nova rede social 2',
+        'priority' => 20,
+        'section' => 'social_section',
+        'settings' => 'iphan_logo_5',
+        'button_labels' => array( // All These labels are optional
+            'select' => 'Selecione a imagem',
+            'remove' => 'Remover Imagem',
+            'change' => 'Alterar Imagem',
+        )
+    )));
+    $wp_customize->add_setting('setting_link_6', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('link_6', array(
+        'label' => 'Link da nova rede social',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_link_6',
+    ));
+    $wp_customize->add_setting('iphan_logo_6', array(
+        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_6', array(
+        'label' => 'Upload de imagem da nova rede social 3',
+        'priority' => 20,
+        'section' => 'social_section',
+        'settings' => 'iphan_logo_6',
         'button_labels' => array( // All These labels are optional
             'select' => 'Selecione a imagem',
             'remove' => 'Remover Imagem',
@@ -34,5 +122,4 @@ function diwp_theme_customizer_options($wp_customize)
     )));
 }
 /*  */
-add_action('customize_register', 'diwp_theme_customizer_options');
-?>
+add_action('customize_register', 'iphan_theme_customizer_options');
