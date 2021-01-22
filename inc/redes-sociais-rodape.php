@@ -13,7 +13,7 @@ function iphan_theme_customizer_options($wp_customize)
         'default' => ''
     ));
     $wp_customize->add_control('link_1', array(
-        'label' => 'Link do Twitter' ,
+        'label' => 'Link do Twitter',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_1',
@@ -57,6 +57,15 @@ function iphan_theme_customizer_options($wp_customize)
         'section' => 'social_section',
         'settings' => 'setting_link_4',
     ));
+    $wp_customize->add_setting('setting_alt_4', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('alt_4', array(
+        'label' => 'Nome da nova rede social',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_alt_4',
+    ));
     $wp_customize->add_setting('iphan_logo_4', array(
         /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
@@ -81,6 +90,15 @@ function iphan_theme_customizer_options($wp_customize)
         'section' => 'social_section',
         'settings' => 'setting_link_5',
     ));
+    $wp_customize->add_setting('setting_alt_5', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('alt_5', array(
+        'label' => 'Nome da nova rede social',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_alt_5',
+    ));
     $wp_customize->add_setting('iphan_logo_5', array(
         /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
@@ -104,6 +122,15 @@ function iphan_theme_customizer_options($wp_customize)
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_6',
+    ));
+    $wp_customize->add_setting('setting_alt_6', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('alt_6', array(
+        'label' => 'Nome da nova rede social',
+        'type' => 'text',
+        'section' => 'social_section',
+        'settings' => 'setting_alt_6',
     ));
     $wp_customize->add_setting('iphan_logo_6', array(
         /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */

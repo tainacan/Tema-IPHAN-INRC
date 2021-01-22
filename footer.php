@@ -32,38 +32,38 @@
 					echo '<i size="50px" class="tainacan-icon tainacan-icon-twitter"></i>';
 					echo '</a>';
 				}
+				?>
+				<?php
 				if (get_theme_mod('setting_link_2', '') !== '') {
 					echo '<a href="' . get_theme_mod('setting_link_2', '') . '?>">';
 					echo '<i size="50px" class="tainacan-icon tainacan-icon-facebook"></i>';
 					echo '</a>';
 				}
+				?>
+				<?php
 				if (get_theme_mod('setting_link_3', '') !== '') {
 					echo '<a href="' . get_theme_mod('setting_link_3', '') . '?>">';
 					echo '<i size="50px" class="tainacan-icon tainacan-icon-instagram"></i>';
 					echo '</a>';
-				}
-				$imagem4 = get_theme_mod('iphan_logo_control_4', '');
-				$link4 = get_theme_mod('setting_link_4', '');
-				if ($link !== '') {
-					echo '<a href="' . $link4 . '">';
-					echo '<img src="' . $imagem4 . '"/>';
+				} ?>
+				<?php
+				if (get_theme_mod('setting_link_4', '') !== '') {
+					echo '<a href="' . get_theme_mod('setting_link_4', '') . '">';
+					echo '<img class="imgFooter" alt="' . get_theme_mod('setting_alt_4', '') . '" src="' . get_theme_mod('iphan_logo_4', '') . '" />';
 					echo '</a>';
-				}
-				$imagem5 = get_theme_mod('iphan_logo_control_5', '');
-				$link5 = get_theme_mod('setting_link_5', '');
-				if ($link !== '') {
-					echo '<a href="' . $link5 . '">';
-					echo '<img src="' . $imagem5 . '"/>';
+				} ?>
+				<?php
+				if (get_theme_mod('setting_link_5', '') !== '') {
+					echo '<a href="' . get_theme_mod('setting_link_5', '') . '">';
+					echo '<img class="imgFooter" alt="' . get_theme_mod('setting_alt_5', '') . '" src="' . get_theme_mod('iphan_logo_5', '') . '" />';
 					echo '</a>';
-				}
-				$imagem6 = get_theme_mod('iphan_logo_control_6', '');
-				$link6 = get_theme_mod('setting_link_6', '');
-				if ($link !== '') {
-					echo '<a href="' . $link6 . '">';
-					echo '<img src="' . $imagem6 . '"/>';
+				} ?>
+				<?php
+				if (get_theme_mod('setting_link_6', '') !== '') {
+					echo '<a href="' . get_theme_mod('setting_link_6', '') . '">';
+					echo '<img class="imgFooter" alt="' . get_theme_mod('setting_alt_6', '') . '" src="' . get_theme_mod('iphan_logo_6') . '" />';
 					echo '</a>';
-				}
-				?>
+				} ?>
 			</div>
 		</div><!-- .site-info -->
 	</div><!-- .site-container -->

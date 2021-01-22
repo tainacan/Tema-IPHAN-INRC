@@ -2059,7 +2059,9 @@ a {
 }
 
 .site-footer .site-info > .icons-footer {
-	margin-left: 5%;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-right: 2%;
 }
 
 .site-footer .site-info > .fonte-iphan {
@@ -2100,6 +2102,27 @@ a {
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
 	}
+}
+
+.imgFooter {
+	max-width: 50px;
+	max-height: 50px;
+	height: 30px;
+	width: 30px;
+	margin-left: 20%;
+}
+
+.icons-footer > a:last-child > .imgFooter {
+	margin-right: 20%;
+}
+
+.icons-footer > a {
+	margin-right: 1%;
+	margin-left: 1%;
+}
+
+.icons-footer > a:last-child {
+	margin-right: 0%;
 }
 
 /* Header
