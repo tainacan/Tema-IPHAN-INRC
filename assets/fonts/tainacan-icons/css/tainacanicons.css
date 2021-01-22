@@ -7,6 +7,10 @@
     text-rendering: optimizeLegibility;
 }
 
+.tainacan-icon-instagram:before {
+    content: "instagram";
+}
+
 .tainacan-icon:before,
 .tainacan-icon-set {
     display: inline-block;
