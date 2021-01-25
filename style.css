@@ -814,7 +814,9 @@ textarea {
 }
 
 .site-header img {
-	max-width: 25%;
+	max-width: 96px;
+	width: 96px;
+	display: flex;
 }
 
 .entry-meta,
@@ -2129,60 +2131,16 @@ a {
 
 /* Header
 --------------------------------------------- */
-@media screen and (min-width: 1024px) {
-	.text-banner {
-		line-height: 5rem;
-	}
-}
-
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-	.text-banner {
-		line-height: 3rem;
-	}
-}
-
-@media screen and (max-width: 1024px) and (orientation: landscape) {
-	.text-banner {
-		line-height: 3rem;
-	}
-}
-
-.text-banner-bw {
-	margin-top: 10%;
-}
-
-@media screen and (max-width: 1024px) and (orientation: landscape) {
-	.text-banner-bw {
-		top: 30% !important;
-	}
-}
-
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-	.text-banner-bw {
-		top: 18% !important;
-	}
-}
-
-.text-banner {
-	margin-top: 10%;
-}
-
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-	.text-banner {
-		top: 18% !important;
-	}
-}
-
-@media screen and (max-width: 320px) and (orientation: portrait) {
-	.text-banner {
-		top: 25% !important;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.text-banner {
-		left: auto;
-	}
+.container-banner {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-size: cover;
+	height: 80%;
+	width: 100%;
+	min-height: 250px;
+	margin-bottom: 150px;
+	background-color: white;
 }
 
 .title-banner {
@@ -2194,93 +2152,114 @@ a {
 	padding-right: 3%;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-top: 10%;
 }
 
-.title-banner:first-child {
+body.home .container-banner {
+	min-height: 450px;
+}
+
+@media screen and (min-width: 1024px) {
+	body.home .text-banner {
+		line-height: 4.4rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	body.home .text-banner {
+		line-height: 3rem;
+	}
+}
+
+body.home .title-banner:first-child {
 	font-weight: 800;
-	background-color: RGB(88, 2, 11, 0.7);
 }
 
 @media only screen and (min-width: 1024px) {
-	.title-banner:first-child {
+	body.home .title-banner:first-child {
 		font-size: 5rem;
 	}
 }
 
 @media only screen and (max-width: 1024px) {
-	.title-banner:first-child {
+	body.home .title-banner:first-child {
 		font-size: 3rem;
 	}
 }
 
 @media only screen and (max-width: 320px) {
-	.title-banner:first-child {
-		font-size: 2rem;
+	body.home .title-banner:first-child {
+		font-size: 2.8rem;
 	}
 }
 
-.title-banner:last-child {
+body.home .title-banner:last-child {
 	font-weight: lighter;
 }
 
 @media screen and (min-width: 1024px) {
-	.title-banner:last-child {
-		margin-top: 90px;
+	body.home .title-banner:last-child {
 		font-size: 4rem;
 	}
 }
 
 @media screen and (max-width: 1024px) {
-	.title-banner:last-child {
-		margin-top: 55px;
-		font-size: 2.4rem;
+	body.home .title-banner:last-child {
+		font-size: 2.8rem;
 	}
 }
 
 @media screen and (max-width: 320px) {
-	.title-banner:last-child {
-		margin-top: 55px;
-		font-size: 1.7rem;
+	body.home .title-banner:last-child {
+		font-size: 2.5rem;
 	}
+}
+
+body:not(.home) .container-banner {
+	background-blend-mode: luminosity;
 }
 
 @media screen and (min-width: 1024px) {
-	.site-title {
-		margin-bottom: 150px;
+	body:not(.home) .text-banner {
+		line-height: 4rem;
 	}
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape) {
-	.site-title {
-		width: 100%;
+@media screen and (max-width: 1024px) {
+	body:not(.home) .text-banner {
+		line-height: 2.8rem;
 	}
 }
 
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-	.site-title {
-		width: 100%;
+body:not(.home) .title-banner:first-child {
+	font-weight: 800;
+}
+
+@media only screen and (min-width: 1024px) {
+	body:not(.home) .title-banner:first-child {
+		font-size: 4rem;
 	}
 }
 
-.banner-bw,
-.banner-home {
-	background-size: cover;
-	height: 80%;
-	min-height: 250px;
-	padding-bottom: 150px;
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) {
-	.banner-bw,
-	.banner-home {
-		height: 80%;
-		width: 100%;
+@media only screen and (max-width: 1024px) {
+	body:not(.home) .title-banner:first-child {
+		font-size: 2.8rem;
 	}
 }
 
-.container-banner {
-	margin-bottom: 150px;
+body:not(.home) .title-banner:last-child {
+	font-weight: lighter;
+}
+
+@media screen and (min-width: 1024px) {
+	body:not(.home) .title-banner:last-child {
+		font-size: 4rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	body:not(.home) .title-banner:last-child {
+		font-size: 2.8rem;
+	}
 }
 
 /*--------------------------------------------------------------

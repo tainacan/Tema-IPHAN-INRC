@@ -1,37 +1,16 @@
-.text-banner {
-    @media screen and (min-width: $screen__md) {
-        line-height: 5rem;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: portrait) {
-        line-height: 3rem;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: landscape) {
-        line-height: 3rem;
-    }
+
+.container-banner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    height: 80%;
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: 150px;
+    background-color: white;
 }
 
-.text-banner-bw {
-    margin-top: 10%;
-    @media screen and (max-width: $screen__md) and (orientation: landscape) {
-        top: 30% !important;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: portrait) {
-        top: 18% !important;
-    }
-}
-
-.text-banner {
-    margin-top: 10%;
-    @media screen and (max-width: $screen__md) and (orientation: portrait) {
-        top: 18% !important;
-    }
-    @media screen and (max-width: $screen__xs) and (orientation: portrait) {
-        top: 25% !important;
-    }
-    @media only screen and (min-width: $screen__md) {
-        left: auto;
-    }
-}
 .title-banner {
     font-family: "Rubik";
     text-transform: uppercase;
@@ -41,62 +20,73 @@
     padding-right: 3%;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 10%;
 }
 
-.title-banner:first-child {
-    font-weight: 800;
-    background-color: RGB(88, 2, 11, 0.7);
-    @media only screen and (min-width: $screen__md) {
-        font-size: 5rem;
+body.home {
+    .container-banner {
+        min-height: 450px;
     }
-    @media only screen and (max-width: $screen__md) {
-        font-size: 3rem;
+    .text-banner {
+        @media screen and (min-width: $screen__md) {
+            line-height: 4.4rem;
+        }
+        @media screen and (max-width: $screen__md) {
+            line-height: 3rem;
+        }
+    }    
+    .title-banner:first-child {
+        font-weight: 800;
+        @media only screen and (min-width: $screen__md) {
+            font-size: 5rem;
+        }
+        @media only screen and (max-width: $screen__md) {
+            font-size: 3rem;
+        }
+        @media only screen and (max-width: $screen__xs) {
+            font-size: 2.8rem;
+        }
     }
-    @media only screen and (max-width: $screen__xs) {
-        font-size: 2rem;
-    }
-}
-.title-banner:last-child {
-    font-weight: lighter;
-    @media screen and (min-width: $screen__md) {
-        margin-top: 90px;
-        font-size: 4rem;
-    }
-    @media screen and (max-width: $screen__md) {
-        margin-top: 55px;
-        font-size: 2.4rem;
-    }
-    @media screen and (max-width: $screen__xs) {
-        margin-top: 55px;
-        font-size: 1.7rem;
-    }
-}
-
-.site-title {
-    @media screen and (min-width: $screen__md) {
-        margin-bottom: 150px;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: landscape) {
-        width: 100%;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: portrait) {
-        width: 100%;
+    .title-banner:last-child {
+        font-weight: lighter;
+        @media screen and (min-width: $screen__md) {
+            font-size: 4rem;
+        }
+        @media screen and (max-width: $screen__md) {
+            font-size: 2.8rem;
+        }
+        @media screen and (max-width: $screen__xs) {
+            font-size: 2.5rem;
+        }
     }
 }
-
-.banner-bw,
-.banner-home {
-    @media only screen and (max-width: $screen__md) and (orientation: portrait) {
-        height: 80%;
-        width: 100%;
+body:not(.home) {
+    .container-banner {
+        background-blend-mode: luminosity;
     }
-    background-size: cover;
-    height: 80%;
-    min-height: 250px;
-    padding-bottom: 150px;
-}
-
-.container-banner {
-    margin-bottom: 150px;
+    .text-banner {
+        @media screen and (min-width: $screen__md) {
+            line-height: 4rem;
+        }
+        @media screen and (max-width: $screen__md) {
+            line-height: 2.8rem;
+        }
+    }    
+    .title-banner:first-child {
+        font-weight: 800;
+        @media only screen and (min-width: $screen__md) {
+            font-size: 4rem;
+        }
+        @media only screen and (max-width: $screen__md) {
+            font-size: 2.8rem;
+        }
+    }
+    .title-banner:last-child {
+        font-weight: lighter;
+        @media screen and (min-width: $screen__md) {
+            font-size: 4rem;
+        }
+        @media screen and (max-width: $screen__md) {
+            font-size: 2.8rem;
+        }
+    }
 }

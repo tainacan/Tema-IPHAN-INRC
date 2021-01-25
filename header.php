@@ -67,10 +67,10 @@
 			</div>
 		</header><!-- #masthead -->
 
-		<?php
-		if (is_front_page() && is_home()) {
-			custom_banner_home();
-		} else {
-			custom_banner_bw();
-		}
-		?>
+
+    	<div class="container-banner site-titlee" style="background-image: url(' <?php header_image() ?> )">
+			<div class="text-banner site-container">
+				<span class="title-banner">inventário </br></span>
+				<span class="title-banner">nacional</span>
+			</div>
+		</div>

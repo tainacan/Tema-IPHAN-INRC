@@ -85,6 +85,25 @@ if (!function_exists('iphan_inrc_setup')) :
 			)
 		);
 
+		// Add theme support for custom header
+		$header_args = array(
+			'width'              => 1920,
+			'height'             => 672,
+			'header-text'		 => false,
+			'flex-width'         => false,
+			'flex-height'        => false,
+		);
+		add_theme_support( 'custom-header', $header_args );
+
+		$header_images = array(
+			'praia' => array(
+					'url'           => get_template_directory_uri() . '/assets/images/banner.png',
+					'thumbnail_url' => get_template_directory_uri() . '/assets/images/banner.png',
+					'description'   => 'Um cenário de uma pria brasileira.',
+			),
+		);
+		register_default_headers( $header_images );
+
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
 
@@ -263,12 +282,6 @@ require get_template_directory() . '/template-parts/block-patterns.php';
 
 //color palette
 require get_template_directory() . '/template-parts/color-palette.php';
-
-//banner bw
-require get_template_directory() . '/template-parts/banner-header-bw.php';
-
-//banner home
-require get_template_directory() . '/template-parts/banner-header-home.php';
 
 
 /**
