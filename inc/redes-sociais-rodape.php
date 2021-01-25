@@ -5,8 +5,6 @@ function iphan_theme_customizer_options($wp_customize)
     $wp_customize->add_section('social_section', array(
         'title'       => __('Redes Sociais', 'Tema_IPHAN_INRC'),
     ));
-
-
     $wp_customize->add_setting('setting_link_1', array(
         'default' => ''
     ));
