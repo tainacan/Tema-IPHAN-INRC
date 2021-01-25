@@ -550,7 +550,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #970620;
+	color: #970620 !important;
 	text-decoration: underline;
 }
 
