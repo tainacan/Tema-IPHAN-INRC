@@ -1015,12 +1015,11 @@ textarea {
 		display: block;
 		content: "\0231C";
 		font-size: 1.5rem;
-		rotate: 225deg;
 		transform: rotate(225deg);
 		color: #ffffff;
 		position: relative;
 		right: -15px;
-		top: 0.3rem;
+		top: -8px;
 	}
 }
 
