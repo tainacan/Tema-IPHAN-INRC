@@ -2,8 +2,6 @@
 
 function iphan_theme_customizer_options($wp_customize)
 {
-    $template_directory = get_template_directory_uri();
-
     $wp_customize->add_section('social_section', array(
         'title'       => __('Redes Sociais', 'Tema_IPHAN_INRC'),
     ));
@@ -20,7 +18,6 @@ function iphan_theme_customizer_options($wp_customize)
         'priority' => 1,
     ));
     $wp_customize->add_setting('iphan_logo_1', array(
-        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_setting('setting_link_2', array(
@@ -34,7 +31,6 @@ function iphan_theme_customizer_options($wp_customize)
         'priority' => 2,
     ));
     $wp_customize->add_setting('iphan_logo_2', array(
-        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_setting('setting_link_3', array(
@@ -48,7 +44,6 @@ function iphan_theme_customizer_options($wp_customize)
         'priority' => 3,
     ));
     $wp_customize->add_setting('iphan_logo_3', array(
-        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_setting('setting_link_4', array(
@@ -73,7 +68,6 @@ function iphan_theme_customizer_options($wp_customize)
     ));
 
     $wp_customize->add_setting('iphan_logo_4', array(
-        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_4', array(
@@ -109,7 +103,6 @@ function iphan_theme_customizer_options($wp_customize)
         'default' => ''
     ));
     $wp_customize->add_setting('iphan_logo_5', array(
-        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_5', array(
@@ -144,7 +137,6 @@ function iphan_theme_customizer_options($wp_customize)
         'default' => ''
     ));
     $wp_customize->add_setting('iphan_logo_6', array(
-        /*  'default' => get_theme_file_uri("' . $template_directory . '/assets/images/iphan_logo.png"), // Add Default Image URL  */
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_6', array(
