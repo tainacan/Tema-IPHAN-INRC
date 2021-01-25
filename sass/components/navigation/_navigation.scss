@@ -1,7 +1,7 @@
 .main-navigation {
     display: block;
-    .menu{
-        @media screen and (max-width: $screen__md){
+    .menu {
+        @media screen and (max-width: $screen__md) {
             border-bottom: 5px solid $color__vermelho1;
         }
     }
@@ -120,6 +120,7 @@
             margin-top: 10px;
         }
         & > li {
+            border: 1px solid transparent;
             position: relative;
             text-transform: uppercase;
             padding: calc(0.25rem + 1px) 20px;
@@ -130,6 +131,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            transition: border-color 0.2s ease;
             &:hover,
             &:focus {
                 border-color: $color__branco;
@@ -140,21 +142,20 @@
             &.menu-item-has-children {
                 @media screen and (min-width: $screen__sm) {
                     padding-right: 30px;
-                    border: 1px solid $color__branco;
                     cursor: pointer;
                 }
                 &::after {
-                    @media screen and (min-width:$screen__md){
+                    @media screen and (min-width: $screen__md) {
                         display: block;
                         content: "\0231C";
                         font-size: 1.5rem;
                         rotate: 225deg;
+                        transform: rotate(225deg);
                         color: $color__branco;
                         position: relative;
                         right: -15px;
                         top: 0.3rem;
                     }
-
                 }
             }
         }
@@ -441,6 +442,7 @@ a {
     background-color: $color__branco;
     animation: appear-from-bottom 0.2s ease;
     display: none;
+    z-index: 9999;
 
     & > .tainacan-icon-showmore:before {
         transform: rotate(180deg);

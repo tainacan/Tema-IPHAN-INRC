@@ -35,7 +35,6 @@ function iphan_inrc_pingback_header() {
 add_action( 'wp_head', 'iphan_inrc_pingback_header' );
 
 
-
 /**
  * Retrieves an item adjacent link, either using WP strategy or Tainacan plugin tainacan_get_adjacent_items()
  * 
@@ -183,3 +182,4 @@ if ( ! function_exists('tainacan_meta_date_author') ) {
 		}
 	}
 }
+?>

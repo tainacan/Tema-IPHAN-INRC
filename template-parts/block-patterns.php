@@ -106,3 +106,5 @@ function iphan_block_pattern()
     );
 }
 add_action('init', 'iphan_block_pattern');
+
+?>

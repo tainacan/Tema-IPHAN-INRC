@@ -40,3 +40,5 @@ if ( function_exists( 'register_block_style' ) ) {
         );
     }
 }add_action( 'init', 'iphan_block_styles' );
+
+?>

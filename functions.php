@@ -85,6 +85,25 @@ if (!function_exists('iphan_inrc_setup')) :
 			)
 		);
 
+		// Add theme support for custom header
+		$header_args = array(
+			'width'              => 1920,
+			'height'             => 672,
+			'header-text'		 => false,
+			'flex-width'         => false,
+			'flex-height'        => false,
+		);
+		add_theme_support( 'custom-header', $header_args );
+
+		$header_images = array(
+			'praia' => array(
+					'url'           => get_template_directory_uri() . '/assets/images/banner.png',
+					'thumbnail_url' => get_template_directory_uri() . '/assets/images/banner.png',
+					'description'   => 'Um cenário de uma pria brasileira.',
+			),
+		);
+		register_default_headers( $header_images );
+
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
 
@@ -104,11 +123,11 @@ if (!function_exists('iphan_inrc_setup')) :
 		);
 
 		/* Align wide and full */
-		add_theme_support( 'align-wide' );
+		add_theme_support('align-wide');
 
 		/* Editor Styles */
-		add_theme_support( 'editor-styles' );
-		add_editor_style( get_template_directory_uri().'/style.css' );
+		add_theme_support('editor-styles');
+		add_editor_style(get_template_directory_uri() . '/style.css');
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
@@ -177,11 +196,15 @@ function iphan_inrc_scripts()
 	}
 }
 
-function admin_style()
+//editor styles
+add_editor_style('editor-style.css');
+add_theme_support('editor-styles');
+add_action('admin_init', 'add_editor_style');
+
+function add_editor_styles()
 {
-	wp_enqueue_style('admin-styles', get_template_directory_uri() . '/style.css');
+	add_editor_style('editor-style.css');
 }
-add_action('admin_enqueue_scripts', 'admin_style');
 // Desativar cores personalizadas de Gutenberg
 add_theme_support('disable-custom-colors');
 // Desativar gradientes personalizados de Gutenberg
@@ -225,7 +248,7 @@ add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
 function iphan_inrc_add_google_fonts()
 {
-	wp_enqueue_style('iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), IPHAN_INRC_VERSION);
+	wp_enqueue_style('iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), IPHAN_INRC_VERSION);
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_add_google_fonts');
 
@@ -260,9 +283,12 @@ require get_template_directory() . '/template-parts/block-patterns.php';
 //color palette
 require get_template_directory() . '/template-parts/color-palette.php';
 
+
 /**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+?>

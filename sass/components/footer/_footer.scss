@@ -133,7 +133,11 @@
     }
 
     .site-info > .icons-footer {
-        margin-left: 5%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding-left: 12px;
     }
 
     .site-info > .fonte-iphan {
@@ -178,4 +182,22 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
     }
+}
+
+.imgFooter {
+    max-width: 35px;
+    max-height: 35px;
+    height: auto;
+    width: 35px;
+    padding-left: 20%;
+}
+.icons-footer > a:last-child > .imgFooter {
+    margin-right: 20%;
+}
+.icons-footer > a {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+.icons-footer > a:last-child {
+    margin-right: 0%;
 }
