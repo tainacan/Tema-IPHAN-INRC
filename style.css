@@ -1912,7 +1912,7 @@ a {
 /* Breadcrumbs
 --------------------------------------------- */
 @media screen and (min-width: 768px) {
-	.breadcrumbs {
+	.breadcrumb {
 		background-color: #e8e8e8;
 		display: flex;
 		padding-top: 14px;
@@ -1922,35 +1922,34 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-	.breadcrumbs {
+	.breadcrumb {
 		display: none;
 	}
 }
 
-.breadcrumbs > li {
+.breadcrumb > li {
 	list-style: none;
 }
 
-.breadcrumbs > li > a {
+.breadcrumb > li > a {
 	text-decoration: none;
 }
 
-.breadcrumbs a > i {
+.breadcrumb a > i {
 	font-size: 1.7rem;
 	color: #58020b;
 }
 
-.breadcrumbs > a {
+.breadcrumb > a {
 	margin-right: 1%;
-	margin-top: -11px;
 	margin-left: 17%;
 }
 
-.breadcrumbs .item-current {
+.breadcrumb .item-current {
 	color: #58020b;
 }
 
-.breadcrumbs .separator {
+.breadcrumb .separator {
 	color: #58020b;
 }
 

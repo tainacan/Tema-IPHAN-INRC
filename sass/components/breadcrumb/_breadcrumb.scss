@@ -1,4 +1,4 @@
-.breadcrumbs {
+.breadcrumb {
     @media screen and (min-width: $screen__sm) {
         background-color: $color__cinza2;
         display: flex;
@@ -11,26 +11,26 @@
     }
 }
 
-.breadcrumbs > li {
+.breadcrumb > li {
     list-style: none;
 }
 
-.breadcrumbs > li > a {
+.breadcrumb > li > a {
     text-decoration: none;
 }
-.breadcrumbs a > i {
+.breadcrumb a > i {
     font-size: 1.7rem;
     color: $color__vermelho1;
 }
 
-.breadcrumbs > a {
+.breadcrumb > a {
     margin-right: 1%;
     margin-left: 17%;
 }
 
-.breadcrumbs .item-current {
+.breadcrumb .item-current {
     color: $color__vermelho1;
 }   
-.breadcrumbs .separator{
+.breadcrumb .separator{
     color: $color__vermelho1;
 }
