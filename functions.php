@@ -283,6 +283,11 @@ require get_template_directory() . '/template-parts/block-patterns.php';
 //color palette
 require get_template_directory() . '/template-parts/color-palette.php';
 
+<<<<<<< HEAD
+=======
+//breadcrumb
+require get_template_directory() . '/template-parts/breadcrumb.php';
+>>>>>>> breadcrumb
 
 /**
  * Load Jetpack compatibility file.
