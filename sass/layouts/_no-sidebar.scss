@@ -65,22 +65,6 @@
     padding-right: 8.333333%;
 }
 
-/* Buttons */
-.wp-block-button {
-    margin-bottom: 1rem;
-    .btn { font-size: 0.875rem; }
-}
-.wp-block-button.is-style-outline .btn {
-    background: white !important;
-    color: #298596;
-    border: 1px solid #555758 !important
-}
-.wp-block-button.aligncenter,
-.wp-block-button.alignleft,
-.wp-block-button.alignright {
-    display: block;
-}
-
 /* Media and Text */
 .wp-block-media-text {
 	margin-top: 2rem;

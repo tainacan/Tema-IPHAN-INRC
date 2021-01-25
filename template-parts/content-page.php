@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title is-style-title-iphan-underscore">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php iphan_inrc_post_thumbnail(); ?>

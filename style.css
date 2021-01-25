@@ -570,7 +570,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border-radius: 0px;
-	background: #ffffff;
+	background: #58020b;
 	color: #515151;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
@@ -582,16 +582,16 @@ input[type="reset"].button,
 input[type="submit"].button {
 	text-transform: capitalize;
 	border: 1px solid;
-	border-color: #970620;
+	border-color: #58020b;
 }
 
 button.button:hover,
 input[type="button"].button:hover,
 input[type="reset"].button:hover,
 input[type="submit"].button:hover {
-	border-color: #970620;
-	background-color: #970620;
-	color: #ffffff;
+	border-color: #58020b;
+	background-color: #58020b;
+	color: #58020b;
 }
 
 button.button:active, button.button:focus,
@@ -602,8 +602,32 @@ input[type="reset"].button:focus,
 input[type="submit"].button:active,
 input[type="submit"].button:focus {
 	border-color: #58020b;
-	background-color: #970620;
-	color: #ffffff;
+	background-color: #58020b;
+	color: #58020b;
+}
+
+.wp-block-button {
+	margin-bottom: 1rem;
+}
+
+.wp-block-button .btn {
+	font-size: 0.875rem;
+}
+
+.wp-block-button.is-style-outline .btn {
+	background: white !important;
+	color: #58020b;
+	border: 1px solid #58020b !important;
+}
+
+.wp-block-button.aligncenter,
+.wp-block-button.alignleft,
+.wp-block-button.alignright {
+	display: block;
+}
+
+.wp-block-button__link {
+	border-radius: 0;
 }
 
 input[type="text"],
@@ -724,27 +748,6 @@ textarea {
 .wp-block-columns.alignfull {
 	padding-left: 8.333333%;
 	padding-right: 8.333333%;
-}
-
-/* Buttons */
-.wp-block-button {
-	margin-bottom: 1rem;
-}
-
-.wp-block-button .btn {
-	font-size: 0.875rem;
-}
-
-.wp-block-button.is-style-outline .btn {
-	background: white !important;
-	color: #298596;
-	border: 1px solid #555758 !important;
-}
-
-.wp-block-button.aligncenter,
-.wp-block-button.alignleft,
-.wp-block-button.alignright {
-	display: block;
 }
 
 /* Media and Text */
@@ -2467,7 +2470,8 @@ h6::after {
 }
 
 @media screen and (min-width: 1024px) {
-	.entry-content .is-style-title-iphan-underscore::after, .block-editor-block-list__layout .is-style-title-iphan-underscore::after {
+	.is-style-title-iphan-underscore::after,
+	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: relative;
 		height: 15px;
@@ -2479,7 +2483,8 @@ h6::after {
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
-	.entry-content .is-style-title-iphan-underscore::after, .block-editor-block-list__layout .is-style-title-iphan-underscore::after {
+	.is-style-title-iphan-underscore::after,
+	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
 		width: 15%;
@@ -2491,7 +2496,8 @@ h6::after {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.entry-content .is-style-title-iphan-underscore::after, .block-editor-block-list__layout .is-style-title-iphan-underscore::after {
+	.is-style-title-iphan-underscore::after,
+	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
 		width: 18%;
@@ -2503,7 +2509,8 @@ h6::after {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.entry-content .is-style-title-iphan-underscore::after, .block-editor-block-list__layout .is-style-title-iphan-underscore::after {
+	.is-style-title-iphan-underscore::after,
+	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
 		width: 12%;
