@@ -270,9 +270,6 @@ require get_template_directory() . '/template-parts/banner-header-bw.php';
 //banner home
 require get_template_directory() . '/template-parts/banner-header-home.php';
 
-//Redes Sociais no Rodapé
-require get_template_directory() . '/inc/redes-sociais-rodape.php';
-
 
 /**
  * Load Jetpack compatibility file.
