@@ -1927,8 +1927,21 @@ a {
 	}
 }
 
+.breadcrumb .separator {
+	margin-top: 1rem;
+}
+
+.breadcrumb > .container {
+	display: flex;
+}
+
 .breadcrumb > li {
 	list-style: none;
+}
+
+.breadcrumb i::before {
+	color: #58020b;
+	font-size: 2rem;
 }
 
 .breadcrumb > li > a {
@@ -1940,9 +1953,9 @@ a {
 	color: #58020b;
 }
 
-.breadcrumb > a {
+.breadcrumb a {
 	margin-right: 1%;
-	margin-left: 17%;
+	margin-top: 1rem;
 }
 
 .breadcrumb .item-current {
