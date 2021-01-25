@@ -1,29 +1,30 @@
 .breadcrumb {
-    @media screen and (min-width: $screen__sm) {
-        background-color: $color__cinza2;
-        display: flex;
-        padding-top: 14px;
-        padding-bottom: 14px;
-        margin-left: 0px;
-    }
+    background-color: $color__cinza2;
+    display: flex;
+    padding: 7px 0px !important;
+    margin-left: 0px;
+    font-size: 0.875rem;
+
     @media screen and (max-width: $screen__sm) {
         display: none;
     }
 }
-.breadcrumb .separator{
-    margin-top: 1rem;
-}
-.breadcrumb > .container {
+.breadcrumb > .site-container {
     display: flex;
+    flex-direction: row;
+    align-items: center; 
 }
-
+.breadcrumb .separator {
+    margin: 0 0.35rem;
+}
 .breadcrumb > li {
     list-style: none;
 }
 
 .breadcrumb  i::before {
     color: $color__vermelho1;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-right: 24px;
 }
 
 .breadcrumb > li > a {
@@ -34,13 +35,9 @@
     color: $color__vermelho1;
 }
 
-.breadcrumb  a {
-    margin-right: 1%;
-    margin-top: 1rem;
-}
-
-.breadcrumb .item-current {
+.breadcrumb .current {
     color: $color__vermelho1;
+    font-weight: bold;
 }
 .breadcrumb .separator {
     color: $color__vermelho1;

@@ -1911,14 +1911,12 @@ a {
 
 /* Breadcrumbs
 --------------------------------------------- */
-@media screen and (min-width: 768px) {
-	.breadcrumb {
-		background-color: #e8e8e8;
-		display: flex;
-		padding-top: 14px;
-		padding-bottom: 14px;
-		margin-left: 0px;
-	}
+.breadcrumb {
+	background-color: #e8e8e8;
+	display: flex;
+	padding: 7px 0px !important;
+	margin-left: 0px;
+	font-size: 0.875rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -1927,12 +1925,14 @@ a {
 	}
 }
 
-.breadcrumb .separator {
-	margin-top: 1rem;
+.breadcrumb > .site-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
-.breadcrumb > .container {
-	display: flex;
+.breadcrumb .separator {
+	margin: 0 0.35rem;
 }
 
 .breadcrumb > li {
@@ -1941,7 +1941,8 @@ a {
 
 .breadcrumb i::before {
 	color: #58020b;
-	font-size: 2rem;
+	font-size: 1.5rem;
+	margin-right: 24px;
 }
 
 .breadcrumb > li > a {
@@ -1953,13 +1954,9 @@ a {
 	color: #58020b;
 }
 
-.breadcrumb a {
-	margin-right: 1%;
-	margin-top: 1rem;
-}
-
-.breadcrumb .item-current {
+.breadcrumb .current {
 	color: #58020b;
+	font-weight: bold;
 }
 
 .breadcrumb .separator {
