@@ -70,7 +70,8 @@
 
     	<div class="container-banner site-titlee" style="background-image: url(' <?php header_image() ?> )">
 			<div class="text-banner site-container">
-				<span class="title-banner">inventário </br></span>
-				<span class="title-banner">nacional</span>
+				<span class="title-banner"><span class="title-banner__text">inventário</span></span>
+				<br>
+				<span class="title-banner"><span class="title-banner__text">nacional</span></span>
 			</div>
 		</div>

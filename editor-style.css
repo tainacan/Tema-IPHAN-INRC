@@ -2146,12 +2146,37 @@ a {
 .title-banner {
 	font-family: "Rubik";
 	text-transform: uppercase;
-	background-color: RGB(88, 2, 11, 0.7);
 	color: #ffffff;
-	padding-left: 3%;
-	padding-right: 3%;
+	position: relative;
+}
+
+.title-banner .title-banner__text {
+	position: relative;
+	z-index: 9;
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+.title-banner::after {
+	content: '';
+	width: 100%;
+	background-color: RGB(88, 2, 11, 0.7);
+	display: block;
+	position: absolute;
+}
+
+@media screen and (min-width: 1024px) {
+	.title-banner::after {
+		height: 84%;
+		top: 8px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.title-banner::after {
+		height: 82%;
+		top: 5px;
+	}
 }
 
 body.home .container-banner {
@@ -2160,13 +2185,13 @@ body.home .container-banner {
 
 @media screen and (min-width: 1024px) {
 	body.home .text-banner {
-		line-height: 4.4rem;
+		line-height: 3.2rem;
 	}
 }
 
 @media screen and (max-width: 1024px) {
 	body.home .text-banner {
-		line-height: 3rem;
+		line-height: 2.4rem;
 	}
 }
 
@@ -2220,13 +2245,13 @@ body:not(.home) .container-banner {
 
 @media screen and (min-width: 1024px) {
 	body:not(.home) .text-banner {
-		line-height: 4rem;
+		line-height: 3.2rem;
 	}
 }
 
 @media screen and (max-width: 1024px) {
 	body:not(.home) .text-banner {
-		line-height: 2.8rem;
+		line-height: 2.2rem;
 	}
 }
 

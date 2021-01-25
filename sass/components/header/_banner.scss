@@ -14,12 +14,32 @@
 .title-banner {
     font-family: "Rubik";
     text-transform: uppercase;
-    background-color: RGB(88, 2, 11, 0.7);
     color: $color__branco;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-left: 10px;
-    padding-right: 10px;
+    position: relative;
+
+    .title-banner__text {
+        position: relative;
+        z-index: 9;
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        background-color: RGB(88, 2, 11, 0.7);
+        display: block;
+        position: absolute;
+
+        @media screen and (min-width: $screen__md) {
+            height: 84%;
+            top: 8px;
+        }
+        @media screen and (max-width: $screen__md) {
+            height: 82%;
+            top: 5px;
+        }
+    }
 }
 
 body.home {
@@ -28,10 +48,10 @@ body.home {
     }
     .text-banner {
         @media screen and (min-width: $screen__md) {
-            line-height: 4.4rem;
+            line-height: 3.2rem;
         }
         @media screen and (max-width: $screen__md) {
-            line-height: 3rem;
+            line-height: 2.4rem;
         }
     }    
     .title-banner:first-child {
@@ -65,10 +85,10 @@ body:not(.home) {
     }
     .text-banner {
         @media screen and (min-width: $screen__md) {
-            line-height: 4rem;
+            line-height: 3.2rem;
         }
         @media screen and (max-width: $screen__md) {
-            line-height: 2.8rem;
+            line-height: 2.2rem;
         }
     }    
     .title-banner:first-child {
