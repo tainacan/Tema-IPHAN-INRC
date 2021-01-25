@@ -30,9 +30,9 @@
     <div class="tainacan-single-post">
         <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
 
-            <?php if ( get_theme_mod('tainacan_single_item_navigation_section_label', __( 'Continue browsing', 'tainacan-interface' )) != '') : ?>
+            <?php if ( get_theme_mod('tainacan_single_item_navigation_section_label', __( 'Continue explorando', 'iphan_inrc' )) != '') : ?>
                 <h2 class="mb-0 title-content-items" id="single-item-navigation-label">
-                    <?php echo esc_html( get_theme_mod( 'tainacan_single_item_navigation_section_label', __('Continue browsing', 'tainacan-interface') ) ); ?>
+                    <?php echo esc_html( get_theme_mod( 'tainacan_single_item_navigation_section_label', __('Continue explorando', 'iphan_inrc') ) ); ?>
                 </h2>
             <?php endif; ?>
 
@@ -47,7 +47,7 @@
 
             <div style="margin: 0 4.1666667%"  class="pagination">
                 <a class="d-inline-flex align-items-center" href="<?php echo tainacan_get_source_item_list_url(); ?>">
-                    <i class="tainacan-icon tainacan-icon-viewtable tainacan-icon-1-25em"></i>&nbsp;&nbsp;<span><?php echo __('Back to items list', 'tainacan-interface') ?></span>
+                    <i class="tainacan-icon tainacan-icon-viewtable tainacan-icon-1-25em"></i>&nbsp;&nbsp;<span><?php echo __('Voltar para lista de itens', 'iphan_inrc') ?></span>
                 </a>  
             </div>
 

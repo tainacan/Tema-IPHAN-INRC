@@ -20,14 +20,14 @@
 <?php if ( !empty( $attachments )  || ( get_theme_mod( 'tainacan_single_item_gallery_mode', false) && tainacan_has_document() )) : ?>
 
     <div class="mt-3 tainacan-single-post">
-        <?php if ( !get_theme_mod( 'tainacan_single_item_gallery_mode', false ) && get_theme_mod('tainacan_single_item_attachments_section_label', __( 'Attachments', 'tainacan-interface' )) != '') : ?>
+        <?php if ( !get_theme_mod( 'tainacan_single_item_gallery_mode', false ) && get_theme_mod('tainacan_single_item_attachments_section_label', __( 'Anexos', 'iphan_inrc' )) != '') : ?>
             <h2 class="title-content-items" id="single-item-attachments-label">
-                <?php echo esc_html( get_theme_mod('tainacan_single_item_attachments_section_label', __( 'Attachments', 'tainacan-interface' )) ); ?>
+                <?php echo esc_html( get_theme_mod('tainacan_single_item_attachments_section_label', __( 'Anexos', 'iphan_inrc' )) ); ?>
             </h2>
         <?php endif; ?>
-        <?php if ( get_theme_mod( 'tainacan_single_item_gallery_mode', false ) && get_theme_mod('tainacan_single_item_documents_section_label', __( 'Documents', 'tainacan-interface' )) != '') : ?>
+        <?php if ( get_theme_mod( 'tainacan_single_item_gallery_mode', false ) && get_theme_mod('tainacan_single_item_documents_section_label', __( 'Documentos', 'iphan_inrc' )) != '') : ?>
             <h2 class="title-content-items" id="single-item-documents-label">
-                <?php echo esc_html( get_theme_mod('tainacan_single_item_documents_section_label', __( 'Documents', 'tainacan-interface' )) ); ?>
+                <?php echo esc_html( get_theme_mod('tainacan_single_item_documents_section_label', __( 'Documentos', 'iphan_inrc' )) ); ?>
             </h2>
         <?php endif; ?>
         <section class="tainacan-content single-item-collection margin-two-column">
@@ -68,7 +68,7 @@
                                     the_post_thumbnail('tainacan-medium-full', array('class' => 'item-card--thumbnail mt-2'));
                                     echo '<br>';
                                 ?>
-                                <span class="single-item-file-name <?php if (get_theme_mod('tainacan_single_item_hide_files_name', false)) echo 'sr-only' ?>"><?php echo __( 'Document', 'tainacan-interface' ); ?></span>
+                                <span class="single-item-file-name <?php if (get_theme_mod('tainacan_single_item_hide_files_name', false)) echo 'sr-only' ?>"><?php echo __( 'Documento', 'iphan_inrc' ); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php foreach ( $attachments as $attachment ) { ?>

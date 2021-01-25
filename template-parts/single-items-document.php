@@ -1,8 +1,8 @@
 <?php if ( tainacan_has_document() && !get_theme_mod( 'tainacan_single_item_gallery_mode', false )) : ?>
     <div class="mt-3 tainacan-single-post">
-        <?php if ( get_theme_mod('tainacan_single_item_document_section_label', __( 'Document', 'tainacan-interface' )) != '') : ?>
+        <?php if ( get_theme_mod('tainacan_single_item_document_section_label', __( 'Documento', 'iphan_inrc' )) != '') : ?>
             <h2 class="title-content-items" id="single-item-document-label">
-                <?php echo esc_html( get_theme_mod('tainacan_single_item_document_section_label', __( 'Document', 'tainacan-interface' )) ); ?>
+                <?php echo esc_html( get_theme_mod('tainacan_single_item_document_section_label', __( 'Documento', 'iphan_inrc' )) ); ?>
             </h2>
         <?php endif; ?>
         <section class="tainacan-content single-item-collection margin-two-column">

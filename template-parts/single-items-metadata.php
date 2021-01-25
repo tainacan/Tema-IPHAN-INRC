@@ -12,7 +12,7 @@
                     <?php if (has_post_thumbnail() && get_theme_mod( 'tainacan_single_item_display_thumbnail', true )): ?>
                         <div class="tainacan-item-thumbnail-container border-0 mb-3">
                             <div class="border-0 pl-0 pt-0 pb-1">
-                                <h3><?php _e( 'Thumbnail', 'tainacan-interface' ); ?></h3>
+                                <h3><?php _e( 'Miniatura', 'iphan_inrc' ); ?></h3>
                                 <?php the_post_thumbnail('tainacan-medium-full', array('class' => 'item-card--thumbnail mt-2')); ?>
                             </div>
                         </div>

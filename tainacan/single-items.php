@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <main id="primary" class="site-main site-container">
+	<div class="entry-content">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -63,8 +64,10 @@
 		<?php do_action( 'tainacan-interface-single-item-bottom' ); ?>
 
 	<?php else : ?>
-		<?php _e( 'Nothing found', 'tainacan-interface' ); ?>
+		<?php _e( 'Nada encontrado!', 'iphan_inrc' ); ?>
 	<?php endif; ?>
+
+	</div>
 
 </main>
 
