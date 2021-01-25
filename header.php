@@ -66,7 +66,6 @@
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
-<<<<<<< HEAD
 
 
 		<div class="container-banner site-title" style="background-image: url(' <?php header_image() ?> )">
@@ -77,6 +76,4 @@
 				<span class="title-banner"><span class="title-banner__text">nacional</span></span>
 			</div>
 		</div>
-=======
 		<?php custom_breadcrumbs(); ?>
->>>>>>> breadcrumb

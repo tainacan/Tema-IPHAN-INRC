@@ -35,11 +35,7 @@
 		"sass/components/media/_captions.scss",
 		"sass/components/media/_galleries.scss",
 		"sass/components/footer/_footer.scss",
-<<<<<<< HEAD
-		"sass/components/header/_banner.scss",
-=======
 		"sass/components/breadcrumb/_breadcrumb.scss",
->>>>>>> breadcrumb
 		"sass/plugins/jetpack/_infinite-scroll.scss",
 		"sass/utilities/_accessibility.scss",
 		"sass/utilities/_alignments.scss",
