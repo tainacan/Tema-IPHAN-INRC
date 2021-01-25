@@ -1,4 +1,3 @@
-
 .container-banner {
     display: flex;
     align-items: center;
@@ -8,9 +7,18 @@
     width: 100%;
     min-height: 250px;
     margin-bottom: 150px;
-    background-color: white;
-}
+    position: relative;
+    background-color: $color__cinza2;
 
+    .container-banner__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: $color__cinza7;
+        opacity: 0.5;
+    }
+}
 .title-banner {
     font-family: "Rubik";
     text-transform: uppercase;

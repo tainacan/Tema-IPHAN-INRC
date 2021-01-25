@@ -120,6 +120,7 @@
             margin-top: 10px;
         }
         & > li {
+            border: 1px solid transparent;
             position: relative;
             text-transform: uppercase;
             padding: calc(0.25rem + 1px) 20px;
@@ -130,6 +131,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            transition: border-color 0.2s ease;
             &:hover,
             &:focus {
                 border-color: $color__branco;
@@ -140,7 +142,6 @@
             &.menu-item-has-children {
                 @media screen and (min-width: $screen__sm) {
                     padding-right: 30px;
-                    border: 1px solid $color__branco;
                     cursor: pointer;
                 }
                 &::after {
