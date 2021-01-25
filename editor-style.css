@@ -551,7 +551,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #970620;
+	color: #970620 !important;
 	text-decoration: underline;
 }
 
@@ -2142,7 +2142,6 @@ a {
 	height: 80%;
 	width: 100%;
 	min-height: 250px;
-	margin-bottom: 150px;
 	position: relative;
 	background-color: #e8e8e8;
 }
@@ -2298,6 +2297,61 @@ body:not(.home) .title-banner:last-child {
 	body:not(.home) .title-banner:last-child {
 		font-size: 2.8rem;
 	}
+}
+
+/* Breadcrumbs
+--------------------------------------------- */
+.breadcrumb {
+	background-color: #e8e8e8;
+	display: flex;
+	padding: 7px 0px !important;
+	margin-left: 0px;
+	margin-bottom: 320px;
+	font-size: 0.875rem;
+}
+
+@media screen and (max-width: 768px) {
+	.breadcrumb {
+		display: none;
+	}
+}
+
+.breadcrumb > .site-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.breadcrumb .separator {
+	margin: 0 0.35rem;
+}
+
+.breadcrumb > li {
+	list-style: none;
+}
+
+.breadcrumb i::before {
+	color: #58020b;
+	font-size: 1.5rem;
+	margin-right: 24px;
+}
+
+.breadcrumb > li > a {
+	text-decoration: none;
+}
+
+.breadcrumb a > i {
+	font-size: 1.7rem;
+	color: #58020b;
+}
+
+.breadcrumb .current {
+	color: #58020b;
+	font-weight: bold;
+}
+
+.breadcrumb .separator {
+	color: #58020b;
 }
 
 /*--------------------------------------------------------------
