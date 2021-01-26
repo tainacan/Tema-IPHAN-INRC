@@ -31,10 +31,28 @@ if ( function_exists( 'register_block_style' ) ) {
         );
 
         register_block_style(            
+            'core/column',            
+             array(                
+               'name'  => 'column-iphan-secundary',                
+               'label' =>  'Coluna IPHAN Secundária',    
+               'isDefault' => true,        
+            )        
+        );
+
+        register_block_style(            
             'core/group',            
              array(                
                'name'  => 'column-iphan',                
-               'label' =>  'Coluna IPHAN ',   
+               'label' =>  'Grupo IPHAN ',   
+               'isDefault' => true,  
+            )        
+        );
+
+        register_block_style(            
+            'core/group',            
+             array(                
+               'name'  => 'column-iphan-secundary',                
+               'label' =>  'Grupo IPHAN secundario',   
                'isDefault' => true,  
             )        
         );
