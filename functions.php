@@ -10,7 +10,7 @@
 
 if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('IPHAN_INRC_VERSION', '1.0.0');
+	define('IPHAN_INRC_VERSION', '1.0.1');
 }
 
 if (!function_exists('iphan_inrc_setup')) :
@@ -132,6 +132,16 @@ if (!function_exists('iphan_inrc_setup')) :
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
 
+/**
+ * Enqueueing Google Font wasn't working on wp_enqueue_scripts so we handle here
+ */
+function iphan_inrc_head_extra_enqueues() {
+    ?>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <?php
+}
+add_action('wp_head', 'iphan_inrc_head_extra_enqueues');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -176,13 +186,15 @@ add_action('widgets_init', 'iphan_inrc_widgets_init');
  */
 function iphan_inrc_scripts()
 {
-	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
-	wp_style_add_data('iphan_inrc-style', 'rtl', 'replace');
-	//instalação do bootstrap
+	// Bootstrap
 	wp_enqueue_style('boostrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', array(), '', 'all');
 	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', array(), null, true);
 	wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(), null, true);
 	wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array('jquery'), null, true);
+
+	// Our main style
+	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
+	wp_style_add_data('iphan_inrc-style', 'rtl', 'replace');
 
 	// Tainacan Icons
 	wp_register_style('TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '');
@@ -195,6 +207,7 @@ function iphan_inrc_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 }
+add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
 //editor styles
 add_editor_style('editor-style.css');
@@ -243,15 +256,6 @@ register_widget( Redes_Sociais_Widget );
 add_action( ‘widgets_init’, ‘Redes Sociais’ ); */
 
 //End Widget pras redes sociais
-
-add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
-
-function iphan_inrc_add_google_fonts()
-{
-	wp_enqueue_style('iphan_inrc-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), IPHAN_INRC_VERSION);
-}
-add_action('wp_enqueue_scripts', 'iphan_inrc_add_google_fonts');
-
 
 
 /**
