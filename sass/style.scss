@@ -50,6 +50,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 
+//bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
 // Import variables and mixins.
 @import "abstracts/abstracts";
 
@@ -104,3 +108,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "block-style/editor-basics.scss";
 @import "block-style/title-block.scss";
 @import "block-style/column-block.scss";
+

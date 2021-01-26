@@ -170,7 +170,6 @@ function iphan_inrc_widgets_init()
 }
 add_action('widgets_init', 'iphan_inrc_widgets_init');
 
-
 /**
  * Enqueue scripts and styles.
  */
@@ -178,16 +177,10 @@ function iphan_inrc_scripts()
 {
 	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
 	wp_style_add_data('iphan_inrc-style', 'rtl', 'replace');
-	//instalação do bootstrap
-	wp_enqueue_style('boostrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', array(), '', 'all');
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', array(), null, true);
-	wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(), null, true);
-	wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array('jquery'), null, true);
 
 	// Tainacan Icons
 	wp_register_style('TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '');
 	wp_enqueue_style('TainacanIconsFont');
-
 
 	wp_enqueue_script('iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), IPHAN_INRC_VERSION, true);
 
@@ -209,40 +202,6 @@ function add_editor_styles()
 add_theme_support('disable-custom-colors');
 // Desativar gradientes personalizados de Gutenberg
 add_theme_support('disable-custom-gradients');
-
-
-//Begin Widget pras redes sociais
-
-
-/* class RedesSociaisWidget extends WP_Widget {
-
-public function __construct() {
-	$options = array(
-	‘classname’ => ‘custom_livescore_widget’,
-	‘description’ => ‘Redes Sociais’,
-);
-}
-
-parent::__construct(
-‘live_score_widget’, ‘Live Score Widget’, $options
-);
-}
-
-public function widget( $args, $instance ) {
-$args[‘after_title’];
-echo ‘Hello, World!’;
-
-// Keep this line
-echo $args[‘after_widget’];
-}
-}
-// Register the widget
-function my_register_custom_widget() {
-register_widget( Redes_Sociais_Widget );
-}
-add_action( ‘widgets_init’, ‘Redes Sociais’ ); */
-
-//End Widget pras redes sociais
 
 add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
