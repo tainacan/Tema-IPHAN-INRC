@@ -574,6 +574,8 @@ input[type="submit"] {
 	color: #58020b;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
+	font-family: Rubik;
+	font-size: 0.875rem;
 }
 
 button.button,
