@@ -570,8 +570,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border-radius: 0px;
-	background: #58020b;
-	color: #515151;
+	background: #ffffff;
+	color: #58020b;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
 }
@@ -591,7 +591,7 @@ input[type="reset"].button:hover,
 input[type="submit"].button:hover {
 	border-color: #58020b;
 	background-color: #58020b;
-	color: #58020b;
+	color: #ffffff;
 }
 
 button.button:active, button.button:focus,
@@ -603,7 +603,16 @@ input[type="submit"].button:active,
 input[type="submit"].button:focus {
 	border-color: #58020b;
 	background-color: #58020b;
-	color: #58020b;
+	color: #ffffff;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #58020b;
+	background-color: #58020b;
+	color: #ffffff;
 }
 
 .wp-block-button {
@@ -616,7 +625,7 @@ input[type="submit"].button:focus {
 
 .wp-block-button.is-style-outline .btn {
 	background: white !important;
-	color: #58020b;
+	color: #ffffff;
 	border: 1px solid #58020b !important;
 }
 
@@ -646,7 +655,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #515151;
+	color: #58020b;
 	border: 1px solid #d9d9d9;
 	border-radius: 6px;
 	padding: 3px;
