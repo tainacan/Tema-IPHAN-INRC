@@ -7,6 +7,8 @@ input[type="submit"] {
 	color: $color__text-input;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
+	font-family: $font__family-buttons;
+	font-size: $font__size-buttons;
 
 	&.button {
 		text-transform: capitalize;
