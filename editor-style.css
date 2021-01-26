@@ -606,6 +606,15 @@ input[type="submit"].button:focus {
 	color: #ffffff;
 }
 
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #58020b;
+	background-color: #58020b;
+	color: #ffffff;
+}
+
 .wp-block-button {
 	margin-bottom: 1rem;
 }

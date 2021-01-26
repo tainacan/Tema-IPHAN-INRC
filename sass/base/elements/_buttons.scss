@@ -12,37 +12,42 @@ input[type="submit"] {
 		text-transform: capitalize;
 		border: 1px solid;
 		border-color: $color__border-button;
-	
+
 		&:hover {
 			border-color: $color__border-button-hover;
 			background-color: $color__border-button;
 			color: $color__background-button;
 		}
-	
+
 		&:active,
 		&:focus {
 			border-color: $color__border-button-focus;
 			background-color: $color__border-button;
-			color: $color__background-button; 
+			color: $color__background-button;
 		}
+	}
+	&:hover {
+		border-color: $color__border-button-hover;
+		background-color: $color__border-button;
+		color: $color__background-button;
 	}
 }
 .wp-block-button {
-    margin-bottom: 1rem;
-    .btn { font-size: 0.875rem; }
+	margin-bottom: 1rem;
+	.btn {
+		font-size: 0.875rem;
+	}
 }
 .wp-block-button.is-style-outline .btn {
-    background: white !important;
-    color: $color__background-button;
-    border: 1px solid  $color__border-button !important
+	background: white !important;
+	color: $color__background-button;
+	border: 1px solid $color__border-button !important;
 }
 .wp-block-button.aligncenter,
 .wp-block-button.alignleft,
 .wp-block-button.alignright {
-    display: block;
+	display: block;
 }
 .wp-block-button__link {
 	border-radius: 0;
 }
-
-
