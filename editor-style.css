@@ -215,6 +215,19 @@ big {
 	}
 }
 
+.is-style-column-iphan-secundary {
+	border: 1px solid #515151;
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.7);
+	overflow-wrap: anywhere;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+	.is-style-column-iphan-secundary {
+		margin-bottom: 5%;
+	}
+}
+
 .is-style-title-iphan-underscore {
 	margin-bottom: 65px;
 	color: #58020b !important;
@@ -391,19 +404,6 @@ big {
 	margin-right: -5.48%;
 	padding-left: 0;
 	padding-right: 0;
-}
-
-.is-style-column-iphan-secundary {
-	border: 1px solid #515151;
-	padding: 30px;
-	background-color: rgba(255, 255, 255, 0.7);
-	overflow-wrap: anywhere;
-}
-
-@media screen and (orientation: portrait) and (max-width: 1024px) {
-	.is-style-column-iphan-secundary {
-		margin-bottom: 5%;
-	}
 }
 
 /*# sourceMappingURL=editor-style.css.map */
