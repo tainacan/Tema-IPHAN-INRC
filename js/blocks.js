@@ -2,7 +2,7 @@ function updateButtonBlock( settings, name ) {
     if ( name !== 'core/button' ) {
         return settings;
     }
-    console.log(settings)
+    
     settings.styles = [];
     settings.styles.push({ 
         name: "outline",

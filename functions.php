@@ -120,14 +120,14 @@ if (!function_exists('iphan_inrc_setup')) :
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
-
+ 
 /**
  * Enqueueing Google Font wasn't working on wp_enqueue_scripts so we handle here
  */
 function iphan_inrc_head_extra_enqueues() {
     ?>
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet"> 
     <?php
 }
 add_action('wp_head', 'iphan_inrc_head_extra_enqueues');
@@ -178,10 +178,11 @@ function iphan_inrc_scripts()
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
-function iphan_inrc_enqueue_editor_js() {
+function iphan_inrc_enqueue_editor_scripts() {
+	// Logic for changing core/button via wp.hooks
 	wp_enqueue_script('iphan_inrc-blocks', get_template_directory_uri() . '/js/blocks.js', array(), IPHAN_INRC_VERSION, true);
 }
-add_action( 'enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_js' );
+add_action( 'enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts' );
 
 /**
  * Implement the Custom Header feature.

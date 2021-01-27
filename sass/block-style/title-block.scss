@@ -1,5 +1,5 @@
 .is-style-title-iphan-underscore {
-    margin-bottom: 65px;
+    margin-bottom: 44px;
     color: $color__vermelho1 !important;
     text-transform: uppercase;
 
@@ -54,8 +54,13 @@
 
 .editor-post-title.editor-post-title__block {
     margin-bottom: 65px;
-    color: $color__vermelho1 !important;
-    text-transform: uppercase;
+    textarea { 
+        text-transform: uppercase;
+        font-family: $font__heading;
+	    font-weight: 500;
+        font-size: 1.5rem;
+        color: $color__vermelho1 !important;
+    }
 
     &::after{
         @media screen and (min-width: $screen__md) {

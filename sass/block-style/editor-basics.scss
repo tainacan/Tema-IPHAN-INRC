@@ -1,34 +1,37 @@
-// Editor Block list side spacing
-.editor-block-list__layout,
-.block-editor-block-list__layout {
-    padding-left: $container__side-padding;
-    padding-right: $container__side-padding;
-}
-.editor-writing-flow__click-redirect {
-    width: auto; 
-}
 // Inner blocks do not need all that spacing,
 // otherwise they won't match their theme result
-.editor-inner-blocks,
+.editor-inner-blocks, 
 .block-editor-inner-blocks,
-.wp-block-group__inner-container,
+.wp-block-group__inner-container>.wp-block,
 .wp-block-cover__inner-container>.wp-block,
 .editor-inner-blocks>.editor-block-list__layout,
 .block-editor-inner-blocks>.block-editor-block-list__layout  {
     padding-left: 0;
     padding-right: 0;
+    max-width: 100%;
 }
 
 /* Main column width */
 .wp-block {
     max-width: $container__max-width_with_padding;
-    padding-left: $container__side-padding;
-    padding-right: $container__side-padding;
+    font-family: $font__main;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    &.wp-block {
+        margin-top: 0;
+    }
 }
 
 /* Width of "wide" blocks */
 .wp-block[data-align="wide"] {
-    max-width: $container__max-width;
+    max-width: $container__inner_max-width;
     padding-left: 0;
     padding-right: 0;
 
@@ -41,10 +44,11 @@
 /* Width of "full" blocks */
 .block-editor-block-list__layout.is-root-container > .wp-block[data-align="full"],
 .wp-block[data-align="full"] {
-    max-width: $container__max-width_without_margin;
+    max-width: calc(100% + 20px);
     width: $container__max-width_without_margin;
-    margin-left: - $container__side-padding;
-    margin-right: - $container__side-padding;
+    margin-left: - 10px;
+    margin-right: - 10px;
     padding-left: 0;
     padding-right: 0;
 }
+

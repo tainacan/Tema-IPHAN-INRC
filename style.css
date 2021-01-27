@@ -10065,6 +10065,39 @@ html {
 	width: 100%;
 }
 
+.content-container {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 5.48%;
+	padding-right: 5.48%;
+	max-width: 866px;
+	width: 100%;
+}
+
+.alignwide {
+	margin-left: calc(-2 * 5.48%) !important;
+	margin-right: calc(-2 * 5.48%) !important;
+	width: calc(100% + (4 * 5.48%));
+	max-width: 1300px;
+}
+
+@media only screen and (max-width: 866px) {
+	.alignwide {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 100%;
+	}
+}
+
+.alignfull {
+	margin-left: calc( -100vw / 2 + 100% / 2) !important;
+	margin-right: calc( -100vw / 2 + 100% / 2) !important;
+	max-width: 100%;
+	max-width: 100vw;
+	width: 100%;
+	width: 100vw;
+}
+
 /* Typography
 --------------------------------------------- */
 body,
@@ -10082,6 +10115,31 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+h3 {
+	font-size: 1.125rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h5 {
+	font-size: 0.875rem;
+}
+
+h6 {
+	font-size: 0.75rem;
 }
 
 p {
@@ -10341,21 +10399,6 @@ textarea {
 	grid-template-areas: "header" "main" "footer";
 }
 
-.alignwide {
-	margin-left: calc(-2 * 5.48%) !important;
-	margin-right: calc(-2 * 5.48%) !important;
-	width: calc(100% + (4 * 5.48%));
-	max-width: 1300px;
-}
-
-@media only screen and (max-width: 2070px) {
-	.alignwide {
-		margin-left: -5.48% !important;
-		margin-right: -5.48% !important;
-		width: calc(100% + (2 * 5.48%));
-	}
-}
-
 .has-text-color > a,
 .has-text-color > a:hover {
 	color: inherit;
@@ -10374,15 +10417,6 @@ textarea {
 	.wp-block-image.alignwide > img {
 		width: 100% !important;
 	}
-}
-
-.alignfull {
-	margin-left: calc( -100vw / 2 + 100% / 2) !important;
-	margin-right: calc( -100vw / 2 + 100% / 2) !important;
-	max-width: 100%;
-	max-width: 100vw;
-	width: 100%;
-	width: 100vw;
 }
 
 .wp-block-image.alignfull > img {
@@ -10431,6 +10465,15 @@ textarea {
 	width: 100%;
 	width: 100vw;
 	left: 0;
+}
+
+/* Columns and group block should have a certain margin */
+.wp-block-group,
+.wp-block-cover:not(:first-child),
+.wp-block-cover:not(:first-child).has-background,
+.wp-block-columns {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -12090,7 +12133,7 @@ body:not(.home) .title-banner:last-child {
 }
 
 .is-style-title-iphan-underscore {
-	margin-bottom: 65px;
+	margin-bottom: 44px;
 	color: #58020b !important;
 	text-transform: uppercase;
 }
@@ -12151,8 +12194,14 @@ body:not(.home) .title-banner:last-child {
 
 .editor-post-title.editor-post-title__block {
 	margin-bottom: 65px;
-	color: #58020b !important;
+}
+
+.editor-post-title.editor-post-title__block textarea {
 	text-transform: uppercase;
+	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+	color: #58020b !important;
 }
 
 @media screen and (min-width: 1024px) {
@@ -12220,8 +12269,11 @@ body:not(.home) .title-banner:last-child {
 .is-style-column-iphan {
 	border: 1px solid #58020b;
 	padding: 30px;
-	background-color: rgba(255, 255, 255, 0.7);
 	overflow-wrap: anywhere;
+}
+
+.is-style-column-iphan:not(.has-background) {
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
@@ -12233,8 +12285,11 @@ body:not(.home) .title-banner:last-child {
 .is-style-column-iphan-secundary {
 	border: 1px solid #515151;
 	padding: 30px;
-	background-color: rgba(255, 255, 255, 0.7);
 	overflow-wrap: anywhere;
+}
+
+.is-style-column-iphan-secundary:not(.has-background) {
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
@@ -12299,6 +12354,154 @@ body:not(.home) .title-banner:last-child {
 .wp-block-button.alignleft,
 .wp-block-button.alignright {
 	display: block;
+}
+
+.wp-block-buttons .wp-block-button {
+	margin-bottom: 1em;
+}
+
+/* Branco */
+.has-branco-background-color {
+	background-color: #ffffff;
+}
+
+.has-branco-color {
+	color: #ffffff;
+}
+
+/* Preto */
+.has-preto-background-color {
+	background-color: #000000;
+}
+
+.has-preto-color {
+	color: #000000;
+}
+
+/* Vermelho */
+.has-vermelho-background-color {
+	background-color: #58020b;
+}
+
+.has-vermelho-color {
+	color: #58020b;
+}
+
+/* Vermelho 2*/
+.has-vermelho-2-background-color {
+	background-color: #970620;
+}
+
+.has-vermelho-2-color {
+	color: #970620;
+}
+
+/* Amarelo */
+.has-amarelo-background-color {
+	background-color: #f3d7a2;
+}
+
+.has-amarelo-color {
+	color: #f3d7a2;
+}
+
+/* Amarelo 2*/
+.has-amarelo-2-background-color {
+	background-color: #fcd9aa;
+}
+
+.has-amarelo-2-color {
+	color: #fcd9aa;
+}
+
+/* Verde */
+.has-verde-background-color {
+	background-color: #007350;
+}
+
+.has-verde-color {
+	color: #007350;
+}
+
+/* Laranja */
+.has-laranja-background-color {
+	background-color: #ca4d37;
+}
+
+.has-laranja-color {
+	color: #ca4d37;
+}
+
+/* Branco 1 */
+.has-branco-1-background-color {
+	background-color: #f5f5f5;
+}
+
+.has-branco-1-color {
+	color: #f5f5f5;
+}
+
+/* Cinza 1 */
+.has-cinza-1-background-color {
+	background-color: #f1f1f1;
+}
+
+.has-cinza-1-color {
+	color: #f1f1f1;
+}
+
+/* Cinza 2 */
+.has-cinza-2-background-color {
+	background-color: #e8e8e8;
+}
+
+.has-cinza-2-color {
+	color: #e8e8e8;
+}
+
+/* Cinza 3 */
+.has-cinza-3-background-color {
+	background-color: #d9d9d9;
+}
+
+.has-cinza-3-color {
+	color: #d9d9d9;
+}
+
+/* Cinza 4 */
+.has-cinza-4-background-color {
+	background-color: #bfbfbf;
+}
+
+.has-cinza-4-color {
+	color: #bfbfbf;
+}
+
+/* Cinza 5 */
+.has-cinza-5-background-color {
+	background-color: #898d8f;
+}
+
+.has-cinza-5-color {
+	color: #898d8f;
+}
+
+/* Cinza 6 */
+.has-cinza-6-background-color {
+	background-color: #515151;
+}
+
+.has-cinza-6-color {
+	color: #515151;
+}
+
+/* Cinza 7 */
+.has-cinza-7-background-color {
+	background-color: #1e1e1e;
+}
+
+.has-cinza-7-color {
+	color: #1e1e1e;
 }
 
 /*# sourceMappingURL=style.css.map */
