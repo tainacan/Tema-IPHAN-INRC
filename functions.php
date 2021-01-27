@@ -10,7 +10,7 @@
 
 if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('IPHAN_INRC_VERSION', '1.0.1');
+	define('IPHAN_INRC_VERSION', '1.0.0');
 }
 
 if (!function_exists('iphan_inrc_setup')) :
@@ -52,7 +52,7 @@ if (!function_exists('iphan_inrc_setup')) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Primary', 'iphan_inrc'),
+				'menu-1' => esc_html__('Principal', 'iphan_inrc'),
 			)
 		);
 
@@ -70,18 +70,6 @@ if (!function_exists('iphan_inrc_setup')) :
 				'caption',
 				'style',
 				'script',
-			)
-		);
-
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'iphan_inrc_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
 			)
 		);
 
@@ -125,9 +113,10 @@ if (!function_exists('iphan_inrc_setup')) :
 		/* Align wide and full */
 		add_theme_support('align-wide');
 
-		/* Editor Styles */
+		/* Editor (Gutenberg side) Styles */
 		add_theme_support('editor-styles');
-		add_editor_style(get_template_directory_uri() . '/style.css');
+		add_editor_style(get_template_directory_uri() . '/editor-style.css');
+		
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
@@ -142,22 +131,6 @@ function iphan_inrc_head_extra_enqueues() {
     <?php
 }
 add_action('wp_head', 'iphan_inrc_head_extra_enqueues');
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function iphan_inrc_content_width()
-{
-	$GLOBALS['content_width'] = apply_filters('iphan_inrc_content_width', 640);
-	//block styles
-
-
-}
-add_action('after_setup_theme', 'iphan_inrc_content_width', 0);
 
 /**
  * Register widget area.
@@ -196,7 +169,8 @@ function iphan_inrc_scripts()
 	wp_register_style('TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '');
 	wp_enqueue_style('TainacanIconsFont');
 
-	wp_enqueue_script('iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), IPHAN_INRC_VERSION, true);
+	// Enqueues our custom js
+	wp_enqueue_script('iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), IPHAN_INRC_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -204,19 +178,10 @@ function iphan_inrc_scripts()
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
-//editor styles
-add_editor_style('editor-style.css');
-add_theme_support('editor-styles');
-add_action('admin_init', 'add_editor_style');
-
-function add_editor_styles()
-{
-	add_editor_style('editor-style.css');
+function iphan_inrc_enqueue_editor_js() {
+	wp_enqueue_script('iphan_inrc-blocks', get_template_directory_uri() . '/js/blocks.js', array(), IPHAN_INRC_VERSION, true);
 }
-// Desativar cores personalizadas de Gutenberg
-add_theme_support('disable-custom-colors');
-// Desativar gradientes personalizados de Gutenberg
-add_theme_support('disable-custom-gradients');
+add_action( 'enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_js' );
 
 /**
  * Implement the Custom Header feature.

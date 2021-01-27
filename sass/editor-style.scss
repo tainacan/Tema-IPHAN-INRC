@@ -1,1 +1,22 @@
-@import './style.scss';
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Base Typography
+--------------------------------------------------------------*/
+@import "base/typography/typography";
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/* Styles related mostly to gutenberg blocks. 
+--------------------------------------------- */
+@import "block-style/button-block";
+@import "block-style/column-block";
+@import "block-style/title-block";
+@import "block-style/editor-basics";
