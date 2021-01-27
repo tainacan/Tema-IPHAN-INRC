@@ -12230,7 +12230,6 @@ body:not(.home) .title-banner:last-child {
 	}
 }
 
-.wp-block-button .wp-block-button__link {
 	border-radius: 0px;
 	line-height: 1;
 	letter-spacing: 2px;
@@ -12286,6 +12285,15 @@ body:not(.home) .title-banner:last-child {
 .wp-block-button.alignleft,
 .wp-block-button.alignright {
 	display: block;
+.is-style-column-iphan-secundary {
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.7);
+	overflow-wrap: anywhere;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+	.is-style-column-iphan-secundary {
+		margin-bottom: 5%;
+	}
+}
+
