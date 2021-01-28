@@ -30,7 +30,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
         <?php endif; ?>
         <?php echo '<p class="text-black">' . wp_trim_words(get_the_excerpt(), 28, '...') . '</p>'; ?>
         <div class="date-excerpt-position">
-            <span class="date-exerpt"><?php echo get_the_date("j F, Y") ?></span>
+            <span class="date-exerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
         </div>
         <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais   >', 'ler-mais'); ?></a>
     </div>
