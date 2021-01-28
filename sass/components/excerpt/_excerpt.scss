@@ -30,3 +30,13 @@ hr {
     right: 0px;
     bottom: 0px;
 }
+
+.date-exerpt {
+    @media screen and (min-width: $screen__md) {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+.date-excerpt-position {
+}
