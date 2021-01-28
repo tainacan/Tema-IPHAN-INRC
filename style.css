@@ -12110,6 +12110,10 @@ body:not(.home) .title-banner:last-child {
 	}
 }
 
+.ultimas-noticias {
+	margin-bottom: 4.063rem !important;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

@@ -28,7 +28,7 @@ get_header();
 	<?php
 		endif;
 
-		echo '<h1 class="is-style-title-iphan-underscore col-md-5" >últimas notícias</h1>';
+		echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
 
 		/* Start the Loop */
 		while (have_posts()) :
