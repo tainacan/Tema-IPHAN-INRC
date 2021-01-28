@@ -8,13 +8,13 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
 ?>
 <div class="row excerpt border-excerpt mb-4">
     <?php if (has_post_thumbnail()) : ?>
-        <div class="col-xs-12 col-md-4 blog-thumbnail align-self-center text-center mb-4 mb-md-0">
+        <div class="col-xs-12 col-md-4 blog-thumbnail text-center mb-4 mb-md-0">
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('tainacan-interface-list-post', array('class' => 'img-fluid')); ?>
             </a>
         </div>
     <?php endif; ?>
-    <div class="col-xs-12 blog-content <?php if (has_post_thumbnail()) : ?>col-md-8 blog-flex<?php else : ?>col-md-12<?php endif; ?> align-self-center">
+    <div class="col-xs-12 blog-content <?php if (has_post_thumbnail()) : ?>col-md-8 blog-flex<?php else : ?>col-md-12<?php endif; ?>">
         <?php if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlyposts']) && (!isset($_GET['onlypages']) || !$_GET['onlypages']) && is_search()) : ?>
             <div class="title-area">
                 <h3 class="mb-3">

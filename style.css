@@ -12062,7 +12062,7 @@ body:not(.home) .title-banner:last-child {
 
 .border-excerpt {
 	border: 1px solid #515151;
-	padding: 10px;
+	padding: 30px;
 	overflow-wrap: anywhere;
 }
 
