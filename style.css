@@ -12070,7 +12070,7 @@ body:not(.home) .title-banner:last-child {
 @media screen and (min-width: 1024px) {
 	.border-excerpt {
 		border: 1px solid #515151;
-		padding: 30px;
+		padding: 20px;
 		overflow-wrap: anywhere;
 	}
 }
@@ -12079,6 +12079,18 @@ body:not(.home) .title-banner:last-child {
 	.border-excerpt {
 		padding: 10px;
 		overflow-wrap: anywhere;
+	}
+}
+
+.border-excerpt img {
+	max-width: 15rem;
+	max-height: 13rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.thumb-resume {
+		margin-left: 0px;
+		padding-left: 0px;
 	}
 }
 

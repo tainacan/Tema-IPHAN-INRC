@@ -8,7 +8,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
 ?>
 <div class="row excerpt border-excerpt mb-4">
     <?php if (has_post_thumbnail()) : ?>
-        <div class="col-xs-12 col-md-4 blog-thumbnail text-center mb-4 mb-md-0">
+        <div class="col-xs-12 col-md-4 blog-thumbnail thumb-resume mb-4 mb-md-0">
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('tainacan-interface-list-post', array('class' => 'img-fluid')); ?>
             </a>

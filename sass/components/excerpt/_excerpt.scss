@@ -14,12 +14,23 @@
 .border-excerpt {
     @media screen and (min-width: $screen__md) {
         border: 1px solid $color__cinza6;
-        padding: 30px;
+        padding: 20px;
         overflow-wrap: anywhere;
     }
     @media screen and (max-width: $screen__md) {
         padding: 10px;
         overflow-wrap: anywhere;
+    }
+    & img {
+        max-width: 15rem;
+        max-height: 13rem;
+    }
+}
+
+.thumb-resume {
+    @media screen and (min-width: $screen__md) {
+        margin-left: 0px;
+        padding-left: 0px;
     }
 }
 
