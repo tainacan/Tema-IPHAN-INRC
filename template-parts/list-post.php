@@ -29,8 +29,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
             </h3>
         <?php endif; ?>
         <?php echo '<p class="text-black">' . wp_trim_words(get_the_excerpt(), 28, '...') . '</p>'; ?>
-        <a href="<?php the_permalink(); ?>" class="readmore float-right screen-reader-text"><?php _e('Read more...', 'tainacan-interface'); ?></a>
+        <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais   >', 'ler-mais'); ?></a>
     </div>
 </div>
-
 <hr>

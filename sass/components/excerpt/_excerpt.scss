@@ -20,3 +20,18 @@ hr {
     margin-bottom: 3.125rem;
     background-color: transparent;
 }
+
+.ler-mais {
+    text-decoration: none !important;
+    border: 1px solid $color__vermelho1;
+    float: right;
+    text-transform: uppercase;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
