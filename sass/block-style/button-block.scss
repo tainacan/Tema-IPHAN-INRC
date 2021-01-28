@@ -9,19 +9,19 @@
 	border: 1px solid;
 	border-color: $color__border-button;
 	background: $color__background-button;
-	color: $color__text-input;
+	color: $color__border-button;
 	transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
 
 	&:hover {
 		border-color: $color__border-button-hover;
 		background-color: $color__border-button;
-		color: $color__background-button;
+		color: $color__branco;
 	}
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
 		background-color: $color__border-button;
-		color: $color__background-button;
+		color: $color__branco;
 	}
 }
 .wp-block-button.is-style-clear .wp-block-button__link {

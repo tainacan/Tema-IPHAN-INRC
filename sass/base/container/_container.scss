@@ -6,33 +6,55 @@
     max-width: $container__max-width;
     width: 100%; 
 }
-.content-container {
-    margin-left: auto !important;
-    margin-right: auto !important;
+.entry-header>*,
+.entry-content>*:not(.alignwide):not(.alignfull),
+.entry-footer>*,
+.navigation>*,
+.comments-area>*,
+.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+    margin-left: auto;
+    margin-right: auto;
     padding-left: $container__side-padding;
     padding-right: $container__side-padding;
     max-width: $container__inner_max-width;
-    width: 100%; 
+    width: 66.66%;  // 8 colunas descontado o padding
+
+    margin-top: 28px;
+    margin-bottom: 28px;
+
+    @media screen and (max-width: $screen__sm) {
+        max-width: 74.2%; // 10 colunas descontado o padding
+        width: 100%;
+    }
 }
+.alignfull .wp-block-group,
+.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+    padding-left: 2.36%;
+    padding-right: 2.36%;
+}
+.entry-footer>* { display: block; }
 
 .alignwide {
-    margin-left: $container__side-padding_x-2 !important;
-    margin-right: $container__side-padding_x-2 !important;
-    width: $container__max-width_without_margin_2x;
-    max-width: $container__max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container__side-padding;
+    padding-right: $container__side-padding;
+    max-width: $container__inner_wide_max-width;
+    width: 74.2%; // 10 colunas descontado o padding
 
-	@media only screen and (max-width: $container__inner_max-width) {
-        margin-left: auto !important;
-        margin-right: auto !important;
-		max-width: 100%;
+    @media screen and (max-width: $screen__sm) {
+        max-width: 89.04%; // 12 colunas descontado o padding
+        width: 100%;
     }
 }
 
 .alignfull {
-    margin-left: calc( -100vw / 2 + 100% / 2 ) !important;
-    margin-right: calc( -100vw / 2 + 100% / 2 ) !important;
-    max-width : 100%;
-    max-width : 100vw;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+    max-width: 100vw;
     width: 100%;
     width: 100vw;
 }

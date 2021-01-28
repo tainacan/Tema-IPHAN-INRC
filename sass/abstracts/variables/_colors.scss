@@ -34,11 +34,11 @@ $color__text-main: $color__cinza7;
 $color__border-input: $color__cinza3;
 $color__border-abbr: $color__cinza4;
 // Botões
-$color__background-button: $color__branco;
+$color__background-button: rgba(255,255,255,0.1);
 $color__border-button: $color__vermelho1;
 $color__border-button-hover: $color__vermelho1;
 $color__border-button-focus: $color__vermelho1;
-$color__background-button--clear: $color__branco;
+$color__background-button--clear: $color__branco rgba(255,255,255,0.1);;
 $color__border-button--clear: $color__cinza3;
 $color__border-button--clear-hover: $color__cinza6;
 $color__border-button--clear-focus: $color__cinza5;
