@@ -12051,12 +12051,7 @@ body:not(.home) .title-banner:last-child {
 @media screen and (min-width: 1024px) {
 	.excerpt {
 		height: 17.5rem;
-	}
-}
-
-@media screen and (max-width: 1024px) {
-	.space-excerpt {
-		padding-bottom: 3.125rem;
+		width: 62.375rem;
 	}
 }
 
