@@ -33,5 +33,4 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
     </div>
 </div>
 
-<hr class="border-mercury">
-<!-- <span class="space-excerpt"> -->
+<hr>
