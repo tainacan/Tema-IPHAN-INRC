@@ -1,0 +1,22 @@
+.excerpt {
+    @media screen and (min-width: $screen__md) {
+        height: 17.5rem;
+    }
+}
+
+.space-excerpt {
+    @media screen and (max-width: $screen__md) {
+        padding-bottom: 3.125rem;
+    }
+}
+
+.border-excerpt {
+    border: 1px solid $color__cinza6;
+    padding: 10px;
+    overflow-wrap: anywhere;
+}
+
+hr {
+    margin-bottom: 3.125rem;
+    background-color: transparent;
+}

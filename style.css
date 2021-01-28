@@ -12046,6 +12046,31 @@ body:not(.home) .title-banner:last-child {
 	color: #58020b;
 }
 
+/* excerpt
+--------------------------------------------- */
+@media screen and (min-width: 1024px) {
+	.excerpt {
+		height: 17.5rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.space-excerpt {
+		padding-bottom: 3.125rem;
+	}
+}
+
+.border-excerpt {
+	border: 1px solid #515151;
+	padding: 10px;
+	overflow-wrap: anywhere;
+}
+
+hr {
+	margin-bottom: 3.125rem;
+	background-color: transparent;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

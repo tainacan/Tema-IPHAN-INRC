@@ -6,7 +6,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
     $post_type_archive_link = get_post_type_archive_link($post_type);
 }
 ?>
-<div class="row blog-post mb-4">
+<div class="row excerpt border-excerpt mb-4">
     <?php if (has_post_thumbnail()) : ?>
         <div class="col-xs-12 col-md-4 blog-thumbnail align-self-center text-center mb-4 mb-md-0">
             <a href="<?php the_permalink(); ?>">
@@ -29,10 +29,9 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
             </h3>
         <?php endif; ?>
         <?php echo '<p class="text-black">' . wp_trim_words(get_the_excerpt(), 28, '...') . '</p>'; ?>
-
-
         <a href="<?php the_permalink(); ?>" class="readmore float-right screen-reader-text"><?php _e('Read more...', 'tainacan-interface'); ?></a>
     </div>
 </div>
 
 <hr class="border-mercury">
+<!-- <span class="space-excerpt"> -->
