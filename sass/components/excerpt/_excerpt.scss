@@ -1,25 +1,28 @@
 .excerpt {
-    @media screen and (min-width: $screen__md) {
-        height: 17.5rem;
-        width: 62.375rem;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: portrait) {
-        height: 34.375rem;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: landscape) {
-        height: 12.375rem;
-    }
+    width: auto;
+    height: auto;
 }
 
 .border-excerpt {
     @media screen and (min-width: $screen__md) {
         border: 1px solid $color__cinza6;
-        padding: 30px;
+        padding: 20px;
         overflow-wrap: anywhere;
     }
     @media screen and (max-width: $screen__md) {
         padding: 10px;
         overflow-wrap: anywhere;
+    }
+    & img {
+        width: auto;
+        height: auto;
+    }
+}
+
+.thumb-resume {
+    @media screen and (min-width: $screen__md) {
+        margin-left: 0px;
+        padding-left: 0px;
     }
 }
 
@@ -43,7 +46,6 @@
     float: right;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    position: absolute;
     right: 0px;
     bottom: 0px;
     @media screen and (min-width: $screen__md) {
@@ -60,6 +62,18 @@
     }
 }
 
+.info-footer-resume {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: auto;
+}
+
+.posicionamento-excerpt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .ler-mais:hover {
     text-decoration: none !important;
     border: 1px solid $color__vermelho1;
@@ -70,7 +84,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     letter-spacing: 0.1rem;
-    position: absolute;
     right: 0px;
     bottom: 0px;
     background-color: $color__vermelho1;
@@ -78,7 +91,6 @@
 }
 
 .date-exerpt {
-    position: absolute;
     bottom: 0px;
 }
 
