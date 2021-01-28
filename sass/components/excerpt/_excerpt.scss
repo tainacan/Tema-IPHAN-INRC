@@ -54,7 +54,6 @@
     float: right;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    position: absolute;
     right: 0px;
     bottom: 0px;
     @media screen and (min-width: $screen__md) {
@@ -71,6 +70,17 @@
     }
 }
 
+.info-footer-resume {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.posicionamento-excerpt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .ler-mais:hover {
     text-decoration: none !important;
     border: 1px solid $color__vermelho1;
@@ -81,7 +91,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     letter-spacing: 0.1rem;
-    position: absolute;
     right: 0px;
     bottom: 0px;
     background-color: $color__vermelho1;
@@ -89,7 +98,6 @@
 }
 
 .date-exerpt {
-    position: absolute;
     bottom: 0px;
 }
 

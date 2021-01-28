@@ -12117,7 +12117,6 @@ body:not(.home) .title-banner:last-child {
 	float: right;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
-	position: absolute;
 	right: 0px;
 	bottom: 0px;
 }
@@ -12140,6 +12139,18 @@ body:not(.home) .title-banner:last-child {
 	}
 }
 
+.info-footer-resume {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.posicionamento-excerpt {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .ler-mais:hover {
 	text-decoration: none !important;
 	border: 1px solid #58020b;
@@ -12150,7 +12161,6 @@ body:not(.home) .title-banner:last-child {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	letter-spacing: 0.1rem;
-	position: absolute;
 	right: 0px;
 	bottom: 0px;
 	background-color: #58020b;
@@ -12158,7 +12168,6 @@ body:not(.home) .title-banner:last-child {
 }
 
 .date-exerpt {
-	position: absolute;
 	bottom: 0px;
 }
 

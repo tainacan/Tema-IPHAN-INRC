@@ -14,7 +14,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
             </a>
         </div>
     <?php endif; ?>
-    <div class="col-xs-12 blog-content <?php if (has_post_thumbnail()) : ?>col-md-8 blog-flex<?php else : ?>col-md-12<?php endif; ?>">
+    <div class="col-xs-12 blog-content posicionamento-excerpt <?php if (has_post_thumbnail()) : ?>col-md-8 blog-flex<?php else : ?>col-md-12<?php endif; ?>">
         <?php if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlyposts']) && (!isset($_GET['onlypages']) || !$_GET['onlypages']) && is_search()) : ?>
             <div class="title-area">
                 <h3 class="mb-3">
@@ -29,10 +29,12 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
             </h3>
         <?php endif; ?>
         <?php echo '<p class="text-black">' . wp_trim_words(get_the_excerpt(), 28, '...') . '</p>'; ?>
-        <div class="date-excerpt-position">
-            <span class="date-exerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
+        <div class="info-footer-resume">
+            <div class="date-excerpt-position">
+                <span class="date-exerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
+            </div>
+            <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>
         </div>
-        <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>
     </div>
 </div>
 <hr id="hrResume">
