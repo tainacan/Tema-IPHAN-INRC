@@ -12055,20 +12055,42 @@ body:not(.home) .title-banner:last-child {
 	}
 }
 
-.border-excerpt {
-	border: 1px solid #515151;
-	padding: 30px;
-	overflow-wrap: anywhere;
+@media screen and (max-width: 1024px) {
+	.excerpt {
+		height: 31.25rem;
+	}
 }
 
-#hrResume {
-	margin-bottom: 3.125rem;
-	background-color: transparent;
+@media screen and (min-width: 1024px) {
+	.border-excerpt {
+		border: 1px solid #515151;
+		padding: 30px;
+		overflow-wrap: anywhere;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.border-excerpt {
+		padding: 10px;
+		overflow-wrap: anywhere;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#hrResume {
+		margin-bottom: 3.125rem;
+		background-color: transparent;
+	}
 }
 
 #hrResume:last-child {
 	margin-bottom: 5.313rem;
-	background-color: transparent;
+}
+
+@media screen and (min-width: 1024px) {
+	#hrResume:last-child {
+		background-color: transparent;
+	}
 }
 
 .ler-mais {
@@ -12076,14 +12098,28 @@ body:not(.home) .title-banner:last-child {
 	border: 1px solid #58020b;
 	float: right;
 	text-transform: uppercase;
-	padding-left: 16px;
-	padding-right: 16px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	letter-spacing: 0.1rem;
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+	.ler-mais {
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.ler-mais {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 6px;
+		padding-bottom: 4px;
+	}
 }
 
 .ler-mais:hover {
@@ -12103,11 +12139,9 @@ body:not(.home) .title-banner:last-child {
 	color: #ffffff;
 }
 
-@media screen and (min-width: 1024px) {
-	.date-exerpt {
-		position: absolute;
-		bottom: 0px;
-	}
+.date-exerpt {
+	position: absolute;
+	bottom: 0px;
 }
 
 .ultimas-noticias {

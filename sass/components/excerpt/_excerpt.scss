@@ -3,22 +3,35 @@
         height: 17.5rem;
         width: 62.375rem;
     }
+    @media screen and (max-width: $screen__md) {
+        height: 31.25rem;
+    }
 }
 
 .border-excerpt {
-    border: 1px solid $color__cinza6;
-    padding: 30px;
-    overflow-wrap: anywhere;
+    @media screen and (min-width: $screen__md) {
+        border: 1px solid $color__cinza6;
+        padding: 30px;
+        overflow-wrap: anywhere;
+    }
+    @media screen and (max-width: $screen__md) {
+        padding: 10px;
+        overflow-wrap: anywhere;
+    }
 }
 
 #hrResume {
-    margin-bottom: 3.125rem;
-    background-color: transparent;
+    @media screen and (min-width: $screen__md) {
+        margin-bottom: 3.125rem;
+        background-color: transparent;
+    }
 }
 
 #hrResume:last-child {
     margin-bottom: 5.313rem;
-    background-color: transparent;
+    @media screen and (min-width: $screen__md) {
+        background-color: transparent;
+    }
 }
 
 .ler-mais {
@@ -26,14 +39,22 @@
     border: 1px solid $color__vermelho1;
     float: right;
     text-transform: uppercase;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     letter-spacing: 0.1rem;
     position: absolute;
     right: 0px;
     bottom: 0px;
+    @media screen and (min-width: $screen__md) {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @media screen and (max-width: $screen__md) {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 6px;
+        padding-bottom: 4px;
+    }
 }
 
 .ler-mais:hover {
@@ -54,10 +75,8 @@
 }
 
 .date-exerpt {
-    @media screen and (min-width: $screen__md) {
-        position: absolute;
-        bottom: 0px;
-    }
+    position: absolute;
+    bottom: 0px;
 }
 
 .ultimas-noticias {
