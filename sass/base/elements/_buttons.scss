@@ -11,7 +11,7 @@ input[type="submit"] {
 	font-size: $font__size-buttons;
 
 	&.button {
-		text-transform: capitalize;
+		text-transform: uppercase;
 		border: 1px solid;
 		border-color: $color__border-button;
 
@@ -33,23 +33,4 @@ input[type="submit"] {
 		background-color: $color__border-button;
 		color: $color__background-button;
 	}
-}
-.wp-block-button {
-	margin-bottom: 1rem;
-	.btn {
-		font-size: 0.875rem;
-	}
-}
-.wp-block-button.is-style-outline .btn {
-	background: white !important;
-	color: $color__background-button;
-	border: 1px solid $color__border-button !important;
-}
-.wp-block-button.aligncenter,
-.wp-block-button.alignleft,
-.wp-block-button.alignright {
-	display: block;
-}
-.wp-block-button__link {
-	border-radius: 0;
 }

@@ -10065,6 +10065,39 @@ html {
 	width: 100%;
 }
 
+.content-container {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 5.48%;
+	padding-right: 5.48%;
+	max-width: 866px;
+	width: 100%;
+}
+
+.alignwide {
+	margin-left: calc(-2 * 5.48%) !important;
+	margin-right: calc(-2 * 5.48%) !important;
+	width: calc(100% + (4 * 5.48%));
+	max-width: 1300px;
+}
+
+@media only screen and (max-width: 866px) {
+	.alignwide {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 100%;
+	}
+}
+
+.alignfull {
+	margin-left: calc( -100vw / 2 + 100% / 2) !important;
+	margin-right: calc( -100vw / 2 + 100% / 2) !important;
+	max-width: 100%;
+	max-width: 100vw;
+	width: 100%;
+	width: 100vw;
+}
+
 /* Typography
 --------------------------------------------- */
 body,
@@ -10074,14 +10107,39 @@ select,
 optgroup,
 textarea {
 	color: #1e1e1e;
-	font-family: Raleway, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+h3 {
+	font-size: 1.125rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h5 {
+	font-size: 0.875rem;
+}
+
+h6 {
+	font-size: 0.75rem;
 }
 
 p {
@@ -10236,7 +10294,7 @@ input[type="submit"] {
 	color: #58020b;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
-	font-family: Rubik;
+	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 0.875rem;
 }
 
@@ -10244,7 +10302,7 @@ button.button,
 input[type="button"].button,
 input[type="reset"].button,
 input[type="submit"].button {
-	text-transform: capitalize;
+	text-transform: uppercase;
 	border: 1px solid;
 	border-color: #58020b;
 }
@@ -10277,30 +10335,6 @@ input[type="submit"]:hover {
 	border-color: #58020b;
 	background-color: #58020b;
 	color: #ffffff;
-}
-
-.wp-block-button {
-	margin-bottom: 1rem;
-}
-
-.wp-block-button .btn {
-	font-size: 0.875rem;
-}
-
-.wp-block-button.is-style-outline .btn {
-	background: white !important;
-	color: #ffffff;
-	border: 1px solid #58020b !important;
-}
-
-.wp-block-button.aligncenter,
-.wp-block-button.alignleft,
-.wp-block-button.alignright {
-	display: block;
-}
-
-.wp-block-button__link {
-	border-radius: 0;
 }
 
 input[type="text"],
@@ -10365,21 +10399,6 @@ textarea {
 	grid-template-areas: "header" "main" "footer";
 }
 
-.alignwide {
-	margin-left: calc(-2 * 5.48%) !important;
-	margin-right: calc(-2 * 5.48%) !important;
-	width: calc(100% + (4 * 5.48%));
-	max-width: 1300px;
-}
-
-@media only screen and (max-width: 2070px) {
-	.alignwide {
-		margin-left: -5.48% !important;
-		margin-right: -5.48% !important;
-		width: calc(100% + (2 * 5.48%));
-	}
-}
-
 .has-text-color > a,
 .has-text-color > a:hover {
 	color: inherit;
@@ -10398,15 +10417,6 @@ textarea {
 	.wp-block-image.alignwide > img {
 		width: 100% !important;
 	}
-}
-
-.alignfull {
-	margin-left: calc( -100vw / 2 + 100% / 2) !important;
-	margin-right: calc( -100vw / 2 + 100% / 2) !important;
-	max-width: 100%;
-	max-width: 100vw;
-	width: 100%;
-	width: 100vw;
 }
 
 .wp-block-image.alignfull > img {
@@ -10455,6 +10465,15 @@ textarea {
 	width: 100%;
 	width: 100vw;
 	left: 0;
+}
+
+/* Columns and group block should have a certain margin */
+.wp-block-group,
+.wp-block-cover:not(:first-child),
+.wp-block-cover:not(:first-child).has-background,
+.wp-block-columns {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -11580,7 +11599,7 @@ a {
 	margin-top: 70px;
 	background-image: linear-gradient(to right, #58020b, #970620);
 	color: #ffffff;
-	font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	/*     .widget-area:hover {
         ul {
             @media screen and (max-width: $screen__sm) and (orientation: portrait) {
@@ -12113,91 +12132,13 @@ body:not(.home) .title-banner:last-child {
 	margin-bottom: 1.5em;
 }
 
-.edit-post-visual-editor.editor-styles-wrapper,
-.components-modal__screen-overlay {
-	/* Main column width */
-	/* Width of "wide" blocks */
-	/* Width of "full" blocks */
-}
-
-.edit-post-visual-editor.editor-styles-wrapper .editor-block-list__layout,
-.edit-post-visual-editor.editor-styles-wrapper .block-editor-block-list__layout,
-.components-modal__screen-overlay .editor-block-list__layout,
-.components-modal__screen-overlay .block-editor-block-list__layout {
-	padding-left: 5.48%;
-	padding-right: 5.48%;
-}
-
-.edit-post-visual-editor.editor-styles-wrapper .editor-writing-flow__click-redirect,
-.components-modal__screen-overlay .editor-writing-flow__click-redirect {
-	width: auto;
-}
-
-.edit-post-visual-editor.editor-styles-wrapper .editor-inner-blocks,
-.edit-post-visual-editor.editor-styles-wrapper .block-editor-inner-blocks,
-.edit-post-visual-editor.editor-styles-wrapper .wp-block-group__inner-container,
-.edit-post-visual-editor.editor-styles-wrapper .wp-block-cover__inner-container > .wp-block,
-.edit-post-visual-editor.editor-styles-wrapper .editor-inner-blocks > .editor-block-list__layout,
-.edit-post-visual-editor.editor-styles-wrapper .block-editor-inner-blocks > .block-editor-block-list__layout,
-.components-modal__screen-overlay .editor-inner-blocks,
-.components-modal__screen-overlay .block-editor-inner-blocks,
-.components-modal__screen-overlay .wp-block-group__inner-container,
-.components-modal__screen-overlay .wp-block-cover__inner-container > .wp-block,
-.components-modal__screen-overlay .editor-inner-blocks > .editor-block-list__layout,
-.components-modal__screen-overlay .block-editor-inner-blocks > .block-editor-block-list__layout {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.edit-post-visual-editor.editor-styles-wrapper .wp-block,
-.components-modal__screen-overlay .wp-block {
-	max-width: calc(1300px - (2 * 5.48%));
-	padding-left: 5.48%;
-	padding-right: 5.48%;
-}
-
-.edit-post-visual-editor.editor-styles-wrapper .wp-block[data-align="wide"],
-.components-modal__screen-overlay .wp-block[data-align="wide"] {
-	max-width: 1300px;
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.edit-post-visual-editor.editor-styles-wrapper .wp-block[data-align="wide"] .wp-block-columns,
-.components-modal__screen-overlay .wp-block[data-align="wide"] .wp-block-columns {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.edit-post-visual-editor.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .wp-block[data-align="full"],
-.edit-post-visual-editor.editor-styles-wrapper .wp-block[data-align="full"],
-.components-modal__screen-overlay .block-editor-block-list__layout.is-root-container > .wp-block[data-align="full"],
-.components-modal__screen-overlay .wp-block[data-align="full"] {
-	max-width: calc(100% + (2 * 5.48%));
-	width: calc(100% + (2 * 5.48%));
-	margin-left: -5.48%;
-	margin-right: -5.48%;
-	padding-left: 0;
-	padding-right: 0;
-}
-
 .is-style-title-iphan-underscore {
-	margin-bottom: 65px;
-}
-
-.is-style-title-iphan-underscore {
+	margin-bottom: 44px;
 	color: #58020b !important;
 	text-transform: uppercase;
 }
 
-h4::after,
-h5::after,
-h6::after {
-	display: none !important;
-}
-
 @media screen and (min-width: 1024px) {
-	.is-style-title-iphan-underscore::after,
 	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: relative;
@@ -12210,7 +12151,6 @@ h6::after {
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
-	.is-style-title-iphan-underscore::after,
 	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
@@ -12223,7 +12163,6 @@ h6::after {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-	.is-style-title-iphan-underscore::after,
 	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
@@ -12236,7 +12175,6 @@ h6::after {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	.is-style-title-iphan-underscore::after,
 	.is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
@@ -12246,6 +12184,41 @@ h6::after {
 		display: block;
 		z-index: 10;
 	}
+}
+
+.is-style-title-iphan-underscore h4::after,
+.is-style-title-iphan-underscore h5::after,
+.is-style-title-iphan-underscore h6::after {
+	display: none !important;
+}
+
+.editor-post-title.editor-post-title__block {
+	margin-bottom: 65px;
+}
+
+.editor-post-title.editor-post-title__block textarea {
+	text-transform: uppercase;
+	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+	color: #58020b !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.editor-post-title.editor-post-title__block::after {
+		content: "";
+		position: relative;
+		height: 15px;
+		width: 15%;
+		border-bottom: 6px solid #58020b;
+		display: block;
+		z-index: 10;
+		top: -24px;
+	}
+}
+
+.is-style-title-iphan {
+	overflow-wrap: anywhere;
 }
 
 /* .block-editor-block-list__layout .is-style-title-iphan-underscore::after{
@@ -12293,15 +12266,14 @@ h6::after {
         z-index: 10;
     }
 } */
-.is-style-title-iphan {
-	overflow-wrap: anywhere;
-}
-
 .is-style-column-iphan {
 	border: 1px solid #58020b;
 	padding: 30px;
-	background-color: rgba(255, 255, 255, 0.7);
 	overflow-wrap: anywhere;
+}
+
+.is-style-column-iphan:not(.has-background) {
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
@@ -12313,14 +12285,223 @@ h6::after {
 .is-style-column-iphan-secundary {
 	border: 1px solid #515151;
 	padding: 30px;
-	background-color: rgba(255, 255, 255, 0.7);
 	overflow-wrap: anywhere;
+}
+
+.is-style-column-iphan-secundary:not(.has-background) {
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
 	.is-style-column-iphan-secundary {
 		margin-bottom: 5%;
 	}
+}
+
+.wp-block-button .wp-block-button__link {
+	border-radius: 0px;
+	line-height: 1;
+	letter-spacing: 2px;
+	padding: 0.6em 1em 0.6em;
+	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	border: 1px solid;
+	border-color: #58020b;
+	background: #ffffff;
+	color: #58020b;
+	transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+	border-color: #58020b;
+	background-color: #58020b;
+	color: #ffffff;
+}
+
+.wp-block-button .wp-block-button__link:active, .wp-block-button .wp-block-button__link:focus {
+	border-color: #58020b;
+	background-color: #58020b;
+	color: #ffffff;
+}
+
+.wp-block-button.is-style-clear .wp-block-button__link {
+	text-transform: none;
+	border: 1px solid;
+	border-color: #d9d9d9;
+	background: #ffffff;
+	color: #898d8f;
+	transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
+}
+
+.wp-block-button.is-style-clear .wp-block-button__link:hover {
+	border-color: #515151;
+	background-color: #ffffff;
+	color: #515151;
+}
+
+.wp-block-button.is-style-clear .wp-block-button__link:active, .wp-block-button.is-style-clear .wp-block-button__link:focus {
+	border-color: #898d8f;
+	background-color: #ffffff;
+	color: #898d8f;
+}
+
+.wp-block-button:not(.has-text-color) [data-rich-text-placeholder]::after {
+	color: #d9d9d9;
+}
+
+.wp-block-button.aligncenter,
+.wp-block-button.alignleft,
+.wp-block-button.alignright {
+	display: block;
+}
+
+.wp-block-buttons .wp-block-button {
+	margin-bottom: 1em;
+}
+
+/* Branco */
+.has-branco-background-color {
+	background-color: #ffffff;
+}
+
+.has-branco-color {
+	color: #ffffff;
+}
+
+/* Preto */
+.has-preto-background-color {
+	background-color: #000000;
+}
+
+.has-preto-color {
+	color: #000000;
+}
+
+/* Vermelho */
+.has-vermelho-background-color {
+	background-color: #58020b;
+}
+
+.has-vermelho-color {
+	color: #58020b;
+}
+
+/* Vermelho 2*/
+.has-vermelho-2-background-color {
+	background-color: #970620;
+}
+
+.has-vermelho-2-color {
+	color: #970620;
+}
+
+/* Amarelo */
+.has-amarelo-background-color {
+	background-color: #f3d7a2;
+}
+
+.has-amarelo-color {
+	color: #f3d7a2;
+}
+
+/* Amarelo 2*/
+.has-amarelo-2-background-color {
+	background-color: #fcd9aa;
+}
+
+.has-amarelo-2-color {
+	color: #fcd9aa;
+}
+
+/* Verde */
+.has-verde-background-color {
+	background-color: #007350;
+}
+
+.has-verde-color {
+	color: #007350;
+}
+
+/* Laranja */
+.has-laranja-background-color {
+	background-color: #ca4d37;
+}
+
+.has-laranja-color {
+	color: #ca4d37;
+}
+
+/* Branco 1 */
+.has-branco-1-background-color {
+	background-color: #f5f5f5;
+}
+
+.has-branco-1-color {
+	color: #f5f5f5;
+}
+
+/* Cinza 1 */
+.has-cinza-1-background-color {
+	background-color: #f1f1f1;
+}
+
+.has-cinza-1-color {
+	color: #f1f1f1;
+}
+
+/* Cinza 2 */
+.has-cinza-2-background-color {
+	background-color: #e8e8e8;
+}
+
+.has-cinza-2-color {
+	color: #e8e8e8;
+}
+
+/* Cinza 3 */
+.has-cinza-3-background-color {
+	background-color: #d9d9d9;
+}
+
+.has-cinza-3-color {
+	color: #d9d9d9;
+}
+
+/* Cinza 4 */
+.has-cinza-4-background-color {
+	background-color: #bfbfbf;
+}
+
+.has-cinza-4-color {
+	color: #bfbfbf;
+}
+
+/* Cinza 5 */
+.has-cinza-5-background-color {
+	background-color: #898d8f;
+}
+
+.has-cinza-5-color {
+	color: #898d8f;
+}
+
+/* Cinza 6 */
+.has-cinza-6-background-color {
+	background-color: #515151;
+}
+
+.has-cinza-6-color {
+	color: #515151;
+}
+
+/* Cinza 7 */
+.has-cinza-7-background-color {
+	background-color: #1e1e1e;
+}
+
+.has-cinza-7-color {
+	color: #1e1e1e;
 }
 
 /*# sourceMappingURL=style.css.map */
