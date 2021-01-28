@@ -3,8 +3,11 @@
         height: 17.5rem;
         width: 62.375rem;
     }
-    @media screen and (max-width: $screen__md) {
+    @media screen and (max-width: $screen__md) and (orientation: portrait) {
         height: 34.375rem;
+    }
+    @media screen and (max-width: $screen__md) and (orientation: landscape) {
+        height: 12.375rem;
     }
 }
 

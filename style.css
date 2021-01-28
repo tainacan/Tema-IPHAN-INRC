@@ -12055,9 +12055,15 @@ body:not(.home) .title-banner:last-child {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
 	.excerpt {
 		height: 34.375rem;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.excerpt {
+		height: 12.375rem;
 	}
 }
 
