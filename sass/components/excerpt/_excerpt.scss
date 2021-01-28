@@ -1,14 +1,6 @@
 .excerpt {
-    @media screen and (min-width: $screen__md) {
-        height: 17.5rem;
-        width: 62.375rem;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: portrait) {
-        height: 34.375rem;
-    }
-    @media screen and (max-width: $screen__md) and (orientation: landscape) {
-        height: 12.375rem;
-    }
+    width: auto;
+    height: auto;
 }
 
 .border-excerpt {
@@ -22,8 +14,8 @@
         overflow-wrap: anywhere;
     }
     & img {
-        max-width: 15rem;
-        max-height: 13rem;
+        width: auto;
+        height: auto;
     }
 }
 
@@ -74,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-top: auto;
 }
 
 .posicionamento-excerpt {
