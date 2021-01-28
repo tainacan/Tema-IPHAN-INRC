@@ -12081,6 +12081,23 @@ hr {
 	bottom: 0px;
 }
 
+.ler-mais:hover {
+	text-decoration: none !important;
+	border: 1px solid #58020b;
+	float: right;
+	text-transform: uppercase;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	letter-spacing: 0.1rem;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	background-color: #58020b;
+	color: #ffffff;
+}
+
 @media screen and (min-width: 1024px) {
 	.date-exerpt {
 		position: absolute;
