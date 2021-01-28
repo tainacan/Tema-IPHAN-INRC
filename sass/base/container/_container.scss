@@ -31,12 +31,14 @@
 .alignfull .wp-block-group,
 .alignfull .wp-block-group:not(.alignwide):not(.alignfull),
 .alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
-    padding-left: 2.36%;
+    padding-left: 2.36%; 
     padding-right: 2.36%;
 }
 .entry-footer>* { display: block; }
 
-.alignwide {
+.alignwide,
+.alignfull .wp-block-group.alignwide,
+.alignfull .wp-block-columns.alignwide {
     margin-left: auto;
     margin-right: auto;
     padding-left: $container__side-padding;
@@ -49,7 +51,21 @@
         width: 100%;
     }
 }
-
+.alignfull .wp-block-group.alignwide,
+.alignfull .wp-block-columns.alignwide {
+    max-width: $container__inner_wide_max-width;
+    width: 100%;
+}
+.alignfull .wp-block-group.alignfull,
+.alignfull .wp-block-columns.alignfull {
+    max-width: 100%;
+    width: 100%;
+    max-width: 100vw;
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%)/2);
+    margin-right: calc(-1 * (100vw - 100%)/2);
+}
+ 
 .alignfull {
     padding-left: 0;
     padding-right: 0;
