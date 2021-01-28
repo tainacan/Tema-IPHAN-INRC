@@ -12051,24 +12051,107 @@ body:not(.home) .title-banner:last-child {
 @media screen and (min-width: 1024px) {
 	.excerpt {
 		height: 17.5rem;
+		width: 62.375rem;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+	.excerpt {
+		height: 34.375rem;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.excerpt {
+		height: 12.375rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.border-excerpt {
+		border: 1px solid #515151;
+		padding: 30px;
+		overflow-wrap: anywhere;
 	}
 }
 
 @media screen and (max-width: 1024px) {
-	.space-excerpt {
-		padding-bottom: 3.125rem;
+	.border-excerpt {
+		padding: 10px;
+		overflow-wrap: anywhere;
 	}
 }
 
-.border-excerpt {
-	border: 1px solid #515151;
-	padding: 10px;
-	overflow-wrap: anywhere;
+@media screen and (min-width: 1024px) {
+	#hrResume {
+		margin-bottom: 3.125rem;
+		background-color: transparent;
+	}
 }
 
-hr {
-	margin-bottom: 3.125rem;
-	background-color: transparent;
+#hrResume:last-child {
+	margin-bottom: 5.313rem;
+}
+
+@media screen and (min-width: 1024px) {
+	#hrResume:last-child {
+		background-color: transparent;
+	}
+}
+
+.ler-mais {
+	text-decoration: none !important;
+	border: 1px solid #58020b;
+	float: right;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+	.ler-mais {
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.ler-mais {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 6px;
+		padding-bottom: 4px;
+	}
+}
+
+.ler-mais:hover {
+	text-decoration: none !important;
+	border: 1px solid #58020b;
+	float: right;
+	text-transform: uppercase;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	letter-spacing: 0.1rem;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	background-color: #58020b;
+	color: #ffffff;
+}
+
+.date-exerpt {
+	position: absolute;
+	bottom: 0px;
+}
+
+.ultimas-noticias {
+	margin-bottom: 4.063rem !important;
 }
 
 /*--------------------------------------------------------------
