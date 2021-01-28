@@ -32,7 +32,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
         <div class="date-excerpt-position">
             <span class="date-exerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
         </div>
-        <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais   >', 'ler-mais'); ?></a>
+        <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>
     </div>
 </div>
 <hr id="hrResume">
