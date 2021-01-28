@@ -35,4 +35,4 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
         <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais   >', 'ler-mais'); ?></a>
     </div>
 </div>
-<hr>
+<hr id="hrResume">

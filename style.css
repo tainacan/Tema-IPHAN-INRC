@@ -12061,7 +12061,7 @@ body:not(.home) .title-banner:last-child {
 	overflow-wrap: anywhere;
 }
 
-hr {
+#hrResume {
 	margin-bottom: 3.125rem;
 	background-color: transparent;
 }
