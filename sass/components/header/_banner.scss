@@ -6,18 +6,8 @@
     height: 80%;
     width: 100%;
     min-height: 250px;
-    margin-bottom: 150px;
     position: relative;
     background-color: $color__cinza2;
-
-    .container-banner__overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: block;
-        background-color: $color__cinza7;
-        opacity: 0.5;
-    }
 }
 .title-banner {
     font-family: "Rubik";
@@ -41,7 +31,7 @@
 
         @media screen and (min-width: $screen__md) {
             height: 84%;
-            top: 8px;
+            top: 7px;
         }
         @media screen and (max-width: $screen__md) {
             height: 82%;
@@ -53,6 +43,7 @@
 body.home {
     .container-banner {
         min-height: 450px;
+        margin-bottom: 100px;
     }
     .text-banner {
         @media screen and (min-width: $screen__md) {
@@ -90,6 +81,15 @@ body.home {
 body:not(.home) {
     .container-banner {
         background-blend-mode: luminosity;
+
+        .container-banner__overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: $color__cinza7;
+            opacity: 0.5;
+        }
     }
     .text-banner {
         @media screen and (min-width: $screen__md) {

@@ -1,0 +1,57 @@
+.wp-block-button .wp-block-button__link {
+	border-radius: 0px;
+	line-height: 1;
+	letter-spacing: 1.5px;
+	padding: 0.6em 1em 0.6em;
+	font-family: $font__family-buttons;
+	font-size: $font__size-buttons;
+	text-transform: uppercase;
+	border: 1px solid;
+	border-color: $color__border-button;
+	background: $color__background-button;
+	color: $color__border-button;
+	transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+		background-color: $color__border-button;
+		color: $color__branco;
+	}
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+		background-color: $color__border-button;
+		color: $color__branco;
+	}
+}
+.wp-block-button.is-style-clear .wp-block-button__link {
+	text-transform: none;
+	border: 1px solid;
+	border-color: $color__border-button--clear;
+	background: $color__background-button--clear;
+	color: $color__border-button--clear-focus;
+	transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
+
+	&:hover {
+		border-color: $color__border-button--clear-hover;
+		background-color: $color__background-button--clear;
+		color: $color__border-button--clear-hover;
+	}
+	&:active,
+	&:focus {
+		border-color: $color__border-button--clear-focus;
+		background-color: $color__background-button--clear;
+		color: $color__border-button--clear-focus;
+	}
+}
+.wp-block-button:not(.has-text-color) [data-rich-text-placeholder]::after {
+	color: $color__border-button--clear;
+}
+.wp-block-button.aligncenter,
+.wp-block-button.alignleft,
+.wp-block-button.alignright {
+	display: block;
+}
+.wp-block-buttons .wp-block-button {
+	margin-bottom: 1em;
+}

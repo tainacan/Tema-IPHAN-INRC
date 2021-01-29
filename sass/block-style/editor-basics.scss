@@ -1,55 +1,104 @@
-.edit-post-visual-editor.editor-styles-wrapper,
-.components-modal__screen-overlay {
+// Inner blocks do not need all that spacing,
+// otherwise they won't match their theme result
+.editor-inner-blocks, 
+.block-editor-inner-blocks,
+.wp-block-group__inner-container>.wp-block,
+.wp-block-cover__inner-container>.wp-block,
+.editor-inner-blocks>.editor-block-list__layout,
+.block-editor-inner-blocks>.block-editor-block-list__layout  {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+}
 
-    // Editor Block list side spacing
-    .editor-block-list__layout,
-    .block-editor-block-list__layout {
-        padding-left: $container__side-padding;
-        padding-right: $container__side-padding;
-    }
-    .editor-writing-flow__click-redirect {
-        width: auto;
-    }
-    // Inner blocks do not need all that spacing,
-    // otherwise they won't match their theme result
-    .editor-inner-blocks,
-    .block-editor-inner-blocks,
-    .wp-block-group__inner-container,
-    .wp-block-cover__inner-container>.wp-block,
-    .editor-inner-blocks>.editor-block-list__layout,
-    .block-editor-inner-blocks>.block-editor-block-list__layout  {
-        padding-left: 0;
-        padding-right: 0;
-    }
+/* Main column width */
+.wp-block.editor-post-title.editor-post-title__block,
+.block-editor-block-list__layout.is-root-container > .wp-block {
+    max-width: 57.2%; // 8 colunas tirando o padding
+    font-family: $font__main;
 
-    /* Main column width */
-    .wp-block {
+    @media screen and (min-width: $container__max-width) {
         max-width: $container__max-width_with_padding;
-        padding-left: $container__side-padding;
-        padding-right: $container__side-padding;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    &.wp-block {
+        margin-top: 0;
+    }
+}
+
+/* Width of "wide" blocks */
+.block-editor-block-list__layout.is-root-container > .wp-block[data-align="wide"] {
+    max-width: 74.2%; // 10 colunas descontado o padding
+    padding-left: 0;
+    padding-right: 0;
+
+    @media screen and (min-width: $container__max-width) {
+        max-width: $container__max-width_wide_with_padding;
     }
 
-    /* Width of "wide" blocks */
-    .wp-block[data-align="wide"] {
-        max-width: $container__max-width;
+    .wp-block-columns {
         padding-left: 0;
         padding-right: 0;
-
-        .wp-block-columns {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
+}
+ 
+/* Width of "full" blocks */
+.block-editor-block-list__layout.is-root-container > .wp-block[data-align="full"],
+.wp-block[data-align="full"] {
+    max-width: calc(100% + 20px);
+    width: $container__max-width_without_margin;
+    margin-left: - 10px;
+    margin-right: - 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
 
-    /* Width of "full" blocks */
-    .block-editor-block-list__layout.is-root-container > .wp-block[data-align="full"],
-    .wp-block[data-align="full"] {
-        max-width: $container__max-width_without_margin;
-        width: $container__max-width_without_margin;
-        margin-left: - $container__side-padding;
-        margin-right: - $container__side-padding;
-        padding-left: 0;
-        padding-right: 0;
-    }
+/* Inner columns and group blocks when inside a full wide block */
+.wp-block[data-align="full"] .wp-block-group:not([data-align="wide"]):not([data-align="full"]),
+.wp-block[data-align="full"] .wp-block-columns:not([data-align="wide"]):not([data-align="full"]) {
+    max-width: 66.66%; // 8 colunas descontado o padding
+}
+/* WIDE Inner columns and group blocks when inside a full wide block */
+.wp-block[data-align="full"]>.wp-block-group:not([data-align="wide"]):not([data-align="full"]),
+.wp-block[data-align="full"]>.wp-block-columns:not([data-align="wide"]):not([data-align="full"])
+.wp-block[data-align="full"] .wp-block[data-align="wide"]>.wp-block-group,
+.wp-block[data-align="full"] .wp-block[data-align="wide"]>.wp-block-columns {
+    max-width: 100%;
+}
+/* FULL Inner columns and group blocks when inside a full wide block */
+.wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-group,
+.wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-columns {
+    max-width: 100%;
+    width: 100%;
+    max-width: 100vw;
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%)/2);
+    margin-right: calc(-1 * (100vw - 100%)/2);
+}
+.wp-block[data-align="full"] .wp-block[data-align="full"]>* {
+    padding: 0 4.73%;
+}
 
+/* Inner padding for cover block */
+.wp-block-cover__inner-container {
+    max-width: $container__max-width;
+    margin: 0 auto;
+    padding: 0 4.73%;
+    padding: 0 4.73vw;
+}
+/* No margin for the last element of columns block */
+.wp-block-column>*:last-child {
+    margin-bottom: 0;
+}
+.wp-block[data-align="full"]>.wp-block-columns {
+    padding-left: 4.73%;
+    padding-right: 4.73%;
 }

@@ -7,24 +7,30 @@ input[type="submit"] {
 	color: $color__text-input;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
+	font-family: $font__family-buttons;
+	font-size: $font__size-buttons;
 
 	&.button {
-		text-transform: capitalize;
+		text-transform: uppercase;
 		border: 1px solid;
 		border-color: $color__border-button;
-	
+
 		&:hover {
 			border-color: $color__border-button-hover;
 			background-color: $color__border-button;
 			color: $color__background-button;
 		}
-	
+
 		&:active,
 		&:focus {
 			border-color: $color__border-button-focus;
 			background-color: $color__border-button;
-			color: $color__background-button; 
+			color: $color__background-button;
 		}
 	}
+	&:hover {
+		border-color: $color__border-button-hover;
+		background-color: $color__border-button;
+		color: $color__background-button;
+	}
 }
-

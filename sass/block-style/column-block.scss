@@ -1,9 +1,24 @@
 .is-style-column-iphan {
     border: 1px solid $color__vermelho1;
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.7);
     overflow-wrap: anywhere;
+    &:not(.has-background) {
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+
     @media screen and (orientation: portrait) and (max-width: $screen__md) {
-        margin-bottom: 5%; 
+        margin-bottom: 5%;
+    }
+}
+.is-style-column-iphan-secundary {
+    border: 1px solid $color__cinza6;
+    padding: 30px;
+    overflow-wrap: anywhere;
+
+    &:not(.has-background) {
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+    @media screen and (orientation: portrait) and (max-width: $screen__md) {
+        margin-bottom: 5%;
     }
 }

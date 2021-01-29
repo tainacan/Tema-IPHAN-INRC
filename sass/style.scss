@@ -4,8 +4,8 @@ Theme URI: http://underscores.me/
 Author: Tainacan
 Author URI: http://tainacan.org
 Description: Tema para o Inventário Nacional do IPHAN
-Version: 1.0.0
-Tested up to: 5.6
+Version: 0.0.4
+Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -50,6 +50,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 
+//bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 // Import variables and mixins.
 @import "abstracts/abstracts";
 
@@ -86,7 +89,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
+@import "plugins/jetpack/infinite-scroll"; 
 
 /* Style related to Tainacan plugin
 --------------------------------------------- */
@@ -106,6 +109,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "utilities/alignments";
 
 // Block styles
-@import "block-style/editor-basics.scss";
-@import "block-style/title-block.scss";
-@import "block-style/column-block.scss";
+@import "block-style/title-block";
+@import "block-style/column-block";
+@import "block-style/button-block";
+@import "block-style/block-colors";
+
