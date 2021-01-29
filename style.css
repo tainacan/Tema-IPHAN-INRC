@@ -10061,7 +10061,7 @@ html {
 	margin-right: auto !important;
 	padding-left: 4.73%;
 	padding-right: 4.73%;
-	max-width: 1300px;
+	max-width: 1736px;
 	width: 100%;
 }
 
@@ -10076,7 +10076,7 @@ html {
 	margin-right: auto;
 	padding-left: 4.73%;
 	padding-right: 4.73%;
-	max-width: 866px;
+	max-width: 1157px;
 	width: 66.66%;
 	margin-top: 28px;
 	margin-bottom: 28px;
@@ -10095,11 +10095,25 @@ html {
 	}
 }
 
-.alignfull .wp-block-group,
-.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
-.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+.alignfull .wp-block-group {
 	padding-left: 2.36%;
 	padding-right: 2.36%;
+}
+
+.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+	width: 66.66%;
+	width: 66.66vw;
+}
+
+@media screen and (max-width: 768px) {
+	.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+	.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+		max-width: 74.2%;
+		width: 100%;
+		max-width: 74.2vw;
+		width: 100vw;
+	}
 }
 
 .entry-footer > * {
@@ -10113,7 +10127,7 @@ html {
 	margin-right: auto;
 	padding-left: 4.73%;
 	padding-right: 4.73%;
-	max-width: 1080px;
+	max-width: 1446px;
 	width: 74.2%;
 }
 
@@ -10128,8 +10142,20 @@ html {
 
 .alignfull .wp-block-group.alignwide,
 .alignfull .wp-block-columns.alignwide {
-	max-width: 1080px;
+	max-width: 1446px;
 	width: 100%;
+	width: 100vw;
+	margin-left: calc(-1 * (1446px - 100%)/2);
+	margin-right: calc(-1 * (1446px - 100%)/2);
+}
+
+@media screen and (max-width: 1460px) {
+	.alignfull .wp-block-group.alignwide,
+	.alignfull .wp-block-columns.alignwide {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .alignfull .wp-block-group.alignfull,
@@ -10458,7 +10484,7 @@ textarea {
 }
 
 .wp-block-image.alignwide > img {
-	max-width: 1080px !important;
+	max-width: 1446px !important;
 	width: 100%;
 	position: relative;
 	padding-left: 0;
@@ -12480,7 +12506,7 @@ body:not(.home) .title-banner:last-child {
 .wp-block-button .wp-block-button__link {
 	border-radius: 0px;
 	line-height: 1;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 	padding: 0.6em 1em 0.6em;
 	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 0.875rem;

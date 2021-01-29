@@ -173,7 +173,7 @@ big {
 .wp-block-button .wp-block-button__link {
 	border-radius: 0px;
 	line-height: 1;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 	padding: 0.6em 1em 0.6em;
 	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 0.875rem;
@@ -560,10 +560,10 @@ big {
 	font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1736px) {
 	.wp-block.editor-post-title.editor-post-title__block,
 	.block-editor-block-list__layout.is-root-container > .wp-block {
-		max-width: calc(866px - (2 * 4.73%));
+		max-width: calc(1157px - (2 * 4.73%));
 	}
 }
 
@@ -585,9 +585,9 @@ ul.wp-block {
 	padding-right: 0;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1736px) {
 	.block-editor-block-list__layout.is-root-container > .wp-block[data-align="wide"] {
-		max-width: calc(1080px - (2 * 4.73%));
+		max-width: calc(1446px - (2 * 4.73%));
 	}
 }
 
@@ -638,7 +638,7 @@ ul.wp-block {
 
 /* Inner padding for cover block */
 .wp-block-cover__inner-container {
-	max-width: 1300px;
+	max-width: 1736px;
 	margin: 0 auto;
 	padding: 0 4.73%;
 	padding: 0 4.73vw;

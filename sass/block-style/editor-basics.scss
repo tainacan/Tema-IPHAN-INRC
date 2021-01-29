@@ -89,7 +89,7 @@ ul {
 
 /* Inner padding for cover block */
 .wp-block-cover__inner-container {
-    max-width: 1300px;
+    max-width: $container__max-width;
     margin: 0 auto;
     padding: 0 4.73%;
     padding: 0 4.73vw;

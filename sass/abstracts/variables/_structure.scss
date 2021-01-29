@@ -1,15 +1,15 @@
 $size__site-main: 100%;
 
-$container__max-width: 1300px;
-$container__inner_wide_max-width: 1080px;
-$container__inner_max-width: 866px;
+$container__max-width: 1736px;
+$container__inner_wide_max-width: 1446px;
+$container__inner_max-width: 1157px;
 $container__side-padding: 4.73%;
 
-$container__max-width_with_padding: calc(866px - (2 * 4.73%));
-$container__max-width_wide_with_padding: calc(1080px - (2 * 4.73%));
+$container__max-width_with_padding: calc(1157px - (2 * 4.73%));
+$container__max-width_wide_with_padding: calc(1446px - (2 * 4.73%));
 $container__max-width_without_margin: calc(100% + (2 * 4.73%));
 
 $screen__xs: 320px;
 $screen__sm: 768px;
 $screen__md: 1024px;
-$screen__lg: 1300px;
+$screen__lg: 1300px; 
