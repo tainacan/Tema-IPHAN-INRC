@@ -170,7 +170,7 @@ if ( ! function_exists('tainacan_meta_date_author') ) {
 		);
 
 		$string = $time_string;
-		$string .= '&nbsp;by&nbsp;'
+		$string .= '&nbsp;by&nbsp;';
 		$string .= get_the_author_posts_link();
 
 		$string = apply_filters( 'tainacan-meta-date-author', $string );
