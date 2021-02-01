@@ -12270,6 +12270,19 @@ body:not(.home) .title-banner:last-child {
 	text-transform: uppercase;
 }
 
+.post-categories {
+	display: flex;
+	flex-direction: row;
+}
+
+.post-categories > li > a {
+	margin-right: 20px;
+}
+
+.categoria-excerpt {
+	font-size: 0.875rem;
+}
+
 /* excerpt
 --------------------------------------------- */
 .search-bar-home {

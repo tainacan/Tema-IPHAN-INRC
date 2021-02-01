@@ -103,10 +103,22 @@
     padding-left: 0px;
 }
 
-.categoria-excerpt  li {
+.categoria-excerpt li {
     list-style: none;
 }
 .categoria-excerpt a {
     color: #515151;
     text-transform: uppercase;
+}
+
+.post-categories {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-categories > li > a {
+    margin-right: 20px;
+}
+.categoria-excerpt {
+    font-size: 0.875rem;
 }
