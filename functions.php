@@ -219,6 +219,9 @@ require get_template_directory() . '/template-parts/breadcrumb.php';
 //excerpts
 require get_template_directory() . '/template-parts/excerpts.php';	
 
+//excerpts
+require get_template_directory() . '/template-parts/search-filter.php';	
+
 
 /**
  * Load Jetpack compatibility file.

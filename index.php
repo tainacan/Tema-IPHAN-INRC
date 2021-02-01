@@ -27,9 +27,10 @@ get_header();
 			</header>
 	<?php
 		endif;
-
+		echo '<div class="cabecalho-ultimas-noticias">';
 		echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
-
+		echo '<input placeholder="Pesquisa"></>';
+		echo '</div>';
 		/* Start the Loop */
 		while (have_posts()) :
 			the_post();

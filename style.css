@@ -10518,6 +10518,11 @@ textarea {
 	display: none;
 }
 
+.cabecalho-ultimas-noticias {
+	display: flex;
+	justify-content: space-between;
+}
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
