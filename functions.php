@@ -169,12 +169,22 @@ function iphan_inrc_scripts()
 	wp_register_style('TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '');
 	wp_enqueue_style('TainacanIconsFont');
 
-	// Enqueues our custom js
+	// Enqueues our custom js for navigation
 	wp_enqueue_script('iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), IPHAN_INRC_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
+
+	// Scripts necessary for using the gallery modal
+	wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), IPHAN_INRC_VERSION );
+	wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), IPHAN_INRC_VERSION, true );	 
+	wp_enqueue_style( 'photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css', array(), IPHAN_INRC_VERSION );
+	wp_enqueue_style( 'photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css', array(), IPHAN_INRC_VERSION );
+	wp_enqueue_script( 'photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js', array(), IPHAN_INRC_VERSION, true );	 
+	wp_enqueue_script( 'photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js', array(), IPHAN_INRC_VERSION, true );	 
+	wp_enqueue_script( 'blocksy-tainacan-scripts__swiper', get_stylesheet_directory_uri() . '/js/media-carousel.js', ['swiper', 'photoswipe', 'photoswipe-skin'], IPHAN_INRC_VERSION, true );
+
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
