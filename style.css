@@ -12266,6 +12266,8 @@ body:not(.home) .title-banner:last-child {
 	border-left: none;
 	border-right: none;
 	border-bottom: 1px solid #d9d9d9;
+	font-style: italic;
+	padding-bottom: 0px;
 }
 
 /*--------------------------------------------------------------
