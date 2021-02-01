@@ -29,7 +29,9 @@ get_header();
 		endif;
 		echo '<div class="cabecalho-ultimas-noticias">';
 		echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
-		echo '<input class="search-bar-home col-md-4" placeholder="Busque por notícias"></>';
+		echo '<form role="search" method="get" class="search-form col-md-4" action="'.SearchFilter("hello world") .'">';
+		echo '<input class="search-bar-home col-md-12" placeholder="Busque por notícias" value=></>';
+		echo '</form>';
 		echo '</div>';
 		/* Start the Loop */
 		while (have_posts()) :
