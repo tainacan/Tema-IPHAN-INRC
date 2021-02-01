@@ -25,6 +25,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
             </div>
         <?php else : ?>
             <h3 class="mb-3">
+                <span class="categoria-excerpt"><?php echo the_category() ?></span>
                 <a href="<?php the_permalink(); ?>" class="font-weight-bold"><?php the_title(); ?></a>
             </h3>
         <?php endif; ?>

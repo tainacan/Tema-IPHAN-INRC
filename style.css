@@ -12256,6 +12256,20 @@ body:not(.home) .title-banner:last-child {
 	margin-bottom: 4.063rem !important;
 }
 
+.categoria-excerpt > ul {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.categoria-excerpt li {
+	list-style: none;
+}
+
+.categoria-excerpt a {
+	color: #515151;
+	text-transform: uppercase;
+}
+
 /* excerpt
 --------------------------------------------- */
 .search-bar-home {
