@@ -7,5 +7,12 @@
     border-right: none;
     border-bottom: 1px solid $color__cinza3;
     font-style: italic;
-    padding-bottom: 0px;    
+    padding-bottom: 0px;
+    top: 5%;
+}
+.search-form > i::before {
+    position: absolute;
+    right: 4%;
+    color: $color__vermelho1;
+    top: 5%;
 }

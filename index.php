@@ -31,7 +31,7 @@ get_header();
 		echo '<div class="cabecalho-ultimas-noticias">';
 		echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
 		echo '<form role="search" method="get" class="search-form col-md-4" action="' . esc_url(home_url('/')) . '">';
-		echo '<input class="search-bar-home col-md-12" name="s" placeholder="Busque por notícias" value=' . get_search_query() . '></>';
+		echo '<input class="search-bar-home col-md-12" name="s" placeholder="Busque por notícias" value=' . get_search_query() . '><i size="50px" class="tainacan-icon tainacan-icon-search"></i>';
 		echo '</form>';
 		echo '</div>';
 

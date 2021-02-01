@@ -12259,6 +12259,14 @@ body:not(.home) .title-banner:last-child {
 	border-bottom: 1px solid #d9d9d9;
 	font-style: italic;
 	padding-bottom: 0px;
+	top: 5%;
+}
+
+.search-form > i::before {
+	position: absolute;
+	right: 4%;
+	color: #58020b;
+	top: 5%;
 }
 
 /*--------------------------------------------------------------
