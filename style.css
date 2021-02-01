@@ -12176,7 +12176,7 @@ body:not(.home) .title-banner:last-child {
 
 @media screen and (min-width: 1024px) {
 	#hrResume {
-		margin-bottom: 3.125rem;
+		margin-bottom: 1.875rem;
 		background-color: transparent;
 	}
 }
@@ -12188,34 +12188,6 @@ body:not(.home) .title-banner:last-child {
 @media screen and (min-width: 1024px) {
 	#hrResume:last-child {
 		background-color: transparent;
-	}
-}
-
-.ler-mais {
-	text-decoration: none !important;
-	border: 1px solid #58020b;
-	float: right;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	right: 0px;
-	bottom: 0px;
-}
-
-@media screen and (min-width: 1024px) {
-	.ler-mais {
-		padding-left: 16px;
-		padding-right: 16px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-}
-
-@media screen and (max-width: 1024px) {
-	.ler-mais {
-		padding-left: 10px;
-		padding-right: 10px;
-		padding-top: 6px;
-		padding-bottom: 4px;
 	}
 }
 
@@ -12232,20 +12204,10 @@ body:not(.home) .title-banner:last-child {
 	justify-content: space-between;
 }
 
-.ler-mais:hover {
-	text-decoration: none !important;
-	border: 1px solid #58020b;
-	float: right;
-	text-transform: uppercase;
-	padding-left: 16px;
-	padding-right: 16px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	letter-spacing: 0.1rem;
-	right: 0px;
-	bottom: 0px;
-	background-color: #58020b;
-	color: #ffffff;
+@media screen and (min-width: 1024px) {
+	.posicionamento-excerpt {
+		padding-right: 0;
+	}
 }
 
 .date-exerpt {
@@ -12263,6 +12225,7 @@ body:not(.home) .title-banner:last-child {
 
 .categoria-excerpt li {
 	list-style: none;
+	line-height: 1.5;
 }
 
 .categoria-excerpt a {

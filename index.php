@@ -34,6 +34,8 @@ get_header();
 		echo '<input class="search-bar-home col-md-12" name="s" placeholder="Busque por notícias" value=' . get_search_query() . '></>';
 		echo '</form>';
 		echo '</div>';
+
+		echo '<div class="entry-content"><ul class="alignwide">';
 		/* Start the Loop */
 		while (have_posts()) :
 			the_post();
@@ -46,6 +48,8 @@ get_header();
 			get_template_part('template-parts/list-post');
 		endwhile;
 		the_posts_navigation();
+
+		echo '</ul></div>';
 
 	else :
 		get_template_part('template-parts/content', 'none');
