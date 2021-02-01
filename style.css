@@ -12273,6 +12273,7 @@ body:not(.home) .title-banner:last-child {
 .post-categories {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .post-categories > li > a {
