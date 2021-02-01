@@ -13,6 +13,7 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
+			iphan_inrc_post_thumbnail();
 			the_title( '<h1 class="entry-title is-style-title-iphan-underscore">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title is-style-title-iphan-underscore"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -28,8 +29,6 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php iphan_inrc_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

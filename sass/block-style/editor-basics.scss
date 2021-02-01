@@ -12,9 +12,14 @@
 }
 
 /* Main column width */
-.wp-block {
-    max-width: $container__max-width_with_padding;
+.wp-block.editor-post-title.editor-post-title__block,
+.block-editor-block-list__layout.is-root-container > .wp-block {
+    max-width: 57.2%; // 8 colunas tirando o padding
     font-family: $font__main;
+
+    @media screen and (min-width: $container__max-width) {
+        max-width: $container__max-width_with_padding;
+    }
 }
 h1,
 h2,
@@ -30,17 +35,21 @@ ul {
 }
 
 /* Width of "wide" blocks */
-.wp-block[data-align="wide"] {
-    max-width: $container__inner_max-width;
+.block-editor-block-list__layout.is-root-container > .wp-block[data-align="wide"] {
+    max-width: 74.2%; // 10 colunas descontado o padding
     padding-left: 0;
     padding-right: 0;
+
+    @media screen and (min-width: $container__max-width) {
+        max-width: $container__max-width_wide_with_padding;
+    }
 
     .wp-block-columns {
         padding-left: 0;
         padding-right: 0;
     }
 }
-
+ 
 /* Width of "full" blocks */
 .block-editor-block-list__layout.is-root-container > .wp-block[data-align="full"],
 .wp-block[data-align="full"] {
@@ -52,3 +61,44 @@ ul {
     padding-right: 0;
 }
 
+/* Inner columns and group blocks when inside a full wide block */
+.wp-block[data-align="full"] .wp-block-group:not([data-align="wide"]):not([data-align="full"]),
+.wp-block[data-align="full"] .wp-block-columns:not([data-align="wide"]):not([data-align="full"]) {
+    max-width: 66.66%; // 8 colunas descontado o padding
+}
+/* WIDE Inner columns and group blocks when inside a full wide block */
+.wp-block[data-align="full"]>.wp-block-group:not([data-align="wide"]):not([data-align="full"]),
+.wp-block[data-align="full"]>.wp-block-columns:not([data-align="wide"]):not([data-align="full"])
+.wp-block[data-align="full"] .wp-block[data-align="wide"]>.wp-block-group,
+.wp-block[data-align="full"] .wp-block[data-align="wide"]>.wp-block-columns {
+    max-width: 100%;
+}
+/* FULL Inner columns and group blocks when inside a full wide block */
+.wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-group,
+.wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-columns {
+    max-width: 100%;
+    width: 100%;
+    max-width: 100vw;
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%)/2);
+    margin-right: calc(-1 * (100vw - 100%)/2);
+}
+.wp-block[data-align="full"] .wp-block[data-align="full"]>* {
+    padding: 0 4.73%;
+}
+
+/* Inner padding for cover block */
+.wp-block-cover__inner-container {
+    max-width: $container__max-width;
+    margin: 0 auto;
+    padding: 0 4.73%;
+    padding: 0 4.73vw;
+}
+/* No margin for the last element of columns block */
+.wp-block-column>*:last-child {
+    margin-bottom: 0;
+}
+.wp-block[data-align="full"]>.wp-block-columns {
+    padding-left: 4.73%;
+    padding-right: 4.73%;
+}

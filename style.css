@@ -5,7 +5,7 @@ Theme URI: http://underscores.me/
 Author: Tainacan
 Author URI: http://tainacan.org
 Description: Tema para o Inventário Nacional do IPHAN
-Version: 1.0.0
+Version: 0.0.4
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -10059,39 +10059,118 @@ html {
 .site-container {
 	margin-left: auto !important;
 	margin-right: auto !important;
-	padding-left: 5.48%;
-	padding-right: 5.48%;
-	max-width: 1300px;
+	padding-left: 4.73%;
+	padding-right: 4.73%;
+	max-width: 1736px;
 	width: 100%;
 }
 
-.content-container {
-	margin-left: auto !important;
-	margin-right: auto !important;
-	padding-left: 5.48%;
-	padding-right: 5.48%;
-	max-width: 866px;
-	width: 100%;
+.entry-header > *,
+.entry-content > *:not(.alignwide):not(.alignfull),
+.entry-footer > *,
+.navigation > *,
+.comments-area > *,
+.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 4.73%;
+	padding-right: 4.73%;
+	max-width: 1157px;
+	width: 66.66%;
+	margin-top: 28px;
+	margin-bottom: 28px;
 }
 
-.alignwide {
-	margin-left: calc(-2 * 5.48%) !important;
-	margin-right: calc(-2 * 5.48%) !important;
-	width: calc(100% + (4 * 5.48%));
-	max-width: 1300px;
-}
-
-@media only screen and (max-width: 866px) {
-	.alignwide {
-		margin-left: auto !important;
-		margin-right: auto !important;
-		max-width: 100%;
+@media screen and (max-width: 768px) {
+	.entry-header > *,
+	.entry-content > *:not(.alignwide):not(.alignfull),
+	.entry-footer > *,
+	.navigation > *,
+	.comments-area > *,
+	.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+	.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+		max-width: 74.2%;
+		width: 100%;
 	}
 }
 
+.alignfull .wp-block-group {
+	padding-left: 2.36%;
+	padding-right: 2.36%;
+}
+
+.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+	width: 66.66%;
+	width: 66.66vw;
+}
+
+@media screen and (max-width: 768px) {
+	.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
+	.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+		max-width: 74.2%;
+		width: 100%;
+		max-width: 74.2vw;
+		width: 100vw;
+	}
+}
+
+.entry-footer > * {
+	display: block;
+}
+
+.alignwide,
+.alignfull .wp-block-group.alignwide,
+.alignfull .wp-block-columns.alignwide {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 4.73%;
+	padding-right: 4.73%;
+	max-width: 1446px;
+	width: 74.2%;
+}
+
+@media screen and (max-width: 768px) {
+	.alignwide,
+	.alignfull .wp-block-group.alignwide,
+	.alignfull .wp-block-columns.alignwide {
+		max-width: 89.04%;
+		width: 100%;
+	}
+}
+
+.alignfull .wp-block-group.alignwide,
+.alignfull .wp-block-columns.alignwide {
+	max-width: 1446px;
+	width: 100%;
+	width: 100vw;
+	margin-left: calc(-1 * (1446px - 100%)/2);
+	margin-right: calc(-1 * (1446px - 100%)/2);
+}
+
+@media screen and (max-width: 1460px) {
+	.alignfull .wp-block-group.alignwide,
+	.alignfull .wp-block-columns.alignwide {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.alignfull .wp-block-group.alignfull,
+.alignfull .wp-block-columns.alignfull {
+	max-width: 100%;
+	width: 100%;
+	max-width: 100vw;
+	width: 100vw;
+	margin-left: calc(-1 * (100vw - 100%)/2);
+	margin-right: calc(-1 * (100vw - 100%)/2);
+}
+
 .alignfull {
-	margin-left: calc( -100vw / 2 + 100% / 2) !important;
-	margin-right: calc( -100vw / 2 + 100% / 2) !important;
+	padding-left: 0;
+	padding-right: 0;
 	max-width: 100%;
 	max-width: 100vw;
 	width: 100%;
@@ -10290,7 +10369,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border-radius: 0px;
-	background: #ffffff;
+	background: rgba(255, 255, 255, 0.1);
 	color: #58020b;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
@@ -10313,7 +10392,7 @@ input[type="reset"].button:hover,
 input[type="submit"].button:hover {
 	border-color: #58020b;
 	background-color: #58020b;
-	color: #ffffff;
+	color: rgba(255, 255, 255, 0.1);
 }
 
 button.button:active, button.button:focus,
@@ -10325,7 +10404,7 @@ input[type="submit"].button:active,
 input[type="submit"].button:focus {
 	border-color: #58020b;
 	background-color: #58020b;
-	color: #ffffff;
+	color: rgba(255, 255, 255, 0.1);
 }
 
 button:hover,
@@ -10334,7 +10413,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #58020b;
 	background-color: #58020b;
-	color: #ffffff;
+	color: rgba(255, 255, 255, 0.1);
 }
 
 input[type="text"],
@@ -10405,18 +10484,22 @@ textarea {
 }
 
 .wp-block-image.alignwide > img {
-	max-width: 1400px !important;
-	width: calc(100% - 12.5%) !important;
-	width: calc(100vw - 12.5vw) !important;
-	padding: 0 !important;
-	left: 0px;
+	max-width: 1446px !important;
+	width: 100%;
 	position: relative;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 @media only screen and (min-width: 1526px) {
 	.wp-block-image.alignwide > img {
 		width: 100% !important;
 	}
+}
+
+.wp-block-image:not(.aligneft):not(.align-right) {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .wp-block-image.alignfull > img {
@@ -10429,8 +10512,8 @@ textarea {
 
 /* Columns */
 .wp-block-columns.alignfull {
-	padding-left: 8.333333%;
-	padding-right: 8.333333%;
+	padding-left: 4.73%;
+	padding-right: 4.73%;
 }
 
 /* Media and Text */
@@ -10440,16 +10523,16 @@ textarea {
 }
 
 .wp-block-media-text .wp-block-media-text__content {
-	padding: 0.75rem 4.16666667%;
-	padding: 0.75rem 4.1666667vw;
+	padding: 0.75rem 4.73%;
+	padding: 0.75rem 4.73%;
 }
 
 /* Cover block */
 .wp-block-cover__inner-container {
-	max-width: 1400px;
+	max-width: 1300px;
 	margin: 0 auto;
-	padding: 0 8.3333333333%;
-	padding: 0 8.3333333333vw;
+	padding: 0 4.73%;
+	padding: 0 4.73vw;
 }
 
 /* Carousel */
@@ -10461,7 +10544,8 @@ textarea {
 }
 
 .wp-block-tainacan-carousel-items-list.alignfull .tainacan-carousel,
-.wp-block-tainacan-carousel-collections-list.alignfull .tainacan-carousel .wp-block-tainacan-carousel-terms-list.alignfull .tainacan-carousel {
+.wp-block-tainacan-carousel-collections-list.alignfull .tainacan-carousel,
+.wp-block-tainacan-carousel-terms-list.alignfull .tainacan-carousel {
 	width: 100%;
 	width: 100vw;
 	left: 0;
@@ -10474,6 +10558,11 @@ textarea {
 .wp-block-columns {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+
+.wp-block-column > *:last-child,
+.wp-block-column > .wp-block-buttons:last-child .wp-block-button {
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -11867,7 +11956,7 @@ a {
 @media screen and (min-width: 1024px) {
 	.title-banner::after {
 		height: 84%;
-		top: 8px;
+		top: 7px;
 	}
 }
 
@@ -12394,7 +12483,7 @@ body:not(.home) .title-banner:last-child {
 }
 
 .is-style-column-iphan:not(.has-background) {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.85);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
@@ -12410,7 +12499,7 @@ body:not(.home) .title-banner:last-child {
 }
 
 .is-style-column-iphan-secundary:not(.has-background) {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.85);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
@@ -12422,14 +12511,14 @@ body:not(.home) .title-banner:last-child {
 .wp-block-button .wp-block-button__link {
 	border-radius: 0px;
 	line-height: 1;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 	padding: 0.6em 1em 0.6em;
 	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 0.875rem;
 	text-transform: uppercase;
 	border: 1px solid;
 	border-color: #58020b;
-	background: #ffffff;
+	background: rgba(255, 255, 255, 0.1);
 	color: #58020b;
 	transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
 }
@@ -12450,20 +12539,20 @@ body:not(.home) .title-banner:last-child {
 	text-transform: none;
 	border: 1px solid;
 	border-color: #d9d9d9;
-	background: #ffffff;
+	background: #ffffff rgba(255, 255, 255, 0.1);
 	color: #898d8f;
 	transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
 }
 
 .wp-block-button.is-style-clear .wp-block-button__link:hover {
 	border-color: #515151;
-	background-color: #ffffff;
+	background-color: #ffffff rgba(255, 255, 255, 0.1);
 	color: #515151;
 }
 
 .wp-block-button.is-style-clear .wp-block-button__link:active, .wp-block-button.is-style-clear .wp-block-button__link:focus {
 	border-color: #898d8f;
-	background-color: #ffffff;
+	background-color: #ffffff rgba(255, 255, 255, 0.1);
 	color: #898d8f;
 }
 

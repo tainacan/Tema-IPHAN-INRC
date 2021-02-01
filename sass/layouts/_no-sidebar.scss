@@ -15,19 +15,20 @@
     color: inherit;
 }
 
-// 1400px is the maximum the inner cointainer should get, so we 
-// use 1526px - 1 column - 1 column;
 .wp-block-image.alignwide>img {
-    max-width: 1400px !important;
-    width: calc(100% - 12.5%) !important;
-    width: calc(100vw - 12.5vw) !important;
-    padding: 0 !important;
-    left: 0px;
+    max-width: $container__inner_wide_max-width !important;
+    width: 100%;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
 
     @media only screen and (min-width: 1526px) {
         width: 100% !important;
     }
+}
+.wp-block-image:not(.aligneft):not(.align-right) {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wp-block-image.alignfull>img {
@@ -40,8 +41,8 @@
 
 /* Columns */
 .wp-block-columns.alignfull {
-    padding-left: 8.333333%;
-    padding-right: 8.333333%;
+    padding-left: 4.73%;
+    padding-right: 4.73%;
 }
 
 /* Media and Text */
@@ -50,17 +51,17 @@
     margin-bottom: 2rem;
     
     .wp-block-media-text__content {
-        padding: 0.75rem 4.16666667%;
-        padding: 0.75rem 4.1666667vw;
+        padding: 0.75rem 4.73%;
+        padding: 0.75rem 4.73%;
     }
 }
 
 /* Cover block */
 .wp-block-cover__inner-container {
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 8.3333333333%;
-    padding: 0 8.3333333333vw;
+    padding: 0 4.73%;
+    padding: 0 4.73vw;
 }
 
 /* Carousel */
@@ -71,7 +72,7 @@
     left: 0;
 }
 .wp-block-tainacan-carousel-items-list.alignfull .tainacan-carousel,
-.wp-block-tainacan-carousel-collections-list.alignfull .tainacan-carousel 
+.wp-block-tainacan-carousel-collections-list.alignfull .tainacan-carousel,
 .wp-block-tainacan-carousel-terms-list.alignfull .tainacan-carousel  {
     width: 100%;
     width: 100vw;
@@ -85,4 +86,8 @@
 .wp-block-columns {
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+.wp-block-column>*:last-child,
+.wp-block-column>.wp-block-buttons:last-child .wp-block-button {
+    margin-bottom: 0; 
 }
