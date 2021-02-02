@@ -149,6 +149,16 @@
                         right: -15px;
                         top: -8px;
                     }
+                    @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+                        display: block;
+                        content: "\0231C";
+                        font-size: 1.5rem;
+                        transform: rotate(225deg);
+                        color: $color__branco;
+                        position: relative;
+                        right: -15px;
+                        top: -16px;
+                    }
                 }
             }
         }
@@ -208,7 +218,6 @@ a {
 .menu-toggle > svg {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         display: block;
-        /* position: absolute; */
         margin-top: 30%;
         z-index: 10;
     }

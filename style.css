@@ -10808,6 +10808,19 @@ textarea {
 	}
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.main-navigation ul > li.menu-item-has-children::after {
+		display: block;
+		content: "\0231C";
+		font-size: 1.5rem;
+		transform: rotate(225deg);
+		color: #ffffff;
+		position: relative;
+		right: -15px;
+		top: -16px;
+	}
+}
+
 .main-navigation ul > li {
 	margin-right: 10px;
 	color: #58020b;
@@ -10858,7 +10871,6 @@ a {
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.menu-toggle > svg {
 		display: block;
-		/* position: absolute; */
 		margin-top: 30%;
 		z-index: 10;
 	}
