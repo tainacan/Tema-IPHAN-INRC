@@ -58,6 +58,7 @@ get_header();
 </main><!-- #main -->
 <div class="banner-or">
 	<div class="banner-footer col-md-6" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr1.png')"></div>
+	<span class="separator-banner-footer"></span>
 	<div class="banner-footer col-md-6" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr2.png')"></div>
 </div>
 <?php

@@ -12,3 +12,9 @@
     height: 100%;
     background-size: cover;
 }
+
+.separator-banner-footer{
+    padding: 5px;
+    color: $color__branco;
+    transform: translate(-50%, -50%) rotate(270deg)
+}

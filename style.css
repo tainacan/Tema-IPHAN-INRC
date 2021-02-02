@@ -12290,6 +12290,12 @@ body:not(.home) .title-banner:last-child {
 	background-size: cover;
 }
 
+.separator-banner-footer {
+	padding: 5px;
+	color: #ffffff;
+	transform: translate(-50%, -50%) rotate(270deg);
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
