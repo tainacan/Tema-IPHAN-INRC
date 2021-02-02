@@ -6,7 +6,7 @@
         }
     }
     .menu > li > a {
-        @media screen and (max-width: $screen__md) {
+        @media screen and (max-width: $screen__sm) {
             margin-bottom: 20px;
         }
     }
@@ -139,7 +139,7 @@
                     cursor: pointer;
                 }
                 &::after {
-                    @media screen and (min-width: $screen__md) {
+                    @media screen and (min-width: $screen__sm) {
                         display: block;
                         content: "\0231C";
                         font-size: 1.5rem;
@@ -148,16 +148,6 @@
                         position: relative;
                         right: -15px;
                         top: -8px;
-                    }
-                    @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
-                        display: block;
-                        content: "\0231C";
-                        font-size: 1.5rem;
-                        transform: rotate(225deg);
-                        color: $color__branco;
-                        position: relative;
-                        right: -15px;
-                        top: -16px;
                     }
                 }
             }

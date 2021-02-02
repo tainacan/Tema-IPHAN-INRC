@@ -10634,7 +10634,7 @@ textarea {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 	.main-navigation .menu > li > a {
 		margin-bottom: 20px;
 	}
@@ -10795,7 +10795,7 @@ textarea {
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	.main-navigation ul > li.menu-item-has-children::after {
 		display: block;
 		content: "\0231C";
@@ -10805,19 +10805,6 @@ textarea {
 		position: relative;
 		right: -15px;
 		top: -8px;
-	}
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-	.main-navigation ul > li.menu-item-has-children::after {
-		display: block;
-		content: "\0231C";
-		font-size: 1.5rem;
-		transform: rotate(225deg);
-		color: #ffffff;
-		position: relative;
-		right: -15px;
-		top: -16px;
 	}
 }
 
