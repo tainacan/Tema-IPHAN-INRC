@@ -1,0 +1,18 @@
+.search-bar-home {
+    height: auto;
+    margin-bottom: 4.063rem !important;
+    margin-top: 1%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $color__cinza3;
+    font-style: italic;
+    padding-bottom: 0px;
+    top: 5%;
+}
+.search-form > i::before {
+    position: absolute;
+    right: 4%;
+    color: $color__vermelho1;
+    top: 5%;
+}

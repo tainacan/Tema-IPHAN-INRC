@@ -27,9 +27,15 @@ get_header();
 			</header>
 	<?php
 		endif;
-
+		$pesquisar;
+		echo '<div class="cabecalho-ultimas-noticias">';
 		echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
+		echo '<form role="search" method="get" class="search-form col-md-4" action="' . esc_url(home_url('/')) . '">';
+		echo '<input class="search-bar-home col-md-12" name="s" placeholder="Busque por notícias" value=' . get_search_query() . '><i size="50px" class="tainacan-icon tainacan-icon-search"></i>';
+		echo '</form>';
+		echo '</div>';
 
+		echo '<div class="entry-content"><ul class="alignwide">';
 		/* Start the Loop */
 		while (have_posts()) :
 			the_post();
@@ -42,6 +48,8 @@ get_header();
 			get_template_part('template-parts/list-post');
 		endwhile;
 		the_posts_navigation();
+
+		echo '</ul></div>';
 
 	else :
 		get_template_part('template-parts/content', 'none');

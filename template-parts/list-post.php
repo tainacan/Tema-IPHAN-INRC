@@ -6,7 +6,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
     $post_type_archive_link = get_post_type_archive_link($post_type);
 }
 ?>
-<div class="row excerpt border-excerpt mb-4">
+<li class="row excerpt border-excerpt mb-4">
     <?php if (has_post_thumbnail()) : ?>
         <div class="col-xs-12 col-md-4 blog-thumbnail thumb-resume mb-md-0">
             <a href="<?php the_permalink(); ?>">
@@ -25,6 +25,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
             </div>
         <?php else : ?>
             <h3 class="mb-3">
+                <span class="categoria-excerpt"><?php echo the_category() ?></span>
                 <a href="<?php the_permalink(); ?>" class="font-weight-bold"><?php the_title(); ?></a>
             </h3>
         <?php endif; ?>
@@ -33,8 +34,10 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
             <div class="date-excerpt-position">
                 <span class="date-exerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
             </div>
-            <a href="<?php the_permalink(); ?>" class="ler-mais"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>
+            <div class="wp-block-button">
+                <a href="<?php the_permalink(); ?>" class="wp-block-button__link"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>
+            </div>
         </div>
     </div>
-</div>
+</li>
 <hr id="hrResume">
