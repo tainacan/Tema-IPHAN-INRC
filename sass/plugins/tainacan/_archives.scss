@@ -1,0 +1,123 @@
+
+.theme-items-list {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    /* Form and Text styling */
+    --tainacan-input-color: #1e1e1e; /* Not quite black */
+    --tainacan-input-background-color: #fff;
+    --tainacan-input-border-color: #d9d9d9; /* Some input borders disabled state colors */
+    --tainacan-label-color: #515151;
+    --tainacan-info-color: #515151;
+    --tainacan-heading-color: #000;
+
+    /* Skeleton loading color */
+    --tainacan-skeleton-color: #eee;
+
+    /* Items */
+    --tainacan-item-background-color: #fff;
+    --tainacan-item-hover-background-color: #f1f1f1;
+    --tainacan-item-heading-hover-background-color: #d9d9d9;
+
+    /* Derived colors */
+    --tainacan-primary: #efe6e7; /* Tooltips and selected dropwdown items background (not really a good name, as secondary is the most important color overall) */
+    --tainacan-secondary: #58020b; /* Link, active state, accent color! */
+    --tainacan-success: #25a189;
+    --tainacan-danger: #a23939; 
+    --tainacan-warning: #e69810;
+
+    /* Background */
+    --tainacan-background-color: #fff;
+
+    /* Font family and size */
+    --tainacan-font-family: Roboto, Source Sans, Helvetica, sans-serif;
+    --tainacan-base-font-size: 1em; /* 16px on most browsers, but not necessarly in your theme. The items list will get the next parent that has font-size value defined. */
+
+    /* Filter Menu Width when not a modal */
+    --tainacan-filter-menu-width-theme: 20%;
+
+    /* One column is 1/24 and it is used a lot in the horizontal space distribution */
+    --tainacan-one-column: 4.16667%;
+
+    /* Not really used in EVERY container, but a rather frequent value */
+    --tainacan-container-padding: 25px;
+    
+    // Some color text and input adjustments from the theme
+    .control.has-icons-right .icon .mdi-magnify::before {
+        color: #58020b;
+    }
+    .filter-item-forms .collapse-trigger .collapse-label {
+        font-weight: bold;
+    }
+    .search-control .search-control-item .button {
+        text-transform: initial !important;
+    }
+    input.input,
+    .input,
+    textarea.textarea,
+    .textarea,
+    input[type="color"].input,
+    input[type="date"].input,
+    input[type="datetime-local"].input,
+    input[type="datetime"].input,
+    input[type="email"].input,
+    input[type="number"].input,
+    input[type="month"].input,
+    input[type="password"].input,
+    input[type="search"].input,
+    input[type="tel"].input,
+    input[type="text"].input,
+    input[type="time"].input,
+    input[type="url"].input,
+    input[type="week"].input,
+    .tainacan-form .dropdown .button {
+        border-left-color: transparent !important;
+        border-right-color: transparent !important;
+        border-top-color: transparent !important;
+    }
+
+    // Lateral padding is taken care by the parent theme
+    @media screen and (min-width: $screen__sm) {
+        .search-control {
+            padding: var(--tainacan-container-padding) 0px 20px 0px !important;
+        }
+        .table-container {
+            padding-right: 0px !important;
+        }
+        #filters-modal .modal-content {
+            padding: 24px 18px 24px 0px !important;
+        }  
+    }
+
+    // Metadata values with special characters
+    a {    
+        display: inline-block;
+    }
+    .multivalue-separator {
+        color: $color__cinza4;
+        margin: 0 8px;    
+    }
+    .hierarchy-separator {
+        color: $color__cinza4;  
+    }
+    .metadata-type-compound,
+    .metadata-type-textarea {
+        .multivalue-separator {
+            display: block;
+            max-height: 1px;
+            width: 35px;
+            background: $color__cinza4;
+            content: none;
+            color: transparent;
+            margin: 0.875rem auto;
+        }
+    }
+    .tainacan-compound-group {
+        padding-left: 1.5rem;
+        border-left: 1px solid $color__cinza1;
+    }
+}
+
+body.archive .theme-items-list {
+    margin-top: 100px;
+}

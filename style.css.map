@@ -128,6 +128,8 @@
 		"sass/components/excerpt/_excerpt.scss",
 		"sass/components/search-bar/_search-bar.scss",
 		"sass/plugins/jetpack/_infinite-scroll.scss",
+		"sass/plugins/tainacan/_single-items.scss",
+		"sass/plugins/tainacan/_archives.scss",
 		"sass/utilities/_accessibility.scss",
 		"sass/utilities/_alignments.scss",
 		"sass/block-style/title-block.scss",
