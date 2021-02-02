@@ -7,7 +7,7 @@
  */
 ?>
 
-<div class="row">
+<div class="row alignfull">
     <div class="col col-6 col-sm-12">
         <h2 class="is-style-title-iphan-underscore"><?php tainacan_the_collection_name(); ?></h2>
         <?php $tainacan_collection_description = tainacan_get_the_collection_description(); ?>

@@ -1,5 +1,8 @@
 
 .theme-items-list {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
     /* Form and Text styling */
     --tainacan-input-color: #1e1e1e; /* Not quite black */
     --tainacan-input-background-color: #fff;
@@ -39,11 +42,79 @@
     /* Not really used in EVERY container, but a rather frequent value */
     --tainacan-container-padding: 25px;
     
+    // Some color text and input adjustments from the theme
     .control.has-icons-right .icon .mdi-magnify::before {
         color: #58020b;
     }
     .filter-item-forms .collapse-trigger .collapse-label {
         font-weight: bold;
+    }
+    .search-control .search-control-item .button {
+        text-transform: initial !important;
+    }
+    input.input,
+    .input,
+    textarea.textarea,
+    .textarea,
+    input[type="color"].input,
+    input[type="date"].input,
+    input[type="datetime-local"].input,
+    input[type="datetime"].input,
+    input[type="email"].input,
+    input[type="number"].input,
+    input[type="month"].input,
+    input[type="password"].input,
+    input[type="search"].input,
+    input[type="tel"].input,
+    input[type="text"].input,
+    input[type="time"].input,
+    input[type="url"].input,
+    input[type="week"].input,
+    .tainacan-form .dropdown .button {
+        border-left-color: transparent !important;
+        border-right-color: transparent !important;
+        border-top-color: transparent !important;
+    }
+
+    // Lateral padding is taken care by the parent theme
+    @media screen and (min-width: $screen__sm) {
+        .search-control {
+            padding: var(--tainacan-container-padding) 0px 20px 0px !important;
+        }
+        .table-container {
+            padding-right: 0px !important;
+        }
+        #filters-modal .modal-content {
+            padding: 24px 18px 24px 0px !important;
+        }  
+    }
+
+    // Metadata values with special characters
+    a {    
+        display: inline-block;
+    }
+    .multivalue-separator {
+        color: $color__cinza4;
+        margin: 0 8px;    
+    }
+    .hierarchy-separator {
+        color: $color__cinza4;  
+    }
+    .metadata-type-compound,
+    .metadata-type-textarea {
+        .multivalue-separator {
+            display: block;
+            max-height: 1px;
+            width: 35px;
+            background: $color__cinza4;
+            content: none;
+            color: transparent;
+            margin: 0.875rem auto;
+        }
+    }
+    .tainacan-compound-group {
+        padding-left: 1.5rem;
+        border-left: 1px solid $color__cinza1;
     }
 }
 
