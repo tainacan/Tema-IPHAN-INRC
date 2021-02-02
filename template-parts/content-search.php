@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<div class="site-content">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title is-style-title-iphan-underscore"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -25,7 +25,7 @@
 
 	<?php iphan_inrc_post_thumbnail(); ?>
 
-	<div class="entry-summary">
+	<div class="entry-summary entry-content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
@@ -33,3 +33,4 @@
 		<?php iphan_inrc_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
