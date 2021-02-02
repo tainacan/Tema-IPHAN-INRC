@@ -10646,13 +10646,6 @@ textarea {
 	}
 }
 
-@media screen and (max-width: 1024px) {
-	.main-navigation .menu-item-has-children {
-		border-bottom: 1px solid #bfbfbf;
-		margin-left: 5%;
-	}
-}
-
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
@@ -10671,7 +10664,7 @@ textarea {
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	.main-navigation ul ul.sub-menu {
 		border-top: 1px solid #d9d9d9;
 		border-left: 1px solid #d9d9d9;

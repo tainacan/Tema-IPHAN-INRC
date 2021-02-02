@@ -15,12 +15,6 @@
             margin-bottom: 10px;
         }
     }
-    .menu-item-has-children {
-        @media screen and (max-width: $screen__md) {
-            border-bottom: 1px solid $color__cinza4;
-            margin-left: 5%;
-        }
-    }
     ul {
         list-style: none;
         margin: 0;
@@ -32,7 +26,7 @@
             display: block;
         }
         ul.sub-menu {
-            @media screen and (min-width: $screen__md) {
+            @media screen and (min-width: $screen__sm) {
                 border-top: 1px solid $color__cinza3;
                 border-left: 1px solid $color__cinza3;
                 border-right: 1px solid $color__cinza3;
