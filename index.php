@@ -57,9 +57,16 @@ get_header();
 	?>
 </main><!-- #main -->
 <div class="banner-or">
-	<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr1.png')"></div>
-	<div class="separator-banner-footer"></div>
-	<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr2.png')"></div>
+	<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr1.png')">
+		<a>Explore o repositório</a>
+	</div>
+	<div class="banner-footer-or"><span class="text-banner-footer">ou</span></div>
+	<div class="separator-banner-footer">
+	</div>
+	<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr2.png')">
+		<a style="z-index:99">Acesse o repositório completo</a>
+	</div>
+
 </div>
 <?php
 get_footer();

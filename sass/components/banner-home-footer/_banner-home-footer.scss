@@ -34,3 +34,31 @@
     margin-top: 12%;
     z-index: 10;
 }
+
+.div-banner-buttons {
+    position: absolute;
+}
+
+.banner-footer-or {
+    position: absolute;
+    top: 35%;
+    z-index: 99;
+    width: 7%;
+    height: 30%;
+    padding: 20px;
+    background-color: $color__cinza2;
+    border-radius: 50%;
+    border: 3px solid $color__branco;
+}
+
+.text-banner-footer {
+    text-align: center;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 7%;
+    font-size: 3.125rem;
+    color: $color__vermelho1;
+    transform: rotate(0deg);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
