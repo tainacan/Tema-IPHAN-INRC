@@ -12333,24 +12333,36 @@ body:not(.home) .title-banner:last-child {
 	color: #ffffff !important;
 	font-weight: 900;
 	filter: brightness(100%);
-	margin-top: 16%;
-	margin-bottom: auto;
 	text-transform: uppercase;
 	background-color: rgba(255, 255, 255, 0.15);
 	flex-wrap: nowrap;
 	padding-left: 20px;
 	padding-right: 20px;
 	z-index: 7;
+	margin-right: 20%;
+	margin-bottom: auto;
+	position: relative;
+	margin-top: 9%;
 }
 
 .separator-banner-footer-horizontal {
-	padding: 5px;
+	padding: 2px;
 	background-color: #ffffff;
 	transform: rotate(0deg);
 	position: absolute;
-	width: 23%;
+	width: 20%;
 	margin-top: 11%;
 	z-index: 6;
+}
+
+.buttons-banner-footer {
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	margin-left: 27%;
+	position: absolute;
 }
 
 /*--------------------------------------------------------------
