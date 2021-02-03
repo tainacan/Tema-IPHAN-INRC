@@ -12277,6 +12277,7 @@ body:not(.home) .title-banner:last-child {
 .banner-footer:first-child {
 	position: absolute;
 	left: 0;
+	clip-path: polygon(0 0, 95% 0, 75% 100%, 0% 100%);
 }
 
 .banner-footer:last-child {
