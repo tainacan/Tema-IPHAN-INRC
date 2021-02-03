@@ -68,7 +68,6 @@
 .button-white-footer-banner {
     font-size: 1.5rem;
     border: 3px solid $color__branco;
-    width: 365px;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
@@ -79,4 +78,7 @@
     margin-bottom: auto;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.15);
+    flex-wrap: nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
 }
