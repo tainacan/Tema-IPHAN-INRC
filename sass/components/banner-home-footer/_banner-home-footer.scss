@@ -13,6 +13,8 @@
     height: 100%;
     background-size: cover;
     filter: brightness(70%);
+    display: flex;
+    justify-content: center;
 }
 .banner-footer:first-child {
     position: absolute;
@@ -74,7 +76,7 @@
     font-weight: 900;
     filter: brightness(100%);
     margin-top: 16%;
-    margin-left: 35%;
+    margin-bottom: auto;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.15);
 }
