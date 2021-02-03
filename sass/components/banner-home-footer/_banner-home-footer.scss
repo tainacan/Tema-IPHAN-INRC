@@ -9,8 +9,14 @@
 }
 
 .banner-footer {
-    width: 100%;
-    height: 100%;
+    @media screen and (min-width: $screen__sm) {
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (max-width: $screen__sm) {
+        width: 49%;
+        height: 100%;
+    }
     background-size: cover;
     filter: brightness(70%);
     display: flex;
@@ -19,13 +25,17 @@
 .banner-footer:first-child {
     position: absolute;
     left: 0;
-    clip-path: polygon(0 0, 95% 0, 75% 100%, 0% 100%);
+    @media screen and (min-width: $screen__sm) {
+        clip-path: polygon(0 0, 95% 0, 75% 100%, 0% 100%);
+    }
 }
 .banner-footer:last-child {
     position: absolute;
     right: 0;
     z-index: 5;
-    clip-path: polygon(25% 0, 100% 0, 100% 100%, 5% 100%);
+    @media screen and (min-width: $screen__sm) {
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 5% 100%);
+    }
 }
 
 .separator-banner-footer {
@@ -43,10 +53,15 @@
 }
 
 .banner-footer-or {
+    @media screen and (min-width: $screen__sm){
+        padding: 20px;
+    }
+    @media screen and (max-width: $screen__sm){
+        padding: 10px;
+    }
     position: absolute;
     top: 37%;
     z-index: 99;
-    padding: 20px;
     background-color: $color__cinza2;
     border-radius: 50%;
     border: 3px solid $color__branco;
@@ -79,17 +94,25 @@
 }
 
 .separator-banner-footer-horizontal {
-    padding: 2px;
-    background-color: $color__branco;
-    transform: rotate(0deg);
-    width: 20%;
-    z-index: 6;
+    @media screen and (min-width: $screen__sm){
+        padding: 2px;
+        background-color: $color__branco;
+        transform: rotate(0deg);
+        width: 20%;
+        z-index: 6;
+    }
 }
 .buttons-banner-footer {
     z-index: 10;
     display: flex;
-    justify-content: center;
     width: 100%;
     align-items: center;
     margin-left: 6%;
+    @media screen and (min-width: $screen__sm) {
+        justify-content: center;
+    }
+    @media screen and (max-width: $screen__sm) {
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
