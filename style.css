@@ -12290,7 +12290,6 @@ body:not(.home) .title-banner:last-child {
 	padding: 5px;
 	background-color: #ffffff;
 	transform: rotate(297deg);
-	z-index: 1;
 	position: absolute;
 	width: 35%;
 	margin-top: 12%;
@@ -12341,6 +12340,17 @@ body:not(.home) .title-banner:last-child {
 	flex-wrap: nowrap;
 	padding-left: 20px;
 	padding-right: 20px;
+	z-index: 7;
+}
+
+.separator-banner-footer-horizontal {
+	padding: 5px;
+	background-color: #ffffff;
+	transform: rotate(0deg);
+	position: absolute;
+	width: 23%;
+	margin-top: 11%;
+	z-index: 6;
 }
 
 /*--------------------------------------------------------------
