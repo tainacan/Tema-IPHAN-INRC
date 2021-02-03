@@ -80,27 +80,20 @@
     padding-left: 20px;
     padding-right: 20px;
     z-index: 7;
-    margin-right: 20%;
-    margin-bottom: auto;
-    position: relative;
-    margin-top: 9%;
 }
 
 .separator-banner-footer-horizontal {
     padding: 2px;
     background-color: $color__branco;
     transform: rotate(0deg);
-    position: absolute;
     width: 20%;
-    margin-top: 11%;
     z-index: 6;
 }
 .buttons-banner-footer {
     z-index: 10;
     display: flex;
     justify-content: center;
-    align-content: center;
     width: 100%;
-    margin-left: 27%;
-    position: absolute;
+    align-items: center;
+    margin-left: 6%;
 }
