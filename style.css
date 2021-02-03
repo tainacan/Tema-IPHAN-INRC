@@ -12316,7 +12316,7 @@ body:not(.home) .title-banner:last-child {
 	display: flex;
 	margin-left: 5%;
 	margin-top: 7%;
-	font-size: 3.125rem;
+	font-size: 2.5rem;
 	color: #58020b;
 	transform: rotate(0deg);
 	text-transform: uppercase;
