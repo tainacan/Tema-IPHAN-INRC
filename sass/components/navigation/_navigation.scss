@@ -166,9 +166,7 @@
             display: grid;
             text-align: right;
         }
-        /*         @media screen and (min-width: $screen__sm) {
-            border: 1px solid $color__branco;
-        } */
+
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             margin-left: 3%;
         }
@@ -181,13 +179,6 @@
             }
         }
     }
-
-    /*     ul > li > a {
-        @media screen and (min-width: $screen__sm) {
-            border: 1px solid $color__branco;
-            padding: 5px;
-        }
-    } */
 }
 
 a {
@@ -195,9 +186,6 @@ a {
     text-decoration: none;
 }
 
-/*     .menu > ul > li > a:hover {
-        text-decoration: underline;
-    } */
 /* Small menu. */
 
 .menu-toggle,

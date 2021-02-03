@@ -10620,12 +10620,6 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
 	display: block;
-	/*     ul > li > a {
-        @media screen and (min-width: $screen__sm) {
-            border: 1px solid $color__branco;
-            padding: 5px;
-        }
-    } */
 }
 
 @media screen and (max-width: 1024px) {
@@ -10811,9 +10805,6 @@ textarea {
 .main-navigation ul > li {
 	margin-right: 10px;
 	color: #58020b;
-	/*         @media screen and (min-width: $screen__sm) {
-            border: 1px solid $color__branco;
-        } */
 }
 
 @media screen and (max-width: 768px) {
@@ -10846,9 +10837,6 @@ a {
 	text-decoration: none;
 }
 
-/*     .menu > ul > li > a:hover {
-        text-decoration: underline;
-    } */
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
