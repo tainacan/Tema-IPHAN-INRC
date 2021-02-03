@@ -12305,8 +12305,6 @@ body:not(.home) .title-banner:last-child {
 	position: absolute;
 	top: 35%;
 	z-index: 99;
-	width: 7%;
-	height: 30%;
 	padding: 20px;
 	background-color: #e8e8e8;
 	border-radius: 50%;
