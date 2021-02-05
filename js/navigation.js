@@ -137,8 +137,18 @@ jQuery(document).ready(function () {
 		if (jQuery('.menu-toggle[aria-expanded="false"]')) {
 			jQuery('#primary-menu').css({ display: "none" });
 		}
+
+		
+		//alterar ao clicar no botão
+		$('.menu-toggle').click(function () {
+			if (jQuery('#primary-menu').css({ display: "block" })) {
+				jQuery('#primary-menu').css({ display: "none" })
+			} else {
+				jQuery('#primary-menu').css({ display: "block" })
+			}
+		})
 		if (jQuery('.menu-toggle[aria-expanded="true"]')) {
-/* 			jQuery('#primary-menu').css({ display: "block" }); */
+			/* 			jQuery('#primary-menu').css({ display: "block" }); */
 		}
 	}
 });
