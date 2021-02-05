@@ -59,7 +59,7 @@
         padding: 20px;
     }
     @media screen and (max-width: $screen__sm) {
-        padding: 10px;
+        padding: 20px;
     }
     position: absolute;
     top: 37%;
@@ -70,9 +70,14 @@
 }
 
 .text-banner-footer {
+    @media screen and (min-width: $screen__sm){
+        font-size: 2.5rem;
+    }
+    @media screen and (max-width: $screen__sm){
+        font-size: 2rem;
+    }
     text-align: center;
     display: flex;
-    font-size: 2.5rem;
     color: $color__vermelho1;
     transform: rotate(0deg);
     text-transform: uppercase;
