@@ -132,13 +132,14 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function () {
+	//Condição para o menu virar hamburguer
 	if (jQuery('#primary-menu li').length > 1) {
 		jQuery('.menu-toggle').css({ display: "block" });
 		if (jQuery('.menu-toggle[aria-expanded="false"]')) {
 			jQuery('#primary-menu').css({ display: "none" });
 		}
 
-		
+
 		//alterar ao clicar no botão
 		$('.menu-toggle').click(function () {
 			if (jQuery('#primary-menu').css({ display: "block" })) {
@@ -147,6 +148,7 @@ jQuery(document).ready(function () {
 				jQuery('#primary-menu').css({ display: "block" })
 			}
 		})
+		//Mostrar o menu caso o aria expanded seja True
 		if (jQuery('.menu-toggle[aria-expanded="true"]')) {
 			/* 			jQuery('#primary-menu').css({ display: "block" }); */
 		}
