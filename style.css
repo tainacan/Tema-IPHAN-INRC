@@ -12305,7 +12305,7 @@ body:not(.home) .title-banner:last-child {
 
 @media screen and (min-width: 768px) {
 	.banner-footer:last-child {
-		clip-path: polygon(25% 0, 100% 0, 100% 100%, 5% 100%);
+		clip-path: polygon(24.5% 0, 100% 0, 100% 100%, 4.5% 100%);
 	}
 }
 

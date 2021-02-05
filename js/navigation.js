@@ -130,3 +130,9 @@ jQuery(document).ready(function ($) {
 		});
 	}
 }); 
+
+jQuery(document).ready(function(){
+    if ( jQuery('#primary-menu li').length > 5 ) { 
+        jQuery('.menu-toggle').show();
+    }
+});
