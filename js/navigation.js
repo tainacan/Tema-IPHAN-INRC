@@ -129,11 +129,16 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	}
-}); 
+});
 
-jQuery(document).ready(function(){
-    if ( jQuery('#primary-menu li').length > 5 ) { 
-		jQuery('.menu-toggle').show();
-		window.clien
-    }
+jQuery(document).ready(function () {
+	if (jQuery('#primary-menu li').length > 1) {
+		jQuery('.menu-toggle').css({ display: "block" });
+		if (jQuery('.menu-toggle[aria-expanded="false"]')) {
+			jQuery('#primary-menu').css({ display: "none" });
+		}
+		if (jQuery('.menu-toggle[aria-expanded="true"]')) {
+/* 			jQuery('#primary-menu').css({ display: "block" }); */
+		}
+	}
 });

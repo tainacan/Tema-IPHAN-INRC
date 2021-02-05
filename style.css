@@ -10879,10 +10879,8 @@ a {
 	fill: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
-	.menu-toggle[aria-expanded="true"] > svg > path {
-		fill: #58020b;
-	}
+.menu-toggle[aria-expanded="true"] > svg > path {
+	fill: #58020b;
 }
 
 @media screen and (max-width: 768px) {
@@ -10891,9 +10889,12 @@ a {
 	}
 }
 
+.menu-toggle[aria-expanded="true"] {
+	background: #ffffff;
+}
+
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.menu-toggle[aria-expanded="true"] {
-		background: #ffffff;
 		border: none;
 		padding-top: 5px;
 		padding-left: 15px;
@@ -10907,7 +10908,6 @@ a {
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
 	.menu-toggle[aria-expanded="true"] {
-		background: #ffffff;
 		border: none;
 		padding-top: 26px;
 		padding-left: 37px;
@@ -10921,7 +10921,6 @@ a {
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.menu-toggle[aria-expanded="true"] {
-		background: #ffffff;
 		border: none;
 		padding-top: 20px;
 		padding-left: 45px;
@@ -10932,7 +10931,7 @@ a {
 	}
 }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media screen and (orientation: portrait) {
 	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		border: none;
