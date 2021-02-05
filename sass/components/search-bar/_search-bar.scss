@@ -9,6 +9,8 @@
     font-style: italic;
     padding-bottom: 0px;
     top: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .search-form > i::before {
     position: absolute;

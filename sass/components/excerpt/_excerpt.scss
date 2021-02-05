@@ -59,6 +59,12 @@
 
 .date-exerpt {
     bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    display: block;
+    padding-right: 10px;
 }
 
 .ultimas-noticias {
@@ -90,4 +96,8 @@
 }
 .categoria-excerpt {
     font-size: 0.875rem;
+}
+
+.date-excerpt-position {
+    overflow: hidden;
 }

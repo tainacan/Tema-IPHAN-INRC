@@ -12197,6 +12197,12 @@ body:not(.home) .title-banner:last-child {
 
 .date-exerpt {
 	bottom: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	display: block;
+	padding-right: 10px;
 }
 
 .ultimas-noticias {
@@ -12232,6 +12238,10 @@ body:not(.home) .title-banner:last-child {
 	font-size: 0.875rem;
 }
 
+.date-excerpt-position {
+	overflow: hidden;
+}
+
 /* excerpt
 --------------------------------------------- */
 .search-bar-home {
@@ -12245,6 +12255,8 @@ body:not(.home) .title-banner:last-child {
 	font-style: italic;
 	padding-bottom: 0px;
 	top: 5%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .search-form > i::before {
@@ -12267,6 +12279,7 @@ body:not(.home) .title-banner:last-child {
 }
 
 .banner-footer {
+	width: 100%;
 	background-size: cover;
 	filter: brightness(70%);
 	display: flex;
@@ -12275,15 +12288,13 @@ body:not(.home) .title-banner:last-child {
 
 @media screen and (min-width: 768px) {
 	.banner-footer {
-		width: 100%;
 		height: 100%;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.banner-footer {
-		width: 49%;
-		height: 100%;
+		height: 49%;
 	}
 }
 
@@ -12300,13 +12311,19 @@ body:not(.home) .title-banner:last-child {
 
 .banner-footer:last-child {
 	position: absolute;
-	right: 0;
 	z-index: 5;
 }
 
 @media screen and (min-width: 768px) {
 	.banner-footer:last-child {
+		right: 0;
 		clip-path: polygon(24.5% 0, 100% 0, 100% 100%, 4.5% 100%);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.banner-footer:last-child {
+		bottom: 0;
 	}
 }
 
@@ -12372,6 +12389,12 @@ body:not(.home) .title-banner:last-child {
 	z-index: 7;
 }
 
+@media screen and (max-width: 768px) {
+	.button-white-footer-banner {
+		margin-left: 0 !important;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.separator-banner-footer-horizontal {
 		padding: 2px;
@@ -12387,12 +12410,12 @@ body:not(.home) .title-banner:last-child {
 	display: flex;
 	width: 100%;
 	align-items: center;
-	margin-left: 6%;
 }
 
 @media screen and (min-width: 768px) {
 	.buttons-banner-footer {
 		justify-content: center;
+		margin-left: 6%;
 	}
 }
 
@@ -12400,7 +12423,12 @@ body:not(.home) .title-banner:last-child {
 	.buttons-banner-footer {
 		flex-direction: column;
 		justify-content: space-around;
+		margin-left: 0px;
 	}
+}
+
+.wp-block-button {
+	white-space: nowrap;
 }
 
 /*--------------------------------------------------------------
