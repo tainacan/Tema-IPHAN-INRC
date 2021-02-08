@@ -139,20 +139,14 @@ jQuery(document).ready(function () {
 			jQuery('#primary-menu').addClass("collapse");
 		}
 		jQuery('#primary-menu').addClass("hamburguer-desktop");
-		jQuery('#primary-menu').removeClass("sub-menu before");
-		jQuery('#primary-menu').removeClass("sub-menu after");
-
-		//alterar ao clicar no botão
-		$('.menu-toggle').click(function () {
-			if (jQuery('#primary-menu').css({ display: "block" })) {
-				jQuery('#primary-menu').css({ display: "none" })
-			} else {
-				jQuery('#primary-menu').css({ display: "block" })
-			}
-		})
-		//Mostrar o menu caso o aria expanded seja True
-		if (jQuery('.menu-toggle[aria-expanded="true"]')) {
-			/* 			jQuery('#primary-menu').css({ display: "block" }); */
-		}
+		jQuery(".sub-menu").css({
+			display: "flex", position: "relative",
+			flexDirection: "column", border: "none", position: "relative", left: "0", padding: "0px"
+		});
+		jQuery(".menu-item").css({
+			display: "flex",
+			flexDirection: "column",
+			alignItems: "flex-end",
+		});
 	}
 });

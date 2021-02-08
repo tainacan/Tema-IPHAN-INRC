@@ -374,6 +374,9 @@ a {
     background-repeat: no-repeat;
     display: none;
 }
+.hamburguer-desktop .sub-menu > li > a {
+    color: $color__cinza6 !important;
+}
 
 .toggled {
     .hamburguer-desktop {
@@ -384,6 +387,7 @@ a {
         width: 30%;
         height: 50%;
         z-index: 20;
+        padding: 20px;
     }
     .hamburguer-desktop a {
         color: $color__vermelho1 !important;
@@ -398,9 +402,7 @@ a {
         padding-right: 0 !important;
         border: none;
     }
-    .hamburguer-desktop .sub-menu > li > a {
-        color: $color__cinza6 !important;
-    }
+
     .menu {
         @media screen and (max-width: $screen__xs) and (orientation: portrait) {
             position: absolute;

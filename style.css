@@ -11048,6 +11048,10 @@ a {
 	display: none;
 }
 
+.hamburguer-desktop .sub-menu > li > a {
+	color: #515151 !important;
+}
+
 .toggled .hamburguer-desktop {
 	position: absolute;
 	top: 8.5%;
@@ -11056,6 +11060,7 @@ a {
 	width: 30%;
 	height: 50%;
 	z-index: 20;
+	padding: 20px;
 }
 
 .toggled .hamburguer-desktop a {
@@ -11071,10 +11076,6 @@ a {
 	margin-right: 0 !important;
 	padding-right: 0 !important;
 	border: none;
-}
-
-.toggled .hamburguer-desktop .sub-menu > li > a {
-	color: #515151 !important;
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
