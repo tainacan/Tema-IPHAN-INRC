@@ -148,5 +148,6 @@ jQuery(document).ready(function () {
 			flexDirection: "column",
 			alignItems: "flex-end",
 		});
+		jQuery(".main-navigation ul ul.sub-menu li.menu-item:not(:last-child)").css({ border: "none" })
 	}
 });
