@@ -11048,6 +11048,35 @@ a {
 	display: none;
 }
 
+.toggled .hamburguer-desktop {
+	position: absolute;
+	top: 8.5%;
+	right: 0%;
+	background: #ffffff;
+	width: 30%;
+	height: 50%;
+	z-index: 20;
+}
+
+.toggled .hamburguer-desktop a {
+	color: #58020b !important;
+	text-decoration: none !important;
+	font-weight: bold;
+}
+
+.toggled .hamburguer-desktop li.menu-item {
+	text-align: right;
+	line-height: 1.5;
+	justify-content: flex-end;
+	margin-right: 0 !important;
+	padding-right: 0 !important;
+	border: none;
+}
+
+.toggled .hamburguer-desktop .sub-menu > li > a {
+	color: #515151 !important;
+}
+
 @media screen and (max-width: 320px) and (orientation: portrait) {
 	.toggled .menu {
 		position: absolute;

@@ -225,7 +225,7 @@ a {
 }
 
 .menu-toggle[aria-expanded="true"] > svg > path {
-        fill: $color__vermelho1;
+    fill: $color__vermelho1;
 }
 
 .menu-toggle[aria-expanded="false"] > svg > path {
@@ -376,6 +376,31 @@ a {
 }
 
 .toggled {
+    .hamburguer-desktop {
+        position: absolute;
+        top: 8.5%;
+        right: 0%;
+        background: $color__branco;
+        width: 30%;
+        height: 50%;
+        z-index: 20;
+    }
+    .hamburguer-desktop a {
+        color: $color__vermelho1 !important;
+        text-decoration: none !important;
+        font-weight: bold;
+    }
+    .hamburguer-desktop li.menu-item {
+        text-align: right;
+        line-height: 1.5;
+        justify-content: flex-end;
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+        border: none;
+    }
+    .hamburguer-desktop .sub-menu > li > a {
+        color: $color__cinza6 !important;
+    }
     .menu {
         @media screen and (max-width: $screen__xs) and (orientation: portrait) {
             position: absolute;
