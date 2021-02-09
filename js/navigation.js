@@ -161,10 +161,10 @@ jQuery(document).ready(function () {
 			flexDirection: "column",
 			alignItems: "flex-end",
 		});
-		jQuery(".main-navigation ul ul.sub-menu li.menu-item:not(:last-child)").css({ border: "none" })
-		jQuery("li.menu-item-has-children::after").css({ display: "none" })
-		jQuery("li.menu-item-has-children::before").css({ display: "none" })
-		jQuery(".sub-menu > .menu-item:first-child > a").css({ marginTop: "10px" })
-		jQuery(".sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" })
+		jQuery(".main-navigation ul ul.sub-menu li.menu-item:not(:last-child)").css({ border: "none" });
+		jQuery(".sub-menu > .menu-item:first-child > a").css({ marginTop: "10px" });
+		jQuery(".sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" });
+		jQuery("li.menu-item-has-children::after").after().css({ display: "none" });
+		jQuery(".sub-menu").after().css({ content: "none" });
 	}
 });

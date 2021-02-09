@@ -10790,17 +10790,8 @@ textarea {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.main-navigation ul > li.menu-item-has-children::after {
-		display: block;
-		content: "\0231C";
-		font-size: 1.5rem;
-		transform: rotate(225deg);
-		color: #ffffff;
-		position: relative;
-		right: -15px;
-		top: -8px;
-	}
+.main-navigation ul .hamburguer-desktop .menu-item-has-children::after {
+	display: none;
 }
 
 .main-navigation ul > li {
@@ -10831,6 +10822,23 @@ textarea {
 		text-decoration: none !important;
 		font-weight: bold;
 	}
+}
+
+@media screen and (min-width: 768px) {
+	.menu-item-has-children::after {
+		display: block;
+		content: "\0231C";
+		font-size: 1.5rem;
+		transform: rotate(225deg);
+		color: #ffffff;
+		position: relative;
+		right: -15px;
+		top: -8px;
+	}
+}
+
+.hamburguer-desktop .menu-item-has-children::after {
+	display: none;
 }
 
 a {
@@ -11056,6 +11064,11 @@ a {
     display: none;
     content: none;
 } */
+.remove-after-before::after,
+.remove-after-before::before {
+	display: none;
+}
+
 .toggled .hamburguer-desktop {
 	position: absolute;
 	top: 84px;
