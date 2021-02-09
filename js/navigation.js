@@ -141,8 +141,6 @@ jQuery('.menu-toggle').click(function () {
 });
 
 jQuery(document).ready(function () {
-	/* 	let tamanhoMenu = jQuery(document).width();
-		console.log(Math.round(tamanhoMenu / 300)) */
 	//Condição para o menu virar hamburguer
 	if (jQuery('#primary-menu li').length > 6) {
 		jQuery('.menu-toggle').css({
