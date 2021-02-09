@@ -377,6 +377,10 @@ a {
 .hamburguer-desktop .sub-menu > li > a {
     color: $color__cinza6 !important;
 }
+/* .hamburguer-desktop .menu-item-has-children::after {
+    display: none;
+    content: none;
+} */
 
 .toggled {
     .hamburguer-desktop {
@@ -388,6 +392,9 @@ a {
         height: 50%;
         z-index: 20;
         padding: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-top: 50px;
     }
     .hamburguer-desktop a {
         color: $color__vermelho1 !important;

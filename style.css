@@ -11052,6 +11052,10 @@ a {
 	color: #515151 !important;
 }
 
+/* .hamburguer-desktop .menu-item-has-children::after {
+    display: none;
+    content: none;
+} */
 .toggled .hamburguer-desktop {
 	position: absolute;
 	top: 84px;
@@ -11061,6 +11065,9 @@ a {
 	height: 50%;
 	z-index: 20;
 	padding: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-top: 50px;
 }
 
 .toggled .hamburguer-desktop a {
