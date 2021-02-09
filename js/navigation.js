@@ -131,10 +131,10 @@ jQuery(document).ready(function ($) {
 	}
 });
 jQuery('.menu-toggle').click(function () {
-	if (jQuery('#primary-menu').hasClass("collapse")) {
+	if (jQuery('#primary-menu').hasClass("collapse") && jQuery('.menu-toggle[aria-expanded="false"]') == true) {
 		jQuery('#primary-menu').removeClass("collapse");
 		jQuery('#primary-menu').addClass("show");
-	} else {
+	} else if (jQuery('#primary-menu').hasClass("show") && jQuery('.menu-toggle[aria-expanded="false"]') == false) {
 		jQuery('#primary-menu').removeClass("show");
 		jQuery('#primary-menu').addClass("collapse");
 	}
