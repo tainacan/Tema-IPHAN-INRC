@@ -486,3 +486,22 @@ a {
     background-color: $color__vermelho1;
     color: $color__branco;
 }
+
+// Posts Navigation
+
+.nav-previous > a {
+    display: none;
+}
+
+.pagination > .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.pagination > .nav-links > a {
+    padding-right: 8px;
+}
+
+.pagination > .nav-links > span {
+    padding-right: 8px;
+}

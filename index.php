@@ -39,7 +39,7 @@ get_header();
 		// Função para limitar a quantidade de posts por pesquisa
 		$args = array('post_type' => 'post', 'posts_per_page' => 1, 'paged' => $paged);
 		$wp_query = new WP_Query($args);
-		
+
 		/* Start the Loop */
 		while (have_posts()) :
 			the_post();
@@ -59,6 +59,8 @@ get_header();
 		get_template_part('template-parts/content', 'none');
 
 	endif;
+	the_posts_pagination();
+
 	?>
 </main><!-- #main -->
 <div class="banner-or">

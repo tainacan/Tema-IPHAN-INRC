@@ -11171,6 +11171,24 @@ a {
 	color: #ffffff;
 }
 
+.nav-previous > a {
+	display: none;
+}
+
+.pagination > .nav-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.pagination > .nav-links > a {
+	padding-right: 8px;
+}
+
+.pagination > .nav-links > span {
+	padding-right: 8px;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
