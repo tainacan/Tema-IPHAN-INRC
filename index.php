@@ -33,12 +33,7 @@ get_header();
 		echo '<input class="has-icon-right search-bar-home col-md-12" name="s" placeholder="Busque por notícias" value=' . get_search_query() . '><i size="50px" class="tainacan-icon tainacan-icon-search"></i>';
 		echo '</form>';
 		echo '</div>';
-
 		echo '<div class="entry-content"><ul class="alignwide">';
-
-		// Função para limitar a quantidade de posts por pesquisa
-		$args = array('post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged);
-		$wp_query = new WP_Query($args);
 
 		/* Start the Loop */
 		while (have_posts()) :
@@ -51,15 +46,13 @@ get_header();
 				 */
 			get_template_part('template-parts/list-post');
 		endwhile;
-		the_posts_navigation();
-
+		the_posts_pagination(array('mid_size' => 2));
 		echo '</ul></div>';
 
 	else :
 		get_template_part('template-parts/content', 'none');
 
 	endif;
-	the_posts_pagination();
 
 	?>
 </main><!-- #main -->
