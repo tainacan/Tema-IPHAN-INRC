@@ -502,10 +502,18 @@ a {
     padding-right: 8px;
 }
 
+.pagination > .nav-links > a:last-child {
+    padding-right: 0px;
+}
+
 .pagination > .nav-links > span {
     padding-left: 4px;
     padding-right: 4px;
     margin-right: 8px;
     background-color: $color__vermelho1;
     color: $color__branco;
+}
+
+.navigation > .nav-links {
+    padding-right: 0px;
 }

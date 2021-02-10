@@ -11185,12 +11185,20 @@ a {
 	padding-right: 8px;
 }
 
+.pagination > .nav-links > a:last-child {
+	padding-right: 0px;
+}
+
 .pagination > .nav-links > span {
 	padding-left: 4px;
 	padding-right: 4px;
 	margin-right: 8px;
 	background-color: #58020b;
 	color: #ffffff;
+}
+
+.navigation > .nav-links {
+	padding-right: 0px;
 }
 
 /* Posts and pages
