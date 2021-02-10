@@ -36,6 +36,8 @@ get_header();
 
 		echo '<div class="entry-content"><ul class="alignwide">';
 		/* Start the Loop */
+		$args = array('post_type' => 'post', 'posts_per_page' => 1, 'paged' => $paged);
+		$wp_query = new WP_Query($args);
 		while (have_posts()) :
 			the_post();
 
