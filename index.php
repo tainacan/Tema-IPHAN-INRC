@@ -37,7 +37,7 @@ get_header();
 		echo '<div class="entry-content"><ul class="alignwide">';
 
 		// Função para limitar a quantidade de posts por pesquisa
-		$args = array('post_type' => 'post', 'posts_per_page' => 1, 'paged' => $paged);
+		$args = array('post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged);
 		$wp_query = new WP_Query($args);
 
 		/* Start the Loop */
