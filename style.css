@@ -10065,6 +10065,10 @@ html {
 	width: 100%;
 }
 
+.entry-header .post-thumbnail {
+	margin-top: 0px;
+}
+
 .entry-header > *,
 .entry-content > *:not(.alignwide):not(.alignfull),
 .entry-footer > *,
