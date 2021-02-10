@@ -10075,7 +10075,8 @@ html {
 .navigation > *,
 .comments-area > *,
 .alignfull .wp-block-group:not(.alignwide):not(.alignfull),
-.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+.alignfull .wp-block-columns:not(.alignwide):not(.alignfull),
+.post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 4.73%;
@@ -10093,7 +10094,8 @@ html {
 	.navigation > *,
 	.comments-area > *,
 	.alignfull .wp-block-group:not(.alignwide):not(.alignfull),
-	.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+	.alignfull .wp-block-columns:not(.alignwide):not(.alignfull),
+	.post-thumbnail {
 		max-width: 74.2%;
 		width: 100%;
 	}
@@ -10149,8 +10151,8 @@ html {
 	max-width: 1446px;
 	width: 100%;
 	width: 100vw;
-	margin-left: calc(-1 * (1446px - 100%)/2);
-	margin-right: calc(-1 * (1446px - 100%)/2);
+	margin-left: calc(-1 * (1446px - 100%) / 2);
+	margin-right: calc(-1 * (1446px - 100%) / 2);
 }
 
 @media screen and (max-width: 1460px) {
@@ -10168,8 +10170,8 @@ html {
 	width: 100%;
 	max-width: 100vw;
 	width: 100vw;
-	margin-left: calc(-1 * (100vw - 100%)/2);
-	margin-right: calc(-1 * (100vw - 100%)/2);
+	margin-left: calc(-1 * (100vw - 100%) / 2);
+	margin-right: calc(-1 * (100vw - 100%) / 2);
 }
 
 .alignfull {

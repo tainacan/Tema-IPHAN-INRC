@@ -4,25 +4,26 @@
     padding-left: $container__side-padding;
     padding-right: $container__side-padding;
     max-width: $container__max-width;
-    width: 100%; 
+    width: 100%;
 }
 .entry-header .post-thumbnail {
     margin-top: 0px;
 }
 
-.entry-header>*,
-.entry-content>*:not(.alignwide):not(.alignfull),
-.entry-footer>*,
-.navigation>*,
-.comments-area>*,
+.entry-header > *,
+.entry-content > *:not(.alignwide):not(.alignfull),
+.entry-footer > *,
+.navigation > *,
+.comments-area > *,
 .alignfull .wp-block-group:not(.alignwide):not(.alignfull),
-.alignfull .wp-block-columns:not(.alignwide):not(.alignfull) {
+.alignfull .wp-block-columns:not(.alignwide):not(.alignfull),
+.post-thumbnail {
     margin-left: auto;
     margin-right: auto;
     padding-left: $container__side-padding;
     padding-right: $container__side-padding;
     max-width: $container__inner_max-width;
-    width: 66.66%;  // 8 colunas descontado o padding
+    width: 66.66%; // 8 colunas descontado o padding
 
     margin-top: 28px;
     margin-bottom: 28px;
@@ -33,7 +34,7 @@
     }
 }
 .alignfull .wp-block-group {
-    padding-left: 2.36%; 
+    padding-left: 2.36%;
     padding-right: 2.36%;
 }
 .alignfull .wp-block-group:not(.alignwide):not(.alignfull),
@@ -48,7 +49,9 @@
         width: 100vw;
     }
 }
-.entry-footer>* { display: block; }
+.entry-footer > * {
+    display: block;
+}
 
 .alignwide,
 .alignfull .wp-block-group.alignwide,
@@ -70,8 +73,8 @@
     max-width: $container__inner_wide_max-width;
     width: 100%;
     width: 100vw;
-    margin-left: calc(-1 * (1446px - 100%)/2);
-    margin-right: calc(-1 * (1446px - 100%)/2);
+    margin-left: calc(-1 * (1446px - 100%) / 2);
+    margin-right: calc(-1 * (1446px - 100%) / 2);
 
     @media screen and (max-width: 1460px) {
         width: 100%;
@@ -85,10 +88,10 @@
     width: 100%;
     max-width: 100vw;
     width: 100vw;
-    margin-left: calc(-1 * (100vw - 100%)/2);
-    margin-right: calc(-1 * (100vw - 100%)/2);
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    margin-right: calc(-1 * (100vw - 100%) / 2);
 }
- 
+
 .alignfull {
     padding-left: 0;
     padding-right: 0;
