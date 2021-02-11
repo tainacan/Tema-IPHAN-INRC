@@ -11266,6 +11266,17 @@ a {
 	height: 100px;
 }
 
+.comment-form-author {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment-form-author > label {
+	color: #58020b;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {

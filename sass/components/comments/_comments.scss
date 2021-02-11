@@ -14,3 +14,14 @@
 .comment-form-comment > textarea {
 	height: 100px;
 }
+
+.comment-form-author {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment-form-author > label {
+	color: $color__vermelho1;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
