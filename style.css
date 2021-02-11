@@ -11257,6 +11257,11 @@ a {
 	display: block;
 }
 
+.comments-area > h2,
+.comment-author > .says {
+	display: none;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {

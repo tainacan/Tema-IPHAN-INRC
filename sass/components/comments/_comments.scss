@@ -5,3 +5,8 @@
 .bypostauthor {
 	display: block;
 }
+
+.comments-area > h2,
+.comment-author > .says {
+	display: none;
+}
