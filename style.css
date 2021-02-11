@@ -11222,6 +11222,10 @@ a {
 	background-color: #58020b;
 }
 
+.navigation {
+	margin-top: 85px !important;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
