@@ -11277,6 +11277,15 @@ a {
 	margin-bottom: 20px;
 }
 
+.comment-form-author > input {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 0px;
+	width: 40%;
+	margin-bottom: 20px;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
