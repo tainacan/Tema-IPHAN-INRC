@@ -46,7 +46,11 @@ get_header();
 				 */
 			get_template_part('template-parts/list-post');
 		endwhile;
-		the_posts_pagination(array('mid_size' => 2));
+		the_posts_pagination(array(
+			'mid_size' => 2,
+			'prev_text'          => __('<i size="50px" class="tainacan-icon tainacan-icon-previous"></i>'),
+			'next_text'          => __('<i size="50px" class="tainacan-icon tainacan-icon-next"></i>'),
+		));
 		echo '</ul></div>';
 
 	else :
