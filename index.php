@@ -14,6 +14,8 @@
  */
 
 get_header();
+get_template_part('template-parts/site-banner');
+custom_breadcrumbs(); 
 ?>
 <main id="primary" class="site-main site-container">
 
