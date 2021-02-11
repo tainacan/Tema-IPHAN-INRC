@@ -81,16 +81,16 @@ if (!function_exists('iphan_inrc_setup')) :
 			'flex-width'         => false,
 			'flex-height'        => false,
 		);
-		add_theme_support( 'custom-header', $header_args );
+		add_theme_support('custom-header', $header_args);
 
 		$header_images = array(
 			'praia' => array(
-					'url'           => get_template_directory_uri() . '/assets/images/banner.png',
-					'thumbnail_url' => get_template_directory_uri() . '/assets/images/banner.png',
-					'description'   => 'Um cenário de uma pria brasileira.',
+				'url'           => get_template_directory_uri() . '/assets/images/banner.png',
+				'thumbnail_url' => get_template_directory_uri() . '/assets/images/banner.png',
+				'description'   => 'Um cenário de uma pria brasileira.',
 			),
 		);
-		register_default_headers( $header_images );
+		register_default_headers($header_images);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
@@ -116,19 +116,19 @@ if (!function_exists('iphan_inrc_setup')) :
 		/* Editor (Gutenberg side) Styles */
 		add_theme_support('editor-styles');
 		add_editor_style(get_template_directory_uri() . '/editor-style.css');
-		
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
- 
+
 /**
  * Enqueueing Google Font wasn't working on wp_enqueue_scripts so we handle here
  */
-function iphan_inrc_head_extra_enqueues() {
-    ?>
-        <link rel="preconnect" href="https://fonts.gstatic.com"> 
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet"> 
-    <?php
+function iphan_inrc_head_extra_enqueues()
+{
+?>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+<?php
 }
 add_action('wp_head', 'iphan_inrc_head_extra_enqueues');
 
@@ -177,22 +177,22 @@ function iphan_inrc_scripts()
 	}
 
 	// Scripts necessary for using the gallery modal
-	wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), IPHAN_INRC_VERSION );
-	wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), IPHAN_INRC_VERSION, true );	 
-	wp_enqueue_style( 'photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css', array(), IPHAN_INRC_VERSION );
-	wp_enqueue_style( 'photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css', array(), IPHAN_INRC_VERSION );
-	wp_enqueue_script( 'photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js', array(), IPHAN_INRC_VERSION, true );	 
-	wp_enqueue_script( 'photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js', array(), IPHAN_INRC_VERSION, true );	 
-	wp_enqueue_script( 'blocksy-tainacan-scripts__swiper', get_stylesheet_directory_uri() . '/js/media-carousel.js', ['swiper', 'photoswipe', 'photoswipe-skin'], IPHAN_INRC_VERSION, true );
-
+	wp_enqueue_style('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), IPHAN_INRC_VERSION);
+	wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), IPHAN_INRC_VERSION, true);
+	wp_enqueue_style('photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css', array(), IPHAN_INRC_VERSION);
+	wp_enqueue_style('photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css', array(), IPHAN_INRC_VERSION);
+	wp_enqueue_script('photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js', array(), IPHAN_INRC_VERSION, true);
+	wp_enqueue_script('photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js', array(), IPHAN_INRC_VERSION, true);
+	wp_enqueue_script('blocksy-tainacan-scripts__swiper', get_stylesheet_directory_uri() . '/js/media-carousel.js', ['swiper', 'photoswipe', 'photoswipe-skin'], IPHAN_INRC_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
-function iphan_inrc_enqueue_editor_scripts() {
+function iphan_inrc_enqueue_editor_scripts()
+{
 	// Logic for changing core/button via wp.hooks
 	wp_enqueue_script('iphan_inrc-blocks', get_template_directory_uri() . '/js/blocks.js', array(), IPHAN_INRC_VERSION, true);
 }
-add_action( 'enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts' );
+add_action('enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts');
 
 /**
  * Implement the Custom Header feature.
@@ -227,7 +227,10 @@ require get_template_directory() . '/template-parts/color-palette.php';
 require get_template_directory() . '/template-parts/breadcrumb.php';
 
 //excerpts
-require get_template_directory() . '/template-parts/excerpts.php';	
+require get_template_directory() . '/template-parts/excerpts.php';
+
+//comments
+require get_template_directory() . '/template-parts/comments.php';
 
 /**
  * Load Jetpack compatibility file.
