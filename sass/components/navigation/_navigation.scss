@@ -517,3 +517,17 @@ a {
 .navigation > .nav-links {
     padding-right: 0px;
 }
+
+.nav-links > .prev,
+.nav-links > .next {
+    border: 1px solid $color__vermelho1;
+    padding-left: 4px;
+    padding-right: 4px !important;
+    margin-right: 8px;
+}
+
+.nav-links > .prev:hover,
+.nav-links > .next:hover {
+    color: $color__branco;
+    background-color: $color__vermelho1;
+}
