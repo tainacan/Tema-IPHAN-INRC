@@ -53,3 +53,9 @@ li::marker {
 	/* font-variant-numeric: unset; */
 	list-style-type: none;
 }
+
+.comment-list > li {
+	border-bottom: 1px solid $color__cinza3;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+}

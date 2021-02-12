@@ -57,6 +57,7 @@ if (post_password_required()) {
 				$date = date("m/d/Y");
 				return $date;
 			}
+/* 			get_comment_date('d\/m\/Y'); */
 			wp_list_comments(
 				array(
 					'style'      => 'ol',

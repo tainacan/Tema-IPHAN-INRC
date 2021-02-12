@@ -22,10 +22,11 @@ add_filter('comment_form_fields', 'comment_fields_custom_order');
 
 function remove_comment_time($date, $d, $comment)
 {
+	
 	if (!is_admin()) {
 		return;
 	} else {
 		return $date;
 	}
 }
-add_filter('get_comment_time', 'remove_comment_time', 10, 6);
+add_filter('get_comment_time', 'remove_comment_time', 10,4);
