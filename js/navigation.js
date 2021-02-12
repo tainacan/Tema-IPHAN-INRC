@@ -175,6 +175,7 @@ jQuery(function ($) {
 	});
 });
 
+// Função para remover os itens desnecessários do datetime nos comentários
 jQuery(function ($) {
 	var dateTime = document.getElementsByTagName('time');
 	for (let i = 0; i < dateTime.length; i++) {
