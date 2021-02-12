@@ -54,10 +54,10 @@ if (post_password_required()) {
 			add_filter('get_comment_date', 'wp_comment_date');
 			function wp_comment_date($date)
 			{
-				$date = date("m/d/Y");
+				$date = date("d/m/Y");
 				return $date;
 			}
-/* 			get_comment_date('d\/m\/Y'); */
+			/* 			get_comment_date('d\/m\/Y'); */
 			wp_list_comments(
 				array(
 					'style'      => 'ol',

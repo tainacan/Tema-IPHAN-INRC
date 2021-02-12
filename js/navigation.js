@@ -174,3 +174,10 @@ jQuery(function ($) {
 		}
 	});
 });
+
+jQuery(function ($) {
+	var dateTime = document.getElementsByTagName('time');
+	for (let i = 0; i < dateTime.length; i++) {
+		dateTime[i].innerText = dateTime[i].innerText.replace(" às", "")
+	}
+});
