@@ -164,3 +164,13 @@ jQuery(document).ready(function () {
 		jQuery(".sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" });
 	}
 });
+
+jQuery(function ($) {
+	var commentEmail = $('#email');
+	commentEmail.removeAttr('required'); // remove required attribute of textarea.
+	$('#commentform').on('submit', function () {
+		if (commentEmail.val() == '') {
+			commentEmail.css('text-indent', '-999px').val('a');
+		}
+	});
+});
