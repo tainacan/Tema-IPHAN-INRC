@@ -30,3 +30,9 @@ function remove_comment_time($date, $d, $comment)
 	}
 }
 add_filter('get_comment_time', 'remove_comment_time', 10, 3);
+
+function timeago($type = 'post')
+{
+	$d = 'comment' == $type ? 'get_comment_time' : 'get_post_time';
+	return human_time_diff($d('U'), current_time('timestamp')) . " " . __('ago');
+}

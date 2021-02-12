@@ -51,12 +51,15 @@ if (post_password_required()) {
 
 		<ol class="comment-list">
 			<?php
-			add_filter('get_comment_date', 'wp_comment_date');
 			function wp_comment_date($date)
 			{
 				$date = date("d/m/Y");
 				return $date;
 			}
+			add_filter('get_comment_date', 'wp_comment_date');
+
+			timeago();
+			
 			wp_list_comments(
 				array(
 					'style'      => 'ol',
