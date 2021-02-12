@@ -48,7 +48,13 @@
 	margin-bottom: 20px;
 }
 
-li::marker {
+.children .comment-meta:last-child {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.comment-meta:last-child li::marker {
 	display: none;
 	/* font-variant-numeric: unset; */
 	list-style-type: none;
