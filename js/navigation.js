@@ -165,16 +165,6 @@ jQuery(document).ready(function () {
 	}
 });
 
-jQuery(function ($) {
-	var commentEmail = $('#email');
-	commentEmail.removeAttr('required'); // remove required attribute of textarea.
-	$('#commentform').on('submit', function () {
-		if (commentEmail.val() == '') {
-			commentEmail.css('text-indent', '-999px').val('a');
-		}
-	});
-});
-
 // Função para remover os itens desnecessários do datetime nos comentários
 jQuery(function ($) {
 	var dateTime = document.getElementsByTagName('time');

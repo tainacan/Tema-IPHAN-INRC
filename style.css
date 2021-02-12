@@ -11317,6 +11317,10 @@ li > article {
 	margin-bottom: 20px;
 }
 
+.comments-area li {
+	list-style: none;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
