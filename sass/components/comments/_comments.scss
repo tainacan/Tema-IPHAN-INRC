@@ -15,18 +15,25 @@
 	height: 100px;
 }
 
-.comment-form-author {
+.comment-form-author,
+.comment-form-url,
+.comment-form-email {
 	display: flex;
 	flex-direction: column;
 }
 
-.comment-form-author > label {
+.comment-form-author > label,
+.comment-form-url > label,
+.comment-form-email > label,
+.comment-form-comment > label {
 	color: $color__vermelho1;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
 
-.comment-form-author > input {
+.comment-form-author > input,
+.comment-form-email > input,
+.comment-form-url > input {
 	border-top: none;
 	border-left: none;
 	border-right: none;

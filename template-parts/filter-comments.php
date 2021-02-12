@@ -1,30 +1,31 @@
 <?php
 // Alterar ordem dos campos dos comentários
-add_filter('comment_form_fields', 'comment_fields_custom_order');
 function comment_fields_custom_order($fields)
 {
 	$comment_field = $fields['comment'];
 	$author_field = $fields['author'];
+	$email_field = $fields['email'];
+	$site_field = $fields['url'];
 	unset($fields['comment']);
 	unset($fields['author']);
 	unset($fields['email']);
 	unset($fields['url']);
 	// the order of fields is the order below, change it as needed:
 	$fields['author'] = $author_field;
+	$fields['email'] = $email_field;
+	$fields['url'] = $site_field;
 	$fields['comment'] = $comment_field;
-	// done ordering, now return the fields:
+	// done ordering, now return the fields
 	return $fields;
 }
-?>
+add_filter('comment_form_fields', 'comment_fields_custom_order');
 
-<script>
-	jQuery(function($) {
-		var commentEmail = $('textarea#email');
-		commentEmail.removeAttr('required'); // remove required attribute of textarea.
-		$('#commentform').on('submit', function() {
-			if (commentEmail.val() == '') {
-				commentEmail.css('text-indent', '-999px').val('%dummy-text%');
-			}
-		});
-	});
-</script>
+function remove_comment_time($date, $d, $comment)
+{
+	if (!is_admin()) {
+		return;
+	} else {
+		return $date;
+	}
+}
+add_filter('get_comment_time', 'remove_comment_time', 10, 6);
