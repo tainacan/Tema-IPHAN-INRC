@@ -58,8 +58,8 @@ if (post_password_required()) {
 			}
 			add_filter('get_comment_date', 'wp_comment_date');
 
-			timeago();
-			
+			comment_time_ago_function();
+
 			wp_list_comments(
 				array(
 					'style'      => 'ol',
