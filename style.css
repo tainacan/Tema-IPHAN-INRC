@@ -11337,6 +11337,12 @@ li > article {
 	color: #58020b;
 }
 
+.reply {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {

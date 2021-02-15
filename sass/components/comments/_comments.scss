@@ -84,3 +84,9 @@ li > article {
 .fn {
 	color: $color__vermelho1;
 }
+
+.reply {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}

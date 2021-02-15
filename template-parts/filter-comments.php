@@ -30,4 +30,3 @@ function remove_comment_time($date, $d, $comment)
 	}
 }
 add_filter('get_comment_time', 'remove_comment_time', 10, 3);
-
