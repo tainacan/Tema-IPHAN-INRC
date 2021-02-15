@@ -172,6 +172,9 @@ function iphan_inrc_scripts()
 	// Enqueues our custom js for navigation
 	wp_enqueue_script('iphan_inrc-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), IPHAN_INRC_VERSION, true);
 
+	//Equeue our custom comments
+	wp_enqueue_script('iphan_inrc', get_template_directory_uri() . '/js/comments.js', array('jquery'), IPHAN_INRC_VERSION, true);
+
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}

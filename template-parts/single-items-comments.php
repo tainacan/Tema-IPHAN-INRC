@@ -3,7 +3,8 @@
         <div class="row">
             <!-- Container -->
             <div class="col mt-3 mx-auto">
-                <?php comments_template(); ?>
+                <?php comments_template();
+                ?>
             </div>
         </div>
     </div>

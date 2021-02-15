@@ -11301,7 +11301,7 @@ a {
 
 .children .comment-meta:last-child {
 	display: flex;
-	justify-content: space-between;
+	width: 100%;
 	margin-bottom: 20px;
 }
 
@@ -11319,6 +11319,41 @@ li > article {
 
 .comments-area li {
 	list-style: none;
+}
+
+.comment-metadata {
+	margin-left: 10px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.time-ago {
+	font-style: italic;
+	color: #58020b;
+}
+
+.fn {
+	color: #58020b;
+}
+
+.reply {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.form-submit {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.comment-reply-link > i {
+	color: #bfbfbf;
+}
+
+.comment-reply-link > i:hover {
+	color: #58020b;
 }
 
 /* Widgets

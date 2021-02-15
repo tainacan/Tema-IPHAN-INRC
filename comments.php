@@ -48,17 +48,17 @@ if (post_password_required()) {
 		</h2><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
-
 		<ol class="comment-list">
 			<?php
 			function wp_comment_date($date)
 			{
+			?>
+				<span class="time-ago"> <?php echo sprintf(esc_html__('%s atrás', 'textdomain'), human_time_diff(get_comment_time('U'), current_time('timestamp'))); ?></span>
+			<?php
 				$date = date("d/m/Y");
 				return $date;
 			}
 			add_filter('get_comment_date', 'wp_comment_date');
-
-			comment_time_ago_function();
 
 			wp_list_comments(
 				array(
