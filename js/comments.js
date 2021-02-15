@@ -6,7 +6,7 @@ jQuery(function ($) {
     }
 });
 
-//corrige bug do ícone nos replys dos comments
+// corrige bug do ícone nos replys dos comments
 jQuery(function ($) {
     var commentReply = document.getElementsByClassName('comment-reply-link');
     for (let i = 0; i < commentReply.length; i++) {
@@ -19,5 +19,4 @@ jQuery(function ($) {
 jQuery(function ($) {
     var commentReplyButton = document.getElementById('submit');
     commentReplyButton.attributes('value') = 'Enviar';
-    console.log(commentReplyButton)
 });

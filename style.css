@@ -11343,6 +11343,11 @@ li > article {
 	justify-content: flex-end;
 }
 
+.form-submit {
+	display: flex;
+	justify-content: flex-end;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
