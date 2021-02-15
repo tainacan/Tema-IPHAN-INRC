@@ -11301,7 +11301,7 @@ a {
 
 .children .comment-meta:last-child {
 	display: flex;
-	justify-content: space-between;
+	width: 100%;
 	margin-bottom: 20px;
 }
 
@@ -11319,6 +11319,13 @@ li > article {
 
 .comments-area li {
 	list-style: none;
+}
+
+.comment-metadata {
+	margin-left: 10px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 
 /* Widgets
