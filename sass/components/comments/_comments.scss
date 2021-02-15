@@ -95,3 +95,11 @@ li > article {
 	display: flex;
 	justify-content: flex-end;
 }
+
+.comment-reply-link > i {
+	color: $color__cinza4;
+}
+
+.comment-reply-link > i:hover {
+	color: $color__vermelho1;
+}

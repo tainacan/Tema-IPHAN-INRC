@@ -11348,6 +11348,14 @@ li > article {
 	justify-content: flex-end;
 }
 
+.comment-reply-link > i {
+	color: #bfbfbf;
+}
+
+.comment-reply-link > i:hover {
+	color: #58020b;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
