@@ -11328,6 +11328,15 @@ li > article {
 	width: 100%;
 }
 
+.time-ago {
+	font-style: italic;
+	color: #58020b;
+}
+
+.fn {
+	color: #58020b;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
