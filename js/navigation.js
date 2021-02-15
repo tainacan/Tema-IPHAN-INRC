@@ -164,11 +164,3 @@ jQuery(document).ready(function () {
 		jQuery(".sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" });
 	}
 });
-
-// Função para remover os itens desnecessários do datetime nos comentários
-jQuery(function ($) {
-	var dateTime = document.getElementsByTagName('time');
-	for (let i = 0; i < dateTime.length; i++) {
-		dateTime[i].innerText = dateTime[i].innerText.replace(" às", "")
-	}
-});
