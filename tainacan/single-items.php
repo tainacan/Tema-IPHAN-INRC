@@ -4,74 +4,45 @@
 	custom_breadcrumbs(); 
 ?>
 
-<main id="primary" class="site-main site-container">
-	<div class="entry-content">
+<main id="primary" class="site-main">
+	
 
-	<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 
-		<?php do_action( 'tainacan-interface-single-item-top' ); ?>
+	<?php 
+		do_action( 'tainacan-interface-single-item-top' ); 
+		get_template_part( 'template-parts/single-items-header' );
+		do_action( 'tainacan-interface-single-item-after-title' );
+	?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
-			<article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
+	<?php while ( have_posts() ) : the_post(); ?>
+		<div class="entry-content">
+			<article role="article" id="post_<?php the_ID()?>" class="<?php echo esc_attr( implode( ' ', get_post_class(array('tainacan-single-post', 'alignwide')) ) ) ?>">
 				
 				<?php
-					get_template_part( 'template-parts/single-items-header' );
-					do_action( 'tainacan-interface-single-item-after-title' );
+					get_template_part( 'template-parts/single-items-attachments' );
+					do_action( 'tainacan-interface-single-item-after-attachments' );
 
-					echo '<div class="single-item-data-section">';
-
-					switch (get_theme_mod( 'tainacan_single_item_layout_sections_order', 'document-attachments-metadata')) {
-						case 'document-attachments-metadata':
-							get_template_part( 'template-parts/single-items-document' );
-							do_action( 'tainacan-interface-single-item-after-document' );  
-			
-							get_template_part( 'template-parts/single-items-attachments' );
-							do_action( 'tainacan-interface-single-item-after-attachments' );
+					echo '<hr>';
 							
-							get_template_part( 'template-parts/single-items-metadata' );
-							do_action( 'tainacan-interface-single-item-after-metadata' );
-						break;
-
-						case 'metadata-document-attachments':
-							get_template_part( 'template-parts/single-items-metadata' );
-							do_action( 'tainacan-interface-single-item-after-metadata' );
-
-							get_template_part( 'template-parts/single-items-document' );
-							do_action( 'tainacan-interface-single-item-after-document' );  
-			
-							get_template_part( 'template-parts/single-items-attachments' );
-							do_action( 'tainacan-interface-single-item-after-attachments' );
-						break;
-
-						case 'document-metadata-attachments':
-							get_template_part( 'template-parts/single-items-document' );
-							do_action( 'tainacan-interface-single-item-after-document' );
-
-							get_template_part( 'template-parts/single-items-metadata' );
-							do_action( 'tainacan-interface-single-item-after-metadata' );  
-			
-							get_template_part( 'template-parts/single-items-attachments' );
-							do_action( 'tainacan-interface-single-item-after-attachments' );
-						break;
-							
-					}
-					echo '</div>';
+					get_template_part( 'template-parts/single-items-metadata' );
+					do_action( 'tainacan-interface-single-item-after-metadata' );	
 				?>
 
-				<?php get_template_part( 'template-parts/single-items-navigation' ); ?>
-
-				<?php get_template_part( 'template-parts/single-items-comments' ); ?>
-
 			</article>
-		<?php endwhile; ?>
+		</div>
+		
+		<?php
+			get_template_part( 'template-parts/single-items-navigation' );
+			get_template_part( 'template-parts/single-items-comments' );
+		?>
+	<?php endwhile; ?>
 
-		<?php do_action( 'tainacan-interface-single-item-bottom' ); ?>
+	<?php do_action( 'tainacan-interface-single-item-bottom' ); ?>
 
-	<?php else : ?>
-		<?php _e( 'Nada encontrado!', 'iphan_inrc' ); ?>
-	<?php endif; ?>
-
-	</div>
+<?php else : ?>
+	<?php _e( 'Nada encontrado!', 'iphan_inrc' ); ?>
+<?php endif; ?>
 
 </main>
 

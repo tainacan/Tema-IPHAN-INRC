@@ -16,9 +16,6 @@
         );
     }
 
-    // Galley mode is a shortname for when documents and attachments are displayed merged in the same list
-    $is_gallery_mode = get_theme_mod('iphan_inrc_document_attachments_structure', 'gallery-type-1') == 'gallery-type-2';
-
     if (!function_exists('render_attachment_thumbnail_slide_item')) {
         function render_attachment_thumbnail_slide_item($attachment) {
             if ( function_exists('tainacan_get_attachment_html_url') ) {
@@ -58,85 +55,69 @@
 ?>
 
 
-<?php if ( !empty( $attachments ) || ( $is_gallery_mode && tainacan_has_document() ) ) : ?>
+<?php if ( !empty( $attachments ) || ( tainacan_has_document() ) ) : ?>
 
-    <section class="tainacan-single-post tainacan-item-section--<?php echo ((!$is_gallery_mode ? 'attachments' : 'gallery')) ?>">
-        <div class="tainacan-content single-item-collection">
-            <?php if ( (get_theme_mod('iphan_inrc_display_section_labels', 'yes') == 'yes') && (!$is_gallery_mode) && get_theme_mod('iphan_inrc_section_attachments_label', __( 'Attachments', 'iphan_inrc' )) != '' ) : ?>
-                <h2 class="tainacan-single-item-section" id="tainacan-item-attachments-label">
-                    <?php echo esc_html( get_theme_mod('iphan_inrc_section_attachments_label', __( 'Attachments', 'iphan_inrc' ) ) ); ?>
-                </h2>
-            <?php endif; ?>
-            <?php if ( (get_theme_mod('iphan_inrc_display_section_labels', 'yes') == 'yes') && ($is_gallery_mode) && get_theme_mod('iphan_inrc_section_documents_label', __( 'Documents', 'iphan_inrc' )) != '') : ?>
-                <h2 class="tainacan-single-item-section" id="tainacan-item-documents-label">
-                    <?php echo esc_html( get_theme_mod('iphan_inrc_section_documents_label', __( 'Documents', 'iphan_inrc' )) ); ?>
-                </h2>
-            <?php endif; ?>
+    <section class="tainacan-content">
+        
+        <?php if ( (get_theme_mod('iphan_inrc_display_section_labels', 'yes') == 'yes') && get_theme_mod('iphan_inrc_section_documents_label', __( 'Documentos', 'iphan_inrc' )) != '') : ?>
+            <h2 class="tainacan-single-item-section" id="tainacan-item-documents-label">
+                <?php echo esc_html( get_theme_mod('iphan_inrc_section_documents_label', __( 'Documentos', 'iphan_inrc' )) ); ?>
+            </h2>
+        <?php endif; ?>
 
-            <?php if ( $is_gallery_mode ): ?>
-                <div class="tainacan-item-section__gallery">
-                    <div class="swiper-container-main swiper-container">
-                        <ul class="swiper-wrapper">
-                            <?php if ( tainacan_has_document() ) : ?>
-                                <li class="swiper-slide tainacan-item-section__document">
-                                    <?php 
-                                        tainacan_the_document(); 
-                                        if ( get_theme_mod( $prefix . '_hide_download_button', 'no' ) == 'no' && function_exists('tainacan_the_item_document_download_link') && tainacan_the_item_document_download_link() != '' ) {
-                                            echo '<span class="tainacan-item-file-download">' . tainacan_the_item_document_download_link() . '</span>';
-                                        } 
-                                    ?>
-                                </li>
-                            <?php endif; ?>
-                            <?php foreach ( $attachments as $attachment ) { ?>
-                                <li class="swiper-slide tainacan-item-section__document">
-                                    <?php 
-                                        if ( function_exists('tainacan_get_single_attachment_as_html') ) {
-                                            tainacan_get_single_attachment_as_html($attachment->ID);
-                                        }
-                                        if ( get_theme_mod( $prefix . '_hide_download_button', 'no' ) == 'no' && function_exists('tainacan_the_item_attachment_download_link') && tainacan_the_item_attachment_download_link($attachment->ID) != '' ) {
-                                            echo '<span class="tainacan-item-file-download">' . tainacan_the_item_attachment_download_link($attachment->ID) . '</span>';
-                                        } 
-                                    ?>
-                                </li>	
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </div>
-                <?php if ( (tainacan_has_document() && $attachments && sizeof($attachments) > 0 ) || (!tainacan_has_document() && $attachments && sizeof($attachments) > 1 ) ) : ?>	
-                    <div class="tainacan-item-section__gallery-items">
-                        <div class="swiper-container-thumbs swiper-container">
-                            <ul class="swiper-wrapper">
-                                <?php if ( tainacan_has_document() ) : ?>
-                                    <li class="tainacan-item-section__attachments-file swiper-slide">
-                                        <?php
-                                            the_post_thumbnail('tainacan-medium');
-                                        ?>
-                                        <span class="swiper-slide-name <?php if (get_theme_mod( $prefix . '_hide_files_name', 'no') == 'yes') echo 'sr-only' ?>"><?php echo __( 'Document', 'iphan_inrc' ); ?></span>
-                                    </li>
-                                <?php endif; ?>
-                                <?php foreach ( $attachments as $attachment ) {
-                                    render_attachment_thumbnail_slide_item($attachment);
-                                } ?>
-                            </ul>
-                        </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                <?php endif; ?>
-            <?php else : ?>
-                <div class="tainacan-item-section__attachments"> 
-                    <div class="swiper-container-thumbs swiper-container">
-                        <ul class="swiper-wrapper">
-                            <?php foreach ( $attachments as $attachment ) {
-                                render_attachment_thumbnail_slide_item($attachment);
-                            } ?>
-                        </ul>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            <?php endif; ?>
+
+        <div class="tainacan-item-section__gallery">
+            <div class="swiper-container-main swiper-container">
+                <ul class="swiper-wrapper">
+                    <?php if ( tainacan_has_document() ) : ?>
+                        <li class="swiper-slide tainacan-item-section__document">
+                            <?php 
+                                tainacan_the_document(); 
+                                if ( get_theme_mod( $prefix . '_hide_download_button', 'no' ) == 'no' && function_exists('tainacan_the_item_document_download_link') && tainacan_the_item_document_download_link() != '' ) {
+                                    echo '<span class="tainacan-item-file-download">' . tainacan_the_item_document_download_link() . '</span>';
+                                } 
+                            ?>
+                        </li>
+                    <?php endif; ?>
+                    <?php foreach ( $attachments as $attachment ) { ?>
+                        <li class="swiper-slide tainacan-item-section__document">
+                            <?php 
+                                if ( function_exists('tainacan_get_single_attachment_as_html') ) {
+                                    tainacan_get_single_attachment_as_html($attachment->ID);
+                                }
+                                if ( get_theme_mod( $prefix . '_hide_download_button', 'no' ) == 'no' && function_exists('tainacan_the_item_attachment_download_link') && tainacan_the_item_attachment_download_link($attachment->ID) != '' ) {
+                                    echo '<span class="tainacan-item-file-download">' . tainacan_the_item_attachment_download_link($attachment->ID) . '</span>';
+                                } 
+                                echo '<div class="tainacan-item-file-name">' . get_the_title( $attachment->ID ) . '</div>';
+                            ?>
+                        </li>	
+                    <?php } ?>
+                </ul>
+            </div>
         </div>
+        
+        <?php if ( (tainacan_has_document() && $attachments && sizeof($attachments) > 0 ) || (!tainacan_has_document() && $attachments && sizeof($attachments) > 1 ) ) : ?>	
+            <div class="tainacan-item-section__gallery-items">
+                <div class="swiper-container-thumbs swiper-container">
+                    <ul class="swiper-wrapper">
+                        <?php if ( tainacan_has_document() ) : ?>
+                            <li class="tainacan-item-section__attachments-file swiper-slide">
+                                <?php
+                                    the_post_thumbnail('tainacan-medium');
+                                ?>
+                                <span class="swiper-slide-name <?php if (get_theme_mod( $prefix . '_hide_files_name', 'no') == 'yes') echo 'sr-only' ?>"><?php echo __( 'Documento', 'iphan_inrc' ); ?></span>
+                            </li>
+                        <?php endif; ?>
+                        <?php foreach ( $attachments as $attachment ) {
+                            render_attachment_thumbnail_slide_item($attachment);
+                        } ?>
+                    </ul>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        <?php endif; ?>
+
     </section>
         
     <!-- add PhotoSwipe (.pswp) element to DOM - 
