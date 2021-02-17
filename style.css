@@ -11356,6 +11356,11 @@ li > article {
 	color: #58020b;
 }
 
+.form-submit {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
