@@ -20,3 +20,9 @@ jQuery(function ($) {
     var commentReplyButton = document.getElementById('submit');
     commentReplyButton.value = "Enviar";
 });
+
+/* // Adicionar collapse aos comments
+jQuery(function ($) {
+    jQuery('.children').addClass('collapse');
+}); */
+
