@@ -28,13 +28,13 @@ jQuery(function ($) {
 });
 
 //adiciona placeholder's
-
 jQuery(function ($) {
     var commentTextArea = document.getElementById("comment");
     commentTextArea.setAttribute('placeholder', "Digite aqui seu comentário");
     var nome = document.getElementById("author");
     nome.setAttribute('placeholder', 'Digite aqui...');
 })
+
 /// Adicionar collapse aos comments
 /* jQuery(function ($) {
     jQuery('.children').addClass('collapse');
