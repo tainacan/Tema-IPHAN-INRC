@@ -1,14 +1,21 @@
 button,
+.btn,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border-radius: 0px;
-	background: $color__background-button;
-	color: $color__text-input;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
 	font-family: $font__family-buttons;
 	font-size: $font__size-buttons;
+}
+
+button:not(.btn),
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: $color__background-button;
+	color: $color__text-input;
 
 	&.button {
 		text-transform: uppercase;

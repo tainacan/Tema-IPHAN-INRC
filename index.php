@@ -32,7 +32,7 @@ custom_breadcrumbs();
 		echo '<div class="cabecalho-ultimas-noticias">';
 		echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
 		echo '<form role="search" method="get" class="search-form col-md-4" action="' . esc_url(home_url('/')) . '">';
-		echo '<input class="has-icon-right search-bar-home col-md-12" name="s" placeholder="Busque por notícias" value=' . get_search_query() . '><i size="50px" class="tainacan-icon tainacan-icon-search"></i>';
+		echo '<input class="has-icon-right search-bar search-bar__home col-md-12" name="s" type="search" placeholder="Busque por notícias" value=' . get_search_query() . '><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-search"></i>';
 		echo '</form>';
 		echo '</div>';
 		echo '<div class="entry-content"><ul class="alignwide">';
@@ -50,8 +50,8 @@ custom_breadcrumbs();
 		endwhile;
 		the_posts_pagination(array(
 			'mid_size' => 2,
-			'prev_text'          => __('<i size="50px" class="tainacan-icon tainacan-icon-previous"></i>'),
-			'next_text'          => __('<i size="50px" class="tainacan-icon tainacan-icon-next"></i>'),
+			'prev_text'          => __('<i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-previous"></i>'),
+			'next_text'          => __('<i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-next"></i>'),
 		));
 		echo '</ul></div>';
 

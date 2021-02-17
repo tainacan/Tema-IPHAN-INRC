@@ -102,19 +102,19 @@ jQuery(document).ready(function ($) {
 	var offset = 100;
 	var speed = 250;
 	var duration = 500;
-	$(window).scroll(function () {
-		if ($(this).scrollTop() < offset) {
-			$('#ScrolltoTop').fadeOut(duration);
+	jQuery(window).scroll(function () {
+		if (jQuery(this).scrollTop() < offset) {
+			jQuery('#ScrolltoTop').fadeOut(duration);
 		} else {
-			$('#ScrolltoTop').fadeIn(duration);
+			jQuery('#ScrolltoTop').fadeIn(duration);
 		}
 	});
-	$('#ScrolltoTop').on('click', function () {
-		$('html, body').animate({ scrollTop: 0 }, speed);
+	jQuery('#ScrolltoTop').on('click', function () {
+		jQuery('html, body').animate({ scrollTop: 0 }, speed);
 		return false;
 	});
 });
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function (jQuery) {
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 
@@ -139,7 +139,17 @@ jQuery('.menu-toggle').click(function () {
 		jQuery('#primary-menu').addClass("collapse");
 	}
 });
+jQuery(document).ready(function () {
+	jQuery('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+		if (!jQuery(this).next().hasClass('show')) {
+		jQuery(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+		}
+		var $subMenu = jQuery(this).next(".dropdown-menu");
+		$subMenu.toggleClass('show');
 
+		return false;
+	});
+});
 jQuery(document).ready(function () {
 	//Condição para o menu virar hamburguer
 	if (jQuery('#primary-menu li').length > 6) {
