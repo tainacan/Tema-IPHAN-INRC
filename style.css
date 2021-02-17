@@ -10427,7 +10427,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #58020b;
 	background-color: #58020b;
-	color: rgba(255, 255, 255, 0.1);
+	color: #ffffff;
 }
 
 input[type="text"],
@@ -11371,6 +11371,7 @@ a {
 	color: #58020b;
 	font-weight: bold;
 	margin-bottom: 20px;
+	margin-left: 20px;
 }
 
 .comment-form-author > input,
@@ -11382,6 +11383,13 @@ a {
 	border-radius: 0px;
 	width: 40%;
 	margin-bottom: 20px;
+	font-style: italic;
+	color: #000;
+}
+
+.comment-form-comment > textarea {
+	font-style: italic;
+	color: #000;
 }
 
 .comment-meta {
@@ -11445,6 +11453,11 @@ li > article {
 
 .comment-reply-link > i:hover {
 	color: #58020b;
+}
+
+.form-submit {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 /* Widgets

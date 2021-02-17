@@ -29,6 +29,7 @@
 	color: $color__vermelho1;
 	font-weight: bold;
 	margin-bottom: 20px;
+	margin-left: 20px;	
 }
 
 .comment-form-author > input,
@@ -40,6 +41,13 @@
 	border-radius: 0px;
 	width: 40%;
 	margin-bottom: 20px;
+	font-style: italic;
+	color: #000;
+}
+
+.comment-form-comment > textarea {
+	font-style: italic;
+	color: #000;
 }
 
 .comment-meta {
@@ -102,4 +110,9 @@ li > article {
 
 .comment-reply-link > i:hover {
 	color: $color__vermelho1;
+}
+
+.form-submit {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
