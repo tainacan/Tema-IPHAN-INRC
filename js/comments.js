@@ -18,5 +18,5 @@ jQuery(function ($) {
 // troca o texto do botão submit do comment
 jQuery(function ($) {
     var commentReplyButton = document.getElementById('submit');
-    commentReplyButton.attributes('value') = 'Enviar';
+    commentReplyButton.value = "Enviar";
 });
