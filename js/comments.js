@@ -21,12 +21,20 @@ jQuery(function ($) {
     commentReplyButton.value = "Enviar";
 });
 
-// troca o texto "Comentário" por "Mensagem"
+// troca o texto "Comentário" por "Mensagem" e adiciona placeholder
 jQuery(function ($) {
-    var commentTextArea = jQuery("label[for='comment']")
-    commentTextArea[0].innerText = "Mensagem";
+    var commentTextLabel = jQuery("label[for='comment']")
+    commentTextLabel[0].innerText = "Mensagem";
 });
 
+//adiciona placeholder's
+
+jQuery(function ($) {
+    var commentTextArea = document.getElementById("comment");
+    commentTextArea.setAttribute('placeholder', "Digite aqui seu comentário");
+    var nome = document.getElementById("author");
+    nome.setAttribute('placeholder', 'Digite aqui...');
+})
 /// Adicionar collapse aos comments
 /* jQuery(function ($) {
     jQuery('.children').addClass('collapse');

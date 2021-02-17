@@ -11291,6 +11291,13 @@ a {
 	border-radius: 0px;
 	width: 40%;
 	margin-bottom: 20px;
+	font-style: italic;
+	color: #000;
+}
+
+.comment-form-comment > textarea {
+	font-style: italic;
+	color: #000;
 }
 
 .comment-meta {
