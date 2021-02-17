@@ -38,9 +38,8 @@ add_action( 'wp_head', 'iphan_inrc_pingback_header' );
 /**
  * Retrieves an item adjacent link, either using WP strategy or Tainacan plugin tainacan_get_adjacent_items()
  * 
- * @param string $thumbnail: accepts 'small' and 'large', defaults to null
  */
-function tainacan_get_adjacent_item_links($thumbnail = null) {
+function tainacan_get_adjacent_item_links() {
 
 	if (function_exists('tainacan_get_adjacent_items') && isset($_GET['pos'])) {
 		$adjacent_items = tainacan_get_adjacent_items();
@@ -71,67 +70,33 @@ function tainacan_get_adjacent_item_links($thumbnail = null) {
 	$previous = '';
 	$next = '';
 
-	switch ($thumbnail) {
 
-		case 'small':
-			//Get the thumnail url of the previous and next post
-			if (function_exists('tainacan_get_adjacent_items') && isset($_GET['pos'])) {
-				if ($adjacent_items['next']) {
-					$next_thumb = $adjacent_items['next']['thumbnail']['tainacan-small'][0];
-				}
-				if ($adjacent_items['previous']) {
-					$previous_thumb = $adjacent_items['previous']['thumbnail']['tainacan-small'][0];
-				}
-			} else {
-				$previous_thumb = get_the_post_thumbnail_url( get_previous_post(), 'tainacan-small' );
-				$next_thumb = get_the_post_thumbnail_url( get_next_post(), 'tainacan-small' );
-			}
-
-			// Creates the links
-			$previous = $previous_link_url === false ? '' :
-				'<a class="has-small-thumbnail" rel="prev" href="' . $previous_link_url . '">' . 
-					'<i class="tainacan-icon tainacan-icon-arrowleft tainacan-icon-30px"></i>&nbsp;<span>' . 
-					$previous_title . '</span><img src="' . $previous_thumb . '" alt="">' .
-				'</a>';
-			$next = $next_link_url === false ? '' :
-				'<a class="has-small-thumbnail" rel="next" href="' . $next_link_url . '">' . 
-					'<img src="' . $next_thumb . '" alt=""><span>' . $next_title . 
-					'</span>&nbsp;<i class="tainacan-icon tainacan-icon-arrowright tainacan-icon-30px"></i>' .
-				'</a>';
-		break;
-
-		case 'large':
-
-			if (function_exists('tainacan_get_adjacent_items') && isset($_GET['pos'])) {
-				if ($adjacent_items['next']) {
-					$next_thumb = $adjacent_items['next']['thumbnail']['tainacan-medium'][0];
-				}
-				if ($adjacent_items['previous']) {
-					$previous_thumb = $adjacent_items['previous']['thumbnail']['tainacan-medium'][0];
-				}
-			} else {
-				//Get the thumnail url of the previous and next post
-				$previous_thumb = get_the_post_thumbnail_url( get_previous_post(), 'tainacan-medium' );
-				$next_thumb = get_the_post_thumbnail_url( get_next_post(), 'tainacan-medium' );
-			}
-			
-			// Creates the links
-			$previous = $previous_link_url === false ? '' :
-				'<a class="has-large-thumbnail" rel="prev" href="' . $previous_link_url . '">' .
-					'<i class="tainacan-icon tainacan-icon-arrowleft tainacan-icon-36px"></i>&nbsp;' .
-					'<div><img src="' . $previous_thumb . '" alt=""><span>' . $previous_title . 
-				'</span></div></a>';
-			$next = $next_link_url === false ? '' :
-				'<a class="has-large-thumbnail" rel="next" href="' . $next_link_url . '">' . 
-					'<div><img src="' . $next_thumb . '" alt=""><span>' . $next_title . 
-					'</span></div>&nbsp;<i class="tainacan-icon tainacan-icon-arrowright tainacan-icon-36px"></i>' .
-				'</a>';
-		break;
-		
-		default:
-			$previous = $previous_link_url === false ? '' : '<a rel="prev" href="' . $previous_link_url . '"><i class="tainacan-icon tainacan-icon-arrowleft tainacan-icon-30px"></i>&nbsp; <span>' . $previous_title . '</span></a>';
-			$next = $next_link_url === false ? '' :'<a rel="next" href="' . $next_link_url . '"><span>' . $next_title . '</span> &nbsp;<i class="tainacan-icon tainacan-icon-arrowright tainacan-icon-30px"></i></a>';
+	if (function_exists('tainacan_get_adjacent_items') && isset($_GET['pos'])) {
+		if ($adjacent_items['next']) {
+			$next_thumb = $adjacent_items['next']['thumbnail']['large'][0];
+		}
+		if ($adjacent_items['previous']) {
+			$previous_thumb = $adjacent_items['previous']['thumbnail']['large'][0];
+		}
+	} else {
+		//Get the thumnail url of the previous and next post
+		$previous_thumb = get_the_post_thumbnail_url( get_previous_post(), 'large' );
+		$next_thumb = get_the_post_thumbnail_url( get_next_post(), 'large' );
 	}
+	
+	// Creates the links
+	$previous = $previous_link_url === false ? '' :
+		'<a style="background-image: url(' . $previous_thumb . ')" rel="prev" href="' . $previous_link_url . '">' .
+		'<div class="post-box"><img src="' . $previous_thumb . '" alt=""' . $previous_title . '">' .
+			'<span class="post-type">' . __('Item anterior') . '</span>' . 
+			'<span class="post-title">' . $previous_title . '<span>' . 
+		'</div></a>';
+	$next = $next_link_url === false ? '' :
+		'<a style="background-image: url(' . $next_thumb . ')" rel="next" href="' . $next_link_url . '">' . 
+			'<div class="post-box"><img src="' . $next_thumb . '" alt=""' . $next_title . '">' .
+			'<span class="post-type">' . __('Próximo item') . '</span>' . 
+			'<span class="post-title">' . $next_title . '<span>' . 
+		'</div></a>';
 
 	return ['next' => $next, 'previous' => $previous];
 }
