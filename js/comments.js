@@ -21,8 +21,22 @@ jQuery(function ($) {
     commentReplyButton.value = "Enviar";
 });
 
-/* // Adicionar collapse aos comments
+// troca o texto "Comentário" por "Mensagem"
 jQuery(function ($) {
+    var commentTextArea = jQuery("label[for='comment']")
+    commentTextArea[0].innerText = "Mensagem";
+});
+
+/// Adicionar collapse aos comments
+/* jQuery(function ($) {
     jQuery('.children').addClass('collapse');
 }); */
 
+// Add ou remove a classe 'show' ao clicar
+/* jQuery('comment-reply-link').click(function () {
+    if (jQuery('children').hasClass('show')) {
+        jQuery('children').addClass('show');
+    } else {
+        jQuery('children').removeClass('show');
+    }
+}); */
