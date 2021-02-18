@@ -33,10 +33,10 @@ custom_breadcrumbs();
                 </div>
             </div>
                 
-            <a class="btn btn-link <?php tainacan_active( get_query_var( 'order' ), 'ASC' ); ?>" style="width: 2rem;" href="<?php echo add_query_arg( 'order', 'ASC' ); ?>">
+            <a class="btn btn-link <?php tainacan_active( get_query_var( 'order' ), 'DESC' ); ?>" style="width: 2rem;" href="<?php echo add_query_arg( 'order', 'ASC' ); ?>">
                 <i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-sortascending"></i>
             </a>
-            <a class="btn btn-link <?php tainacan_active( get_query_var( 'order' ), 'DESC' ); ?>" style="width: 2rem;" href="<?php echo add_query_arg( 'order', 'DESC' ); ?>">
+            <a class="btn btn-link <?php tainacan_active( get_query_var( 'order' ), 'ASC' ); ?>" style="width: 2rem;" href="<?php echo add_query_arg( 'order', 'DESC' ); ?>">
                 <i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-sortdescending"></i>
             </a>
             

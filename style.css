@@ -11275,19 +11275,19 @@ a {
 }
 
 .tainacan-collection-list--simple-search a {
-	color: #898d8f;
+	color: #515151;
 }
 
 .tainacan-collection-list--simple-search a:hover {
-	color: #898d8f;
+	color: #515151;
 }
 
 .tainacan-collection-list--simple-search a.active {
-	color: #bfbfbf;
+	color: #898d8f;
 }
 
 .tainacan-collection-list--simple-search a.active:hover {
-	color: #bfbfbf;
+	color: #898d8f;
 }
 
 .tainacan-collection-list--simple-search a:focus {
@@ -11296,7 +11296,7 @@ a {
 
 .tainacan-collection-list--simple-search #tainacan-collection-search input {
 	height: calc(2.25rem - 3px);
-	border-color: #bfbfbf !important;
+	border-color: #898d8f !important;
 }
 
 .tainacan-collection-list--simple-search #tainacan-collection-search input:focus {

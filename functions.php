@@ -179,6 +179,10 @@ function iphan_inrc_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 
+	//Bootstrap Javascript
+	wp_register_script( 'bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), IPHAN_INRC_VERSION, true );
+	wp_enqueue_script( 'bootstrap4JS' );
+
 	// Scripts necessary for using the gallery modal
 	wp_enqueue_style('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), IPHAN_INRC_VERSION);
 	wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), IPHAN_INRC_VERSION, true);

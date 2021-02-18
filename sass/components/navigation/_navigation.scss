@@ -581,14 +581,14 @@ a {
     }
 
     a{
-        color: $color__cinza5;
+        color: $color__cinza6;
         &:hover{
-            color: $color__cinza5;
+            color: $color__cinza6;
         }
         &.active {
-            color: $color__cinza4;
+            color: $color__cinza5;
             &:hover{
-                color: $color__cinza4;
+                color: $color__cinza5;
             }
         }
         &:focus{
@@ -598,7 +598,7 @@ a {
     #tainacan-collection-search {
         input{
             height: calc(2.25rem - 3px);
-            border-color: $color__cinza4 !important;
+            border-color: $color__cinza5 !important;
             &:focus{
                 box-shadow: none;
                 border-right: none;

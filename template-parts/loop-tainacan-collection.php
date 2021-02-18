@@ -9,7 +9,7 @@
 							<?php if ( has_post_thumbnail() ) : 
 								$thumbnail_id = get_post_thumbnail_id( $post->ID );
 								$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
-								<img src="<?php the_post_thumbnail_url( 'collection-list-card' ) ?>" class="tainacan-list-collection--card-img rounded-0 align-self-center mr-3" alt="<?php echo esc_attr($alt); ?>">  
+								<img src="<?php the_post_thumbnail_url( 'tainacan-medium' ) ?>" class="tainacan-list-collection--card-img rounded-0 align-self-center mr-3" alt="<?php echo esc_attr($alt); ?>">  
 							<?php else : ?>
 								<div class="image-placeholder">
 									<h4>

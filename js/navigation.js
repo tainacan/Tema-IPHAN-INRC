@@ -140,17 +140,6 @@ jQuery('.menu-toggle').click(function () {
 	}
 });
 jQuery(document).ready(function () {
-	jQuery('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
-		if (!jQuery(this).next().hasClass('show')) {
-		jQuery(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-		}
-		var $subMenu = jQuery(this).next(".dropdown-menu");
-		$subMenu.toggleClass('show');
-
-		return false;
-	});
-});
-jQuery(document).ready(function () {
 	//Condição para o menu virar hamburguer
 	if (jQuery('#primary-menu li').length > 6) {
 		jQuery('.menu-toggle').css({
