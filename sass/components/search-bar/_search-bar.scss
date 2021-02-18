@@ -1,16 +1,20 @@
-.search-bar-home {
+input[type="search"].search-bar {
     height: auto;
-    margin-bottom: 4.063rem !important;
-    margin-top: 1%;
+    line-height: 1.75;
+    border-radius: 0px;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid $color__cinza3;
     font-style: italic;
     padding-bottom: 0px;
-    top: 5%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+input[type="search"].search-bar__home {
+    margin-bottom: 4.063rem !important;
+    margin-top: 1%;
+    top: 5%;
 }
 .search-form > i::before {
     position: absolute;

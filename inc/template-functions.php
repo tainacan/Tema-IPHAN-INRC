@@ -121,6 +121,60 @@ function tainacan_get_source_item_list_url() {
 	}
 }
 
+/**
+ * Determine active queries on Tainacan collection archive
+ */
+function tainacan_active( $selected, $current = true, $echo = true ) {
+	$return = $selected == $current ? 'active' : '';
+	if ( $echo ) {
+		echo $return;
+	}
+	return $return;
+}
+
+/**
+ * Special Pagination for Tainacan Collections archive
+ */
+if ( ! function_exists( 'tainacan_pagination' ) ) :
+	function tainacan_pagination() {
+		global $wp_query;
+		$cur_posts = min( (int) $wp_query->get( 'posts_per_page' ), $wp_query->found_posts );
+		$to_paged = max( (int) $wp_query->get( 'paged' ), 1 );
+		$count_max = ( $to_paged - 1 ) * $cur_posts; ?>
+		<div class="d-flex px-0 margin-pagination justify-content-between border-top pt-2">
+			<div class="col-sm-5 d-none d-lg-block pl-0 view-items">
+				<?php //translators: Example - Viewing results: 1 to 12 of 345 ?>
+				<?php printf( __('Exibindo coleções: %1$d a %2$d de %3$d', 'iphan_inrc'), $count_max + 1, $count_max + $wp_query->post_count, $wp_query->found_posts ); ?>
+			</div>
+			<div class="col-sm-5 pr-md-0 justify-content-md-end">
+				<?php the_posts_pagination(
+					array(
+						'mid_size'  => 2,
+						'prev_text' => sprintf(
+							'%s',
+							'<i class="tainacan-icon tainacan-icon-previous tainacan-icon-1-125em"></i>'
+						),
+						'next_text' => sprintf(
+							' %s',
+							'<i class="tainacan-icon tainacan-icon-next tainacan-icon-1-125em"></i>'
+						)
+					)
+				); ?>
+			</div>
+		</div>
+	<?php }
+endif;
+
+/**
+ * Changes Collections archive title.
+ */
+function tainacan_theme_collection_title( $title ) {
+	if ( is_post_type_archive( 'tainacan-collection' ) ) {
+		return __( 'Coleções', 'iphan_inrc' );
+	}
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'tainacan_theme_collection_title' );
 
 /**
  * Display date of item post.
