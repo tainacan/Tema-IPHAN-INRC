@@ -11427,6 +11427,11 @@ li > article {
 	width: 100%;
 }
 
+.comment-metadata > a {
+	margin-left: auto;
+	margin-right: 5px;
+}
+
 .time-ago {
 	font-style: italic;
 	color: #58020b;

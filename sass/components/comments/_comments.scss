@@ -29,7 +29,7 @@
 	color: $color__vermelho1;
 	font-weight: bold;
 	margin-bottom: 20px;
-	margin-left: 20px;	
+	margin-left: 20px;
 }
 
 .comment-form-author > input,
@@ -77,12 +77,15 @@ li > article {
 .comments-area li {
 	list-style: none;
 }
-
 .comment-metadata {
 	margin-left: 10px;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+}
+.comment-metadata > a {
+	margin-left: auto;
+	margin-right: 5px;
 }
 .time-ago {
 	font-style: italic;
