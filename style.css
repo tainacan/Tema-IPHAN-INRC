@@ -11410,10 +11410,16 @@ a {
 	list-style-type: none;
 }
 
+.comment-collapse::after {
+	content: "+";
+	float: right;
+	font-size: 20px;
+}
+
 li > article {
 	border-bottom: 1px solid #d9d9d9;
 	padding-bottom: 12px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .comments-area li {

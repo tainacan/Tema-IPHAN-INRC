@@ -49,24 +49,38 @@ jQuery(function ($) {
     } catch {
 
     }
-})
+});
+
+jQuery(function ($) {
+    var newElement = document.createElement('a')
+    jQuery('.reply').append(newElement);
+    jQuery('.reply>a:last-child').addClass('comment-collapse')
+    var plus = document.getElementsByClassName('comment-collapse')
+    plus[0].setAttribute("type", 'button');
+    plus[0].setAttribute("id", 'comment-1');
+    try {
+    } catch {
+
+    }
+});
 
 /// Adicionar collapse aos comments
-/* jQuery(function ($) {
-    try{
-    jQuery('.children').addClass('collapse');
-    }catch{
+jQuery(function ($) {
+    try {
+        jQuery('.children').addClass('collapse');
+    } catch {
 
     }
-}); */
+});
 
 // Add ou remove a classe 'show' ao clicar
-/* jQuery('comment-reply-link').click(function () {
-    try{
-    if (jQuery('children').hasClass('show')) {
-        jQuery('children').addClass('show');
-    } else {
-        jQuery('children').removeClass('show');
-    }
-}catch{}
-}); */
+jQuery(function () {
+    console.log('entrei')
+    try {
+        if (jQuery('children').hasClass('show')) {
+            jQuery('children').removeClass('show');
+        } else {
+            jQuery('children').addClass('show');
+        }
+    } catch { }
+}); 
