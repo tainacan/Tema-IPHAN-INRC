@@ -166,6 +166,15 @@ if ( ! function_exists( 'tainacan_pagination' ) ) :
 endif;
 
 /**
+ * Adds parameter for enabling Collections list view mode change via query.
+ */
+function tainacan_collections_viewmode( $public_query_vars ) {
+	$public_query_vars[] = 'tainacan_collections_viewmode';
+	return $public_query_vars;
+}
+add_filter( 'query_vars', 'tainacan_collections_viewmode' );
+
+/**
  * Changes Collections archive title.
  */
 function tainacan_theme_collection_title( $title ) {

@@ -21,7 +21,7 @@
 								<?php if ( get_the_excerpt() ) : ?>
 									<p><?php echo wp_trim_words( get_the_excerpt(), 35, '[...]' ); ?></p>
 								<?php else : ?>
-									<p style="font-style: italic;"><?php _e( 'No description provided', 'tainacan-interface' ); ?></p>
+									<p style="font-style: italic;"><?php _e( 'Nenhuma descrição fornecida', 'iphan_inrc' ); ?></p>
 								<?php endif; ?>
 							</div>
 						</div>
@@ -34,5 +34,5 @@
 	<?php echo tainacan_pagination(); ?>
 
 <?php else : ?>
-	<?php _e( 'Nothing found', 'tainacan-interface' ); ?>
+	<?php _e( 'Nada encontrado', 'iphan_inrc' ); ?>
 <?php endif; ?>
