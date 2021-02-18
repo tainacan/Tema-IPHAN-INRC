@@ -47,7 +47,6 @@ custom_breadcrumbs();
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuViewMode">
                     <a class="dropdown-item <?php tainacan_active( get_query_var( 'tainacan_collections_viewmode' ), 'cards' ); ?>" href="<?php echo add_query_arg( 'tainacan_collections_viewmode', 'cards' ); ?>"><i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-viewcards text-oslo-gray"></i>&nbsp;<?php _e( 'Cartões', 'iphan_inrc' ); ?></a>
-                    <a class="dropdown-item <?php tainacan_active( get_query_var( 'tainacan_collections_viewmode' ), 'grid' ); ?>" href="<?php echo add_query_arg( 'tainacan_collections_viewmode', 'grid' ); ?>"><i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-viewminiature text-oslo-gray"></i>&nbsp;<?php _e( 'Miniaturas', 'iphan_inrc' ); ?></a>
                     <a class="dropdown-item <?php tainacan_active( get_query_var( 'tainacan_collections_viewmode' ), 'table' ); ?>" href="<?php echo add_query_arg( 'tainacan_collections_viewmode', 'table' ); ?>"><i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-viewtable text-oslo-gray"></i>&nbsp;<?php _e( 'Tabela', 'iphan_inrc' ); ?></a>
                 </div>
             </div>
@@ -62,7 +61,6 @@ custom_breadcrumbs();
                 </div>
             </form>
         </div>
-
         <?php get_template_part( 'template-parts/loop-tainacan-collection', get_query_var( 'tainacan_collections_viewmode' ) ); ?>
     </div>
 </main>
