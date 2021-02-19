@@ -37,7 +37,7 @@ custom_breadcrumbs();
 </main><!-- #main -->
 
 <?php
-if (!is_home()) {
+if (is_front_page()) {
 ?>
 	<div class="banner-or">
 		<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr1.png')">
