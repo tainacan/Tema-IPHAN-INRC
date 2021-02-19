@@ -80,8 +80,10 @@ jQuery('.').click(function () {
     try {
         if (jQuery('children').hasClass('show')) {
             jQuery('children').removeClass('show');
+            jQuery('.reply>a:last-child::after').css({ content: '+' })
         } else {
             jQuery('children').addClass('show');
+            jQuery('.reply>a:last-child::after').css({ content: '-' })
         }
     } catch { }
 }); 
