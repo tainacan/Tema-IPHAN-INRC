@@ -510,7 +510,7 @@ a {
     padding-right: 0px;
 }
 
-.pagination > .nav-links > span {
+.pagination > .nav-links > span[aria-current="page"] {
     padding-left: 4px;
     padding-right: 4px;
     margin-right: 10px;
@@ -541,25 +541,26 @@ a {
     margin-top: 85px !important;
 }
 
-.tainacan-collection-list--simple-search{
+.tainacan-collection-list--simple-search {
     .dropdown {
-        #dropdownMenuSorting, #dropdownMenuViewMode {
+        #dropdownMenuSorting,
+        #dropdownMenuViewMode {
             font-size: 0.875rem;
-            &:focus{
+            &:focus {
                 box-shadow: none;
             }
             &::after {
                 color: $color__vermelho1;
             }
         }
-        &.dropdown-sorting{
-            button{
+        &.dropdown-sorting {
+            button {
                 padding-left: 0;
             }
         }
         &.dropdown-viewMode {
             @media only screen and (max-width: 576px) {
-                .show{
+                .show {
                     transform: translate3d(-94px, 35px, 0px) !important;
                     left: 0 !important;
                 }
@@ -570,7 +571,7 @@ a {
             border-radius: 0;
             border: 1px solid $color__cinza4;
             a {
-                &:hover{
+                &:hover {
                     background-color: $color__cinza1;
                 }
                 &.active {
@@ -580,18 +581,18 @@ a {
         }
     }
 
-    a{
+    a {
         color: $color__cinza6;
-        &:hover{
+        &:hover {
             color: $color__cinza6;
         }
         &.active {
             color: $color__cinza5;
-            &:hover{
+            &:hover {
                 color: $color__cinza5;
             }
         }
-        &:focus{
+        &:focus {
             box-shadow: none;
         }
     }
@@ -599,18 +600,18 @@ a {
         input {
             height: calc(2.25rem - 3px);
             border-color: $color__cinza5 !important;
-            &:focus{
+            &:focus {
                 box-shadow: none;
                 border-right: none;
             }
-            &::placeholder{
+            &::placeholder {
                 font-size: 0.75rem;
                 color: $color__cinza5;
             }
         }
         button {
             line-height: 0.5;
-            &:focus{
+            &:focus {
                 box-shadow: none;
             }
         }

@@ -11206,7 +11206,7 @@ a {
 	padding-right: 0px;
 }
 
-.pagination > .nav-links > span {
+.pagination > .nav-links > span[aria-current="page"] {
 	padding-left: 4px;
 	padding-right: 4px;
 	margin-right: 10px;
@@ -11237,15 +11237,18 @@ a {
 	margin-top: 85px !important;
 }
 
-.tainacan-collection-list--simple-search .dropdown #dropdownMenuSorting, .tainacan-collection-list--simple-search .dropdown #dropdownMenuViewMode {
+.tainacan-collection-list--simple-search .dropdown #dropdownMenuSorting,
+.tainacan-collection-list--simple-search .dropdown #dropdownMenuViewMode {
 	font-size: 0.875rem;
 }
 
-.tainacan-collection-list--simple-search .dropdown #dropdownMenuSorting:focus, .tainacan-collection-list--simple-search .dropdown #dropdownMenuViewMode:focus {
+.tainacan-collection-list--simple-search .dropdown #dropdownMenuSorting:focus,
+.tainacan-collection-list--simple-search .dropdown #dropdownMenuViewMode:focus {
 	box-shadow: none;
 }
 
-.tainacan-collection-list--simple-search .dropdown #dropdownMenuSorting::after, .tainacan-collection-list--simple-search .dropdown #dropdownMenuViewMode::after {
+.tainacan-collection-list--simple-search .dropdown #dropdownMenuSorting::after,
+.tainacan-collection-list--simple-search .dropdown #dropdownMenuViewMode::after {
 	color: #58020b;
 }
 
@@ -11469,6 +11472,13 @@ li > article {
 .form-submit {
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.nav-links > .dots {
+	color: #58020b;
+	background-color: #ffffff;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 /* Widgets
