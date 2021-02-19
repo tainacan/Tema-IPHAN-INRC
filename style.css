@@ -10628,7 +10628,6 @@ textarea {
 .cabecalho-ultimas-noticias {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 150px;
 }
 
 /* Navigation
@@ -11478,8 +11477,8 @@ li > article {
 .nav-links > .dots {
 	color: #58020b;
 	background-color: #ffffff;
-	padding-left: 4px;
 	padding-right: 4px;
+	margin-right: 10px;
 }
 
 /* Widgets
