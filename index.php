@@ -29,14 +29,20 @@ custom_breadcrumbs();
 			</header>
 	<?php
 		endif;
-		echo '<div class="cabecalho-ultimas-noticias">';
-		echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
-		echo '<form role="search" method="get" class="search-form col-md-4" action="' . esc_url(home_url('/')) . '">';
-		echo '<input class="has-icon-right search-bar search-bar__home col-md-12" name="s" type="search" placeholder="Busque por notícias" value=' . get_search_query() . '><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-search"></i>';
-		echo '</form>';
-		echo '</div>';
-		echo '<div class="entry-content"><ul class="alignwide">';
-
+		if (is_search()) {
+			echo '<div class="cabecalho-ultimas-noticias">';
+			echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >Resultado de busca por: ' . get_search_query() . '</h1>';
+			echo '</div>';
+			echo '<div class="entry-content"><ul class="alignwide">';
+		} else {
+			echo '<div class="cabecalho-ultimas-noticias">';
+			echo '<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias" >últimas notícias</h1>';
+			echo '<form role="search" method="get" class="search-form col-md-4" action="' . esc_url(home_url('/')) . '">';
+			echo '<input class="has-icon-right search-bar search-bar__home col-md-12" name="s" type="search" placeholder="Busque por notícias" value=' . get_search_query() . '><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-search"></i>';
+			echo '</form>';
+			echo '</div>';
+			echo '<div class="entry-content"><ul class="alignwide">';
+		}
 		/* Start the Loop */
 		while (have_posts()) :
 			the_post();
