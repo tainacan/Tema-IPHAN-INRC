@@ -56,8 +56,9 @@ jQuery(function ($) {
     jQuery('.reply').append(newElement);
     jQuery('.reply>a:last-child').addClass('comment-collapse')
     var plus = document.getElementsByClassName('comment-collapse')
-    plus[0].setAttribute("type", 'button');
-    plus[0].setAttribute("id", 'comment-1');
+    for (let i = 0; i < plus.length; i++) {
+        plus[i].setAttribute("type", 'button');
+    }
     try {
     } catch {
 
@@ -74,7 +75,7 @@ jQuery(function ($) {
 });
 
 // Add ou remove a classe 'show' ao clicar
-jQuery('.reply>a:last-child').click(function () {
+jQuery('.').click(function () {
     console.log('entrei')
     try {
         if (jQuery('children').hasClass('show')) {
