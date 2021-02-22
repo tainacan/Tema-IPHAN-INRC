@@ -10770,7 +10770,6 @@ textarea {
 .main-navigation ul li.focus > ul {
 	left: auto;
 	right: -1px;
-	margin-top: 10px;
 }
 
 .main-navigation ul > li {
@@ -10789,6 +10788,7 @@ textarea {
 }
 
 .main-navigation ul > li:hover {
+	border: none;
 	border-color: #ffffff;
 }
 

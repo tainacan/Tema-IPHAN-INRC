@@ -111,7 +111,6 @@
         li.focus > ul {
             left: auto;
             right: -1px;
-            margin-top: 10px;
         }
         & > li {
             border: 1px solid transparent;
@@ -127,6 +126,7 @@
             text-align: center;
             transition: border-color 0.2s ease;
             &:hover {
+                border: none;
                 border-color: $color__branco;
             }
             &:not(:last-child) {
