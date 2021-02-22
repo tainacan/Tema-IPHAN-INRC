@@ -241,7 +241,9 @@ a {
         fill: $color__branco;
     }
 }
-
+.menu-toggle[aria-expanded="true"]:hover {
+    background: $color__branco;
+}
 .menu-toggle[aria-expanded="true"] {
     background: $color__branco;
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {

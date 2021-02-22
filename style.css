@@ -10910,6 +10910,10 @@ a {
 	}
 }
 
+.menu-toggle[aria-expanded="true"]:hover {
+	background: #ffffff;
+}
+
 .menu-toggle[aria-expanded="true"] {
 	background: #ffffff;
 }
