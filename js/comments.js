@@ -75,7 +75,7 @@ jQuery(function ($) {
 });
 
 // Add ou remove a classe 'show' ao clicar
-jQuery('.reply>a:last-child').after().click(function () {
+jQuery('.reply>a:last-child').click(function () {
     console.log('entrei')
     try {
         if (jQuery('children').hasClass('show')) {

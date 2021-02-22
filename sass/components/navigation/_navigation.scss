@@ -385,10 +385,6 @@ a {
 .hamburguer-desktop .sub-menu > li > a {
     color: $color__cinza6 !important;
 }
-/* .hamburguer-desktop .menu-item-has-children::after {
-    display: none;
-    content: none;
-} */
 
 .remove-after-before::after,
 .remove-after-before::before {
@@ -401,7 +397,7 @@ a {
         top: 84px;
         right: 0%;
         background: $color__branco;
-        width: 30%;
+        width: auto;
         height: 50%;
         z-index: 20;
         padding: 20px;

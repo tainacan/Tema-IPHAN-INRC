@@ -11073,10 +11073,6 @@ a {
 	color: #515151 !important;
 }
 
-/* .hamburguer-desktop .menu-item-has-children::after {
-    display: none;
-    content: none;
-} */
 .remove-after-before::after,
 .remove-after-before::before {
 	display: none;
@@ -11087,7 +11083,7 @@ a {
 	top: 84px;
 	right: 0%;
 	background: #ffffff;
-	width: 30%;
+	width: auto;
 	height: 50%;
 	z-index: 20;
 	padding: 20px;
