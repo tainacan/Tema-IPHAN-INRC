@@ -11126,8 +11126,8 @@ a {
 		top: 12%;
 		left: 0%;
 		background: #ffffff;
-		width: 100%;
-		height: 50%;
+		width: auto;
+		height: auto;
 		z-index: 20;
 	}
 }
@@ -11138,8 +11138,8 @@ a {
 		top: 14%;
 		left: 0%;
 		background: #ffffff;
-		width: 100%;
-		height: 50%;
+		width: auto;
+		height: auto;
 		z-index: 20;
 	}
 }
@@ -11150,8 +11150,8 @@ a {
 		top: 25%;
 		left: 0%;
 		background: #ffffff;
-		width: 100%;
-		height: 70%;
+		width: auto;
+		height: auto;
 		z-index: 20;
 	}
 }
