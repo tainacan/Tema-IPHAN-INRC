@@ -11084,10 +11084,10 @@ a {
 	right: 0%;
 	background: #ffffff;
 	width: auto;
-	height: 50%;
+	height: auto;
 	z-index: 20;
 	padding: 20px;
-	overflow-y: auto;
+	overflow-y: hidden;
 	overflow-x: hidden;
 	padding-top: 50px;
 	padding-right: 50px;
