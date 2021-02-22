@@ -75,15 +75,17 @@ jQuery(function ($) {
 });
 
 // Add ou remove a classe 'show' ao clicar
-jQuery('.reply>a:last-child').click(function () {
-    console.log('entrei')
-    try {
-        if (jQuery('children').hasClass('show')) {
-            jQuery('children').removeClass('show');
-            jQuery('.reply>a:last-child::after').css({ content: '+' })
-        } else {
-            jQuery('children').addClass('show');
-            jQuery('.reply>a:last-child::after').css({ content: '-' })
-        }
-    } catch { }
-}); 
+jQuery(function () {
+    jQuery('.reply>a:last-child').on("click", function () {
+        console.log('entrei')
+        try {
+            if (jQuery('.children').hasClass('show')) {
+                jQuery('.children').removeClass('show');
+                jQuery('.reply>a:last-child::after').css({ content: '+' })
+            } else {
+                jQuery('.children').addClass('show');
+                jQuery('.reply>a:last-child::after').css({ content: '-' })
+            }
+        } catch { }
+    });
+});
