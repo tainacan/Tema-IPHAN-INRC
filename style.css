@@ -10960,6 +10960,7 @@ a {
 	background: #58020b;
 	color: #58020b;
 	border-color: #58020b;
+	border-style: solid;
 }
 
 @media screen and (orientation: portrait) {
