@@ -126,8 +126,7 @@
             align-items: center;
             text-align: center;
             transition: border-color 0.2s ease;
-            &:hover,
-            &:focus {
+            &:hover {
                 border-color: $color__branco;
             }
             &:not(:last-child) {
@@ -276,6 +275,11 @@ a {
         padding-bottom: 25px;
         z-index: 2;
     }
+}
+.menu-toggle[aria-expanded="false"] {
+    background: $color__vermelho1;
+    color: $color__vermelho1;
+    border-color: $color__vermelho1;
 }
 
 .menu-toggle[aria-expanded="false"] {

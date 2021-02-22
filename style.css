@@ -10788,7 +10788,7 @@ textarea {
 	transition: border-color 0.2s ease;
 }
 
-.main-navigation ul > li:hover, .main-navigation ul > li:focus {
+.main-navigation ul > li:hover {
 	border-color: #ffffff;
 }
 
@@ -10954,6 +10954,12 @@ a {
 		padding-bottom: 25px;
 		z-index: 2;
 	}
+}
+
+.menu-toggle[aria-expanded="false"] {
+	background: #58020b;
+	color: #58020b;
+	border-color: #58020b;
 }
 
 @media screen and (orientation: portrait) {
