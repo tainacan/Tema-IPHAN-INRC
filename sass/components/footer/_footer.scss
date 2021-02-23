@@ -115,13 +115,16 @@
     }
     > .site-container > .site-info > img {
         @media screen and (min-width: $screen__sm) {
+            width: 100%;
             max-width: 157px;
         }
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-            max-width: 30%;
+            width: 100%;
+            max-width: 110px;
         }
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
-            max-width: 20%;
+            width: 100%;
+            max-width: 110px;
         }
     }
 }

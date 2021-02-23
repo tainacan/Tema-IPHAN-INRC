@@ -20,8 +20,18 @@
         }
     }
     img {
-        max-width: 150px;
-        display: flex;
+        @media screen and (min-width: $screen__sm) {
+            width: 100%;
+            max-width: 157px;
+        }
+        @media screen and (max-width: $screen__sm) and (orientation: portrait) {
+            width: 100%;
+            max-width: 110px;
+        }
+        @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+            width: 100%;
+            max-width: 110px;
+        }
     }
 }
 
