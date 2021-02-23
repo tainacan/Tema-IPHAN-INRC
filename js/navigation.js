@@ -97,11 +97,11 @@
 		}
 	}
 
-	jQuery(document).ready(function ($) {
+	jQuery(document).on("ready", function ($) {
 		var offset = 100;
 		var speed = 250;
 		var duration = 500;
-		jQuery(window).scroll(function () {
+		jQuery(window).on("scroll", function () {
 			if (jQuery(this).scrollTop() < offset) {
 				jQuery('#ScrolltoTop').fadeOut(duration);
 			} else {
@@ -113,7 +113,7 @@
 			return false;
 		});
 	});
-	jQuery(document).ready(function (jQuery) {
+	jQuery(document).on("ready", function (jQuery) {
 		var coll = document.getElementsByClassName("collapsible");
 		var i;
 
@@ -129,7 +129,7 @@
 			});
 		}
 	});
-	jQuery('.menu-toggle').click(function () {
+	jQuery('.menu-toggle').on("click", function () {
 		if (jQuery('#primary-menu').hasClass("collapse") && jQuery('.menu-toggle[aria-expanded="false"]') == true) {
 			jQuery('#primary-menu').removeClass("collapse");
 			jQuery('#primary-menu').addClass("show");
@@ -138,7 +138,7 @@
 			jQuery('#primary-menu').addClass("collapse");
 		}
 	});
-	jQuery(document).ready(function () {
+	jQuery(document).on("ready", function () {
 		//Condição para o menu virar hamburguer
 		if (jQuery('#primary-menu li').length > 6) {
 			jQuery('.menu-toggle').css({
