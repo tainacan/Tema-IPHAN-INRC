@@ -11419,7 +11419,6 @@ a {
 
 .comment-meta:last-child li::marker {
 	display: none;
-	/* font-variant-numeric: unset; */
 	list-style-type: none;
 }
 
@@ -11433,7 +11432,6 @@ li > article {
 	border-bottom: 1px solid #d9d9d9;
 	padding-bottom: 12px;
 	margin-bottom: 40px;
-	/* 	word-break: break-all; */
 }
 
 .comments-area li {
