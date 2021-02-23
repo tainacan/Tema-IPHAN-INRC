@@ -17,7 +17,7 @@
     }
 
     h3 {
-        font-size: 1.0rem;
+        font-size: 1rem;
         font-weight: 500;
     }
 
@@ -46,7 +46,7 @@
         }
     }
 
-    .wp-calendar-table>caption {
+    .wp-calendar-table > caption {
         color: $color__branco;
         font-weight: bold;
         text-transform: uppercase;
@@ -56,7 +56,7 @@
     .search-field:active,
     .search-field:focus {
         border-radius: 15px;
-        border: none
+        border: none;
     }
 
     label {
@@ -64,24 +64,15 @@
     }
 
     .search-form,
-    .search-form>label>,
-    .search-form>label>.search-field {
-        border: none
+    .search-form > label >,
+    .search-form > label > .search-field {
+        border: none;
     }
 }
 
 .widget-title {
     text-transform: uppercase;
 }
-
-
-/* .widget_calendar {
-    border: 1px $color__branco solid;
-}
-
-.widget_calendar::before {
-    font-family: "tainacan-icon tainacan-icon-calendar";
-} */
 
 // begin calendar
 
@@ -93,7 +84,6 @@
     width: 100%;
 }
 
-
 .calendar_wrap table {
     margin-top: 10%;
 }
@@ -103,13 +93,12 @@
     color: $color__branco;
     font-size: 0.75rem;
 
-
-    @media screen and (max-width:$screen__sm) {
+    @media screen and (max-width: $screen__sm) {
         margin-bottom: 0px;
         margin-top: 0px;
     }
 
-    @media screen and (min-width:$screen__sm) {
+    @media screen and (min-width: $screen__sm) {
         margin-bottom: 15px;
         margin-top: 10px;
     }
@@ -145,7 +134,7 @@
     margin-bottom: 0px;
 }
 
-.wp-calendar-nav>span>a {
+.wp-calendar-nav > span > a {
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
@@ -154,7 +143,7 @@
 #wp-calendar tbody td:hover,
 #wp-calendar tbody a:hover {
     background: $color__vermelho2;
-    color: $color__branco
+    color: $color__branco;
 }
 
 #wp-calendar tbody .pad {
@@ -180,11 +169,11 @@
     margin-bottom: 5%;
 }
 
-.widget_archive>ul>li>a {
+.widget_archive > ul > li > a {
     text-transform: uppercase;
 }
 
-.widget_archive>ul>li {
+.widget_archive > ul > li {
     display: flex;
     justify-content: space-between;
 
@@ -203,16 +192,12 @@
     border-radius: 6px;
     padding-top: 2%;
 
-    @media screen and (min-width: $screen__sm) {
-        /*     margin-top: 10%; */
-    }
-
-    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         width: 90%;
         vertical-align: middle;
     }
 
-    @media screen and (max-width:$screen__md) and (orientation: landscape) {
+    @media screen and (max-width: $screen__md) and (orientation: landscape) {
         width: 95%;
         vertical-align: middle;
     }
@@ -238,7 +223,7 @@
         padding: 5px;
     }
 
-    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         position: relative;
         width: 100%;
         padding-left: 5%;
@@ -247,7 +232,6 @@
         margin-left: 0%;
         width: 330px;
     }
-
 }
 
 //end search bar
@@ -258,11 +242,11 @@
     margin-bottom: 5%;
 }
 
-.widget_categories>ul>li>a {
+.widget_categories > ul > li > a {
     text-transform: uppercase;
 }
 
-.widget_categories>ul>li {
+.widget_categories > ul > li {
     display: flex;
     justify-content: space-between;
 
@@ -281,16 +265,12 @@
     border-radius: 6px;
     padding-top: 2%;
 
-    @media screen and (min-width: $screen__sm) {
-        /*     margin-top: 10%; */
-    }
-
-    @media screen and (max-width:$screen__sm) and (orientation: portrait) {
+    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         width: 90%;
         vertical-align: middle;
     }
 
-    @media screen and (max-width:$screen__md) and (orientation: landscape) {
+    @media screen and (max-width: $screen__md) and (orientation: landscape) {
         width: 95%;
         vertical-align: middle;
     }
@@ -299,7 +279,7 @@
 //end Category
 
 //begin media galery
-.widget_media_gallery>div {
+.widget_media_gallery > div {
     row-gap: 0%;
     column-gap: 3%;
 }
@@ -342,8 +322,8 @@
     display: none;
 }
 
-.gallery-columns-1>figure,
-.gallery-columns-2>figure {
+.gallery-columns-1 > figure,
+.gallery-columns-2 > figure {
     display: inline-block;
     text-align: left;
     width: 100%;
@@ -375,24 +355,19 @@
     display: none;
 }
 
-.gallery-columns-3>figure,
-.gallery-columns-4>figure,
-.gallery-columns-5>figure,
-.gallery-columns-6>figure,
-.gallery-columns-7>figure,
-.gallery-columns-8>figure,
-.gallery-columns-9>figure {
+.gallery-columns-3 > figure,
+.gallery-columns-4 > figure,
+.gallery-columns-5 > figure,
+.gallery-columns-6 > figure,
+.gallery-columns-7 > figure,
+.gallery-columns-8 > figure,
+.gallery-columns-9 > figure {
     display: inline-block;
     text-align: left;
     width: 100%;
 }
 
 //end media galery
-
-// Begin Search
-
-
-// End Search
 
 // Begin Image
 .widget_media_image figure {
@@ -410,7 +385,7 @@
 
 //Begin Recent Coments
 .widget_recent_comments ul {
-    margin-top: 10%
+    margin-top: 10%;
 }
 
 //End Recent Coments

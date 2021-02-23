@@ -11511,7 +11511,7 @@ li > article {
 }
 
 .widget h3 {
-	font-size: 1.0rem;
+	font-size: 1rem;
 	font-weight: 500;
 }
 
@@ -11567,13 +11567,6 @@ li > article {
 	text-transform: uppercase;
 }
 
-/* .widget_calendar {
-    border: 1px $color__branco solid;
-}
-
-.widget_calendar::before {
-    font-family: "tainacan-icon tainacan-icon-calendar";
-} */
 .widget_calendar {
 	float: left;
 }
@@ -11696,12 +11689,6 @@ li > article {
 	padding-top: 2%;
 }
 
-@media screen and (min-width: 768px) {
-	.widget_archive select {
-		/*     margin-top: 10%; */
-	}
-}
-
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.widget_archive select {
 		width: 90%;
@@ -11776,12 +11763,6 @@ li > article {
 	text-transform: uppercase;
 	border-radius: 6px;
 	padding-top: 2%;
-}
-
-@media screen and (min-width: 768px) {
-	.widget_categories select {
-		/*     margin-top: 10%; */
-	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
