@@ -53,7 +53,7 @@ if (post_password_required()) {
 			function wp_comment_date($date)
 			{
 			?>
-				<span class="time-ago"> <?php echo sprintf(esc_html__('%s atrás', 'textdomain'), human_time_diff(get_comment_time('U'), current_time('timestamp'))); ?></span>
+				<span class="time-ago"> <?php echo sprintf(esc_html__('%s atrás', 'textdomain'), human_time_diff(get_the_time('U'), current_time('timestamp'))); ?></span>
 			<?php
 				$date = date("d/m/Y");
 				return $date;
