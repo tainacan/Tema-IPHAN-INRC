@@ -18,11 +18,8 @@ ul.products {
 }
 
 @media screen and (min-width: 48em) {
-
 	ul.products {
-
 		li.product {
-
 			@include column-width(3);
 			float: left;
 			margin-right: $columns__margin;
@@ -38,23 +35,17 @@ ul.products {
 	}
 
 	ul.products.columns-1 {
-
 		li.product {
 			float: none;
 			width: 100%;
 		}
-
 	}
 
 	@for $i from 2 through 6 {
-
 		ul.products.columns-#{$i} {
-
 			li.product {
-
-				@include column-width( $i );
+				@include column-width($i);
 			}
-
 		}
 	}
 }
