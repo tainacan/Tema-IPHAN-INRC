@@ -12836,7 +12836,7 @@ input[type="search"].search-bar__home {
 	font-size: 1.25em;
 	text-transform: none !important;
 	letter-spacing: normal !important;
-	content: 'download';
+	content: "download";
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -12862,7 +12862,8 @@ input[type="search"].search-bar__home {
 	transform: scale(1);
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__document > iframe, .tainacan-single-post .tainacan-content .tainacan-item-section__document img.attachment-large {
+.tainacan-single-post .tainacan-content .tainacan-item-section__document > iframe,
+.tainacan-single-post .tainacan-content .tainacan-item-section__document img.attachment-large {
 	display: block;
 	height: auto;
 	margin: 0 auto;
@@ -12969,13 +12970,15 @@ input[type="search"].search-bar__home {
 	border: 1px solid #58020b;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-prev, .tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-container-rtl .swiper-button-next,
+.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-prev,
+.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-container-rtl .swiper-button-next,
 .tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-button-prev,
 .tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-container-rtl .swiper-button-next {
 	left: -20px;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-next, .tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-container-rtl .swiper-button-prev,
+.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-next,
+.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-container-rtl .swiper-button-prev,
 .tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-button-next,
 .tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-container-rtl .swiper-button-prev {
 	right: -20px;

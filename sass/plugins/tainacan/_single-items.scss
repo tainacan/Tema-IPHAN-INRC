@@ -30,7 +30,6 @@
     }
 }
 .tainacan-single-post {
-
     .tainacan-content {
         font-size: 1rem;
         min-height: 32.5vh;
@@ -76,7 +75,7 @@
                 font-size: 1.25em;
                 text-transform: none !important;
                 letter-spacing: normal !important;
-                content: 'download';
+                content: "download";
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -89,7 +88,7 @@
             text-transform: uppercase;
             margin-bottom: 30px;
         }
-        
+
         // Document, Attachment and Gallery sections -----------------
         .tainacan-item-section__document {
             display: flex;
@@ -98,7 +97,7 @@
             flex-wrap: wrap;
             height: auto;
             position: relative;
-            
+
             &:hover {
                 .tainacan-item-file-download {
                     opacity: 1;
@@ -106,7 +105,8 @@
                 }
             }
 
-            > iframe, img.attachment-large {
+            > iframe,
+            img.attachment-large {
                 display: block;
                 height: auto;
                 margin: 0 auto;
@@ -116,10 +116,10 @@
                 width: 90%;
             }
             > iframe {
-                @media only screen and (min-width: 768px){
+                @media only screen and (min-width: 768px) {
                     min-height: 600px;
                 }
-                @media only screen and (max-width: 576px){
+                @media only screen and (max-width: 576px) {
                     min-height: 429px;
                 }
             }
@@ -143,7 +143,7 @@
                 border-radius: 2px;
                 border-bottom: 4px solid transparent;
                 margin-bottom: 4px;
-                transition: border 0.3s ease; 
+                transition: border 0.3s ease;
             }
         }
         .tainacan-item-section__attachments-file {
@@ -156,8 +156,8 @@
         }
         .tainacan-item-section__gallery {
             margin-bottom: 24px;
-            ul { 
-                list-style: none; 
+            ul {
+                list-style: none;
                 padding: 0;
             }
             .tainacan-item-section__document {
@@ -184,7 +184,7 @@
         .tainacan-item-section__attachments {
             position: relative;
             padding: 0px;
-            
+
             .swiper-button-disabled {
                 display: none;
             }
@@ -196,10 +196,12 @@
                 background-color: white;
                 border: 1px solid $color__vermelho1;
             }
-            .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
                 left: -20px;
             }
-            .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
                 right: -20px;
             }
             .swiper-slide-thumb-active {
@@ -209,8 +211,8 @@
                 }
             }
 
-            ul { 
-                list-style: none; 
+            ul {
+                list-style: none;
                 padding: 0;
             }
             .tainacan-item-section__attachments-file {
@@ -220,7 +222,7 @@
                 word-break: break-all;
                 font-size: 0.875em;
                 max-width: calc(var(--attachments-size, 157px) + 17px);
-                
+
                 @media only screen and (max-width: 380px) {
                     margin: 10px 0;
                 }
@@ -260,7 +262,7 @@
 
                 .attachment-without-image img {
                     padding: 36px;
-                    background-color:$color__cinza2;
+                    background-color: $color__cinza2;
                     object-fit: contain;
                     height: 100%;
                     width: auto;
@@ -275,7 +277,7 @@
             padding: 24px 8.33333%;
         }
 
-        .single-item-collection--information{
+        .single-item-collection--information {
             padding: 0 $container__side-padding;
 
             h3 {
@@ -315,10 +317,10 @@
             // Metadata type textarea has different separator
             .multivalue-separator {
                 color: $color__cinza3;
-                margin: 0 8px;    
+                margin: 0 8px;
             }
             .hierarchy-separator {
-                color: $color__cinza3;  
+                color: $color__cinza3;
             }
             .metadata-type-compound,
             .metadata-type-textarea {
@@ -336,13 +338,13 @@
                 padding-left: 1.5rem;
                 border-left: 1px solid $color__cinza3;
 
-                &>.multivalue-separator {
+                & > .multivalue-separator {
                     margin-left: 0.5rem;
                     width: 80px;
                 }
             }
         }
-    
+
         footer {
             font-size: 0.875rem;
             color: $color__preto;
@@ -352,7 +354,7 @@
 }
 
 // Photoswip zoom ---------------------------------
-button.pswp__button:hover { 
+button.pswp__button:hover {
     background-color: transparent !important;
 }
 .pswp__zoom-wrap .attachment-without-image {
@@ -363,9 +365,9 @@ button.pswp__button:hover {
     justify-content: center;
 
     & > iframe {
-    min-height: 80vh;
-    width: 80%;
-    border: none;
+        min-height: 80vh;
+        width: 80%;
+        border: none;
     }
 
     & > a,
@@ -381,14 +383,13 @@ button.pswp__button:hover {
         min-height: 54px;
         padding: 12px;
     }
-
 }
 
 .tainacan-single-item-navigation {
     #item-single-navigation.related-posts {
         display: flex;
         gap: 16px;
-            
+
         .related-post {
             flex-basis: 33%;
             a {
@@ -426,7 +427,7 @@ button.pswp__button:hover {
                 .post-title:focus {
                     padding: 1px 5px;
                     font-weight: bold;
-                    background: rgba(0,0,0,0.5);
+                    background: rgba(0, 0, 0, 0.5);
                     display: inline-block;
                     text-decoration: none !important;
                 }
@@ -437,7 +438,7 @@ button.pswp__button:hover {
                     text-transform: uppercase;
                 }
                 .post-title {
-                    color:$color__branco !important;
+                    color: $color__branco !important;
                 }
             }
         }
