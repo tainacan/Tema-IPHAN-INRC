@@ -11358,6 +11358,10 @@ a {
 	display: block;
 }
 
+/* .comment-author,
+.comment-metadata {
+	word-wrap: anywhere;
+} */
 .comments-area > h2,
 .comment-author > .says {
 	display: none;
@@ -11430,6 +11434,7 @@ li > article {
 	border-bottom: 1px solid #d9d9d9;
 	padding-bottom: 12px;
 	margin-bottom: 40px;
+	/* 	word-break: break-all; */
 }
 
 .comments-area li {
@@ -12016,32 +12021,6 @@ li > article {
 	background-image: linear-gradient(to right, #58020b, #970620);
 	color: #ffffff;
 	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	/*     .widget-area:hover {
-        ul {
-            @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-                height: 100%;
-                overflow: auto;
-                transition: height 1.2s;
-            }
-
-            @media screen and (max-width: $screen__sm) and (orientation: landscape) {
-                height: 100%;
-                overflow: auto;
-                transition: height 1.2s;
-            }
-        }
-
-        .plus-minus {
-            @media screen and (max-width: $screen__sm) {
-                content: "-";
-            }
-        }
-    } */
-	/*     .collapse {
-        height: 0px;
-        overflow: hidden;
-        transition: height 0.8s;
-    } */
 }
 
 .site-footer > .separator {
@@ -12057,16 +12036,6 @@ li > article {
 .site-footer a:focus,
 .site-footer a:visited {
 	color: #ffffff;
-}
-
-.site-footer .widget-area {
-	/*        ul {
-            @media screen and (max-width: $screen__sm) {
-                height: 0px;
-                overflow: hidden;
-                transition: height 0.8s;
-            }
-        } */
 }
 
 .site-footer .widget-area > .widget,
@@ -12184,7 +12153,7 @@ li > article {
 
 @media screen and (min-width: 768px) {
 	.site-footer > .site-container > .site-info > img {
-		max-width: 10%;
+		max-width: 157px;
 	}
 }
 

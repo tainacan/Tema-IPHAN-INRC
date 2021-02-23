@@ -6,6 +6,11 @@
 	display: block;
 }
 
+/* .comment-author,
+.comment-metadata {
+	word-wrap: anywhere;
+} */
+
 .comments-area > h2,
 .comment-author > .says {
 	display: none;
@@ -78,6 +83,7 @@ li > article {
 	border-bottom: 1px solid $color__cinza3;
 	padding-bottom: 12px;
 	margin-bottom: 40px;
+	/* 	word-break: break-all; */
 }
 
 .comments-area li {
