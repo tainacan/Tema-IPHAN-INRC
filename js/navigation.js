@@ -43,8 +43,8 @@
 	});
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	document.addEventListener('click', function (event) {
-		const isClickInside = siteNavigation.contains(event.target);
+	document.addEventListener('click', function (Event) {
+		const isClickInside = siteNavigation.contains(Event.target);
 
 		if (!isClickInside) {
 			siteNavigation.classList.remove('toggled');
@@ -64,7 +64,7 @@
 		link.addEventListener('blur', toggleFocus, true);
 	}
 
-	// Toggle focus each time a menu link with children receive a touch event.
+	// Toggle focus each time a menu link with children receive a touch Event.
 	for (const link of linksWithChildren) {
 		link.addEventListener('touchstart', toggleFocus, false);
 	}
@@ -73,7 +73,7 @@
 	 * Sets or removes .focus class on an element.
 	 */
 	function toggleFocus() {
-		if (event.type === 'focus' || event.type === 'blur') {
+		if (Event.type === 'focus' || Event.type === 'blur') {
 			let self = this;
 			// Move up through the ancestors of the current link until we hit .nav-menu.
 			while (!self.classList.contains('nav-menu')) {
@@ -85,9 +85,9 @@
 			}
 		}
 
-		if (event.type === 'touchstart') {
+		if (Event.type === 'touchstart') {
 			const menuItem = this.parentNode;
-			event.preventDefault();
+			Event.preventDefault();
 			for (const link of menuItem.parentNode.children) {
 				if (menuItem !== link) {
 					link.classList.remove('focus');
@@ -140,7 +140,7 @@
 	});
 	jQuery(document).on("ready", function () {
 		//Condição para o menu virar hamburguer
-		if (jQuery('#primary-menu li').length > 6) {
+		if (jQuery('#primary-menu li').length > 1) {
 			jQuery('.menu-toggle').css({
 				display: "block"
 			});
