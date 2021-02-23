@@ -59,7 +59,6 @@
 }
 
 p.stars {
-
 	a {
 		position: relative;
 		height: 1em;
@@ -71,7 +70,6 @@ p.stars {
 		font-weight: 400;
 
 		&::before {
-
 			display: block;
 			position: absolute;
 			top: 0;
@@ -87,7 +85,6 @@ p.stars {
 		}
 
 		&:hover {
-
 			~ a::before {
 				content: "\53";
 				color: $color__text-main;
@@ -97,9 +94,7 @@ p.stars {
 	}
 
 	&:hover {
-
 		a {
-
 			&::before {
 				content: "\53";
 				color: $color__link;
@@ -109,9 +104,7 @@ p.stars {
 	}
 
 	&.selected {
-
 		a.active {
-
 			&::before {
 				content: "\53";
 				color: $color__link;
@@ -126,7 +119,6 @@ p.stars {
 		}
 
 		a:not(.active) {
-
 			&::before {
 				content: "\53";
 				color: $color__link;
@@ -140,7 +132,6 @@ p.stars {
  * Tabs
  */
 .woocommerce-tabs {
-
 	ul.tabs {
 		list-style: none;
 		margin: 0;
@@ -160,7 +151,6 @@ p.stars {
 	}
 
 	.panel {
-
 		h2:first-of-type {
 			margin-bottom: 1em;
 		}
@@ -194,16 +184,13 @@ p.stars {
  * Forms
  */
 .form-row {
-
 	&.woocommerce-validated {
-
 		input.input-text {
 			box-shadow: inset 2px 0 0 $woocommerce__color-success;
 		}
 	}
 
 	&.woocommerce-invalid {
-
 		input.input-text {
 			box-shadow: inset 2px 0 0 $woocommerce__color-error;
 		}
@@ -248,12 +235,10 @@ p.no-comments {
 }
 
 @media screen and (min-width: 48em) {
-
 	/**
 	 * Header cart
 	 */
 	.site-header-cart {
-
 		.widget_shopping_cart {
 			position: absolute;
 			top: 100%;
@@ -266,7 +251,6 @@ p.no-comments {
 
 		&:hover,
 		&.focus {
-
 			.widget_shopping_cart {
 				left: 0;
 				display: block;
