@@ -10615,8 +10615,7 @@ textarea {
 }
 
 .site-header img {
-	max-width: 96px;
-	width: 96px;
+	max-width: 150px;
 	display: flex;
 }
 
