@@ -13,7 +13,7 @@
 .breadcrumb > .site-container {
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
 }
 .breadcrumb .separator {
     margin: 0 0.35rem;
@@ -22,7 +22,7 @@
     list-style: none;
 }
 
-.breadcrumb  i::before {
+.breadcrumb i::before {
     color: $color__vermelho1;
     font-size: 1.5rem;
     margin-right: 24px;
@@ -43,4 +43,9 @@
 }
 .breadcrumb .separator {
     color: $color__vermelho1;
+}
+
+.categoria-excerpt {
+    text-transform: uppercase;
+    color: $color__cinza6;
 }

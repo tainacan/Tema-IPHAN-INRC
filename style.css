@@ -12438,6 +12438,11 @@ body:not(.home) .title-banner:last-child {
 	color: #58020b;
 }
 
+.categoria-excerpt {
+	text-transform: uppercase;
+	color: #515151;
+}
+
 /* excerpt
 --------------------------------------------- */
 .excerpt {
