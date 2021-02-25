@@ -136,3 +136,8 @@ li > article {
 	padding-right: 4px;
 	margin-right: 10px;
 }
+
+.comment-metadata {
+	text-overflow: ellipsis;
+	word-break: break-all;
+}

@@ -11342,6 +11342,10 @@ a {
 	box-shadow: none;
 }
 
+.prev {
+	display: block !important;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -11504,6 +11508,11 @@ li > article {
 	background-color: #ffffff;
 	padding-right: 4px;
 	margin-right: 10px;
+}
+
+.comment-metadata {
+	text-overflow: ellipsis;
+	word-break: break-all;
 }
 
 /* Widgets

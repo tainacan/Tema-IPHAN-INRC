@@ -180,8 +180,8 @@ function iphan_inrc_scripts()
 	}
 
 	//Bootstrap Javascript
-	wp_register_script( 'bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), IPHAN_INRC_VERSION, true );
-	wp_enqueue_script( 'bootstrap4JS' );
+	wp_register_script('bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	wp_enqueue_script('bootstrap4JS');
 
 	// Scripts necessary for using the gallery modal
 	wp_enqueue_style('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), IPHAN_INRC_VERSION);
@@ -215,6 +215,7 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
 
 /**
  * Customizer additions.
