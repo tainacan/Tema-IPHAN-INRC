@@ -81,10 +81,10 @@ jQuery(document).on("ready", function () {
             try {
                 if (jQuery('.children').hasClass('show')) {
                     jQuery('.children').removeClass('show');
-                    jQuery('.comment-collapse:after').css({ content: '+' })
+                    jQuery('a.comment-collapse').removeClass('expanded')
                 } else {
                     jQuery('.children').addClass('show');
-                    jQuery('.comment-collapse:after').css({ content: '-' })
+                    jQuery('a.comment-collapse').addClass('expanded')
                 }
             } catch { }
         });

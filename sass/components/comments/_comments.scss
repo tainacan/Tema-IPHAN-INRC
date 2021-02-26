@@ -78,6 +78,12 @@
 	font-size: 20px;
 }
 
+.expanded::after {
+	content: "-";
+	float: right;
+	font-size: 20px;
+}
+
 li > article {
 	border-bottom: 1px solid $color__cinza3;
 	padding-bottom: 12px;
