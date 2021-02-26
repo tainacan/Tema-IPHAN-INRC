@@ -55,7 +55,9 @@ jQuery(document).on("ready", function () {
     jQuery(function ($) {
         var newElement = document.createElement('a')
         jQuery('.reply').append(newElement);
-        jQuery('.comment-list>li>article>.reply>a:last-child').addClass('comment-collapse')
+        if (jQuery('.comment-list>li>ol')) {
+            jQuery('.comment-list>li>article>.reply>a:last-child').addClass('comment-collapse')
+        }
         let button = document.getElementsByClassName('comment-collapse')
         button = button.setAttribute('aria-expanded', 'false')
         var plus = document.getElementsByClassName('comment-collapse')
