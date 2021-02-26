@@ -55,7 +55,7 @@ jQuery(document).on("ready", function () {
     jQuery(function ($) {
         var newElement = document.createElement('a')
         jQuery('.reply').append(newElement);
-        jQuery('.reply>a:last-child').addClass('comment-collapse')
+        jQuery('.comment-list>li>article>.reply>a:last-child').addClass('comment-collapse')
         var plus = document.getElementsByClassName('comment-collapse')
         for (let i = 0; i < plus.length; i++) {
             plus[i].setAttribute("type", 'button');
