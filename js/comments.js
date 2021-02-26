@@ -58,11 +58,11 @@ jQuery(document).on("ready", function () {
         if (jQuery('.comment-list>li>ol')) {
             jQuery('.comment-list>li>article>.reply>a:last-child').addClass('comment-collapse')
         }
-        let button = document.getElementsByClassName('comment-collapse')
-        button = button.setAttribute('aria-expanded', 'false')
         var plus = document.getElementsByClassName('comment-collapse')
         for (let i = 0; i < plus.length; i++) {
             plus[i].setAttribute("type", 'button');
+            plus[i].setAttribute('aria-expanded', 'false')
+
         }
         try {
         } catch {
