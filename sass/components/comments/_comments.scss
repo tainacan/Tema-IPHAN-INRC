@@ -72,6 +72,10 @@
 	list-style-type: none;
 }
 
+.comment-collapse {
+	cursor: pointer;
+}
+
 .comment-collapse::after {
 	content: "+";
 	float: right;
