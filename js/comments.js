@@ -55,14 +55,14 @@ jQuery(document).on("ready", function () {
     jQuery(function ($) {
         var newElement = document.createElement('a')
         jQuery('.reply').append(newElement);
-        if (jQuery('.comment-list>li>ol')) {
-            jQuery('.comment-list>li>article>.reply>a:last-child').addClass('comment-collapse')
+        if (jQuery('.comment-list>li>ol').hasClass('children')) {
+            jQuery('.comment-list>li>ol').siblings('.comment-body').children('.reply').children('a:last-child').addClass('comment-collapse')
         }
         var plus = document.getElementsByClassName('comment-collapse')
+        console.log(plus)
         for (let i = 0; i < plus.length; i++) {
             plus[i].setAttribute("type", 'button');
             plus[i].setAttribute('aria-expanded', 'false')
-
         }
         try {
         } catch {
