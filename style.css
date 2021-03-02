@@ -10617,7 +10617,7 @@ textarea {
 @media screen and (min-width: 768px) {
 	.site-header img {
 		width: 100%;
-		max-width: 157px;
+		max-width: 145px;
 	}
 }
 
@@ -12167,7 +12167,7 @@ li > article {
 @media screen and (min-width: 768px) {
 	.site-footer > .site-container > .site-info > img {
 		width: 100%;
-		max-width: 157px;
+		max-width: 145px;
 	}
 }
 
