@@ -43,7 +43,7 @@ if (is_front_page()) {
 		<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr1.png')">
 		</div>
 		<div class="banner-footer-or"><span class="text-banner-footer">ou</span></div>
-
+		<!-- Se tiver vazio, não exibir os botões -->
 		<div class="buttons-banner-footer">
 			<a href="<?php echo get_theme_mod('setting_link_banner_1', '') ?>" class="button-white-footer-banner"><?php echo get_theme_mod('label_banner_1', '') ?></a>
 			<div class="separator-banner-footer-horizontal">
