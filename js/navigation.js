@@ -139,6 +139,16 @@
 		}
 	});
 	jQuery(document).on("ready", function () {
+		try {
+			if (document.getElementById('wpadminbar')) {
+				jQuery(document.getElementById('primary-menu')).css({ top: '113px' })
+			}
+		}
+		catch {
+
+		}
+	})
+	jQuery(document).on("ready", function () {
 		//Condição para o menu virar hamburguer
 		if (jQuery('#primary-menu li').length > 1) {
 			jQuery('.menu-toggle').css({
