@@ -212,6 +212,17 @@ function iphan_inrc_customize_register($wp_customize)
         'settings' => 'setting_link_banner_1',
         'priority' => 1,
     ));
+    $wp_customize->add_setting('label_banner_1', array(
+        'default' => 'explore o repositório',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('text_banner_1', array(
+        'label' => 'Label button 1',
+        'type' => 'text',
+        'section' => 'link_banner',
+        'settings' => 'label_banner_1',
+        'priority' => 2,
+    ));
 
     /* Link Banner 2 */
     $wp_customize->add_setting('setting_link_banner_2', array(
@@ -225,7 +236,18 @@ function iphan_inrc_customize_register($wp_customize)
         'type' => 'text',
         'section' => 'link_banner',
         'settings' => 'setting_link_banner_2',
-        'priority' => 1,
+        'priority' => 3,
+    ));
+    $wp_customize->add_setting('label_banner_2', array(
+        'default' => 'acesse o repositório completo',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('text_banner_2', array(
+        'label' => 'Label button 2',
+        'type' => 'text',
+        'section' => 'link_banner',
+        'settings' => 'label_banner_2',
+        'priority' => 4,
     ));
 }
 add_action('customize_register', 'iphan_inrc_customize_register');
