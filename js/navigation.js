@@ -60,20 +60,20 @@
 
 	// Toggle focus each time a menu link is focused or blurred.
 	for (const link of links) {
-		link.addEventListener('focus', toggleFocus, true);
-		link.addEventListener('blur', toggleFocus, true);
+		link.addEventListener('focus', (e) => toggleFocus(e), true);
+		link.addEventListener('blur', (e) => toggleFocus(e), true);
 	}
 
 	// Toggle focus each time a menu link with children receive a touch Event.
 	for (const link of linksWithChildren) {
-		link.addEventListener('touchstart', toggleFocus, false);
+		link.addEventListener('touchstart', (e) => toggleFocus(e), false);
 	}
 
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
-	function toggleFocus() {
-		if (Event.type === 'focus' || Event.type === 'blur') {
+	function toggleFocus(e) {
+		if (e.type === 'focus' || e.type === 'blur') {
 			let self = this;
 			// Move up through the ancestors of the current link until we hit .nav-menu.
 			while (!self.classList.contains('nav-menu')) {
@@ -85,9 +85,9 @@
 			}
 		}
 
-		if (Event.type === 'touchstart') {
+		if (e.type === 'touchstart') {
 			const menuItem = this.parentNode;
-			Event.preventDefault();
+			e.preventDefault();
 			for (const link of menuItem.parentNode.children) {
 				if (menuItem !== link) {
 					link.classList.remove('focus');
@@ -150,7 +150,7 @@
 	})
 	jQuery(document).on("ready", function () {
 		//Condição para o menu virar hamburguer
-		if (jQuery('#primary-menu li').length > 6) {
+		if (jQuery('#primary-menu li').length > 1) {
 			jQuery('.menu-toggle').css({
 				display: "block"
 			});

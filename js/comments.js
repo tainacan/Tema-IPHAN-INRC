@@ -13,7 +13,7 @@ jQuery(document).on("ready", function () {
             var commentReply = document.getElementsByClassName('comment-reply-link');
             for (let i = 0; i < commentReply.length; i++) {
                 commentReply[i].innerText = '';
-                commentReply[i].innerHTML = '<i size="50px" class="tainacan-icon tainacan-icon-undo"></i>';
+                commentReply[i].innerHTML = '<i size="50px" class="tainacan-icon tainacan-icon-1-25em tainacan-icon-undo"></i>';
             }
         } catch {
 
@@ -41,7 +41,7 @@ jQuery(document).on("ready", function () {
     });
 
     //adiciona placeholder's
-    jQuery(function ($) {
+    jQuery(function () {
         try {
             var commentTextArea = document.getElementById("comment");
             commentTextArea.setAttribute('placeholder', "Digite aqui seu comentário");
