@@ -59,10 +59,10 @@ jQuery(document).on("ready", function () {
             jQuery('.comment-list>li>ol').siblings('.comment-body').children('.reply').children('a:last-child').addClass('comment-collapse')
         }
         var plus = document.getElementsByClassName('comment-collapse')
-        console.log(plus)
         for (let i = 0; i < plus.length; i++) {
             plus[i].setAttribute("type", 'button');
-            plus[i].setAttribute('aria-expanded', 'false')
+            plus[i].setAttribute('aria-expanded', 'false');
+            plus[i].setAttribute('id', 'button-' + i)
         }
         try {
         } catch {
@@ -79,18 +79,36 @@ jQuery(document).on("ready", function () {
         }
     });
 
-    // Add ou remove a classe 'show' ao clicar
     jQuery(function () {
-        jQuery('.reply>a:last-child').on("click", function () {
-            try {
-                if (jQuery('.children').hasClass('show')) {
-                    jQuery('.children').removeClass('show');
-                    jQuery('a.comment-collapse').removeClass('expanded')
-                } else {
-                    jQuery('.children').addClass('show');
-                    jQuery('a.comment-collapse').addClass('expanded')
-                }
-            } catch { }
-        });
-    });
+        jQuery('a[type="button"]').on("click", function () {
+            var element = document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode.lastElementChild
+            if (!element.className.includes('show')) {
+                console.log('entrei')
+                jQuery(element).addClass('show')
+                jQuery(jQuery(this).attr("id")).addClass('expanded')
+            } else {
+                console.log('else')
+                jQuery(element).removeClass('show')
+                jQuery(jQuery(this).attr("id")).removeClass('expanded')
+            }
+        })
+    })
+
+    // Add ou remove a classe 'show' ao clicar
+    /*     jQuery(function () {
+            jQuery('a.comment-collapse').on("click", function () {
+                try {
+                    if (jQuery('a[type="button"]').on("click", function (evt) {
+                        console.log(jQuery(this).attr("id"));
+                    }));
+                    if (jQuery('.children').hasClass('show')) {
+                        jQuery('.children').removeClass('show');
+                        jQuery('a.comment-collapse').removeClass('expanded')
+                    } else {
+                        jQuery('.children').addClass('show');
+                        jQuery('a.comment-collapse').addClass('expanded')
+                    }
+                } catch { }
+            });
+        }); */
 });
