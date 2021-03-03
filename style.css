@@ -11387,6 +11387,26 @@ a {
 	border-radius: 0px;
 }
 
+@media only screen and (max-width: 768px) {
+	.comment-author {
+		width: auto;
+		word-break: break-word;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.comment-author > b > a,
+	.comment-metadata,
+	.time-ago,
+	time,
+	.comment-metadata > a {
+		white-space: nowrap;
+		width: auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
 .comment-form-author,
 .comment-form-url,
 .comment-form-email {
