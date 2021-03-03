@@ -11384,6 +11384,7 @@ a {
 
 .comment-form-comment > textarea {
 	height: 100px;
+	border-radius: 0px;
 }
 
 .comment-form-author,
