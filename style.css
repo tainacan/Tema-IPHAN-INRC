@@ -11040,7 +11040,7 @@ a {
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-	text-align: end;
+	text-align: start;
 	flex: 1 0 50%;
 }
 
