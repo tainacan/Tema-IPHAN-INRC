@@ -11377,10 +11377,6 @@ a {
 	display: block;
 }
 
-/* .comment-author,
-.comment-metadata {
-	word-wrap: anywhere;
-} */
 .comments-area > h2,
 .comment-author > .says {
 	display: none;
