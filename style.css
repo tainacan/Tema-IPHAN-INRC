@@ -10948,6 +10948,7 @@ a {
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.menu-toggle[aria-expanded="true"] {
 		padding-top: 5px;
+		border: none;
 		padding-left: 15px;
 		padding-right: 15px;
 		margin-left: 15px;
@@ -10960,6 +10961,7 @@ a {
 @media screen and (max-width: 320px) and (orientation: portrait) {
 	.menu-toggle[aria-expanded="true"] {
 		padding-top: 26px;
+		border: none;
 		padding-left: 37px;
 		padding-right: 14px;
 		margin-left: 10px;
@@ -10972,6 +10974,7 @@ a {
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.menu-toggle[aria-expanded="true"] {
 		padding-top: 20px;
+		border: none;
 		padding-left: 45px;
 		padding-right: 10px;
 		margin-left: 10px;
@@ -10990,6 +10993,7 @@ a {
 @media screen and (orientation: portrait) {
 	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
+		border: none;
 		padding-left: 10px;
 		padding-right: 10px;
 		margin-left: 10px;
@@ -11002,6 +11006,7 @@ a {
 	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		padding-left: 10px;
+		border: none;
 		padding-right: 10px;
 		margin-left: 10px;
 		padding-bottom: 25px;
