@@ -10853,6 +10853,18 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+	.admin-bar #primary-menu {
+		top: 113px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.admin-bar #primary-menu {
+		top: 144px;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	.menu-item-has-children::after {
 		display: block;
 		content: "\0231C";
@@ -11138,7 +11150,7 @@ a {
 @media screen and (max-width: 320px) and (orientation: portrait) {
 	.toggled .menu {
 		position: absolute;
-		top: 12%;
+		top: 98px;
 		left: 0%;
 		background: #ffffff;
 		width: auto;
@@ -11150,7 +11162,7 @@ a {
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.toggled .menu {
 		position: absolute;
-		top: 14%;
+		top: 98px;
 		left: 0%;
 		background: #ffffff;
 		width: auto;
@@ -11162,7 +11174,7 @@ a {
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.toggled .menu {
 		position: absolute;
-		top: 25%;
+		top: 98px;
 		left: 0%;
 		background: #ffffff;
 		width: auto;

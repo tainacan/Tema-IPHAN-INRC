@@ -171,6 +171,15 @@
     }
 }
 
+.admin-bar #primary-menu {
+    @media screen and (min-width: $screen__sm) {
+        top: 113px;
+    }
+    @media screen and (max-width: $screen__sm) {
+        top: 144px;
+    }
+}
+
 .menu-item-has-children::after {
     @media screen and (min-width: $screen__sm) {
         display: block;
@@ -427,11 +436,10 @@ a {
         padding-right: 0 !important;
         border: none;
     }
-
     .menu {
         @media screen and (max-width: $screen__xs) and (orientation: portrait) {
             position: absolute;
-            top: 12%;
+            top: 98px;
             left: 0%;
             background: $color__branco;
             width: auto;
@@ -440,7 +448,7 @@ a {
         }
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             position: absolute;
-            top: 14%;
+            top: 98px;
             left: 0%;
             background: $color__branco;
             width: auto;
@@ -449,7 +457,7 @@ a {
         }
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             position: absolute;
-            top: 25%;
+            top: 98px;
             left: 0%;
             background: $color__branco;
             width: auto;
