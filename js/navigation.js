@@ -73,60 +73,71 @@
 	 * Sets or removes .focus class on an element.
 	 */
 	function toggleFocus(e) {
-		if (e.type === 'focus' || e.type === 'blur') {
-			let self = this;
-			// Move up through the ancestors of the current link until we hit .nav-menu.
-			while (!self.classList.contains('nav-menu')) {
-				// On li elements toggle the class .focus.
-				if ('li' === self.tagName.toLowerCase()) {
-					self.classList.toggle('focus');
-				}
-				self = self.parentNode;
-			}
-		}
-
-		if (e.type === 'touchstart') {
-			const menuItem = this.parentNode;
-			e.preventDefault();
-			for (const link of menuItem.parentNode.children) {
-				if (menuItem !== link) {
-					link.classList.remove('focus');
+		try {
+			if (e.type === 'focus' || e.type === 'blur') {
+				let self = this;
+				// Move up through the ancestors of the current link until we hit .nav-menu.
+				while (!self.classList.contains('nav-menu')) {
+					// On li elements toggle the class .focus.
+					if ('li' === self.tagName.toLowerCase()) {
+						self.classList.toggle('focus');
+					}
+					self = self.parentNode;
 				}
 			}
-			menuItem.classList.toggle('focus');
+			if (e.type === 'touchstart') {
+				const menuItem = this.parentNode;
+				e.preventDefault();
+				for (const link of menuItem.parentNode.children) {
+					if (menuItem !== link) {
+						link.classList.remove('focus');
+					}
+				}
+				menuItem.classList.toggle('focus');
+			}
+		} catch (e) {
+			console.log(e.message)
 		}
 	}
 
 	jQuery(document).on("ready", function ($) {
-		var offset = 100;
-		var speed = 250;
-		var duration = 500;
-		jQuery(window).on("scroll", function () {
-			if (jQuery(this).scrollTop() < offset) {
-				jQuery('#ScrolltoTop').fadeOut(duration);
-			} else {
-				jQuery('#ScrolltoTop').fadeIn(duration);
-			}
-		});
-		jQuery('#ScrolltoTop').on('click', function () {
-			jQuery('html, body').animate({ scrollTop: 0 }, speed);
-			return false;
-		});
-	});
-	jQuery(document).on("ready", function (jQuery) {
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
-
-		for (i = 0; i < coll.length; i++) {
-			coll[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var content = this.nextElementSibling;
-				if (content.style.maxHeight) {
-					content.style.maxHeight = null;
+		try {
+			var offset = 100;
+			var speed = 250;
+			var duration = 500;
+			jQuery(window).on("scroll", function () {
+				if (jQuery(this).scrollTop() < offset) {
+					jQuery('#ScrolltoTop').fadeOut(duration);
 				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
+					jQuery('#ScrolltoTop').fadeIn(duration);
 				}
 			});
+			jQuery('#ScrolltoTop').on('click', function () {
+				jQuery('html, body').animate({ scrollTop: 0 }, speed);
+				return false;
+			});
+		} catch (e) {
+			console.log(e.message)
+		}
+	});
+	jQuery(document).on("ready", function (jQuery) {
+		try {
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.maxHeight) {
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					}
+				});
+			}
+		} catch (e) {
+			console.log(e.message)
 		}
 	});
 	jQuery('.menu-toggle').on("click", function () {
@@ -144,32 +155,36 @@
 				jQuery(document.getElementById('primary-menu')).css({ top: '113px' })
 			}
 		}
-		catch {
-
+		catch (e) {
+			console.log(e.message)
 		}
 	})
 	jQuery(document).on("ready", function () {
 		//Condição para o menu virar hamburguer
-		if (jQuery('#primary-menu li').length > 1) {
-			jQuery('.menu-toggle').css({
-				display: "block"
-			});
-			if (jQuery('.menu-toggle[aria-expanded="false"]')) {
-				jQuery('#primary-menu').addClass("collapse")
+		try {
+			if (jQuery('#primary-menu li').length > 1) {
+				jQuery('.menu-toggle').css({
+					display: "block"
+				});
+				if (jQuery('.menu-toggle[aria-expanded="false"]')) {
+					jQuery('#primary-menu').addClass("collapse")
+				}
+				jQuery('#primary-menu').addClass("hamburguer-desktop");
+				jQuery(".sub-menu").css({
+					display: "flex", position: "relative",
+					flexDirection: "column", border: "none", position: "relative", left: "0", padding: "0px"
+				});
+				jQuery(".menu-item").css({
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "flex-end",
+				});
+				jQuery(".main-navigation ul ul.sub-menu li.menu-item:not(:last-child)").css({ border: "none" });
+				jQuery(".sub-menu > .menu-item:first-child > a").css({ marginTop: "10px" });
+				jQuery(".sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" });
 			}
-			jQuery('#primary-menu').addClass("hamburguer-desktop");
-			jQuery(".sub-menu").css({
-				display: "flex", position: "relative",
-				flexDirection: "column", border: "none", position: "relative", left: "0", padding: "0px"
-			});
-			jQuery(".menu-item").css({
-				display: "flex",
-				flexDirection: "column",
-				alignItems: "flex-end",
-			});
-			jQuery(".main-navigation ul ul.sub-menu li.menu-item:not(:last-child)").css({ border: "none" });
-			jQuery(".sub-menu > .menu-item:first-child > a").css({ marginTop: "10px" });
-			jQuery(".sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" });
+		} catch (e) {
+			console.log(e.message)
 		}
 	});
 }());
