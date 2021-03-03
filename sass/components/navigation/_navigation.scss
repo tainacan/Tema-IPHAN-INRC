@@ -402,13 +402,23 @@ a {
     color: $color__cinza6 !important;
 }
 
+#primary-menu > .menu-item {
+    text-align: right;
+    line-height: 1.5;
+    justify-content: flex-end;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    border: none;
+}
+
 .remove-after-before::after,
 .remove-after-before::before {
     display: none;
 }
 
 .toggled {
-    .hamburguer-desktop {
+    .hamburguer-desktop,
+    #primary-menu > .nav-menu {
         position: absolute;
         top: 81px;
         right: 0%;

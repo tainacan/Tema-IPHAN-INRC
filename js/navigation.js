@@ -120,7 +120,7 @@
 			console.log(e.message)
 		}
 	});
-	jQuery(document).on("ready", function (jQuery) {
+	jQuery(document).on("ready", function () {
 		try {
 			var coll = document.getElementsByClassName("collapsible");
 			var i;
@@ -152,7 +152,8 @@
 	jQuery(document).on("ready", function () {
 		//Condição para o menu virar hamburguer
 		try {
-			if (jQuery('#primary-menu li').length > 6) {
+			console.log(window.innerWidth)
+			if (jQuery('#primary-menu li').length > 6 || window.innerWidth < 768) {
 				jQuery('.menu-toggle').css({
 					display: "block"
 				});
