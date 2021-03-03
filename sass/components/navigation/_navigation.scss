@@ -176,7 +176,7 @@
         top: 113px;
     }
     @media screen and (max-width: $screen__sm) {
-        top: 144px;
+        top: 140px;
     }
 }
 
@@ -448,7 +448,7 @@ a {
     .menu {
         @media screen and (max-width: $screen__xs) and (orientation: portrait) {
             position: absolute;
-            top: 98px;
+            top: 95px;
             left: 0%;
             background: $color__branco;
             width: auto;
@@ -457,7 +457,7 @@ a {
         }
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             position: absolute;
-            top: 98px;
+            top: 95px;
             left: 0%;
             background: $color__branco;
             width: auto;
