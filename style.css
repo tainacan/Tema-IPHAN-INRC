@@ -11446,15 +11446,11 @@ a {
 	cursor: pointer;
 }
 
-.comment-collapse::after {
-	content: "+";
-	float: right;
+.comment-collapse {
 	font-size: 20px;
 }
 
 .expanded::after {
-	content: "-";
-	float: right;
 	font-size: 20px;
 }
 
