@@ -10947,12 +10947,11 @@ a {
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.menu-toggle[aria-expanded="true"] {
-		border: none;
 		padding-top: 5px;
 		padding-left: 15px;
 		padding-right: 15px;
 		margin-left: 15px;
-		padding-bottom: 14px;
+		padding-bottom: 10px;
 		z-index: 2;
 		margin-bottom: 5%;
 	}
@@ -10960,12 +10959,11 @@ a {
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
 	.menu-toggle[aria-expanded="true"] {
-		border: none;
 		padding-top: 26px;
 		padding-left: 37px;
 		padding-right: 14px;
 		margin-left: 10px;
-		padding-bottom: 18px;
+		padding-bottom: 10px;
 		margin-top: -3%;
 		z-index: 2;
 	}
@@ -10973,7 +10971,6 @@ a {
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.menu-toggle[aria-expanded="true"] {
-		border: none;
 		padding-top: 20px;
 		padding-left: 45px;
 		padding-right: 10px;
@@ -10993,12 +10990,10 @@ a {
 @media screen and (orientation: portrait) {
 	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
-		border: none;
-		padding-top: 10px;
 		padding-left: 10px;
 		padding-right: 10px;
 		margin-left: 10px;
-		padding-bottom: 6px;
+		padding-bottom: 10px;
 		z-index: 2;
 	}
 }
@@ -11006,12 +11001,11 @@ a {
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
-		border: none;
-		padding-top: 10px;
 		padding-left: 10px;
 		padding-right: 10px;
 		margin-left: 10px;
-		padding-bottom: 6px;
+		padding-bottom: 25px;
+		padding-top: 20px;
 		z-index: 2;
 	}
 }
