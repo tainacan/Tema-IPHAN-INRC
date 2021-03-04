@@ -10868,8 +10868,9 @@ textarea {
 		transform: rotate(225deg);
 		color: #ffffff;
 		position: relative;
-		right: -15px;
-		top: -8px;
+		left: 60%;
+		top: -28px;
+		text-align: center;
 	}
 }
 
