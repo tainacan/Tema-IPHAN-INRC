@@ -113,17 +113,12 @@
             right: -1px;
         }
         & > li {
-            border: 1px solid transparent;
             position: relative;
             text-transform: uppercase;
             padding: calc(0.25rem + 1px) 20px;
             line-height: 1;
             font-size: 1.125rem;
             letter-spacing: 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             transition: border-color 0.2s ease;
             &:hover {
                 border: none;
@@ -148,15 +143,6 @@
         margin-right: 10px;
         color: $color__vermelho1;
 
-        @media screen and (max-width: $screen__sm) {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            justify-content: right;
-            flex-direction: row-reverse;
-            display: grid;
-            text-align: right;
-        }
-
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             margin-left: 3%;
         }
@@ -169,14 +155,23 @@
             }
         }
     }
+    ul > li:first-child {
+        @media screen and (max-width: $screen__sm) {
+            margin-top: 30px;
+        }
+    }
 }
 
 .admin-bar #primary-menu {
     @media screen and (min-width: $screen__sm) {
         top: 113px;
     }
-    @media screen and (max-width: $screen__sm) {
+    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         top: 140px;
+    }
+
+    @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+        top: 135px;
     }
 }
 
@@ -403,7 +398,6 @@ a {
 
 #primary-menu > .menu-item {
     text-align: right;
-    line-height: 1.5;
     justify-content: flex-end;
     border: 1px solid transparent;
 }
@@ -428,7 +422,6 @@ a {
         padding: 20px;
         overflow-y: hidden;
         overflow-x: hidden;
-        padding-top: 50px;
         padding-right: 50px;
         border: 3px solid $color__vermelho1;
     }
@@ -438,12 +431,8 @@ a {
         font-weight: bold;
     }
     .hamburguer-desktop li.menu-item {
-        text-align: right;
-        line-height: 1.5;
-        justify-content: flex-end;
         margin-right: 0 !important;
         padding-right: 0 !important;
-        border: none;
     }
     .menu {
         @media screen and (max-width: $screen__xs) and (orientation: portrait) {

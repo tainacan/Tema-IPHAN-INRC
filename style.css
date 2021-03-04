@@ -10788,17 +10788,12 @@ textarea {
 }
 
 .main-navigation ul > li {
-	border: 1px solid transparent;
 	position: relative;
 	text-transform: uppercase;
 	padding: calc(0.25rem + 1px) 20px;
 	line-height: 1;
 	font-size: 1.125rem;
 	letter-spacing: 1px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 	transition: border-color 0.2s ease;
 }
 
@@ -10827,17 +10822,6 @@ textarea {
 	color: #58020b;
 }
 
-@media screen and (max-width: 768px) {
-	.main-navigation ul > li {
-		margin-top: 30px;
-		margin-bottom: 30px;
-		justify-content: right;
-		flex-direction: row-reverse;
-		display: grid;
-		text-align: right;
-	}
-}
-
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.main-navigation ul > li {
 		margin-left: 3%;
@@ -10852,15 +10836,27 @@ textarea {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.main-navigation ul > li:first-child {
+		margin-top: 30px;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.admin-bar #primary-menu {
 		top: 113px;
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
 	.admin-bar #primary-menu {
 		top: 140px;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.admin-bar #primary-menu {
+		top: 135px;
 	}
 }
 
@@ -11112,7 +11108,6 @@ a {
 
 #primary-menu > .menu-item {
 	text-align: right;
-	line-height: 1.5;
 	justify-content: flex-end;
 	border: 1px solid transparent;
 }
@@ -11138,7 +11133,6 @@ a {
 	padding: 20px;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	padding-top: 50px;
 	padding-right: 50px;
 	border: 3px solid #58020b;
 }
@@ -11150,12 +11144,8 @@ a {
 }
 
 .toggled .hamburguer-desktop li.menu-item {
-	text-align: right;
-	line-height: 1.5;
-	justify-content: flex-end;
 	margin-right: 0 !important;
 	padding-right: 0 !important;
-	border: none;
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
