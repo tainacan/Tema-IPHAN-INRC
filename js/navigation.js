@@ -164,14 +164,14 @@
 					display: "flex", position: "relative",
 					flexDirection: "column", border: "none", position: "relative", left: "0", padding: "0px"
 				});
-				jQuery("#primary-menu>.menu-item").css({
+				jQuery("#primary-menu >  .menu-item").css({
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "flex-end",
 				});
 				jQuery(".main-navigation ul ul.sub-menu li.menu-item:not(:last-child)").css({ border: "none" });
-				jQuery(".sub-menu > .menu-item:first-child > a").css({ marginTop: "10px" });
-				jQuery(".sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" });
+				jQuery("#primary-menu .sub-menu > .menu-item:first-child > a").css({ marginTop: "10px" });
+				jQuery("#primary-menu .sub-menu > .menu-item:last-child > a").css({ borderBottom: "1px solid #d9d9d9", paddingBottom: "20px", marginBottom: "10px", width: "320px" });
 			}
 		} catch (e) {
 			console.log(e.message)

@@ -180,7 +180,7 @@
     }
 }
 
-.menu-item-has-children::after {
+#primary-menu > .menu-item-has-children::after {
     @media screen and (min-width: $screen__sm) {
         display: block;
         content: "\0231C";

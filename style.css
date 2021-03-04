@@ -10865,7 +10865,7 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-	.menu-item-has-children::after {
+	#primary-menu > .menu-item-has-children::after {
 		display: block;
 		content: "\0231C";
 		font-size: 1.5rem;
