@@ -167,7 +167,7 @@
         top: 113px;
     }
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-        top: 140px;
+        top: 134px;
     }
 
     @media screen and (max-width: $screen__sm) and (orientation: landscape) {
@@ -204,10 +204,16 @@ a {
     display: block;
 }
 
+.admin-bar .menu-toggle > svg {
+    @media screen and (max-width: $screen__sm) and (orientation: landscape) {
+        top: 80px;
+    }
+}
+
 .menu-toggle > svg {
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         display: block;
-        margin-top: 30%;
+        margin-top: 10%;
         z-index: 10;
     }
 
@@ -223,7 +229,7 @@ a {
         display: block;
         position: absolute;
         right: 7%;
-        top: 10.5%;
+        top: 35px;
     }
 
     & > path[aria-expanded="true"] {
@@ -446,7 +452,7 @@ a {
         }
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             position: absolute;
-            top: 95px;
+            top: 88px;
             left: 0%;
             background: $color__branco;
             width: auto;
