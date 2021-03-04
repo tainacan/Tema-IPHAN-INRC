@@ -28,7 +28,10 @@ jQuery(document).on("ready", function () {
     // troca o texto do botão submit do comment
     jQuery(function () {
         try {
-            var commentReplyButton = document.getElementById('submit');
+            var commentReplyButton = document.getElementById('submit')
+            var pai = document.getElementsByClassName('form-submit')
+            jQuery(pai).addClass('wp-block-button')
+            jQuery(commentReplyButton).addClass('wp-block-button__link')
             commentReplyButton.value = "Enviar";
         }
         catch (e) {

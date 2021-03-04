@@ -11434,6 +11434,10 @@ a {
 	flex-direction: column;
 }
 
+input.wp-block-button__link:hover {
+	text-decoration: underline;
+}
+
 .comment-form-author > label,
 .comment-form-url > label,
 .comment-form-email > label,
