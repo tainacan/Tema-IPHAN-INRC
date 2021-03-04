@@ -11114,9 +11114,11 @@ a {
 	text-align: right;
 	line-height: 1.5;
 	justify-content: flex-end;
-	margin-right: 0 !important;
-	padding-right: 0 !important;
-	border: none;
+	border: 1px solid transparent;
+}
+
+#primary-menu > .menu-item:hover {
+	border: 1px solid #ffffff;
 }
 
 .remove-after-before::after,
