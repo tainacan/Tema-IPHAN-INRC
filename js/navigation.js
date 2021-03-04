@@ -164,7 +164,7 @@
 					display: "flex", position: "relative",
 					flexDirection: "column", border: "none", position: "relative", left: "0", padding: "0px"
 				});
-				jQuery(".menu-item").css({
+				jQuery("#primary-menu>.menu-item").css({
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "flex-end",
