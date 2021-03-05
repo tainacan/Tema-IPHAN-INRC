@@ -20,7 +20,7 @@ function comment_fields_custom_order($fields)
 }
 add_filter('comment_form_fields', 'comment_fields_custom_order');
 
-function remove_comment_time($date, $d, $comment)
+function remove_comment_time($date)
 {
 
 	if (!is_admin()) {
