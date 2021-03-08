@@ -26,9 +26,9 @@ if (!is_singular()) {
 					<?php
 					if (is_singular()) :
 						iphan_inrc_post_thumbnail();
-						the_title('<span"><a class="mb-3> ', '</a></span>');
+						the_title('<h3"><a class="mb-3> ', '</a></h3>');
 					else :
-						the_title('<span><a class="font-weight-bold mb-3" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></span>');
+						the_title('<h3><a class="font-weight-bold mb-3" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>');
 					endif;
 
 					if ('post' === get_post_type()) :
