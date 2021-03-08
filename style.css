@@ -11387,6 +11387,10 @@ a {
 	margin: 0 0 1.5em;
 }
 
+.margin-list-post > p > em {
+	font-style: normal;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -12604,6 +12608,10 @@ body:not(.home) .title-banner:last-child {
 
 .date-excerpt-position {
 	overflow: hidden;
+}
+
+.margin-list-post {
+	margin-left: 15px;
 }
 
 /* excerpt

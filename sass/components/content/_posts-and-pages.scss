@@ -4,7 +4,6 @@
 
 .post,
 .page {
-
 }
 
 .updated:not(.published) {
@@ -20,4 +19,8 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.margin-list-post > p > em {
+	font-style: normal;
 }

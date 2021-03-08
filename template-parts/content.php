@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying posts
  *
@@ -8,55 +9,68 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(array("border-excerpt", "alignwide", "margin-list-posts", "excerpt")); ?>>
-	<header class="entry-header">
+<?php
+if (!is_singular()) {
+?>
+	<div class="alignwide">
+		<article id="post-<?php the_ID() ?>" <?php post_class(array("border-excerpt", "margin-list-posts", "excerpt")) ?>>
 		<?php
-		if ( is_singular() ) :
-			iphan_inrc_post_thumbnail();
-			the_title( '<h1 class="entry-title is-style-title-iphan-underscore">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title is-style-title-iphan-underscore"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				iphan_inrc_posted_on();
-				iphan_inrc_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'iphan_inrc' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'iphan_inrc' ),
-				'after'  => '</div>',
-			)
-		);
+	} else {
 		?>
-	</div><!-- .entry-content -->
+			<article id="post-<?php the_ID() ?>" <?php post_class(array("margin-list-posts", "excerpt")) ?>>
+			<?php
+		}
+			?>
+			<header class="margin-list-post ">
+				<?php
+				if (is_singular()) :
+					iphan_inrc_post_thumbnail();
+					the_title('<span"><a class="mb-3> ', '</a></span>');
+				else :
+					the_title('<span><a class="font-weight-bold mb-3" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></span>');
+				endif;
 
-	<footer class="entry-footer">
-		<?php iphan_inrc_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+				if ('post' === get_post_type()) :
+				?>
+					<div class="entry-meta">
+						<?php
+						iphan_inrc_posted_on();
+						iphan_inrc_posted_by();
+						?>
+					</div><!-- .entry-meta -->
+				<?php endif; ?>
+			</header><!-- .entry-header -->
+
+			<div class="margin-list-post ">
+				<?php
+				echo excerpt(28)
+				/* 				the_content(
+					sprintf(
+						wp_kses(
+						
+							__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'iphan_inrc'),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						wp_kses_post(get_the_title())
+					)
+				); */
+
+				/* 				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__('Pages:', 'iphan_inrc'),
+						'after'  => '</div>',
+					)
+				); */
+				?>
+			</div><!-- .entry-content -->
+			</article>
+			<?php
+			if (!is_singular()) {
+				echo '</div>';
+			}
+			?>
+			<!-- #post-<?php the_ID(); ?> -->
