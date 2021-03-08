@@ -18,10 +18,8 @@ get_template_part('template-parts/site-banner');
 custom_breadcrumbs();
 ?>
 <main id="primary" class="site-main site-container">
-
 	<?php
 	if (have_posts()) :
-
 		if (is_home() && !is_front_page()) :
 	?>
 			<header>
@@ -44,7 +42,6 @@ custom_breadcrumbs();
 		/* Start the Loop */
 		while (have_posts()) :
 			the_post();
-
 			/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -58,12 +55,10 @@ custom_breadcrumbs();
 			'next_text'          => __('<i class="tainacan-icon tainacan-icon-1-125em tainacan-icon-next"></i>'),
 		));
 		echo '</ul></div>';
-
 	else :
 		get_template_part('template-parts/content', 'none');
 
 	endif;
-
 	?>
 </main><!-- #main -->
 <?php

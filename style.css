@@ -13714,6 +13714,10 @@ body.archive .theme-items-list {
 	margin-bottom: 1.5em;
 }
 
+.margin-list-posts {
+	margin-bottom: 50px;
+}
+
 .is-style-title-iphan-underscore {
 	margin-bottom: 44px;
 	color: #58020b !important;

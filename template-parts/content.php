@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(array("border-excerpt", "alignwide", "margin-list-posts", "excerpt")); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
