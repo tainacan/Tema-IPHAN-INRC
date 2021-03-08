@@ -23,10 +23,8 @@ custom_breadcrumbs();
 
 		the_post_navigation(
 			array(
-				'before' => '<i size="50px" class="tainacan-icon tainacan-icon-prev"></i>',
 				'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'iphan_inrc') . '</span> <span class="nav-title">%title</span>',
 				'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'iphan_inrc') . '</span> <span class="nav-title">%title</span>',
-				'before' => '<i size="50px" class="tainacan-icon tainacan-icon-next"></i>',
 			)
 		);
 
