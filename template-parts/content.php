@@ -43,28 +43,7 @@ if (!is_singular()) {
 
 			<div class="margin-list-post ">
 				<?php
-				echo excerpt(28)
-				/* 				the_content(
-					sprintf(
-						wp_kses(
-						
-							__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'iphan_inrc'),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						wp_kses_post(get_the_title())
-					)
-				); */
-
-				/* 				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . esc_html__('Pages:', 'iphan_inrc'),
-						'after'  => '</div>',
-					)
-				); */
+				echo excerpt(35)
 				?>
 			</div><!-- .entry-content -->
 			</article>
