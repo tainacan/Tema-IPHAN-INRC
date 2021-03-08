@@ -17,17 +17,17 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
     <div class="col-xs-12 blog-content posicionamento-excerpt <?php if (has_post_thumbnail()) : ?>col-md-8 blog-flex<?php else : ?>col-md-12<?php endif; ?>">
         <?php if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlyposts']) && (!isset($_GET['onlypages']) || !$_GET['onlypages']) && is_search()) : ?>
             <div class="title-area">
-                <h3 class="mb-3">
+                <div class="mb-3">
                     <a href="<?php the_permalink(); ?>" class="font-weight-bold"><?php the_title(); ?></a>
-                </h3>
+                </div>
 
                 <h4><a href="<?php echo $post_type_archive_link ?>"><?php echo $post_type_label ?></a></h4>
             </div>
         <?php else : ?>
-            <h3 class="mb-3">
+            <div class="mb-3">
                 <span class="categoria-excerpt"><?php echo the_category() ?></span>
                 <a href="<?php the_permalink(); ?>" class="font-weight-bold"><?php the_title(); ?></a>
-            </h3>
+            </div>
         <?php endif; ?>
         <?php echo '<p class="text-black">' . wp_trim_words(get_the_excerpt(), 28, '...') . '</p>'; ?>
         <div class="info-footer-resume">
