@@ -41,11 +41,19 @@ if (!is_singular()) {
 				<?php endif; ?>
 			</header><!-- .entry-header -->
 
-			<div class="margin-list-post ">
+			<div class="margin-list-post">
 				<?php
 				echo excerpt(35)
 				?>
 			</div><!-- .entry-content -->
+			<div class="info-footer-resume margin-list-post">
+				<div class="date-excerpt-position">
+					<?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?>
+				</div>
+				<div class="wp-block-button">
+					<a href="<?php the_permalink(); ?>" class="wp-block-button__link"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>
+				</div>
+			</div>
 			</article>
 			<?php
 			if (!is_singular()) {
