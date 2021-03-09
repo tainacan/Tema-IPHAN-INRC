@@ -419,9 +419,9 @@ a {
 .toggled {
     .hamburguer-desktop,
     #primary-menu > .nav-menu {
-        position: relative;
+        position: absolute;
         top: 20px;
-        right: 85%;
+        right: 0%;
         background: $color__branco;
         width: auto;
         height: auto;
@@ -433,7 +433,12 @@ a {
         border: 3px solid $color__vermelho1;
     }
     .menu-menu-container {
-        position: absolute;
+        @media screen and (min-width: $screen__sm) {
+            position: relative;
+        }
+        @media screen and (max-width: $screen__sm) {
+            position: absolute;
+        }
     }
 
     .hamburguer-desktop a {
@@ -448,7 +453,6 @@ a {
     .menu {
         @media screen and (max-width: $screen__xs) and (orientation: portrait) {
             position: absolute;
-            top: 95px;
             left: 0%;
             background: $color__branco;
             width: auto;
@@ -456,17 +460,16 @@ a {
             z-index: 20;
         }
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-            position: absolute;
-            top: 88px;
-            left: 0%;
+            position: relative;
+            left: auto;
             background: $color__branco;
-            width: auto;
+            width: 86%;
             height: auto;
             z-index: 20;
+            right: 64%;
         }
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             position: absolute;
-            top: 89px;
             left: 0%;
             background: $color__branco;
             width: auto;
