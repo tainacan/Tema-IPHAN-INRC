@@ -11039,6 +11039,13 @@ a {
 	justify-content: flex-end;
 }
 
+@media screen and (max-width: 768px) {
+	.post-navigation > .nav-links > .nav-next,
+	.posts-navigation > .nav-links > .nav-next > a {
+		text-align: right;
+	}
+}
+
 .post-navigation > .nav-links > .nav-previous {
 	display: flex;
 }
@@ -11273,9 +11280,11 @@ a {
 	color: #ffffff;
 }
 
-.navigation > .nav-links {
-	padding-right: 0px;
-	padding-left: 0px;
+@media screen and (min-width: 768px) {
+	.navigation > .nav-links {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
 }
 
 .alignwide > .navigation > .nav-links {

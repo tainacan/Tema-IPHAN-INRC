@@ -335,6 +335,9 @@ a {
 .posts-navigation > .nav-links > .nav-next > a {
     display: flex;
     justify-content: flex-end;
+    @media screen and (max-width: $screen__sm) {
+        text-align: right;
+    }
 }
 .post-navigation > .nav-links > .nav-previous {
     display: flex;
@@ -547,8 +550,10 @@ a {
 }
 
 .navigation > .nav-links {
-    padding-right: 0px;
-    padding-left: 0px;
+    @media screen and (min-width: $screen__sm) {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
 }
 
 .alignwide > .navigation > .nav-links {
