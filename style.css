@@ -10867,9 +10867,9 @@ textarea {
 		font-size: 1.5rem;
 		transform: rotate(225deg);
 		color: #ffffff;
-		position: relative;
-		left: 60%;
-		top: -28px;
+		position: absolute;
+		left: 93%;
+		top: 5px;
 		text-align: center;
 	}
 }
@@ -11364,6 +11364,17 @@ a {
 
 .prev {
 	display: block !important;
+}
+
+.menu-menu-container > #primary-menu > li {
+	display: table;
+}
+
+.menu-menu-container > #primary-menu > li > a {
+	vertical-align: middle;
+	display: table-cell;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 /* Posts and pages
