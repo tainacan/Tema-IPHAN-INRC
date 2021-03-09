@@ -190,7 +190,7 @@
 }
 
 .hamburguer-desktop .menu-item-has-children::after {
-    display: none;
+    display: none !important;
 }
 
 a {
@@ -419,9 +419,9 @@ a {
 .toggled {
     .hamburguer-desktop,
     #primary-menu > .nav-menu {
-        position: absolute;
-        top: 81px;
-        right: 0%;
+        position: relative;
+        top: 20px;
+        right: 85%;
         background: $color__branco;
         width: auto;
         height: auto;
@@ -432,6 +432,10 @@ a {
         padding-right: 50px;
         border: 3px solid $color__vermelho1;
     }
+    .menu-menu-container {
+        position: absolute;
+    }
+
     .hamburguer-desktop a {
         color: $color__vermelho1 !important;
         text-decoration: none !important;

@@ -10875,7 +10875,7 @@ textarea {
 }
 
 .hamburguer-desktop .menu-item-has-children::after {
-	display: none;
+	display: none !important;
 }
 
 a {
@@ -11130,9 +11130,9 @@ a {
 
 .toggled .hamburguer-desktop,
 .toggled #primary-menu > .nav-menu {
-	position: absolute;
-	top: 81px;
-	right: 0%;
+	position: relative;
+	top: 20px;
+	right: 85%;
 	background: #ffffff;
 	width: auto;
 	height: auto;
@@ -11142,6 +11142,10 @@ a {
 	overflow-x: hidden;
 	padding-right: 50px;
 	border: 3px solid #58020b;
+}
+
+.toggled .menu-menu-container {
+	position: absolute;
 }
 
 .toggled .hamburguer-desktop a {
