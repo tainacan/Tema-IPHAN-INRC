@@ -331,6 +331,14 @@ a {
         display: flex;
     }
 }
+.post-navigation > .nav-links > .nav-next,
+.posts-navigation > .nav-links > .nav-next > a {
+    display: flex;
+    justify-content: flex-end;
+}
+.post-navigation > .nav-links > .nav-previous {
+    display: flex;
+}
 
 .comment-navigation,
 .posts-navigation,
@@ -512,10 +520,6 @@ a {
 
 // Posts Navigation
 
-.nav-previous > a {
-    display: none;
-}
-
 .pagination > .nav-links {
     display: flex;
     flex-direction: row;
@@ -544,6 +548,10 @@ a {
 
 .navigation > .nav-links {
     padding-right: 0px;
+    padding-left: 0px;
+}
+
+.alignwide > .navigation > .nav-links {
     margin-right: 0px;
 }
 

@@ -11033,6 +11033,16 @@ a {
 	}
 }
 
+.post-navigation > .nav-links > .nav-next,
+.posts-navigation > .nav-links > .nav-next > a {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.post-navigation > .nav-links > .nav-previous {
+	display: flex;
+}
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -11236,10 +11246,6 @@ a {
 	color: #ffffff;
 }
 
-.nav-previous > a {
-	display: none;
-}
-
 .pagination > .nav-links {
 	display: flex;
 	flex-direction: row;
@@ -11269,6 +11275,10 @@ a {
 
 .navigation > .nav-links {
 	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.alignwide > .navigation > .nav-links {
 	margin-right: 0px;
 }
 
