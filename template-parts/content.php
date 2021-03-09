@@ -39,9 +39,7 @@ if (!is_singular()) {
 						the_content();
 						echo '</div>';
 					} else {
-						echo '<div class="alignwide">';
 						echo excerpt(35);
-						echo '</div>';
 					}
 					?>
 				</p><!-- .entry-content -->
