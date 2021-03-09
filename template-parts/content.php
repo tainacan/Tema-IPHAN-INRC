@@ -13,11 +13,11 @@
 if (!is_singular()) {
 ?>
 	<div class="alignwide">
-		<article id="post-<?php the_ID() ?>" <?php post_class(array("border-excerpt", "margin-list-posts", "excerpt")) ?>>
+		<article id="post-<?php the_ID() ?>" <?php post_class(array("border-excerpt", "excerpt")) ?>>
 		<?php
 	} else {
 		?>
-			<article id="post-<?php the_ID() ?>" <?php post_class(array("margin-list-posts", "excerpt")) ?>>
+			<article id="post-<?php the_ID() ?>" <?php post_class(array("excerpt")) ?>>
 			<?php
 		}
 			?>
@@ -49,7 +49,7 @@ if (!is_singular()) {
 				</p><!-- .entry-content -->
 				<div class="info-footer-resume margin-list-post">
 					<div class="date-excerpt-position">
-						<?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?>
+						<span class="date-excerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
 					</div>
 					<div class="wp-block-button">
 						<a href="<?php the_permalink(); ?>" class="wp-block-button__link"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>
@@ -62,4 +62,5 @@ if (!is_singular()) {
 				echo '</div>';
 			}
 			?>
+			<hr id="hrResume" class="correcao-hr-categoria">
 			<!-- #post-<?php the_ID(); ?> -->

@@ -32,7 +32,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
         <?php echo '<p class="text-black">' . wp_trim_words(get_the_excerpt(), 28, '...') . '</p>'; ?>
         <div class="info-footer-resume">
             <div class="date-excerpt-position">
-                <span class="date-exerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
+                <span class="date-excerpt"><?php echo get_the_date("j") . " de " . get_the_date("F, Y") ?></span>
             </div>
             <div class="wp-block-button">
                 <a href="<?php the_permalink(); ?>" class="wp-block-button__link"><?php _e('Ler Mais <i size="50px" class="tainacan-icon tainacan-icon-next"></i>', 'ler-mais'); ?></a>

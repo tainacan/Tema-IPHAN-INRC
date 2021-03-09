@@ -12588,7 +12588,7 @@ body:not(.home) .title-banner:last-child {
 	}
 }
 
-.date-exerpt {
+.date-excerpt {
 	bottom: 0px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -12638,6 +12638,11 @@ body:not(.home) .title-banner:last-child {
 
 .margin-list-post {
 	margin-left: 15px;
+}
+
+.correcao-hr-categoria {
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 /* excerpt
@@ -13746,10 +13751,6 @@ body.archive .theme-items-list {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
-}
-
-.margin-list-posts {
-	margin-bottom: 50px;
 }
 
 .is-style-title-iphan-underscore {
