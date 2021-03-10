@@ -24,7 +24,7 @@ function accordion_block_init() {
         filemtime(plugin_dir_path(__FILE__). 'style.css')
     );
 
-    register_block_type('fancy-block-plugin/fancy-custom-block', array(
+    register_block_type('custom/accordion_block', array(
         'editor_script' => 'accordion_block-editor',
         'editor_style'  => 'accordion_block-editor',
         'style'         => 'accordion_block',
