@@ -1,3 +1,4 @@
+<?php
 function accordion_block_init() {
 
     // automatically load dependencies and version
@@ -5,9 +6,9 @@ function accordion_block_init() {
 
     wp_register_script(
         'accordion_block-editor',
-        plugins_url('build/index.js', __FILE__),
+        plugins_url('block.js', __FILE__),
         $asset_file['dependencies'],
-        $asset_file['version']
+        $asset_file['version'] 
     );
 
     wp_register_style(
