@@ -16,7 +16,7 @@ registerBlockType(
                 source: 'html',
                 selector: 'summary',
             },
-            conteudo: {
+            content: {
                 type: 'string',
                 source: 'html',
                 selector: 'details',
@@ -24,18 +24,21 @@ registerBlockType(
         },
 
         edit: function (props) {
-            function updateTitle(event) {
-                props.setAttributes({ title: event.target.value });
+            var title = props.attributes.title;
+            function updateTitle(newTitle) {
+                props.setAttributes({ title: newTitle.target.value });
             }
-            var conteudo = props.attributes.conteudo;
+            var content = props.attributes.content;
             function onChangeConteudo(novoConteudo) {
-                props.setAttributes({ conteudo: novoConteudo });
+                props.setAttributes({ content: novoConteudo });
             }
             return el('details',
+                RichText,
                 el('summary',
                     el(
-                        'input',
+                        RichText,
                         {
+                            tagName: 'summary',
                             type: 'text',
                             placeholder: 'Titulo',
                             value: title,
@@ -47,7 +50,7 @@ registerBlockType(
                     {
                         tagName: 'p',
                         onChange: onChangeConteudo,
-                        value: conteudo,
+                        value: content,
                         placeholder: "Insira o seu texto"
                     }
                 )
@@ -56,7 +59,8 @@ registerBlockType(
 
         save: function (props) {
             return el('details',
-                el(title.Content,
+                el(
+                    RichText.Content,
                     {
                         tagName: 'summary',
                         value: props.attributes.title
@@ -65,7 +69,7 @@ registerBlockType(
                     RichText.Content,
                     {
                         tagName: 'p',
-                        value: props.attributes.conteudo
+                        value: props.attributes.content
                     }
                 )
             )
