@@ -59,7 +59,7 @@ registerBlockType(
 
         save: function (props) {
             return el('details',
-                el(
+                [el(
                     RichText.Content,
                     {
                         tagName: 'summary',
@@ -71,7 +71,7 @@ registerBlockType(
                         tagName: 'p',
                         value: props.attributes.content
                     }
-                )
+                )]
             )
         },
     }
