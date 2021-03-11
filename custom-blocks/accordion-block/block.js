@@ -34,21 +34,21 @@ registerBlockType(
             }
             return el('details',
                 RichText,
-                [el('summary',
-                    el(
-                        RichText,
-                        {
-                            tagName: 'summary',
-                            type: 'text',
-                            placeholder: 'Titulo',
-                            value: title,
-                            onChange: updateTitle,
-                        }
-                    )),
+                [el(
+                    RichText,
+                    {
+                        tagName: 'summary',
+                        type: 'text',
+                        onChange: updateTitle,
+                        value: title,
+                        placeholder: "Insira o título"
+                    }
+                ),
                 el(
                     RichText,
                     {
                         tagName: 'p',
+                        type: 'text',
                         onChange: onChangeConteudo,
                         value: content,
                         placeholder: "Insira o seu texto"
