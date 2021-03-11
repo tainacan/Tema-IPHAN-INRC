@@ -26,7 +26,7 @@ registerBlockType(
         edit: function (props) {
             var title = props.attributes.title;
             function updateTitle(newTitle) {
-                props.setAttributes({ title: newTitle.target.value });
+                props.setAttributes({ title: newTitle });
             }
             var content = props.attributes.content;
             function onChangeConteudo(novoConteudo) {
@@ -34,7 +34,7 @@ registerBlockType(
             }
             return el('details',
                 RichText,
-                el('summary',
+                [el('summary',
                     el(
                         RichText,
                         {
@@ -53,7 +53,7 @@ registerBlockType(
                         value: content,
                         placeholder: "Insira o seu texto"
                     }
-                )
+                )]
             );
         },
 
