@@ -9,7 +9,7 @@ registerBlockType(
     {
         title: 'Accordion',
         icon: 'arrow-down',
-        category: 'layout',
+        category: 'text',
         attributes: {
             title: {
                 type: 'string',
