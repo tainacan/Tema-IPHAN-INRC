@@ -1,14 +1,10 @@
 <?php
 function accordion_block_init()
 {
-    // automatically load dependencies and version
-/*     $asset_file = include(plugin_dir_path(__FILE__) . 'block.asset.php'); */
-
     wp_register_script(
-        'accordion_block-editor',
-        plugins_url('block.js', __FILE__),
-        $asset_file['dependencies'],
-        $asset_file['version']
+        'accordion-custom-js',
+        get_template_directory_uri() . '/custom-blocks/accordion-block/block.js',
+        array('wp-blocks')
     );
 
     wp_register_style(
@@ -25,10 +21,10 @@ function accordion_block_init()
         filemtime(plugin_dir_path(__FILE__) . 'style.css')
     );
 
-    register_block_type('core/accordion_block', array(
-        'editor_script' => 'accordion_block-editor',
-        'editor_style'  => 'accordion_block-editor',
-        'style'         => 'accordion_block',
+    register_block_type('iphan/accordion-custom', array(
+        'editor_script' => 'accordion-custom-js',
+        'editor_style'  => 'editor',
+        'style'         => 'style',
     ));
 }
 
