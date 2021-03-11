@@ -55,7 +55,6 @@ registerBlockType(
         },
 
         save: function (props) {
-            console.log(props)
             return el('details',
                 el(title.Content,
                     {
