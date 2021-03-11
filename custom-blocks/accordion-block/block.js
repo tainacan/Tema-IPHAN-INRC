@@ -29,7 +29,6 @@ registerBlockType(
             }
             var conteudo = props.attributes.conteudo;
             function onChangeConteudo(novoConteudo) {
-                console.log(novoConteudo)
                 props.setAttributes({ conteudo: novoConteudo });
             }
             return el('details',
