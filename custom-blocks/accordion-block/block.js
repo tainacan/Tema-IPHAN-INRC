@@ -19,7 +19,7 @@ registerBlockType(
             content: {
                 type: 'string',
                 source: 'html',
-                selector: 'details',
+                selector: 'p',
             },
         },
 
@@ -58,9 +58,10 @@ registerBlockType(
                 )]
             );
         },
-
         save: function (props) {
-            el('details',
+            var blockProps = wp.blockEditor.useBlockProps.save();
+            return (el('details',
+                blockProps,
                 [el(
                     RichText.Content,
                     {
@@ -74,7 +75,7 @@ registerBlockType(
                         value: props.attributes.content
                     }
                 )]
-            )
+            ))
         },
     }
 );
