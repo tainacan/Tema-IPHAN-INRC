@@ -66,6 +66,7 @@ registerBlockType(
                     RichText.Content,
                     {
                         tagName: 'summary',
+                        className: 'tainacan-icon tainacan-icon-showmore',
                         value: props.attributes.title
                     }),
                 el(
