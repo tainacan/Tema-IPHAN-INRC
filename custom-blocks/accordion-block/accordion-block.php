@@ -11,14 +11,14 @@ function accordion_block_init()
         'accordion_block-editor',
         plugins_url('editor.css', __FILE__),
         array(),
-        filemtime(plugin_dir_path(__FILE__) . 'editor.css')
+        filemtime(plugin_dir_path(__FILE__) . 'editor.scss')
     );
 
     wp_register_style(
         'accordion_block',
         plugins_url('style.css', __FILE__),
         array(),
-        filemtime(plugin_dir_path(__FILE__) . 'style.css')
+        filemtime(plugin_dir_path(__FILE__) . 'style.scss')
     );
 
     register_block_type('iphan/accordion-custom', array(
