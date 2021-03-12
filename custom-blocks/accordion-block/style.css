@@ -9,3 +9,7 @@ details.wp-block-iphan-accordion-custom > summary::before {
 details[open].wp-block-iphan-accordion-custom summary.tainacan-icon-showmore:before {
     transform: rotate(180deg);
 }
+
+summary {
+    font-weight: bold;
+}

@@ -1,4 +1,4 @@
-details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
+details > summary::-webkit-details-marker {
     display: none;
 }
 
