@@ -1,3 +1,18 @@
-a {
-    background-color: blue;
+details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
+    display: none;
+}
+details.wp-block-iphan-accordion-custom > summary:after {
+    background: black;
+    content: "^";
+    color: #fff;
+    float: right;
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+    left: 20px;
+    margin-right: 10px;
+}
+details[open].wp-block-iphan-accordion-custom > summary:after {
+    content: "-";
 }

@@ -1,3 +1,27 @@
-a {
-    background-color: blue;
+details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
+    display: none;
+}
+details.wp-block-iphan-accordion-custom > summary:after {
+    background: black;
+    content: "+";
+    color: #fff;
+    float: left;
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+    left: 20px;
+    margin-right: 10px;
+}
+details[open].wp-block-iphan-accordion-custom > summary:after {
+    content: "-";
+}
+details.wp-block-iphan-accordion-custom {
+    border: 1px solid #000;
+    padding: 11px;
+}
+
+details.wp-block-iphan-accordion-custom > p {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
