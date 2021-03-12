@@ -37,6 +37,7 @@ registerBlockType(
                 [el(
                     RichText,
                     {
+                        value: props.attributes.title,
                         tagName: 'summary',
                         type: 'text',
                         onChange: updateTitle,
@@ -47,6 +48,7 @@ registerBlockType(
                 el(
                     RichText,
                     {
+                        value: props.attributes.content,
                         tagName: 'p',
                         type: 'text',
                         onChange: onChangeConteudo,
@@ -58,7 +60,7 @@ registerBlockType(
         },
 
         save: function (props) {
-            return el('details',
+            el('details',
                 [el(
                     RichText.Content,
                     {
