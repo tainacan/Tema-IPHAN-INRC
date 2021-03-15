@@ -241,7 +241,12 @@ require get_template_directory() . '/template-parts/excerpts.php';
 require get_template_directory() . '/template-parts/filter-comments.php';
 
 //custom blocks
+
+//accordion blocks
 require get_template_directory() . '/custom-blocks/accordion-block/accordion-block.php';
+
+//custom blocks
+require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
 
 /**
  * Load Jetpack compatibility file.
