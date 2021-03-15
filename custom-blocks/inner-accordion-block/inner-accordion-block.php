@@ -3,7 +3,7 @@ function inner_accordion_block_init()
 {
     wp_register_script(
         'inner-accordion-custom-js',
-        get_template_directory_uri() . '/custom-blocks/inner-accordion-block/block.js',
+        get_template_directory_uri() . '/custom-blocks/inner-accordion-block/inner-accordion-block.js',
         array('wp-blocks')
     );
 
@@ -22,7 +22,7 @@ function inner_accordion_block_init()
     );
 
     register_block_type('iphan/inner-accordion-custom', array(
-        'editor_script' => 'inner_accordion-custom-js',
+        'editor_script' => 'inner-accordion-custom-js',
         'editor_style'  => 'editor',
         'style'         => 'style',
     ));

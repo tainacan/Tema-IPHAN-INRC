@@ -34,7 +34,7 @@ registerBlockType(
             function onChangeConteudo(novoConteudo) {
                 props.setAttributes({ content: novoConteudo });
             }
-            var blockProps = useBlockProps();
+    /*         var blockProps = useBlockProps(); */
             return el('details',
                 RichText,
                 [el(

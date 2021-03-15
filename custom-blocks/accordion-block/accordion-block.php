@@ -3,7 +3,7 @@ function accordion_block_init()
 {
     wp_register_script(
         'accordion-custom-js',
-        get_template_directory_uri() . '/custom-blocks/accordion-block/block.js',
+        get_template_directory_uri() . '/custom-blocks/accordion-block/accordion-block.js',
         array('wp-blocks')
     );
 
