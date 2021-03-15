@@ -20,7 +20,7 @@ wp.blocks.registerBlockType(
             content: {
                 type: 'string',
                 source: 'html',
-                selector: 'p',
+                selector: 'div',
             },
         },
 
@@ -29,10 +29,10 @@ wp.blocks.registerBlockType(
             function updateTitle(newTitle) {
                 props.setAttributes({ title: newTitle });
             }
-            var content = props.attributes.content;
-            function onChangeConteudo(novoConteudo) {
-                props.setAttributes({ content: novoConteudo });
-            }
+            /*             var content = props.attributes.content;
+                        function onChangeConteudo(novoConteudo) {
+                            props.setAttributes({ content: novoConteudo });
+                        } */
             var blockProps = useBlockProps();
             return el('details',
                 RichText,
@@ -48,21 +48,13 @@ wp.blocks.registerBlockType(
                     }
                 ),
                 el(
-                    RichText,
-                    {
-                        value: props.attributes.content,
-                        tagName: 'p',
-                        type: 'text',
-                        onChange: onChangeConteudo,
-                        value: content,
-                        placeholder: "Insira o seu texto"
-                    }
+                    blockProps,
+                    el(InnerBlocks)
                 )]
             );
         },
         save: function (props) {
             var blockProps = wp.blockEditor.useBlockProps.save();
-            var innerblockProps = useBlockProps.save();
             return (el('details',
                 blockProps,
                 [el(
@@ -73,11 +65,8 @@ wp.blocks.registerBlockType(
                         value: props.attributes.title
                     }),
                 el(
-                    RichText.Content,
-                    {
-                        tagName: 'p',
-                        value: props.attributes.content
-                    }
+                    blockProps,
+                    el(InnerBlocks.Content)
                 )]
             ))
         },
