@@ -1,10 +1,8 @@
-const { registerBlockType } = wp.blocks
-
 var el = wp.element.createElement,
     RichText = wp.blockEditor.RichText,
     title = wp.blockEditor.RichText;
 
-registerBlockType(
+wp.blocks.registerBlockType(
     'iphan/accordion-custom',
     {
         title: 'Accordion',
