@@ -1,4 +1,3 @@
-/* (function (blocks, element, blockEditor) { */
 var el = wp.element.createElement,
     RichText = wp.blockEditor.RichText,
     title = wp.blockEditor.RichText;
@@ -72,4 +71,3 @@ wp.blocks.registerBlockType(
         },
     }
 );
-/* }) */
