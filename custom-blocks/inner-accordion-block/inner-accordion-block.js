@@ -1,10 +1,11 @@
+/* (function (blocks, element, blockEditor) { */
 var el = wp.element.createElement,
     RichText = wp.blockEditor.RichText,
     title = wp.blockEditor.RichText;
-var InnerBlocks = blockEditor.InnerBlocks;
-var useBlockProps = blockEditor.useBlockProps;
+var InnerBlocks = wp.blockEditor.InnerBlocks;
+var useBlockProps = wp.blockEditor.useBlockProps;
 
-registerBlockType(
+wp.blocks.registerBlockType(
     'iphan/inner-accordion-custom',
     {
         title: 'Inner block',
@@ -32,7 +33,7 @@ registerBlockType(
             function onChangeConteudo(novoConteudo) {
                 props.setAttributes({ content: novoConteudo });
             }
-    /*         var blockProps = useBlockProps(); */
+            var blockProps = useBlockProps();
             return el('details',
                 RichText,
                 [el(
@@ -61,7 +62,7 @@ registerBlockType(
         },
         save: function (props) {
             var blockProps = wp.blockEditor.useBlockProps.save();
-            /*             var innerblockProps = useBlockProps.save(); */
+            var innerblockProps = useBlockProps.save();
             return (el('details',
                 blockProps,
                 [el(
@@ -82,4 +83,4 @@ registerBlockType(
         },
     }
 );
-;
+/* }) */
