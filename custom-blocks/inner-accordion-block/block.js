@@ -9,7 +9,7 @@ var useBlockProps = blockEditor.useBlockProps;
 registerBlockType(
     'iphan/inner-accordion-custom',
     {
-        title: 'Accordion2',
+        title: 'Inner block',
         icon: 'arrow-down',
         category: 'text',
         attributes: {
