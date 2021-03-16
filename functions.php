@@ -178,7 +178,10 @@ function iphan_inrc_scripts()
 	}
 
 	//Bootstrap Javascript
-	wp_register_script('bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	// <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	//wp_register_script('bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	wp_register_script('bootstrap4JS', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	
 	wp_enqueue_script('bootstrap4JS');
 
 	// Scripts necessary for using the gallery modal
