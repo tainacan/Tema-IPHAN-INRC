@@ -158,8 +158,6 @@ add_action('widgets_init', 'iphan_inrc_widgets_init');
  */
 function iphan_inrc_scripts()
 {
-	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
-	wp_style_add_data('iphan_inrc-style', 'rtl', 'replace');
 
 	// Our main style
 	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
