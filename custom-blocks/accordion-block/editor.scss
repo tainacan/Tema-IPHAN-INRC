@@ -2,20 +2,15 @@ details > summary::-webkit-details-marker {
     display: none;
 }
 
-details.wp-block-iphan-accordion-custom > summary::before {
-    float: right;
-    font-weight: bold;
-}
-details[open].wp-block-iphan-accordion-custom summary.tainacan-icon-showmore:before {
-    transform: rotate(180deg);
-}
-
-details.wp-block-iphan-accordion-custom {
-    border: 1px solid #000;
-    padding: 11px;
-}
-
 details > p {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+details > summary::before {
+    float: right;
+    font-weight: bold;
+}
+details[open] summary.tainacan-icon-showmore:before {
+    transform: rotate(180deg);
 }

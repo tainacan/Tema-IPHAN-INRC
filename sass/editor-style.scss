@@ -23,3 +23,7 @@
 @import "block-style/title-block";
 @import "block-style/block-colors";
 @import "block-style/editor-basics";
+
+/* custom blocks
+--------------------------------------------- */
+@import "../custom-blocks/editor-style.scss";

@@ -40,7 +40,8 @@ wp.blocks.registerBlockType(
                         type: 'text',
                         onChange: updateTitle,
                         value: title,
-                        placeholder: "Insira o título"
+                        placeholder: "Insira o título",
+                        className: 'tainacan-icon tainacan-icon-showmore',
                     }
                 ),
                 el(

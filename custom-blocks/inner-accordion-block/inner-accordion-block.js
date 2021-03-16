@@ -35,7 +35,7 @@ wp.blocks.registerBlockType(
                         type: 'text',
                         onChange: updateTitle,
                         value: title,
-                        placeholder: "Insira o título"
+                        placeholder: "Insira o título",
                     }
                 ),
                 el(InnerBlocks),

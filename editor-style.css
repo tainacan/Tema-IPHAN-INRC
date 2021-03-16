@@ -607,4 +607,28 @@ ul.wp-block {
 	padding-right: 4.73%;
 }
 
+/* custom blocks
+--------------------------------------------- */
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
+details > p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+details > summary::before {
+	float: right;
+	font-weight: bold;
+}
+
+details[open] summary.tainacan-icon-showmore:before {
+	transform: rotate(180deg);
+}
+
+details {
+	margin-left: 0px !important;
+}
+
 /*# sourceMappingURL=editor-style.css.map */
