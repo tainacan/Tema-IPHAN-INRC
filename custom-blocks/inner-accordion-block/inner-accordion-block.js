@@ -39,7 +39,6 @@ wp.blocks.registerBlockType(
                     }
                 ),
                 el(InnerBlocks),
-                el(InnerBlocks)
                 ]
             );
         },
@@ -58,7 +57,6 @@ wp.blocks.registerBlockType(
                             value: props.attributes.title
                         }),
                     el(InnerBlocks.Content),
-                    el(InnerBlocks.Content)
                 ]
             );
         },
