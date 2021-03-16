@@ -158,8 +158,6 @@ add_action('widgets_init', 'iphan_inrc_widgets_init');
  */
 function iphan_inrc_scripts()
 {
-	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
-	wp_style_add_data('iphan_inrc-style', 'rtl', 'replace');
 
 	// Our main style
 	wp_enqueue_style('iphan_inrc-style', get_stylesheet_uri(), array(), IPHAN_INRC_VERSION);
@@ -180,7 +178,10 @@ function iphan_inrc_scripts()
 	}
 
 	//Bootstrap Javascript
-	wp_register_script('bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	// <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	//wp_register_script('bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	wp_register_script('bootstrap4JS', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	
 	wp_enqueue_script('bootstrap4JS');
 
 	// Scripts necessary for using the gallery modal
