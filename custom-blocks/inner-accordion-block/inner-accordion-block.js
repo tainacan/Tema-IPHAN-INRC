@@ -17,13 +17,15 @@ wp.blocks.registerBlockType(
             return el(
                 'details',
                 blockProps,
+                {
+                    className: 'tainacan-icon tainacan-icon-showmore',
+                },
                 el(InnerBlocks)
             );
         },
 
         save: function () {
             var blockProps = useBlockProps.save();
-
             return el(
                 'details',
                 blockProps,

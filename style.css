@@ -14078,16 +14078,16 @@ summary {
 	font-weight: bold;
 }
 
-details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
+details.wp-block-iphan-inner-accordion-custom > summary::-webkit-details-marker {
 	display: none;
 }
 
-details.wp-block-iphan-accordion-custom > summary::before {
+details.wp-block-iphan-inner-accordion-custom > summary::before {
 	float: right;
 	font-weight: bold;
 }
 
-details[open].wp-block-iphan-accordion-custom summary.tainacan-icon-showmore:before {
+details[open].wp-block-iphan-inner-accordion-custom summary.tainacan-icon-showmore:before {
 	transform: rotate(180deg);
 }
 
