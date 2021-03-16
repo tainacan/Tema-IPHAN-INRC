@@ -10,26 +10,56 @@ wp.blocks.registerBlockType(
         title: 'Inner block',
         icon: 'arrow-down',
         category: 'text',
+        attributes: {
+            title: {
+                type: 'string',
+                source: 'html',
+                selector: 'summary',
+            },
+        },
 
-        edit: function () {
+        edit: function (props) {
+            var title = props.attributes.title;
+            function updateTitle(newTitle) {
+                props.setAttributes({ title: newTitle });
+            }
             var blockProps = useBlockProps();
-
             return el(
                 'details',
                 blockProps,
-                {
-                    className: 'tainacan-icon tainacan-icon-showmore',
-                },
+                [el(
+                    RichText,
+                    {
+                        value: props.attributes.title,
+                        tagName: 'summary',
+                        type: 'text',
+                        onChange: updateTitle,
+                        value: title,
+                        placeholder: "Insira o título"
+                    }
+                ),
+                el(InnerBlocks),
                 el(InnerBlocks)
+                ]
             );
         },
 
-        save: function () {
+        save: function (props) {
             var blockProps = useBlockProps.save();
             return el(
                 'details',
                 blockProps,
-                el(InnerBlocks.Content)
+                [
+                    el(
+                        RichText.Content,
+                        {
+                            tagName: 'summary',
+                            className: 'tainacan-icon tainacan-icon-showmore',
+                            value: props.attributes.title
+                        }),
+                    el(InnerBlocks.Content),
+                    el(InnerBlocks.Content)
+                ]
             );
         },
     }
