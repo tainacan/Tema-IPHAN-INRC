@@ -53,9 +53,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 // Import variables and mixins.
 @import "abstracts/abstracts";
 
-// Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
-
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -99,6 +96,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+
+// Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 /* Accessibility
 --------------------------------------------- */

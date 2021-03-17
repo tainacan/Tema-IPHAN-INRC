@@ -160,6 +160,10 @@
             margin-top: 30px;
         }
     }
+    a {
+        display: block;
+        text-decoration: none;
+    }
 }
 
 .admin-bar #primary-menu {
@@ -188,11 +192,6 @@
 
 .hamburguer-desktop .menu-item-has-children::after {
     display: none !important;
-}
-
-a {
-    display: block;
-    text-decoration: none;
 }
 
 /* Small menu. */
