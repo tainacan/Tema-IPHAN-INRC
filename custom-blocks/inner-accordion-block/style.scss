@@ -1,5 +1,11 @@
+//remove o ícone do summary do opera e chrome
 details.wp-block-iphan-inner-accordion-custom > summary::-webkit-details-marker {
     display: none;
+}
+
+//remove o ícone do summary do mozila
+details.wp-block-iphan-inner-accordion-custom > summary {
+    list-style-type: none;
 }
 
 details.wp-block-iphan-inner-accordion-custom > summary::before {

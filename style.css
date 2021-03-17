@@ -14101,6 +14101,10 @@ details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
 	display: none;
 }
 
+details.wp-block-iphan-accordion-custom > summary {
+	list-style-type: none;
+}
+
 details.wp-block-iphan-accordion-custom > summary::before {
 	float: right;
 	font-weight: bold;
@@ -14116,6 +14120,10 @@ summary {
 
 details.wp-block-iphan-inner-accordion-custom > summary::-webkit-details-marker {
 	display: none;
+}
+
+details.wp-block-iphan-inner-accordion-custom > summary {
+	list-style-type: none;
 }
 
 details.wp-block-iphan-inner-accordion-custom > summary::before {
