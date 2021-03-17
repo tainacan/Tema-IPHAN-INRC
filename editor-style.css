@@ -618,9 +618,7 @@ ul.wp-block {
 
 /* custom blocks
 --------------------------------------------- */
-details > summary::-webkit-details-marker,
-summary::marker {
-	list-style: none;
+details > summary::-webkit-details-marker {
 	display: none;
 }
 

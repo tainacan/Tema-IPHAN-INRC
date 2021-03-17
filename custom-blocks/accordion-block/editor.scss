@@ -1,8 +1,8 @@
-details > summary::-webkit-details-marker,
-summary::marker {
-    list-style: none;
+//remove o ícone do summary do opera e chrome
+details > summary::-webkit-details-marker {
     display: none;
 }
+//remove o ícone do summary do mozila
 details summary {
     list-style-type: none;
 }
