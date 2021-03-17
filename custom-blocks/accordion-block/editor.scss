@@ -18,3 +18,7 @@ details > summary::before {
 details[open] summary.tainacan-icon-showmore:before {
     transform: rotate(180deg);
 }
+
+summary {
+    font-weight: bold;
+}
