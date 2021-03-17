@@ -11,7 +11,6 @@ if ( function_exists( 'register_block_style' ) ) {
 	 * @return void
 	 */
 	function iphan_block_styles() {
-        wp_register_style('style', get_template_directory_uri() . '/style.css', false);
         register_block_style(            
             'core/heading',            
              array(                
@@ -77,5 +76,3 @@ if ( function_exists( 'register_block_style' ) ) {
     }
 }
 add_action( 'init', 'iphan_block_styles' );
-
-?>
