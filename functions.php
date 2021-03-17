@@ -115,11 +115,17 @@ if (!function_exists('iphan_inrc_setup')) :
 
 		/* Editor (Gutenberg side) Styles */
 		add_theme_support('editor-styles');
-		add_editor_style(get_template_directory_uri() . '/editor-style.css');
+		add_editor_style([get_template_directory_uri() . '/editor-style.css']);
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
 
+function my_block_plugin_editor_scripts()
+{
+	wp_register_style('TainacanIconsFont', get_template_directory_uri() . '/assets/fonts/tainacan-icons/css/tainacanicons.min.css', '', '1.0.3', '');
+	wp_enqueue_style('TainacanIconsFont');
+}
+add_action('enqueue_block_editor_assets', 'my_block_plugin_editor_scripts');
 /**
  * Enqueueing Google Font wasn't working on wp_enqueue_scripts so we handle here
  */
@@ -181,7 +187,7 @@ function iphan_inrc_scripts()
 	// <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	//wp_register_script('bootstrap4JS', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
 	wp_register_script('bootstrap4JS', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array('jquery'), IPHAN_INRC_VERSION, true);
-	
+
 	wp_enqueue_script('bootstrap4JS');
 
 	// Scripts necessary for using the gallery modal
