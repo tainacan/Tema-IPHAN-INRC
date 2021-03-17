@@ -10842,12 +10842,6 @@ textarea {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.admin-bar #primary-menu {
-		top: 113px;
-	}
-}
-
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.admin-bar #primary-menu {
 		top: 134px;
@@ -14119,7 +14113,7 @@ summary {
 }
 
 details.wp-block-iphan-inner-accordion-custom > summary::-webkit-details-marker {
-	display: none;
+	/*     display: none; */
 }
 
 details.wp-block-iphan-inner-accordion-custom > summary {
