@@ -27,6 +27,12 @@ if (!is_singular()) {
 					if (is_singular()) :
 						iphan_inrc_post_thumbnail();
 						the_title('<div class="col-md-8 alignwide"><h3 class="mb-3 is-style-title-iphan-underscore"> ', '</h3></div>');
+					?>
+						<div class="meta-data-single-post col-md-8 alignwide">
+							<span class="">Escrito por: <?php echo get_the_author() ?></span>
+							<span class=""><?php echo get_the_date("j") . " de <span class='meta-data-month'>" . get_the_date("F") . "</span>, " . get_the_date("Y") ?></span>
+						</div>
+					<?php
 					else :
 						the_title('<div class="mb-3"><a class="font-weight-bold mb-3 is-style-title-iphan" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></div>');
 					endif;
