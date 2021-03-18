@@ -17,7 +17,7 @@ if (!is_singular()) {
 		<?php
 	} else {
 		?>
-			<article id="post-<?php the_ID() ?>" <?php post_class(array("excerpt")) ?>>
+			<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
 			<?php
 		}
 			?>
@@ -26,16 +26,16 @@ if (!is_singular()) {
 					<?php
 					if (is_singular()) :
 						iphan_inrc_post_thumbnail();
-						the_title('<div class="alignwide"><h3 class="mb-3 is-style-title-iphan-underscore"> ', '</h3></div>');
+						the_title('<div class="col-md-8 alignwide"><h3 class="mb-3 is-style-title-iphan-underscore"> ', '</h3></div>');
 					else :
-						the_title('<div><a class="font-weight-bold mb-3 is-style-title-iphan" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></div>');
+						the_title('<div class="mb-3"><a class="font-weight-bold mb-3 is-style-title-iphan" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></div>');
 					endif;
 					?>
 				</header><!-- .entry-header -->
 				<p class="margin-list-post">
 					<?php
 					if (is_singular()) {
-						echo '<div class="alignwide">';
+						echo '<div class="col-md-8 alignwide">';
 						the_content();
 						echo '</div>';
 					} else {
