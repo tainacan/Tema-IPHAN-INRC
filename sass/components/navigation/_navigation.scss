@@ -252,6 +252,8 @@
 }
 .menu-toggle[aria-expanded="true"] {
     background: $color__branco;
+    border: 1px solid transparent;
+
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         padding-top: 5px;
         border: none;

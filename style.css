@@ -1278,6 +1278,7 @@ textarea {
 
 .menu-toggle[aria-expanded="true"] {
 	background: #ffffff;
+	border: 1px solid transparent;
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
