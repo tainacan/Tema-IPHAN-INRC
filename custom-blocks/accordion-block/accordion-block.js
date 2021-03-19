@@ -13,6 +13,7 @@ wp.blocks.registerBlockType(
                 type: 'string',
                 source: 'html',
                 selector: 'summary',
+                className: 'tainacan-icon tainacan-icon-showmore'
             },
             content: {
                 type: 'string',
@@ -43,6 +44,7 @@ wp.blocks.registerBlockType(
                             onChange: updateTitle,
                             value: title,
                             placeholder: "Insira o título",
+                            className: 'tainacan-icon tainacan-icon-showmore'
                         }
                     ),
                 ),
@@ -69,7 +71,8 @@ wp.blocks.registerBlockType(
                         RichText.Content,
                         {
                             tagName: 'span',
-                            value: props.attributes.title
+                            value: props.attributes.title,
+                            className: 'tainacan-icon tainacan-icon-showmore'
                         }
                     )
                 ),
