@@ -1494,13 +1494,11 @@ textarea {
 	border: 3px solid #58020b;
 }
 
-@media screen and (min-width: 768px) {
-	.toggled button.menu-toggle + div {
-		position: relative;
-	}
+.toggled button.menu-toggle + div {
+	position: relative;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
 	.toggled button.menu-toggle + div {
 		position: absolute;
 	}
@@ -1543,7 +1541,6 @@ textarea {
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.toggled .menu {
 		position: absolute;
-		left: 0%;
 		background: #ffffff;
 		width: auto;
 		height: auto;

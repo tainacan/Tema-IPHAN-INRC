@@ -442,10 +442,9 @@
         border: 3px solid $color__vermelho1;
     }
     button.menu-toggle + div {
-        @media screen and (min-width: $screen__sm) {
-            position: relative;
-        }
-        @media screen and (max-width: $screen__sm) {
+        position: relative;
+
+        @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             position: absolute;
         }
     }
@@ -479,7 +478,6 @@
         }
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             position: absolute;
-            left: 0%;
             background: $color__branco;
             width: auto;
             height: auto;
