@@ -1481,7 +1481,7 @@ textarea {
 .toggled .hamburguer-desktop,
 .toggled #primary-menu > .nav-menu {
 	position: absolute;
-	top: 20px;
+	top: 22px;
 	right: 0%;
 	background: #ffffff;
 	width: auto;
@@ -1495,13 +1495,13 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-	.toggled .menu-menu-container {
+	.toggled button.menu-toggle + div {
 		position: relative;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.toggled .menu-menu-container {
+	.toggled button.menu-toggle + div {
 		position: absolute;
 	}
 }

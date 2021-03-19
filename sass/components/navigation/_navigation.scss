@@ -429,7 +429,7 @@
     .hamburguer-desktop,
     #primary-menu > .nav-menu {
         position: absolute;
-        top: 20px;
+        top: 22px;
         right: 0%;
         background: $color__branco;
         width: auto;
@@ -441,7 +441,7 @@
         padding-right: 50px;
         border: 3px solid $color__vermelho1;
     }
-    .menu-menu-container {
+    button.menu-toggle + div {
         @media screen and (min-width: $screen__sm) {
             position: relative;
         }
