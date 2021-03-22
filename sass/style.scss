@@ -57,6 +57,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Generic
 --------------------------------------------------------------*/
 
+// Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 /* Normalize 
 --------------------------------------------- */
 @import "generic/normalize";
@@ -97,8 +100,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Utilities
 --------------------------------------------------------------*/
 
-// Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
 
 /* Accessibility
 --------------------------------------------- */

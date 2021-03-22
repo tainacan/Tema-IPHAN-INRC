@@ -107,15 +107,17 @@
                     margin: 0;
                 }
                 .swiper-button-next, .swiper-button-prev {
-                    padding: calc((var(--swiper-navigation-size, 48px) / 2) - 2px);
+                    padding: 16px;
+                    height: 34px;
                     border: 1px solid #501e23;
+                    background-color: white;
                     transition: border ease 0.2s;
                     &:hover {
                         border: 1px solid var(--swiper-navigation-color, #58020b);
                     }
                     &::after {
                         font-family: swiper-icons;
-                        font-size: calc(var(--swiper-navigation-size, 48px) / 2);
+                        font-size: 18px;
                         font-weight: bold;
                     }
                 }
