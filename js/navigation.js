@@ -152,7 +152,7 @@
 	jQuery(document).on("ready", function () {
 		//Condição para o menu virar hamburguer
 		try {
-			if (jQuery('#primary-menu>li').length > 1 || window.innerWidth < 768) {
+			if (jQuery('#primary-menu>li').length > 6 || window.innerWidth < 768) {
 				jQuery('.menu-toggle').css({
 					display: "block"
 				});

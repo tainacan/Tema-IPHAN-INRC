@@ -13,6 +13,7 @@ wp.blocks.registerBlockType(
                 type: 'string',
                 source: 'html',
                 selector: 'summary',
+                className: 'tainacan-icon tainacan-icon-showmore'
             },
             content: {
                 type: 'string',
@@ -32,17 +33,20 @@ wp.blocks.registerBlockType(
             }
             return el('details',
                 RichText,
-                [el(
+                [el('summary',
                     RichText,
-                    {
-                        value: props.attributes.title,
-                        tagName: 'summary',
-                        type: 'text',
-                        onChange: updateTitle,
-                        value: title,
-                        placeholder: "Insira o título",
-                        className: 'tainacan-icon tainacan-icon-showmore',
-                    }
+                    el(
+                        RichText,
+                        {
+                            value: props.attributes.title,
+                            tagName: 'span',
+                            type: 'text',
+                            onChange: updateTitle,
+                            value: title,
+                            placeholder: "Insira o título",
+                            className: 'tainacan-icon tainacan-icon-showmore'
+                        }
+                    ),
                 ),
                 el(
                     RichText,
@@ -61,13 +65,17 @@ wp.blocks.registerBlockType(
             var blockProps = wp.blockEditor.useBlockProps.save();
             return (el('details',
                 blockProps,
-                [el(
-                    RichText.Content,
-                    {
-                        tagName: 'summary',
-                        className: 'tainacan-icon tainacan-icon-showmore',
-                        value: props.attributes.title
-                    }),
+                [el('summary',
+                    blockProps,
+                    el(
+                        RichText.Content,
+                        {
+                            tagName: 'span',
+                            value: props.attributes.title,
+                            className: 'tainacan-icon tainacan-icon-showmore'
+                        }
+                    )
+                ),
                 el(
                     RichText.Content,
                     {
@@ -79,4 +87,3 @@ wp.blocks.registerBlockType(
         },
     }
 );
-;

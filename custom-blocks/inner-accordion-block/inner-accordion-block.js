@@ -27,17 +27,19 @@ wp.blocks.registerBlockType(
             return el(
                 'details',
                 blockProps,
-                [el(
+                [el('summary',
                     RichText,
-                    {
-                        value: props.attributes.title,
-                        tagName: 'summary',
-                        type: 'text',
-                        onChange: updateTitle,
-                        value: title,
-                        placeholder: "Insira o título",
-                        className: 'tainacan-icon tainacan-icon-showmore',
-                    }
+                    el(
+                        RichText,
+                        {
+                            value: props.attributes.title,
+                            tagName: 'span',
+                            type: 'text',
+                            onChange: updateTitle,
+                            value: title,
+                            placeholder: "Insira o título",
+                        }
+                    ),
                 ),
                 el(InnerBlocks),
                 ]
@@ -50,13 +52,15 @@ wp.blocks.registerBlockType(
                 'details',
                 blockProps,
                 [
-                    el(
+                    el('summary',
                         RichText.Content,
-                        {
-                            tagName: 'summary',
-                            className: 'tainacan-icon tainacan-icon-showmore',
-                            value: props.attributes.title
-                        }),
+                        el(
+                            RichText.Content,
+                            {
+                                tagName: 'span',
+                                value: props.attributes.title
+                            }
+                        )),
                     el(InnerBlocks.Content),
                 ]
             );

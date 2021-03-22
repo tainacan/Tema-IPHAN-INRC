@@ -239,6 +239,7 @@ require get_template_directory() . '/template-parts/excerpts.php';
 //comments
 require get_template_directory() . '/template-parts/filter-comments.php';
 
+
 //custom blocks
 
 //accordion blocks

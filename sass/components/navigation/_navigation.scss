@@ -160,6 +160,10 @@
             margin-top: 30px;
         }
     }
+    a {
+        display: block;
+        text-decoration: none;
+    }
 }
 
 .admin-bar #primary-menu {
@@ -188,11 +192,6 @@
 
 .hamburguer-desktop .menu-item-has-children::after {
     display: none !important;
-}
-
-a {
-    display: block;
-    text-decoration: none;
 }
 
 /* Small menu. */
@@ -253,6 +252,8 @@ a {
 }
 .menu-toggle[aria-expanded="true"] {
     background: $color__branco;
+    border: 1px solid transparent;
+
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         padding-top: 5px;
         border: none;
@@ -428,7 +429,7 @@ a {
     .hamburguer-desktop,
     #primary-menu > .nav-menu {
         position: absolute;
-        top: 20px;
+        top: 22px;
         right: 0%;
         background: $color__branco;
         width: auto;
@@ -440,11 +441,10 @@ a {
         padding-right: 50px;
         border: 3px solid $color__vermelho1;
     }
-    .menu-menu-container {
-        @media screen and (min-width: $screen__sm) {
-            position: relative;
-        }
-        @media screen and (max-width: $screen__sm) {
+    button.menu-toggle + div {
+        position: relative;
+
+        @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             position: absolute;
         }
     }
@@ -478,7 +478,6 @@ a {
         }
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             position: absolute;
-            left: 0%;
             background: $color__branco;
             width: auto;
             height: auto;
