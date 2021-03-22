@@ -13,8 +13,8 @@ function iphan_block_pattern()
             'categories' => array('columns'),
             'content'     => '
             <!-- wp:columns -->
-            <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top","className":"is-style-column-iphan-secundary"} -->
-            <div class="wp-block-column is-vertically-aligned-top is-style-column-iphan-secundary"><!-- wp:heading {"level":1,"className":"is-style-title-iphan-underscore"} -->
+            <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top","className":"is-style-column-iphan-secondary"} -->
+            <div class="wp-block-column is-vertically-aligned-top is-style-column-iphan-secondary"><!-- wp:heading {"level":1,"className":"is-style-title-iphan-underscore"} -->
             <h1 class="is-style-title-iphan-underscore">Título da postagem 1</h1>
             <!-- /wp:heading -->
             

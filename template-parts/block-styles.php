@@ -32,7 +32,7 @@ if ( function_exists( 'register_block_style' ) ) {
         register_block_style(            
             'core/column',            
              array(                
-               'name'  => 'column-iphan-secundary',                
+               'name'  => 'column-iphan-secondary',                
                'label' =>  'Coluna IPHAN Secundária',    
                'isDefault' => true,        
             )        
@@ -50,7 +50,7 @@ if ( function_exists( 'register_block_style' ) ) {
         register_block_style(            
             'core/group',            
              array(                
-               'name'  => 'column-iphan-secundary',                
+               'name'  => 'column-iphan-secondary',                
                'label' =>  'Grupo IPHAN secundario',   
                'isDefault' => true,  
             )        
