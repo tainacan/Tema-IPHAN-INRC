@@ -112,6 +112,7 @@ if (!function_exists('iphan_inrc_setup')) :
 
 		/* Align wide and full */
 		add_theme_support('align-wide');
+		add_theme_support('custom-spacing');
 
 		/* Editor (Gutenberg side) Styles */
 		add_theme_support('editor-styles');
