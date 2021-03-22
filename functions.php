@@ -190,14 +190,6 @@ function iphan_inrc_scripts()
 
 	wp_enqueue_script('bootstrap4JS');
 
-	// Scripts necessary for using the gallery modal
-	wp_enqueue_style('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), IPHAN_INRC_VERSION);
-	wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), IPHAN_INRC_VERSION, true);
-	wp_enqueue_style('photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css', array(), IPHAN_INRC_VERSION);
-	wp_enqueue_style('photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css', array(), IPHAN_INRC_VERSION);
-	wp_enqueue_script('photoswipe', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js', array(), IPHAN_INRC_VERSION, true);
-	wp_enqueue_script('photoswipe-skin', 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js', array(), IPHAN_INRC_VERSION, true);
-	wp_enqueue_script('blocksy-tainacan-scripts__swiper', get_stylesheet_directory_uri() . '/js/media-carousel.js', ['swiper', 'photoswipe', 'photoswipe-skin'], IPHAN_INRC_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 

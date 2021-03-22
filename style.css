@@ -12918,9 +12918,6 @@ input[type="search"].search-bar__home {
 .tainacan-single-post .tainacan-content {
 	font-size: 1rem;
 	min-height: 32.5vh;
-	--swiper-theme-color: #58020b;
-	--swiper-navigation-color: #58020b;
-	--swiper-navigation-size: 1.1rem;
 }
 
 @media only screen and (min-height: 1080px) {
@@ -12951,6 +12948,7 @@ input[type="search"].search-bar__home {
 	display: block;
 	position: relative;
 	z-index: 99;
+	background: transparent;
 }
 
 .tainacan-single-post .tainacan-content .tainacan-item-file-download::after {
@@ -12979,232 +12977,63 @@ input[type="search"].search-bar__home {
 	margin-bottom: 30px;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__document {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	flex-wrap: wrap;
-	height: auto;
-	position: relative;
+.tainacan-single-post .tainacan-content .tainacan-media-component {
+	--swiper-theme-color: #58020b;
+	--swiper-navigation-color: #58020b;
+	--swiper-navigation-size: 48px;
+	--tainacan-media-background: white;
+	--tainacan-media-main-carousel-height: 60vh;
+	--tainacan-media-main-carousel-width: 100%;
+	--tainacan-media-thumbs-carousel-width: 100%;
+	--tainacan-media-thumbs-carousel-item-size: 124px;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__document:hover .tainacan-item-file-download {
-	opacity: 1;
-	transform: scale(1);
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main {
+	margin-bottom: 1.5rem;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__document > iframe,
-.tainacan-single-post .tainacan-content .tainacan-item-section__document img.attachment-large {
-	display: block;
-	height: auto;
-	margin: 0 auto;
-	border: none;
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main ul.swiper-wrapper {
+	margin: 0;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__document > audio {
-	width: 90%;
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-next, .tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-prev {
+	padding: calc((var(--swiper-navigation-size, 48px) / 2) - 2px);
+	border: 1px solid #501e23;
+	transition: border ease 0.2s;
 }
 
-@media only screen and (min-width: 768px) {
-	.tainacan-single-post .tainacan-content .tainacan-item-section__document > iframe {
-		min-height: 600px;
-	}
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-next:hover, .tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-prev:hover {
+	border: 1px solid var(--swiper-navigation-color, #58020b);
 }
 
-@media only screen and (max-width: 576px) {
-	.tainacan-single-post .tainacan-content .tainacan-item-section__document > iframe {
-		min-height: 429px;
-	}
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-next::after, .tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-prev::after {
+	font-family: swiper-icons;
+	font-size: calc(var(--swiper-navigation-size, 48px) / 2);
+	font-weight: bold;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__document .tainacan-embed-container {
-	width: 100%;
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-next {
+	margin-right: -0.5rem;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__document .tainacan-embed-container iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-main .swiper-button-prev {
+	margin-left: -0.5rem;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items {
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-thumbs {
 	font-weight: normal;
 	transition: font-weight 0.3s ease;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items img {
-	border-radius: 2px;
-	border-bottom: 4px solid transparent;
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-thumbs img {
+	border-radius: 3px;
 	margin-bottom: 4px;
 	transition: border 0.3s ease;
 }
 
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments-file:hover .tainacan-item-file-download {
-	opacity: 1;
-	transform: scale(1);
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery {
-	margin-bottom: 24px;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery ul {
-	list-style: none;
-	padding: 0;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery .tainacan-item-section__document {
-	margin: 0;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery .tainacan-item-section__document img {
-	width: auto;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery .tainacan-item-section__document video {
-	width: auto;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery .tainacan-item-section__document iframe {
-	min-height: 200px;
-	height: 60vh;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery .tainacan-item-section__document .tainacan-item-file-name {
-	width: 100%;
-	margin: 0 auto;
-	padding: 6px 6px 6px 12px;
-	text-align: center;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments {
-	position: relative;
-	padding: 0px;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-disabled,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-button-disabled {
-	display: none;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-next,
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-prev,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-button-next,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-button-prev {
-	top: 65px;
-	padding: 15px;
-	background-image: none;
-	background-color: white;
-	border: 1px solid #58020b;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-prev,
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-container-rtl .swiper-button-next,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-button-prev,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-container-rtl .swiper-button-next {
-	left: -20px;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-button-next,
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-container-rtl .swiper-button-prev,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-button-next,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-container-rtl .swiper-button-prev {
-	right: -20px;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-slide-thumb-active,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-slide-thumb-active {
-	font-weight: bold;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .swiper-slide-thumb-active img,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .swiper-slide-thumb-active img {
-	border-bottom: 4px solid #58020b;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items ul,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments ul {
-	list-style: none;
-	padding: 0;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file {
-	text-align: center;
-	vertical-align: top;
-	cursor: zoom-in;
-	word-break: break-all;
-	font-size: 0.875em;
-	max-width: calc(var(--attachments-size, 157px) + 17px);
-}
-
-@media only screen and (max-width: 380px) {
-	.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file,
-	.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file {
-		margin: 10px 0;
-	}
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file img,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file img {
-	width: 140px;
-	height: 140px;
-	object-fit: cover;
-	transition: border-bottom 0.3s ease;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file img:focus,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file img:focus {
-	outline: none;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file .swiper-slide-name,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file .swiper-slide-name {
+.tainacan-single-post .tainacan-content .tainacan-media-component .tainacan-media-component__swiper-thumbs .swiper-slide-metadata {
 	display: block;
-	padding: 0 0.5rem 0.5rem 0.5rem;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file a,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file a {
-	width: 100%;
-	max-width: 140px;
-	text-align: center;
-	word-break: break-word;
-	background-color: white;
-	transition: background-color 0.2s ease;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file a,
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file a:focus,
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file a:hover,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file a,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file a:focus,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file a:hover {
-	outline: none;
-	text-decoration: none;
-	cursor: pointer;
-	color: black;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file a:hover,
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file a:focus:hover,
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file a:hover:hover,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file a:hover,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file a:focus:hover,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file a:hover:hover {
-	background: #e8e8e8;
-}
-
-.tainacan-single-post .tainacan-content .tainacan-item-section__gallery-items .tainacan-item-section__attachments-file .attachment-without-image img,
-.tainacan-single-post .tainacan-content .tainacan-item-section__attachments .tainacan-item-section__attachments-file .attachment-without-image img {
-	padding: 36px;
-	background-color: #e8e8e8;
-	object-fit: contain;
-	height: 100%;
-	width: auto;
+	margin-top: 0.5rem;
 }
 
 .tainacan-single-post .tainacan-content.tainacan-item-section__metadata {
@@ -13287,39 +13116,6 @@ input[type="search"].search-bar__home {
 	font-size: 0.875rem;
 	color: #000000;
 	font-weight: 400;
-}
-
-button.pswp__button:hover {
-	background-color: transparent !important;
-}
-
-.pswp__zoom-wrap .attachment-without-image {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.pswp__zoom-wrap .attachment-without-image > iframe {
-	min-height: 80vh;
-	width: 80%;
-	border: none;
-}
-
-.pswp__zoom-wrap .attachment-without-image > a,
-.pswp__zoom-wrap .attachment-without-image > p {
-	z-index: 99;
-	padding: 1rem 4.33337vw;
-	background: white;
-	border-radius: 1px;
-	word-wrap: break-word;
-}
-
-.pswp__zoom-wrap .attachment-without-image > audio,
-.pswp__zoom-wrap .attachment-without-image > video {
-	min-height: 54px;
-	padding: 12px;
 }
 
 .tainacan-single-item-navigation #item-single-navigation.related-posts {
@@ -13433,6 +13229,7 @@ button.pswp__button:hover {
 
 .theme-items-list .search-control .search-control-item .button {
 	text-transform: initial !important;
+	border: none;
 }
 
 .theme-items-list input.input,
