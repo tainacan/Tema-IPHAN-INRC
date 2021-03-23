@@ -17,8 +17,7 @@ span.tainacan-icon-showmore:before {
     float: right;
     font-weight: bold;
 }
-details[open] summary.tainacan-icon-showmore:before,
-span.show.tainacan-icon-showmore:before {
+.rotate-icon::before {
     transform: rotate(180deg);
 }
 

@@ -33,8 +33,10 @@ wp.blocks.registerBlockType(
             function onClickSummary() {
                 if (jQuery('.collapse').hasClass('show')) {
                     jQuery('.collapse').removeClass('show')
+                    jQuery('.span-summary').removeClass('rotate-icon')
                 } else {
                     jQuery('.collapse').addClass('show')
+                    jQuery('.span-summary').addClass('rotate-icon')
                 }
             }
             return el('div',
@@ -61,7 +63,7 @@ wp.blocks.registerBlockType(
                         onChange: onChangeConteudo,
                         value: content,
                         placeholder: "Insira o seu texto",
-                        className: 'p-details collapse show',
+                        className: 'p-details collapse',
                     }
                 )]
             );
