@@ -24,7 +24,6 @@ wp.blocks.registerBlockType(
             var title = props.attributes.title;
             function updateTitle(newTitle) {
                 props.setAttributes({ title: newTitle });
-                console.log('foi')
             }
             var content = props.attributes.content;
             function onChangeConteudo(novoConteudo) {
