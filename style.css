@@ -10342,6 +10342,16 @@ figure {
 	margin: 1em 0;
 }
 
+/* Image block captioin */
+.wp-block-image {
+	break-inside: avoid;
+}
+
+.wp-block-image figcaption {
+	font-style: italic;
+	color: #58020b;
+}
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
@@ -10573,8 +10583,8 @@ textarea {
 
 /* Columns and group block should have a certain margin */
 .wp-block-group,
-.wp-block-cover:not(:first-child),
-.wp-block-cover:not(:first-child).has-background,
+.wp-block-cover:not(.alignwide),
+.wp-block-cover:not(.alignwide).has-background,
 .wp-block-columns {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -13582,6 +13592,7 @@ body.archive .theme-items-list {
 }
 
 .is-style-title-iphan-underscore {
+	margin-top: 0;
 	margin-bottom: 44px;
 	color: #58020b !important;
 	text-transform: uppercase;
@@ -13668,6 +13679,7 @@ body.archive .theme-items-list {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
 	column-count: 2;
+	column-gap: 24px;
 }
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
@@ -13682,6 +13694,7 @@ body.archive .theme-items-list {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
+	column-gap: 24px;
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {

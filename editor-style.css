@@ -277,6 +277,7 @@ big {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
 	column-count: 2;
+	column-gap: 24px;
 }
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
@@ -291,6 +292,7 @@ big {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
+	column-gap: 24px;
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
@@ -310,6 +312,7 @@ big {
 }
 
 .is-style-title-iphan-underscore {
+	margin-top: 0;
 	margin-bottom: 44px;
 	color: #58020b !important;
 	text-transform: uppercase;
