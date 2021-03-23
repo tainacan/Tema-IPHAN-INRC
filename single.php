@@ -19,7 +19,7 @@ custom_breadcrumbs();
 	while (have_posts()) :
 		the_post();
 
-		get_template_part('template-parts/content', get_post_type());
+		get_template_part('template-parts/content', 'singular');
 
 		the_post_navigation(
 			array(
@@ -35,8 +35,5 @@ custom_breadcrumbs();
 
 	endwhile; // End of the loop.
 	?>
-
 </main><!-- #main -->
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>

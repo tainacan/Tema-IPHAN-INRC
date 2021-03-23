@@ -1,7 +1,6 @@
 <?php
-
 /**
- * Template part for displaying posts
+ * Template part for displaying page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -25,6 +24,31 @@
 	<div class="entry-content">
 		<?php
 		the_content();
+
+		if ( is_front_page() ) : ?>
+			<div class="banner-or alignfull">
+				<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr1.png')">
+				</div>
+				<div class="banner-footer-or"><span class="text-banner-footer">ou</span></div>
+				<!-- Se tiver vazio, não exibir os botões -->
+				<div class="buttons-banner-footer">
+					<a href="<?php echo get_theme_mod('setting_link_banner_1', '') ?>" class="button-white-footer-banner"><?php if (get_theme_mod('label_banner_1', '') === '') {
+																																echo 'explore o repositório';
+																															} else {
+																																echo get_theme_mod('label_banner_1', '');
+																															} ?></a>
+					<div class="separator-banner-footer-horizontal">
+					</div>
+					<a href="<?php echo get_theme_mod('setting_link_banner_2', '') ?>" class="button-white-footer-banner"><?php if (get_theme_mod('label_banner_2', '') === '') {
+																																echo  'acesse o repositório completo';
+																															} else {
+																																echo get_theme_mod('label_banner_2', '');
+																															} ?></a>
+				</div>
+				<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr2.png')">
+				</div>
+			</div>
+		<?php endif;
 
 		wp_link_pages(
 			array(

@@ -2,7 +2,7 @@
 // Breadcrumbs
 function custom_breadcrumbs()
 {
-    $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+    $showOnFrontPage = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
     $delimiter = '<span class="separator">/</span>'; // delimiter between crumbs
     $home = __('Início', 'iphan_inrc'); // text for the 'Home' link
     $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
@@ -12,9 +12,9 @@ function custom_breadcrumbs()
     global $post;
     $homeLink = esc_url(home_url());
 
-    if (is_home() || is_front_page()) {
+    if (is_front_page()) {
 
-        if ($showOnHome == 1) echo '<nav aria-label="breadcrumb" class="breadcrumb d-none d-md-flex border-bottom-0 max-large margin-one-column"><div class="site-container"><i class="tainacan-icon tainacan-icon-home">&nbsp;</i><a href="' . $homeLink . '">' . $home . '</a></div></nav>';
+        if ($showOnFrontPage == 1) echo '<nav aria-label="breadcrumb" class="breadcrumb d-none d-md-flex border-bottom-0 max-large margin-one-column"><div class="site-container"><i class="tainacan-icon tainacan-icon-home">&nbsp;</i><a href="' . $homeLink . '">' . $home . '</a></div></nav>';
     } else {
 
         echo '<nav aria-label="breadcrumb" class="breadcrumb d-md-flex border-bottom-0 max-large margin-one-column"><div class="site-container"><i class="tainacan-icon tainacan-icon-home"></i><a href="' . $homeLink . '">' . $home . '</a>&nbsp;' . $delimiter . '&nbsp;';

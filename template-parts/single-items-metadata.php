@@ -6,7 +6,7 @@
     <?php endif; ?>
     
     <div class="single-item-collection--information">
-        <?php do_action( 'tainacan-interface-single-item-metadata-begin' ); ?>
+        <?php do_action( 'iphan-inrc-single-item-metadata-begin' ); ?>
         <?php
             $args = array(
                 'before_title' => '<div><h3>',
@@ -18,6 +18,6 @@
             //$field = null;
             tainacan_the_metadata( $args );
         ?>
-        <?php do_action( 'tainacan-interface-single-item-metadata-end' ); ?>
+        <?php do_action( 'iphan-inrc-single-item-metadata-end' ); ?>
     </div>
 </section>

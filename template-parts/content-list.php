@@ -10,7 +10,7 @@ if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlypo
     <?php if (has_post_thumbnail()) : ?>
         <div class="col-xs-12 col-md-4 blog-thumbnail thumb-resume mb-md-0">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('tainacan-interface-list-post', array('class' => 'img-fluid')); ?>
+                <?php the_post_thumbnail('medium-large', array('class' => 'img-fluid')); ?>
             </a>
         </div>
     <?php endif; ?>
