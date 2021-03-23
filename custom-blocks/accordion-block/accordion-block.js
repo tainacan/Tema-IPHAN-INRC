@@ -32,13 +32,10 @@ wp.blocks.registerBlockType(
                 props.setAttributes({ content: novoConteudo });
             }
             function onClickSummary() {
-                console.log('entrei')
                 if (jQuery('.collapse').hasClass('show')) {
-                    console.log('if')
                     jQuery('.collapse').removeClass('show')
                 } else {
                     jQuery('.collapse').addClass('show')
-                    console.log('else')
                 }
             }
             return el('div',
@@ -77,9 +74,9 @@ wp.blocks.registerBlockType(
                 [el('summary',
                     RichText.Content,
                     {
-                        tagName: 'span',
+                        tagName: 'summary',
                         value: props.attributes.title,
-                        className: 'tainacan-icon tainacan-icon-showmore'
+                        className: 'tainacan-icon tainacan-icon-showmore span-summary'
                     }
                 ),
                 el(
