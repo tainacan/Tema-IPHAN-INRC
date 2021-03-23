@@ -31,22 +31,30 @@ wp.blocks.registerBlockType(
             function onChangeConteudo(novoConteudo) {
                 props.setAttributes({ content: novoConteudo });
             }
-            return el('details',
+            function onClickSummary() {
+                console.log('entrei')
+                if (jQuery('.collapse').hasClass('show')) {
+                    console.log('if')
+                    jQuery('.collapse').removeClass('show')
+                } else {
+                    jQuery('.collapse').addClass('show')
+                    console.log('else')
+                }
+            }
+            return el('div',
                 RichText,
-                [el('summary',
+                [el(
                     RichText,
-                    el(
-                        RichText,
-                        {
-                            value: props.attributes.title,
-                            tagName: 'span',
-                            type: 'text',
-                            onChange: updateTitle,
-                            value: title,
-                            placeholder: "Insira o título",
-                            className: 'tainacan-icon tainacan-icon-showmore'
-                        }
-                    ),
+                    {
+                        value: props.attributes.title,
+                        tagName: 'span',
+                        type: 'text',
+                        onChange: updateTitle,
+                        onClick: onClickSummary,
+                        value: title,
+                        placeholder: "Insira o título",
+                        className: 'tainacan-icon tainacan-icon-showmore span-summary',
+                    },
                 ),
                 el(
                     RichText,
@@ -56,7 +64,8 @@ wp.blocks.registerBlockType(
                         type: 'text',
                         onChange: onChangeConteudo,
                         value: content,
-                        placeholder: "Insira o seu texto"
+                        placeholder: "Insira o seu texto",
+                        className: 'p-details collapse show',
                     }
                 )]
             );
@@ -66,15 +75,12 @@ wp.blocks.registerBlockType(
             return (el('details',
                 blockProps,
                 [el('summary',
-                    blockProps,
-                    el(
-                        RichText.Content,
-                        {
-                            tagName: 'span',
-                            value: props.attributes.title,
-                            className: 'tainacan-icon tainacan-icon-showmore'
-                        }
-                    )
+                    RichText.Content,
+                    {
+                        tagName: 'span',
+                        value: props.attributes.title,
+                        className: 'tainacan-icon tainacan-icon-showmore'
+                    }
                 ),
                 el(
                     RichText.Content,
