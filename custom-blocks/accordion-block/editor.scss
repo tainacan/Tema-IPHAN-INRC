@@ -6,20 +6,24 @@ details > summary::-webkit-details-marker {
 details summary {
     list-style-type: none;
 }
-details > p {
+details > p,
+span.span-summary + p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-details > summary::before {
+details > summary::before,
+span.tainacan-icon-showmore:before {
     float: right;
     font-weight: bold;
 }
-details[open] summary.tainacan-icon-showmore:before {
+details[open] summary.tainacan-icon-showmore:before,
+span.show.tainacan-icon-showmore:before {
     transform: rotate(180deg);
 }
 
-summary {
+summary,
+span.span-summary {
     font-weight: bold;
     width: 100%;
     max-height: 100px;
@@ -31,21 +35,10 @@ summary {
 
 //Teste com o span
 
-div > span.span-summary,
-div > p.p-details {
-    border: 1px solid #000;
-    padding: 5px;
-}
-
 .collapse {
     display: none;
 }
 
 .show {
     display: block;
-}
-
-span.span-summary + p {
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
