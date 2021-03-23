@@ -3,8 +3,8 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 0;
+    margin-bottom: 80px;
     position: relative;
 }
 
@@ -91,13 +91,19 @@
     text-align: center;
     color: $color__branco !important;
     font-weight: 900;
-    filter: brightness(100%);
+    filter: brightness(98%);
     text-transform: uppercase;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(170, 170, 170, 0.15);
     flex-wrap: nowrap;
     padding-left: 20px;
     padding-right: 20px;
     z-index: 7;
+    transition: filter ease 0.2s, background-color ease 0.2s;
+
+    &:hover {
+        background-color: rgba(170, 170, 170, 0.25);
+        filter: brightness(120%);
+    }
     @media screen and (max-width: $screen__sm) {
         margin-left: 0 !important;
     }

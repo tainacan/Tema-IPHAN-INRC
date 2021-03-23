@@ -217,6 +217,10 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 
+//excerpts
+require get_template_directory() . '/inc/excerpts.php';
+
+
 /**
  * Customizer additions.
  */
@@ -233,9 +237,6 @@ require get_template_directory() . '/template-parts/color-palette.php';
 
 //breadcrumb
 require get_template_directory() . '/template-parts/breadcrumb.php';
-
-//excerpts
-require get_template_directory() . '/template-parts/excerpts.php';
 
 //comments
 require get_template_directory() . '/template-parts/filter-comments.php';

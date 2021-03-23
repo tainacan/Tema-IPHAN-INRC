@@ -64,6 +64,4 @@ custom_breadcrumbs();
         <?php get_template_part( 'template-parts/loop-tainacan-collection', get_query_var( 'tainacan_collections_viewmode' ) ); ?>
     </div>
 </main>
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>

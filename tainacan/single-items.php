@@ -10,9 +10,9 @@
 <?php if ( have_posts() ) : ?>
 
 	<?php 
-		do_action( 'tainacan-interface-single-item-top' ); 
+		do_action( 'iphan-inrc-single-item-top' ); 
 		get_template_part( 'template-parts/single-items-header' );
-		do_action( 'tainacan-interface-single-item-after-title' );
+		do_action( 'iphan-inrc-single-item-after-title' );
 	?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -21,12 +21,12 @@
 				
 				<?php
 					get_template_part( 'template-parts/single-items-attachments' );
-					do_action( 'tainacan-interface-single-item-after-attachments' );
+					do_action( 'iphan-inrc-single-item-after-attachments' );
 
 					echo '<hr>';
 							
 					get_template_part( 'template-parts/single-items-metadata' );
-					do_action( 'tainacan-interface-single-item-after-metadata' );	
+					do_action( 'iphan-inrc-single-item-after-metadata' );	
 				?>
 
 			</article>
@@ -38,7 +38,7 @@
 		?>
 	<?php endwhile; ?>
 
-	<?php do_action( 'tainacan-interface-single-item-bottom' ); ?>
+	<?php do_action( 'iphan-inrc-single-item-bottom' ); ?>
 
 <?php else : ?>
 	<?php _e( 'Nada encontrado!', 'iphan_inrc' ); ?>
