@@ -74,14 +74,21 @@ ul {
     max-width: 100%;
 }
 /* FULL Inner columns and group blocks when inside a full wide block */
-.wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-group,
-.wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-columns {
+body>:not(.block-editor-writing-flow) .wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-group,
+body>:not(.block-editor-writing-flow) .wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-columns {
     max-width: 100%;
     width: 100%;
     max-width: 100vw;
     width: 100vw;
     margin-left: calc(-1 * (100vw - 100%)/2);
     margin-right: calc(-1 * (100vw - 100%)/2);
+}
+body>.block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-group,
+body>.block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-align="full"]>.wp-block-columns {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .wp-block[data-align="full"] .wp-block[data-align="full"]>* {
     padding: 0 4.73%;
