@@ -44,3 +44,8 @@ div > p.p-details {
 .show {
     display: block;
 }
+
+span.span-summary + p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

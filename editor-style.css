@@ -672,6 +672,11 @@ div > p.p-details {
 	display: block;
 }
 
+span.span-summary + p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 details {
 	margin-left: 0px !important;
 }

@@ -1,6 +1,5 @@
 var el = wp.element.createElement,
-    RichText = wp.blockEditor.RichText,
-    title = wp.blockEditor.RichText;
+    RichText = wp.blockEditor.RichText;
 
 wp.blocks.registerBlockType(
     'iphan/accordion-custom',
@@ -13,7 +12,6 @@ wp.blocks.registerBlockType(
                 type: 'string',
                 source: 'html',
                 selector: 'summary',
-                className: 'tainacan-icon tainacan-icon-showmore'
             },
             content: {
                 type: 'string',
@@ -26,6 +24,7 @@ wp.blocks.registerBlockType(
             var title = props.attributes.title;
             function updateTitle(newTitle) {
                 props.setAttributes({ title: newTitle });
+                console.log('foi')
             }
             var content = props.attributes.content;
             function onChangeConteudo(novoConteudo) {
@@ -71,12 +70,12 @@ wp.blocks.registerBlockType(
             var blockProps = wp.blockEditor.useBlockProps.save();
             return (el('details',
                 blockProps,
-                [el('summary',
+                [el(
                     RichText.Content,
                     {
                         tagName: 'summary',
                         value: props.attributes.title,
-                        className: 'tainacan-icon tainacan-icon-showmore span-summary'
+                        className: 'tainacan-icon tainacan-icon-showmore'
                     }
                 ),
                 el(
