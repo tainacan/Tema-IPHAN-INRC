@@ -1,4 +1,5 @@
-.is-style-column-iphan {
+.wp-block-group.is-style-column-iphan>.wp-block-group__inner-container,
+.wp-block-column.is-style-column-iphan {
     border: 1px solid $color__vermelho1;
     padding: 30px;
     overflow-wrap: anywhere;
@@ -10,7 +11,8 @@
         margin-bottom: 5%;
     }
 }
-.is-style-column-iphan-secondary {
+.wp-block-group.is-style-column-iphan-secondary>.wp-block-group__inner-container,
+.wp-block-column.is-style-column-iphan-secondary {
     border: 1px solid $color__cinza6;
     padding: 30px;
     overflow-wrap: anywhere;

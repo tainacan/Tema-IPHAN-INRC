@@ -13643,34 +13643,40 @@ body.archive .theme-items-list {
 	overflow-wrap: anywhere;
 }
 
-.is-style-column-iphan {
+.wp-block-group.is-style-column-iphan > .wp-block-group__inner-container,
+.wp-block-column.is-style-column-iphan {
 	border: 1px solid #58020b;
 	padding: 30px;
 	overflow-wrap: anywhere;
 }
 
-.is-style-column-iphan:not(.has-background) {
+.wp-block-group.is-style-column-iphan > .wp-block-group__inner-container:not(.has-background),
+.wp-block-column.is-style-column-iphan:not(.has-background) {
 	background-color: rgba(255, 255, 255, 0.85);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
-	.is-style-column-iphan {
+	.wp-block-group.is-style-column-iphan > .wp-block-group__inner-container,
+	.wp-block-column.is-style-column-iphan {
 		margin-bottom: 5%;
 	}
 }
 
-.is-style-column-iphan-secondary {
+.wp-block-group.is-style-column-iphan-secondary > .wp-block-group__inner-container,
+.wp-block-column.is-style-column-iphan-secondary {
 	border: 1px solid #515151;
 	padding: 30px;
 	overflow-wrap: anywhere;
 }
 
-.is-style-column-iphan-secondary:not(.has-background) {
+.wp-block-group.is-style-column-iphan-secondary > .wp-block-group__inner-container:not(.has-background),
+.wp-block-column.is-style-column-iphan-secondary:not(.has-background) {
 	background-color: rgba(255, 255, 255, 0.85);
 }
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
-	.is-style-column-iphan-secondary {
+	.wp-block-group.is-style-column-iphan-secondary > .wp-block-group__inner-container,
+	.wp-block-column.is-style-column-iphan-secondary {
 		margin-bottom: 5%;
 	}
 }
