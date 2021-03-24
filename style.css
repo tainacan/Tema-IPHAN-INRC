@@ -13942,6 +13942,9 @@ body.archive .theme-items-list {
 	font-size: 1rem;
 }
 
+/* .wp-block-file__button {
+    background: $color__branco !important;
+} */
 details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
 	display: none;
 }
