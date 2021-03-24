@@ -15,6 +15,10 @@
     font-size: 1rem;
 }
 
-/* .wp-block-file__button {
+.wp-block-file > a > i {
+    color: $color__vermelho1;
+}
+
+.wp-block-file__button {
     background: $color__branco !important;
-} */
+}

@@ -13942,9 +13942,14 @@ body.archive .theme-items-list {
 	font-size: 1rem;
 }
 
-/* .wp-block-file__button {
-    background: $color__branco !important;
-} */
+.wp-block-file > a > i {
+	color: #58020b;
+}
+
+.wp-block-file__button {
+	background: #ffffff !important;
+}
+
 details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
 	display: none;
 }
