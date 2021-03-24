@@ -13,3 +13,12 @@ img {
 figure {
 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }
+
+/* Image block captioin */
+.wp-block-image {
+	break-inside: avoid;
+}
+.wp-block-image figcaption {
+    font-style: italic;
+    color: $color__vermelho1;
+}

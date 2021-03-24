@@ -81,8 +81,8 @@
 
 /* Columns and group block should have a certain margin */
 .wp-block-group,
-.wp-block-cover:not(:first-child),
-.wp-block-cover:not(:first-child).has-background,
+.wp-block-cover:not(.alignwide),
+.wp-block-cover:not(.alignwide).has-background,
 .wp-block-columns {
     margin-top: 1rem;
     margin-bottom: 1rem;

@@ -62,8 +62,7 @@ ul {
 }
 
 /* Inner columns and group blocks when inside a full wide block */
-.wp-block[data-align="full"] .wp-block-group:not([data-align="wide"]):not([data-align="full"]),
-.wp-block[data-align="full"] .wp-block-columns:not([data-align="wide"]):not([data-align="full"]) {
+.is-root-container>.wp-block[data-align="full"]>*>.block-editor-block-list__layout>.wp-block:not([data-align="wide"]):not([data-align="full"]) {
     max-width: 66.66%; // 8 colunas descontado o padding
 }
 /* WIDE Inner columns and group blocks when inside a full wide block */
@@ -90,9 +89,6 @@ body>.block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-alig
     margin-left: auto;
     margin-right: auto;
 }
-.wp-block[data-align="full"] .wp-block[data-align="full"]>* {
-    padding: 0 4.73%;
-}
 
 /* Inner padding for cover block */
 .wp-block-cover__inner-container {
@@ -101,11 +97,12 @@ body>.block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-alig
     padding: 0 4.73%;
     padding: 0 4.73vw;
 }
+
 /* No margin for the last element of columns block */
 .wp-block-column>*:last-child {
     margin-bottom: 0;
 }
-.wp-block[data-align="full"]>.wp-block-columns {
+.is-root-container>.wp-block[data-align="full"]>.wp-block-columns {
     padding-left: 4.73%;
     padding-right: 4.73%;
 }
