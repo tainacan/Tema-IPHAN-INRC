@@ -7,11 +7,11 @@ details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
 details.wp-block-iphan-accordion-custom > summary {
     list-style-type: none;
 }
-details.wp-block-iphan-accordion-custom > summary > span::before {
+details.wp-block-iphan-accordion-custom > summary::before {
     float: right;
     font-weight: bold;
 }
-details[open].wp-block-iphan-accordion-custom summary > span.tainacan-icon-showmore:before {
+details[open].wp-block-iphan-accordion-custom summary.tainacan-icon-showmore:before {
     transform: rotate(180deg);
 }
 

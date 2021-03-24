@@ -23,23 +23,31 @@ wp.blocks.registerBlockType(
             function updateTitle(newTitle) {
                 props.setAttributes({ title: newTitle });
             }
+            function onClickSummary() {
+                if (jQuery('.collapse').hasClass('show')) {
+                    jQuery('.collapse').removeClass('show')
+                    jQuery('.span-summary').removeClass('rotate-icon')
+                } else {
+                    jQuery('.collapse').addClass('show')
+                    jQuery('.span-summary').addClass('rotate-icon')
+                }
+            }
             var blockProps = useBlockProps();
             return el(
-                'details',
+                'div',
                 blockProps,
-                [el('summary',
+                [el(
                     RichText,
-                    el(
-                        RichText,
-                        {
-                            value: props.attributes.title,
-                            tagName: 'span',
-                            type: 'text',
-                            onChange: updateTitle,
-                            value: title,
-                            placeholder: "Insira o título",
-                        }
-                    ),
+                    {
+                        value: props.attributes.title,
+                        tagName: 'span',
+                        type: 'text',
+                        onChange: updateTitle,
+                        onClick: onClickSummary,
+                        value: title,
+                        placeholder: "Insira o título",
+                        className: 'tainacan-icon tainacan-icon-showmore span-summary',
+                    }
                 ),
                 el(InnerBlocks),
                 ]
@@ -51,17 +59,20 @@ wp.blocks.registerBlockType(
             return el(
                 'details',
                 blockProps,
-                [
-                    el('summary',
-                        RichText.Content,
-                        el(
-                            RichText.Content,
-                            {
-                                tagName: 'span',
-                                value: props.attributes.title
-                            }
-                        )),
-                    el(InnerBlocks.Content),
+                [el(
+                    RichText.Content,
+                    {
+                        tagName: 'summary',
+                        value: props.attributes.title,
+                        className: 'tainacan-icon tainacan-icon-showmore'
+                    }
+                ),
+                el(
+                    InnerBlocks.Content,
+                    {
+                        className: 'p-details collapse'
+                    }
+                ),
                 ]
             );
         },

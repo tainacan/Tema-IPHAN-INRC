@@ -1,6 +1,5 @@
 var el = wp.element.createElement,
-    RichText = wp.blockEditor.RichText,
-    title = wp.blockEditor.RichText;
+    RichText = wp.blockEditor.RichText;
 
 wp.blocks.registerBlockType(
     'iphan/accordion-custom',
@@ -13,7 +12,6 @@ wp.blocks.registerBlockType(
                 type: 'string',
                 source: 'html',
                 selector: 'summary',
-                className: 'tainacan-icon tainacan-icon-showmore'
             },
             content: {
                 type: 'string',
@@ -31,22 +29,29 @@ wp.blocks.registerBlockType(
             function onChangeConteudo(novoConteudo) {
                 props.setAttributes({ content: novoConteudo });
             }
-            return el('details',
+            function onClickSummary() {
+                if (jQuery('.collapse').hasClass('show')) {
+                    jQuery('.collapse').removeClass('show')
+                    jQuery('.span-summary').removeClass('rotate-icon')
+                } else {
+                    jQuery('.collapse').addClass('show')
+                    jQuery('.span-summary').addClass('rotate-icon')
+                }
+            }
+            return el('div',
                 RichText,
-                [el('summary',
+                [el(
                     RichText,
-                    el(
-                        RichText,
-                        {
-                            value: props.attributes.title,
-                            tagName: 'span',
-                            type: 'text',
-                            onChange: updateTitle,
-                            value: title,
-                            placeholder: "Insira o título",
-                            className: 'tainacan-icon tainacan-icon-showmore'
-                        }
-                    ),
+                    {
+                        value: props.attributes.title,
+                        tagName: 'span',
+                        type: 'text',
+                        onChange: updateTitle,
+                        onClick: onClickSummary,
+                        value: title,
+                        placeholder: "Insira o título",
+                        className: 'tainacan-icon tainacan-icon-showmore span-summary',
+                    },
                 ),
                 el(
                     RichText,
@@ -56,7 +61,8 @@ wp.blocks.registerBlockType(
                         type: 'text',
                         onChange: onChangeConteudo,
                         value: content,
-                        placeholder: "Insira o seu texto"
+                        placeholder: "Insira o seu texto",
+                        className: 'p-details collapse',
                     }
                 )]
             );
@@ -65,16 +71,13 @@ wp.blocks.registerBlockType(
             var blockProps = wp.blockEditor.useBlockProps.save();
             return (el('details',
                 blockProps,
-                [el('summary',
-                    blockProps,
-                    el(
-                        RichText.Content,
-                        {
-                            tagName: 'span',
-                            value: props.attributes.title,
-                            className: 'tainacan-icon tainacan-icon-showmore'
-                        }
-                    )
+                [el(
+                    RichText.Content,
+                    {
+                        tagName: 'summary',
+                        value: props.attributes.title,
+                        className: 'tainacan-icon tainacan-icon-showmore'
+                    }
                 ),
                 el(
                     RichText.Content,
