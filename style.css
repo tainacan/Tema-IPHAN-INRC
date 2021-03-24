@@ -13927,17 +13927,18 @@ body.archive .theme-items-list {
 
 .wp-block-file {
 	margin-top: 0px !important;
-	margin-bottom: 0px !important;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #d9d9d9;
+	margin-bottom: 20px !important;
 }
 
 .wp-block-file > a {
-	padding-bottom: 12px;
-	margin-bottom: 20px;
 	color: #58020b;
-	border-bottom: 1px solid #d9d9d9;
 	padding-top: 0px;
 	margin-top: 0px;
 	font-weight: bold;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
