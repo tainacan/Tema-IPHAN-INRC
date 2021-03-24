@@ -13906,6 +13906,21 @@ body.archive .theme-items-list {
 	color: #1e1e1e;
 }
 
+.wp-block-file {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.wp-block-file > a {
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	color: #58020b;
+	border-bottom: 1px solid #d9d9d9;
+	padding-top: 0px;
+	margin-top: 0px;
+	font-weight: bold;
+}
+
 details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
 	display: none;
 }
