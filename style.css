@@ -13939,6 +13939,7 @@ body.archive .theme-items-list {
 	padding-top: 0px;
 	margin-top: 0px;
 	font-weight: bold;
+	font-size: 1rem;
 }
 
 details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
