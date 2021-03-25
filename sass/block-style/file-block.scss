@@ -7,7 +7,8 @@
     padding-right: 0px !important;
 }
 
-.is-style-download > a {
+.is-style-download > a,
+.is-style-download .wp-block-file__textlink {
     color: $color__vermelho1;
     padding-top: 0px;
     margin-top: 0px;
@@ -15,10 +16,17 @@
     font-size: 1rem;
 }
 
-.is-style-download > a > i {
+.is-style-download > a > i,
+.is-style-download i {
     color: $color__vermelho1;
 }
 
 .wp-block-file__button {
     background: $color__branco !important;
+}
+
+.wp-block-file__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

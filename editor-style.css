@@ -628,6 +628,39 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 	padding-right: 4.73%;
 }
 
+.is-style-download {
+	margin-top: 0px !important;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #d9d9d9;
+	margin-bottom: 20px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.is-style-download > a,
+.is-style-download .wp-block-file__textlink {
+	color: #58020b;
+	padding-top: 0px;
+	margin-top: 0px;
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.is-style-download > a > i,
+.is-style-download i {
+	color: #58020b;
+}
+
+.wp-block-file__button {
+	background: #ffffff !important;
+}
+
+.wp-block-file__content-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 /* custom blocks
 --------------------------------------------- */
 details > summary::-webkit-details-marker {

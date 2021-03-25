@@ -37,6 +37,7 @@
 @import "block-style/title-block";
 @import "block-style/block-colors";
 @import "block-style/editor-basics";
+@import "block-style/file-block";
 
 /* custom blocks
 --------------------------------------------- */
@@ -55,7 +56,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 
 .tainacan-icon-arrowleft:before {
     content: "arrowleft";
