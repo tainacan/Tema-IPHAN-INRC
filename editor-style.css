@@ -655,6 +655,22 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 	background: #ffffff !important;
 }
 
+.wp-block-file__button::before {
+	content: "download";
+	display: inline-block;
+	font: normal normal normal 1.25em "TainacanIcons";
+	font-size: inherit;
+	text-rendering: auto;
+	vertical-align: middle;
+	line-height: inherit;
+	text-transform: none !important;
+	letter-spacing: normal !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #58020b;
+	font-size: 1.25em;
+}
+
 .wp-block-file__content-wrapper {
 	display: flex;
 	justify-content: space-between;
