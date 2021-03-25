@@ -77,7 +77,7 @@ if (function_exists('register_block_style')) {
         );
 
         register_block_style(
-            'core/media',
+            'core/file',
             array(
                 'name'  => 'download',
                 'label' =>  'Download de arquivo do Tainacan',

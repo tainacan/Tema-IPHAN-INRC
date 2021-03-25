@@ -13925,7 +13925,7 @@ body.archive .theme-items-list {
 	color: #1e1e1e;
 }
 
-.wp-block-file {
+.is-style-download {
 	margin-top: 0px !important;
 	padding-bottom: 12px;
 	border-bottom: 1px solid #d9d9d9;
@@ -13934,7 +13934,7 @@ body.archive .theme-items-list {
 	padding-right: 0px !important;
 }
 
-.wp-block-file > a {
+.is-style-download > a {
 	color: #58020b;
 	padding-top: 0px;
 	margin-top: 0px;
@@ -13942,7 +13942,7 @@ body.archive .theme-items-list {
 	font-size: 1rem;
 }
 
-.wp-block-file > a > i {
+.is-style-download > a > i {
 	color: #58020b;
 }
 
