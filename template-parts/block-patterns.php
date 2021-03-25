@@ -19,7 +19,7 @@ function iphan_block_pattern()
             'description' => _x('Bloco de download.', 'Descrição do padrão de bloco', 'iphan-inrc'),
             'categories' => array('core', 'iphan', 'buttons'),
             'content'     => '<div class="wp-block-file"><a href="http://localhost/wp-content/uploads/2020/12/imagem_2021-01-28_155953.png">
-                    imagem_2021-01-28_155953</a>
+                    imagem de exemplo</a>
                     <a href="http://localhost/wp-content/uploads/2020/12/imagem_2021-01-28_155953.png" class="wp-block-file__button" download>
                     <i size="50px" class="tainacan-icon tainacan-icon-1-25em tainacan-icon-download">
                     </i></a></div>'
