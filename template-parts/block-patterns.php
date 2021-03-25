@@ -7,10 +7,24 @@ function iphan_block_pattern()
 {
     register_block_pattern_category(
         'iphan',
-        array( 'label' => __( 'IPHAN', 'iphan-inrc' ) )
+        array('label' => __('IPHAN', 'iphan-inrc'))
     );
 
     $template_images_directory = get_template_directory_uri() . '/assets/images/';
+
+    register_block_pattern(
+        'iphan/download',
+        array(
+            'title'       => __('IPHAN bloco de download', 'iphan-inrc'),
+            'description' => _x('Bloco de download.', 'Descrição do padrão de bloco', 'iphan-inrc'),
+            'categories' => array('core', 'iphan', 'buttons'),
+            'content'     => '<div class="wp-block-file"><a href="http://localhost/wp-content/uploads/2020/12/imagem_2021-01-28_155953.png">
+                    imagem_2021-01-28_155953</a>
+                    <a href="http://localhost/wp-content/uploads/2020/12/imagem_2021-01-28_155953.png" class="wp-block-file__button" download>
+                    <i size="50px" class="tainacan-icon tainacan-icon-1-25em tainacan-icon-download">
+                    </i></a></div>'
+        )
+    );
 
     register_block_pattern(
         'iphan/column-highlight',
