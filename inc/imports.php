@@ -1,4 +1,7 @@
 <?php
+
+/* ----------------------------- INC IMPORTS  ----------------------------- */
+
 /**
  * Implement the Custom Header feature.
  */
@@ -23,6 +26,15 @@ require get_template_directory() . '/inc/excerpts.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Load Jetpack compatibility file.
+ */
+if (defined('JETPACK__VERSION')) {
+    require get_template_directory() . '/inc/jetpack.php';
+}
+
+/* ----------------------------- BLOCK STYLE IMPORTS  ----------------------------- */
+
 //blocks styles
 require get_template_directory() . '/template-parts/block-styles.php';
 
@@ -38,17 +50,12 @@ require get_template_directory() . '/template-parts/breadcrumb.php';
 //comments
 require get_template_directory() . '/template-parts/filter-comments.php';
 
-//custom blocks
+
+
+/* ----------------------------- CUSTOM BLOCKS IMPORTS  ----------------------------- */
 
 //accordion blocks
 require get_template_directory() . '/custom-blocks/accordion-block/accordion-block.php';
 
 //custom blocks
 require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if (defined('JETPACK__VERSION')) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
