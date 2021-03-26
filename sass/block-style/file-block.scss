@@ -27,8 +27,7 @@
     color: $color__preto;
 }
 
-.is-style-download .wp-block-file__button::after
-/* .is-style-download .wp-block-file__content-wrapper::after */ {
+.is-style-download .wp-block-file__button::after {
     content: "download";
     display: inline-block;
     font: normal normal normal 1.25em "TainacanIcons";

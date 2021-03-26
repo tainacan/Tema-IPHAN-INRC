@@ -1,11 +1,3 @@
-//remove o ícone do summary do opera e chrome
-details > summary::-webkit-details-marker {
-    display: none;
-}
-//remove o ícone do summary do mozila
-details summary {
-    list-style-type: none;
-}
 details > p,
 span.span-summary + p {
     margin-top: 0px;
@@ -31,8 +23,6 @@ span.span-summary {
 .wp-block {
     max-width: 100%;
 }
-
-//Teste com o span
 
 .collapse {
     display: none;

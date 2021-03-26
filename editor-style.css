@@ -682,14 +682,6 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 
 /* custom blocks
 --------------------------------------------- */
-details > summary::-webkit-details-marker {
-	display: none;
-}
-
-details summary {
-	list-style-type: none;
-}
-
 details > p,
 span.span-summary + p {
 	margin-top: 0px;
