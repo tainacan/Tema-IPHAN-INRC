@@ -13951,6 +13951,7 @@ body.archive .theme-items-list {
 .is-style-download .wp-block-file__button {
 	background: #ffffff !important;
 	content: none;
+	color: #000000;
 }
 
 .is-style-download .wp-block-file__button::after {
@@ -13967,6 +13968,7 @@ body.archive .theme-items-list {
 	-moz-osx-font-smoothing: grayscale;
 	color: #58020b;
 	font-size: 1.25em;
+	background: #ffffff;
 }
 
 .is-style-download .wp-block-file__content-wrapper {

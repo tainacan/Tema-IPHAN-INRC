@@ -24,9 +24,11 @@
 .is-style-download .wp-block-file__button {
     background: $color__branco !important;
     content: none;
+    color: $color__preto;
 }
 
-.is-style-download .wp-block-file__button::after {
+.is-style-download .wp-block-file__button::after
+/* .is-style-download .wp-block-file__content-wrapper::after */ {
     content: "download";
     display: inline-block;
     font: normal normal normal 1.25em "TainacanIcons";
@@ -40,6 +42,7 @@
     -moz-osx-font-smoothing: grayscale;
     color: $color__vermelho1;
     font-size: 1.25em;
+    background: $color__branco;
 }
 
 .is-style-download .wp-block-file__content-wrapper {
