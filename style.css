@@ -11399,11 +11399,11 @@ textarea {
 	display: block !important;
 }
 
-.menu-menu-container > #primary-menu > li {
+#primary-menu > li {
 	display: table;
 }
 
-.menu-menu-container > #primary-menu > li > a {
+#primary-menu > li > a {
 	vertical-align: middle;
 	display: table-cell;
 	padding-top: 10px;
