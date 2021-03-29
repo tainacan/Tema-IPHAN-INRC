@@ -24,6 +24,12 @@ wp.blocks.registerBlockType(
                 props.setAttributes({ title: newTitle });
             }
             function onClickSummary() {
+                var element = document.getElementsByClassName('span-summary')
+                var irmao = element[0].nextSibling.childNodes[0].childNodes[0]
+                if (!jQuery(irmao).hasClass('collapse')) {
+                    jQuery(irmao).addClass('collapse')
+                    jQuery(irmao).addClass('show')
+                }
                 if (jQuery('.collapse').hasClass('show')) {
                     jQuery('.collapse').removeClass('show')
                     jQuery('.span-summary').removeClass('rotate-icon')
@@ -40,6 +46,11 @@ wp.blocks.registerBlockType(
                     jQuery('.span-summary').addClass('tainacan-icon-plus')
                 }
             }
+            jQuery(document).on('ready', function () {
+                var element = document.getElementsByClassName('.span-summary')
+                var irmao = element[0].parentElement
+                console.log(irmao)
+            })
             var blockProps = useBlockProps();
             return el(
                 'div',
