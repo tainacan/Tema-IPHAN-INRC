@@ -32,16 +32,11 @@ wp.blocks.registerBlockType(
                 }
                 if (jQuery('.collapse').hasClass('show')) {
                     jQuery('.collapse').removeClass('show')
-                    jQuery('.span-summary').removeClass('rotate-icon')
-                } else {
-                    jQuery('.collapse').addClass('show')
-                    jQuery('.span-summary').addClass('rotate-icon')
-                }
-                //transição de icones funciona
-                if (jQuery('.span-summary').hasClass('tainacan-icon-plus')) {
                     jQuery('.span-summary').removeClass('tainacan-icon-plus')
                     jQuery('.span-summary').addClass('tainacan-icon-minus')
                 } else {
+                    jQuery('.collapse').addClass('show')
+                    jQuery('.span-summary').addClass('rotate-icon')
                     jQuery('.span-summary').removeClass('tainacan-icon-minus')
                     jQuery('.span-summary').addClass('tainacan-icon-plus')
                 }
