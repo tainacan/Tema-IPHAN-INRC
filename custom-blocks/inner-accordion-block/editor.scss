@@ -1,3 +1,36 @@
 details {
     margin-left: 0px !important;
 }
+details > p,
+span.span-summary + p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+details > summary::before,
+span.tainacan-icon-showmore:before {
+    float: right;
+    font-weight: bold;
+}
+.rotate-icon::before {
+    transform: rotate(180deg);
+}
+
+summary,
+span.span-summary {
+    font-weight: bold;
+    width: 100%;
+    max-height: 100px;
+}
+
+.wp-block {
+    max-width: 100%;
+}
+
+.collapse {
+    display: none;
+}
+
+.show {
+    display: block;
+}

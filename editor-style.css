@@ -689,6 +689,10 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 
 /* custom blocks
 --------------------------------------------- */
+details {
+	margin-left: 0px !important;
+}
+
 details > p,
 span.span-summary + p {
 	margin-top: 0px;
@@ -722,10 +726,6 @@ span.span-summary {
 
 .show {
 	display: block;
-}
-
-details {
-	margin-left: 0px !important;
 }
 
 .tainacan-icon:before,
