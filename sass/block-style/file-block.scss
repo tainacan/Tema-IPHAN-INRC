@@ -49,3 +49,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.is-style-download .wp-block-file__button:hover {
+    color: $color__vermelho1 !important;
+}

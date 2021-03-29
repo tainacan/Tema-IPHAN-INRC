@@ -680,6 +680,10 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 	align-items: center;
 }
 
+.is-style-download .wp-block-file__button:hover {
+	color: #58020b !important;
+}
+
 /* custom blocks
 --------------------------------------------- */
 details > p,

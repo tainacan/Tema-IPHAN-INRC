@@ -13977,6 +13977,10 @@ body.archive .theme-items-list {
 	align-items: center;
 }
 
+.is-style-download .wp-block-file__button:hover {
+	color: #58020b !important;
+}
+
 details.wp-block-iphan-accordion-custom > summary::-webkit-details-marker {
 	display: none;
 }
