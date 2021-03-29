@@ -31,6 +31,14 @@ wp.blocks.registerBlockType(
                     jQuery('.collapse').addClass('show')
                     jQuery('.span-summary').addClass('rotate-icon')
                 }
+                //transição de icones funciona
+                if (jQuery('.span-summary').hasClass('tainacan-icon-plus')) {
+                    jQuery('.span-summary').removeClass('tainacan-icon-plus')
+                    jQuery('.span-summary').addClass('tainacan-icon-minus')
+                } else {
+                    jQuery('.span-summary').removeClass('tainacan-icon-minus')
+                    jQuery('.span-summary').addClass('tainacan-icon-plus')
+                }
             }
             var blockProps = useBlockProps();
             return el(
@@ -46,10 +54,13 @@ wp.blocks.registerBlockType(
                         onClick: onClickSummary,
                         value: title,
                         placeholder: "Insira o título",
-                        className: 'tainacan-icon tainacan-icon-showmore span-summary',
+                        className: 'tainacan-icon tainacan-icon-plus span-summary',
                     }
                 ),
-                el(InnerBlocks),
+                el(InnerBlocks,
+                    {
+                        className: 'p-details collapse'
+                    }),
                 ]
             );
         },

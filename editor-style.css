@@ -700,13 +700,10 @@ span.span-summary + p {
 }
 
 details > summary::before,
-span.tainacan-icon-showmore:before {
+span.tainacan-icon-plus:before,
+span.tainacan-icon-minus:before {
 	float: right;
 	font-weight: bold;
-}
-
-.rotate-icon::before {
-	transform: rotate(180deg);
 }
 
 summary,

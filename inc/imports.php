@@ -44,8 +44,5 @@ require get_template_directory() . '/template-parts/filter-comments.php';
 
 /* ----------------------------- CUSTOM BLOCKS IMPORTS  ----------------------------- */
 
-//accordion blocks
-require get_template_directory() . '/custom-blocks/accordion-block/accordion-block.php';
-
 //custom blocks
 require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
