@@ -421,3 +421,11 @@
     justify-content: flex-end;
     display: flex;
 }
+
+.share-button-wrapper > a > .tainacan-icon-twitter {
+    color: $color__icone-twitter;
+}
+
+.share-button-wrapper > a > .tainacan-icon-facebook {
+    color: $color__icone-facebook;
+}

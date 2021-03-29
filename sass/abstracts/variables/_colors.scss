@@ -22,10 +22,10 @@ $color__cinza5: #898d8f;
 $color__cinza6: #515151;
 $color__cinza7: #1e1e1e;
 $color__preto: #000000;
-$color__background-body: $color__branco; 
+$color__background-body: $color__branco;
 $color__background-screen: $color__cinza1;
 $color__background-hr: $color__cinza3;
-$color__background-pre: $color__cinza3; 
+$color__background-pre: $color__cinza3;
 $color__background-ins: $color__cinza1;
 $color__text-screen: $color__vermelho2;
 $color__text-input: $color__vermelho1;
@@ -37,11 +37,11 @@ $color__text-main: $color__cinza7;
 $color__border-input: $color__cinza3;
 $color__border-abbr: $color__cinza4;
 // Botões
-$color__background-button: rgba(255,255,255,0.1);
+$color__background-button: rgba(255, 255, 255, 0.1);
 $color__border-button: $color__vermelho1;
 $color__border-button-hover: $color__vermelho1;
 $color__border-button-focus: $color__vermelho1;
-$color__background-button--clear: $color__branco rgba(255,255,255,0.1);;
+$color__background-button--clear: $color__branco rgba(255, 255, 255, 0.1);
 $color__border-button--clear: $color__cinza3;
 $color__border-button--clear-hover: $color__cinza6;
 $color__border-button--clear-focus: $color__cinza5;
@@ -49,5 +49,10 @@ $color__border-button--clear-focus: $color__cinza5;
 $gradiente__vermelho: linear-gradient(to right, $color__vermelho1, $color__vermelho2);
 
 $theme-colors: (
-  "primary": #58020b
+  "primary": #58020b,
 );
+
+//cores padrões de icones
+
+$color__icone-twitter: #00acee;
+$color__icone-facebook: #3b5998;
