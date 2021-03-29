@@ -12030,6 +12030,11 @@ li > article {
 	margin-top: 10%;
 }
 
+.share-button-wrapper {
+	justify-content: flex-end;
+	display: flex;
+}
+
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley,
