@@ -13941,6 +13941,8 @@ body.archive .theme-items-list {
 	margin-top: 0px;
 	font-weight: bold;
 	font-size: 1rem;
+	padding: 0px;
+	padding-right: 15px;
 }
 
 .is-style-download > a > i,
@@ -13969,6 +13971,7 @@ body.archive .theme-items-list {
 	color: #58020b;
 	font-size: 1.25em;
 	background: #ffffff;
+	padding-left: 5px;
 }
 
 .is-style-download .wp-block-file__content-wrapper {
