@@ -41,11 +41,6 @@ wp.blocks.registerBlockType(
                     jQuery('.span-summary').addClass('tainacan-icon-plus')
                 }
             }
-            jQuery(document).on('ready', function () {
-                var element = document.getElementsByClassName('.span-summary')
-                var irmao = element[0].parentElement
-                console.log(irmao)
-            })
             var blockProps = useBlockProps();
             return el(
                 'div',
