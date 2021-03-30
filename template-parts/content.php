@@ -42,7 +42,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__('Edit <span class="screen-reader-text">%s</span>', 'iphan-inrc'),
+						__('Edit <span class="screen-reader-text">%s</span>', 'iphan_inrc'),
 						array(
 							'span' => array(
 								'class' => array(),
