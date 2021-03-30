@@ -16,7 +16,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/heading',
             array(
-                'name'  => 'title-iphan-underscore',
+                'name'  => 'title-iphan-underscore', 'iphan-inrc',
                 'label' =>  'Título IPHAN Sublinhado ',
                 'isDefault' => true,
             )
@@ -25,7 +25,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/column',
             array(
-                'name'  => 'column-iphan',
+                'name'  => 'column-iphan', 'iphan-inrc',
                 'label' =>  'Coluna IPHAN ',
                 'isDefault' => true,
             )
@@ -34,7 +34,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/column',
             array(
-                'name'  => 'column-iphan-secondary',
+                'name'  => 'column-iphan-secondary', 'iphan-inrc',
                 'label' =>  'Coluna IPHAN Secundária',
                 'isDefault' => true,
             )
@@ -43,7 +43,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/group',
             array(
-                'name'  => 'column-iphan',
+                'name'  => 'column-iphan', 'iphan-inrc',
                 'label' =>  'Grupo IPHAN ',
                 'isDefault' => true,
             )
@@ -52,7 +52,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/group',
             array(
-                'name'  => 'column-iphan-secondary',
+                'name'  => 'column-iphan-secondary', 'iphan-inrc',
                 'label' =>  'Grupo IPHAN secundario',
                 'isDefault' => true,
             )
@@ -61,7 +61,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/group',
             array(
-                'name'  => 'two-columns',
+                'name'  => 'two-columns', 'iphan-inrc',
                 'label' =>  'Grupo com duas colunas fluídas',
                 'isDefault' => true,
             )
@@ -70,7 +70,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/group',
             array(
-                'name'  => 'three-column',
+                'name'  => 'three-column', 'iphan-inrc',
                 'label' =>  'Grupo com três colunas fluídas',
                 'isDefault' => true,
             )
@@ -79,7 +79,7 @@ if (function_exists('register_block_style')) {
         register_block_style(
             'core/file',
             array(
-                'name'  => 'download',
+                'name'  => 'download', 'iphan-inrc',
                 'label' =>  'Download de arquivo do Tainacan',
                 'isDefault' => true,
             )
