@@ -7,7 +7,7 @@ function iphan_block_pattern()
 {
     register_block_pattern_category(
         'iphan',
-        array('label' => __('IPHAN', 'iphan-inrc'))
+        array('label' => __('IPHAN', 'iphan_inrc'))
     );
 
     $template_images_directory = get_template_directory_uri() . '/assets/images/';
@@ -15,8 +15,8 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/download',
         array(
-            'title'       => __('IPHAN bloco de download', 'iphan-inrc'),
-            'description' => _x('Bloco de download.', 'Descrição do padrão de bloco', 'iphan-inrc'),
+            'title'       => __('IPHAN bloco de download', 'iphan_inrc'),
+            'description' => _x('Bloco de download.', 'Descrição do padrão de bloco', 'iphan_inrc'),
             'categories' => array('core', 'iphan', 'buttons'),
             'content'     => '<div class="wp-block-file"><a href="http://localhost/wp-content/uploads/2020/12/imagem_2021-01-28_155953.png">
                     imagem de exemplo</a>
@@ -29,8 +29,8 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/column-highlight',
         array(
-            'title'       => __('IPHAN duas colunas de destaque', 'iphan-inrc'),
-            'description' => _x('Blocos em colunas com borda e botões.', 'Descrição do padrão de bloco', 'iphan-inrc'),
+            'title'       => __('IPHAN duas colunas de destaque', 'iphan_inrc'),
+            'description' => _x('Blocos em colunas com borda e botões.', 'Descrição do padrão de bloco', 'iphan_inrc'),
             'categories' => array('columns', 'iphan', 'buttons'),
             'content'     => '
                 <!-- wp:group {"align":"wide","className":"is-style-default"} -->
@@ -78,8 +78,8 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/column-highlight-alternative',
         array(
-            'title'       => __('IPHAN uma coluna de destaque', 'iphan-inrc'),
-            'description' => _x('Blocos com uma coluna com borda.', 'Descrição do padrão de bloco', 'iphan-inrc'),
+            'title'       => __('IPHAN uma coluna de destaque', 'iphan_inrc'),
+            'description' => _x('Blocos com uma coluna com borda.', 'Descrição do padrão de bloco', 'iphan_inrc'),
             'categories' => array('columns', 'iphan', 'buttons'),
             'content'     => '
                 <!-- wp:group -->
@@ -138,8 +138,8 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/column-highlight-with-image',
         array(
-            'title'       => __('IPHAN colunas de destaque com imagem', 'iphan-inrc'),
-            'description' => _x('Blocos em colunas com borda, botões e uma imagem ao fundo', 'Descrição do padrão de bloco', 'iphan-inrc'),
+            'title'       => __('IPHAN colunas de destaque com imagem', 'iphan_inrc'),
+            'description' => _x('Blocos em colunas com borda, botões e uma imagem ao fundo', 'Descrição do padrão de bloco', 'iphan_inrc'),
             'categories' => array('columns', 'iphan', 'buttons', 'gallery'),
             'content'     => '
                 <!-- wp:cover {"url":"' . $template_images_directory . 'iphan_bg_example.png","dimRatio":10,"align":"full"} -->
@@ -184,8 +184,8 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/group-highlight',
         array(
-            'title'       => __('IPHAN grupo de destaque', 'iphan-inrc'),
-            'description' => _x('Grupo com borda vermelha', 'Descrição do padrão de bloco', 'iphan-inrc'),
+            'title'       => __('IPHAN grupo de destaque', 'iphan_inrc'),
+            'description' => _x('Grupo com borda vermelha', 'Descrição do padrão de bloco', 'iphan_inrc'),
             'categories' => array('columns', 'iphan'),
             'content'     => '
             <!-- wp:group {"className":"is-style-column-iphan"} -->
@@ -211,8 +211,8 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/wide-section',
         array(
-            'title' => __('IPHAN sessão ampla', 'iphan-inrc'),
-            'description' => _x('Sessão com duas colunas e alinhamento amplo.', 'Descrição do padrão de blocos', 'iphan-inrc'),
+            'title' => __('IPHAN sessão ampla', 'iphan_inrc'),
+            'description' => _x('Sessão com duas colunas e alinhamento amplo.', 'Descrição do padrão de blocos', 'iphan_inrc'),
             'categories' => array('columns', 'iphan'),
             'content' => '
                 <!-- wp:cover {"overlayColor":"branco","align":"full"} -->
@@ -259,8 +259,8 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/full-section',
         array(
-            'title' => __('IPHAN sessão completa', 'iphan-inrc'),
-            'description' => _x('Sessão com duas colunas e alinhamento completo.', 'Descrição do padrão de blocos', 'iphan-inrc'),
+            'title' => __('IPHAN sessão completa', 'iphan_inrc'),
+            'description' => _x('Sessão com duas colunas e alinhamento completo.', 'Descrição do padrão de blocos', 'iphan_inrc'),
             'categories' => array('columns', 'iphan'),
             'content' => '
                 <!-- wp:heading {"align":"wide","className":"is-style-title-iphan-underscore"} -->
