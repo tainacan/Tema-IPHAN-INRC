@@ -28,7 +28,7 @@ function iphan_inrc_customize_register($wp_customize)
 
     /* REDES SOCIAIS E RODAPÉ */
     $wp_customize->add_section('social_section', array(
-        'title'       => __('Redes Sociais', 'Tema_IPHAN_INRC'),
+        'title'       => __('Redes Sociais', 'Tema_IPHAN_INRC', 'iphan-inrc'),
     ));
 
     /* Link Twitter */
@@ -39,7 +39,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_1', array(
-        'label' => 'Link do Twitter',
+        'label' => 'Link do Twitter', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_1',
@@ -54,7 +54,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_2', array(
-        'label' => 'Link do Facebook',
+        'label' => 'Link do Facebook', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_2',
@@ -69,7 +69,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_3', array(
-        'label' => 'Link do Instagram',
+        'label' => 'Link do Instagram', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_3',
@@ -84,7 +84,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_4', array(
-        'label' => 'Link da nova rede social 1',
+        'label' => 'Link da nova rede social 1', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_4',
@@ -97,7 +97,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('alt_4', array(
-        'label' => 'Nome da nova rede social 1',
+        'label' => 'Nome da nova rede social 1', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_alt_4',
@@ -105,7 +105,7 @@ function iphan_inrc_customize_register($wp_customize)
     ));
     $wp_customize->add_setting('iphan_logo_4', array());
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_4', array(
-        'label' => 'Upload de imagem da nova rede social 1',
+        'label' => 'Upload de imagem da nova rede social 1', 'iphan-inrc',
         'priority' => 1,
         'section' => 'social_section',
         'settings' => 'iphan_logo_4',
@@ -123,7 +123,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_5', array(
-        'label' => 'Link da nova rede social 2',
+        'label' => 'Link da nova rede social 2', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_5',
@@ -134,7 +134,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('alt_5', array(
-        'label' => 'Nome da nova rede social 2',
+        'label' => 'Nome da nova rede social 2', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_alt_5',
@@ -144,7 +144,7 @@ function iphan_inrc_customize_register($wp_customize)
         'default' => '',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_5', array(
-        'label' => 'Upload de imagem da nova rede social 2',
+        'label' => 'Upload de imagem da nova rede social 2', 'iphan-inrc',
         'priority' => 9,
         'section' => 'social_section',
         'settings' => 'iphan_logo_5',
@@ -161,7 +161,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_6', array(
-        'label' => 'Link da nova rede social 3',
+        'label' => 'Link da nova rede social 3', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_link_6',
@@ -172,7 +172,7 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('alt_6', array(
-        'label' => 'Nome da nova rede social 3',
+        'label' => 'Nome da nova rede social 3', 'iphan-inrc',
         'type' => 'text',
         'section' => 'social_section',
         'settings' => 'setting_alt_6',
@@ -182,7 +182,7 @@ function iphan_inrc_customize_register($wp_customize)
         'default' => '',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'iphan_logo_control_6', array(
-        'label' => 'Upload de imagem da nova rede social 3',
+        'label' => 'Upload de imagem da nova rede social 3', 'iphan-inrc',
         'priority' => 12,
         'section' => 'social_section',
         'settings' => 'iphan_logo_6',
@@ -195,7 +195,7 @@ function iphan_inrc_customize_register($wp_customize)
 
     /* LINK DO BANNER */
     $wp_customize->add_section('link_banner', array(
-        'title'       => __('Banner', 'Tema_IPHAN_INRC'),
+        'title'       => __('Banner', 'Tema_IPHAN_INRC', 'iphan-inrc'),
     ));
 
     /* Link Banner 1 */
@@ -206,18 +206,18 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_1', array(
-        'label' => 'Link do lado Esquerdo',
+        'label' => 'Link do lado Esquerdo', 'iphan-inrc',
         'type' => 'text',
         'section' => 'link_banner',
         'settings' => 'setting_link_banner_1',
         'priority' => 1,
     ));
     $wp_customize->add_setting('label_banner_1', array(
-        'default' => 'explore o repositório',
+        'default' => 'explore o repositório', 'iphan-inrc',
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('text_banner_1', array(
-        'label' => 'Label button 1',
+        'label' => 'Label button 1', 'iphan-inrc',
         'type' => 'text',
         'section' => 'link_banner',
         'settings' => 'label_banner_1',
@@ -232,18 +232,18 @@ function iphan_inrc_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
     $wp_customize->add_control('link_2', array(
-        'label' => 'Link do lado Direito',
+        'label' => 'Link do lado Direito', 'iphan-inrc',
         'type' => 'text',
         'section' => 'link_banner',
         'settings' => 'setting_link_banner_2',
         'priority' => 3,
     ));
     $wp_customize->add_setting('label_banner_2', array(
-        'default' => 'acesse o repositório completo',
+        'default' => 'acesse o repositório completo', 'iphan-inrc',
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('text_banner_2', array(
-        'label' => 'Label button 2',
+        'label' => 'Label button 2', 'iphan-inrc',
         'type' => 'text',
         'section' => 'link_banner',
         'settings' => 'label_banner_2',
