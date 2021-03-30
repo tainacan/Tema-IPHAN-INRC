@@ -211,7 +211,7 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/wide-section',
         array(
-            'title' => __('IPHAN sessão ampla'),
+            'title' => __('IPHAN sessão ampla', 'iphan-inrc'),
             'description' => _x('Sessão com duas colunas e alinhamento amplo.', 'Descrição do padrão de blocos', 'iphan-inrc'),
             'categories' => array('columns', 'iphan'),
             'content' => '
@@ -259,7 +259,7 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/full-section',
         array(
-            'title' => __('IPHAN sessão completa'),
+            'title' => __('IPHAN sessão completa', 'iphan-inrc'),
             'description' => _x('Sessão com duas colunas e alinhamento completo.', 'Descrição do padrão de blocos', 'iphan-inrc'),
             'categories' => array('columns', 'iphan'),
             'content' => '
@@ -293,7 +293,7 @@ function iphan_block_pattern()
                 <!-- /wp:paragraph -->
 
                 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-                <figure class="wp-block-image size-large"><img src="' . $template_images_directory . 'iphan_column_example_2.png" alt="Homem idoso trabalhando com pintura" /><figcaption>Legenda fotografia</figcaption></figure>
+                <figure class="wp-blsock-image size-large"><img src="' . $template_images_directory . 'iphan_column_example_2.png" alt="Homem idoso trabalhando com pintura" /><figcaption>Legenda fotografia</figcaption></figure>
                 <!-- /wp:image --></div></div>
                 <!-- /wp:group -->
             '
