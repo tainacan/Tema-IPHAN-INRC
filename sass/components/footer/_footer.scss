@@ -139,10 +139,6 @@
     }
 }
 
-.active,
-.collapsible:hover {
-}
-
 .content {
     @media only screen and (max-width: $screen__sm) {
         max-height: 0;
