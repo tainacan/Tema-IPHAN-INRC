@@ -19,10 +19,8 @@ function comment_fields_custom_order($fields)
 	return $fields;
 }
 add_filter('comment_form_fields', 'comment_fields_custom_order');
-
 function remove_comment_time($date)
 {
-
 	if (!is_admin()) {
 		return;
 	} else {

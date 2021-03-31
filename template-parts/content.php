@@ -9,23 +9,21 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php iphan_inrc_post_thumbnail(); ?>
 		<?php the_title('<h1 class="entry-title is-style-title-iphan-underscore">', '</h1>'); ?>
 		<?php if (is_single()) : ?>
 			<div class="meta-data-single-post">
-				<span class="">Escrito por: <?php echo get_the_author() ?></span>
+				<span class=""><?php _e('Escrito por:', 'iphan_inrc');
+								echo get_the_author() ?></span>
 				<span class=""><?php echo get_the_date("j") . " de <span class='meta-data-month'>" . get_the_date("F") . "</span>, " . get_the_date("Y") ?></span>
 			</div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php
 		the_content();
-
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__('Pages:', 'iphan-inrc'),
@@ -34,7 +32,6 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
 	<?php if (get_edit_post_link()) : ?>
 		<footer class="entry-footer">
 			<?php
