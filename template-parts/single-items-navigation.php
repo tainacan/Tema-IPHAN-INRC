@@ -1,5 +1,4 @@
 <?php
-
 $adjacent_links = [
     'next' => '',
     'previous' => ''
