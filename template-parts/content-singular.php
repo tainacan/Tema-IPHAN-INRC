@@ -22,17 +22,16 @@
 					<a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="Share on Facebook"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-facebook"></i></a>
 				</div>
 				<div class="meta-data-single-post">
-					<span class="">Escrito por: <?php echo get_the_author() ?></span>
+					<span class=""><?php _e('Escrito por:', 'iphan_inrc');
+									echo get_the_author() ?></span>
 					<span class=""><?php echo get_the_date("j") . " de <span class='meta-data-month'>" . get_the_date("F") . "</span>, " . get_the_date("Y") ?></span>
 				</div>
 			</div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php
 		the_content();
-
 		if (is_front_page()) : ?>
 			<div class="banner-or alignfull">
 				<div class="banner-footer col-md-7" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/fundoOr1.png')">
