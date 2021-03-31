@@ -24,8 +24,9 @@ wp.blocks.registerBlockType(
                 props.setAttributes({ title: newTitle });
             }
             function onClickSummary() {
-                var element = document.getElementsByClassName('span-summary')
-                var irmao = element[0].nextSibling.childNodes[0].childNodes[0]
+                console.log(jQuery(this)[0].siblings().child.child)
+                var element = jQuery(this)
+                var irmao = element[0].nextSibling
                 if (!jQuery(irmao).hasClass('collapse')) {
                     jQuery(irmao).addClass('collapse')
                     jQuery(irmao).addClass('show')
@@ -36,7 +37,6 @@ wp.blocks.registerBlockType(
                     jQuery('.span-summary').addClass('tainacan-icon-minus')
                 } else {
                     jQuery('.collapse').addClass('show')
-                    jQuery('.span-summary').addClass('rotate-icon')
                     jQuery('.span-summary').removeClass('tainacan-icon-minus')
                     jQuery('.span-summary').addClass('tainacan-icon-plus')
                 }
@@ -76,7 +76,7 @@ wp.blocks.registerBlockType(
                     {
                         tagName: 'summary',
                         value: props.attributes.title,
-                        className: 'tainacan-icon tainacan-icon-showmore'
+                        className: 'tainacan-icon tainacan-icon-plus',
                     }
                 ),
                 el(
@@ -90,3 +90,23 @@ wp.blocks.registerBlockType(
         },
     }
 );
+
+jQuery(document).on('click', function () {
+    var element = document.getElementsByTagName('summary')
+    var irmao = element[0].nextSibling
+    console.log(irmao)
+    if (!jQuery(irmao).hasClass('collapse')) {
+        jQuery(irmao).addClass('collapse')
+        jQuery(irmao).addClass('show')
+    }
+    if (jQuery('.collapse').hasClass('show')) {
+        jQuery('.collapse').removeClass('show')
+        jQuery('.span-summary').removeClass('tainacan-icon-plus')
+        jQuery('.span-summary').addClass('tainacan-icon-minus')
+    } else {
+        jQuery('.collapse').addClass('show')
+        jQuery('.span-summary').addClass('rotate-icon')
+        jQuery('.span-summary').removeClass('tainacan-icon-minus')
+        jQuery('.span-summary').addClass('tainacan-icon-plus')
+    }
+})
