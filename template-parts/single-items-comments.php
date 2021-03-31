@@ -1,4 +1,4 @@
-<?php if ( comments_open() || get_comments_number() ) : ?>
+<?php if (comments_open() || get_comments_number()) : ?>
     <div class="mt-3">
         <div class="row">
             <!-- Container -->
