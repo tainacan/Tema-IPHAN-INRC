@@ -24,22 +24,22 @@ wp.blocks.registerBlockType(
                 props.setAttributes({ title: newTitle });
             }
             function onClickSummary() {
-                console.log(jQuery(this)[0].siblings().child.child)
-                var element = jQuery(this)
-                var irmao = element[0].nextSibling
-                if (!jQuery(irmao).hasClass('collapse')) {
-                    jQuery(irmao).addClass('collapse')
-                    jQuery(irmao).addClass('show')
-                }
-                if (jQuery('.collapse').hasClass('show')) {
-                    jQuery('.collapse').removeClass('show')
-                    jQuery('.span-summary').removeClass('tainacan-icon-plus')
-                    jQuery('.span-summary').addClass('tainacan-icon-minus')
-                } else {
-                    jQuery('.collapse').addClass('show')
-                    jQuery('.span-summary').removeClass('tainacan-icon-minus')
-                    jQuery('.span-summary').addClass('tainacan-icon-plus')
-                }
+                jQuery('span.span-summary').on('click', function () {
+                    ;
+                    if (!jQuery(this).siblings().hasClass('collapse')) {
+                        jQuery(this).siblings().addClass('collapse')
+                        jQuery(this).siblings().addClass('show')
+                    }
+                    if (jQuery(this).siblings().hasClass('show')) {
+                        jQuery(this).siblings().removeClass('show')
+                        jQuery(this).removeClass('tainacan-icon-plus')
+                        jQuery(this).addClass('tainacan-icon-minus')
+                    } else {
+                        jQuery(this).siblings().addClass('show')
+                        jQuery(this).removeClass('tainacan-icon-minus')
+                        jQuery(this).addClass('tainacan-icon-plus')
+                    }
+                })
             }
             var blockProps = useBlockProps();
             return el(
