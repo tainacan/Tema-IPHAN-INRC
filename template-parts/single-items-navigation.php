@@ -4,18 +4,13 @@ $adjacent_links = [
     'next' => '',
     'previous' => ''
 ];
-
 $adjacent_links = tainacan_get_adjacent_item_links();
-
 $previous = $adjacent_links['previous'];
 $next = $adjacent_links['next'];
 ?>
 <?php if ($previous !== '' || $next !== '') : ?>
-
     <hr class="alignfull" style="height: 3px; background: #58020b;" />
-
     <div class="site-container tainacan-single-item-navigation">
-
         <?php if (get_theme_mod('tainacan_single_item_navigation_section_label', __('Continue explorando', 'iphan_inrc')) != '') : ?>
             <div class="is-style-title-iphan-underscore title-page">
                 <h1 id="single-item-navigation-label">
@@ -23,7 +18,6 @@ $next = $adjacent_links['next'];
                 </h1>
             </div>
         <?php endif; ?>
-
         <div id="item-single-navigation" class="related-posts">
             <div class="related-post">
                 <?php echo $previous; ?>
@@ -40,6 +34,5 @@ $next = $adjacent_links['next'];
                 <?php echo $next; ?>
             </div>
         </div>
-
     </div>
 <?php endif; ?>
