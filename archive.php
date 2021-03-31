@@ -16,7 +16,8 @@ custom_breadcrumbs();
 	<?php if (have_posts()) : ?>
 		<header class="page-header">
 			<div class="cabecalho-ultimas-noticias">
-				<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias">Listagem da categoria "<?php echo single_cat_title('', false) ?>"</h1>
+				<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias"><?php _e('Listagem da categoria "', 'iphan_inrc');
+																						echo single_cat_title('', false) ?>"</h1>
 				<form role="search" method="get" class="search-form col-md-4" action="<?php echo esc_url(home_url('/')) ?>">
 					<input class="has-icon-right search-bar search-bar__home col-md-12" name="s" type="search" placeholder="Busque por notícias" value="<?php echo get_search_query() ?> ">
 					<i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-search"></i>
