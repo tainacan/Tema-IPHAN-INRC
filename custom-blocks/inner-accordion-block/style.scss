@@ -1,6 +1,6 @@
 //remove o ícone do summary do opera e chrome
 details.wp-block-iphan-inner-accordion-custom > summary::-webkit-details-marker {
-/*     display: none; */
+    /*     display: none; */
 }
 
 //remove o ícone do summary do mozila
@@ -8,15 +8,13 @@ details.wp-block-iphan-inner-accordion-custom > summary {
     list-style-type: none;
 }
 
-details.wp-block-iphan-inner-accordion-custom > summary::before {
+details.wp-block-iphan-inner-accordion-custom > summary::before,
+span.tainacan-icon-plus:before,
+span.tainacan-icon-minus:before {
     float: right;
     font-weight: bold;
-}
-details[open].wp-block-iphan-inner-accordion-custom summary.tainacan-icon-showmore:before {
-    transform: rotate(180deg);
 }
 
 summary {
     font-weight: bold;
 }
-

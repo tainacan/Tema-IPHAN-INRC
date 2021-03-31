@@ -12325,9 +12325,18 @@ li > article {
 	margin-right: 20%;
 }
 
-.icons-footer > a {
-	margin-right: 1%;
-	margin-left: 1%;
+@media screen and (min-width: 1024px) {
+	.icons-footer > a {
+		margin-right: 1%;
+		margin-left: 1%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.icons-footer > a {
+		margin-right: 0%;
+		margin-left: 0%;
+	}
 }
 
 .icons-footer > a:last-child {
@@ -14005,13 +14014,11 @@ details.wp-block-iphan-inner-accordion-custom > summary {
 	list-style-type: none;
 }
 
-details.wp-block-iphan-inner-accordion-custom > summary::before {
+details.wp-block-iphan-inner-accordion-custom > summary::before,
+span.tainacan-icon-plus:before,
+span.tainacan-icon-minus:before {
 	float: right;
 	font-weight: bold;
-}
-
-details[open].wp-block-iphan-inner-accordion-custom summary.tainacan-icon-showmore:before {
-	transform: rotate(180deg);
 }
 
 summary {

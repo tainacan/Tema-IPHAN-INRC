@@ -23,27 +23,28 @@
 	<div class="site-container">
 		<div class="site-info">
 			<?php $template_directory = get_template_directory_uri(); ?>
-			<img src="<?php echo $template_directory; ?>/assets/images/iphan_logo.png" />
-
+			<div>
+				<img src="<?php echo $template_directory; ?>/assets/images/iphan_logo.png" />
+			</div>
 			<div class="icons-footer">
 				<?php
 				if (get_theme_mod('setting_link_1', '') !== '') {
 					echo '<a href="' . get_theme_mod('setting_link_1', '') . '?>">';
-					echo '<i size="50px" class="tainacan-icon tainacan-icon-twitter"></i>';
+					echo '<i class="tainacan-icon tainacan-icon-1-15em tainacan-icon-twitter"></i>';
 					echo '</a>';
 				}
 				?>
 				<?php
 				if (get_theme_mod('setting_link_2', '') !== '') {
 					echo '<a href="' . get_theme_mod('setting_link_2', '') . '?>">';
-					echo '<i size="50px" class="tainacan-icon tainacan-icon-facebook"></i>';
+					echo '<i class="tainacan-icon tainacan-icon-facebook"></i>';
 					echo '</a>';
 				}
 				?>
 				<?php
 				if (get_theme_mod('setting_link_3', '') !== '') {
 					echo '<a href="' . get_theme_mod('setting_link_3', '') . '?>">';
-					echo '<i size="50px" class="tainacan-icon tainacan-icon-instagram"></i>';
+					echo '<i class="tainacan-icon tainacan-icon-instagram"></i>';
 					echo '</a>';
 				} ?>
 				<?php
