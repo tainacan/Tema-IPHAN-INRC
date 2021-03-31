@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying 404 pages (not found)
  *
@@ -9,28 +10,21 @@
 
 get_header();
 get_template_part('template-parts/site-banner');
-custom_breadcrumbs(); 
+custom_breadcrumbs();
 ?>
-
 <main id="primary" class="site-main entry-content">
-
 	<article id="page-404?>" <?php post_class(); ?>>
-
 		<header class="entry-header">
-			<h1 class="entry-title is-style-title-iphan-underscore"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'iphan_inrc' ); ?></h1>
+			<h1 class="entry-title is-style-title-iphan-underscore"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'iphan_inrc'); ?></h1>
 		</header><!-- .page-header -->
-
 		<div class="entry-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'iphan_inrc' ); ?></p>
-
+			<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'iphan_inrc'); ?></p>
 			<?php
-				get_search_form();
-
-				the_widget( 'WP_Widget_Recent_Posts' );
+			get_search_form();
+			the_widget('WP_Widget_Recent_Posts');
 			?>
-
 			<div class="widget widget_categories">
-				<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'iphan_inrc' ); ?></h2>
+				<h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'iphan_inrc'); ?></h2>
 				<ul>
 					<?php
 					wp_list_categories(
@@ -45,18 +39,13 @@ custom_breadcrumbs();
 					?>
 				</ul>
 			</div><!-- .widget -->
-
 			<?php
-				/* translators: %1$s: smiley */
-				$iphan_inrc_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'iphan_inrc' ), convert_smilies( ':)' ) ) . '</p>';
-				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$iphan_inrc_archive_content" );
-
-				the_widget( 'WP_Widget_Tag_Cloud' );
+			/* translators: %1$s: smiley */
+			$iphan_inrc_archive_content = '<p>' . sprintf(esc_html__('Try looking in the monthly archives. %1$s', 'iphan_inrc'), convert_smilies(':)')) . '</p>';
+			the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$iphan_inrc_archive_content");
+			the_widget('WP_Widget_Tag_Cloud');
 			?>
-
 		</div><!-- .page-content -->
-		
 	</article>
 </main><!-- #main -->
-
 <?php get_footer(); ?>
