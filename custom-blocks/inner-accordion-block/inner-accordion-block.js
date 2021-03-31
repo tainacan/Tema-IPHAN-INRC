@@ -23,24 +23,21 @@ wp.blocks.registerBlockType(
             function updateTitle(newTitle) {
                 props.setAttributes({ title: newTitle });
             }
-            function onClickSummary() {
-                jQuery('span.span-summary').on('click', function () {
-                    ;
-                    if (!jQuery(this).siblings().hasClass('collapse')) {
-                        jQuery(this).siblings().addClass('collapse')
-                        jQuery(this).siblings().addClass('show')
-                    }
-                    if (jQuery(this).siblings().hasClass('show')) {
-                        jQuery(this).siblings().removeClass('show')
-                        jQuery(this).removeClass('tainacan-icon-plus')
-                        jQuery(this).addClass('tainacan-icon-minus')
-                    } else {
-                        jQuery(this).siblings().addClass('show')
-                        jQuery(this).removeClass('tainacan-icon-minus')
-                        jQuery(this).addClass('tainacan-icon-plus')
-                    }
-                })
-            }
+            jQuery('span').on('click', function (event) {
+                if (!jQuery(this).siblings().hasClass('collapse')) {
+                    jQuery(this).siblings().addClass('collapse')
+                    jQuery(this).siblings().addClass('show')
+                }
+                if (jQuery(this).siblings().hasClass('show')) {
+                    jQuery(this).siblings().removeClass('show')
+                    jQuery(this).removeClass('tainacan-icon-plus')
+                    jQuery(this).addClass('tainacan-icon-minus')
+                } else {
+                    jQuery(this).siblings().addClass('show')
+                    jQuery(this).removeClass('tainacan-icon-minus')
+                    jQuery(this).addClass('tainacan-icon-plus')
+                }
+            })
             var blockProps = useBlockProps();
             return el(
                 'div',
@@ -52,7 +49,7 @@ wp.blocks.registerBlockType(
                         tagName: 'span',
                         type: 'text',
                         onChange: updateTitle,
-                        onClick: onClickSummary,
+
                         value: title,
                         placeholder: "Insira o título",
                         className: 'tainacan-icon tainacan-icon-plus span-summary',
@@ -90,23 +87,3 @@ wp.blocks.registerBlockType(
         },
     }
 );
-
-jQuery(document).on('click', function () {
-    var element = document.getElementsByTagName('summary')
-    var irmao = element[0].nextSibling
-    console.log(irmao)
-    if (!jQuery(irmao).hasClass('collapse')) {
-        jQuery(irmao).addClass('collapse')
-        jQuery(irmao).addClass('show')
-    }
-    if (jQuery('.collapse').hasClass('show')) {
-        jQuery('.collapse').removeClass('show')
-        jQuery('.span-summary').removeClass('tainacan-icon-plus')
-        jQuery('.span-summary').addClass('tainacan-icon-minus')
-    } else {
-        jQuery('.collapse').addClass('show')
-        jQuery('.span-summary').addClass('rotate-icon')
-        jQuery('.span-summary').removeClass('tainacan-icon-minus')
-        jQuery('.span-summary').addClass('tainacan-icon-plus')
-    }
-})
