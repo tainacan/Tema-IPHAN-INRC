@@ -18,15 +18,28 @@
 		<?php if (is_front_page()) {
 		?>
 			<section>
-				<div>
+				<div class="titulo-destaques">
 					<h1 class="is-style-title-iphan-underscore">
 						<?php _e('Destaques', 'iphan_inrc') ?>
 					</h1>
 				</div>
-				<div>
-
+				<div class="linha-1-destaques">
+					<div class="col-md-8">
+					</div>
+					<div class="col-md-4">
+					</div>
 				</div>
-				<div>
+				<div class="linha-2-destaques">
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<div class="col-md-6">
+						</div>
+						<div class="col-md-6">
+						</div>
+					</div>
 				</div>
 			</section>
 		<?php
