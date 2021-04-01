@@ -17,27 +17,32 @@
 		<!-- Componente de destaques -->
 		<?php if (is_front_page()) {
 		?>
-			<section>
+			<section class="destaques">
 				<div class="titulo-destaques">
 					<h1 class="is-style-title-iphan-underscore">
 						<?php _e('Destaques', 'iphan_inrc') ?>
 					</h1>
 				</div>
 				<div class="linha-1-destaques">
-					<div class="col-md-8">
+					<div class="col-md-8 destaque-top-left fundo-vermelho">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 fundo-amarelo">
+
 					</div>
 				</div>
 				<div class="linha-2-destaques">
-					<div class="col-md-4">
+					<div class="col-md-4 fundo-verde">
+
+					</div>
+					<div class="col-md-4 fundo-preto">
+
 					</div>
 					<div class="col-md-4">
-					</div>
-					<div class="col-md-4">
-						<div class="col-md-6">
+						<div class="col-md-6 destaque-bottom-right fundo-azul">
+
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 destaque-bottom-right fundo-roxo">
+
 						</div>
 					</div>
 				</div>
