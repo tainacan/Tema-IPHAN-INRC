@@ -12969,11 +12969,12 @@ input[type="search"].search-bar__home {
 }
 
 .linha-2-destaques > div:first-child {
-	margin-right: 20px;
+	/*     margin-right: 20px; */
 }
 
 .linha-2-destaques > div:last-child {
 	margin-left: 20px;
+	padding: 0px;
 }
 
 .padding-destaques {
