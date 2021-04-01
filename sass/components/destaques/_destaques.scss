@@ -45,6 +45,11 @@
 .linha-1-destaques > div:last-child {
     margin-left: 20px;
 }
+
+.linha-2-destaques {
+    height: 700px;
+}
+
 .padding-destaques {
     padding-left: 20px;
     padding-top: 20px;
@@ -59,8 +64,4 @@
 
 .destaque-top:last-child {
     margin-left: 20px;
-}
-
-.destaque-bottom {
-    height: 700px;
 }

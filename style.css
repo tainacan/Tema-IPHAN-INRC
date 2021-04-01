@@ -12964,6 +12964,10 @@ input[type="search"].search-bar__home {
 	margin-left: 20px;
 }
 
+.linha-2-destaques {
+	height: 700px;
+}
+
 .padding-destaques {
 	padding-left: 20px;
 	padding-top: 20px;
@@ -12978,10 +12982,6 @@ input[type="search"].search-bar__home {
 
 .destaque-top:last-child {
 	margin-left: 20px;
-}
-
-.destaque-bottom {
-	height: 700px;
 }
 
 /*--------------------------------------------------------------
