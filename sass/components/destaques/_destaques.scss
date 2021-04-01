@@ -56,7 +56,11 @@
     max-height: 50%;
 }
 
-.destaque-top-left {
+.destaque-top {
     height: 550px;
     margin-bottom: 20px;
+}
+
+.destaque-top:last-child {
+    margin-left: 20px;
 }
