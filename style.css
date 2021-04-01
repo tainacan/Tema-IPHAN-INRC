@@ -12977,6 +12977,10 @@ input[type="search"].search-bar__home {
 	padding: 0px;
 }
 
+.linha-2-destaques > div:last-child > div:first-child {
+	margin-bottom: 20px;
+}
+
 .padding-destaques {
 	padding-left: 20px;
 	padding-top: 20px;
