@@ -13,6 +13,25 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php iphan_inrc_post_thumbnail(); ?>
+
+		<!-- Componente de destaques -->
+		<?php if (is_front_page()) {
+		?>
+			<section>
+				<div>
+					<h1 class="is-style-title-iphan-underscore">
+						<?php _e('Destaques', 'iphan_inrc') ?>
+					</h1>
+				</div>
+				<div>
+
+				</div>
+				<div>
+				</div>
+			</section>
+		<?php
+		}
+		?>
 		<?php the_title('<h1 class="entry-title is-style-title-iphan-underscore">', '</h1>'); ?>
 		<?php if (is_single()) : ?>
 			<div>
@@ -28,6 +47,7 @@
 				</div>
 			</div>
 		<?php endif; ?>
+
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
