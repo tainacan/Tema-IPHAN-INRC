@@ -1,35 +1,35 @@
 .fundo-preto {
     background-color: #000;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
 .fundo-azul {
     background-color: blue;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
 
 .fundo-vermelho {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     background-color: red;
 }
 
 .fundo-roxo {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     background-color: purple;
 }
 
 .fundo-amarelo {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     background-color: yellow;
 }
 
 .fundo-verde {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     background-color: green;
 }
 
@@ -38,12 +38,13 @@
     display: flex;
     flex-direction: row;
 }
-
-.desaques {
-    width: 100%;
-    height: 100%;
+.linha-1-destaques {
+    height: 550px;
+    margin-bottom: 20px;
 }
-
+.linha-1-destaques > div:last-child {
+    margin-left: 20px;
+}
 .padding-destaques {
     padding-left: 20px;
     padding-top: 20px;
@@ -56,11 +57,10 @@
     max-height: 50%;
 }
 
-.destaque-top {
-    height: 550px;
-    margin-bottom: 20px;
-}
-
 .destaque-top:last-child {
     margin-left: 20px;
+}
+
+.destaque-bottom {
+    height: 700px;
 }

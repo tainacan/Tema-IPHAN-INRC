@@ -24,13 +24,12 @@
 					</h1>
 				</div>
 				<div class="linha-1-destaques">
-					<div class="col-md-8 destaque-top fundo-vermelho">
+					<div class="col-md-8  fundo-vermelho">
 					</div>
-					<div class="col-md-4 destaque-top fundo-amarelo">
-
+					<div class="col-md-4 fundo-amarelo">
 					</div>
 				</div>
-				<div class="linha-2-destaques">
+				<div class="linha-2-destaques destaque-bottom">
 					<div class="col-md-4 fundo-verde">
 
 					</div>
