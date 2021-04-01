@@ -23,7 +23,7 @@
 						<?php _e('Destaques', 'iphan_inrc') ?>
 					</h1>
 				</div>
-				<div class="linha-1-destaques">
+				<div class="linha-1-destaques col-md-12">
 					<div class="col-md-8  fundo-vermelho">
 					</div>
 					<div class="col-md-4 fundo-amarelo">
