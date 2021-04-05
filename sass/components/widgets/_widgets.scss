@@ -422,10 +422,12 @@
     display: flex;
 }
 
-.share-button-wrapper > a > .tainacan-icon-twitter {
-    color: $color__icone-twitter;
+.share-button-wrapper > a > .tainacan-icon-twitter,
+.share-button-wrapper > a > .tainacan-icon-facebook {
+    color: $color__cinza4;
 }
 
-.share-button-wrapper > a > .tainacan-icon-facebook {
-    color: $color__icone-facebook;
+.share-button-wrapper > a > .tainacan-icon-facebook:hover,
+.share-button-wrapper > a > .tainacan-icon-twitter:hover {
+    color: $color__cinza6;
 }
