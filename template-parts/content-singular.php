@@ -19,15 +19,21 @@
 		?>
 			<section class="destaques">
 				<?php
-				$posts_array = array();
-				$count = 0;
-/* 				while (have_posts() && ($count < 6)) :
-					$posts_array[$count] = get_post();
-					$count++;
-					if ($count == 6) {
-						break;
-					}
-				endwhile; */
+				$defaults = array(
+					'numberposts'      => 6,
+					'offset'           => 0,
+					'category'         => 0,
+					'orderby'          => 'post_date',
+					'order'            => 'DESC',
+					'include'          => '',
+					'exclude'          => '',
+					'meta_key'         => '',
+					'meta_value'       => '',
+					'post_type'        => 'post',
+					'post_status'      => 'draft, publish, future',
+					'suppress_filters' => true,
+				);
+				$results = get_posts($defaults);
 				?>
 				<div class="titulo-destaques">
 					<h1 class="is-style-title-iphan-underscore">
@@ -36,43 +42,55 @@
 				</div>
 				<div class="linha-1-destaques col-md-12">
 					<div class="col-md-8  fundo-vermelho">
-						<?php
-						$posts_array[0];
-						excerpt(20);
-						?>
+						<div class="destaques-content">
+							<?php
+							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[0]) . '</h2>';
+							echo '<span>' . excerpt(20) . '</span>'
+							?>
+						</div>
 					</div>
 					<div class="col-md-4 fundo-amarelo">
-						<?php
-						$posts_array[1];
-						excerpt(20);
-						?>
+						<div class="destaques-content">
+							<?php
+							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[1]) . '</h2>';
+							echo '<span>' . excerpt(20) . '</span>'
+							?>
+						</div>
 					</div>
 				</div>
 				<div class="linha-2-destaques destaque-bottom">
 					<div class="col-md-4 fundo-verde">
-						<?php
-						$posts_array[2];
-						excerpt(20);
-						?>
+						<div class="destaques-content">
+							<?php
+							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[2]) . '</h2>';
+							echo '<span>' . excerpt(20) . '</span>'
+							?>
+						</div>
 					</div>
 					<div class="col-md-4 fundo-preto">
-						<?php
-						$posts_array[3];
-						excerpt(20);
-						?>
+						<div class="destaques-content">
+							<?php
+							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[3]) . '</h2>';
+							echo '<span>' . excerpt(20) . '</span>'
+							?>
+						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="col-md-6 destaque-bottom-right fundo-azul">
-							<?php
-							$posts_array[4];
-							excerpt(20);
-							?>
+							<div class="destaques-content">
+								<?php
+								echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[4]) . '</h2>';
+								echo '<span>' . excerpt(20) . '</span>'
+								?>
+							</div>
 						</div>
 						<div class="col-md-6 destaque-bottom-right fundo-roxo">
-							<?php
-							$posts_array[5];
-							excerpt(20);
-							?>
+							<div class="destaques-content">
+								<?php
+								echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[5]) . '</h2>';
+								echo '<span>' . excerpt(20) . '</span>'
+								?>
+							</div>
 						</div>
 					</div>
 				</div>
