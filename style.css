@@ -12971,7 +12971,13 @@ input[type="search"].search-bar__home {
 }
 
 .linha-2-destaques > div:first-child {
-	/*     margin-right: 20px; */
+	margin-right: 10px;
+	flex-basis: calc(33.3% - 10px);
+}
+
+.linha-2-destaques > div:first-child + div {
+	margin-left: 10px;
+	flex-basis: calc(33.3% - 10px);
 }
 
 .linha-2-destaques > div:last-child {

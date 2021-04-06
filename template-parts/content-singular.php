@@ -18,6 +18,17 @@
 		<?php if (is_front_page()) {
 		?>
 			<section class="destaques">
+				<?php
+				$posts_array = array();
+				$count = 0;
+/* 				while (have_posts() && ($count < 6)) :
+					$posts_array[$count] = get_post();
+					$count++;
+					if ($count == 6) {
+						break;
+					}
+				endwhile; */
+				?>
 				<div class="titulo-destaques">
 					<h1 class="is-style-title-iphan-underscore">
 						<?php _e('Destaques', 'iphan_inrc') ?>
@@ -25,23 +36,43 @@
 				</div>
 				<div class="linha-1-destaques col-md-12">
 					<div class="col-md-8  fundo-vermelho">
+						<?php
+						$posts_array[0];
+						excerpt(20);
+						?>
 					</div>
 					<div class="col-md-4 fundo-amarelo">
+						<?php
+						$posts_array[1];
+						excerpt(20);
+						?>
 					</div>
 				</div>
 				<div class="linha-2-destaques destaque-bottom">
 					<div class="col-md-4 fundo-verde">
-
+						<?php
+						$posts_array[2];
+						excerpt(20);
+						?>
 					</div>
 					<div class="col-md-4 fundo-preto">
-
+						<?php
+						$posts_array[3];
+						excerpt(20);
+						?>
 					</div>
 					<div class="col-md-4">
 						<div class="col-md-6 destaque-bottom-right fundo-azul">
-
+							<?php
+							$posts_array[4];
+							excerpt(20);
+							?>
 						</div>
 						<div class="col-md-6 destaque-bottom-right fundo-roxo">
-
+							<?php
+							$posts_array[5];
+							excerpt(20);
+							?>
 						</div>
 					</div>
 				</div>
