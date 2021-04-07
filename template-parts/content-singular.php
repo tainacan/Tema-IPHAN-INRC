@@ -48,57 +48,57 @@
 					</h1>
 				</div>
 				<div class="linha-1-destaques col-md-12">
-					<div class="col-md-8" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
+					<a class="col-md-8" href="<?php echo $results[0]->guid ?>" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
 							echo '<span class="destaques-title">' . get_the_title($results[0]) . '</span>';
 							?>
 						</div>
-					</div>
-					<div class="col-md-4">
+					</a>
+					<a class="col-md-4" href="<?php echo $results[1]->guid ?>">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[1]->ID)[0]->cat_name . '</span>';
 							echo '<span class="destaques-title">' . get_the_title($results[1]) . '</span>';
 							?>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="linha-2-destaques destaque-bottom">
-					<div class="col-md-4">
+					<a class="col-md-4" href="<?php echo $results[2]->guid ?>">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[2]->ID)[0]->cat_name . '</span>';
 							echo '<span class="destaques-title">' . get_the_title($results[2]) . '</span>';
 							?>
 						</div>
-					</div>
-					<div class="col-md-4">
+					</a>
+					<a class="col-md-4" href="<?php echo $results[3]->guid ?>">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[3]->ID)[0]->cat_name . '</span>';
 							echo '<span class="destaques-title">' . get_the_title($results[3]) . '</span>';
 							?>
 						</div>
-					</div>
+					</a>
 					<div class="col-md-4">
-						<div class="col-md-6 destaque-bottom-right">
+						<a class="col-md-6 destaque-bottom-right" href="<?php echo $results[4]->guid ?>">
 							<div class="destaques-content">
 								<?php
 								echo '<span class="destaques-cat">' . get_the_category($results[4]->ID)[0]->cat_name . '</span>';
 								echo '<span class="destaques-title">' . get_the_title($results[4]) . '</span>';
 								?>
 							</div>
-						</div>
-						<div class="col-md-6 destaque-bottom-right">
+						</a>
+						<a class="col-md-6 destaque-bottom-right" href="<?php echo $results[5]->guid ?>">
 							<div class="destaques-content">
 								<?php
 								echo '<span class="destaques-cat">' . get_the_category($results[5]->ID)[0]->cat_name . '</span>';
 								echo '<span class="destaques-title">' . get_the_title($results[5]) . '</span>';
 								?>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</section>
