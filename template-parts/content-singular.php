@@ -41,7 +41,6 @@
 					'suppress_filters' => true,
 				);
 				$results = get_posts($defaults);
-				var_dump($results[0]);
 				?>
 				<div class="titulo-destaques">
 					<h1 class="is-style-title-iphan-underscore">
@@ -49,7 +48,7 @@
 					</h1>
 				</div>
 				<div class="linha-1-destaques col-md-12">
-					<div class="col-md-8" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . ' ");"' ?>>
+					<div class="col-md-8" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
