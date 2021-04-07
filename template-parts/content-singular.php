@@ -41,7 +41,7 @@
 					</h1>
 				</div>
 				<div class="linha-1-destaques col-md-12">
-					<div class="col-md-8  fundo-vermelho" <?php echo 'style="background-image: url("' . get_the_post_thumbnail(the_id($results[0])) . ' ");"' ?>>
+					<div class="col-md-8" <?php echo 'style="background-image: url("' . get_the_post_thumbnail(the_id($results[0])) . ' ");"' ?>>
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
@@ -49,7 +49,7 @@
 							?>
 						</div>
 					</div>
-					<div class="col-md-4 fundo-amarelo">
+					<div class="col-md-4">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[1]->ID)[0]->cat_name . '</span>';
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 				<div class="linha-2-destaques destaque-bottom">
-					<div class="col-md-4 fundo-verde">
+					<div class="col-md-4">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[2]->ID)[0]->cat_name . '</span>';
@@ -67,7 +67,7 @@
 							?>
 						</div>
 					</div>
-					<div class="col-md-4 fundo-preto">
+					<div class="col-md-4">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[3]->ID)[0]->cat_name . '</span>';
@@ -76,7 +76,7 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="col-md-6 destaque-bottom-right fundo-azul">
+						<div class="col-md-6 destaque-bottom-right">
 							<div class="destaques-content">
 								<?php
 								echo '<span class="destaques-cat">' . get_the_category($results[4]->ID)[0]->cat_name . '</span>';
@@ -84,7 +84,7 @@
 								?>
 							</div>
 						</div>
-						<div class="col-md-6 destaque-bottom-right fundo-roxo">
+						<div class="col-md-6 destaque-bottom-right">
 							<div class="destaques-content">
 								<?php
 								echo '<span class="destaques-cat">' . get_the_category($results[5]->ID)[0]->cat_name . '</span>';
