@@ -13051,6 +13051,7 @@ input[type="search"].search-bar__home {
 	color: #e5a923;
 	font-size: 1rem;
 	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 .destaques-title {
@@ -13059,8 +13060,12 @@ input[type="search"].search-bar__home {
 	font-weight: bold;
 }
 
-.destaques-content > span::after {
+.destaques-cat,
+.destaques-title {
 	background-color: rgba(0, 0, 0, 0.7);
+	margin-right: auto;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 /*--------------------------------------------------------------
