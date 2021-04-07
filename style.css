@@ -12967,17 +12967,14 @@ input[type="search"].search-bar__home {
 .linha-1-destaques h2,
 .linha-2-destaques h2 {
 	margin-top: auto;
-	margin-left: auto;
 }
 
 .destaques-content {
 	margin-top: auto;
 	display: flex;
 	flex-direction: column;
-}
-
-.destaques-content > span {
-	text-align: end;
+	margin-left: 5px;
+	margin-bottom: 20px;
 }
 
 .linha-1-destaques {
@@ -13047,6 +13044,23 @@ input[type="search"].search-bar__home {
 
 .destaques div {
 	border-radius: 10px;
+}
+
+.destaques-cat {
+	text-transform: uppercase;
+	color: #e5a923;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.destaques-title {
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.destaques-content > span::after {
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 /*--------------------------------------------------------------

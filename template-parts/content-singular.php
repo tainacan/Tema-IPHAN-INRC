@@ -44,16 +44,16 @@
 					<div class="col-md-8  fundo-vermelho" <?php echo 'style="background-image: url("' . get_the_post_thumbnail(the_id($results[0])) . ' ");"' ?>>
 						<div class="destaques-content">
 							<?php
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_category($results[0]->ID)[0]->cat_name . '</h2>';
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[0]) . '</h2>';
+							echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
+							echo '<span class="destaques-title">' . get_the_title($results[0]) . '</span>';
 							?>
 						</div>
 					</div>
 					<div class="col-md-4 fundo-amarelo">
 						<div class="destaques-content">
 							<?php
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_category($results[1]->ID)[0]->cat_name . '</h2>';
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[1]) . '</h2>';
+							echo '<span class="destaques-cat">' . get_the_category($results[1]->ID)[0]->cat_name . '</span>';
+							echo '<span class="destaques-title">' . get_the_title($results[1]) . '</span>';
 							?>
 						</div>
 					</div>
@@ -62,16 +62,16 @@
 					<div class="col-md-4 fundo-verde">
 						<div class="destaques-content">
 							<?php
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_category($results[2]->ID)[0]->cat_name . '</h2>';
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[2]) . '</h2>';
+							echo '<span class="destaques-cat">' . get_the_category($results[2]->ID)[0]->cat_name . '</span>';
+							echo '<span class="destaques-title">' . get_the_title($results[2]) . '</span>';
 							?>
 						</div>
 					</div>
 					<div class="col-md-4 fundo-preto">
 						<div class="destaques-content">
 							<?php
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_category($results[3]->ID)[0]->cat_name . '</h2>';
-							echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[3]) . '</h2>';
+							echo '<span class="destaques-cat">' . get_the_category($results[3]->ID)[0]->cat_name . '</span>';
+							echo '<span class="destaques-title">' . get_the_title($results[3]) . '</span>';
 							?>
 						</div>
 					</div>
@@ -79,16 +79,16 @@
 						<div class="col-md-6 destaque-bottom-right fundo-azul">
 							<div class="destaques-content">
 								<?php
-								echo '<h2 class="is-style-title-iphan-underscore">' . get_the_category($results[4]->ID)[0]->cat_name . '</h2>';
-								echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[4]) . '</h2>';
+								echo '<span class="destaques-cat">' . get_the_category($results[4]->ID)[0]->cat_name . '</span>';
+								echo '<span class="destaques-title">' . get_the_title($results[4]) . '</span>';
 								?>
 							</div>
 						</div>
 						<div class="col-md-6 destaque-bottom-right fundo-roxo">
 							<div class="destaques-content">
 								<?php
-								echo '<h2 class="is-style-title-iphan-underscore">' . get_the_category($results[5]->ID)[0]->cat_name . '</h2>';
-								echo '<h2 class="is-style-title-iphan-underscore">' . get_the_title($results[5]) . '</h2>';
+								echo '<span class="destaques-cat">' . get_the_category($results[5]->ID)[0]->cat_name . '</span>';
+								echo '<span class="destaques-title">' . get_the_title($results[5]) . '</span>';
 								?>
 							</div>
 						</div>
