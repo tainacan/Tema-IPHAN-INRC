@@ -25,7 +25,15 @@
 }
 
 .linha-1-destaques {
-    height: 550px;
+    @media screen and (min-width: $screen__lg) {
+        height: 550px;
+    }
+    @media screen and (min-width: $screen__md) and (max-width: $screen__lg) {
+        height: 435px;
+    }
+    @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+        height: 325px;
+    }
     margin-bottom: 20px;
 }
 .linha-1-destaques > a:last-child {
@@ -33,7 +41,15 @@
 }
 
 .linha-2-destaques {
-    height: 700px;
+    @media screen and (min-width: $screen__lg) {
+        height: 700px;
+    }
+    @media screen and (min-width: $screen__md) and (max-width: $screen__lg) {
+        height: 550px;
+    }
+    @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+        height: 415px;
+    }
 }
 .linha-2-destaques > a:first-child {
     margin-right: 10px;

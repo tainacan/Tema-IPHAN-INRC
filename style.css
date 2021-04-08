@@ -12942,16 +12942,47 @@ input[type="search"].search-bar__home {
 }
 
 .linha-1-destaques {
-	height: 550px;
 	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1300px) {
+	.linha-1-destaques {
+		height: 550px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+	.linha-1-destaques {
+		height: 435px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.linha-1-destaques {
+		height: 325px;
+	}
 }
 
 .linha-1-destaques > a:last-child {
 	margin-left: 20px;
 }
 
-.linha-2-destaques {
-	height: 700px;
+@media screen and (min-width: 1300px) {
+	.linha-2-destaques {
+		height: 700px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+	.linha-2-destaques {
+		height: 550px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.linha-2-destaques {
+		height: 415px;
+	}
 }
 
 .linha-2-destaques > a:first-child {
