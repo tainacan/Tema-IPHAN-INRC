@@ -1,12 +1,24 @@
 .linha-1-destaques,
 .linha-2-destaques {
     display: flex;
-    flex-direction: row;
+    @media screen and (min-width: $screen__sm) {
+        flex-direction: row;
+    }
+    @media screen and (max-width: $screen__sm) {
+        flex-direction: column;
+        padding: 0px;
+    }
 }
 
 .linha-1-destaques > a,
 .linha-2-destaques > a {
     display: flex;
+    @media screen and (max-width: $screen__sm) {
+        height: 300px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0px;
+    }
 }
 
 .linha-1-destaques span,
@@ -37,7 +49,9 @@
     margin-bottom: 20px;
 }
 .linha-1-destaques > a:last-child {
-    margin-left: 20px;
+    @media screen and (min-width: $screen__md) {
+        margin-left: 20px;
+    }
 }
 
 .linha-2-destaques {
@@ -56,8 +70,10 @@
     flex-basis: calc(33.3% - 10px);
 }
 .linha-2-destaques > a:first-child + a {
-    margin-left: 10px;
-    flex-basis: calc(33.3% - 10px);
+    @media screen and (min-width: $screen__sm) {
+        margin-left: 10px;
+        flex-basis: calc(33.3% - 10px);
+    }
 }
 .linha-2-destaques > a:last-child {
     margin-left: 20px;
@@ -92,6 +108,13 @@
     max-height: 50%;
 }
 
+.destaque-bottom > a {
+    @media screen and (max-width: $screen__sm) {
+        height: 300px;
+        min-height: 300px;
+    }
+}
+
 .destaque-top:last-child {
     margin-left: 20px;
 }
@@ -124,4 +147,16 @@
     margin-right: auto;
     padding-left: 3px;
     padding-right: 3px;
+}
+
+.is-mobile {
+    @media screen and (max-width: $screen__sm) {
+        display: none;
+    }
+}
+
+section.destaques {
+    @media screen and (max-width: $screen__sm) {
+        max-width: 100%;
+    }
 }
