@@ -13201,6 +13201,11 @@ input[type="search"].search-bar__home {
 	margin-left: 10px;
 }
 
+.div-destaques-noticias > div > a {
+	margin-top: auto;
+	display: flex;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
