@@ -13181,6 +13181,10 @@ input[type="search"].search-bar__home {
 	min-height: 100% !important;
 }
 
+.div-destaques-noticias > :is(div:first-child, div:last-child) > a:first-child {
+	margin-bottom: 20px;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
