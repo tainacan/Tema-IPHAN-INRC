@@ -204,6 +204,7 @@ section.destaques {
 .div-destaques-noticias > div > a {
     width: 100%;
     min-width: 100%;
+    border-radius: 10px;
 }
 
 .div-destaques-noticias > div {
@@ -220,4 +221,9 @@ section.destaques {
 .destaques-noticias > div,
 .div-destaques-noticias > div {
     padding: 0px;
+}
+
+.destaques-noticias-mid {
+    height: 100%;
+    min-height: 100% !important;
 }

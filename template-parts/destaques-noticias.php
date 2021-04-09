@@ -48,7 +48,7 @@
             </a>
         </div>
         <div class="col-md-3">
-            <a class="col-sm-12 col-md-8 fundo-amarelo" href="<?php echo get_post_permalink($results[0]->ID) ?>" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
+            <a class="col-sm-12 col-md-8 destaques-noticias-mid fundo-amarelo" href="<?php echo get_post_permalink($results[0]->ID) ?>" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
                 <div class="destaques-content">
                     <?php
                     echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
