@@ -18,9 +18,8 @@ get_template_part('template-parts/site-banner');
 custom_breadcrumbs();
 ?>
 <main id="primary" class="site-main site-container">
-
-	<?php if (have_posts()) : ?>
-
+	<?php get_template_part('template-parts/destaques-noticias');
+	if (have_posts()) : ?>
 		<header class="page-header">
 			<div class="cabecalho-ultimas-noticias">
 				<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias"><?php _e('Últimas Notícias', 'iphan_inrc') ?></h1>

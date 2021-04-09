@@ -1,3 +1,23 @@
+.fundo-amarelo {
+    background-color: yellow;
+}
+
+.fundo-vermelho {
+    background-color: red;
+}
+
+.fundo-azul {
+    background-color: blue;
+}
+
+.fundo-verde {
+    background-color: green;
+}
+
+.fundo-roxo {
+    background-color: purple;
+}
+
 .linha-1-destaques,
 .linha-2-destaques {
     display: flex;
@@ -159,4 +179,14 @@ section.destaques {
     @media screen and (max-width: $screen__sm) {
         max-width: 100%;
     }
+}
+
+.destaques-noticias {
+    @media screen and (min-width: $screen__sm) {
+        margin-bottom: 150px;
+    }
+}
+.div-destaques-noticias {
+    display: flex;
+    flex-direction: row;
 }

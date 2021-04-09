@@ -13,7 +13,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php iphan_inrc_post_thumbnail(); ?>
-
 		<!-- Componente de destaques -->
 		<?php if (is_front_page()) {
 			get_template_part('template-parts/destaques-home');
