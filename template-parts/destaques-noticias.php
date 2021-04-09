@@ -57,7 +57,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <a class="col-sm-12 col-md-8 fundo-amarelo" href="<?php echo get_post_permalink($results[0]->ID) ?>" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
                 <div class="destaques-content">
                     <?php
