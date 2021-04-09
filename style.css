@@ -13185,6 +13185,22 @@ input[type="search"].search-bar__home {
 	margin-bottom: 20px;
 }
 
+.div-destaques-noticias > div:first-child {
+	flex-basis: calc(100% - 10px);
+	margin-right: 10px;
+}
+
+.div-destaques-noticias > div:last-child {
+	flex-basis: calc(100% - 10px);
+	margin-left: 10px;
+}
+
+.div-destaques-noticias > :not(div:first-child):not(div:last-child) {
+	flex-basis: calc(100% - 10px);
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
