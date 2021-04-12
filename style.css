@@ -12915,26 +12915,6 @@ input[type="search"].search-bar__home {
 
 /* excerpt
 --------------------------------------------- */
-.fundo-amarelo {
-	background-color: yellow;
-}
-
-.fundo-vermelho {
-	background-color: red;
-}
-
-.fundo-azul {
-	background-color: blue;
-}
-
-.fundo-verde {
-	background-color: green;
-}
-
-.fundo-roxo {
-	background-color: purple;
-}
-
 .linha-1-destaques,
 .linha-2-destaques {
 	display: flex;
@@ -12969,6 +12949,10 @@ input[type="search"].search-bar__home {
 		max-width: 100%;
 		padding: 0px;
 	}
+}
+
+.div-destaques-noticias > div > a {
+	background-size: cover;
 }
 
 .linha-1-destaques span,
