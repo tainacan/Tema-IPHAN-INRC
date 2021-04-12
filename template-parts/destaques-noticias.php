@@ -51,8 +51,8 @@
             <a class="col-sm-12 col-md-12 destaques-noticias-mid fundo-amarelo" href="<?php echo get_post_permalink($results[0]->ID) ?>" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
                 <div class="destaques-content">
                     <?php
-                    echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
-                    echo '<span class="destaques-title">' . get_the_title($results[0]) . '</span>';
+                    echo '<span class="destaques-cat">' . get_the_category($results[2]->ID)[0]->cat_name . '</span>';
+                    echo '<span class="destaques-title">' . get_the_title($results[2]) . '</span>';
                     ?>
                 </div>
             </a>
@@ -61,16 +61,16 @@
             <a class="col-sm-12 col-md-12 fundo-amarelo" href="<?php echo get_post_permalink($results[0]->ID) ?>" <?php echo 'style="background-image: url("' . get_the_post_thumbnail_url($results[0]->ID) . '");"' ?>>
                 <div class="destaques-content">
                     <?php
-                    echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
-                    echo '<span class="destaques-title">' . get_the_title($results[0]) . '</span>';
+                    echo '<span class="destaques-cat">' . get_the_category($results[3]->ID)[0]->cat_name . '</span>';
+                    echo '<span class="destaques-title">' . get_the_title($results[3]) . '</span>';
                     ?>
                 </div>
             </a>
             <a class="col-sm-12 col-md-12 fundo-vermelho" href="<?php echo get_post_permalink($results[1]->ID) ?>">
                 <div class="destaques-content">
                     <?php
-                    echo '<span class="destaques-cat">' . get_the_category($results[1]->ID)[0]->cat_name . '</span>';
-                    echo '<span class="destaques-title">' . get_the_title($results[1]) . '</span>';
+                    echo '<span class="destaques-cat">' . get_the_category($results[4]->ID)[0]->cat_name . '</span>';
+                    echo '<span class="destaques-title">' . get_the_title($results[4]) . '</span>';
                     ?>
                 </div>
             </a>
