@@ -32,6 +32,7 @@
 
 .linha-1-destaques > a,
 .linha-2-destaques > a {
+    background-size: cover;
     display: flex;
     @media screen and (max-width: $screen__sm) {
         height: 300px;

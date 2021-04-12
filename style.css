@@ -12957,6 +12957,7 @@ input[type="search"].search-bar__home {
 
 .linha-1-destaques > a,
 .linha-2-destaques > a {
+	background-size: cover;
 	display: flex;
 }
 

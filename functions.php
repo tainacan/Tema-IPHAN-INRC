@@ -180,6 +180,8 @@ function iphan_inrc_scripts()
 	//Equeue our custom comments
 	wp_enqueue_script('iphan_inrc', get_template_directory_uri() . '/js/comments.js', array('jquery'), IPHAN_INRC_VERSION, true);
 
+	wp_enqueue_script('iphan_inrc-carousels', get_template_directory_uri() . '/js/carousel.js', array('jquery'), IPHAN_INRC_VERSION, true);
+
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
