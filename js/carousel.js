@@ -1,5 +1,3 @@
-/* import { Swiper } from '../assets/swiper-bundle.esm.browser.min.js' */
-
 jQuery(document).on('ready', function () {
     const swiper = new Swiper('.swiper-container', {
         // Optional parameters
