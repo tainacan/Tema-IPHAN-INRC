@@ -13103,7 +13103,7 @@ input[type="search"].search-bar__home {
 	padding-right: 3px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 	.is-mobile {
 		display: none;
 	}
@@ -13194,6 +13194,12 @@ input[type="search"].search-bar__home {
 .swiper-container {
 	width: 600px;
 	height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+	.is-desktop {
+		display: none;
+	}
 }
 
 /*--------------------------------------------------------------

@@ -155,7 +155,7 @@
 }
 
 .is-mobile {
-    @media screen and (max-width: $screen__sm) {
+    @media screen and (min-width: $screen__sm) {
         display: none;
     }
 }
@@ -240,4 +240,10 @@ section.destaques {
 .swiper-container {
     width: 600px;
     height: 300px;
-  }
+}
+
+.is-desktop {
+    @media screen and (max-width: $screen__sm) {
+        display: none;
+    }
+}
