@@ -182,6 +182,11 @@ function iphan_inrc_scripts()
 
 	wp_enqueue_script('iphan_inrc-carousels', get_template_directory_uri() . '/js/carousel.js', array('jquery'), IPHAN_INRC_VERSION, true);
 
+	//register e enqueue swiper
+	wp_register_script('swiper',  get_template_directory_uri() . '/assets/swiper-bundle.js', array('jquery'), IPHAN_INRC_VERSION, true);
+	wp_enqueue_script('swiper');
+
+
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
