@@ -13124,6 +13124,12 @@ input[type="search"].search-bar__home {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.is-mobile {
+		padding-left: 20px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	section.destaques {
 		max-width: 100%;

@@ -169,6 +169,9 @@
     @media screen and (max-width: $screen__sm) {
         display: none;
     }
+    @media screen and (min-width: $screen__sm) {
+        padding-left: 20px;
+    }
 }
 
 section.destaques {
