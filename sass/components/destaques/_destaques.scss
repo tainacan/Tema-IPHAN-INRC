@@ -79,7 +79,7 @@
 .linha-2-destaques > a:first-child + a {
     @media screen and (min-width: $screen__sm) {
         margin-left: 10px;
-        flex-basis: calc(33.3% - 10px);
+        flex-basis: calc(33.3% - 19px);
     }
 }
 .linha-2-destaques > a:last-child {

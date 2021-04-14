@@ -13027,7 +13027,7 @@ input[type="search"].search-bar__home {
 @media screen and (min-width: 768px) {
 	.linha-2-destaques > a:first-child + a {
 		margin-left: 10px;
-		flex-basis: calc(33.3% - 10px);
+		flex-basis: calc(33.3% - 19px);
 	}
 }
 
