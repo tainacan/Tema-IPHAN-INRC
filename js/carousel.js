@@ -20,7 +20,4 @@ jQuery(document).on('ready', function () {
             el: '.swiper-scrollbar',
         },
     });
-
-    console.log(swiper);
-    console.log("Entrei no carousel");
 })
