@@ -13256,6 +13256,11 @@ section.destaques-noticias {
 	left: 50px !important;
 }
 
+:is(a.swiper-slide),
+:is(.is-desktop) a {
+	background-color: #58020b;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

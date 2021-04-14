@@ -300,3 +300,8 @@ section.destaques-noticias {
 .navigation-destaques-swiper > .swiper-button-next {
     left: 50px !important;
 }
+
+:is(a.swiper-slide),
+:is(.is-desktop) a {
+    background-color: $color__vermelho1;
+}
