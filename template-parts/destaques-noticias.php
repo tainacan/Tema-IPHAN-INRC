@@ -120,8 +120,8 @@
             </a>
         </div>
         <div class="is-mobile navigation-destaques-swiper">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
+            <div class="swiper-button-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
         </div>
     </div>
 </section>

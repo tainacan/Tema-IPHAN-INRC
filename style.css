@@ -13218,6 +13218,26 @@ input[type="search"].search-bar__home {
 	padding: 0px;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	display: none;
+}
+
+:is(.swiper-button-prev, .swiper-button-next) > i {
+	color: #58020b;
+	border: 1px solid #58020b;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+:is(.swiper-button-prev, .swiper-button-next):hover > i {
+	color: #ffffff;
+	border: 1px solid #58020b;
+	background-color: #58020b;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
