@@ -238,8 +238,8 @@ section.destaques {
 }
 
 .swiper-container {
-    width: 600px;
     height: 300px;
+    margin-bottom: 50px;
 }
 
 .is-desktop {
@@ -259,6 +259,6 @@ section.destaques {
     display: flex;
 }
 
-.swiper-container {
-    margin-bottom: 50px;
+.swiper-wrapper {
+    padding: 0px;
 }

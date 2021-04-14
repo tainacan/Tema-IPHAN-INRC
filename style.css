@@ -13192,8 +13192,8 @@ input[type="search"].search-bar__home {
 }
 
 .swiper-container {
-	width: 600px;
 	height: 300px;
+	margin-bottom: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -13213,8 +13213,8 @@ input[type="search"].search-bar__home {
 	display: flex;
 }
 
-.swiper-container {
-	margin-bottom: 50px;
+.swiper-wrapper {
+	padding: 0px;
 }
 
 /*--------------------------------------------------------------
