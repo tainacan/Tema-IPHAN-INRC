@@ -72,7 +72,7 @@
                     ?>
                 </div>
             </a>
-            <a class="is-mobile col-md-6 destaque-bottom-right" href="<?php echo get_post_permalink($results[5]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[5]->ID) ?>')">
+            <a class="col-md-6 destaque-bottom-right" href="<?php echo get_post_permalink($results[5]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[5]->ID) ?>')">
                 <div class="destaques-content">
                     <?php
                     echo '<span class="destaques-cat">' . get_the_category($results[5]->ID)[0]->cat_name . '</span>';
