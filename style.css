@@ -13211,6 +13211,7 @@ input[type="search"].search-bar__home {
 .swiper-wrapper > a.swiper-slide {
 	padding-left: 0px;
 	display: flex;
+	background-size: cover;
 }
 
 .swiper-wrapper {
