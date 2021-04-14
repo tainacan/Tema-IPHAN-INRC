@@ -76,7 +76,7 @@
             </a>
         </div>
     </div>
-    <div class="is-mobile swiper-container col-sm-12">
+    <div class="is-mobile-noticias swiper-container col-sm-12">
         <div class="swiper-wrapper col-sm-12">
             <a class="col-sm-12 col-md-12 swiper-slide" href="<?php echo get_post_permalink($results[0]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[0]->ID) ?>')">
                 <div class="destaques-content">
@@ -120,7 +120,7 @@
             </a>
         </div>
     </div>
-    <div class="is-mobile navigation-destaques-swiper">
+    <div class="is-mobile-noticias navigation-destaques-swiper">
         <div class="swiper-button-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
         <div class="swiper-button-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
     </div>

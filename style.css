@@ -13127,6 +13127,13 @@ input[type="search"].search-bar__home {
 @media screen and (min-width: 768px) {
 	.is-mobile {
 		padding-left: 20px;
+		padding-right: 5px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.is-mobile-noticias {
+		display: none;
 	}
 }
 

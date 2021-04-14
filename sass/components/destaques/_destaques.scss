@@ -171,6 +171,13 @@
     }
     @media screen and (min-width: $screen__sm) {
         padding-left: 20px;
+        padding-right: 5px;
+    }
+}
+
+.is-mobile-noticias {
+    @media screen and (min-width: $screen__sm) {
+        display: none;
     }
 }
 
