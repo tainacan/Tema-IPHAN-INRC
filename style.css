@@ -10655,6 +10655,7 @@ textarea {
 .cabecalho-ultimas-noticias {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 150px;
 }
 
 /* Navigation
@@ -13224,6 +13225,10 @@ input[type="search"].search-bar__home {
 	display: none;
 }
 
+:is(.swiper-button-prev, .swiper-button-next) {
+	top: 100% !important;
+}
+
 :is(.swiper-button-prev, .swiper-button-next) > i {
 	color: #58020b;
 	border: 1px solid #58020b;
@@ -13237,6 +13242,18 @@ input[type="search"].search-bar__home {
 	background-color: #58020b;
 	padding-left: 4px;
 	padding-right: 4px;
+}
+
+section.destaques-noticias {
+	margin-bottom: 50px;
+}
+
+.navigation-destaques-swiper > .swiper-button-prev {
+	left: 15px !important;
+}
+
+.navigation-destaques-swiper > .swiper-button-next {
+	left: 50px !important;
 }
 
 /*--------------------------------------------------------------
