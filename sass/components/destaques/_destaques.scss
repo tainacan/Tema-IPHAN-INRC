@@ -247,3 +247,18 @@ section.destaques {
         display: none;
     }
 }
+
+.titulo-destaques {
+    @media screen and (max-width: $screen__sm) {
+        margin-top: 50px;
+    }
+}
+
+.swiper-wrapper > a.swiper-slide {
+    padding-left: 0px;
+    display: flex;
+}
+
+.swiper-container {
+    margin-bottom: 50px;
+}

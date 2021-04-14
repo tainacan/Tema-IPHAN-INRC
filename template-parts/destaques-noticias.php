@@ -95,8 +95,7 @@
                 </div>
             </a>
         </div>
-        <div class="is-mobile">
-            <div class="swiper-pagination "></div>
+        <div class="is-mobile navigation-destaques-swiper">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
