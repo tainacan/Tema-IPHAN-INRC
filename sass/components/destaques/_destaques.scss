@@ -95,12 +95,21 @@
 }
 .linha-2-destaques > div:last-child > a {
     display: flex;
-    height: 345px;
+    height: 340px;
 }
 
 .linha-2-destaques > div:last-child > a:last-child {
     margin-top: 10px;
     flex-basis: calc(50% - 10px);
+}
+.linha-2-destaques > div:last-child > a:first-child {
+    margin-bottom: 20px;
+    flex-basis: calc(50% - 10px);
+}
+:is(.linha-1-destaques, .linha-2-destaques) :is(a):not(:last-child) {
+    @media screen and (max-width: $screen__sm) {
+        margin-bottom: 20px;
+    }
 }
 
 .padding-destaques {
