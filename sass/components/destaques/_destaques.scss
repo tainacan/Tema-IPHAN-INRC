@@ -14,6 +14,7 @@
 .linha-2-destaques > a {
     background-size: cover;
     display: flex;
+    background-position: center;
     @media screen and (max-width: $screen__sm) {
         height: 300px;
         width: 100%;
@@ -24,6 +25,7 @@
 
 .div-destaques-noticias > div > a {
     background-size: cover;
+    background-position: center;
 }
 
 .linha-1-destaques span,
@@ -279,6 +281,7 @@ section.destaques {
     padding-left: 0px;
     display: flex;
     background-size: cover;
+    background-position: center;
     border-radius: 4px;
 }
 

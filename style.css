@@ -12940,6 +12940,7 @@ input[type="search"].search-bar__home {
 .linha-2-destaques > a {
 	background-size: cover;
 	display: flex;
+	background-position: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -12954,6 +12955,7 @@ input[type="search"].search-bar__home {
 
 .div-destaques-noticias > div > a {
 	background-size: cover;
+	background-position: center;
 }
 
 .linha-1-destaques span,
@@ -13240,6 +13242,7 @@ input[type="search"].search-bar__home {
 	padding-left: 0px;
 	display: flex;
 	background-size: cover;
+	background-position: center;
 	border-radius: 4px;
 }
 
