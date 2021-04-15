@@ -27,12 +27,10 @@ custom_breadcrumbs();
 				'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'iphan_inrc') . '</span> <span class="nav-title">%title</span>',
 			)
 		);
-
 		// If comments are open or we have at least one comment, load up the comment template.
 		if (comments_open() || get_comments_number()) :
 			comments_template();
 		endif;
-
 	endwhile; // End of the loop.
 	?>
 </main><!-- #main -->

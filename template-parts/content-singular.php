@@ -71,7 +71,13 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
+	<hr class="hr-posts-relacionados">
+	</hr>
+	<div class="posts-relacionados entry-content col-md-12">
+		<h1 class="is-style-title-iphan-underscore">relacionados</h1>
+		<div>
+		</div>
+	</div>
 	<?php if (get_edit_post_link()) : ?>
 		<footer class="entry-footer">
 			<?php

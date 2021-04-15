@@ -13291,6 +13291,15 @@ section.destaques-noticias {
 	background-color: #58020b;
 }
 
+/* excerpt
+--------------------------------------------- */
+.hr-posts-relacionados {
+	background-color: #58020b;
+	padding: 0.5px;
+	margin-top: 150px;
+	margin-bottom: 70px;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
