@@ -39,3 +39,8 @@
     position: relative;
     margin-bottom: 150px !important;
 }
+
+.swiper-container > .swiper-wrapper > a.swiper-slide {
+    background-color: $color__vermelho1;
+    border-radius: 4px;
+}

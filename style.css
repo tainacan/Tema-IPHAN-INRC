@@ -13345,6 +13345,11 @@ section.destaques-noticias {
 	margin-bottom: 150px !important;
 }
 
+.swiper-container > .swiper-wrapper > a.swiper-slide {
+	background-color: #58020b;
+	border-radius: 4px;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
