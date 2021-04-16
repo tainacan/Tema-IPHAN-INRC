@@ -103,7 +103,7 @@
 			<h1 class="is-style-title-iphan-underscore">relacionados</h1>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<a class="col-sm-4 col-md-4 swiper-slide" href="<?php echo get_post_permalink($results[0]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[0]->ID) ?>')">
+					<a class="swiper-slide" href="<?php echo get_post_permalink($results[0]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[0]->ID) ?>')">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[0]->ID)[0]->cat_name . '</span>';
@@ -111,7 +111,7 @@
 							?>
 						</div>
 					</a>
-					<a class="col-sm-4 col-md-4 swiper-slide" href="<?php echo get_post_permalink($results[1]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[1]->ID) ?>')">
+					<a class="swiper-slide" href="<?php echo get_post_permalink($results[1]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[1]->ID) ?>')">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[1]->ID)[0]->cat_name . '</span>';
@@ -119,7 +119,7 @@
 							?>
 						</div>
 					</a>
-					<a class="col-sm-4 col-md-4 swiper-slide" href="<?php echo get_post_permalink($results[2]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[2]->ID) ?>')">
+					<a class="swiper-slide" href="<?php echo get_post_permalink($results[2]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[2]->ID) ?>')">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[2]->ID)[0]->cat_name . '</span>';
@@ -127,7 +127,7 @@
 							?>
 						</div>
 					</a>
-					<a class="col-sm-4 col-md-4 swiper-slide" href="<?php echo get_post_permalink($results[0]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[3]->ID) ?>')">
+					<a class="swiper-slide" href="<?php echo get_post_permalink($results[0]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[3]->ID) ?>')">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[3]->ID)[0]->cat_name . '</span>';
@@ -135,7 +135,7 @@
 							?>
 						</div>
 					</a>
-					<a class="col-sm-4 col-md-4 swiper-slide" href="<?php echo get_post_permalink($results[4]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[4]->ID) ?>')">
+					<a class="swiper-slide" href="<?php echo get_post_permalink($results[4]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[4]->ID) ?>')">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[4]->ID)[4]->cat_name . '</span>';
@@ -143,7 +143,7 @@
 							?>
 						</div>
 					</a>
-					<a class="col-sm-4 col-md-4 swiper-slide" href="<?php echo get_post_permalink($results[5]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[5]->ID) ?>')">
+					<a class="swiper-slide" href="<?php echo get_post_permalink($results[5]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[5]->ID) ?>')">
 						<div class="destaques-content">
 							<?php
 							echo '<span class="destaques-cat">' . get_the_category($results[5]->ID)[0]->cat_name . '</span>';
