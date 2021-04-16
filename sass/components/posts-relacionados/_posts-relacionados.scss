@@ -4,3 +4,26 @@
     margin-top: 150px;
     margin-bottom: 70px;
 }
+
+.swiper-container-relacionados > .swiper-wrapper > a {
+    @media screen and (min-width: $screen__lg) {
+        height: 295px;
+    }
+    @media screen and (min-width: $screen__md) {
+        height: 230px;
+    }
+    @media screen and (min-width: $screen__sm) {
+        height: 285px;
+    }
+    @media screen and (min-width: $screen__xs) {
+        height: 225px;
+    }
+}
+
+.navigation-posts-relacionados {
+    top: 40px;
+}
+
+.swiper-wrapper > a {
+    display: flex;
+}

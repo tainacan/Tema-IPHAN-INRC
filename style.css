@@ -13300,6 +13300,38 @@ section.destaques-noticias {
 	margin-bottom: 70px;
 }
 
+@media screen and (min-width: 1300px) {
+	.swiper-container-relacionados > .swiper-wrapper > a {
+		height: 295px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.swiper-container-relacionados > .swiper-wrapper > a {
+		height: 230px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.swiper-container-relacionados > .swiper-wrapper > a {
+		height: 285px;
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.swiper-container-relacionados > .swiper-wrapper > a {
+		height: 225px;
+	}
+}
+
+.navigation-posts-relacionados {
+	top: 40px;
+}
+
+.swiper-wrapper > a {
+	display: flex;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

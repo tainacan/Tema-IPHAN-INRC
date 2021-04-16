@@ -10,13 +10,13 @@ jQuery(document).on('ready', function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
     });
 })
+
 jQuery(document).on('ready', function () {
-    const swiper = new Swiper('.swiper-container-relacionados', {
+    const swiperRelacionados = new Swiper('.swiper-container-relacionados', {
         // Default parameters
-        slidesPerView: 1,
+        slidesPerView: 3,
         spaceBetween: 10,
         direction: 'horizontal',
         loop: false,
@@ -39,4 +39,3 @@ jQuery(document).on('ready', function () {
             }
         }
     })
-})

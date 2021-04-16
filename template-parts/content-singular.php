@@ -152,6 +152,10 @@
 						</div>
 					</a>
 				</div>
+				<div class="col-md-12 navigation-posts-relacionados navigation-destaques-swiper">
+					<div class="swiper-button-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
+					<div class="swiper-button-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
+				</div>
 			</div>
 		</div>
 	<?php
