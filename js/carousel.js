@@ -14,7 +14,7 @@ jQuery(document).on('ready', function () {
 })
 
 jQuery(document).on('ready', function () {
-    const swiperRelacionados = new Swiper('.swiper-container-relacionados', {
+    const swiperRelacionados = new Swiper('.swiper-container', {
         // Default parameters
         slidesPerView: 3,
         spaceBetween: 10,

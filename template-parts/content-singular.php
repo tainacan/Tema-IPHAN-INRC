@@ -101,7 +101,7 @@
 		?>
 		<div class="posts-relacionados entry-content col-md-12">
 			<h1 class="is-style-title-iphan-underscore">relacionados</h1>
-			<div class="swiper-container-relacionados">
+			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<a class="col-sm-4 col-md-4" href="<?php echo get_post_permalink($results[0]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[0]->ID) ?>')">
 						<div class="destaques-content">
@@ -152,6 +152,8 @@
 						</div>
 					</a>
 				</div>
+			</div>
+			<div class="container-navigation-relacionados">
 				<div class="col-md-12 navigation-posts-relacionados navigation-destaques-swiper">
 					<div class="swiper-button-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
 					<div class="swiper-button-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
