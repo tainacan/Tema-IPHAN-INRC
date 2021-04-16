@@ -27,3 +27,10 @@
 .swiper-wrapper > a {
     display: flex;
 }
+
+.swiper-container-relacionados > .navigation-posts-relacionados > .swiper-button-prev {
+    left: 0px;
+}
+.swiper-container-relacionados > .navigation-posts-relacionados > .swiper-button-next {
+    left: 40px;
+}

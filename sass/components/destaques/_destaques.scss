@@ -317,11 +317,11 @@ section.destaques-noticias {
     margin-bottom: 50px;
 }
 
-.navigation-destaques-swiper > .swiper-button-prev {
+:is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
     left: 15px !important;
 }
 
-.navigation-destaques-swiper > .swiper-button-next {
+:is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-next {
     left: 50px !important;
 }
 
