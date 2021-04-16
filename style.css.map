@@ -129,7 +129,7 @@
 		"sass/components/search-bar/_search-bar.scss",
 		"sass/components/banner-home-footer/_banner-home-footer.scss",
 		"sass/components/destaques/_destaques.scss",
-		"sass/components/posts-relacionados/posts-relacionados.scss",
+		"sass/components/posts-relacionados/_posts-relacionados.scss",
 		"sass/plugins/jetpack/_infinite-scroll.scss",
 		"sass/plugins/tainacan/_single-items.scss",
 		"sass/plugins/tainacan/_archives.scss",
