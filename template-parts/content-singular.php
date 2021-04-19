@@ -27,8 +27,10 @@
 					<a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="Share on Facebook"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-facebook"></i></a>
 				</div>
 				<div class="meta-data-single-post">
-					<span class=""><?php _e('Escrito por:', 'iphan_inrc');
-									echo get_the_author() ?></span>
+					<span class="meta-post-author">
+						<b> <?php _e('Escrito por:', 'iphan_inrc'); ?> </b>
+						<?php echo get_the_author() ?>
+					</span>
 					<span class=""><?php echo get_the_date("j") . " de <span class='meta-data-month'>" . get_the_date("F") . "</span>, " . get_the_date("Y") ?></span>
 				</div>
 			</div>
