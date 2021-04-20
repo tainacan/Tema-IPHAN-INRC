@@ -170,3 +170,7 @@
 .icons-footer > a:last-child {
     margin-right: 0%;
 }
+
+.icons-footer > :not(a:last-child) > :is(i, img) {
+    margin-right: 12px;
+}
