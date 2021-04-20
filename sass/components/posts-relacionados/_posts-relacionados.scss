@@ -44,3 +44,18 @@
     background-color: $color__vermelho1;
     border-radius: 4px;
 }
+
+.posts-relacionados {
+    @media screen and (min-width: $screen__md) {
+        margin-left: 22%;
+        margin-right: 22%;
+    }
+    @media screen and (max-width: $screen__sm) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    @media screen and (min-width: $screen__sm) {
+        margin-left: 21%;
+        margin-right: 22%;
+    }
+}

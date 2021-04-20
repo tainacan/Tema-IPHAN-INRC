@@ -13350,6 +13350,27 @@ section.destaques-noticias {
 	border-radius: 4px;
 }
 
+@media screen and (min-width: 1024px) {
+	.posts-relacionados {
+		margin-left: 22%;
+		margin-right: 22%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.posts-relacionados {
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.posts-relacionados {
+		margin-left: 21%;
+		margin-right: 22%;
+	}
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

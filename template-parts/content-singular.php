@@ -99,7 +99,7 @@
 		);
 		$results = get_posts($defaults);
 		?>
-		<div class="posts-relacionados entry-content col-md-12">
+		<div class="posts-relacionados">
 			<h1 class="is-style-title-iphan-underscore">relacionados</h1>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
