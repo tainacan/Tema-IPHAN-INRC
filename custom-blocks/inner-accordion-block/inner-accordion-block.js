@@ -7,7 +7,7 @@ var useBlockProps = wp.blockEditor.useBlockProps;
 wp.blocks.registerBlockType(
     'iphan/inner-accordion-custom',
     {
-        title: 'Inner block',
+        title: 'Collapse',
         icon: 'arrow-down',
         category: 'text',
         attributes: {
