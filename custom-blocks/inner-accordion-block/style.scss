@@ -29,6 +29,7 @@ details.wp-block-iphan-inner-accordion-custom > summary::before {
     content: "plus";
     font-weight: bold;
     font-size: 20px;
+    color: $color__vermelho1;
 }
 details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
     display: inline-block;
@@ -44,10 +45,17 @@ details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
     content: "minus";
     font-weight: bold;
     font-size: 20px;
+    color: $color__vermelho1;
 }
 
 summary {
     font-weight: bold;
-    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $color__cinza3;
     color: $color__preto;
+}
+
+.wp-block-iphan-inner-accordion-custom > p {
+    margin-top: 35px;
+    margin-left: 25px;
 }

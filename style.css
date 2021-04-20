@@ -14500,6 +14500,7 @@ details.wp-block-iphan-inner-accordion-custom > summary::before {
 	content: "plus";
 	font-weight: bold;
 	font-size: 20px;
+	color: #58020b;
 }
 
 details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
@@ -14516,12 +14517,19 @@ details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
 	content: "minus";
 	font-weight: bold;
 	font-size: 20px;
+	color: #58020b;
 }
 
 summary {
 	font-weight: bold;
-	margin-bottom: 20px;
+	padding-bottom: 14px;
+	border-bottom: 1px solid #d9d9d9;
 	color: #000000;
+}
+
+.wp-block-iphan-inner-accordion-custom > p {
+	margin-top: 35px;
+	margin-left: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
