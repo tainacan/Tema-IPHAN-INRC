@@ -704,6 +704,7 @@ span.tainacan-icon-plus:before,
 span.tainacan-icon-minus:before {
 	float: right;
 	font-weight: bold;
+	color: #58020b;
 }
 
 summary,
@@ -711,7 +712,7 @@ span.span-summary {
 	font-weight: bold;
 	width: 100%;
 	max-height: 100px;
-	color: #58020b;
+	color: #000000;
 }
 
 .wp-block {
