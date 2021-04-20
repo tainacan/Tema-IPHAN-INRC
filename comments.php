@@ -70,7 +70,7 @@ if (post_password_required()) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if (!comments_open()) :
 		?>
-			<p class="no-comments"><?php esc_html_e('Comments are closed.', 'iphan_inrc'); ?></p>
+			<p class="no-comments"><?php esc_html_e('Comentários fechados', 'iphan_inrc'); ?></p>
 	<?php
 		endif;
 	endif; // Check for have_comments().
