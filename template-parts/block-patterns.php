@@ -259,7 +259,7 @@ function iphan_block_pattern()
     register_block_pattern(
         'iphan/full-section',
         array(
-            'title' => __('IPHAN sessão completa', 'iphan_inrc'),
+            'title' => __e('IPHAN sessão completa', 'iphan_inrc'),
             'description' => _x('Sessão com duas colunas e alinhamento completo.', 'Descrição do padrão de blocos', 'iphan_inrc'),
             'categories' => array('columns', 'iphan'),
             'content' => '
