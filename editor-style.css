@@ -693,10 +693,15 @@ details {
 	margin-left: 0px !important;
 }
 
-details > p,
 span.span-summary + p {
 	margin-top: 0px;
 	margin-bottom: 0px;
+}
+
+.block-editor-inner-blocks {
+	margin-top: 14px;
+	border-top: 1px solid #000000;
+	padding-top: 35px;
 }
 
 details > summary::before,

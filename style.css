@@ -14518,6 +14518,8 @@ details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
 
 summary {
 	font-weight: bold;
+	margin-bottom: 20px;
+	color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */
