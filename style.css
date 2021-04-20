@@ -14499,6 +14499,7 @@ details.wp-block-iphan-inner-accordion-custom > summary::before {
 	-moz-osx-font-smoothing: grayscale;
 	content: "plus";
 	font-weight: bold;
+	font-size: 20px;
 }
 
 details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
@@ -14514,6 +14515,7 @@ details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
 	-moz-osx-font-smoothing: grayscale;
 	content: "minus";
 	font-weight: bold;
+	font-size: 20px;
 }
 
 summary {
