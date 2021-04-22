@@ -179,6 +179,7 @@
 }
 
 .is-mobile-noticias {
+    position: relative;
     @media screen and (min-width: $screen__sm) {
         display: none;
     }
@@ -319,11 +320,11 @@ section.destaques-noticias {
 }
 
 :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
-    left: 15px !important;
+    left: 0px !important;
 }
 
 :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-next {
-    left: 50px !important;
+    left: 35px !important;
 }
 
 :is(a.swiper-slide),

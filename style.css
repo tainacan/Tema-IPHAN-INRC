@@ -13138,6 +13138,10 @@ input[type="search"].search-bar__home {
 	}
 }
 
+.is-mobile-noticias {
+	position: relative;
+}
+
 @media screen and (min-width: 768px) {
 	.is-mobile-noticias {
 		display: none;
@@ -13284,11 +13288,11 @@ section.destaques-noticias {
 }
 
 :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
-	left: 15px !important;
+	left: 0px !important;
 }
 
 :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-next {
-	left: 50px !important;
+	left: 35px !important;
 }
 
 :is(a.swiper-slide),
