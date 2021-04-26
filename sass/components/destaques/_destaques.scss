@@ -246,11 +246,6 @@ section.destaques {
     margin-left: 10px;
 }
 
-.div-destaques-noticias > :not(div:first-child, div:last-child) {
-    flex-basis: calc(100% - 10px);
-    margin-right: 10px;
-    margin-left: 10px;
-}
 .div-destaques-noticias > div > a {
     margin-top: auto;
     display: flex;
