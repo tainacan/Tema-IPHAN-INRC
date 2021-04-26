@@ -57,12 +57,6 @@
     }
     margin-bottom: 20px;
 }
-.linha-1-destaques > a:last-child {
-    @media screen and (min-width: $screen__md) {
-        margin-left: 20px;
-        flex-basis: calc(33.3% - 20px);
-    }
-}
 
 .linha-2-destaques {
     @media screen and (min-width: $screen__lg) {
@@ -333,21 +327,22 @@ section.destaques-noticias {
 }
 
 .grid-container {
+    height: 1155px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 93.75px) repeat(10, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
     gap: 20px 20px;
     grid-template-areas:
-        "display-1 display-1 display-1 display-1 display-2"
-        "display-1 display-1 display-1 display-1 display-2"
-        "display-1 display-1 display-1 display-1 display-2"
-        "display-1 display-1 display-1 display-1 display-2"
-        "display-3 display-3 display-4 display-4 display-5"
-        "display-3 display-3 display-4 display-4 display-5"
-        "display-3 display-3 display-4 display-4 display-5"
-        "display-3 display-3 display-4 display-4 display-6"
-        "display-3 display-3 display-4 display-4 display-6"
-        "display-3 display-3 display-4 display-4 display-6";
+        "display-1 display-1 display-1 display-1 display-2 display-2"
+        "display-1 display-1 display-1 display-1 display-2 display-2"
+        "display-1 display-1 display-1 display-1 display-2 display-2"
+        "display-1 display-1 display-1 display-1 display-2 display-2"
+        "display-3 display-3 display-4 display-4 display-5 display-5"
+        "display-3 display-3 display-4 display-4 display-5 display-5"
+        "display-3 display-3 display-4 display-4 display-5 display-5"
+        "display-3 display-3 display-4 display-4 display-6 display-6"
+        "display-3 display-3 display-4 display-4 display-6 display-6"
+        "display-3 display-3 display-4 display-4 display-6 display-6";
 }
 
 .display-1 {
