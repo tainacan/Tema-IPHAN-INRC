@@ -1,28 +1,32 @@
 <hr class="hr-posts-relacionados">
 </hr>
 <?php
-$defaults = array(
-    'numberposts'      => 5,
-    'offset'           => 0,
-    'category'         => 0,
-    'orderby'          => 'post_date',
-    'order'            => 'DESC',
-    'include'          => '',
-    'exclude'          => '',
-    'meta_key'         => '',
-    'meta_query' => array(
+$args = array(
+    'post_type' => 'post',
+    'tax_query' => array(
+        'relation' => 'OR',
         array(
-            'key'     => '_thumbnail_id',
-            'value'   => '',
-            'compare' => '!=',
-        )
+            'taxonomy' => 'category',
+            'field'    => 'slug',
+            'terms'    => array('quotes'),
+        ),
+        array(
+            'relation' => 'AND',
+            array(
+                'taxonomy' => 'post_format',
+                'field'    => 'slug',
+                'terms'    => array('post-format-quote'),
+            ),
+            array(
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => array('wisdom'),
+            ),
+        ),
     ),
-    'meta_value'       => '',
-    'post_type'        => 'post',
-    'post_status'      => 'draft, publish, future',
-    'suppress_filters' => true,
 );
-$results = get_posts($defaults);
+$query = new WP_Query($args);
+$results = get_posts($query);
 ?>
 <div class="posts-relacionados">
     <h1 class="is-style-title-iphan-underscore">relacionados</h1>
