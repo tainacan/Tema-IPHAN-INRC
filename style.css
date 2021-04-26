@@ -13331,7 +13331,7 @@ section.destaques-noticias {
 	display: flex;
 }
 
-:is(.grid-container-noticias > a) {
+:is(.grid-container-noticias, .grid-container) > a {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
