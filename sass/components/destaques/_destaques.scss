@@ -374,6 +374,11 @@ section.destaques-noticias {
 .grid-container-noticias > a {
     display: flex;
 }
+:is(.grid-container-noticias > a) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .grid-container-noticias {
     display: grid;
