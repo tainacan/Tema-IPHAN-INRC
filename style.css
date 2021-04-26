@@ -13294,7 +13294,8 @@ section.destaques-noticias {
 }
 
 .grid-container {
-	height: 1155px;
+	margin-bottom: 150px;
+	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
