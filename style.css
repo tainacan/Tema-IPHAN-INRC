@@ -13300,6 +13300,44 @@ section.destaques-noticias {
 	background-color: #58020b;
 }
 
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 93.75px) repeat(10, 1fr);
+	gap: 20px 20px;
+	grid-template-areas: "display-1 display-1 display-1 display-1 display-2" "display-1 display-1 display-1 display-1 display-2" "display-1 display-1 display-1 display-1 display-2" "display-1 display-1 display-1 display-1 display-2" "display-3 display-3 display-4 display-4 display-5" "display-3 display-3 display-4 display-4 display-5" "display-3 display-3 display-4 display-4 display-5" "display-3 display-3 display-4 display-4 display-6" "display-3 display-3 display-4 display-4 display-6" "display-3 display-3 display-4 display-4 display-6";
+}
+
+.display-1 {
+	grid-area: display-1;
+	height: 435px;
+}
+
+.display-2 {
+	grid-area: display-2;
+	height: 435px;
+}
+
+.display-3 {
+	grid-area: display-3;
+	height: 550px;
+}
+
+.display-4 {
+	grid-area: display-4;
+	height: 550px;
+}
+
+.display-5 {
+	grid-area: display-5;
+	height: 267px;
+}
+
+.display-6 {
+	grid-area: display-6;
+	height: 267px;
+}
+
 /* excerpt
 --------------------------------------------- */
 .hr-posts-relacionados {
