@@ -13333,7 +13333,7 @@ section.destaques-noticias {
 
 .grid-container-noticias {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
 	grid-template-rows: repeat(6, calc(590px / 6));
 	gap: 20px 20px;
 	grid-template-areas: "display-1-noticias display-1-noticias display-1-noticias display-3-noticias display-4-noticias display-4-noticias" "display-1-noticias display-1-noticias display-1-noticias display-3-noticias display-4-noticias display-4-noticias" "display-2-noticias display-2-noticias display-2-noticias display-3-noticias display-5-noticias display-5-noticias" "display-2-noticias display-2-noticias display-2-noticias display-3-noticias display-5-noticias display-5-noticias" "display-2-noticias display-2-noticias display-2-noticias display-3-noticias display-5-noticias display-5-noticias" "display-2-noticias display-2-noticias display-2-noticias display-3-noticias display-5-noticias display-5-noticias" ". . . . . ." ". . . . . ." ". . . . . ." ". . . . . .";
