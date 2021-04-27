@@ -32,7 +32,7 @@
 			);
 
 		elseif (is_search()) : ?>
-			<p><?php esc_html_e('Desculpe, nenhum conteúdo foi encontrado. Por favor tente uma pesquisa diferente', 'iphan_inrc'); ?></p>
+			<p><?php esc_html_e('Desculpe, nenhum conteúdo foi encontrado. Por favor, tente uma pesquisa diferente', 'iphan_inrc'); ?></p>
 		<?php else : ?>
 			<p><?php esc_html_e('Parece que não conseguimos encontrar o que você pesquisou. Talvez pesquisando você encontre.', 'iphan_inrc'); ?></p>
 		<?php endif; ?>
