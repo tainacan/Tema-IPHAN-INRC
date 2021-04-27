@@ -11,7 +11,7 @@
 ?>
 <section class="no-results not-found site-content entry-content">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e('Nothing Found', 'iphan_inrc'); ?></h1>
+		<h1 class="page-title"><?php esc_html_e('conteúdo não encontrado', 'iphan_inrc'); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">

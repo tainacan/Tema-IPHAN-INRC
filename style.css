@@ -13467,6 +13467,10 @@ section.destaques-noticias {
 	background-color: #fff;
 }
 
+.not-found h1 {
+	text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
