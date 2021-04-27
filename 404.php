@@ -18,7 +18,7 @@ custom_breadcrumbs();
 			<h1 class="entry-title is-style-title-iphan-underscore"><?php esc_html_e('página não encontrada', 'iphan_inrc'); ?></h1>
 		</header><!-- .page-header -->
 		<div class="entry-content">
-			<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'iphan_inrc'); ?></p>
+			<p><?php esc_html_e('Gostaria de pesquisar outro conteúdo?', 'iphan_inrc'); ?></p>
 			<?php
 			get_search_form();
 			the_widget('WP_Widget_Recent_Posts');
