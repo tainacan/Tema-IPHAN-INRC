@@ -13453,7 +13453,7 @@ section.destaques-noticias {
 
 /* 404
 --------------------------------------------- */
-.widget_recent_entries > h2 {
+#page-404 h2 {
 	text-transform: uppercase;
 }
 
