@@ -13457,6 +13457,16 @@ section.destaques-noticias {
 	text-transform: uppercase;
 }
 
+#page-404 .widget_archive > select {
+	padding-bottom: 1%;
+	text-transform: uppercase;
+	border-radius: 6px;
+	padding-top: 1%;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

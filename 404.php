@@ -45,7 +45,7 @@ custom_breadcrumbs();
 			</div><!-- .widget -->
 			<?php
 			/* translators: %1$s: smiley */
-			$iphan_inrc_archive_content = '<p>' . sprintf(esc_html__('Try looking in the monthly archives. %1$s', 'iphan_inrc'), convert_smilies(':)')) . '</p>';
+			$iphan_inrc_archive_content = '<p>' . esc_html__('Buscar por data', 'iphan_inrc') . '</p>';
 			the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$iphan_inrc_archive_content");
 			the_widget('WP_Widget_Tag_Cloud');
 			?>
