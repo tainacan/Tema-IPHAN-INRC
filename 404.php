@@ -24,7 +24,7 @@ custom_breadcrumbs();
 			the_widget('WP_Widget_Recent_Posts');
 			?>
 			<div class="widget widget_categories">
-				<h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'iphan_inrc'); ?></h2>
+				<h2 class="widget-title"><?php esc_html_e('Listagem de Categorias', 'iphan_inrc'); ?></h2>
 				<ul>
 					<?php
 					wp_list_categories(
