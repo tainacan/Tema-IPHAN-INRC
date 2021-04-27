@@ -12,7 +12,7 @@ get_header();
 get_template_part('template-parts/site-banner');
 custom_breadcrumbs();
 ?>
-<main id="primary" class="site-main entry-content">
+<main id="primary" class="site-main col-md-12">
 	<article id="page-404?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<h1 class="entry-title is-style-title-iphan-underscore"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'iphan_inrc'); ?></h1>
