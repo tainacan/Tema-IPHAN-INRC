@@ -1,5 +1,4 @@
-.linha-1-destaques,
-.linha-2-destaques {
+.grid-container {
     display: flex;
     @media screen and (min-width: $screen__sm) {
         flex-direction: row;
@@ -10,8 +9,7 @@
     }
 }
 
-.linha-1-destaques > a,
-.linha-2-destaques > a {
+.grid-container > a {
     background-size: cover;
     display: flex;
     background-position: center;
@@ -29,10 +27,7 @@
     background-repeat: no-repeat;
 }
 
-.linha-1-destaques span,
-.linha-2-destaques span,
-.linha-1-destaques h2,
-.linha-2-destaques h2 {
+.grid-container :is(span, h2) {
     margin-top: auto;
 }
 
@@ -44,7 +39,7 @@
     margin-bottom: 20px;
 }
 
-.linha-1-destaques {
+.grid-container {
     padding-left: 0px;
     @media screen and (min-width: $screen__lg) {
         height: 550px;
@@ -56,57 +51,6 @@
         height: 325px;
     }
     margin-bottom: 20px;
-}
-
-.linha-2-destaques {
-    @media screen and (min-width: $screen__lg) {
-        height: 700px;
-    }
-    @media screen and (min-width: $screen__md) and (max-width: $screen__lg) {
-        height: 550px;
-    }
-    @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
-        height: 415px;
-    }
-}
-.linha-2-destaques > a:first-child {
-    margin-right: 10px;
-    flex-basis: calc(33.3% - 10px);
-}
-.linha-2-destaques > a:first-child + a {
-    @media screen and (min-width: $screen__sm) {
-        margin-left: 10px;
-        flex-basis: calc(33.3% - 19px);
-    }
-}
-.linha-2-destaques > a:last-child {
-    margin-left: 20px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-}
-
-.linha-2-destaques > a:last-child > a:first-child {
-    margin-bottom: 10px;
-    flex-basis: calc(50% - 10px);
-}
-.linha-2-destaques > div:last-child > a {
-    display: flex;
-    height: 340px;
-}
-
-.linha-2-destaques > div:last-child > a:last-child {
-    margin-top: 10px;
-    flex-basis: calc(50% - 10px);
-}
-.linha-2-destaques > div:last-child > a:first-child {
-    margin-bottom: 20px;
-    flex-basis: calc(50% - 10px);
-}
-:is(.linha-1-destaques, .linha-2-destaques) :is(a):not(:last-child) {
-    @media screen and (max-width: $screen__sm) {
-        margin-bottom: 20px;
-    }
 }
 
 .padding-destaques {
@@ -317,7 +261,7 @@ section.destaques-noticias {
 }
 
 :is(a.swiper-slide),
-:is(.is-desktop, .linha-1-destaques, .linha-2-destaques) a {
+:is(.is-desktop, .grid-container) a {
     background-color: $color__vermelho1;
 }
 

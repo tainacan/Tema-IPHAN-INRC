@@ -28,7 +28,7 @@
             <?php _e('Destaques', 'iphan_inrc') ?>
         </h1>
     </div>
-    <div class="linha-1-destaques grid-container col-md-12">
+    <div class="grid-container col-md-12">
         <?php
         for ($i = 0; $i < count($results); $i++) {
         ?>
