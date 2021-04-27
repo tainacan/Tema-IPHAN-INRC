@@ -40,6 +40,8 @@
 }
 
 .alinhamento-titulos-post {
-    display: flex;
-    padding-left: 15px;
+	display: flex;
+	@media screen and(min-width: $screen__sm) {
+		padding-left: 15px;
+	}
 }
