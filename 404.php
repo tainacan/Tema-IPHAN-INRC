@@ -19,8 +19,12 @@ custom_breadcrumbs();
 		</header><!-- .page-header -->
 		<div class="entry-content">
 			<p><?php esc_html_e('Gostaria de pesquisar outro conteúdo?', 'iphan_inrc'); ?></p>
+
+			<form role="search" method="get" class="search-form col-md-4" action="<?php echo esc_url(home_url('/')) ?>">
+				<input class="has-icon-right search-bar search-bar__home col-md-6" name="s" type="search" placeholder="Busque por notícias" value="<?php echo get_search_query() ?> ">
+				<i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-search col-md-4" style="right: 3%; bottom: 8px;"></i>
+			</form>
 			<?php
-			get_search_form();
 			the_widget('WP_Widget_Recent_Posts');
 			?>
 			<div class="widget widget_categories">
