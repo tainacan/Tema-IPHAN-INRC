@@ -15,7 +15,7 @@ custom_breadcrumbs();
 <main id="primary" class="site-main col-md-12">
 	<article id="page-404?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<h1 class="entry-title is-style-title-iphan-underscore"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'iphan_inrc'); ?></h1>
+			<h1 class="entry-title is-style-title-iphan-underscore"><?php esc_html_e('página não encontrada', 'iphan_inrc'); ?></h1>
 		</header><!-- .page-header -->
 		<div class="entry-content">
 			<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'iphan_inrc'); ?></p>
