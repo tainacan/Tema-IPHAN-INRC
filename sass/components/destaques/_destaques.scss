@@ -322,6 +322,7 @@ section.destaques-noticias {
 }
 
 .grid-container {
+    flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
     display: grid;
@@ -381,6 +382,7 @@ section.destaques-noticias {
 }
 
 .grid-container-noticias {
+    flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
     grid-template-rows: repeat(6, calc(590px / 6));
