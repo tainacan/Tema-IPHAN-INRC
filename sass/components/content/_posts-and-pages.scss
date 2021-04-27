@@ -32,8 +32,14 @@
 .meta-data-single-post {
 	display: flex;
 	justify-content: space-between;
+	padding-left: 15px !important;
 }
 
 .meta-data-month {
 	text-transform: capitalize;
+}
+
+.alinhamento-titulos-post {
+    display: flex;
+    padding-left: 15px;
 }

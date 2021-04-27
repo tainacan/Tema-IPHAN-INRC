@@ -17,9 +17,11 @@
 			get_template_part('template-parts/destaques-home');
 		}
 		?>
-		<?php the_title('<h1 class="entry-title is-style-title-iphan-underscore">', '</h1>'); ?>
+		<div class="entry-content alinhamento-titulos-post">
+			<?php the_title('<h1 class="col-md-10 is-style-title-iphan-underscore">', '</h1>'); ?>
+		</div>
 		<?php if (is_single()) : ?>
-			<div>
+			<div class="entry-content">
 				<div class="share-button-wrapper">
 					<?php $postUrl = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; ?>
 					<a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta('twitter'); ?>" title="Tweet this"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-twitter"></i></a>
