@@ -7,11 +7,10 @@
  *
  * @package IPHAN_INRC
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="site-container">
 		<?php iphan_inrc_post_thumbnail(); ?>
 		<!-- Componente de destaques -->
 		<?php if (is_front_page()) {
@@ -35,7 +34,6 @@
 				</div>
 			</div>
 		<?php endif; ?>
-
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
@@ -64,7 +62,6 @@
 				</div>
 			</div>
 		<?php endif;
-
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__('Pages:', 'iphan_inrc'),
