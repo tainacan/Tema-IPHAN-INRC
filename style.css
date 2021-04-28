@@ -12047,13 +12047,11 @@ li > article {
 	display: flex;
 }
 
-.share-button-wrapper > a > .tainacan-icon-twitter,
-.share-button-wrapper > a > .tainacan-icon-facebook {
+.share-button-wrapper > a > :is(.tainacan-icon-twitter, .tainacan-icon-facebook) {
 	color: #bfbfbf;
 }
 
-.share-button-wrapper > a > .tainacan-icon-facebook:hover,
-.share-button-wrapper > a > .tainacan-icon-twitter:hover {
+.share-button-wrapper > a > :is(.tainacan-icon-facebook:hover, .tainacan-icon-twitter:hover) {
 	color: #515151;
 }
 
