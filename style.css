@@ -11973,12 +11973,7 @@ li > article {
 	width: 100%;
 }
 
-.gallery-columns-3,
-.gallery-columns-4,
-.gallery-columns-5,
-.gallery-columns-6,
-.gallery-columns-7 .gallery-columns-8,
-.gallery-columns-9 {
+:is(.gallery-columns-3, .gallery-columns-4, .gallery-columns-5, .gallery-columns-6, .gallery-columns-7, .gallery-columns-8, .gallery-columns-9) {
 	max-height: 250px;
 	max-width: 100%;
 	overflow: auto;
