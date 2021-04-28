@@ -11779,8 +11779,7 @@ li > article {
 	font-weight: bold;
 }
 
-#wp-calendar tbody td:hover,
-#wp-calendar tbody a:hover {
+#wp-calendar tbody :is(td:hover, a:hover) {
 	background: #970620;
 	color: #ffffff;
 }

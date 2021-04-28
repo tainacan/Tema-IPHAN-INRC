@@ -140,8 +140,7 @@
     font-weight: bold;
 }
 
-#wp-calendar tbody td:hover,
-#wp-calendar tbody a:hover {
+#wp-calendar tbody :is(td:hover, a:hover) {
     background: $color__vermelho2;
     color: $color__branco;
 }
