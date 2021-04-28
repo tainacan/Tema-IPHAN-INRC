@@ -219,7 +219,8 @@ section.destaques-noticias {
     background-color: $color__vermelho1;
 }
 
-.grid-container {
+// destaques home inicio
+.grid-container-has-6 {
     flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
@@ -228,48 +229,137 @@ section.destaques-noticias {
     grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
     gap: 20px 20px;
     grid-template-areas:
-        "display-1 display-1 display-1 display-1 display-2 display-2"
-        "display-1 display-1 display-1 display-1 display-2 display-2"
-        "display-1 display-1 display-1 display-1 display-2 display-2"
-        "display-1 display-1 display-1 display-1 display-2 display-2"
-        "display-3 display-3 display-4 display-4 display-5 display-5"
-        "display-3 display-3 display-4 display-4 display-5 display-5"
-        "display-3 display-3 display-4 display-4 display-5 display-5"
-        "display-3 display-3 display-4 display-4 display-6 display-6"
-        "display-3 display-3 display-4 display-4 display-6 display-6"
-        "display-3 display-3 display-4 display-4 display-6 display-6";
+        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
+        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
+        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
+        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6"
+        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6"
+        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6";
 }
 
-.display-1 {
-    grid-area: display-1;
+.display-1-has-6 {
+    grid-area: display-1-has-6;
     height: 435px;
 }
 
-.display-2 {
-    grid-area: display-2;
+.display-2-has-6 {
+    grid-area: display-2-has-6;
     height: 435px;
 }
 
-.display-3 {
-    grid-area: display-3;
+.display-3-has-6 {
+    grid-area: display-3-has-6;
     height: 550px;
 }
 
-.display-4 {
-    grid-area: display-4;
+.display-4-has-6 {
+    grid-area: display-4-has-6;
     height: 550px;
 }
 
-.display-5 {
-    grid-area: display-5;
+.display-5-has-6 {
+    grid-area: display-5-has-6;
     height: 267px;
 }
 
-.display-6 {
-    grid-area: display-6;
+.display-6-has-6 {
+    grid-area: display-6-has-6;
     height: 267px;
 }
 
+.grid-container-has-5 {
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
+    gap: 20px 20px;
+    grid-template-areas:
+        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5";
+}
+
+.display-1-has-5 {
+    grid-area: display-1-has-5;
+    height: 435px;
+}
+
+.display-2-has-5 {
+    grid-area: display-2-has-5;
+    height: 435px;
+}
+
+.display-3-has-5 {
+    grid-area: display-3-has-5;
+    height: 550px;
+}
+
+.display-4-has-5 {
+    grid-area: display-4-has-5;
+    height: 550px;
+}
+
+.display-5-has-5 {
+    grid-area: display-5-has-5;
+    height: 550px;
+}
+
+.grid-container-has-4 {
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
+    gap: 20px 20px;
+    grid-template-areas:
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4";
+}
+
+.display-1-has-4 {
+    grid-area: display-1-has-4;
+    height: 435px;
+}
+
+.display-2-has-4 {
+    grid-area: display-2-has-4;
+    height: 435px;
+}
+
+.display-3-has-4 {
+    grid-area: display-3-has-4;
+    height: 550px;
+}
+
+.display-4-has-4 {
+    grid-area: display-4-has-4;
+    height: 550px;
+}
+
+
+// destaques home fim
 .grid-container-noticias > a {
     display: flex;
 }
