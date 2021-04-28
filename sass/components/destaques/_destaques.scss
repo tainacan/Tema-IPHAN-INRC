@@ -323,7 +323,7 @@ section.destaques-noticias {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
+/*     grid-template-rows: repeat(4, 117.50px) repeat(6, 52.5px); */
     gap: 20px 20px;
     grid-template-areas:
         "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
@@ -340,23 +340,61 @@ section.destaques-noticias {
 
 .display-1-has-4 {
     grid-area: display-1-has-4;
-    height: 435px;
+    height: 550px;
 }
 
 .display-2-has-4 {
     grid-area: display-2-has-4;
-    height: 435px;
+    height: 550px;
 }
 
 .display-3-has-4 {
     grid-area: display-3-has-4;
-    height: 550px;
+    height: 435px;
 }
 
 .display-4-has-4 {
     grid-area: display-4-has-4;
+    height: 435px;
+}
+
+/* .grid-container-has-3 {
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
+    gap: 20px 20px;
+    grid-template-areas:
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4";
+} */
+
+.display-1-has-3 {
+    grid-area: display-1-has-4;
+    height: 435px;
+}
+
+.display-2-has-3 {
+    grid-area: display-2-has-4;
+    height: 435px;
+}
+
+.display-3-has-3 {
+    grid-area: display-3-has-4;
     height: 550px;
 }
+
+
 
 
 // destaques home fim
