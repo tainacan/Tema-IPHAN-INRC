@@ -13102,25 +13102,6 @@ input[type="search"].search-bar__home {
 	padding: 0px;
 }
 
-.destaques-noticias-mid {
-	height: 100%;
-	min-height: 100% !important;
-}
-
-.div-destaques-noticias > :is(div:first-child, div:last-child) > a:first-child {
-	margin-bottom: 20px;
-}
-
-.div-destaques-noticias > div:first-child {
-	flex-basis: calc(100% - 10px);
-	margin-right: 10px;
-}
-
-.div-destaques-noticias > div:last-child {
-	flex-basis: calc(100% - 10px);
-	margin-left: 10px;
-}
-
 .div-destaques-noticias > div > a {
 	margin-top: auto;
 	display: flex;
