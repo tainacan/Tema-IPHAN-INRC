@@ -24,11 +24,9 @@ custom_breadcrumbs();
 				<input class="has-icon-right search-bar search-bar__home col-md-6" name="s" type="search" placeholder="Busque por notícias" value="<?php echo get_search_query() ?> ">
 				<i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-search col-md-4" style="right: 3%; bottom: 8px;"></i>
 			</form>
-			<div class="div-widget-404">
-				<?php
-				the_widget('WP_Widget_Recent_Posts');
-				?>
-			</div>
+			<?php
+			the_widget('WP_Widget_Recent_Posts');
+			?>
 			<div class="widget widget_categories">
 				<h2 class="widget-title"><?php esc_html_e('Listagem de Categorias', 'iphan_inrc'); ?></h2>
 				<div class="div-widget-404">
