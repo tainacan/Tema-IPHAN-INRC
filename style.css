@@ -13308,6 +13308,22 @@ section.destaques-noticias {
 	height: 550px;
 }
 
+.grid-container-has-1 {
+	flex-wrap: wrap;
+	margin-bottom: 150px;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	/*     grid-template-rows: repeat(4, 93.75px) repeat(6, 75px); */
+	gap: 20px 20px;
+	grid-template-areas: "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2" "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2";
+}
+
+.display-1-has-1 {
+	grid-area: display-1-has-2;
+	height: 550px;
+}
+
 .grid-container-noticias > a {
 	display: flex;
 }
