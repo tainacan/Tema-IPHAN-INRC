@@ -48,8 +48,8 @@ $results = get_posts($query);
     </div>
     <div class="container-navigation-relacionados">
         <div class="col-md-12 navigation-posts-relacionados navigation-destaques-swiper">
-            <div class="swiper-button-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
-            <div class="swiper-button-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
+            <div class="swiper-button-prev navigation-relacionados-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
+            <div class="swiper-button-next navigation-relacionados-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
         </div>
     </div>
 </div>

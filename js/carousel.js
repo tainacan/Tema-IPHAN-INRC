@@ -36,10 +36,10 @@ jQuery(document).on('ready', function () {
                 spaceBetween: 20
             }
         },
-                // Navigation arrows
-                navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        // Navigation arrows
+        navigation: {
+            nextEl: '.navigation-relacionados-next',
+            prevEl: '.navigation-relacionados-prev',
         },
     })
 })
