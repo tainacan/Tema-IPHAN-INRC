@@ -11960,8 +11960,7 @@ li > article {
 	-ms-overflow-style: none;
 }
 
-.gallery-columns-1 figure::-webkit-scrollbar,
-.gallery-columns-2 figure::-webkit-scrollbar {
+:is(.gallery-columns-1, .gallery-columns-2) figure::-webkit-scrollbar {
 	width: 0 !important;
 	display: none;
 }
