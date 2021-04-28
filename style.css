@@ -11949,8 +11949,7 @@ li > article {
 	}
 }
 
-.gallery-columns-2,
-.gallery-columns-1 {
+:is(.gallery-columns-1, .gallery-columns-2) {
 	max-height: 200px;
 	max-width: 100%;
 	overflow: auto;
