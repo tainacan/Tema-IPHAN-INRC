@@ -355,13 +355,8 @@
     display: none;
 }
 
-.gallery-columns-3 > figure,
-.gallery-columns-4 > figure,
-.gallery-columns-5 > figure,
-.gallery-columns-6 > figure,
-.gallery-columns-7 > figure,
-.gallery-columns-8 > figure,
-.gallery-columns-9 > figure {
+:is(.gallery-columns-3, .gallery-columns-4, .gallery-columns-5, .gallery-columns-6, .gallery-columns-7, .gallery-columns-8, .gallery-columns-9)
+    > figure {
     display: inline-block;
     text-align: left;
     width: 100%;
