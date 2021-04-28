@@ -13338,6 +13338,10 @@ section.destaques-noticias {
 	text-transform: uppercase;
 }
 
+.error404 .widget_categories > ul > li > a {
+	text-transform: capitalize;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
