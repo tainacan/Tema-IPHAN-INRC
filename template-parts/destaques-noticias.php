@@ -28,7 +28,7 @@
             <?php _e('Notícias', 'iphan_inrc') ?>
         </h1>
     </div>
-    <div class="div-destaques-noticias grid-container-noticias  col-md-12 is-desktop">
+    <div class="div-destaques-noticias grid-container-noticias col-md-12 is-desktop">
         <?php
         for ($i = 0; $i < count($results); $i++) {
         ?>
