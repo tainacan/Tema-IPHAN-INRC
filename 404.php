@@ -29,21 +29,19 @@ custom_breadcrumbs();
 			?>
 			<div class="widget widget_categories">
 				<h2 class="widget-title"><?php esc_html_e('Listagem de Categorias', 'iphan_inrc'); ?></h2>
-				<div class="div-widget-404">
-					<ul>
-						<?php
-						wp_list_categories(
-							array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							)
-						);
-						?>
-					</ul>
-				</div>
+				<ul>
+					<?php
+					wp_list_categories(
+						array(
+							'orderby'    => 'count',
+							'order'      => 'DESC',
+							'show_count' => 1,
+							'title_li'   => '',
+							'number'     => 10,
+						)
+					);
+					?>
+				</ul>
 			</div><!-- .widget -->
 			<?php
 			/* translators: %1$s: smiley */

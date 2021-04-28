@@ -20,12 +20,12 @@
     text-transform: capitalize;
 }
 
-.div-widget-404 {
-    column-count: 3;
-}
-
-:is(.div-widget-404) ul li {
+article#page-404 .widget ul li {
     display: flex;
     justify-content: space-between;
     margin-right: 100px;
+}
+
+article#page-404 .widget ul {
+    column-count: 3;
 }
