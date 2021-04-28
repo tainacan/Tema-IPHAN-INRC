@@ -13342,6 +13342,15 @@ section.destaques-noticias {
 	text-transform: capitalize;
 }
 
+.div-widget-404 {
+	column-count: 3;
+}
+
+:is(.div-widget-404) ul li {
+	display: flex;
+	justify-content: space-between;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
