@@ -344,13 +344,8 @@
     -ms-overflow-style: none;
 }
 
-.gallery-columns-3 figure::-webkit-scrollbar,
-.gallery-columns-4 figure::-webkit-scrollbar,
-.gallery-columns-5 figure::-webkit-scrollbar,
-.gallery-columns-6 figure::-webkit-scrollbar,
-.gallery-columns-7 figure::-webkit-scrollbar,
-.gallery-columns-8 figure::-webkit-scrollbar,
-.gallery-columns-9 figure::-webkit-scrollbar {
+:is(.gallery-columns-3, .gallery-columns-4, .gallery-columns-5, .gallery-columns-6, .gallery-columns-7, .gallery-columns-8, .gallery-columns-9)
+    figure::-webkit-scrollbar {
     width: 0 !important;
     display: none;
 }
