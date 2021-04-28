@@ -322,8 +322,7 @@
     display: none;
 }
 
-.gallery-columns-1 > figure,
-.gallery-columns-2 > figure {
+:is(.gallery-columns-1, .gallery-columns-2) > figure {
     display: inline-block;
     text-align: left;
     width: 100%;
