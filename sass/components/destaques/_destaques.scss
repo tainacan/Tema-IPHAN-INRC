@@ -498,3 +498,36 @@ section.destaques-noticias {
 .display-5-noticias-has-5 {
     grid-area: display-5-noticias-has-5;
 }
+
+.grid-container-noticias-has-4 {
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
+    grid-template-rows: repeat(6, calc(590px / 6));
+    gap: 20px 20px;
+    grid-template-areas:
+        "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
+        "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
+        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
+        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
+        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
+        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4";
+}
+:is(.display-1-noticias-has-4, .display-2-noticias-has-4, .display-3-noticias-has-4, .display-4-noticias-has-4, .display-4-noticias-has-4) {
+    border-radius: 10px;
+}
+.display-1-noticias-has-4 {
+    grid-area: display-1-noticias-has-4;
+}
+
+.display-2-noticias-has-4 {
+    grid-area: display-2-noticias-has-4;
+}
+
+.display-3-noticias-has-4 {
+    grid-area: display-3-noticias-has-4;
+}
+
+.display-4-noticias-has-4 {
+    grid-area: display-4-noticias-has-4;
+}
