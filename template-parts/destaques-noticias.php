@@ -29,7 +29,6 @@
         </h1>
     </div>
     <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php if (count($results) < 4) {
-                                                                                                var_dump(count($results));
                                                                                                 echo $i + 1;
                                                                                             } else {
                                                                                                 echo '5';
@@ -38,7 +37,6 @@
         for ($i = 0; $i < count($results) && $i < 5; $i++) {
         ?>
             <a class="display-<?php echo $i + 1 ?>-noticias-has-<?php if (count($results) < 4) {
-                                                                    var_dump(count($results));
                                                                     echo $i + 1;
                                                                 } else {
                                                                     echo 5;
