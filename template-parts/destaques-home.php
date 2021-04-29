@@ -1,7 +1,7 @@
 <section class="destaques">
     <?php
     $defaults = array(
-        'numberposts'      => 6,
+        'numberposts'      => 0,
         'offset'           => 0,
         'category'         => 0,
         'orderby'          => 'post_date',
@@ -28,11 +28,19 @@
             <?php _e('Destaques', 'iphan_inrc') ?>
         </h1>
     </div>
-    <div class="grid-container-has-<?php echo count($results) ?> col-md-12 grid-container">
+    <div class="grid-container-has-<?php if (count($results) < 5) {
+                                        echo $i + 1;
+                                    } else {
+                                        echo '6';
+                                    } ?> col-md-12 grid-container">
         <?php
-        for ($i = 0; $i < count($results); $i++) {
+        for ($i = 0; $i < count($results) && $i < 6; $i++) {
         ?>
-            <a class="display-<?php echo $i + 1 ?>-has-<?php echo count($results) ?>" href="<?php echo get_post_permalink($results[$i]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[$i]->ID) ?>')">
+            <a class="display-<?php echo $i + 1 ?>-has-<?php if (count($results) < 5) {
+                                                            echo $i + 1;
+                                                        } else {
+                                                            echo '6';
+                                                        } ?>" href="<?php echo get_post_permalink($results[$i]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[$i]->ID) ?>')">
                 <div class="destaques-content">
                     <?php
                     echo '<span class="destaques-cat">' . get_the_category($results[$i]->ID)[0]->cat_name . '</span>';
