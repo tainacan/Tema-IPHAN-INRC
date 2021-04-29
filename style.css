@@ -13332,6 +13332,7 @@ section.destaques-noticias {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	text-decoration: none;
 }
 
 .grid-container-noticias-has-5 {
