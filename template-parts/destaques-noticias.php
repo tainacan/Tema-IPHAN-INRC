@@ -1,7 +1,7 @@
 <section class="destaques-noticias">
     <?php
     $defaults = array(
-        'numberposts'      => 5,
+        'numberposts'      => 0,
         'offset'           => 0,
         'category'         => 0,
         'orderby'          => 'post_date',
@@ -28,11 +28,21 @@
             <?php _e('Notícias', 'iphan_inrc') ?>
         </h1>
     </div>
-    <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php echo count($results) ?> col-md-12 is-desktop">
+    <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php if (count($results) < 4) {
+                                                                                                var_dump(count($results));
+                                                                                                echo $i + 1;
+                                                                                            } else {
+                                                                                                echo '5';
+                                                                                            } ?> col-md-12 is-desktop">
         <?php
-        for ($i = 0; $i < count($results); $i++) {
+        for ($i = 0; $i < count($results) && $i < 5; $i++) {
         ?>
-            <a class="display-<?php echo $i + 1 ?>-noticias-has-<?php echo count($results) ?>" href="<?php echo get_post_permalink($results[$i]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[$i]->ID) ?>')">
+            <a class="display-<?php echo $i + 1 ?>-noticias-has-<?php if (count($results) < 4) {
+                                                                    var_dump(count($results));
+                                                                    echo $i + 1;
+                                                                } else {
+                                                                    echo 5;
+                                                                } ?>" href="<?php echo get_post_permalink($results[$i]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[$i]->ID) ?>')">
                 <div class="destaques-content">
                     <?php
                     echo '<span class="destaques-cat">' . get_the_category($results[$i]->ID)[0]->cat_name . '</span>';
