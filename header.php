@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'iphan_inrc'); ?></a>
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Pular para conteúdo', 'iphan_inrc'); ?></a>
 		<!-- teste de scroll to top -->
 		<a href="#" id="ScrolltoTop"><i class="tainacan-icon tainacan-icon-showmore"></i></a>
 		<header id="masthead" class="site-header">
