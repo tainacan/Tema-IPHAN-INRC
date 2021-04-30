@@ -13016,14 +13016,14 @@ input[type="search"].search-bar__home {
 	text-transform: uppercase;
 	color: #e5a923;
 	font-size: 1rem;
-	font-weight: bold;
+	font-weight: 900;
 	margin-bottom: 5px;
 }
 
 .destaques-title {
 	color: #ffffff;
 	font-size: 1rem;
-	font-weight: bold;
+	font-weight: 900;
 }
 
 .destaques-cat,
