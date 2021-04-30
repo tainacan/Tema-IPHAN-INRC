@@ -24,8 +24,8 @@
 			<div class="entry-content">
 				<div class="share-button-wrapper">
 					<?php $postUrl = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; ?>
-					<a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta('twitter'); ?>" title="Tweet this"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-twitter"></i></a>
-					<a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="Share on Facebook"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-facebook"></i></a>
+					<a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta('twitter'); ?>" title="<?php _e('Twittar', 'iphan_inrc'); ?>"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-twitter"></i></a>
+					<a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="<?php _e('Compartilhar no Facebook', 'iphan_inrc'); ?>"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-facebook"></i></a>
 				</div>
 				<div class="meta-data-single-post">
 					<span class="meta-post-author">
@@ -48,14 +48,14 @@
 				<!-- Se tiver vazio, não exibir os botões -->
 				<div class="buttons-banner-footer">
 					<a href="<?php echo get_theme_mod('setting_link_banner_1', '') ?>" class="button-white-footer-banner"><?php if (get_theme_mod('label_banner_1', '') === '') {
-																																echo 'explore o repositório';
+																																echo _e('explore o repositório', 'iphan_inrc');
 																															} else {
 																																echo get_theme_mod('label_banner_1', '');
 																															} ?></a>
 					<div class="separator-banner-footer-horizontal">
 					</div>
 					<a href="<?php echo get_theme_mod('setting_link_banner_2', '') ?>" class="button-white-footer-banner"><?php if (get_theme_mod('label_banner_2', '') === '') {
-																																echo  'acesse o repositório completo';
+																																echo  _e('acesse o repositório completo', 'iphan_inrc');
 																															} else {
 																																echo get_theme_mod('label_banner_2', '');
 																															} ?></a>
