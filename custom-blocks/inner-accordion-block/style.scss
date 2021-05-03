@@ -14,7 +14,6 @@ span.tainacan-icon-minus:before {
     float: right;
     font-weight: bold;
 }
-
 details.wp-block-iphan-inner-accordion-custom > summary::before {
     display: inline-block;
     font: normal normal normal 20px/1 "TainacanIcons";
@@ -26,33 +25,21 @@ details.wp-block-iphan-inner-accordion-custom > summary::before {
     letter-spacing: normal !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: "plus";
     font-weight: bold;
     font-size: 20px;
+    content: "plus";
     color: $color__vermelho1;
+    margin-top: -3px;
 }
 details.wp-block-iphan-inner-accordion-custom[open] > summary::before {
-    display: inline-block;
-    font: normal normal normal 20px/1 "TainacanIcons";
-    font-size: inherit;
-    text-rendering: auto;
-    vertical-align: middle;
-    line-height: inherit;
-    text-transform: none !important;
-    letter-spacing: normal !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "minus";
-    font-weight: bold;
-    font-size: 20px;
-    color: $color__vermelho1;
 }
 
 summary {
     font-weight: bold;
-    padding-bottom: 14px;
+    padding-bottom: 6px;
     border-bottom: 1px solid $color__cinza3;
-    color: $color__preto;
+    color: $color__cinza6;
 }
 
 .wp-block-iphan-inner-accordion-custom > p {
