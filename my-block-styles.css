@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*!
 Theme Name: IPHAN INRC
 Theme URI: http://underscores.me/
@@ -22,6 +23,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -49,14 +51,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
-/* Normalize 
+
+/* Normalize
 --------------------------------------------- */
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
 /* Document
 	 ========================================================================== */
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -75,6 +82,7 @@ html {
 
 /* Sections
 	 ========================================================================== */
+
 /**
  * Remove the margin in all browsers.
  */
@@ -100,6 +108,7 @@ h1 {
 
 /* Grouping content
 	 ========================================================================== */
+
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -121,6 +130,7 @@ pre {
 
 /* Text-level semantics
 	 ========================================================================== */
+
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -186,6 +196,7 @@ sup {
 
 /* Embedded content
 	 ========================================================================== */
+
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -195,6 +206,7 @@ img {
 
 /* Forms
 	 ========================================================================== */
+
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -340,6 +352,7 @@ textarea {
 
 /* Interactive
 	 ========================================================================== */
+
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -356,6 +369,7 @@ summary {
 
 /* Misc
 	 ========================================================================== */
+
 /**
  * Add the correct display in IE 10+.
  */
@@ -372,6 +386,7 @@ template {
 
 /* Box sizing
 --------------------------------------------- */
+
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -387,7 +402,8 @@ html {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-/* Container 
+
+/* Container
 --------------------------------------------- */
 .site-container {
 	margin-left: auto !important;
@@ -477,7 +493,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #ffffff;
+	background: #fff;
 }
 
 hr {
@@ -545,7 +561,9 @@ a:visited {
 	color: #58020b;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
 	color: #970620;
 	text-decoration: underline;
 }
@@ -554,7 +572,8 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
 	outline: 0;
 }
 
@@ -564,8 +583,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border-radius: 0px;
-	background: #ffffff;
+	border-radius: 0;
+	background: #fff;
 	color: #515151;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
@@ -586,10 +605,11 @@ input[type="reset"].button:hover,
 input[type="submit"].button:hover {
 	border-color: #970620;
 	background-color: #970620;
-	color: #ffffff;
+	color: #fff;
 }
 
-button.button:active, button.button:focus,
+button.button:active,
+button.button:focus,
 input[type="button"].button:active,
 input[type="button"].button:focus,
 input[type="reset"].button:active,
@@ -598,7 +618,7 @@ input[type="submit"].button:active,
 input[type="submit"].button:focus {
 	border-color: #58020b;
 	background-color: #970620;
-	color: #ffffff;
+	color: #fff;
 }
 
 input[type="text"],
@@ -653,6 +673,7 @@ textarea {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+
 /* Navigation
 --------------------------------------------- */
 .site-header {
@@ -663,7 +684,7 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #ffffff;
+	color: #fff;
 	padding-top: 22px;
 	padding-bottom: 22px;
 }
@@ -672,7 +693,7 @@ textarea {
 .site-header .site-container a:hover,
 .site-header .site-container a:focus,
 .site-header .site-container a:visited {
-	color: #ffffff;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -703,12 +724,14 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
+
 	.main-navigation ul {
 		display: none;
 	}
 }
 
 @media screen and (min-width: 768px) {
+
 	.main-navigation ul {
 		display: block;
 	}
@@ -720,14 +743,14 @@ textarea {
 	border-right: 1px solid #d9d9d9;
 	border-bottom: 5px solid #58020b;
 	flex-direction: column;
-	background-color: #ffffff;
+	background-color: #fff;
 	padding: 10px 20px;
 	float: left;
 	position: absolute;
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
-	margin-top: 0px;
+	margin-top: 0;
 	transition: margin 0.3s ease-out;
 }
 
@@ -803,8 +826,9 @@ textarea {
 	text-align: center;
 }
 
-.main-navigation ul > li:hover, .main-navigation ul > li:focus {
-	border-color: #ffffff;
+.main-navigation ul > li:hover,
+.main-navigation ul > li:focus {
+	border-color: #fff;
 }
 
 .main-navigation ul > li:not(:last-child) {
@@ -820,7 +844,7 @@ textarea {
 	content: "\0231C";
 	font-size: 1.5rem;
 	rotate: 225deg;
-	color: #ffffff;
+	color: #fff;
 	position: relative;
 	right: -15px;
 	top: -0.3rem;
@@ -829,12 +853,14 @@ textarea {
 .main-navigation ul > li {
 	margin-right: 10px;
 	color: #58020b;
+
 	/*         @media screen and (min-width: $screen__sm) {
             border: 1px solid $color__branco;
         } */
 }
 
 @media screen and (max-width: 768px) {
+
 	.main-navigation ul > li {
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -844,12 +870,14 @@ textarea {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.main-navigation ul > li {
 		margin-left: 3%;
 	}
 }
 
 @media screen and (max-width: 768px) {
+
 	.main-navigation ul > li > a {
 		color: #58020b !important;
 		text-decoration: none !important;
@@ -858,8 +886,9 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+
 	.main-navigation ul > li > a {
-		border: 1px solid #ffffff;
+		border: 1px solid #fff;
 		padding: 5px;
 	}
 }
@@ -872,6 +901,7 @@ a {
 /*     .menu > ul > li > a:hover {
         text-decoration: underline;
     } */
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -879,9 +909,12 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.menu-toggle > svg {
 		display: block;
+
 		/*         position: absolute; */
+
 		/*         right: 8%;
         top: 11.3%; */
 		z-index: 10;
@@ -889,6 +922,7 @@ a {
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
+
 	.menu-toggle > svg {
 		display: block;
 		position: absolute;
@@ -899,6 +933,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.menu-toggle > svg {
 		display: block;
 		position: absolute;
@@ -908,32 +943,36 @@ a {
 }
 
 .menu-toggle > svg > path[aria-expanded="true"] {
-	fill: #ffffff;
+	fill: #fff;
 }
 
 .menu-toggle > svg > path[aria-expanded="false"] {
-	fill: #ffffff;
+	fill: #fff;
 }
 
 @media screen and (max-width: 768px) {
+
 	.menu-toggle[aria-expanded="true"] > svg > path {
 		fill: #58020b;
 	}
 }
 
 @media screen and (max-width: 768px) {
+
 	.menu-toggle[aria-expanded="false"] > svg > path {
-		fill: #ffffff;
+		fill: #fff;
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.menu-toggle[aria-expanded="true"] {
-		background: #ffffff;
+		background: #fff;
 		border: none;
 		padding-top: 10px;
 		padding-left: 10px;
 		padding-right: 10px;
+
 		/*         margin-left: 10px; */
 		padding-bottom: 10px;
 		z-index: 2;
@@ -941,8 +980,9 @@ a {
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
+
 	.menu-toggle[aria-expanded="true"] {
-		background: #ffffff;
+		background: #fff;
 		border: none;
 		padding-top: 10px;
 		padding-left: 10px;
@@ -955,8 +995,9 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.menu-toggle[aria-expanded="true"] {
-		background: #ffffff;
+		background: #fff;
 		border: none;
 		padding-top: 10px;
 		padding-left: 10px;
@@ -968,6 +1009,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		border: none;
@@ -981,6 +1023,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.menu-toggle[aria-expanded="false"] {
 		background: #58020b;
 		border: none;
@@ -994,22 +1037,27 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+
 	button:focus {
 		outline: none !important;
 	}
 }
 
 @media screen and (min-width: 768px) {
+
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
 		display: flex;
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
+.site-main .comment-navigation,
+.site-main
+.posts-navigation,
+.site-main
 .post-navigation {
 	margin: 0 0 1.5em;
 }
@@ -1034,6 +1082,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.menu-menu-1-container {
 		margin-top: 4%;
 		position: absolute;
@@ -1043,26 +1092,29 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+
 	.menu-menu-1-container > ul {
 		padding-top: 50px;
 		padding-bottom: 20px;
 		z-index: 10;
-		background: #ffffff;
+		background: #fff;
 		position: relative;
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.menu-menu-1-container {
 		margin-top: 7%;
 		position: absolute;
 		left: 0;
-		background: #ffffff;
+		background: #fff;
 		width: 100%;
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
 	.menu-menu-1-container {
 		margin-top: 5%;
 		position: absolute;
@@ -1085,11 +1137,12 @@ a {
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
+
 	.toggled .menu {
 		position: absolute;
 		top: 24%;
 		left: 0%;
-		background: #ffffff;
+		background: #fff;
 		width: 100%;
 		height: 50%;
 		z-index: 20;
@@ -1097,11 +1150,12 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.toggled .menu {
 		position: absolute;
 		top: 20%;
 		left: 0%;
-		background: #ffffff;
+		background: #fff;
 		width: 100%;
 		height: 50%;
 		z-index: 20;
@@ -1109,11 +1163,12 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.toggled .menu {
 		position: absolute;
 		top: 35%;
 		left: 0%;
-		background: #ffffff;
+		background: #fff;
 		width: 100%;
 		height: 70%;
 		z-index: 20;
@@ -1129,20 +1184,20 @@ a {
 	bottom: 15%;
 	right: 3%;
 	color: #58020b;
-	background-color: #ffffff;
+	background-color: #fff;
 	animation: appear-from-bottom 0.2s ease;
 	display: none;
 }
 
-#ScrolltoTop > .tainacan-icon-showmore:before {
+#ScrolltoTop > .tainacan-icon-showmore::before {
 	transform: rotate(180deg);
 	border: 1px solid #58020b;
 	padding-left: 4px;
 	padding-right: 4px;
 }
 
-#ScrolltoTop > .tainacan-icon-showmore:before:hover {
-	border: 1px solid #ffffff;
+#ScrolltoTop > .tainacan-icon-showmore::before:hover {
+	border: 1px solid #fff;
 }
 
 #ScrolltoTop:visited {
@@ -1151,7 +1206,7 @@ a {
 
 #ScrolltoTop:hover {
 	background-color: #58020b;
-	color: #ffffff;
+	color: #fff;
 }
 
 /* Posts and pages
@@ -1206,7 +1261,7 @@ a {
 }
 
 .widget h3 {
-	font-size: 1.0rem;
+	font-size: 1rem;
 	font-weight: 500;
 }
 
@@ -1236,7 +1291,7 @@ a {
 }
 
 .widget .wp-calendar-table > caption {
-	color: #ffffff;
+	color: #fff;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -1283,18 +1338,20 @@ a {
 
 #wp-calendar caption {
 	text-align: right;
-	color: #ffffff;
+	color: #fff;
 	font-size: 0.75rem;
 }
 
 @media screen and (max-width: 768px) {
+
 	#wp-calendar caption {
-		margin-bottom: 0px;
-		margin-top: 0px;
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 }
 
 @media screen and (min-width: 768px) {
+
 	#wp-calendar caption {
 		margin-bottom: 15px;
 		margin-top: 10px;
@@ -1321,14 +1378,14 @@ a {
 
 #wp-calendar tbody td {
 	background: #f5f5f5;
-	border: 1px solid #ffffff;
+	border: 1px solid #fff;
 	text-align: center;
 	padding-left: 1%;
 	padding-bottom: 3%;
 }
 
 #wp-calendar {
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 .wp-calendar-nav > span > a {
@@ -1340,7 +1397,7 @@ a {
 #wp-calendar tbody td:hover,
 #wp-calendar tbody a:hover {
 	background: #970620;
-	color: #ffffff;
+	color: #fff;
 }
 
 #wp-calendar tbody .pad {
@@ -1373,12 +1430,14 @@ a {
 }
 
 @media screen and (min-width: 768px) and (orientation: portrait) {
+
 	.widget_archive > ul > li {
 		margin-right: 30%;
 	}
 }
 
 @media screen and (max-width: 768px) {
+
 	.widget_archive > ul > li {
 		margin-right: 10%;
 	}
@@ -1392,12 +1451,15 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.widget_archive select {
+
 		/*     margin-top: 10%; */
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.widget_archive select {
 		width: 90%;
 		vertical-align: middle;
@@ -1405,6 +1467,7 @@ a {
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
+
 	.widget_archive select {
 		width: 95%;
 		vertical-align: middle;
@@ -1420,6 +1483,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.widget.widget_search .search-form .search-field {
 		width: 100%;
 		margin-top: 10%;
@@ -1430,6 +1494,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.widget.widget_search .search-form .search-field {
 		position: relative;
 		width: 100%;
@@ -1455,12 +1520,14 @@ a {
 }
 
 @media screen and (min-width: 768px) and (orientation: portrait) {
+
 	.widget_categories > ul > li {
 		margin-right: 30%;
 	}
 }
 
 @media screen and (max-width: 768px) {
+
 	.widget_categories > ul > li {
 		margin-right: 10%;
 	}
@@ -1474,12 +1541,15 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.widget_categories select {
+
 		/*     margin-top: 10%; */
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.widget_categories select {
 		width: 90%;
 		vertical-align: middle;
@@ -1487,6 +1557,7 @@ a {
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
+
 	.widget_categories select {
 		width: 95%;
 		vertical-align: middle;
@@ -1514,6 +1585,7 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+
 	.gallery-icon {
 		text-align: left;
 	}
@@ -1524,8 +1596,10 @@ a {
 	max-height: 200px;
 	max-width: 100%;
 	overflow: auto;
+
 	/* this will hide the scrollbar in mozilla based browsers */
 	overflow: -moz-scrollbars-none;
+
 	/* this will hide the scrollbar in internet explorers */
 	-ms-overflow-style: none;
 }
@@ -1552,8 +1626,10 @@ a {
 	max-height: 250px;
 	max-width: 100%;
 	overflow: auto;
+
 	/* this will hide the scrollbar in mozilla based browsers */
 	overflow: -moz-scrollbars-none;
+
 	/* this will hide the scrollbar in internet explorers */
 	-ms-overflow-style: none;
 }
@@ -1605,7 +1681,7 @@ a {
 }
 
 .widget_text .textwidget ol {
-	margin-left: 0px;
+	margin-left: 0;
 }
 
 .widget_media_audio .mejs-container {
@@ -1711,8 +1787,9 @@ a {
 	z-index: 5;
 	margin-top: 70px;
 	background-image: linear-gradient(to right, #58020b, #970620);
-	color: #ffffff;
+	color: #fff;
 	font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
 	/*     .widget-area:hover {
         ul {
             @media screen and (max-width: $screen__sm) and (orientation: portrait) {
@@ -1734,6 +1811,7 @@ a {
             }
         }
     } */
+
 	/*     .collapse {
         height: 0px;
         overflow: hidden;
@@ -1745,10 +1823,11 @@ a {
 .site-footer a:hover,
 .site-footer a:focus,
 .site-footer a:visited {
-	color: #ffffff;
+	color: #fff;
 }
 
 .site-footer .widget-area {
+
 	/*        ul {
             @media screen and (max-width: $screen__sm) {
                 height: 0px;
@@ -1764,6 +1843,7 @@ a {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.site-footer .widget-area {
 		column-count: 1;
 		padding-top: 20px;
@@ -1774,12 +1854,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.site-footer .widget-area .plus-minus {
 		display: none;
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.site-footer .widget-area {
 		column-count: 1;
 		padding-top: 20px;
@@ -1790,6 +1872,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.site-footer .widget-area {
 		column-count: 3;
 		padding-top: 70px;
@@ -1801,6 +1884,7 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.site-footer .widget-area {
 		padding-top: 25px;
 		padding-bottom: calc(0px - 0.75em);
@@ -1812,6 +1896,7 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+
 	.site-footer .widget-area .plus-minus {
 		content: "+";
 	}
@@ -1819,8 +1904,8 @@ a {
 
 .site-footer hr {
 	height: 2px;
-	margin: 0px;
-	color: #ffffff;
+	margin: 0;
+	color: #fff;
 }
 
 .site-footer .site-info {
@@ -1832,18 +1917,21 @@ a {
 }
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
+
 	.site-footer .site-info i {
 		font-size: 2.188rem;
 	}
 }
 
 @media screen and (orientation: landscape) and (max-width: 768px) {
+
 	.site-footer .site-info i {
 		font-size: 2.188rem;
 	}
 }
 
 @media screen and (min-width: 768px) {
+
 	.site-footer .site-info i {
 		font-size: 2.188rem;
 	}
@@ -1858,32 +1946,38 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.site-footer > .site-container > .site-info > img {
 		max-width: 10%;
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.site-footer > .site-container > .site-info > img {
 		max-width: 30%;
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.site-footer > .site-container > .site-info > img {
 		max-width: 20%;
 	}
 }
 
 .entry-footer {
+
 	/*     display: none; */
 }
 
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
+
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -1898,8 +1992,10 @@ a {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+
 /* Accessibility
 --------------------------------------------- */
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -1942,16 +2038,20 @@ a {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
+
 	/*rtl:ignore*/
 	float: left;
+
 	/*rtl:ignore*/
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
 .alignright {
+
 	/*rtl:ignore*/
 	float: right;
+
 	/*rtl:ignore*/
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
@@ -1981,6 +2081,7 @@ h6::after {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
@@ -1993,6 +2094,7 @@ h6::after {
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
+
 	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
@@ -2005,6 +2107,7 @@ h6::after {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
 	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
@@ -2017,6 +2120,7 @@ h6::after {
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+
 	.entry-content .is-style-title-iphan-underscore::after {
 		content: "";
 		position: absolute;
@@ -2038,5 +2142,3 @@ h6::after {
 	background-color: rgba(255, 255, 255, 0.7);
 	overflow-wrap: anywhere;
 }
-
-/*# sourceMappingURL=style.css.map */

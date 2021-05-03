@@ -82,7 +82,7 @@
             padding: var(--tainacan-container-padding) 0px 20px 0px !important;
         }
         .table-container {
-            padding-right: 0px !important;
+            padding-right: 12px !important;
         }
         #filters-modal .modal-content {
             padding: 24px 18px 24px 0px !important;
@@ -117,9 +117,14 @@
         border-left: 1px solid $color__cinza1;
     }
 }
-
 body.archive .theme-items-list {
     margin-top: 100px;
+}
+.wp-block-tainacan-faceted-search.alignfull .theme-items-list .search-control,
+.wp-block-tainacan-faceted-search.alignfull .theme-items-list #filters-modal,
+.wp-block-tainacan-faceted-search.alignfull .theme-items-list #items-list-area {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 /* COLLECTIONS ARCHIVE */

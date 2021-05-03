@@ -1,0 +1,128 @@
+// Tainacan blocks use this palete in several places
+:root {
+    --tainacan-block-primary: #58020b;
+}
+
+// Tainacan search bar block
+.wp-block-tainacan-search-bar.is-style-default .tainacan-search-container {
+    #tainacan-search-bar-block:not(:focus) {
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+    #tainacan-search-bar-block .button:hover {
+        background-color: white !important;
+    }
+}
+
+// Tainacan Item Submission Form
+.tainacan-item-submission-form {
+    .tainacan-form {
+        .button.is-secondary,
+        .button.is-secondary:hover,
+        .button.is-secondary:focus {
+            background-color: transparent !important;
+            color: var(--tainacan-secondary,#58020b) !important;
+            border-color: var(--tainacan-secondary, #58020b) !important;
+            border-radius: 0px !important;
+        }
+        .button.is-outlined,
+        .button.is-outlined:hover,
+        .button.is-outlined:focus {
+            color: $color__cinza7 !important;
+            border-color: $color__cinza3 !important;
+            border-radius: 0px !important;
+            text-transform: none;
+        }
+        input.input,
+        .input,
+        input[type="color"].input,
+        input[type="date"].input,
+        input[type="datetime-local"].input,
+        input[type="datetime"].input,
+        input[type="email"].input,
+        input[type="number"].input,
+        input[type="month"].input,
+        input[type="password"].input,
+        input[type="search"].input,
+        input[type="tel"].input,
+        input[type="text"].input,
+        input[type="time"].input,
+        input[type="url"].input,
+        input[type="week"].input {
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-left-color: transparent;
+        }
+        input.input:focus,
+        input.input:active,
+        .input:focus,
+        .input:active,
+        input[type="color"].input:focus,
+        input[type="color"].input:active,
+        input[type="date"].input:focus,
+        input[type="date"].input:active,
+        input[type="datetime-local"].input:focus,
+        input[type="datetime-local"].input:active,
+        input[type="datetime"].input:focus,
+        input[type="datetime"].input:active,
+        input[type="email"].input:focus,
+        input[type="email"].input:active,
+        input[type="number"].input:focus,
+        input[type="number"].input:active,
+        input[type="month"].input:focus,
+        input[type="month"].input:active,
+        input[type="password"].input:focus,
+        input[type="password"].input:active,
+        input[type="search"].input:focus,
+        input[type="search"].input:active,
+        input[type="tel"].input:focus,
+        input[type="tel"].input:active,
+        input[type="text"].input:focus,
+        input[type="text"].input:active,
+        input[type="time"].input:focus,
+        input[type="time"].input:active,
+        input[type="url"].input:focus,
+        input[type="url"].input:active,
+        input[type="week"].input:focus,
+        input[type="week"].input:active {
+            border-top-color: transparent !important;
+            border-right-color: transparent !important;
+            border-left-color: transparent !important;
+        }
+        .select:not(.is-loading)::after {
+            content: "showmore" !important;
+        }
+        .select select {
+            border-top-color: transparent !important;
+            border-right-color: transparent !important;
+            border-left-color: transparent !important;
+        }
+        .control.has-icons-right .icon .mdi-magnify::before {
+            color: var(--tainacan-secondary,#58020b);
+        }
+        .tabs>ul {
+            margin-left: 0px;
+        }
+        .field .label {
+            font-weight: bold;
+        }
+        .required-metadatum-asterisk {
+            font-size: 1.5rem;
+            line-height: normal;
+        }
+        .form-submission-footer {
+            margin-top: 1rem;
+        }
+        .document-field {
+            ul {
+                justify-content: center;
+
+                li>button {
+                    border-radius: 0 !important;
+                    border: 1px solid var(--tainacan-secondary,#58020b) !important;
+                }
+            }
+        }
+    }
+}

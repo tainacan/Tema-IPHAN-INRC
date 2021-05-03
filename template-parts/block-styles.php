@@ -84,6 +84,15 @@ if (function_exists('register_block_style')) {
                 'isDefault' => true,
             )
         );
+
+        register_block_style(
+            'tainacan/item-submission-form',
+            array(
+                'name'  => 'two-columns', 'iphan_inrc',
+                'label' =>  'Formulário com duas colunas fluídas',
+                'isDefault' => true,
+            )
+        );
     }
 }
 add_action('init', 'iphan_block_styles');
