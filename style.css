@@ -12610,6 +12610,13 @@ body:not(.home) .title-banner:last-child {
 		margin-left: 0px;
 		padding-left: 0px;
 	}
+	.thumb-resume img {
+		max-height: 215px;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
 }
 
 @media screen and (min-width: 1024px) {

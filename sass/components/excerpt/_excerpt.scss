@@ -23,6 +23,14 @@
     @media screen and (min-width: $screen__md) {
         margin-left: 0px;
         padding-left: 0px;
+
+        img {
+            max-height: 215px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }
 
