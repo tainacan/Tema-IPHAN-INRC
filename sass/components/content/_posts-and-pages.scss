@@ -13,6 +13,8 @@
 }
 .meta-content {
 	margin-top: 0;
+	margin-left: -4.73%;
+    margin-right: -4.73%;
 
 	.share-button-wrapper {
 		margin-top: 0 !important;
@@ -35,7 +37,6 @@
 .meta-data-single-post {
 	display: flex;
 	justify-content: space-between;
-	padding-left: 15px !important;
 	color: $color__cinza6;
 }
 
@@ -44,8 +45,6 @@
 }
 
 .alinhamento-titulos-post {
-	display: flex;
-	@media screen and(min-width: $screen__sm) {
-		padding-left: 15px;
-	}
+	margin-left: -4.73%;
+	margin-right: -4.73%;
 }

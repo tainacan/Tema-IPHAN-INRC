@@ -10185,6 +10185,14 @@ figure.alignfull.wp-block-image:not(.wp-block) {
 	width: 100vw;
 }
 
+/* Post templates for pages with large and wide title */
+.post-template-page-templateswide-title-php article header.site-container > .entry-content > * {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
 /* Typography
 --------------------------------------------- */
 body,
@@ -11430,6 +11438,8 @@ textarea {
 
 .meta-content {
 	margin-top: 0;
+	margin-left: -4.73%;
+	margin-right: -4.73%;
 }
 
 .meta-content .share-button-wrapper {
@@ -11452,7 +11462,6 @@ textarea {
 .meta-data-single-post {
 	display: flex;
 	justify-content: space-between;
-	padding-left: 15px !important;
 	color: #515151;
 }
 
@@ -11461,13 +11470,8 @@ textarea {
 }
 
 .alinhamento-titulos-post {
-	display: flex;
-}
-
-@media screen and (min-width: 768px) {
-	.alinhamento-titulos-post {
-		padding-left: 15px;
-	}
+	margin-left: -4.73%;
+	margin-right: -4.73%;
 }
 
 /* Comments

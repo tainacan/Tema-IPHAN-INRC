@@ -101,3 +101,12 @@ figure.alignfull.wp-block-image:not(.wp-block) {
     width: 100%;
     width: 100vw;
 }
+
+
+/* Post templates for pages with large and wide title */
+.post-template-page-templateswide-title-php article header.site-container>.entry-content>* {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+}
