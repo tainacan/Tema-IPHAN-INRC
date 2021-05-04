@@ -78,6 +78,10 @@ body.home {
             font-size: 2.5rem;
         }
     }
+    .wp-block-cover {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 body:not(.home) {
     .container-banner {

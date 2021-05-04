@@ -12464,6 +12464,11 @@ body.home .title-banner:last-child {
 	}
 }
 
+body.home .wp-block-cover {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 body:not(.home) .container-banner {
 	background-blend-mode: luminosity;
 }
