@@ -11428,6 +11428,14 @@ textarea {
 	margin: 1.5em 0 0;
 }
 
+.meta-content {
+	margin-top: 0;
+}
+
+.meta-content .share-button-wrapper {
+	margin-top: 0 !important;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -11445,6 +11453,7 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	padding-left: 15px !important;
+	color: #515151;
 }
 
 .meta-data-month {
@@ -13521,25 +13530,9 @@ section.destaques-noticias {
 	border-radius: 4px;
 }
 
-@media screen and (min-width: 1024px) {
-	.posts-relacionados {
-		margin-left: 22%;
-		margin-right: 22%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.posts-relacionados {
-		margin-left: 16px;
-		margin-right: 16px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.posts-relacionados {
-		margin-left: 21%;
-		margin-right: 22%;
-	}
+.posts-relacionados {
+	padding-left: 4.73%;
+	padding-right: 4.73%;
 }
 
 /* 404
@@ -13851,6 +13844,7 @@ article#page-404 .widget ul {
 	background-size: cover;
 	background-color: #d9d9d9;
 	background-position: center;
+	display: block;
 }
 
 .tainacan-single-item-navigation #item-single-navigation.related-posts .related-post a:hover {

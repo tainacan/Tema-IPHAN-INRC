@@ -11,7 +11,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php iphan_inrc_post_thumbnail(); ?>
+		
 		<?php the_title('<h1 class="entry-title is-style-title-iphan-underscore">', '</h1>'); ?>
 		<?php if (is_single()) : ?>
 			<div class="meta-data-single-post">

@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="site-container">
-		<?php iphan_inrc_post_thumbnail(); ?>
+
 		<!-- Componente de destaques -->
 		<?php if (is_front_page()) {
 			get_template_part('template-parts/destaques-home');
@@ -21,7 +21,7 @@
 			<?php the_title('<h1 class="col-md-10 is-style-title-iphan-underscore">', '</h1>'); ?>
 		</div>
 		<?php if (is_single()) : ?>
-			<div class="entry-content">
+			<div class="entry-content meta-content">
 				<div class="share-button-wrapper">
 					<?php $postUrl = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; ?>
 					<a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta('twitter'); ?>" title="<?php _e('Twittar', 'iphan_inrc'); ?>"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-twitter"></i></a>

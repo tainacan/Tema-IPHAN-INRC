@@ -11,6 +11,13 @@
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+.meta-content {
+	margin-top: 0;
+
+	.share-button-wrapper {
+		margin-top: 0 !important;
+	}
+}
 
 .page-links {
 	clear: both;
@@ -29,6 +36,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding-left: 15px !important;
+	color: $color__cinza6;
 }
 
 .meta-data-month {

@@ -28,8 +28,8 @@ $args = array(
 $query = new WP_Query($args);
 $results = get_posts($query);
 ?>
-<div class="posts-relacionados">
-    <h1 class="is-style-title-iphan-underscore">relacionados</h1>
+<div class="posts-relacionados alignfull">
+    <h1 class="is-style-title-iphan-underscore"><?php _e('Relacionados', 'iphan_inrc') ?></h1>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <?php

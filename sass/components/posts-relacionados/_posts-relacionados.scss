@@ -46,16 +46,7 @@
 }
 
 .posts-relacionados {
-    @media screen and (min-width: $screen__md) {
-        margin-left: 22%;
-        margin-right: 22%;
-    }
-    @media screen and (max-width: $screen__sm) {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-    @media screen and (min-width: $screen__sm) {
-        margin-left: 21%;
-        margin-right: 22%;
-    }
+    padding-left: $container__side-padding;
+    padding-right: $container__side-padding;
 }
+
