@@ -12655,6 +12655,13 @@ body:not(.home) .title-banner:last-child {
 	}
 }
 
+.posicionamento-excerpt .post-type-tag {
+	font-size: 0.875rem;
+	float: right;
+	opacity: 0.75;
+	padding-left: 0.75rem;
+}
+
 .date-excerpt {
 	bottom: 0px;
 	white-space: nowrap;
@@ -12726,6 +12733,10 @@ input[type="search"].search-bar {
 	padding-bottom: 0px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+input[type="search"].search-bar::placeholder {
+	color: #d9d9d9;
 }
 
 input[type="search"].search-bar__home {

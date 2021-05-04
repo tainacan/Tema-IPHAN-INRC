@@ -19,7 +19,7 @@ custom_breadcrumbs();
 ?>
 <main id="primary" class="site-main site-container">
 	<header class="page-header">
-		<div class="cabecalho-ultimas-noticias">
+		<div class="cabecalho-ultimas-noticias" style="margin-top: 0px">
 			<h1 class="is-style-title-iphan-underscore col-md-5 ultimas-noticias"><?php _e('Resultado de busca por:', 'iphan_inrc');
 																					echo get_search_query() ?></h1>
 			<form role="search" method="get" class="search-form col-md-4" action="<?php echo esc_url(home_url('/')) ?>">

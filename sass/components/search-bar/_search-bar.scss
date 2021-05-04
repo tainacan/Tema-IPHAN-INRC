@@ -11,6 +11,9 @@ input[type="search"].search-bar {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+input[type="search"].search-bar::placeholder {
+    color: $color__cinza3;
+}
 input[type="search"].search-bar__home {
     margin-bottom: 4.063rem !important;
     margin-top: 1%;

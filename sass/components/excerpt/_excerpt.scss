@@ -63,6 +63,13 @@
     @media screen and (min-width: $screen__md) {
         padding-right: 0;
     }
+
+    .post-type-tag {
+        font-size: 0.875rem;
+        float: right;
+        opacity: 0.75;
+        padding-left: 0.75rem;
+    }
 }
 
 .date-excerpt {
