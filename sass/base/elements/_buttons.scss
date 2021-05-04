@@ -16,6 +16,7 @@ input[type="reset"],
 input[type="submit"] {
 	background: $color__background-button;
 	color: $color__text-input;
+	border-radius: 0px !important;
 
 	&.button {
 		text-transform: uppercase;
