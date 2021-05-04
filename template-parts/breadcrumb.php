@@ -83,14 +83,24 @@ function custom_breadcrumbs()
                 // Display the current term in the breadcrumb
                 echo '&nbsp;' . $delimiter . '&nbsp;';
                 echo $before . $term->name . $after;
-            } elseif (!is_tax() && get_post_type() != 'tainacan-collection') {
-                echo '<a href="' . esc_url(get_post_type_archive_link('tainacan-collection')) . '">';
-                _e('Coleções', 'iphan_inrc');
-                echo '</a>&nbsp;' . $delimiter . '&nbsp;';
-
-                echo $before . $post_type->labels->singular_name . $after;
-            } else {
-                echo $before . $post_type->labels->singular_name . $after;
+            } elseif(!is_tax() && get_post_type() != 'tainacan-collection') {
+				echo '<a href="'. esc_url(get_post_type_archive_link('tainacan-collection')) .'">';
+				    _e( 'Coleções', 'iphan_inrc' );
+				echo '</a>&nbsp;' . $delimiter . '&nbsp;';
+				
+				if (is_post_type_archive()) {
+					$str = $post_type->labels->singular_name;
+				} else {
+					$str = __('Todos os itens', 'iphan_inrc');
+				}
+				echo $before . $str . $after;
+			} else {
+			    if ( is_archive() ) {
+			        $str = __( 'Coleções', 'iphan_inrc' );
+                } else {
+				    $str = $post_type->labels->singular_name;
+                }
+				echo $before . $str . $after;
             }
         } elseif (is_attachment()) {
             $parent = get_post($post->post_parent);
