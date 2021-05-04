@@ -14410,6 +14410,11 @@ body.archive .theme-items-list {
 	background-color: white !important;
 }
 
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-list li.facet-list-item,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list li.facet-list-item {
+	padding: 2px 12px 14px 12px !important;
+}
+
 .tainacan-item-submission-form {
 	position: relative;
 }
