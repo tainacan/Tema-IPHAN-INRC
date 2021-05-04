@@ -14233,6 +14233,10 @@ body.archive .theme-items-list {
 	background-color: white !important;
 }
 
+.tainacan-item-submission-form {
+	position: relative;
+}
+
 .tainacan-item-submission-form .tainacan-form .button.is-secondary,
 .tainacan-item-submission-form .tainacan-form .button.is-secondary:hover,
 .tainacan-item-submission-form .tainacan-form .button.is-secondary:focus {
@@ -14579,6 +14583,11 @@ body.archive .theme-items-list {
 .wp-block-tainacan-item-submission-form.is-style-two-columns .item-submission-form-placeholder > div .documents-section {
 	column-span: all;
 	justify-content: center;
+}
+
+.wp-block-tainacan-item-submission-form.is-style-two-columns .tainacan-item-submission-form > .tainacan-form .field,
+.wp-block-tainacan-item-submission-form.is-style-two-columns .item-submission-form-placeholder > div .field {
+	break-inside: avoid;
 }
 
 .wp-block-tainacan-item-submission-form.is-style-two-columns .item-submission-form-placeholder > div:not(:nth-last-child(1)) {

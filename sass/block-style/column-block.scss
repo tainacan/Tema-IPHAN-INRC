@@ -81,6 +81,9 @@
             column-span: all;
             justify-content: center;
         }
+        .field {
+            break-inside: avoid;
+        }
     }
 
     .item-submission-form-placeholder>div:not(:nth-last-child(1)) {

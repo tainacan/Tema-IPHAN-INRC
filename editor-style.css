@@ -351,6 +351,11 @@ big {
 	justify-content: center;
 }
 
+.wp-block-tainacan-item-submission-form.is-style-two-columns .tainacan-item-submission-form > .tainacan-form .field,
+.wp-block-tainacan-item-submission-form.is-style-two-columns .item-submission-form-placeholder > div .field {
+	break-inside: avoid;
+}
+
 .wp-block-tainacan-item-submission-form.is-style-two-columns .item-submission-form-placeholder > div:not(:nth-last-child(1)) {
 	column-span: all;
 }

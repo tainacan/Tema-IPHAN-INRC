@@ -299,5 +299,25 @@ function iphan_block_pattern()
             '
         )
     );
+
+    register_block_pattern(
+        'iphan/form-inventario',
+        array(
+            'title'       => __('Formulário de Inventário do IPHAN', 'iphan_inrc'),
+            'description' => _x('Formulário de submissão do item do Tainacan com duas colunas e as cores do IPHAN', 'Descrição do padrão de bloco', 'iphan_inrc'),
+            'categories' => array('iphan', 'buttons'),
+            'content'     => '
+                <!-- wp:paragraph -->
+                <p>Este é um formulário de submissão de itens do Tainacan para o IPHAN. Insira aqui uma descrição ou apresentação do formulário para os usuários.</p>
+                <!-- /wp:paragraph -->
+                
+                <!-- wp:tainacan/item-submission-form {"hideTextModalButton":true,"hideMetadataTypes":true,"hideCollapses":true,"backgroundColor":{"r":255,"g":255,"b":255,"a":0},"labelColor":"#58020b","infoColor":"#585555","primaryColor":"#e7cdcf","secondaryColor":"#58020b","sentFormHeading":"Formulário enviado!","sentFormMessage":"Obrigado, seu item estará disponível na coleção em breve.","documentSectionLabel":"","attachmentsSectionLabel":"","thumbnailSectionLabel":"","metadataSectionLabel":"","className":"is-style-two-columns"} -->
+                <div style="font-size:16px;--tainacan-base-font-size:16px;--tainacan-background-color:rgba(255,255,255,0);--tainacan-input-color:#1d1d1d;--tainacan-input-background-color:#ffffff;--tainacan-input-border-color:#dbdbdb;--tainacan-label-color:#58020b;--tainacan-info-color:#585555;--tainacan-primary:#e7cdcf;--tainacan-secondary:#58020b" class="wp-block-tainacan-item-submission-form is-style-two-columns">
+                    <div id="tainacan-item-submission-form" hide-file-modal-button="false" hide-text-modal-button="true" hide-link-modal-button="false" hide-thumbnail-section="false" hide-attachments-section="false" show-allow-comments-section="false" hide-help-buttons="false" hide-metadata-types="true" hide-collapses="true" sent-form-heading="Formulário enviado!" sent-form-message="Obrigado, seu item estará disponível na coleção em breve." document-section-label="" thumbnail-section-label="" attachments-section-label="" metadata-section-label="" show-item-link-button="false" item-link-button-label="Go to the item page"></div>
+                </div>
+                <!-- /wp:tainacan/item-submission-form -->
+                '
+        )
+    );
 }
 add_action('init', 'iphan_block_pattern');
