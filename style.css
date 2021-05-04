@@ -13195,7 +13195,7 @@ section.destaques-noticias {
 	.display-6-has-6,
 	.display-5-has-6,
 	.display-5-has-5 {
-		display: none;
+		display: none !important;
 	}
 }
 
