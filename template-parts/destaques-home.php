@@ -1,6 +1,7 @@
 <?php
 function destaqueshome()
 {
+    return
 ?>
     <section class="destaques">
         <?php
@@ -55,5 +56,12 @@ function destaqueshome()
             <?php } ?>
     </section>
 <?php }
-add_shortcode('destaqueshome', 'destaqueshome');
+add_shortcode('destaques', 'destaqueshome');
+
+
+add_shortcode('customShortCode', 'dest');
+function dest()
+{
+    return  '<p>The current date is ' . date('d-m-Y') . '.</p>';
+}
 ?>
