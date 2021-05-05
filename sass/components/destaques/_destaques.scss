@@ -37,6 +37,7 @@
     flex-direction: column;
     margin-left: 20px;
     margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .grid-container {
@@ -202,10 +203,6 @@ section.destaques {
     padding-right: 4px;
 }
 
-section.destaques-noticias {
-    margin-bottom: 50px;
-}
-
 :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
     left: 0px !important;
 }
@@ -220,11 +217,31 @@ section.destaques-noticias {
 }
 
 // destaques home inicio
+
+@media screen and (max-width: $screen__md) {
+    .display-6-has-6,
+    .display-5-has-6,
+    .display-5-has-5 {
+        display: none !important;
+    }
+    .grid-container-has-6,
+    .grid-container-has-5,
+    .grid-container-has-4,
+    .grid-container-has-3,
+    .grid-container-has-2,
+    .grid-container-has-1 {
+        @media screen and (max-width: $screen__md) {
+            display: flex;
+        }
+        @media screen and (min-width: $screen__md) {
+            display: grid;
+        }
+    }
+}
 .grid-container-has-6 {
     flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
     gap: 20px 20px;
@@ -275,7 +292,6 @@ section.destaques-noticias {
     flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
     gap: 20px 20px;
@@ -321,7 +337,6 @@ section.destaques-noticias {
     flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px 20px;
     grid-template-areas:
@@ -361,7 +376,6 @@ section.destaques-noticias {
     flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px 20px;
     grid-template-areas:
@@ -396,7 +410,6 @@ section.destaques-noticias {
     flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px 20px;
     grid-template-areas:
@@ -426,7 +439,6 @@ section.destaques-noticias {
     flex-wrap: wrap;
     margin-bottom: 150px;
     height: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px 20px;
     grid-template-areas:
