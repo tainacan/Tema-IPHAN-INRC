@@ -1,10 +1,11 @@
 .is-style-download {
     margin-top: 0px !important;
-    padding-bottom: 12px;
-    border-bottom: 1px solid $color__cinza3;
+    padding-bottom: 0px;
     margin-bottom: 20px !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    width: 50%;
+    max-width: $container__inner_max-width;
+    background-image: linear-gradient(#fff calc(100% - 1px), $color__cinza3);
+    background-clip: content-box;
 }
 
 .is-style-download > a,
@@ -24,9 +25,10 @@
 }
 
 .is-style-download .wp-block-file__button {
-    background: $color__branco !important;
+    background: transparent !important;
     content: none;
     color: $color__preto;
+    padding: 0 0 0 1em;
 }
 
 .is-style-download .wp-block-file__button::after {
@@ -42,8 +44,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $color__vermelho1;
-    font-size: 1.25em;
-    background: $color__branco;
+    font-size: 1.875em;
+    background: transparent;
     padding-left: 5px;
 }
 

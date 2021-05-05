@@ -678,11 +678,12 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 
 .is-style-download {
 	margin-top: 0px !important;
-	padding-bottom: 12px;
-	border-bottom: 1px solid #d9d9d9;
+	padding-bottom: 0px;
 	margin-bottom: 20px !important;
-	padding-left: 0px !important;
-	padding-right: 0px !important;
+	width: 50%;
+	max-width: 1157px;
+	background-image: linear-gradient(#fff calc(100% - 1px), #d9d9d9);
+	background-clip: content-box;
 }
 
 .is-style-download > a,
@@ -702,9 +703,10 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 }
 
 .is-style-download .wp-block-file__button {
-	background: #ffffff !important;
+	background: transparent !important;
 	content: none;
 	color: #000000;
+	padding: 0 0 0 1em;
 }
 
 .is-style-download .wp-block-file__button::after {
@@ -720,8 +722,8 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #58020b;
-	font-size: 1.25em;
-	background: #ffffff;
+	font-size: 1.875em;
+	background: transparent;
 	padding-left: 5px;
 }
 
