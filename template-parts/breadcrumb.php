@@ -38,7 +38,10 @@ function custom_breadcrumbs()
             if (get_post_type() != 'post') {
                 $post_type = get_post_type_object(get_post_type());
                 $slug = $post_type->rewrite;
-                if (!is_page() && get_post_type() != 'tainacan-collection') {
+
+                // Check if this is a tainacan item.
+				$collections_post_types = defined('TAINACAN_VERSION') ? \Tainacan\Repositories\Repository::get_collections_db_identifiers() : array();
+                if (in_array(get_post_type(), $collections_post_types) && !is_page() && get_post_type() != 'tainacan-collection') {
                     echo '<a href="' . esc_url(get_post_type_archive_link('tainacan-collection')) . '">';
                     _e('Coleções', 'iphan_inrc');
                     echo '</a>&nbsp;' . $delimiter . '&nbsp;';
@@ -84,9 +87,14 @@ function custom_breadcrumbs()
                 echo '&nbsp;' . $delimiter . '&nbsp;';
                 echo $before . $term->name . $after;
             } elseif(!is_tax() && get_post_type() != 'tainacan-collection') {
-				echo '<a href="'. esc_url(get_post_type_archive_link('tainacan-collection')) .'">';
-				    _e( 'Coleções', 'iphan_inrc' );
-				echo '</a>&nbsp;' . $delimiter . '&nbsp;';
+
+				// Check if this is a tainacan item.
+				$collections_post_types = defined('TAINACAN_VERSION') ? \Tainacan\Repositories\Repository::get_collections_db_identifiers() : array();
+				if (in_array(get_post_type(), $collections_post_types)) {
+					echo '<a href="'. esc_url(get_post_type_archive_link('tainacan-collection')) .'">';
+				        _e( 'Coleções', 'iphan_inrc' );
+				    echo '</a>&nbsp;' . $delimiter . '&nbsp;';
+				}
 				
 				if (is_post_type_archive()) {
 					$str = $post_type->labels->singular_name;
@@ -133,11 +141,13 @@ function custom_breadcrumbs()
             echo $before . __('Artigos publicados por ', 'iphan_inrc') . $userdata->display_name . $after;
         } elseif (is_404()) {
             echo $before . __('Erro 404', 'iphan_inrc') . $after;
+        } else {
+            echo $before . get_the_archive_title() . $after;
         }
 
         if (get_query_var('paged')) {
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) echo '&nbsp;(';
-            echo __('Page', 'iphan_inrc') . '&nbsp;' . get_query_var('paged');
+            echo __('Página', 'iphan_inrc') . '&nbsp;' . get_query_var('paged');
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) echo ')';
         }
 
