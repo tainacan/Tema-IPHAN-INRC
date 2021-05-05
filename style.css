@@ -13175,10 +13175,6 @@ input[type="search"].search-bar__home {
 	padding-right: 4px;
 }
 
-section.destaques-noticias {
-	margin-bottom: 50px;
-}
-
 :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
 	left: 0px !important;
 }
