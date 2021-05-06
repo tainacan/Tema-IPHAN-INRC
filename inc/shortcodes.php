@@ -30,7 +30,12 @@ function destaqueshome()
     array_push($msg, _e('Destaques', 'iphan_inrc'));
     array_push($msg, '</h1>');
     array_push($msg, '</div>');
-    array_push($msg, '<div class="grid-container-has-' + if (count($results) < 5) {echo $i + 1;} else {'6';} + 'col-md-12 grid-container">');
+    if (count($results) < 5) {
+        array_push($msg, '<div class="grid-container-has-' . $i + 1 .' col-md-12 grid-container">');
+    }
+   else {
+        array_push($msg, '<div class="grid-container-has-6 col-md-12 grid-container">' );
+   } 
     for ($i = 0; $i < count($results) && $i < 6; $i++) {
         array_push($msg, '<a class="display-' . echo $i + 1; '-has-' + if (count($results) < 5) {echo $i + 1;} else { '6';}'" href="' + echo get_post_permalink($results[$i]->ID)'" style="background-image: url(' + echo get_the_post_thumbnail_url($results[$i]->ID) +')">');
         array_push($msg, ' <div class="destaques-content">');
