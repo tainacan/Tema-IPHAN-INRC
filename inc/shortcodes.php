@@ -31,7 +31,7 @@ function destaqueshome()
     array_push($msg, '</h1>');
     array_push($msg, '</div>');
     if (count($results) < 5) {
-        array_push($msg, '<div class="grid-container-has-' . $i + 1 . ' col-md-12 grid-container">');
+        array_push($msg, '<div class="grid-container-has-' . count($results) + 1 . ' col-md-12 grid-container">');
     } else {
         array_push($msg, '<div class="grid-container-has-6 col-md-12 grid-container">');
     }
