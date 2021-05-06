@@ -23,14 +23,13 @@ function destaqueshome()
         'suppress_filters' => true,
     );
     $results = get_posts($defaults);
-    $msg = array();
-    array_push($msg, '<section class="destaques">');
-    array_push($msg, '<div class="titulo-destaques">');
-    array_push($msg, '<h1 class="is-style-title-iphan-underscore">');
-    array_push($msg, _e('Destaques', 'iphan_inrc'));
-    array_push($msg, '</h1>');
-    array_push($msg, '</div>');
-    if (count($results) < 5) {
+    $msg = '<section class="destaques">';
+    $msg .= '<div class="titulo-destaques">';
+    $msg .= '<h1 class="is-style-title-iphan-underscore">';
+    $msg .= 'Destaques';
+    $msg .= '</h1>';
+    $msg .= '</div>';
+    /*    if (count($results) < 5) {
         array_push($msg, '<div class="grid-container-has-' . count($results) + 1 . ' col-md-12 grid-container">');
     } else {
         array_push($msg, '<div class="grid-container-has-6 col-md-12 grid-container">');
@@ -46,8 +45,8 @@ function destaqueshome()
         array_push($msg, '<span class="destaques-title">' . get_the_title($results[$i]) . '</span>');
         array_push($msg, '</div>');
         array_push($msg, '</a>');
-    }
-    array_push($msg, '</section>');
+    } */
+    $msg .= '</section>';
     return $msg;
 }
 add_shortcode('destaques', 'destaqueshome');
