@@ -37,7 +37,10 @@ function destaqueshome()
         array_push($msg, '<div class="grid-container-has-6 col-md-12 grid-container">' );
    } 
     for ($i = 0; $i < count($results) && $i < 6; $i++) {
-        array_push($msg, '<a class="display-' . echo $i + 1; '-has-' + if (count($results) < 5) {echo $i + 1;} else { '6';}'" href="' + echo get_post_permalink($results[$i]->ID)'" style="background-image: url(' + echo get_the_post_thumbnail_url($results[$i]->ID) +')">');
+        if (count($results) < 5){
+            array_push($msg, '<a class="display-' . $i + 1 . '-has-'
+        }
+        array_push($msg, '<a class="display-' . $i + 1 . '-has-' .  {echo $i + 1;} else { '6';}'" href="' + echo get_post_permalink($results[$i]->ID)'" style="background-image: url(' + echo get_the_post_thumbnail_url($results[$i]->ID) +')">');
         array_push($msg, ' <div class="destaques-content">');
         array_push($msg, '<span class="destaques-cat">' . get_the_category($results[$i]->ID)[0]->cat_name . '</span>');
         array_push($msg, '<span class="destaques-title">' . get_the_title($results[$i]) . '</span>');

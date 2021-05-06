@@ -1,0 +1,80 @@
+.glossary-list {
+    list-style: none;
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+    margin-top: 80px;
+
+    li {
+        break-inside: avoid;
+        margin: 0 0 16px 0 !important;
+
+        .glossary-term-name {
+            margin: -15px 0px 15px -15px;
+            font-weight: bold;
+        }
+    }
+
+    &.alignfull {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &.has-column-count-4 {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+
+        @media screen and (orientation: portrait) and (max-width: $screen__lg) {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+
+        @media screen and (orientation: portrait) and (max-width: $screen__md) {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+
+        @media screen and (orientation: portrait) and (max-width: $screen__sm) {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    }
+    &.has-column-count-3 {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+
+        @media screen and (orientation: portrait) and (max-width: $screen__md) {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+
+        @media screen and (orientation: portrait) and (max-width: $screen__sm) {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    }
+    &.has-column-count-2 {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+
+        @media screen and (orientation: portrait) and (max-width: $screen__sm) {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    }
+    &.has-column-count-1 {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
