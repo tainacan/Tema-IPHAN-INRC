@@ -7,17 +7,16 @@
         flex-direction: column;
         padding: 0px;
     }
-}
-
-.grid-container > a {
-    background-size: cover;
-    display: flex;
-    background-position: center;
-    @media screen and (max-width: $screen__sm) {
-        height: 300px;
-        width: 100%;
-        max-width: 100%;
-        padding: 0px;
+    & > a {
+        background-size: cover;
+        display: flex;
+        background-position: center;
+        @media screen and (max-width: $screen__sm) {
+            height: 300px;
+            width: 100%;
+            max-width: 100%;
+            padding: 0px;
+        }
     }
 }
 

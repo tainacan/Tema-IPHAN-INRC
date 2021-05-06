@@ -50,8 +50,8 @@
                 </a>
             <?php } ?>
         </div>
-        <div class="is-mobile-noticias swiper-container col-sm-12">
-            <div class="swiper-wrapper col-sm-12">
+        <div class="is-mobile-noticias swiper-container">
+            <div class="swiper-wrapper">
                 <?php
                 for ($i = 0; $i < count($results); $i++) {
                 ?>

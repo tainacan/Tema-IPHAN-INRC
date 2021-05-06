@@ -47,3 +47,4 @@ require get_template_directory() . '/template-parts/filter-comments.php';
 //custom blocks
 require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
 
+require get_template_directory() . '/inc/shortcodes.php';
