@@ -97,6 +97,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "plugins/tainacan/archives";
 @import "plugins/tainacan/blocks";
 
+/* Styles related to Glossary plugin
+--------------------------------------------- */
+@import "plugins/glossary/archive";
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/

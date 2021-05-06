@@ -39,8 +39,8 @@ function iphan_block_pattern()
                 <!-- /wp:heading -->
 
                 <!-- wp:columns -->
-                <div class="wp-block-columns"><!-- wp:column {"className":"is-style-column-iphan-secundary is-style-column-iphan-secondary"} -->
-                <div class="wp-block-column is-style-column-iphan-secundary is-style-column-iphan-secondary"><!-- wp:heading {"level":4,"className":"is-style-default","textColor":"vermelho"} -->
+                <div class="wp-block-columns"><!-- wp:column {"className":"is-style-column-iphan-secondary is-style-column-iphan-secondary"} -->
+                <div class="wp-block-column is-style-column-iphan-secondary is-style-column-iphan-secondary"><!-- wp:heading {"level":4,"className":"is-style-default","textColor":"vermelho"} -->
                 <h4 class="is-style-default has-vermelho-color has-text-color"><strong>Título do bloco 1</strong></h4>
                 <!-- /wp:heading -->
 
@@ -55,8 +55,8 @@ function iphan_block_pattern()
                 <!-- /wp:buttons --></div>
                 <!-- /wp:column -->
 
-                <!-- wp:column {"className":"is-style-column-iphan-secundary is-style-column-iphan-secondary"} -->
-                <div class="wp-block-column is-style-column-iphan-secundary is-style-column-iphan-secondary"><!-- wp:heading {"level":4,"className":"is-style-default","textColor":"vermelho"} -->
+                <!-- wp:column {"className":"is-style-column-iphan-secondary is-style-column-iphan-secondary"} -->
+                <div class="wp-block-column is-style-column-iphan-secondary is-style-column-iphan-secondary"><!-- wp:heading {"level":4,"className":"is-style-default","textColor":"vermelho"} -->
                 <h4 class="is-style-default has-vermelho-color has-text-color"><strong>Título do bloco 2</strong></h4>
                 <!-- /wp:heading -->
 
@@ -144,8 +144,8 @@ function iphan_block_pattern()
             'content'     => '
                 <!-- wp:cover {"url":"' . $template_images_directory . 'iphan_bg_example.png","dimRatio":10,"align":"full"} -->
                 <div class="wp-block-cover alignfull has-background-dim-10 has-background-dim"><img class="wp-block-cover__image-background" alt="" src="' . $template_images_directory . 'iphan_bg_example.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
-                <div class="wp-block-columns"><!-- wp:column {"className":"is-style-column-iphan-secundary is-style-column-iphan-secondary"} -->
-                <div class="wp-block-column is-style-column-iphan-secundary is-style-column-iphan-secondary"><!-- wp:heading {"className":"is-style-title-iphan-underscore"} -->
+                <div class="wp-block-columns"><!-- wp:column {"className":"is-style-column-iphan-secondary is-style-column-iphan-secondary"} -->
+                <div class="wp-block-column is-style-column-iphan-secondary is-style-column-iphan-secondary"><!-- wp:heading {"className":"is-style-title-iphan-underscore"} -->
                 <h2 class="is-style-title-iphan-underscore">Título do bloco 1</h2>
                 <!-- /wp:heading -->
 
@@ -160,8 +160,8 @@ function iphan_block_pattern()
                 <!-- /wp:buttons --></div>
                 <!-- /wp:column -->
 
-                <!-- wp:column {"className":"is-style-column-iphan-secundary is-style-column-iphan-secondary"} -->
-                <div class="wp-block-column is-style-column-iphan-secundary is-style-column-iphan-secondary"><!-- wp:heading {"className":"is-style-title-iphan-underscore"} -->
+                <!-- wp:column {"className":"is-style-column-iphan-secondary is-style-column-iphan-secondary"} -->
+                <div class="wp-block-column is-style-column-iphan-secondary is-style-column-iphan-secondary"><!-- wp:heading {"className":"is-style-title-iphan-underscore"} -->
                 <h2 class="is-style-title-iphan-underscore">Título do bloco 2</h2>
                 <!-- /wp:heading -->
 

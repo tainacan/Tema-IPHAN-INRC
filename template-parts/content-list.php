@@ -1,3 +1,4 @@
+
 <?php
 if (defined('TAINACAN_VERSION') && (!isset($_GET['onlyposts']) || !$_GET['onlyposts']) && (!isset($_GET['onlypages']) || !$_GET['onlypages']) && is_search()) {
     $post_type = get_post_type();

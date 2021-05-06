@@ -249,6 +249,93 @@ function iphan_inrc_customize_register($wp_customize)
         'settings' => 'label_banner_2',
         'priority' => 4,
     ));
+
+    /* Opções da Lista do Glossário */
+    $wp_customize->add_section('iphan_inrc_glossary_archive', array(
+        'title'         => __('Página do Glossário', 'iphan-inrc'),
+        'description'   => __('Opções relacionadas à página do Glossário', 'iphan-inrc')
+    ));
+
+    /* Descrição do Glossário */
+    $wp_customize->add_setting('iphan_inrc_glossary_archive_title', array(
+        'default'           => 'Glossário INRC',
+        'type'              => 'theme_mod',
+        'transport'         => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('iphan_inrc_glossary_archive_title', array(
+        'label'     => __('Título da página', 'iphan-inrc'),
+        'type'      => 'text',
+        'section'   => 'iphan_inrc_glossary_archive',
+        'settings'  => 'iphan_inrc_glossary_archive_title',
+        'priority'  => 1,
+    ));
+    $wp_customize->selective_refresh->add_partial( 'iphan_inrc_glossary_archive_title', array(
+        'selector'          => '.archive-title-glossary',
+        'render_callback'   => '__return_false',
+        'fallback_refresh'  => true
+    ));
+
+    /* Descrição do Glossário */
+    $wp_customize->add_setting('iphan_inrc_glossary_archive_description', array(
+        'default'           => 'Conheça aqui os termos do Glossário desenvolvido pelo IPHAN INRC.',
+        'type'              => 'theme_mod',
+        'transport'         => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('iphan_inrc_glossary_archive_description', array(
+        'label'     => __('Descrição abaixo do título da página', 'iphan-inrc'),
+        'type'      => 'textarea',
+        'section'   => 'iphan_inrc_glossary_archive',
+        'settings'  => 'iphan_inrc_glossary_archive_description',
+        'priority'  => 1,
+    ));
+    $wp_customize->selective_refresh->add_partial( 'iphan_inrc_glossary_archive_description', array(
+        'selector'          => '.archive-description-glossary',
+        'render_callback'   => '__return_false',
+        'fallback_refresh'  => true
+    ));
+
+    /* Número de colunas na listagem do Glossário */
+    $wp_customize->add_setting('iphan_inrc_glossary_archive_columns_count', array(
+        'default'           => 2,
+        'type'              => 'theme_mod',
+        'transport'         => 'postMessage',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('iphan_inrc_glossary_archive_columns_count', array(
+        'label'     => __('Quantidade de máxima de colunas', 'iphan-inrc'),
+        'description'     => __('O máximo de colunas da lista de termos para telas grandes. Em telas menores, o valor pode pode ser menor que o mostrado.', 'iphan-inrc'),
+        'type'      => 'number',
+        'section'   => 'iphan_inrc_glossary_archive',
+        'settings'  => 'iphan_inrc_glossary_archive_columns_count',
+        'priority'  => 1,
+        'input_attrs' => array(
+            'min'   => 1,
+            'max'   => 4,
+            'step'  => 1
+        ),
+    ));
+    $wp_customize->selective_refresh->add_partial( 'iphan_inrc_glossary_archive_columns_count', array(
+        'selector'          => '.glossary-list',
+        'render_callback'   => '__return_false',
+        'fallback_refresh'  => true
+    ));
+
+    /* Largura ampla da lista de termos do glossário */
+    $wp_customize->add_setting('iphan_inrc_glossary_archive_alignwide', array(
+        'default'           => false,
+        'type'              => 'theme_mod',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox'
+    ));
+    $wp_customize->add_control('iphan_inrc_glossary_archive_alignwide', array(
+        'label'     => __('Usar largura ampla para a lista', 'iphan-inrc'),
+        'type'      => 'checkbox',
+        'section'   => 'iphan_inrc_glossary_archive',
+        'settings'  => 'iphan_inrc_glossary_archive_alignwide',
+        'priority'  => 1,
+    ));
 }
 add_action('customize_register', 'iphan_inrc_customize_register');
 
@@ -270,3 +357,18 @@ function iphan_inrc_customize_preview_js()
     wp_enqueue_script('iphan_inrc-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), IPHAN_INRC_VERSION, true);
 }
 add_action('customize_preview_init', 'iphan_inrc_customize_preview_js');
+
+/**
+ * Sanitize Checkbox
+ * 
+ * Accepts only "true" or "false" as possible values.
+ *
+ * @param $input
+ *
+ * @access public
+ * @since  1.0
+ * @return bool
+ */
+function sanitize_checkbox( $input ) {
+	return ( $input === true ) ? true : false;
+}

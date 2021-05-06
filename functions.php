@@ -207,6 +207,15 @@ function iphan_inrc_enqueue_editor_scripts()
 }
 add_action('enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts');
 
+function iphan_glossary_archive_pages() {
+	$glossary_post_type = get_post_type_object('glossary');
+
+	if ($glossary_post_type) {
+		//var_dump($glossary_post_type);
+	}
+}
+add_action('init', 'iphan_glossary_archive_pages');
+
 require get_template_directory() . '/inc/imports.php';
 
 ?>
