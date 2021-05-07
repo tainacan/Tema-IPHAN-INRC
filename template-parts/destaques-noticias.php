@@ -1,7 +1,7 @@
     <section class="destaques-noticias">
         <?php
         $defaults = array(
-            'numberposts'      => 0,
+            'numberposts'      => 4,
             'offset'           => 0,
             'category'         => 0,
             'orderby'          => 'post_date',
@@ -29,7 +29,7 @@
             </h1>
         </div>
         <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php if (count($results) < 4) {
-                                                                                                    echo $i + 1;
+                                                                                                    echo count($results);
                                                                                                 } else {
                                                                                                     echo '5';
                                                                                                 } ?> col-md-12 is-desktop">
@@ -37,7 +37,7 @@
             for ($i = 0; $i < count($results) && $i < 5; $i++) {
             ?>
                 <a class="display-<?php echo $i + 1 ?>-noticias-has-<?php if (count($results) < 4) {
-                                                                        echo $i + 1;
+                                                                        echo count($results);
                                                                     } else {
                                                                         echo 5;
                                                                     } ?>" href="<?php echo get_post_permalink($results[$i]->ID) ?>" style="background-image: url(' <?php echo get_the_post_thumbnail_url($results[$i]->ID) ?>')">
