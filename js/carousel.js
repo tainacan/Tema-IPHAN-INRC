@@ -14,7 +14,7 @@ jQuery(document).on('ready', function () {
 })
 
 jQuery(document).on('ready', function () {
-    const swiperRelacionados = new Swiper('.swiper-container', {
+    const swiperRelacionados = new Swiper('.swiper-container-posts-relacionados', {
         // Default parameters
         direction: 'horizontal',
         loop: false,

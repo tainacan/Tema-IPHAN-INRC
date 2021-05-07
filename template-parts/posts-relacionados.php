@@ -30,7 +30,7 @@ $results = get_posts($query);
 ?>
 <div class="posts-relacionados alignfull">
     <h1 class="is-style-title-iphan-underscore"><?php _e('Relacionados', 'iphan_inrc') ?></h1>
-    <div class="swiper-container">
+    <div class="swiper-container swiper-container-posts-relacionados">
         <div class="swiper-wrapper">
             <?php
             for ($i = 0; $i < count($results); $i++) {
