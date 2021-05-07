@@ -1,7 +1,7 @@
     <section class="destaques-noticias">
         <?php
         $defaults = array(
-            'numberposts'      => 4,
+            'numberposts'      => 5,
             'offset'           => 0,
             'category'         => 0,
             'orderby'          => 'post_date',
@@ -28,7 +28,7 @@
                 <?php _e('Notícias', 'iphan_inrc') ?>
             </h1>
         </div>
-        <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php if (count($results) < 4) {
+        <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php if (count($results) <= 4) {
                                                                                                     echo count($results);
                                                                                                 } else {
                                                                                                     echo '5';
@@ -36,7 +36,7 @@
             <?php
             for ($i = 0; $i < count($results) && $i < 5; $i++) {
             ?>
-                <a class="display-<?php echo $i + 1 ?>-noticias-has-<?php if (count($results) < 4) {
+                <a class="display-<?php echo $i + 1 ?>-noticias-has-<?php if (count($results) <= 4) {
                                                                         echo count($results);
                                                                     } else {
                                                                         echo 5;
