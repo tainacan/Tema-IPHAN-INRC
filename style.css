@@ -12997,11 +12997,12 @@ input[type="search"].search-bar__home {
 	}
 }
 
-:is(.destaques, .destaques-noticias) .grid-container span, :is(.destaques, .destaques-noticias) .grid-container h2 {
+:is(.destaques, .destaques-noticias) .grid-container span,
+:is(.destaques, .destaques-noticias) .grid-container h2 {
 	margin-top: auto;
 }
 
-:is(.destaques, .destaques-noticias) .grid-container .destaques-content {
+:is(.destaques, .destaques-noticias) .destaques-content {
 	margin-top: auto;
 	display: flex;
 	flex-direction: column;

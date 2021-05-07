@@ -30,19 +30,19 @@
                 padding: 0px;
             }
         }
-        & span, h2 {
+        & span,
+        h2 {
             margin-top: auto;
-        }
-        .destaques-content {
-            margin-top: auto;
-            display: flex;
-            flex-direction: column;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            margin-right: 20px;
         }
     }
-
+    .destaques-content {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
     & .div-destaques-noticias > div > a {
         background-size: cover;
         background-position: center;
