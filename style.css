@@ -13194,7 +13194,7 @@ input[type="search"].search-bar__home {
 	}
 }
 
-@media screen and (max-width: 1024px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 	:is(.destaques, .destaques-noticias) .grid-container-has-6,
 	:is(.destaques, .destaques-noticias) .grid-container-has-5,
 	:is(.destaques, .destaques-noticias) .grid-container-has-4,
@@ -13205,7 +13205,7 @@ input[type="search"].search-bar__home {
 	}
 }
 
-@media screen and (max-width: 1024px) and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 	:is(.destaques, .destaques-noticias) .grid-container-has-6,
 	:is(.destaques, .destaques-noticias) .grid-container-has-5,
 	:is(.destaques, .destaques-noticias) .grid-container-has-4,

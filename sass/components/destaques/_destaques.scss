@@ -219,20 +219,21 @@
         .display-5-has-5 {
             display: none !important;
         }
-        .grid-container-has-6,
-        .grid-container-has-5,
-        .grid-container-has-4,
-        .grid-container-has-3,
-        .grid-container-has-2,
-        .grid-container-has-1 {
-            @media screen and (max-width: $screen__md) {
-                display: flex;
-            }
-            @media screen and (min-width: $screen__md) {
-                display: grid;
-            }
+    }
+    .grid-container-has-6,
+    .grid-container-has-5,
+    .grid-container-has-4,
+    .grid-container-has-3,
+    .grid-container-has-2,
+    .grid-container-has-1 {
+        @media screen and (max-width: $screen__md) {
+            display: flex;
+        }
+        @media screen and (min-width: $screen__md) {
+            display: grid;
         }
     }
+
     .grid-container-has-6 {
         flex-wrap: wrap;
         margin-bottom: 150px;
