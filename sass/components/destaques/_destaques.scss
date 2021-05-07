@@ -30,7 +30,7 @@
                 padding: 0px;
             }
         }
-        & :is(span, h2) {
+        & span, h2 {
             margin-top: auto;
         }
         .destaques-content {

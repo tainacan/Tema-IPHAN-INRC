@@ -12997,7 +12997,7 @@ input[type="search"].search-bar__home {
 	}
 }
 
-:is(.destaques, .destaques-noticias) .grid-container :is(span, h2) {
+:is(.destaques, .destaques-noticias) .grid-container span, :is(.destaques, .destaques-noticias) .grid-container h2 {
 	margin-top: auto;
 }
 
