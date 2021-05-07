@@ -482,7 +482,7 @@
             "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
             "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
     }
-    :is(.display-1-noticias-has-5, .display-2-noticias-has-5, .display-3-noticias-has-5, .display-4-noticias-has-5, .display-5-noticias-has-5) {
+    & :is(.display-1-noticias-has-5, .display-2-noticias-has-5, .display-3-noticias-has-5, .display-4-noticias-has-5, .display-5-noticias-has-5) {
         border-radius: 10px;
     }
     .display-1-noticias-has-5 {
