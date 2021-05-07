@@ -2,7 +2,7 @@
 function destaqueshome()
 {
     $defaults = array(
-        'numberposts'      => 0,
+        'numberposts'      => 6,
         'offset'           => 0,
         'category'         => 0,
         'orderby'          => 'post_date',
@@ -29,23 +29,27 @@ function destaqueshome()
     $msg .= 'Destaques';
     $msg .= '</h1>';
     $msg .= '</div>';
-    /*    if (count($results) < 5) {
-        array_push($msg, '<div class="grid-container-has-' . count($results) + 1 . ' col-md-12 grid-container">');
+    if (count($results) < 5) {
+        $msg .= '<div class="grid-container-has-' . count($results) + 1 . ' col-md-12 grid-container">';
     } else {
-        array_push($msg, '<div class="grid-container-has-6 col-md-12 grid-container">');
+        $msg .= '<div class="grid-container-has-6 col-md-12 grid-container">';
     }
     for ($i = 0; $i < count($results) && $i < 6; $i++) {
         if (count($results) < 5) {
-            array_push($msg, '<a class="display-' . $i + 1 . '-has-' . count($results) + 1 . '" href="' . get_post_permalink($results[$i]->ID) . '" style="background-image: url(' . get_the_post_thumbnail_url($results[$i]->ID) . ')">');
+            $msg .= '<a class="display-';
+            $msg .= $i + 1;
+            $msg .= '-has-' . count($results) + 1 . '" href="' . get_post_permalink($results[$i]->ID) . '" style="background-image: url(' . get_the_post_thumbnail_url($results[$i]->ID) . ')">';
         } else {
-            array_push($msg, '<a class="display-' . $i + 1 . '-has-6' . '" href="' . get_post_permalink($results[$i]->ID) . '" style="background-image: url(' . get_the_post_thumbnail_url($results[$i]->ID) . ')">');
+            $msg .= '<a class="display-';
+            $msg .= $i + 1;
+            $msg .= '-has-6" href="' . get_post_permalink($results[$i]->ID) . '" style="background-image: url(' . get_the_post_thumbnail_url($results[$i]->ID) . ')">';
         }
-        array_push($msg, ' <div class="destaques-content">');
-        array_push($msg, '<span class="destaques-cat">' . get_the_category($results[$i]->ID)[0]->cat_name . '</span>');
-        array_push($msg, '<span class="destaques-title">' . get_the_title($results[$i]) . '</span>');
-        array_push($msg, '</div>');
-        array_push($msg, '</a>');
-    } */
+        $msg .= ' <div class="destaques-content">';
+        $msg .= '<span class="destaques-cat">' . get_the_category($results[$i]->ID)[0]->cat_name . '</span>';
+        $msg .= '<span class="destaques-title">' . get_the_title($results[$i]) . '</span>';
+        $msg .= '</div>';
+        $msg .= '</a>';
+    }
     $msg .= '</section>';
     return $msg;
 }
