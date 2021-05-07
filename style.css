@@ -13040,11 +13040,11 @@ input[type="search"].search-bar__home {
 	margin-left: 20px;
 }
 
-:is(.destaques, .destaques-noticias) .destaques > a {
+:is(.destaques, .destaques-noticias) > a {
 	padding: 0px;
 }
 
-:is(.destaques, .destaques-noticias) .destaques a {
+:is(.destaques, .destaques-noticias) a {
 	border-radius: 10px;
 }
 
