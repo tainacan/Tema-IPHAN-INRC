@@ -50,7 +50,7 @@
                 </a>
             <?php } ?>
         </div>
-        <div class="is-mobile-noticias swiper-container">
+        <div class="is-mobile-noticias swiper-container swiper-container-noticias-mobile">
             <div class="swiper-wrapper">
                 <?php
                 for ($i = 0; $i < count($results); $i++) {
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="is-mobile-noticias navigation-destaques-swiper">
-            <div class="swiper-button-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
-            <div class="swiper-button-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
+            <div class="swiper-button-prev navigation-noticias-mobile-prev"><i class="tainacan-icon tainacan-icon-previous"></i></div>
+            <div class="swiper-button-next navigation-noticias-mobile-next"><i class="tainacan-icon tainacan-icon-next"></i></div>
         </div>
     </section>

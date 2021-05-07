@@ -1,5 +1,5 @@
 jQuery(document).on('ready', function () {
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.swiper-container-noticias-mobile', {
         // Optional parameters
         direction: 'horizontal',
         loop: false,
@@ -7,8 +7,8 @@ jQuery(document).on('ready', function () {
         spaceBetween: 4,
         // Navigation arrows
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.navigation-noticias-mobile-next',
+            prevEl: '.navigation-noticias-mobile-next',
         },
     });
 })
