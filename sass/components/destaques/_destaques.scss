@@ -1,4 +1,4 @@
-:is(.destaques, .destaques-noticias) {
+:is(.destaques, .destaques-noticias, .posts-relacionados) {
     .grid-container {
         display: flex;
         @media screen and (min-width: $screen__sm) {
