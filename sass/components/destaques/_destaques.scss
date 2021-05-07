@@ -1,621 +1,618 @@
-.grid-container {
-    display: flex;
-    @media screen and (min-width: $screen__sm) {
-        flex-direction: row;
-    }
-    @media screen and (max-width: $screen__sm) {
-        flex-direction: column;
-        padding: 0px;
-    }
-    & > a {
-        background-size: cover;
+:is(.destaques, .destaques-noticias) {
+    .grid-container {
         display: flex;
-        background-position: center;
+        @media screen and (min-width: $screen__sm) {
+            flex-direction: row;
+        }
         @media screen and (max-width: $screen__sm) {
-            height: 300px;
-            width: 100%;
-            max-width: 100%;
+            flex-direction: column;
             padding: 0px;
         }
+        padding-left: 0px;
+        @media screen and (min-width: $screen__lg) {
+            height: 550px;
+        }
+        @media screen and (min-width: $screen__md) and (max-width: $screen__lg) {
+            height: 435px;
+        }
+        @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+            height: 325px;
+        }
+        margin-bottom: 20px;
+        & > a {
+            background-size: cover;
+            display: flex;
+            background-position: center;
+            @media screen and (max-width: $screen__sm) {
+                height: 300px;
+                width: 100%;
+                max-width: 100%;
+                padding: 0px;
+            }
+        }
+        & :is(span, h2) {
+            margin-top: auto;
+        }
+        .destaques-content {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
     }
-}
 
-.div-destaques-noticias > div > a {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.grid-container :is(span, h2) {
-    margin-top: auto;
-}
-
-.destaques-content {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-}
-
-.grid-container {
-    padding-left: 0px;
-    @media screen and (min-width: $screen__lg) {
-        height: 550px;
+    & .div-destaques-noticias > div > a {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-    @media screen and (min-width: $screen__md) and (max-width: $screen__lg) {
+
+    .padding-destaques {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .destaque-bottom-right {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 50%;
+    }
+
+    .destaque-bottom > a {
+        @media screen and (max-width: $screen__sm) {
+            height: 300px;
+            min-height: 300px;
+        }
+    }
+
+    .destaque-top:last-child {
+        margin-left: 20px;
+    }
+
+    .destaques > a {
+        padding: 0px;
+    }
+
+    .destaques a {
+        border-radius: 10px;
+    }
+
+    .destaques-cat {
+        text-transform: uppercase;
+        color: $color__amarelo;
+        font-size: 1.15rem;
+        font-weight: 900;
+        margin-bottom: 5px;
+    }
+
+    .destaques-title {
+        color: $color__branco;
+        font-size: 1.15rem;
+        font-weight: 900;
+    }
+
+    .destaques-cat,
+    .destaques-title {
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-right: auto;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .is-mobile {
+        @media screen and (max-width: $screen__sm) {
+            display: none;
+        }
+        @media screen and (min-width: $screen__sm) {
+            padding-left: 20px;
+            padding-right: 5px;
+        }
+    }
+
+    .is-mobile-noticias {
+        position: relative;
+        @media screen and (min-width: $screen__sm) {
+            display: none;
+        }
+    }
+
+    section.destaques {
+        @media screen and (max-width: $screen__sm) {
+            max-width: 100%;
+        }
+    }
+
+    .destaques-noticias {
+        @media screen and (min-width: $screen__sm) {
+            margin-bottom: 150px;
+        }
+    }
+    .div-destaques-noticias {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .destaques-noticias > div,
+    .div-destaques-noticias > div {
+        padding: 0px;
+    }
+
+    .div-destaques-noticias > div > a {
+        margin-top: auto;
+        display: flex;
+    }
+
+    .swiper-container {
+        height: 225px;
+        margin-bottom: 50px;
+    }
+
+    .is-desktop {
+        @media screen and (max-width: $screen__sm) {
+            display: none !important;
+        }
+    }
+
+    .titulo-destaques {
+        @media screen and (max-width: $screen__sm) {
+            margin-top: 50px;
+        }
+    }
+
+    .swiper-wrapper > a.swiper-slide {
+        padding-left: 0px;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        border-radius: 4px;
+    }
+
+    .swiper-wrapper {
+        padding: 0px;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        display: none;
+    }
+
+    :is(.swiper-button-prev, .swiper-button-next) {
+        top: 100% !important;
+    }
+
+    :is(.swiper-button-prev, .swiper-button-next) > i {
+        color: $color__vermelho1;
+        border: 1px solid $color__vermelho1;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    :is(.swiper-button-prev, .swiper-button-next):hover > i {
+        color: $color__branco;
+        border: 1px solid $color__vermelho1;
+        background-color: $color__vermelho1;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
+        left: 0px !important;
+    }
+
+    :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-next {
+        left: 35px !important;
+    }
+
+    :is(a.swiper-slide),
+    :is(.is-desktop, .grid-container) a {
+        background-color: $color__vermelho1;
+    }
+
+    // destaques home inicio
+
+    @media screen and (max-width: $screen__md) {
+        .display-6-has-6,
+        .display-5-has-6,
+        .display-5-has-5 {
+            display: none !important;
+        }
+        .grid-container-has-6,
+        .grid-container-has-5,
+        .grid-container-has-4,
+        .grid-container-has-3,
+        .grid-container-has-2,
+        .grid-container-has-1 {
+            @media screen and (max-width: $screen__md) {
+                display: flex;
+            }
+            @media screen and (min-width: $screen__md) {
+                display: grid;
+            }
+        }
+    }
+    .grid-container-has-6 {
+        flex-wrap: wrap;
+        margin-bottom: 150px;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+            "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+            "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+            "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
+            "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
+            "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
+            "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
+            "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6"
+            "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6"
+            "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6";
+    }
+
+    .display-1-has-6 {
+        grid-area: display-1-has-6;
         height: 435px;
     }
-    @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
-        height: 325px;
+
+    .display-2-has-6 {
+        grid-area: display-2-has-6;
+        height: 435px;
     }
-    margin-bottom: 20px;
-}
 
-.padding-destaques {
-    padding-left: 20px;
-    padding-top: 20px;
-}
-
-.destaque-bottom-right {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 50%;
-}
-
-.destaque-bottom > a {
-    @media screen and (max-width: $screen__sm) {
-        height: 300px;
-        min-height: 300px;
+    .display-3-has-6 {
+        grid-area: display-3-has-6;
+        height: 550px;
     }
-}
 
-.destaque-top:last-child {
-    margin-left: 20px;
-}
-
-.destaques > a {
-    padding: 0px;
-}
-
-.destaques a {
-    border-radius: 10px;
-}
-
-.destaques-cat {
-    text-transform: uppercase;
-    color: $color__amarelo;
-    font-size: 1.15rem;
-    font-weight: 900;
-    margin-bottom: 5px;
-}
-
-.destaques-title {
-    color: $color__branco;
-    font-size: 1.15rem;
-    font-weight: 900;
-}
-
-.destaques-cat,
-.destaques-title {
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-right: auto;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-.is-mobile {
-    @media screen and (max-width: $screen__sm) {
-        display: none;
+    .display-4-has-6 {
+        grid-area: display-4-has-6;
+        height: 550px;
     }
-    @media screen and (min-width: $screen__sm) {
-        padding-left: 20px;
-        padding-right: 5px;
-    }
-}
 
-.is-mobile-noticias {
-    position: relative;
-    @media screen and (min-width: $screen__sm) {
-        display: none;
+    .display-5-has-6 {
+        grid-area: display-5-has-6;
+        height: 265px;
     }
-}
 
-section.destaques {
-    @media screen and (max-width: $screen__sm) {
-        max-width: 100%;
+    .display-6-has-6 {
+        grid-area: display-6-has-6;
+        height: 265px;
     }
-}
 
-.destaques-noticias {
-    @media screen and (min-width: $screen__sm) {
+    .grid-container-has-5 {
+        flex-wrap: wrap;
         margin-bottom: 150px;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+            "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+            "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+            "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
+            "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+            "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+            "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+            "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+            "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
+            "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5";
     }
-}
-.div-destaques-noticias {
-    display: flex;
-    flex-direction: row;
-}
 
-.destaques-noticias > div,
-.div-destaques-noticias > div {
-    padding: 0px;
-}
-
-.div-destaques-noticias > div > a {
-    margin-top: auto;
-    display: flex;
-}
-
-.swiper-container {
-    height: 225px;
-    margin-bottom: 50px;
-}
-
-.is-desktop {
-    @media screen and (max-width: $screen__sm) {
-        display: none !important;
+    .display-1-has-5 {
+        grid-area: display-1-has-5;
+        height: 435px;
     }
-}
 
-.titulo-destaques {
-    @media screen and (max-width: $screen__sm) {
-        margin-top: 50px;
+    .display-2-has-5 {
+        grid-area: display-2-has-5;
+        height: 435px;
     }
-}
 
-.swiper-wrapper > a.swiper-slide {
-    padding-left: 0px;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    border-radius: 4px;
-}
+    .display-3-has-5 {
+        grid-area: display-3-has-5;
+        height: 550px;
+    }
 
-.swiper-wrapper {
-    padding: 0px;
-}
+    .display-4-has-5 {
+        grid-area: display-4-has-5;
+        height: 550px;
+    }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    display: none;
-}
-
-:is(.swiper-button-prev, .swiper-button-next) {
-    top: 100% !important;
-}
-
-:is(.swiper-button-prev, .swiper-button-next) > i {
-    color: $color__vermelho1;
-    border: 1px solid $color__vermelho1;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-:is(.swiper-button-prev, .swiper-button-next):hover > i {
-    color: $color__branco;
-    border: 1px solid $color__vermelho1;
-    background-color: $color__vermelho1;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-:is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
-    left: 0px !important;
-}
-
-:is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-next {
-    left: 35px !important;
-}
-
-:is(a.swiper-slide),
-:is(.is-desktop, .grid-container) a {
-    background-color: $color__vermelho1;
-}
-
-// destaques home inicio
-
-@media screen and (max-width: $screen__md) {
-    .display-6-has-6,
-    .display-5-has-6,
     .display-5-has-5 {
-        display: none !important;
+        grid-area: display-5-has-5;
+        height: 550px;
     }
-    .grid-container-has-6,
-    .grid-container-has-5,
-    .grid-container-has-4,
-    .grid-container-has-3,
-    .grid-container-has-2,
+
+    .grid-container-has-4 {
+        flex-wrap: wrap;
+        margin-bottom: 150px;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+            "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+            "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+            "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
+            "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+            "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+            "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+            "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+            "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
+            "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4";
+    }
+
+    .display-1-has-4 {
+        grid-area: display-1-has-4;
+        height: 550px;
+    }
+
+    .display-2-has-4 {
+        grid-area: display-2-has-4;
+        height: 550px;
+    }
+
+    .display-3-has-4 {
+        grid-area: display-3-has-4;
+        height: 435px;
+    }
+
+    .display-4-has-4 {
+        grid-area: display-4-has-4;
+        height: 435px;
+    }
+
+    .grid-container-has-3 {
+        flex-wrap: wrap;
+        margin-bottom: 150px;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
+            "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
+            "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
+            "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
+            "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
+            "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
+            "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
+            "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
+            "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
+            "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3";
+    }
+
+    .display-1-has-3 {
+        grid-area: display-1-has-3;
+        height: 550px;
+    }
+
+    .display-2-has-3 {
+        grid-area: display-2-has-3;
+        height: 550px;
+    }
+
+    .display-3-has-3 {
+        grid-area: display-3-has-3;
+        height: 550px;
+    }
+
+    .grid-container-has-2 {
+        flex-wrap: wrap;
+        margin-bottom: 150px;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2";
+    }
+
+    .display-1-has-2 {
+        grid-area: display-1-has-2;
+        height: 550px;
+    }
+
+    .display-2-has-2 {
+        grid-area: display-2-has-2;
+        height: 550px;
+    }
+
     .grid-container-has-1 {
-        @media screen and (max-width: $screen__md) {
-            display: flex;
-        }
-        @media screen and (min-width: $screen__md) {
-            display: grid;
-        }
+        flex-wrap: wrap;
+        margin-bottom: 150px;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
+            "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2";
     }
-}
-.grid-container-has-6 {
-    flex-wrap: wrap;
-    margin-bottom: 150px;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
-        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
-        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
-        "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6"
-        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
-        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
-        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6"
-        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6"
-        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6"
-        "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6";
-}
 
-.display-1-has-6 {
-    grid-area: display-1-has-6;
-    height: 435px;
-}
+    .display-1-has-1 {
+        grid-area: display-1-has-2;
+        height: 550px;
+    }
 
-.display-2-has-6 {
-    grid-area: display-2-has-6;
-    height: 435px;
-}
+    // destaques home fim
+    .grid-container-noticias > a {
+        display: flex;
+    }
+    :is(.grid-container-noticias, .grid-container) > a {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-decoration: none;
+    }
 
-.display-3-has-6 {
-    grid-area: display-3-has-6;
-    height: 550px;
-}
+    // Inicio destaques noticias
 
-.display-4-has-6 {
-    grid-area: display-4-has-6;
-    height: 550px;
-}
+    .grid-container-noticias-has-5 {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
+        grid-template-rows: repeat(6, calc(590px / 6));
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
+            "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
+    }
+    :is(.display-1-noticias-has-5, .display-2-noticias-has-5, .display-3-noticias-has-5, .display-4-noticias-has-5, .display-5-noticias-has-5) {
+        border-radius: 10px;
+    }
+    .display-1-noticias-has-5 {
+        grid-area: display-1-noticias-has-5;
+    }
 
-.display-5-has-6 {
-    grid-area: display-5-has-6;
-    height: 265px;
-}
+    .display-2-noticias-has-5 {
+        grid-area: display-2-noticias-has-5;
+    }
 
-.display-6-has-6 {
-    grid-area: display-6-has-6;
-    height: 265px;
-}
+    .display-3-noticias-has-5 {
+        grid-area: display-3-noticias-has-5;
+    }
 
-.grid-container-has-5 {
-    flex-wrap: wrap;
-    margin-bottom: 150px;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
-        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
-        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
-        "display-1-has-5 display-1-has-5 display-1-has-5 display-1-has-5 display-2-has-5 display-2-has-5"
-        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
-        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
-        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
-        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
-        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5"
-        "display-3-has-5 display-3-has-5 display-4-has-5 display-4-has-5 display-5-has-5 display-5-has-5";
-}
+    .display-4-noticias-has-5 {
+        grid-area: display-4-noticias-has-5;
+    }
 
-.display-1-has-5 {
-    grid-area: display-1-has-5;
-    height: 435px;
-}
+    .display-5-noticias-has-5 {
+        grid-area: display-5-noticias-has-5;
+    }
 
-.display-2-has-5 {
-    grid-area: display-2-has-5;
-    height: 435px;
-}
+    .grid-container-noticias-has-4 {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
+        grid-template-rows: repeat(6, calc(590px / 6));
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
+            "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
+            "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
+            "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
+            "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
+            "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4";
+    }
+    :is(.display-1-noticias-has-4, .display-2-noticias-has-4, .display-3-noticias-has-4, .display-4-noticias-has-4) {
+        border-radius: 10px;
+    }
+    .display-1-noticias-has-4 {
+        grid-area: display-1-noticias-has-4;
+    }
 
-.display-3-has-5 {
-    grid-area: display-3-has-5;
-    height: 550px;
-}
+    .display-2-noticias-has-4 {
+        grid-area: display-2-noticias-has-4;
+    }
 
-.display-4-has-5 {
-    grid-area: display-4-has-5;
-    height: 550px;
-}
+    .display-3-noticias-has-4 {
+        grid-area: display-3-noticias-has-4;
+    }
 
-.display-5-has-5 {
-    grid-area: display-5-has-5;
-    height: 550px;
-}
+    .display-4-noticias-has-4 {
+        grid-area: display-4-noticias-has-4;
+    }
 
-.grid-container-has-4 {
-    flex-wrap: wrap;
-    margin-bottom: 150px;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
-        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
-        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
-        "display-1-has-4 display-1-has-4 display-1-has-4 display-1-has-4 display-2-has-4 display-2-has-4"
-        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
-        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
-        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
-        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
-        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4"
-        "display-3-has-4 display-3-has-4 display-3-has-4 display-3-has-4 display-4-has-4 display-4-has-4";
-}
+    .grid-container-noticias-has-3 {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
+        grid-template-rows: repeat(6, calc(590px / 6));
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3"
+            "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3"
+            "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3"
+            "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3"
+            "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3"
+            "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3";
+    }
+    :is(.display-1-noticias-has-3, .display-2-noticias-has-3, .display-3-noticias-has-3) {
+        border-radius: 10px;
+    }
+    .display-1-noticias-has-3 {
+        grid-area: display-1-noticias-has-3;
+    }
 
-.display-1-has-4 {
-    grid-area: display-1-has-4;
-    height: 550px;
-}
+    .display-2-noticias-has-3 {
+        grid-area: display-2-noticias-has-3;
+    }
 
-.display-2-has-4 {
-    grid-area: display-2-has-4;
-    height: 550px;
-}
+    .display-3-noticias-has-3 {
+        grid-area: display-3-noticias-has-3;
+    }
 
-.display-3-has-4 {
-    grid-area: display-3-has-4;
-    height: 435px;
-}
+    .grid-container-noticias-has-2 {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, calc(590px / 6));
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2";
+    }
+    :is(.display-1-noticias-has-2, .display-2-noticias-has-2) {
+        border-radius: 10px;
+    }
+    .display-1-noticias-has-2 {
+        grid-area: display-1-noticias-has-2;
+    }
 
-.display-4-has-4 {
-    grid-area: display-4-has-4;
-    height: 435px;
-}
+    .display-2-noticias-has-2 {
+        grid-area: display-2-noticias-has-2;
+    }
 
-.grid-container-has-3 {
-    flex-wrap: wrap;
-    margin-bottom: 150px;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
-        "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
-        "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
-        "display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3 display-1-has-3"
-        "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
-        "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
-        "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
-        "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
-        "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3"
-        "display-2-has-3 display-2-has-3 display-2-has-3 display-2-has-3 display-3-has-3 display-3-has-3";
-}
+    .grid-container-noticias-has-1 {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, calc(590px / 6));
+        gap: 20px 20px;
+        grid-template-areas:
+            "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
+            "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
+            "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
+            "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
+            "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
+            "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1";
+    }
+    :is(.display-1-noticias-has-1) {
+        border-radius: 10px;
+    }
+    .display-1-noticias-has-1 {
+        grid-area: display-1-noticias-has-1;
+    }
 
-.display-1-has-3 {
-    grid-area: display-1-has-3;
-    height: 550px;
-}
-
-.display-2-has-3 {
-    grid-area: display-2-has-3;
-    height: 550px;
-}
-
-.display-3-has-3 {
-    grid-area: display-3-has-3;
-    height: 550px;
-}
-
-.grid-container-has-2 {
-    flex-wrap: wrap;
-    margin-bottom: 150px;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-2-has-2 display-2-has-2 display-2-has-2";
-}
-
-.display-1-has-2 {
-    grid-area: display-1-has-2;
-    height: 550px;
-}
-
-.display-2-has-2 {
-    grid-area: display-2-has-2;
-    height: 550px;
-}
-
-.grid-container-has-1 {
-    flex-wrap: wrap;
-    margin-bottom: 150px;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2"
-        "display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2 display-1-has-2";
-}
-
-.display-1-has-1 {
-    grid-area: display-1-has-2;
-    height: 550px;
-}
-
-// destaques home fim
-.grid-container-noticias > a {
-    display: flex;
-}
-:is(.grid-container-noticias, .grid-container) > a {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-decoration: none;
-}
-
-// Inicio destaques noticias
-
-.grid-container-noticias-has-5 {
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
-    grid-template-rows: repeat(6, calc(590px / 6));
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
-        "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
-        "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-        "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-        "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-        "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
-}
-:is(.display-1-noticias-has-5, .display-2-noticias-has-5, .display-3-noticias-has-5, .display-4-noticias-has-5, .display-5-noticias-has-5) {
-    border-radius: 10px;
-}
-.display-1-noticias-has-5 {
-    grid-area: display-1-noticias-has-5;
-}
-
-.display-2-noticias-has-5 {
-    grid-area: display-2-noticias-has-5;
-}
-
-.display-3-noticias-has-5 {
-    grid-area: display-3-noticias-has-5;
-}
-
-.display-4-noticias-has-5 {
-    grid-area: display-4-noticias-has-5;
-}
-
-.display-5-noticias-has-5 {
-    grid-area: display-5-noticias-has-5;
-}
-
-.grid-container-noticias-has-4 {
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
-    grid-template-rows: repeat(6, calc(590px / 6));
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
-        "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
-        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
-        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
-        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
-        "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4";
-}
-:is(.display-1-noticias-has-4, .display-2-noticias-has-4, .display-3-noticias-has-4, .display-4-noticias-has-4) {
-    border-radius: 10px;
-}
-.display-1-noticias-has-4 {
-    grid-area: display-1-noticias-has-4;
-}
-
-.display-2-noticias-has-4 {
-    grid-area: display-2-noticias-has-4;
-}
-
-.display-3-noticias-has-4 {
-    grid-area: display-3-noticias-has-4;
-}
-
-.display-4-noticias-has-4 {
-    grid-area: display-4-noticias-has-4;
-}
-
-.grid-container-noticias-has-3 {
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
-    grid-template-rows: repeat(6, calc(590px / 6));
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3"
-        "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3 display-2-noticias-has-3"
-        "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3"
-        "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3"
-        "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3"
-        "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3";
-}
-:is(.display-1-noticias-has-3, .display-2-noticias-has-3, .display-3-noticias-has-3) {
-    border-radius: 10px;
-}
-.display-1-noticias-has-3 {
-    grid-area: display-1-noticias-has-3;
-}
-
-.display-2-noticias-has-3 {
-    grid-area: display-2-noticias-has-3;
-}
-
-.display-3-noticias-has-3 {
-    grid-area: display-3-noticias-has-3;
-}
-
-.grid-container-noticias-has-2 {
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(6, calc(590px / 6));
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-        "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-        "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-        "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-        "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-        "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2";
-}
-:is(.display-1-noticias-has-2, .display-2-noticias-has-2) {
-    border-radius: 10px;
-}
-.display-1-noticias-has-2 {
-    grid-area: display-1-noticias-has-2;
-}
-
-.display-2-noticias-has-2 {
-    grid-area: display-2-noticias-has-2;
-}
-
-.grid-container-noticias-has-1 {
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(6, calc(590px / 6));
-    gap: 20px 20px;
-    grid-template-areas:
-        "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
-        "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
-        "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
-        "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
-        "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
-        "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1";
-}
-:is(.display-1-noticias-has-1) {
-    border-radius: 10px;
-}
-.display-1-noticias-has-1 {
-    grid-area: display-1-noticias-has-1;
-}
-
-:is(.grid-container-noticias-has-0, .grid-container-has-0) {
-    display: none;
+    :is(.grid-container-noticias-has-0, .grid-container-has-0) {
+        display: none;
+    }
 }
