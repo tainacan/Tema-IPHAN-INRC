@@ -54,6 +54,11 @@
                 </a>
             <?php } ?>
         </div>
+        <div class="titulo-destaques is-mobile-noticias ">
+            <h1 class="is-style-title-iphan-underscore">
+                <?php _e('Notícias', 'iphan_inrc') ?>
+            </h1>
+        </div>
         <div class="is-mobile-noticias swiper-container swiper-container-noticias-mobile">
             <div class="swiper-wrapper">
                 <?php
