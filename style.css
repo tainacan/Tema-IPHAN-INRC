@@ -10716,6 +10716,7 @@ textarea {
 		border-right: 1px solid #d9d9d9;
 		border-bottom: 5px solid #58020b;
 		flex-direction: column;
+		margin-top: 10px;
 		background-color: #ffffff;
 		padding: 10px 20px;
 		float: left;
@@ -10723,7 +10724,6 @@ textarea {
 		top: 100%;
 		left: -999em;
 		z-index: 99999;
-		margin-top: 0px;
 		transition: margin 0.3s ease-out;
 	}
 	.main-navigation ul ul.sub-menu::before {

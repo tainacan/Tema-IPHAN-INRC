@@ -32,6 +32,7 @@
                 border-right: 1px solid $color__cinza3;
                 border-bottom: 5px solid $color__vermelho1;
                 flex-direction: column;
+                margin-top: 10px;
                 background-color: $color__branco;
                 padding: 10px 20px;
                 float: left;
@@ -39,7 +40,6 @@
                 top: 100%;
                 left: -999em;
                 z-index: 99999;
-                margin-top: 0px;
                 transition: margin 0.3s ease-out;
                 &::before {
                     content: "";
