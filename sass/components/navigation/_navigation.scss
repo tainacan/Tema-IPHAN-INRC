@@ -167,12 +167,8 @@
 }
 
 .admin-bar #primary-menu {
-    @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-        top: 134px;
-    }
-
-    @media screen and (max-width: $screen__sm) and (orientation: landscape) {
-        top: 135px;
+    @media screen and (max-width: $screen__sm) {
+        top: 22px;
     }
 }
 

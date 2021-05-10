@@ -10869,15 +10869,9 @@ textarea {
 	text-decoration: none;
 }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media screen and (max-width: 768px) {
 	.admin-bar #primary-menu {
-		top: 134px;
-	}
-}
-
-@media screen and (max-width: 768px) and (orientation: landscape) {
-	.admin-bar #primary-menu {
-		top: 135px;
+		top: 22px;
 	}
 }
 
