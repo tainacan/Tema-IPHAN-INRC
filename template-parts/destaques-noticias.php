@@ -1,7 +1,7 @@
     <section class="destaques-noticias">
         <?php
         $defaults = array(
-            'numberposts'      => 5,
+            'numberposts'      => 4,
             'offset'           => 0,
             'category'         => 0,
             'orderby'          => 'post_date',
@@ -23,8 +23,8 @@
         );
         $results = get_posts($defaults);
         ?>
-        <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php if (count($results) + 1 <= 3) {
-                                                                                                    echo count($results);
+        <div class="div-destaques-noticias grid-container-noticias grid-container-noticias-has-<?php if (count($results) + 1 <= 4) {
+                                                                                                    echo count($results) + 1;
                                                                                                 } else {
                                                                                                     echo '5';
                                                                                                 } ?> col-md-12 is-desktop">
