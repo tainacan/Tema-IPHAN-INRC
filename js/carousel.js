@@ -8,7 +8,7 @@ jQuery(document).on('ready', function () {
         // Navigation arrows
         navigation: {
             nextEl: '.navigation-noticias-mobile-next',
-            prevEl: '.navigation-noticias-mobile-next',
+            prevEl: '.navigation-noticias-mobile-prev',
         },
     });
 })
