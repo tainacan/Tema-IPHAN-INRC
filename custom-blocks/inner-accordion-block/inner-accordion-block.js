@@ -4,23 +4,6 @@ var el = wp.element.createElement,
 var InnerBlocks = wp.blockEditor.InnerBlocks;
 var useBlockProps = wp.blockEditor.useBlockProps;
 
-
-{/* <svg enable-background="new 0 0 110 110" version="1.1" viewBox="0 0 137.5 137.5">
-        <g transform="translate(.054061 -1.114)">
-            <g transform="matrix(1.143 0 0 1.143 5.8333 7.0014)">
-                <path d="m7 6v98h96v-98zm92 94h-88v-12h88zm0-16h-88v-42h88zm0-46h-88v-12h88zm-88-16v-12h88v12z"/>
-                 <g transform="translate(-1.0251 .17085)" aria-label="+">
-                    <path d="m92.094 12.331v2.9718h2.9604v1.3384h-2.9604v2.9718h-1.3498v-2.9718h-2.9604v-1.3384h2.9604v-2.9718z" stroke-width=".29037"/>
-                </g>
-                <g transform="translate(-1.0251 78.25)" aria-label="+">
-                    <path d="m92.094 12.331v2.9718h2.9604v1.3384h-2.9604v2.9718h-1.3498v-2.9718h-2.9604v-1.3384h2.9604v-2.9718z" 
-                    stroke-width=".29037"/>
-                </g>
-                <path d="m86.759 31.413h7.2706v1.3384h-7.2706z" style="paint-order:normal"/>
-            </g>
-        </g>
-    </svg> */}
-
 const accordionIcon = el('svg', { version: '1.1', viewBox: '0 0 137.5 137.5' },
     el('g', { transform: "translate(.054061 -1.114)" },
         el('g', { transform: "matrix(1.143 0 0 1.143 5.8333 7.0014)" },
