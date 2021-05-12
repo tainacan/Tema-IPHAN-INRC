@@ -44,7 +44,14 @@ require get_template_directory() . '/template-parts/filter-comments.php';
 
 /* ----------------------------- CUSTOM BLOCKS IMPORTS  ----------------------------- */
 
-//custom blocks
+// inner accordion block
 require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
+
+// card block do IPHAN
+require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
+
+
+
+/* ----------------------------- SHORTCODES  ----------------------------- */
 
 require get_template_directory() . '/inc/shortcodes.php';
