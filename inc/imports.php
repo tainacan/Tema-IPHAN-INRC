@@ -48,7 +48,7 @@ require get_template_directory() . '/template-parts/filter-comments.php';
 require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
 
 // card block do IPHAN
-require get_template_directory() . '/custom-blocks/inner-accordion-block/inner-accordion-block.php';
+require get_template_directory() . '/custom-blocks/card-block/card-block.php';
 
 
 
