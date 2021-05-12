@@ -18,3 +18,23 @@ wp.blocks.registerBlockType(
                 selector: 'summary',
             },
         },
+
+        edit: function (props) {
+            var title = props.attributes.title;
+            function updateTitle(newTitle) {
+                props.setAttributes({ title: newTitle });
+            }
+            var blockProps = useBlockProps();
+            return el(
+
+            );
+        },
+
+        save: function (props) {
+            var blockProps = useBlockProps.save();
+            return el(
+
+            );
+        },
+    }
+);
