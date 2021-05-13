@@ -2,7 +2,7 @@
 function card_block_init()
 {
     wp_register_script(
-        'card-block-IPHAN-js',
+        'card-block-js',
         get_template_directory_uri() . '/custom-blocks/card-block/card-block.js',
         array('wp-blocks')
     );
@@ -21,8 +21,8 @@ function card_block_init()
         filemtime(plugin_dir_path(__FILE__) . 'style.scss')
     );
 
-    register_block_type('iphan/card-block-IPHAN', array(
-        'editor_script' => 'card-block-IPHAN-js',
+    register_block_type('iphan/card-block', array(
+        'editor_script' => 'card-block-js',
         'editor_style'  => 'editor',
         'style'         => 'style',
     ));

@@ -5,17 +5,16 @@ var InnerBlocks = wp.blockEditor.InnerBlocks;
 var useBlockProps = wp.blockEditor.useBlockProps;
 
 wp.blocks.registerBlockType(
-    'iphan/card-block-IPHAN',
+    'iphan/card-block-iphan',
     {
         title: 'Card IPHAN',
-        icon:
-            'universal-access-alt',
+        icon:'universal-access-alt',
         category: 'text',
         attributes: {
             title: {
                 type: 'string',
                 source: 'html',
-                selector: 'summary',
+                selector: 'div',
             },
         },
 
