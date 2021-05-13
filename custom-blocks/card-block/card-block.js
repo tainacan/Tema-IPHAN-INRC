@@ -8,7 +8,7 @@ wp.blocks.registerBlockType(
     'iphan/card-block-iphan',
     {
         title: 'Card IPHAN',
-        icon:'universal-access-alt',
+        icon: 'universal-access-alt',
         category: 'text',
         attributes: {
             title: {
@@ -23,27 +23,44 @@ wp.blocks.registerBlockType(
             function updateTitle(newTitle) {
                 props.setAttributes({ title: newTitle });
             }
+            var content = props.attributes.content;
+            function updateTitle(newContent) {
+                props.setAttributes({ content: newContent });
+            }
             var blockProps = useBlockProps();
             return el(
                 'div',
                 blockProps,
                 [el(
                     RichText,
-                    {
-                        value: props.attributes.title,
-                        tagName: 'span',
-                        type: 'text',
-                        onChange: updateTitle,
-
-                        value: title,
-                        placeholder: "Insira o título",
-                        className: 'tainacan-icon tainacan-icon-plus span-summary',
-                    }
+                    el(
+                        RichText,
+                        {
+                            value: props.attributes.title,
+                            tagName: 'h1',
+                            type: 'text',
+                            onChange: updateTitle,
+                            value: title,
+                            placeholder: "Insira o título",
+                            className: 'is-style-title-iphan-underscore',
+                        }
+                    )
                 ),
-                el(InnerBlocks,
-                    {
-                        className: 'p-details collapse'
-                    }),
+                el(
+                    RichText,
+                    el(
+                        RichText,
+                        {
+                            value: props.attributes.content,
+                            tagName: 'p',
+                            type: 'text',
+                            onChange: updateTitle,
+                            value: title,
+                            placeholder: "Insira o título",
+                            className: 'tainacan-icon tainacan-icon-plus span-summary',
+                        }
+                    )
+                ),
                 ]
             );
         },
