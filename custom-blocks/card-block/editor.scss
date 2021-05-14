@@ -1,3 +1,10 @@
 .style-card-iphan {
     border: 1px solid $color__vermelho1;
+    height: 400px;
+    padding: 20px;
+}
+
+.content-card-iphan{
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
 }

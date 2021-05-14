@@ -24,7 +24,7 @@ wp.blocks.registerBlockType(
                 props.setAttributes({ title: newTitle });
             }
             var content = props.attributes.content;
-            function updateTitle(newContent) {
+            function updateContent(newContent) {
                 props.setAttributes({ content: newContent });
             }
             var blockProps = useBlockProps({ className: 'style-card-iphan' });
@@ -33,33 +33,28 @@ wp.blocks.registerBlockType(
                 blockProps,
                 [el(
                     RichText,
-                    el(
-                        RichText,
-                        {
-                            value: props.attributes.title,
-                            tagName: 'h1',
-                            type: 'text',
-                            onChange: updateTitle,
-                            value: title,
-                            placeholder: "Insira o título",
-                            className: 'is-style-title-iphan-underscore',
-                        }
-                    )
+                    {
+                        value: props.attributes.title,
+                        tagName: 'h1',
+                        type: 'text',
+                        onChange: updateTitle,
+                        value: title,
+                        placeholder: "Insira o título",
+                        className: 'is-style-title-iphan-underscore',
+                    }
                 ),
                 el(
                     RichText,
-                    el(
-                        RichText,
-                        {
-                            value: props.attributes.content,
-                            tagName: 'p',
-                            type: 'text',
-                            onChange: updateTitle,
-                            value: title,
-                            placeholder: "Insira o título",
-                            className: 'tainacan-icon tainacan-icon-plus span-summary',
-                        }
-                    )
+                    {
+                        value: props.attributes.content,
+                        tagName: 'p',
+                        type: 'text',
+                        onChange: updateContent,
+                        value: content,
+                        placeholder: "Insira o conteúdo",
+                        className: 'content-card-iphan',
+                        maxlength: '4'
+                    }
                 ),
                 ]
             );

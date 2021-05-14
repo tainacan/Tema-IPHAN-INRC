@@ -789,6 +789,13 @@ span.span-summary {
 
 .style-card-iphan {
 	border: 1px solid #58020b;
+	height: 400px;
+	padding: 20px;
+}
+
+.content-card-iphan {
+	flex-wrap: wrap;
+	text-overflow: ellipsis;
 }
 
 .tainacan-icon:before,
