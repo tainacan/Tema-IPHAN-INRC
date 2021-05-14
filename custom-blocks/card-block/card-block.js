@@ -27,7 +27,7 @@ wp.blocks.registerBlockType(
             function updateTitle(newContent) {
                 props.setAttributes({ content: newContent });
             }
-            var blockProps = useBlockProps();
+            var blockProps = useBlockProps({ className: 'style-card-iphan' });
             return el(
                 'div',
                 blockProps,
