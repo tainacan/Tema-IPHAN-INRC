@@ -53,7 +53,6 @@ wp.blocks.registerBlockType(
                         value: content,
                         placeholder: "Insira o conteúdo",
                         className: 'content-card-iphan',
-                        maxlength: '4'
                     }
                 ),
                 ]
@@ -61,22 +60,24 @@ wp.blocks.registerBlockType(
         },
 
         save: function (props) {
-            var blockProps = useBlockProps.save();
+            var blockProps = useBlockProps.save({ className: 'style-card-iphan' });
             return el(
-                'details',
+                'div',
                 blockProps,
                 [el(
                     RichText.Content,
                     {
-                        tagName: 'summary',
+                        tagName: 'h1',
                         value: props.attributes.title,
-                        className: 'tainacan-icon tainacan-icon-plus',
+                        className: 'is-style-title-iphan-underscore',
                     }
                 ),
                 el(
-                    InnerBlocks.Content,
+                    RichText.Content,
                     {
-                        className: 'p-details collapse'
+                        tagName: 'p',
+                        value: props.attributes.content,
+                        className: 'content-card-iphan',
                     }
                 ),
                 ]

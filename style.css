@@ -15219,6 +15219,18 @@ summary {
 
 .style-card-iphan {
 	border: 1px solid #58020b;
+	height: 400px;
+	padding: 20px;
+	padding-top: 35px;
+}
+
+.content-card-iphan {
+	white-space: pre-wrap;
+	display: block;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 259px;
 }
 
 /*# sourceMappingURL=style.css.map */
