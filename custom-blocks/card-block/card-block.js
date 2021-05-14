@@ -14,7 +14,12 @@ wp.blocks.registerBlockType(
             title: {
                 type: 'string',
                 source: 'html',
-                selector: 'div',
+                selector: 'h1',
+            },
+            content: {
+                type: 'string',
+                source: 'html',
+                selector: 'p',
             },
         },
 
