@@ -3,6 +3,7 @@ var el = wp.element.createElement,
     title = wp.blockEditor.RichText;
 var InnerBlocks = wp.blockEditor.InnerBlocks;
 var useBlockProps = wp.blockEditor.useBlockProps;
+var BlockControls = wp.blockEditor.BlockControls;
 
 wp.blocks.registerBlockType(
     'iphan/card-block-iphan',
@@ -66,8 +67,11 @@ wp.blocks.registerBlockType(
                         className: 'content-card-iphan',
                     }
                 ),
-                ]
-            );
+                el(
+                    InnerBlocks,
+                    { allowedBlocks: 'core/buttons' }
+                )
+                ]);
         },
 
         save: function (props) {
@@ -90,6 +94,9 @@ wp.blocks.registerBlockType(
                         value: props.attributes.content,
                         className: 'content-card-iphan',
                     }
+                ),
+                el(
+                    InnerBlocks.Content,
                 ),
                 ]
             );

@@ -67,7 +67,6 @@ wp.blocks.registerBlockType(
                         tagName: 'span',
                         type: 'text',
                         onChange: updateTitle,
-
                         value: title,
                         placeholder: "Insira o título",
                         className: 'tainacan-icon tainacan-icon-plus span-summary',
