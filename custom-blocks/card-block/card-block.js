@@ -8,7 +8,7 @@ wp.blocks.registerBlockType(
     'iphan/card-block-iphan',
     {
         title: 'Card IPHAN',
-        icon: 'universal-access-alt',
+        icon: 'text',
         category: 'text',
         attributes: {
             title: {
@@ -26,11 +26,17 @@ wp.blocks.registerBlockType(
         edit: function (props) {
             var title = props.attributes.title;
             function updateTitle(newTitle) {
-                props.setAttributes({ title: newTitle });
+                console.log(props.attributes.title)
+                props.setAttributes({ title: newTitle.slice(0, 2) });
+                props.attributes.title = props.attributes.title.slice(0, 2)
             }
             var content = props.attributes.content;
             function updateContent(newContent) {
-                props.setAttributes({ content: newContent });
+                if (newContent.length <= 10) {
+                    props.setAttributes({ content: newContent });
+                } else {
+                    props.setAttributes({ content: newContent.slice(0, 10) });
+                }
             }
             var blockProps = useBlockProps({ className: 'style-card-iphan' });
             return el(
@@ -39,23 +45,23 @@ wp.blocks.registerBlockType(
                 [el(
                     RichText,
                     {
-                        value: props.attributes.title,
+                        value: title,
                         tagName: 'h1',
                         type: 'text',
+                        height: '100px',
                         onChange: updateTitle,
-                        value: title,
                         placeholder: "Insira o título",
                         className: 'is-style-title-iphan-underscore',
+                        maxLength: 1
                     }
                 ),
                 el(
                     RichText,
                     {
-                        value: props.attributes.content,
+                        value: content,
                         tagName: 'p',
                         type: 'text',
                         onChange: updateContent,
-                        value: content,
                         placeholder: "Insira o conteúdo",
                         className: 'content-card-iphan',
                     }
