@@ -69,7 +69,7 @@ wp.blocks.registerBlockType(
                 ),
                 el(
                     InnerBlocks,
-                    { allowedBlocks: 'core/buttons' }
+                    { allowedBlocks: ['core/buttons'] }
                 )
                 ]);
         },

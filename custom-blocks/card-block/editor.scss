@@ -3,9 +3,19 @@
     max-height: 400px;
     padding: 20px;
     padding-top: 35px;
+    & .block-editor-inner-blocks {
+        display: flex;
+    }
+    & .wp-block-buttons {
+        display: flex;
+        margin-left: auto;
+    }
+    & .block-editor-block-list__layout {
+        width: 100%;
+    }
 }
 
-.content-card-iphan{
+.content-card-iphan {
     white-space: pre-wrap;
     display: block;
     text-overflow: ellipsis;

@@ -794,6 +794,19 @@ span.span-summary {
 	padding-top: 35px;
 }
 
+.style-card-iphan .block-editor-inner-blocks {
+	display: flex;
+}
+
+.style-card-iphan .wp-block-buttons {
+	display: flex;
+	margin-left: auto;
+}
+
+.style-card-iphan .block-editor-block-list__layout {
+	width: 100%;
+}
+
 .content-card-iphan {
 	white-space: pre-wrap;
 	display: block;
