@@ -4,6 +4,7 @@ var el = wp.element.createElement,
 var InnerBlocks = wp.blockEditor.InnerBlocks;
 var useBlockProps = wp.blockEditor.useBlockProps;
 var BlockControls = wp.blockEditor.BlockControls;
+var AlignmentToolbar = wp.blockEditor.AlignmentToolbar;
 
 wp.blocks.registerBlockType(
     'iphan/card-block-iphan',
@@ -22,6 +23,10 @@ wp.blocks.registerBlockType(
                 source: 'html',
                 selector: 'p',
             },
+            alignment: {
+                type: 'string',
+                default: 'right',
+            },
         },
 
         edit: function (props) {
@@ -39,11 +44,25 @@ wp.blocks.registerBlockType(
                     props.setAttributes({ content: newContent.slice(0, 10) });
                 }
             }
+            var alignment = props.attributes.alignment;
+            const onChangeAlignment = (newAlignment) => {
+                setAttributes({
+                    alignment: newAlignment === undefined ? 'right' : newAlignment,
+                });
+            }
             var blockProps = useBlockProps({ className: 'style-card-iphan' });
             return el(
                 'div',
                 blockProps,
                 [el(
+                    BlockControls,
+                    { key: 'controls' },
+                    el(AlignmentToolbar, {
+                        value: alignment,
+                        onChange: onChangeAlignment,
+                    })
+                ),
+                el(
                     RichText,
                     {
                         value: title,
@@ -84,7 +103,7 @@ wp.blocks.registerBlockType(
                     {
                         tagName: 'h1',
                         value: props.attributes.title,
-                        className: 'is-style-title-iphan-underscore',
+                        className: 'is-style-title-iphan-underscore ' + props.attributes.alignment,
                     }
                 ),
                 el(
@@ -92,7 +111,7 @@ wp.blocks.registerBlockType(
                     {
                         tagName: 'p',
                         value: props.attributes.content,
-                        className: 'content-card-iphan',
+                        className: 'content-card-iphan ' + props.attributes.alignment,
                     }
                 ),
                 el(
