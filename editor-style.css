@@ -798,9 +798,9 @@ span.span-summary {
 	display: flex;
 }
 
-.style-card-iphan .wp-block-buttons {
+.style-card-iphan .wp-block-button {
 	display: flex;
-	margin-left: auto;
+	justify-content: flex-end;
 }
 
 .style-card-iphan .block-editor-block-list__layout {
