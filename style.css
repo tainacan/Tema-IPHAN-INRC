@@ -15168,17 +15168,17 @@ body.archive .theme-items-list {
 	color: #58020b !important;
 }
 
-.is-style-card-block-button-left .wp-block-button {
+.is-style-button-left {
 	display: flex;
 	justify-content: flex-start;
 }
 
-.is-style-card-block-button-center .wp-block-button {
+.is-style-button-center {
 	display: flex;
 	justify-content: center;
 }
 
-.is-style-card-block-button-right .wp-block-button {
+.is-style-button-right {
 	display: flex;
 	justify-content: flex-end;
 }
