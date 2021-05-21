@@ -94,23 +94,23 @@ if (function_exists('register_block_style')) {
             )
         );
         register_block_style(
-            'iphan/card-block-iphan',
+            'core/buttons',
             array(
-                'name'  => 'card-block-button-left', 'iphan_inrc',
+                'name'  => 'button-left', 'iphan_inrc',
                 'label' =>  'Card iphan com button alinhado a esquerda',
             )
         );
         register_block_style(
-            'iphan/card-block-iphan',
+            'core/buttons',
             array(
-                'name'  => 'card-block-button-center', 'iphan_inrc',
+                'name'  => 'cbutton-center', 'iphan_inrc',
                 'label' =>  'Card iphan com button alinhado no centro',
             )
         );
         register_block_style(
-            'iphan/card-block-iphan',
+            'core/buttons',
             array(
-                'name'  => 'card-block-button-right', 'iphan_inrc',
+                'name'  => 'button-right', 'iphan_inrc',
                 'label' =>  'Card iphan com button alinhado a direita',
             )
         );
