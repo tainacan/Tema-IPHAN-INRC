@@ -51,8 +51,7 @@ wp.blocks.registerBlockType(
                         height: '100px',
                         onChange: updateTitle,
                         placeholder: "Insira o título",
-                        className: 'is-style-title-iphan-underscore ' + props.styles,
-                        maxLength: 1,
+                        className: 'is-style-title-iphan-underscore ',
                     }
                 ),
                 el(
