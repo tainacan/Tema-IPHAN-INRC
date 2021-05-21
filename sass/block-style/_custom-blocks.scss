@@ -1,0 +1,20 @@
+.is-style-card-block-button-left {
+    & .wp-block-button {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.is-style-card-block-button-center {
+    & .wp-block-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.is-style-card-block-button-right {
+    & .wp-block-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

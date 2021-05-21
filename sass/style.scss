@@ -114,11 +114,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "utilities/alignments";
 
 // Block styles
-@import "block-style/title-block";
-@import "block-style/column-block";
-@import "block-style/button-block";
-@import "block-style/block-colors";
-@import "block-style/file-block";
+@import "block-style/_title-block";
+@import "block-style/_column-block";
+@import "block-style/_button-block";
+@import "block-style/_block-colors";
+@import "block-style/_file-block";
+@import "block-style/custom-blocks";
 
 //import custom blocks
 @import "./custom-blocks/styles";

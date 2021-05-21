@@ -737,6 +737,21 @@ body > .block-editor-writing-flow .wp-block[data-align="full"] .wp-block[data-al
 	color: #58020b !important;
 }
 
+.is-style-card-block-button-left .wp-block-button {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.is-style-card-block-button-center .wp-block-button {
+	display: flex;
+	justify-content: center;
+}
+
+.is-style-card-block-button-right .wp-block-button {
+	display: flex;
+	justify-content: flex-end;
+}
+
 /* custom blocks
 --------------------------------------------- */
 details {
@@ -796,11 +811,6 @@ span.span-summary {
 
 .style-card-iphan .block-editor-inner-blocks {
 	display: flex;
-}
-
-.style-card-iphan .wp-block-button {
-	display: flex;
-	justify-content: flex-end;
 }
 
 .style-card-iphan .block-editor-block-list__layout {

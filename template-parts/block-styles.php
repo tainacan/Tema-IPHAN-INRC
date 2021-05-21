@@ -93,6 +93,27 @@ if (function_exists('register_block_style')) {
                 'isDefault' => true,
             )
         );
+        register_block_style(
+            'iphan/card-block-iphan',
+            array(
+                'name'  => 'card-block-button-left', 'iphan_inrc',
+                'label' =>  'Card iphan com button alinhado a esquerda',
+            )
+        );
+        register_block_style(
+            'iphan/card-block-iphan',
+            array(
+                'name'  => 'card-block-button-center', 'iphan_inrc',
+                'label' =>  'Card iphan com button alinhado no centro',
+            )
+        );
+        register_block_style(
+            'iphan/card-block-iphan',
+            array(
+                'name'  => 'card-block-button-right', 'iphan_inrc',
+                'label' =>  'Card iphan com button alinhado a direita',
+            )
+        );
     }
 }
 add_action('init', 'iphan_block_styles');
