@@ -27,15 +27,15 @@ wp.blocks.registerBlockType(
             var title = props.attributes.title;
             function updateTitle(newTitle) {
                 console.log(props.attributes.title)
-                props.setAttributes({ title: newTitle.slice(0, 2) });
-                props.attributes.title = props.attributes.title.slice(0, 2)
+                props.setAttributes({ title: newTitle.slice(0, 50) });
+                props.attributes.title = props.attributes.title.slice(0, 50)
             }
             var content = props.attributes.content;
             function updateContent(newContent) {
-                if (newContent.length <= 10) {
+                if (newContent.length <= 200) {
                     props.setAttributes({ content: newContent });
                 } else {
-                    props.setAttributes({ content: newContent.slice(0, 10) });
+                    props.setAttributes({ content: newContent.slice(0, 200) });
                 }
             }
             var blockProps = useBlockProps({ className: 'style-card-iphan' });
