@@ -1,8 +1,15 @@
 .style-card-iphan {
     border: 1px solid $color__vermelho1;
-    max-height: 400px;
     padding: 20px;
     padding-top: 35px;
+    height: auto;
+    max-height: fit-content;
+    & .block-editor-inner-blocks {
+        display: flex;
+    }
+    & .block-editor-block-list__layout {
+        width: 100%;
+    }
 }
 
 .content-card-iphan {
@@ -11,5 +18,6 @@
     text-overflow: ellipsis;
     word-wrap: break-word;
     overflow: hidden;
-    max-height: 259px;
+    height: auto;
+    max-height: fit-content;
 }

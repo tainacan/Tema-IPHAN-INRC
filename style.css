@@ -15234,9 +15234,18 @@ summary {
 
 .style-card-iphan {
 	border: 1px solid #58020b;
-	max-height: 400px;
 	padding: 20px;
 	padding-top: 35px;
+	height: auto;
+	max-height: fit-content;
+}
+
+.style-card-iphan .block-editor-inner-blocks {
+	display: flex;
+}
+
+.style-card-iphan .block-editor-block-list__layout {
+	width: 100%;
 }
 
 .content-card-iphan {
@@ -15245,7 +15254,8 @@ summary {
 	text-overflow: ellipsis;
 	word-wrap: break-word;
 	overflow: hidden;
-	max-height: 259px;
+	height: auto;
+	max-height: fit-content;
 }
 
 /*# sourceMappingURL=style.css.map */
