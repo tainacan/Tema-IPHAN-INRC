@@ -226,7 +226,7 @@
     .grid-container-has-3,
     .grid-container-has-2,
     .grid-container-has-1 {
-        @media screen and (max-width: $screen__md) {
+        @media screen and (max-width: $screen__sm) {
             display: flex;
         }
         @media screen and (min-width: $screen__md) {
@@ -254,6 +254,11 @@
             "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6";
     }
 
+    :is(.display-1-has-6, .display-2-has-6, .display-3-has-6, .display-4-has-6, .display-5-has-6, .display-6-has-6) {
+        @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+            width: 100%;
+        }
+    }
     .display-1-has-6 {
         grid-area: display-1-has-6;
         height: 435px;

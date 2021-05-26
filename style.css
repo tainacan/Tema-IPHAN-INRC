@@ -13188,7 +13188,7 @@ input[type="search"].search-bar__home {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 	:is(.destaques, .destaques-noticias, .posts-relacionados) .grid-container-has-6,
 	:is(.destaques, .destaques-noticias, .posts-relacionados) .grid-container-has-5,
 	:is(.destaques, .destaques-noticias, .posts-relacionados) .grid-container-has-4,
@@ -13218,6 +13218,12 @@ input[type="search"].search-bar__home {
 	grid-template-rows: repeat(4, 93.75px) repeat(6, 75px);
 	gap: 20px 20px;
 	grid-template-areas: "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6" "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6" "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6" "display-1-has-6 display-1-has-6 display-1-has-6 display-1-has-6 display-2-has-6 display-2-has-6" "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6" "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6" "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-5-has-6 display-5-has-6" "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6" "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6" "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6";
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	:is(.destaques, .destaques-noticias, .posts-relacionados) :is(.display-1-has-6, .display-2-has-6, .display-3-has-6, .display-4-has-6, .display-5-has-6, .display-6-has-6) {
+		width: 100%;
+	}
 }
 
 :is(.destaques, .destaques-noticias, .posts-relacionados) .display-1-has-6 {
