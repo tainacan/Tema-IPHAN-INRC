@@ -474,13 +474,24 @@
         grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
         grid-template-rows: repeat(6, calc(590px / 6));
         gap: 20px 20px;
-        grid-template-areas:
-            "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
-            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
-            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
+        @media screen and (min-width: $screen__sm) {
+            grid-template-areas:
+                "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5";
+        }
+        @media screen and (min-width: $screen__md) {
+            grid-template-areas:
+                "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
+        }
     }
     &
         :is(.display-1-noticias-has-5, .display-2-noticias-has-5, .display-3-noticias-has-5, .display-4-noticias-has-5, .display-5-noticias-has-5) {
@@ -499,11 +510,21 @@
     }
 
     .display-4-noticias-has-5 {
-        grid-area: display-4-noticias-has-5;
+        @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+            display: none !important;
+        }
+        @media screen and (min-width: $screen__md) {
+            grid-area: display-4-noticias-has-5;
+        }
     }
 
     .display-5-noticias-has-5 {
-        grid-area: display-5-noticias-has-5;
+        @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+            display: none !important;
+        }
+        @media screen and (min-width: $screen__md) {
+            grid-area: display-5-noticias-has-5;
+        }
     }
 
     .grid-container-noticias-has-4 {
