@@ -1,7 +1,7 @@
     <section class="destaques-noticias">
         <?php
         $defaults = array(
-            'numberposts'      => 4,
+            'numberposts'      => 5,
             'offset'           => 0,
             'category'         => 0,
             'orderby'          => 'post_date',

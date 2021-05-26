@@ -476,7 +476,7 @@
         gap: 20px 20px;
         grid-template-areas:
             "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
-            "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
             "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
             "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
             "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
@@ -514,7 +514,7 @@
         gap: 20px 20px;
         grid-template-areas:
             "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
-            "display-1-noticias-has-4 display-1-noticias-has-4 display-1-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
+            "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4 display-3-noticias-has-4"
             "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
             "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
             "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
@@ -577,10 +577,10 @@
         grid-template-areas:
             "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
             "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
-            "display-1-noticias-has-2 display-1-noticias-has-2 display-1-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2";
+            "display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
+            "display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2";
     }
     :is(.display-1-noticias-has-2, .display-2-noticias-has-2) {
         border-radius: 10px;
