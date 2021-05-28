@@ -818,6 +818,10 @@ span.span-summary {
 	width: 100%;
 }
 
+.style-card-iphan .block-editor-inner-blocks {
+	border-top: none !important;
+}
+
 .content-card-iphan {
 	white-space: pre-wrap;
 	display: block;
