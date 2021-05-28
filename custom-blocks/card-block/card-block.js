@@ -8,7 +8,7 @@ var BlockControls = wp.blockEditor.BlockControls;
 wp.blocks.registerBlockType(
     'iphan/card-block-iphan',
     {
-        title: 'Card IPHAN',
+        title: 'Cartão do IPHAN',
         icon: 'text',
         category: 'text',
         attributes: {
