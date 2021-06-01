@@ -1,0 +1,26 @@
+.style-card-iphan {
+    border: 1px solid $color__vermelho1;
+    padding: 20px;
+    padding-top: 35px;
+    height: auto;
+    max-height: fit-content;
+    & .block-editor-inner-blocks {
+        display: flex;
+    }
+    & .block-editor-block-list__layout {
+        width: 100%;
+    }
+    & .block-editor-inner-blocks {
+        border-top: none !important;
+    }
+}
+
+.content-card-iphan {
+    white-space: pre-wrap;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    height: auto;
+    max-height: fit-content;
+}

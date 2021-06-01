@@ -4,7 +4,7 @@ function card_block_init()
 
     wp_register_script(
         'card-block-js',
-        get_template_directory_uri() . '/custom-blocks/card-block/card-block.js',
+        get_template_directory_uri() . '/custom-blocks/card-block/card-block.jsx',
         array('wp-blocks')
     );
     /*     $asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
