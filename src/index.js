@@ -2,7 +2,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 const TEMPLATE = [['core/heading', { placeholder: 'Insira o conteúdo do título', className: 'is-style-title-iphan-underscore' }],
-['core/paragraph', { placeholder: 'Insira o conteúdo', maxLength: 10 }],
+['core/paragraph', { placeholder: 'Insira o conteúdo', maxlength:"10" }],
 ['core/buttons', {}],
 ]
 
