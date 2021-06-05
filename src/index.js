@@ -1,6 +1,11 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
+const TEMPLATE = [['core/heading', { placeholder: 'Insira o conteúdo do título' }],
+['core/paragraph', { placeholder: 'Insira o conteúdo' }],
+['core/buttons', {}],
+]
+
 
 registerBlockType(
     'iphan/card-block-iphan',
@@ -45,7 +50,7 @@ registerBlockType(
                                     </div>
                                 </div> */
                 <div {...blockProps}>
-                    <InnerBlocks allowedBlocks={['core/buttons']} />
+                    <InnerBlocks template={TEMPLATE} />
                 </div>
             )
         },
