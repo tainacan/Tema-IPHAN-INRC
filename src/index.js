@@ -29,7 +29,7 @@ registerBlockType(
             var blockProps = useBlockProps({ className: 'style-card-iphan' });
             return (
                 <div {...blockProps}>
-                    <InnerBlocks template={TEMPLATE} />
+                    <InnerBlocks template={TEMPLATE} templateLock='all' key='card' />
                 </div>
             )
         },
