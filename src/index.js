@@ -1,8 +1,8 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-const TEMPLATE = [['core/heading', { placeholder: 'Insira o conteúdo do título' }],
-['core/paragraph', { placeholder: 'Insira o conteúdo' }],
+const TEMPLATE = [['core/heading', { placeholder: 'Insira o conteúdo do título', className: 'is-style-title-iphan-underscore' }],
+['core/paragraph', { placeholder: 'Insira o conteúdo', maxLength: 10 }],
 ['core/buttons', {}],
 ]
 
@@ -26,29 +26,8 @@ registerBlockType(
             },
         },
         edit: function (props) {
-            var title = props.attributes.title;
-            function updateTitle(newTitle) {
-                console.log(props.attributes.title)
-                props.setAttributes({ title: newTitle.slice(0, 50) });
-                props.attributes.title = props.attributes.title.slice(0, 50)
-            }
-            var content = props.attributes.content;
-            function updateContent(newContent) {
-                if (newContent.length <= 200) {
-                    props.setAttributes({ content: newContent });
-                } else {
-                    props.setAttributes({ content: newContent.slice(0, 200) });
-                }
-            }
             var blockProps = useBlockProps({ className: 'style-card-iphan' });
             return (
-                /*                 <div {...blockProps}>
-                                    <h1 {...blockProps} onChange={updateTitle} placeholder="Insira o título" style=" height: 100px" className="is-style-title-iphan-underscore" >{props.attributes.title}</h1>
-                                    <p {...blockProps} onChange={updateContent} placeholder="Insira o conteúdo" className="content-card-iphan" >{props.attributes.content}</p>
-                                    <div>
-                                        <InnerBlocks  allowedBlocks={ 'core/button' }/>
-                                    </div>
-                                </div> */
                 <div {...blockProps}>
                     <InnerBlocks template={TEMPLATE} />
                 </div>
@@ -62,13 +41,6 @@ registerBlockType(
                 <div {...blockProps}>
                     <InnerBlocks.Content />
                 </div>
-                /*                 <div {...blockProps}>
-                                    <h1 {...blockProps} style=" height: 100px" className="is-style-title-iphan-underscore" >{props.attributes.title}</h1>
-                                    <p {...blockProps} className="content-card-iphan" >{props.attributes.content}</p>
-                                    <div>
-                                        <InnerBlocks.Content />
-                                    </div>
-                                </div> */
             );
         },
     }
