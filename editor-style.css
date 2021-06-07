@@ -822,14 +822,6 @@ span.span-summary {
 	border-top: none !important;
 }
 
-.style-card-iphan p {
-	width: 10ch;
-}
-
-.style-card-iphan .is-style-title-iphan-underscore {
-	width: 5ch;
-}
-
 .content-card-iphan {
 	white-space: pre-wrap;
 	display: block;
