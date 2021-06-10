@@ -13646,6 +13646,27 @@ article#page-404 .widget ul {
 
 /* template inventários
 --------------------------------------------- */
+.inventario-header .breadcrumb {
+	margin-bottom: 0px !important;
+}
+
+.inventario-header .inventario {
+	display: flex;
+}
+
+@media screen and (min-width: 768px) {
+	.inventario-header .inventario .barra-lateral {
+		width: 375px;
+		border-right: 2px solid #58020b;
+		height: 100%;
+	}
+}
+
+.inventario-header .inventario .alinhamento-template-inventarios {
+	margin-top: 150px;
+	display: flex;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

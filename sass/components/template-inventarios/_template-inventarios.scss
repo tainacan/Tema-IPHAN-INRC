@@ -1,0 +1,21 @@
+.inventario-header {
+    & .breadcrumb {
+        margin-bottom: 0px !important;
+    }
+    .inventario {
+        display: flex;
+        & .barra-lateral {
+            @media screen and (min-width: $screen__sm) {
+                width: 375px;
+                border-right: 2px solid $color__vermelho1;
+                height: 100%;
+            }
+        }
+        & .post-inventario {
+        }
+        & .alinhamento-template-inventarios {
+            margin-top: 150px;
+            display: flex;
+        }
+    }
+}
