@@ -13668,6 +13668,12 @@ article#page-404 .widget ul {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.inventario-header .inventario .barra-lateral > :not(div:last-child) {
+		margin-bottom: 50px;
+	}
+}
+
 .inventario-header .inventario .barra-lateral > div > h3 {
 	margin-bottom: 30px;
 	color: #58020b;
