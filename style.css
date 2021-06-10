@@ -13661,7 +13661,7 @@ article#page-404 .widget ul {
 
 @media screen and (min-width: 768px) {
 	.inventario-header .inventario .barra-lateral {
-		width: 375px;
+		width: 485px;
 		border-right: 2px solid #58020b;
 		height: 100%;
 	}
@@ -13670,7 +13670,7 @@ article#page-404 .widget ul {
 @media screen and (min-width: 768px) {
 	.inventario-header .inventario .barra-lateral > div {
 		width: 330px;
-		padding-left: 15px;
+		margin-left: 110px;
 	}
 }
 
