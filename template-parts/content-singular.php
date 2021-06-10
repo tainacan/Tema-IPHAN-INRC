@@ -39,6 +39,7 @@
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
+		get_template_part('template-parts/single-inventario');
 		the_content();
 		if (is_front_page()) : ?>
 			<div class="banner-or alignfull">
