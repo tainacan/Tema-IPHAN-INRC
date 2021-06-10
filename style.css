@@ -13652,6 +13652,11 @@ article#page-404 .widget ul {
 
 .inventario-header .inventario {
 	display: flex;
+	padding-left: 0px;
+}
+
+.inventario-header .inventario .barra-lateral {
+	background: #f0f0f0;
 }
 
 @media screen and (min-width: 768px) {
@@ -13665,6 +13670,7 @@ article#page-404 .widget ul {
 @media screen and (min-width: 768px) {
 	.inventario-header .inventario .barra-lateral > div {
 		width: 330px;
+		padding-left: 15px;
 	}
 }
 

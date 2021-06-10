@@ -4,7 +4,9 @@
     }
     .inventario {
         display: flex;
+        padding-left: 0px;
         & .barra-lateral {
+            background: $color__barra-lateral-inventario;
             @media screen and (min-width: $screen__sm) {
                 width: 375px;
                 border-right: 2px solid $color__vermelho1;
@@ -14,6 +16,7 @@
         & .barra-lateral > div {
             @media screen and (min-width: $screen__sm) {
                 width: 330px;
+                padding-left: 15px;
             }
         }
         & .barra-lateral > :not(div:last-child) {
