@@ -13692,6 +13692,10 @@ article#page-404 .widget ul {
 	color: #58020b;
 }
 
+.inventario-header .inventario .post-inventario {
+	margin-left: 50px;
+}
+
 .inventario-header .inventario .alinhamento-template-inventarios {
 	display: flex;
 }
