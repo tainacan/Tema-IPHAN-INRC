@@ -21,6 +21,12 @@
                 margin-bottom: 50px;
             }
         }
+        & .barra-lateral > div:first-child,
+        .post-inventario {
+            @media screen and (min-width: $screen__sm) {
+                margin-top: 150px;
+            }
+        }
         & .barra-lateral > div > h3 {
             margin-bottom: 30px;
             color: $color__vermelho1;
@@ -28,7 +34,6 @@
         & .post-inventario {
         }
         & .alinhamento-template-inventarios {
-            margin-top: 150px;
             display: flex;
         }
     }
