@@ -13694,10 +13694,18 @@ article#page-404 .widget ul {
 
 .inventario-header .inventario .post-inventario {
 	margin-left: 50px;
+	margin-bottom: 100px;
+	width: auto;
+	padding-right: 4.73%;
 }
 
 .inventario-header .inventario .alinhamento-template-inventarios {
 	display: flex;
+	width: 100%;
+}
+
+.inventario-footer .hr-posts-relacionados {
+	margin-top: 0px !important;
 }
 
 /*--------------------------------------------------------------

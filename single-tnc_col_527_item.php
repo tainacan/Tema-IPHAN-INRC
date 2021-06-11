@@ -18,3 +18,8 @@
         </div>
     </div>
 </div>
+<div class="inventario-footer">
+    <?php
+    get_template_part('template-parts/posts-relacionados');
+    ?>
+</div>
