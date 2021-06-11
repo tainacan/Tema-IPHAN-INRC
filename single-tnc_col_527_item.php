@@ -23,3 +23,4 @@
     get_template_part('template-parts/posts-relacionados');
     ?>
 </div>
+<?php get_footer(); ?>
