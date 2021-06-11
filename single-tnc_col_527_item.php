@@ -14,7 +14,12 @@
             <?php echo tainacan_get_the_metadata(); ?>
         </div>
         <div class="post-inventario">
-            <?php echo tainacan_get_item(); ?>
+            <h1 class="is-style-title-iphan-underscore">
+                <?php echo tainacan_get_the_collection_name(); ?>
+            </h1>
+            <div>
+                <?php echo tainacan_get_item(); ?>
+            </div>
         </div>
     </div>
 </div>
