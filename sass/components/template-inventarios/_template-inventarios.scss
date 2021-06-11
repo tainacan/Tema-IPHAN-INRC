@@ -7,15 +7,24 @@
         padding-left: 0px;
         & .barra-lateral {
             background: $color__barra-lateral-inventario;
-            @media screen and (min-width: $screen__sm) {
+            @media screen and (min-width: $screen__lg) {
                 width: 485px;
+                border-right: 2px solid $color__vermelho1;
+                height: 100%;
+            }
+            @media screen and (min-width: $screen__md) {
+                width: 410px;
                 border-right: 2px solid $color__vermelho1;
                 height: 100%;
             }
         }
         & .barra-lateral > div {
-            @media screen and (min-width: $screen__sm) {
+            @media screen and (min-width: $screen__lg) {
                 width: 330px;
+                margin-left: 110px;
+            }
+            @media screen and (min-width: $screen__md) {
+                width: 260px;
                 margin-left: 110px;
             }
         }
