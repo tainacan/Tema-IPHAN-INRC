@@ -100,6 +100,8 @@
         margin-right: auto;
         padding-left: 3px;
         padding-right: 3px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .is-mobile {
@@ -479,7 +481,7 @@
         grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
         grid-template-rows: repeat(6, calc(590px / 6));
         gap: 20px 20px;
-        @media screen and (min-width: $screen__sm) {
+        @media screen and (max-width: $screen__md) {
             grid-template-areas:
                 "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
                 "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
@@ -515,7 +517,7 @@
     }
 
     .display-4-noticias-has-5 {
-        @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+        @media screen and (max-width: $screen__md) {
             display: none !important;
         }
         @media screen and (min-width: $screen__md) {
@@ -524,7 +526,7 @@
     }
 
     .display-5-noticias-has-5 {
-        @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
+        @media screen and (max-width: $screen__md) {
             display: none !important;
         }
         @media screen and (min-width: $screen__md) {
