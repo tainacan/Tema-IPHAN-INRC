@@ -13712,7 +13712,7 @@ article#page-404 .widget ul {
 .inventario-header .inventario .post-inventario {
 	margin-left: 50px;
 	margin-bottom: 100px;
-	width: auto;
+	width: 100%;
 	padding-right: 4.73%;
 	padding-bottom: 100px;
 }
@@ -13720,6 +13720,15 @@ article#page-404 .widget ul {
 .inventario-header .inventario .alinhamento-template-inventarios {
 	display: flex;
 	width: 100%;
+}
+
+.inventario-header .inventario .share-button-wrapper {
+	margin-left: auto;
+	padding-left: 4.73%;
+	padding-right: 4.73%;
+	max-width: 1157px;
+	margin-top: 28px;
+	margin-bottom: 28px;
 }
 
 .inventario-footer .hr-posts-relacionados {
