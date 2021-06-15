@@ -44,6 +44,7 @@
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
+        padding-left: 50px;
     }
     & .barra-lateral > :not(div:last-child) {
         @media screen and (min-width: $screen__sm) {
@@ -77,7 +78,7 @@
     }
     & .post-inventario .is-style-title-iphan-underscore,
     .post-inventario .content,
-    .post-inventario .metadata-mobile > div {
+    .post-inventario .metadata-mobile > :not(div:first-child) {
         margin-left: 50px;
     }
     & .alinhamento-template-inventarios {
@@ -123,6 +124,8 @@
             position: relative;
             width: auto;
             margin-bottom: 30px;
+            border-bottom: 1px solid #000;
+            margin-left: 0px;
         }
     }
 }
