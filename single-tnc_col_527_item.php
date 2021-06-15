@@ -17,6 +17,9 @@
             <h1 class="is-style-title-iphan-underscore">
                 <?php echo tainacan_get_the_collection_name(); ?>
             </h1>
+            <div class="metadata-mobile">
+                <?php echo tainacan_get_the_metadata(); ?>
+            </div>
             <div class="entry-content meta-content">
                 <div class="share-button-wrapper">
                     <?php $postUrl = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; ?>

@@ -13652,17 +13652,17 @@ article#page-404 .widget ul {
 	margin-bottom: 0px !important;
 }
 
-.inventario-header .inventario {
+.inventario {
 	display: flex;
 	padding-left: 0px;
 }
 
-.inventario-header .inventario .barra-lateral {
+.inventario .barra-lateral {
 	background: #f0f0f0;
 }
 
 @media screen and (min-width: 1300px) {
-	.inventario-header .inventario .barra-lateral {
+	.inventario .barra-lateral {
 		width: 485px;
 		border-right: 2px solid #58020b;
 		height: 100%;
@@ -13670,46 +13670,58 @@ article#page-404 .widget ul {
 }
 
 @media screen and (min-width: 1024px) {
-	.inventario-header .inventario .barra-lateral {
+	.inventario .barra-lateral {
 		width: 410px;
 		border-right: 2px solid #58020b;
 		height: 100%;
 	}
 }
 
+@media screen and (max-width: 1024px) {
+	.inventario .barra-lateral {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.inventario .metadata-mobile {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 1300px) {
-	.inventario-header .inventario .barra-lateral > div {
+	.inventario .barra-lateral > div {
 		width: 330px;
 		margin-left: 110px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.inventario-header .inventario .barra-lateral > div {
+	.inventario .barra-lateral > div {
 		width: 260px;
 		margin-left: 110px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.inventario-header .inventario .barra-lateral > :not(div:last-child) {
+	.inventario .barra-lateral > :not(div:last-child) {
 		margin-bottom: 50px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.inventario-header .inventario .barra-lateral > div:first-child,
-	.inventario-header .inventario .post-inventario {
+	.inventario .barra-lateral > div:first-child,
+	.inventario .post-inventario {
 		margin-top: 150px;
 	}
 }
 
-.inventario-header .inventario .barra-lateral > div > h3 {
+.inventario .barra-lateral > div > h3 {
 	margin-bottom: 30px;
 	color: #58020b;
 }
 
-.inventario-header .inventario .post-inventario {
+.inventario .post-inventario {
 	margin-left: 50px;
 	margin-bottom: 100px;
 	width: 100%;
@@ -13717,12 +13729,12 @@ article#page-404 .widget ul {
 	padding-bottom: 100px;
 }
 
-.inventario-header .inventario .alinhamento-template-inventarios {
+.inventario .alinhamento-template-inventarios {
 	display: flex;
 	width: 100%;
 }
 
-.inventario-header .inventario .share-button-wrapper {
+.inventario .share-button-wrapper {
 	margin-left: auto;
 	padding-left: 4.73%;
 	padding-right: 4.73%;
