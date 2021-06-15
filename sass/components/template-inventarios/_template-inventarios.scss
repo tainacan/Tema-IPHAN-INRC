@@ -44,7 +44,7 @@
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
-        padding-left: 50px;
+        padding-left: 20px;
     }
     & .barra-lateral > :not(div:last-child) {
         @media screen and (min-width: $screen__sm) {
@@ -79,7 +79,12 @@
     & .post-inventario .is-style-title-iphan-underscore,
     .post-inventario .content,
     .post-inventario .metadata-mobile > :not(div:first-child) {
-        margin-left: 50px;
+        @media screen and (min-width: $screen__md){
+            margin-left: 50px;
+        }
+        @media screen and (max-width: $screen__md){
+            margin-left: 20px;
+        }
     }
     & .alinhamento-template-inventarios {
         display: flex;
@@ -125,7 +130,6 @@
             width: auto;
             margin-bottom: 30px;
             border-bottom: 1px solid $color__cinza3;
-            margin-left: 0px;
         }
     }
 }
