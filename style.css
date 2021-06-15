@@ -13774,6 +13774,34 @@ article#page-404 .widget ul {
 	margin-bottom: 28px;
 }
 
+.inventario .plus-minus {
+	font-size: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.inventario .plus-minus::after {
+		content: "+";
+		float: right;
+		margin-top: -9%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.inventario .active .plus-minus::after {
+		content: "-";
+		float: right;
+		margin-top: -9%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.inventario .header-collapse {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
 .inventario-footer .hr-posts-relacionados {
 	margin-top: 0px !important;
 }

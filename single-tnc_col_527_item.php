@@ -20,6 +20,7 @@
             <div class="metadata-mobile">
                 <div class="header-collapse">
                     <span>informações técnicas</span>
+                    <a type="button" class="plus-minus"></a>
                 </div>
                 <?php echo tainacan_get_the_metadata(); ?>
             </div>

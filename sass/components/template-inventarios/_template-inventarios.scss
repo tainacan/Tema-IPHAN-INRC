@@ -89,6 +89,30 @@
         margin-top: 28px;
         margin-bottom: 28px;
     }
+    & .plus-minus {
+        font-size: 2.5rem;
+    }
+    & .plus-minus::after {
+        @media screen and (max-width: $screen__sm) {
+            content: "+";
+            float: right;
+            margin-top: -9%;
+        }
+    }
+    & .active .plus-minus::after {
+        @media screen and (max-width: $screen__sm) {
+            content: "-";
+            float: right;
+            margin-top: -9%;
+        }
+    }
+    & .header-collapse {
+        @media screen and (max-width: $screen__md) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }
 
 .inventario-footer {
