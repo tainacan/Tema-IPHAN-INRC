@@ -13792,6 +13792,7 @@ article#page-404 .widget ul {
 .inventario .plus-minus {
 	font-size: 2.5rem;
 	color: #58020b;
+	font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
@@ -13802,6 +13803,7 @@ article#page-404 .widget ul {
 		height: 30px;
 		top: -15px;
 		right: 0px;
+		color: #58020b;
 	}
 }
 
@@ -13813,6 +13815,7 @@ article#page-404 .widget ul {
 		height: 30px;
 		top: -15px;
 		right: 0px;
+		color: #58020b;
 	}
 }
 
