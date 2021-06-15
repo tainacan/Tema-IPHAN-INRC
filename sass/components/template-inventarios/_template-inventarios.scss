@@ -66,6 +66,7 @@
         }
         @media screen and (max-width: $screen__md) {
             position: relative;
+            margin-top: 150px;
         }
         margin-bottom: 100px;
         width: 100%;
@@ -95,15 +96,21 @@
     & .plus-minus::after {
         @media screen and (max-width: $screen__sm) {
             content: "+";
-            float: right;
-            margin-top: -9%;
+            margin-top: 0%;
+            position: absolute;
+            height: 30px;
+            top: -15px;
+            right: 0px;
         }
     }
     & .active .plus-minus::after {
         @media screen and (max-width: $screen__sm) {
             content: "-";
-            float: right;
-            margin-top: -9%;
+            margin-top: 0%;
+            position: absolute;
+            height: 30px;
+            top: -15px;
+            right: 0px;
         }
     }
     & .header-collapse {
@@ -111,6 +118,8 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            position: relative;
+            width: auto;
         }
     }
 }

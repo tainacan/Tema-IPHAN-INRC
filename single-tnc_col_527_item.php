@@ -18,7 +18,7 @@
                 <?php echo tainacan_get_the_collection_name(); ?>
             </h1>
             <div class="metadata-mobile">
-                <div class="header-collapse">
+                <div class="header-collapse collapsible">
                     <span>informações técnicas</span>
                     <a type="button" class="plus-minus"></a>
                 </div>

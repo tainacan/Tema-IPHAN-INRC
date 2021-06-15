@@ -13751,6 +13751,7 @@ article#page-404 .widget ul {
 @media screen and (max-width: 1024px) {
 	.inventario .post-inventario {
 		position: relative;
+		margin-top: 150px;
 	}
 }
 
@@ -13781,16 +13782,22 @@ article#page-404 .widget ul {
 @media screen and (max-width: 768px) {
 	.inventario .plus-minus::after {
 		content: "+";
-		float: right;
-		margin-top: -9%;
+		margin-top: 0%;
+		position: absolute;
+		height: 30px;
+		top: -15px;
+		right: 0px;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.inventario .active .plus-minus::after {
 		content: "-";
-		float: right;
-		margin-top: -9%;
+		margin-top: 0%;
+		position: absolute;
+		height: 30px;
+		top: -15px;
+		right: 0px;
 	}
 }
 
@@ -13799,6 +13806,8 @@ article#page-404 .widget ul {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		position: relative;
+		width: auto;
 	}
 }
 
