@@ -22,7 +22,9 @@
     }
     & .metadata-mobile {
         background: $color__barra-lateral-inventario;
-        padding-top: 1px;
+        padding-bottom: 50px;
+        margin-bottom: 70px;
+        padding-top: 20px;
         @media screen and (min-width: $screen__md) {
             display: none;
         }
@@ -120,6 +122,7 @@
             justify-content: space-between;
             position: relative;
             width: auto;
+            margin-bottom: 30px;
         }
     }
 }
