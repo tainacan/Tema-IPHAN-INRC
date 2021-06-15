@@ -18,11 +18,13 @@
                 <?php echo tainacan_get_the_collection_name(); ?>
             </h1>
             <div class="metadata-mobile">
-                <div class="header-collapse collapsible">
+                <div class="header-collapse">
                     <span>informações técnicas</span>
-                    <a type="button" class="plus-minus"></a>
+                    <a type="button" class="plus-minus" data-toggle="collapse" data-target="#metadata-inventario" aria-controls="metadata-inventario" aria-expanded="false"></a>
                 </div>
-                <?php echo tainacan_get_the_metadata(); ?>
+                <div id="metadata-inventario" class="collapse">
+                    <?php echo tainacan_get_the_metadata(); ?>
+                </div>
             </div>
             <div class="entry-content meta-content">
                 <div class="share-button-wrapper">

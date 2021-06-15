@@ -13796,7 +13796,7 @@ article#page-404 .widget ul {
 }
 
 @media screen and (max-width: 768px) {
-	.inventario .plus-minus::after {
+	.inventario .plus-minus[aria-expanded="false"]::after {
 		content: "+";
 		margin-top: 0%;
 		position: absolute;
@@ -13808,7 +13808,7 @@ article#page-404 .widget ul {
 }
 
 @media screen and (max-width: 768px) {
-	.inventario .active .plus-minus::after {
+	.inventario .plus-minus[aria-expanded="true"]::after {
 		content: "-";
 		margin-top: 0%;
 		position: absolute;

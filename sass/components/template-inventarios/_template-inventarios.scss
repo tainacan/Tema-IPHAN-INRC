@@ -104,7 +104,7 @@
         color: $color__vermelho1;
         font-weight: 500;
     }
-    & .plus-minus::after {
+    & .plus-minus[aria-expanded="false"]::after {
         @media screen and (max-width: $screen__sm) {
             content: "+";
             margin-top: 0%;
@@ -115,7 +115,7 @@
             color: $color__vermelho1;
         }
     }
-    & .active .plus-minus::after {
+    & .plus-minus[aria-expanded="true"]::after {
         @media screen and (max-width: $screen__sm) {
             content: "-";
             margin-top: 0%;
