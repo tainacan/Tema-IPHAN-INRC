@@ -45,6 +45,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding-left: 20px;
+        padding-bottom: 10px;
     }
     & .barra-lateral > :not(div:last-child) {
         @media screen and (min-width: $screen__sm) {
@@ -79,10 +80,10 @@
     & .post-inventario .is-style-title-iphan-underscore,
     .post-inventario .content,
     .post-inventario .metadata-mobile > :not(div:first-child) {
-        @media screen and (min-width: $screen__md){
+        @media screen and (min-width: $screen__md) {
             margin-left: 50px;
         }
-        @media screen and (max-width: $screen__md){
+        @media screen and (max-width: $screen__md) {
             margin-left: 20px;
         }
     }
@@ -100,6 +101,7 @@
     }
     & .plus-minus {
         font-size: 2.5rem;
+        color: $color__vermelho1;
     }
     & .plus-minus::after {
         @media screen and (max-width: $screen__sm) {

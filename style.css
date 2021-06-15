@@ -13716,6 +13716,7 @@ article#page-404 .widget ul {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	padding-left: 20px;
+	padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -13790,6 +13791,7 @@ article#page-404 .widget ul {
 
 .inventario .plus-minus {
 	font-size: 2.5rem;
+	color: #58020b;
 }
 
 @media screen and (max-width: 768px) {
