@@ -18,6 +18,9 @@
                 <?php echo tainacan_get_the_collection_name(); ?>
             </h1>
             <div class="metadata-mobile">
+                <div class="header-collapse">
+                    <span>informações técnicas</span>
+                </div>
                 <?php echo tainacan_get_the_metadata(); ?>
             </div>
             <div class="entry-content meta-content">
@@ -27,7 +30,7 @@
                     <a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="<?php _e('Compartilhar no Facebook', 'iphan_inrc'); ?>"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-facebook"></i></a>
                 </div>
             </div>
-            <div>
+            <div class="content">
                 <?php echo tainacan_get_item(); ?>
             </div>
         </div>
