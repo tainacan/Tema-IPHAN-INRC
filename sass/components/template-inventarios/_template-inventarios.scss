@@ -4,6 +4,7 @@
 .inventario {
     display: flex;
     padding-left: 0px;
+    padding-right: 0px;
     & .barra-lateral {
         background: $color__barra-lateral-inventario;
         @media screen and (min-width: $screen__lg) {
@@ -24,6 +25,7 @@
         background: $color__barra-lateral-inventario;
         margin-bottom: 70px;
         padding-top: 20px;
+        width: 100%;
         @media screen and (min-width: $screen__md) {
             display: none;
         }
@@ -70,6 +72,7 @@
     & .post-inventario {
         @media screen and (min-width: $screen__md) {
             margin-left: 50px;
+            padding-right: 4.73%;
         }
         @media screen and (max-width: $screen__md) {
             position: relative;
@@ -77,7 +80,6 @@
         }
         margin-bottom: 100px;
         width: 100%;
-        padding-right: 4.73%;
         padding-bottom: 100px;
     }
     & .post-inventario .is-style-title-iphan-underscore,
@@ -116,6 +118,7 @@
             top: -15px;
             right: 0px;
             color: $color__vermelho1;
+            margin-right: 20px;
         }
     }
     & .plus-minus[aria-expanded="true"]::after {
@@ -127,6 +130,7 @@
             top: -15px;
             right: 0px;
             color: $color__vermelho1;
+            margin-right: 20px;
         }
     }
     & .header-collapse {

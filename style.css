@@ -13655,6 +13655,7 @@ article#page-404 .widget ul {
 .inventario {
 	display: flex;
 	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .inventario .barra-lateral {
@@ -13687,6 +13688,7 @@ article#page-404 .widget ul {
 	background: #f0f0f0;
 	margin-bottom: 70px;
 	padding-top: 20px;
+	width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -13745,13 +13747,13 @@ article#page-404 .widget ul {
 .inventario .post-inventario {
 	margin-bottom: 100px;
 	width: 100%;
-	padding-right: 4.73%;
 	padding-bottom: 100px;
 }
 
 @media screen and (min-width: 1024px) {
 	.inventario .post-inventario {
 		margin-left: 50px;
+		padding-right: 4.73%;
 	}
 }
 
@@ -13807,6 +13809,7 @@ article#page-404 .widget ul {
 		top: -15px;
 		right: 0px;
 		color: #58020b;
+		margin-right: 20px;
 	}
 }
 
@@ -13819,6 +13822,7 @@ article#page-404 .widget ul {
 		top: -15px;
 		right: 0px;
 		color: #58020b;
+		margin-right: 20px;
 	}
 }
 
