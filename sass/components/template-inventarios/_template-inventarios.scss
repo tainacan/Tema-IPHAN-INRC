@@ -22,12 +22,15 @@
     }
     & .metadata-mobile {
         background: $color__barra-lateral-inventario;
-        padding-bottom: 50px;
         margin-bottom: 70px;
         padding-top: 20px;
         @media screen and (min-width: $screen__md) {
             display: none;
         }
+    }
+
+    & .metadata-mobile .header-collapse > a[aria-expanded="true"] {
+        padding-bottom: 50px;
     }
     & .barra-lateral > div {
         @media screen and (min-width: $screen__lg) {

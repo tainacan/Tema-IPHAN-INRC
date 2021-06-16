@@ -13685,7 +13685,6 @@ article#page-404 .widget ul {
 
 .inventario .metadata-mobile {
 	background: #f0f0f0;
-	padding-bottom: 50px;
 	margin-bottom: 70px;
 	padding-top: 20px;
 }
@@ -13694,6 +13693,10 @@ article#page-404 .widget ul {
 	.inventario .metadata-mobile {
 		display: none;
 	}
+}
+
+.inventario .metadata-mobile .header-collapse > a[aria-expanded="true"] {
+	padding-bottom: 50px;
 }
 
 @media screen and (min-width: 1300px) {
