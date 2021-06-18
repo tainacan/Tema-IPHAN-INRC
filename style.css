@@ -13734,7 +13734,6 @@ article#page-404 .widget ul {
 
 @media screen and (min-width: 768px) {
 	.inventario .barra-lateral > div:first-child,
-	.inventario .metadata-mobile > div:first-child,
 	.inventario .post-inventario {
 		margin-top: 150px;
 	}

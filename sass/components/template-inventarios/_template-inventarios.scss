@@ -64,7 +64,6 @@
         }
     }
     & .barra-lateral > div:first-child,
-    .metadata-mobile > div:first-child,
     .post-inventario {
         @media screen and (min-width: $screen__sm) {
             margin-top: 150px;
