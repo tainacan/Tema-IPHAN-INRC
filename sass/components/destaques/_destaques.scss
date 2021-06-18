@@ -490,15 +490,13 @@
                 "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5"
                 "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5 display-3-noticias-has-5";
         }
-        @media screen and (min-width: $screen__md) {
-            grid-template-areas:
-                "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
-                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
-                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
-                "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
-        }
+        grid-template-areas:
+            "display-1-noticias-has-5 display-1-noticias-has-5 display-1-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-4-noticias-has-5 display-4-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
+            "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
     }
     &
         :is(.display-1-noticias-has-5, .display-2-noticias-has-5, .display-3-noticias-has-5, .display-4-noticias-has-5, .display-5-noticias-has-5) {

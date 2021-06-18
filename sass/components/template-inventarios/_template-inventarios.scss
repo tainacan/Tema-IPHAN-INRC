@@ -31,9 +31,9 @@
         }
     }
 
-    & .metadata-mobile .header-collapse > a[aria-expanded="true"] {
+    /*     & .metadata-mobile .header-collapse > a[aria-expanded="true"] {
         padding-bottom: 50px;
-    }
+    } */
     & .barra-lateral > div {
         @media screen and (min-width: $screen__lg) {
             width: 330px;
@@ -65,7 +65,7 @@
         }
     }
     & .barra-lateral > div > h3,
-    .metadata-mobile > div > h3 {
+    .metadata-mobile > div > div > h3 {
         margin-bottom: 30px;
         color: $color__vermelho1;
     }

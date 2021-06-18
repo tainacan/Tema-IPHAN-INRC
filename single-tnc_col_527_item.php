@@ -11,7 +11,10 @@
 <div class="col-md-12 inventario">
     <div class="alinhamento-template-inventarios">
         <div class="barra-lateral">
-            <?php echo tainacan_get_the_metadata(); ?>
+            <?php echo tainacan_get_the_metadata();
+            echo tainacan_get_the_attachments()
+            ?>
+
         </div>
         <div class="post-inventario">
             <h1 class="is-style-title-iphan-underscore">
