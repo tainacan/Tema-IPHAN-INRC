@@ -57,6 +57,9 @@
         letter-spacing: 1px;
         padding-left: 20px;
         padding-bottom: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     & .barra-lateral > :not(div:last-child) {
         @media screen and (min-width: $screen__sm) {
@@ -86,6 +89,12 @@
         margin-bottom: 100px;
         width: 100%;
         padding-bottom: 100px;
+    }
+    & .post-inventario .is-style-title-iphan-underscore {
+        @media screen and (max-width: $screen__md) {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
     }
     & .post-inventario .is-style-title-iphan-underscore,
     .post-inventario .content,
@@ -119,7 +128,7 @@
         font-weight: 500;
     }
     & .plus-minus[aria-expanded="false"]::after {
-        @media screen and (max-width: $screen__sm) {
+        @media screen and (max-width: $screen__md) {
             content: "+";
             margin-top: 0%;
             position: absolute;
@@ -131,7 +140,7 @@
         }
     }
     & .plus-minus[aria-expanded="true"]::after {
-        @media screen and (max-width: $screen__sm) {
+        @media screen and (max-width: $screen__md) {
             content: "-";
             margin-top: 0%;
             position: absolute;
