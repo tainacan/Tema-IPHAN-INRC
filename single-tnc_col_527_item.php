@@ -25,6 +25,7 @@
                     ));
             }
             ?>
+            <span>anexos</span>
             <div class="attachments">
                 <?php
                 foreach ($media_items_thumbs as $media) {
