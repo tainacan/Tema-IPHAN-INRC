@@ -12295,20 +12295,20 @@ li > article {
 }
 
 @media only screen and (max-width: 768px) {
+	.site-footer .content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+}
+
+@media only screen and (max-width: 768px) {
 	.collapsible {
 		cursor: pointer;
 		width: 100%;
 		border: none;
 		text-align: left;
 		outline: none;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.content {
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 0.2s ease-out;
 	}
 }
 
@@ -13798,7 +13798,8 @@ article#page-404 .widget ul {
 }
 
 @media screen and (max-width: 1024px) {
-	.inventario .post-inventario .is-style-title-iphan-underscore {
+	.inventario .post-inventario .is-style-title-iphan-underscore,
+	.inventario .post-inventario .content {
 		margin-left: 40px;
 		margin-right: 40px;
 	}

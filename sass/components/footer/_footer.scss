@@ -127,6 +127,13 @@
             max-width: 110px;
         }
     }
+    & .content {
+        @media only screen and (max-width: $screen__sm) {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    }
 }
 
 .collapsible {
@@ -136,14 +143,6 @@
         border: none;
         text-align: left;
         outline: none;
-    }
-}
-
-.content {
-    @media only screen and (max-width: $screen__sm) {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
     }
 }
 
