@@ -24,10 +24,14 @@
                         'media_type' => $attachment->post_mime_type
                     ));
             }
-            foreach ($media_items_thumbs as $media) {
-                echo $media;
-            }
             ?>
+            <div class="attachments">
+                <?php
+                foreach ($media_items_thumbs as $media) {
+                    echo $media;
+                }
+                ?>
+            </div>
         </div>
         <div class="post-inventario">
             <h1 class="is-style-title-iphan-underscore">

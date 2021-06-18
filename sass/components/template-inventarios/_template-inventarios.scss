@@ -81,6 +81,15 @@
         text-transform: capitalize;
         font-weight: bold;
         color: $color__vermelho1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .attachments {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     & .post-inventario {
         @media screen and (min-width: $screen__md) {
