@@ -13661,7 +13661,8 @@ article#page-404 .widget ul {
 	.inventario .barra-lateral {
 		width: 485px;
 		border-right: 2px solid #58020b;
-		height: 100%;
+		height: fit-content;
+		max-height: 100%;
 	}
 }
 
@@ -13669,7 +13670,8 @@ article#page-404 .widget ul {
 	.inventario .barra-lateral {
 		width: 410px;
 		border-right: 2px solid #58020b;
-		height: 100%;
+		height: fit-content;
+		max-height: 100%;
 	}
 }
 
@@ -13703,6 +13705,7 @@ article#page-404 .widget ul {
 	.inventario .barra-lateral > div {
 		width: 330px;
 		margin-left: 110px;
+		margin-right: 110px;
 	}
 }
 
@@ -13710,6 +13713,7 @@ article#page-404 .widget ul {
 	.inventario .barra-lateral > div {
 		width: 260px;
 		margin-left: 110px;
+		margin-right: 110px;
 	}
 }
 
@@ -13839,12 +13843,7 @@ article#page-404 .widget ul {
 
 .inventario .metadata-type-ainacan_url_plugin_metadata_type iframe {
 	border: 1px solid #58020b !important;
-}
-
-@media screen and (max-width: 1024px) {
-	.inventario .metadata-type-ainacan_url_plugin_metadata_type iframe {
-		max-height: 250px;
-	}
+	max-height: 250px;
 }
 
 .inventario-footer .hr-posts-relacionados {
