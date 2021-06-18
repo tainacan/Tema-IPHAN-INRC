@@ -77,6 +77,11 @@
         margin-bottom: 30px;
         color: $color__vermelho1;
     }
+    & .swiper-slide-metadata__name {
+        text-transform: capitalize;
+        font-weight: bold;
+        color: $color__vermelho1;
+    }
     & .post-inventario {
         @media screen and (min-width: $screen__md) {
             margin-left: 50px;
