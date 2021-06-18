@@ -30,10 +30,12 @@
             display: none;
         }
     }
-
-    /*     & .metadata-mobile .header-collapse > a[aria-expanded="true"] {
-        padding-bottom: 50px;
-    } */
+    & .metadata-mobile > div:last-child > div:last-child {
+        @media screen and (max-width: $screen__md) {
+            border-bottom: 2px solid $color__vermelho1;
+            padding-bottom: 40px;
+        }
+    }
     & .barra-lateral > div {
         @media screen and (min-width: $screen__lg) {
             width: 330px;
@@ -88,6 +90,9 @@
         @media screen and (min-width: $screen__md) {
             margin-left: 50px;
         }
+    }
+    .post-inventario .metadata-mobile > div > :not(div:last-child),
+    .post-inventario .metadata-mobile > div > div:last-child > * {
         @media screen and (max-width: $screen__md) {
             margin-left: 20px;
             margin-right: 20px;
@@ -148,6 +153,9 @@
     }
     & .metadata-type-ainacan_url_plugin_metadata_type iframe {
         border: 1px solid $color__vermelho1 !important;
+        @media screen and (max-width: $screen__md) {
+            max-height: 250px;
+        }
     }
 }
 
