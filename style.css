@@ -13661,7 +13661,7 @@ article#page-404 .widget ul {
 	.inventario .barra-lateral {
 		width: 485px;
 		border-right: 2px solid #58020b;
-		height: fit-content;
+		height: max-content;
 		max-height: 100%;
 	}
 }
@@ -13670,7 +13670,7 @@ article#page-404 .widget ul {
 	.inventario .barra-lateral {
 		width: 410px;
 		border-right: 2px solid #58020b;
-		height: fit-content;
+		height: max-content;
 		max-height: 100%;
 	}
 }

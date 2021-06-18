@@ -10,13 +10,13 @@
         @media screen and (min-width: $screen__lg) {
             width: 485px;
             border-right: 2px solid $color__vermelho1;
-            height: fit-content;
+            height: max-content;
             max-height: 100%;
         }
         @media screen and (min-width: $screen__md) {
             width: 410px;
             border-right: 2px solid $color__vermelho1;
-            height: fit-content;
+            height: max-content;
             max-height: 100%;
         }
         @media screen and (max-width: $screen__md) {
