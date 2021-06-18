@@ -167,6 +167,13 @@
         border: 1px solid $color__vermelho1 !important;
         max-height: 250px;
     }
+    & .swiper-slide-content {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+    & .swiper-slide-content > img {
+        margin-top: 30px;
+    }
 }
 
 .inventario-footer {

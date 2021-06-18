@@ -13855,6 +13855,15 @@ article#page-404 .widget ul {
 	max-height: 250px;
 }
 
+.inventario .swiper-slide-content {
+	flex-direction: column-reverse;
+	display: flex;
+}
+
+.inventario .swiper-slide-content > img {
+	margin-top: 30px;
+}
+
 .inventario-footer .hr-posts-relacionados {
 	margin-top: 0px !important;
 }
