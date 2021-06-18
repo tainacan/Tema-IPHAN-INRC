@@ -13,9 +13,6 @@
         <div class="barra-lateral">
             <?php echo tainacan_get_the_metadata();
             $attachments = tainacan_get_the_attachments();
-            /*             for ($i = 0; $i < sizeof($attachaments); $i++) {
-                tainacan_get_single_attachment_as_html($attachaments[$i]->ID);
-            } */
             foreach ($attachments as $attachment) {
                 $media_items_thumbs[] =
                     tainacan_get_the_media_component_slide(array(
