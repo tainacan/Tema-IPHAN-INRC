@@ -90,6 +90,7 @@
         }
         @media screen and (max-width: $screen__md) {
             margin-left: 20px;
+            margin-right: 20px;
         }
     }
     & .alinhamento-template-inventarios {
@@ -144,6 +145,8 @@
             border-bottom: 1px solid $color__cinza3;
             height: 50px;
         }
+    }
+    & .metadata-type-ainacan_url_plugin_metadata_type iframe {
     }
 }
 

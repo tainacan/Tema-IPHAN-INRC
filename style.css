@@ -13771,6 +13771,7 @@ article#page-404 .widget ul {
 	.inventario .post-inventario .content,
 	.inventario .post-inventario .metadata-mobile > :not(div:first-child) {
 		margin-left: 20px;
+		margin-right: 20px;
 	}
 }
 
