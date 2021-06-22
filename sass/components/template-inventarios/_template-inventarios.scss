@@ -190,7 +190,8 @@
             height: 50px;
         }
     }
-    & .metadata-type-ainacan_url_plugin_metadata_type iframe {
+    & .metadata-type-ainacan_url_plugin_metadata_type iframe,
+    .metadata-type-tainacan_url_plugin_metadata_type iframe {
         border: 1px solid $color__vermelho1 !important;
         max-height: 250px;
     }
