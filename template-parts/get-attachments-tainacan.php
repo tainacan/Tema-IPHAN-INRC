@@ -19,6 +19,7 @@ foreach ($attachments as $attachment) {
         <?php
         foreach ($media_items_thumbs as $media) {
             echo $media;
+            echo ($media->media_type);
         }
         ?>
     </div>
