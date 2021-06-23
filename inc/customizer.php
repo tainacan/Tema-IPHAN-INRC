@@ -270,7 +270,7 @@ function iphan_inrc_customize_register($wp_customize)
         'settings'  => 'iphan_inrc_glossary_archive_title',
         'priority'  => 1,
     ));
-    $wp_customize->selective_refresh->add_partial( 'iphan_inrc_glossary_archive_title', array(
+    $wp_customize->selective_refresh->add_partial('iphan_inrc_glossary_archive_title', array(
         'selector'          => '.archive-title-glossary',
         'render_callback'   => '__return_false',
         'fallback_refresh'  => true
@@ -290,7 +290,7 @@ function iphan_inrc_customize_register($wp_customize)
         'settings'  => 'iphan_inrc_glossary_archive_description',
         'priority'  => 1,
     ));
-    $wp_customize->selective_refresh->add_partial( 'iphan_inrc_glossary_archive_description', array(
+    $wp_customize->selective_refresh->add_partial('iphan_inrc_glossary_archive_description', array(
         'selector'          => '.archive-description-glossary',
         'render_callback'   => '__return_false',
         'fallback_refresh'  => true
@@ -316,7 +316,7 @@ function iphan_inrc_customize_register($wp_customize)
             'step'  => 1
         ),
     ));
-    $wp_customize->selective_refresh->add_partial( 'iphan_inrc_glossary_archive_columns_count', array(
+    $wp_customize->selective_refresh->add_partial('iphan_inrc_glossary_archive_columns_count', array(
         'selector'          => '.glossary-list',
         'render_callback'   => '__return_false',
         'fallback_refresh'  => true
@@ -335,6 +335,32 @@ function iphan_inrc_customize_register($wp_customize)
         'section'   => 'iphan_inrc_glossary_archive',
         'settings'  => 'iphan_inrc_glossary_archive_alignwide',
         'priority'  => 1,
+    ));
+
+    /* TEMPLATE DO INVENTÁRIO */
+    $wp_customize->add_section('template_inventario_iphan', array(
+        'title'       => __('Template dos Inventários', 'Tema_IPHAN_INRC', 'iphan-inrc'),
+    ));
+
+
+    /* Escolher qual template usar para o Tema */
+
+    $wp_customize->add_setting('template_inventario', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'transport'  => 'postMessage',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+    $wp_customize->add_control('escolhas_template_inventario', array(
+        'label' => 'Template do Inventário', 'iphan-inrc',
+        'type' => 'radio',
+        'section' => 'template_inventario_iphan',
+        'settings' => 'template_inventario',
+        'priority' => 3,
+        'choices' => array(
+            'default' => __('Padrão'),
+            'custom' => __('Personalizado'),
+        )
     ));
 }
 add_action('customize_register', 'iphan_inrc_customize_register');
@@ -369,6 +395,7 @@ add_action('customize_preview_init', 'iphan_inrc_customize_preview_js');
  * @since  1.0
  * @return bool
  */
-function sanitize_checkbox( $input ) {
-	return ( $input === true ) ? true : false;
+function sanitize_checkbox($input)
+{
+    return ($input === true) ? true : false;
 }

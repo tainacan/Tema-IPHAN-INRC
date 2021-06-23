@@ -8,13 +8,13 @@ foreach ($attachments as $attachment) {
             'media_title' => $attachment->post_title,
             'media_description' => $attachment->post_content,
             'media_caption' => $attachment->post_excerpt,
-            'media_type' => $attachment->post_mime_type
+            'media_type' => $attachment->post_mime_type,
         ));
 }
 ?>
 <?php if (sizeof($attachments) > 0 && sizeof($media_items_thumbs) > 0) {
 ?>
-    <span>anexos</span>
+    <span>Imagens</span>
     <div class="attachments">
         <?php
         foreach ($media_items_thumbs as $media) {
