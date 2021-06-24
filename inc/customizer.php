@@ -362,6 +362,24 @@ function iphan_inrc_customize_register($wp_customize)
             'custom' => __('Personalizado'),
         )
     ));
+    $wp_customize->add_setting('tema_escolher', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'transport'  => 'postMessage',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control('escolhas_inventario', array(
+        'label' => 'Inventário', 'iphan-inrc',
+        'type' => 'select',
+        'section' => 'template_inventario_iphan',
+        'settings' => 'tema_escolher',
+        'priority' => 2,
+        'choices' => array(
+            'default' => __('1'),
+            'custom' => __('2'),
+        )
+    ));
 }
 add_action('customize_register', 'iphan_inrc_customize_register');
 
