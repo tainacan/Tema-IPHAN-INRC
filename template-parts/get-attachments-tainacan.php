@@ -12,15 +12,24 @@ foreach ($attachments as $attachment) {
         ));
 }
 ?>
-<?php if (sizeof($attachments) > 0 && sizeof($media_items_thumbs) > 0) {
-?>
-    <span>Imagens</span>
-    <div class="attachments">
-        <?php
-        foreach ($media_items_thumbs as $media) {
-            echo $media;
-            echo ($media->media_type);
+<span>Imagens</span>
+<div class="attachments">
+    <?php
+    for ($i = 0; $i < sizeof($attachments); $i++) {
+        if ($attachments[$i]->post_mime_type == 'image/png') {
+            echo $media_items_thumbs[$i];
         }
-        ?>
-    </div>
-<?php  } ?>
+    }
+    ?>
+</div>
+
+<span>Documentos</span>
+<div class="attachments">
+    <?php
+    for ($i = 0; $i < sizeof($attachments); $i++) {
+        if ($attachments[$i]->post_mime_type == 'text/plain') {
+            echo $media_items_thumbs[$i];
+        }
+    }
+    ?>
+</div>

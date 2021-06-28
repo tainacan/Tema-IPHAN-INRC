@@ -368,17 +368,22 @@ function iphan_inrc_customize_register($wp_customize)
         'transport'  => 'postMessage',
         'sanitize_callback' => 'esc_url_raw'
     ));
-
+    /*     function myfunction($repositories)
+    {
+        var_dump($repositories->ID);
+    }
+    $repositories = \Tainacan\Repositories\Items::get_instance();
+    var_dump($repositories); */
+    $repository = \Tainacan\Repositories\Collections::get_instance();
+    //separar
+    var_dump($repository->fetch()->posts);
     $wp_customize->add_control('escolhas_inventario', array(
         'label' => 'Inventário', 'iphan-inrc',
         'type' => 'select',
         'section' => 'template_inventario_iphan',
         'settings' => 'tema_escolher',
         'priority' => 2,
-        'choices' => array(
-            'default' => __('1'),
-            'custom' => __('2'),
-        )
+        /*        'choices' => array_map('myfunction', $repositories) */
     ));
 }
 add_action('customize_register', 'iphan_inrc_customize_register');
