@@ -12,7 +12,7 @@ foreach ($attachments as $attachment) {
         ));
 }
 ?>
-<span>Imagens</span>
+<span><?php _e('Imagens', 'iphan_inrc') ?></span>
 <div class="attachments">
     <?php
     for ($i = 0; $i < sizeof($attachments); $i++) {
@@ -23,7 +23,7 @@ foreach ($attachments as $attachment) {
     ?>
 </div>
 
-<span>Documentos</span>
+<span><?php _e('Documentos', 'iphan_inrc') ?></span>
 <div class="attachments">
     <?php
     for ($i = 0; $i < sizeof($attachments); $i++) {
