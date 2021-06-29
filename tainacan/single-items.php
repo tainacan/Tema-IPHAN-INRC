@@ -1,4 +1,4 @@
-<?php if (true) {
+<?php if (get_theme_mod('template_inventario') == 'http://custom') {
 	get_template_part('single-template-inventarios');
 } else {
 	get_header();
