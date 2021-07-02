@@ -348,7 +348,7 @@ function iphan_inrc_customize_register($wp_customize)
     $wp_customize->add_setting('template_inventario', array(
         'default' => '',
         'type' => 'theme_mod',
-        'transport'  => 'postMessage',
+        'transport'  => 'refresh',
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('escolhas_template_inventario', array(
@@ -365,7 +365,7 @@ function iphan_inrc_customize_register($wp_customize)
     $wp_customize->add_setting('tema_escolher', array(
         'default' => '',
         'type' => 'theme_mod',
-        'transport'  => 'postMessage',
+        'transport'  => 'refresh',
         'sanitize_callback' => 'sanitize_text_field'
     ));
 
