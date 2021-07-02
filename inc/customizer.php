@@ -349,7 +349,7 @@ function iphan_inrc_customize_register($wp_customize)
         'default' => '',
         'type' => 'theme_mod',
         'transport'  => 'postMessage',
-        'sanitize_callback' => 'esc_url_raw'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('escolhas_template_inventario', array(
         'label' => 'Template do Inventário', 'iphan-inrc',
@@ -366,7 +366,7 @@ function iphan_inrc_customize_register($wp_customize)
         'default' => '',
         'type' => 'theme_mod',
         'transport'  => 'postMessage',
-        'sanitize_callback' => 'esc_url_raw'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
 
     $repository = \Tainacan\Repositories\Collections::get_instance();
