@@ -13754,7 +13754,8 @@ article#page-404 .widget ul {
 }
 
 .inventario .swiper-slide-metadata__name,
-.inventario .attachments :not(.title-attachments:first-child) > span {
+.inventario .attachments :not(.title-attachments:first-child) > span,
+.inventario .images :not(.title-attachments:first-child) > span {
 	display: none;
 	text-transform: capitalize;
 	font-weight: bold;
@@ -13772,7 +13773,8 @@ article#page-404 .widget ul {
 	margin-left: 110px;
 }
 
-.inventario .attachments {
+.inventario .attachments,
+.inventario .images {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;

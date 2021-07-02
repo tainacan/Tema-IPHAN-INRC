@@ -81,7 +81,8 @@
         color: $color__vermelho1;
     }
     & .swiper-slide-metadata__name,
-    .attachments :not(.title-attachments:first-child) > span {
+    .attachments :not(.title-attachments:first-child) > span,
+    .images :not(.title-attachments:first-child) > span {
         display: none;
         text-transform: capitalize;
         font-weight: bold;
@@ -98,7 +99,8 @@
         font-size: 18px;
         margin-left: 110px;
     }
-    & .attachments {
+    & .attachments,
+    .images {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
