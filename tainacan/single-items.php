@@ -1,5 +1,5 @@
 <?php if (get_theme_mod('template_inventario') == 'custom') {
-	get_template_part('single-template-inventarios');
+	get_template_part('template-parts/single-template-inventarios');
 } else {
 	get_header();
 	get_template_part('template-parts/site-banner');
