@@ -13769,7 +13769,7 @@ article#page-404 .widget ul {
 	border: 1px solid #d9d9d9;
 }
 
-.inventario span {
+.inventario span.title-section {
 	color: #58020b;
 	text-transform: capitalize;
 	font-weight: bold;

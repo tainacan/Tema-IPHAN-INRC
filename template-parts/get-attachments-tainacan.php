@@ -52,7 +52,7 @@ foreach ($attachments as $attachment) {
 }
 ?>
 <?php if (sizeof($media_items_thumbs_image) > 0) { ?>
-	<span><?php _e('Imagens', 'iphan_inrc') ?></span>
+	<span class="title-section"><?php _e('Imagens', 'iphan_inrc') ?></span>
 	<div class="images">
 		<?php
 		foreach ($media_items_thumbs_image as $media_item) {
@@ -63,7 +63,7 @@ foreach ($attachments as $attachment) {
 <?php } ?>
 
 <?php if (sizeof($media_items_thumbs_audio) > 0) { ?>
-	<span><?php _e('Audios', 'iphan_inrc') ?></span>
+	<span class="title-section"><?php _e('Audios', 'iphan_inrc') ?></span>
 	<div class="attachments">
 		<?php
 		foreach ($media_items_thumbs_audio as $media_item) {
@@ -74,7 +74,7 @@ foreach ($attachments as $attachment) {
 <?php } ?>
 
 <?php if (sizeof($media_items_thumbs_video) > 0) { ?>
-	<span><?php _e('Vídeos', 'iphan_inrc') ?></span>
+	<span class="title-section"><?php _e('Vídeos', 'iphan_inrc') ?></span>
 	<div class="attachments">
 		<?php
 		foreach ($media_items_thumbs_video as $media_item) {
@@ -85,7 +85,7 @@ foreach ($attachments as $attachment) {
 <?php } ?>
 
 <?php if (sizeof($media_items_thumbs_other) > 0) { ?>
-	<span><?php _e('Documentos', 'iphan_inrc') ?></span>
+	<span class="title-section"><?php _e('Documentos', 'iphan_inrc') ?></span>
 	<div class="attachments">
 		<?php
 		foreach ($media_items_thumbs_other as $media_item) {
