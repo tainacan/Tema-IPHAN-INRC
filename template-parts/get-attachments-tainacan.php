@@ -10,17 +10,17 @@ $media_items_thumbs_video = [];
 $media_items_thumbs_other = [];
 
 foreach ($attachments as $attachment) {
-    $mime_type = $attachment->post_mime_type;
-    $media_item = tainacan_get_the_media_component_slide(array(
-        'media_content' => wp_get_attachment_image($attachment->ID, 'tainacan-medium', false),
-        'media_content_full' => wp_attachment_is('image', $attachment->ID) ? wp_get_attachment_image($attachment->ID, 'full', false) : ('<div class="attachment-without-image tainacan-embed-container"><iframe id="tainacan-attachment-iframe" src="' . tainacan_get_attachment_html_url($attachment->ID) . '"></iframe></div>'),
-        'media_title' => $attachment->post_title,
-        'media_description' => $attachment->post_content,
-        'media_caption' => $attachment->post_excerpt,
-        'media_type' => $attachment->post_mime_type,
-    ));
+	$mime_type = $attachment->post_mime_type;
+	$media_item = tainacan_get_the_media_component_slide(array(
+		'media_content' => wp_get_attachment_image($attachment->ID, 'tainacan-medium', false),
+		'media_content_full' => wp_attachment_is('image', $attachment->ID) ? wp_get_attachment_image($attachment->ID, 'full', false) : ('<div class="attachment-without-image tainacan-embed-container"><iframe id="tainacan-attachment-iframe" src="' . tainacan_get_attachment_html_url($attachment->ID) . '"></iframe></div>'),
+		'media_title' => $attachment->post_title,
+		'media_description' => $attachment->post_content,
+		'media_caption' => $attachment->post_excerpt,
+		'media_type' => $attachment->post_mime_type,
+	));
 
-    switch($mime_type) {
+	switch ($mime_type) {
 		case 'image':
 		case 'image/png':
 		case 'image/jpeg':
@@ -47,24 +47,50 @@ foreach ($attachments as $attachment) {
 			$media_items_thumbs_video[] = $media_item;
 			break;
 		default:
-            $media_items_thumbs_other[] = $media_item;
+			$media_items_thumbs_other[] = $media_item;
 	}
 }
 ?>
-<span><?php _e('Imagens', 'iphan_inrc') ?></span>
-<div class="attachments">
-<?php
-    foreach($media_items_thumbs_image as $media_item) {
-        echo $media_item;
-    }
-?>
-</div>
+<?php if (sizeof($media_items_thumbs_image) > 0) { ?>
+	<span><?php _e('Imagens', 'iphan_inrc') ?></span>
+	<div class="attachments">
+		<?php
+		foreach ($media_items_thumbs_image as $media_item) {
+			echo $media_item;
+		}
+		?>
+	</div>
+<?php } ?>
 
-<span><?php _e('Documentos', 'iphan_inrc') ?></span>
-<div class="attachments">
-<?php
-    foreach($media_items_thumbs_other as $media_item) {
-        echo $media_item;
-    }
-?>
-</div>
+<?php if (sizeof($media_items_thumbs_audio) > 0) { ?>
+	<span><?php _e('Audios', 'iphan_inrc') ?></span>
+	<div class="attachments">
+		<?php
+		foreach ($media_items_thumbs_audio as $media_item) {
+			echo $media_item;
+		}
+		?>
+	</div>
+<?php } ?>
+
+<?php if (sizeof($media_items_thumbs_video) > 0) { ?>
+	<span><?php _e('Vídeos', 'iphan_inrc') ?></span>
+	<div class="attachments">
+		<?php
+		foreach ($media_items_thumbs_video as $media_item) {
+			echo $media_item;
+		}
+		?>
+	</div>
+<?php } ?>
+
+<?php if (sizeof($media_items_thumbs_other) > 0) { ?>
+	<span><?php _e('Documentos', 'iphan_inrc') ?></span>
+	<div class="attachments">
+		<?php
+		foreach ($media_items_thumbs_other as $media_item) {
+			echo $media_item;
+		}
+		?>
+	</div>
+<?php } ?>
