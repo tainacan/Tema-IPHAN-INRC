@@ -11717,6 +11717,7 @@ li > article {
 
 .widget-title {
 	text-transform: uppercase;
+	color: #ffffff !important;
 }
 
 .widget_calendar {
