@@ -380,14 +380,14 @@ function iphan_inrc_customize_register($wp_customize)
     }
     $repository = \Tainacan\Repositories\Collections::get_instance();
     //separar
-    $colections = $repository->fetch()->posts;
+    $collections = $repository->fetch()->posts;
     $wp_customize->add_control('escolhas_inventario', array(
         'label' => 'Inventário', 'iphan-inrc',
         'type' => 'select',
         'section' => 'template_inventario_iphan',
         'settings' => 'tema_escolher',
         'priority' => 2,
-        'choices' => array_map('retornaNomeColecao', $colections)
+        'choices' => array_map('retornaNomeColecao', $collections)
     ));
 }
 add_action('customize_register', 'iphan_inrc_customize_register');
