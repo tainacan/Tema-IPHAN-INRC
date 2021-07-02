@@ -13765,6 +13765,10 @@ article#page-404 .widget ul {
 	overflow: hidden;
 }
 
+.inventario .attachments img {
+	border: 1px solid #d9d9d9;
+}
+
 .inventario span {
 	color: #58020b;
 	text-transform: capitalize;

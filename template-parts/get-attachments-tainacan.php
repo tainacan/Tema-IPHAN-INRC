@@ -53,7 +53,7 @@ foreach ($attachments as $attachment) {
 ?>
 <?php if (sizeof($media_items_thumbs_image) > 0) { ?>
 	<span><?php _e('Imagens', 'iphan_inrc') ?></span>
-	<div class="attachments">
+	<div class="images">
 		<?php
 		foreach ($media_items_thumbs_image as $media_item) {
 			echo $media_item;

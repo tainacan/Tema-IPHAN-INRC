@@ -91,7 +91,9 @@
         white-space: nowrap;
         overflow: hidden;
     }
-
+    & .attachments img {
+        border: 1px solid $color__cinza3;
+    }
     & span {
         color: #58020b;
         text-transform: capitalize;
