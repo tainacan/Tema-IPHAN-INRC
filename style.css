@@ -12362,6 +12362,12 @@ li > article {
 	background-color: #e8e8e8;
 }
 
+@media screen and (min-width: 1024px) {
+	.container-banner .text-banner > span:last-child {
+		top: 15px;
+	}
+}
+
 .title-banner {
 	font-family: "Rubik";
 	text-transform: uppercase;
@@ -12377,7 +12383,7 @@ li > article {
 }
 
 .title-banner::after {
-	content: '';
+	content: "";
 	width: 100%;
 	background-color: RGB(88, 2, 11, 0.7);
 	display: block;
