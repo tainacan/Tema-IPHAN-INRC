@@ -12364,7 +12364,7 @@ li > article {
 
 @media screen and (min-width: 1024px) {
 	.container-banner .text-banner > span:last-child {
-		top: 15px;
+		top: 20px;
 	}
 }
 
