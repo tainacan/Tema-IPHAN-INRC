@@ -40,14 +40,14 @@
     }
     & .barra-lateral > div {
         @media screen and (min-width: $screen__lg) {
-            width: 330px;
-            margin-left: 110px;
-            margin-right: 110px;
+            width: 350px;
+            margin-left: 50px;
+            margin-right: 50px;
         }
         @media screen and (min-width: $screen__md) {
-            width: 260px;
-            margin-left: 110px;
-            margin-right: 110px;
+            width: 350px;
+            margin-left: 50px;
+            margin-right: 50px;
         }
     }
     & .header-collapse > span {
