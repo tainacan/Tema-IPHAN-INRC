@@ -42,13 +42,14 @@
                     $item = tainacan_get_item(); 
                     $post_id = url_to_postid($item->get_document());
 
-                    if ($post_id != 0) {
-                        global $wp_embed;
+                    if ($post_id != 0 && get_post_type($post_id) == 'inventarios') {
 
+                        global $wp_embed;
                         $raw_content = get_the_content(null, false, $post_id);
                         $content = $wp_embed->autoembed( $raw_content );
 
                         echo $content;
+
                     }
 
                     echo '<hr>';

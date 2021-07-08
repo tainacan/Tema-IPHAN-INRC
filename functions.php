@@ -209,5 +209,6 @@ function iphan_inrc_enqueue_editor_scripts()
 add_action('enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts');
 
 require get_template_directory() . '/inc/imports.php';
+require get_template_directory() . '/inc/inventarios-post-type.php';
 
 ?>
