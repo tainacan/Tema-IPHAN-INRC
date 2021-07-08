@@ -4,7 +4,6 @@
     &:not(.tainacan-modal-content) {
         padding-left: 0 !important;
         padding-right: 0 !important;
-        margin-top: -12px;
     }
 
     /* Form and Text styling */
@@ -199,7 +198,7 @@
     }
 }
 body.archive .theme-items-list {
-    margin-top: 100px;
+    margin-top: -12px !important;
 }
 .wp-block-tainacan-faceted-search.alignfull .theme-items-list .search-control,
 .wp-block-tainacan-faceted-search.alignfull .theme-items-list #filters-modal,

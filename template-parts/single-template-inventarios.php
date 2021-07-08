@@ -50,7 +50,13 @@
 
                         echo $content;
                     }
+
+                    echo '<hr>';
+
+					get_template_part('template-parts/single-items-items-related-to-this');
+					do_action('iphan-inrc-single-item-after-items-related-to-this');
                 ?>
+                
             </div>
             <?php comments_template(); ?>
         </div>

@@ -10404,7 +10404,7 @@ input[type="submit"] {
 	font-size: 0.875rem;
 }
 
-button:not(.btn),
+button:not(.btn):not(.pswp__button),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -10413,7 +10413,7 @@ input[type="submit"] {
 	border-radius: 0px !important;
 }
 
-button:not(.btn).button,
+button:not(.btn):not(.pswp__button).button,
 input[type="button"].button,
 input[type="reset"].button,
 input[type="submit"].button {
@@ -10422,7 +10422,7 @@ input[type="submit"].button {
 	border-color: #58020b;
 }
 
-button:not(.btn).button:hover,
+button:not(.btn):not(.pswp__button).button:hover,
 input[type="button"].button:hover,
 input[type="reset"].button:hover,
 input[type="submit"].button:hover {
@@ -10431,7 +10431,7 @@ input[type="submit"].button:hover {
 	color: rgba(255, 255, 255, 0.1);
 }
 
-button:not(.btn).button:active, button:not(.btn).button:focus,
+button:not(.btn):not(.pswp__button).button:active, button:not(.btn):not(.pswp__button).button:focus,
 input[type="button"].button:active,
 input[type="button"].button:focus,
 input[type="reset"].button:active,
@@ -10443,7 +10443,7 @@ input[type="submit"].button:focus {
 	color: rgba(255, 255, 255, 0.1);
 }
 
-button:not(.btn):hover,
+button:not(.btn):not(.pswp__button):hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -14267,7 +14267,6 @@ article#page-404 .widget ul {
 .tainacan-modal-content:not(.tainacan-modal-content) {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	margin-top: -12px;
 }
 
 .theme-items-list .control.has-icons-right .icon .mdi-magnify::before,
@@ -14506,7 +14505,7 @@ article#page-404 .widget ul {
 }
 
 body.archive .theme-items-list {
-	margin-top: 100px;
+	margin-top: -12px !important;
 }
 
 .wp-block-tainacan-faceted-search.alignfull .theme-items-list .search-control,

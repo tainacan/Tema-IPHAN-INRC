@@ -26,6 +26,11 @@ if ($post->post_type == 'tnc_col_' . get_theme_mod('tema_escolher') . '_item') {
 
 						get_template_part('template-parts/single-items-metadata');
 						do_action('iphan-inrc-single-item-after-metadata');
+
+						echo '<hr>';
+
+						get_template_part('template-parts/single-items-items-related-to-this');
+						do_action('iphan-inrc-single-item-after-items-related-to-this');
 						?>
 
 					</article>
