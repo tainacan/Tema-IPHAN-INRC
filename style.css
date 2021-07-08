@@ -13783,6 +13783,11 @@ article#page-404 .widget ul {
 	flex-wrap: wrap;
 }
 
+.inventario .attachments div,
+.inventario .images div {
+	margin-bottom: 20px;
+}
+
 .inventario .post-inventario {
 	width: 100%;
 	padding-bottom: 100px;

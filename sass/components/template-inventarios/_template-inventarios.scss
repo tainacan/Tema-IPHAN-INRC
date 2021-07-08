@@ -98,6 +98,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        & div {
+            margin-bottom: 20px;
+        }
     }
     & .post-inventario {
         @media screen and (min-width: $screen__md) {
