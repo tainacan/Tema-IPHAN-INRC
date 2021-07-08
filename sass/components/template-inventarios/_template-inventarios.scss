@@ -80,16 +80,8 @@
         margin-bottom: 30px;
         color: $color__vermelho1;
     }
-    & .swiper-slide-metadata__name,
-    .attachments :not(.title-attachments:first-child) > span,
-    .images :not(.title-attachments:first-child) > span {
+    & .swiper-slide-metadata {
         display: none;
-        text-transform: capitalize;
-        font-weight: bold;
-        color: $color__vermelho1;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
     }
     & .attachments img {
         border: 1px solid $color__cinza3;
@@ -133,7 +125,7 @@
             margin-left: 50px;
         }
     }
-    .post-inventario .metadata-mobile > div > :not(div:last-child),
+    .post-inventario .metadata-mobile #metadata-inventario > *,
     .post-inventario .metadata-mobile > div > div:last-child > * {
         @media screen and (max-width: $screen__md) {
             margin-left: 20px;

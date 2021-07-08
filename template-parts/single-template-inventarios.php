@@ -52,9 +52,10 @@
                     }
                 ?>
             </div>
+            <?php comments_template(); ?>
         </div>
     </div>
-    <?php comments_template(); ?>
+    
 </div>
 <div class="inventario-footer">
     <?php

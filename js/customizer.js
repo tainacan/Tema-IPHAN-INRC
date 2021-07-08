@@ -35,11 +35,6 @@
 		});
 	});
 
-	wp.blocks.registerBlockStyle('core/title', {
-		name: 'title-tainacan',
-		label: 'Title Tainacan',
-	});
-
 	const button = document.querySelector('button');
 	button.addEventListener('click', () => {
 		button.ariaExpanded = !JSON.parse(button.ariaExpanded);

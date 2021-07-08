@@ -13760,16 +13760,8 @@ article#page-404 .widget ul {
 	color: #58020b;
 }
 
-.inventario .swiper-slide-metadata__name,
-.inventario .attachments :not(.title-attachments:first-child) > span,
-.inventario .images :not(.title-attachments:first-child) > span {
+.inventario .swiper-slide-metadata {
 	display: none;
-	text-transform: capitalize;
-	font-weight: bold;
-	color: #58020b;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
 }
 
 .inventario .attachments img {
@@ -13827,7 +13819,7 @@ article#page-404 .widget ul {
 }
 
 @media screen and (max-width: 1024px) {
-	.inventario .post-inventario .metadata-mobile > div > :not(div:last-child),
+	.inventario .post-inventario .metadata-mobile #metadata-inventario > *,
 	.inventario .post-inventario .metadata-mobile > div > div:last-child > * {
 		margin-left: 20px;
 		margin-right: 20px;
@@ -14275,6 +14267,7 @@ article#page-404 .widget ul {
 .tainacan-modal-content:not(.tainacan-modal-content) {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+	margin-top: -12px;
 }
 
 .theme-items-list .control.has-icons-right .icon .mdi-magnify::before,
@@ -14724,13 +14717,13 @@ body.archive .theme-items-list {
 	--tainacan-block-primary: #58020b;
 }
 
-.wp-block-tainacan-search-bar.is-style-default .tainacan-search-container #tainacan-search-bar-block:not(:focus) {
+.wp-block-tainacan-search-bar:not(.is-style-stylish):not(.is-style-alternate) .tainacan-search-container #tainacan-search-bar-block:not(:focus) {
 	border-top-color: transparent;
 	border-left-color: transparent;
 	border-right-color: transparent;
 }
 
-.wp-block-tainacan-search-bar.is-style-default .tainacan-search-container #tainacan-search-bar-block .button:hover {
+.wp-block-tainacan-search-bar:not(.is-style-stylish):not(.is-style-alternate) .tainacan-search-container #tainacan-search-bar-block .button:hover {
 	background-color: white !important;
 }
 
