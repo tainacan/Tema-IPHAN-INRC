@@ -1,4 +1,7 @@
-<?php if (get_theme_mod('template_inventario') == 'custom') {
+<?php
+var_dump($post->post_type);
+var_dump('tnc_col_' . get_theme_mod('tema_escolher') . '_item');
+if ($post->post_type == 'tnc_col_' . get_theme_mod('tema_escolher') . '_item') {
 	get_template_part('template-parts/single-template-inventarios');
 } else {
 	get_header();

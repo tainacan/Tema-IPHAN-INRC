@@ -345,7 +345,7 @@ function iphan_inrc_customize_register($wp_customize)
 
     /* Escolher qual template usar para o Tema */
 
-    $wp_customize->add_setting('template_inventario', array(
+/*     $wp_customize->add_setting('template_inventario', array(
         'default' => '',
         'type' => 'theme_mod',
         'transport'  => 'refresh',
@@ -361,7 +361,7 @@ function iphan_inrc_customize_register($wp_customize)
             'default' => __('Padrão'),
             'custom' => __('Personalizado'),
         )
-    ));
+    )); */
     $wp_customize->add_setting('tema_escolher', array(
         'default' => '',
         'type' => 'theme_mod',
@@ -371,9 +371,9 @@ function iphan_inrc_customize_register($wp_customize)
 
     $repository = \Tainacan\Repositories\Collections::get_instance();
     $collections_options = [];
-    $colections = $repository->fetch()->posts;
-    
-    foreach($colections as $collection) {
+    $collections = $repository->fetch()->posts;
+
+    foreach($collections as $collection) {
         $collections_options[$collection->ID] = $collection->post_title;
     }
     
@@ -387,6 +387,7 @@ function iphan_inrc_customize_register($wp_customize)
     ));
 }
 add_action('customize_register', 'iphan_inrc_customize_register');
+
 
 /**
  * Render the site title for the selective refresh partial.
