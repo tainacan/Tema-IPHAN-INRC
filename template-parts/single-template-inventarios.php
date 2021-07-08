@@ -38,7 +38,19 @@
                 </div>
             </div>
             <div class="content">
-                <?php echo tainacan_get_item(); ?>
+                <?php
+                    $item = tainacan_get_item(); 
+                    $post_id = url_to_postid($item->get_document());
+
+                    if ($post_id != 0) {
+                        global $wp_embed;
+
+                        $raw_content = get_the_content(null, false, $post_id);
+                        $content = $wp_embed->autoembed( $raw_content );
+
+                        echo $content;
+                    }
+                ?>
             </div>
         </div>
     </div>
