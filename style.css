@@ -13667,18 +13667,18 @@ article#page-404 .widget ul {
 
 @media screen and (min-width: 1300px) {
 	.inventario .barra-lateral {
-		width: 485px;
+		width: auto;
 		border-right: 2px solid #58020b;
-		height: max-content;
+		height: 100%;
 		max-height: 100%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.inventario .barra-lateral {
-		width: 410px;
+		width: auto;
 		border-right: 2px solid #58020b;
-		height: max-content;
+		height: 100%;
 		max-height: 100%;
 	}
 }
