@@ -12344,7 +12344,8 @@ li > article {
 	margin-right: 0%;
 }
 
-.icons-footer > :not(a:last-child) > :is(i, img) {
+.icons-footer > :not(a:last-child) > i,
+.icons-footer > :not(a:last-child) > img {
 	margin-right: 12px;
 }
 
