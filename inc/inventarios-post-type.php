@@ -90,16 +90,27 @@ function iphan_inrc_metabox_inventario_content($inventario) {
         return;
     
     $items_args = array(
-        'posts_per_page' => -1
+        'posts_per_page' => 48
     );
     $items = \tainacan_items()->fetch($items_args, $collection_inventarios);
     
-    if ( !$items)
+    if (!$items)
         return;
 
     $selected = esc_attr( get_post_meta( get_the_ID(), 'inventario-item-id', true ) );
 ?>
     <div class="iphan_inrc_meta_box">
+        <style scoped>
+            .iphan_inrc_meta_box {
+                max-width: 100%;
+                overflow: hidden;
+            }
+            .iphan_inrc_meta_box select {
+                max-width: calc(100% - 2px);
+                box-sizing: border-box;
+                margin-top: 4px;
+            }
+        </style>
         <label for="inventario-item-id">
             Item
         </label>
@@ -120,6 +131,7 @@ function iphan_inrc_metabox_inventario_content($inventario) {
  * @param int $post_id Post ID
  */
 function iphan_inrc_save_meta_box( $post_id ) {
+    if ( get_post_type( $post_id ) !== 'inventarios' ) return;
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
     if ( $parent_id = wp_is_post_revision( $post_id ) ) {
         $post_id = $parent_id;
@@ -130,7 +142,18 @@ function iphan_inrc_save_meta_box( $post_id ) {
     foreach ( $fields as $field ) {
         if ( array_key_exists( $field, $_POST ) ) {
             update_post_meta( $post_id, $field, sanitize_text_field( $_POST[$field] ) );
+
+            $current_item = \tainacan_items()->fetch($_POST[$field], [], 'OBJECT');
+
+            if ($current_item instanceof \Tainacan\Entities\Item) {
+                $current_item->set_document( get_permalink( $post_id) );
+                $current_item->set_document_type('url');
+
+                if ( $current_item->validate() ) {
+                    $current_item = \tainacan_items()->update($current_item);
+                }
+            }
         }
-     }
+    }
 }
 add_action( 'save_post', 'iphan_inrc_save_meta_box' );

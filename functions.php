@@ -111,8 +111,10 @@ if (!function_exists('iphan_inrc_setup')) :
 		);
 
 		/* Align wide and full */
-		add_theme_support('align-wide');
 		add_theme_support('custom-spacing');
+		$is_post_type_inventarios = $_GET && isset($_GET['post']) && get_post_type($_GET['post']) == 'inventarios';
+		if (!$is_post_type_inventarios)
+			add_theme_support('align-wide');
 
 		/* Editor (Gutenberg side) Styles */
 		add_theme_support('editor-styles');
