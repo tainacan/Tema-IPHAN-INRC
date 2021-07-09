@@ -12238,19 +12238,19 @@ li > article {
 	}
 }
 
+.site-footer .widget-area .plus-minus {
+	float: right;
+}
+
 @media screen and (max-width: 768px) {
 	.site-footer .widget-area .plus-minus::after {
 		content: "+";
-		float: right;
-		margin-top: -9%;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.site-footer .widget-area .active .plus-minus::after {
 		content: "-";
-		float: right;
-		margin-top: -9%;
 	}
 }
 
