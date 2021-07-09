@@ -14021,12 +14021,17 @@ article#page-404 .widget ul {
 	margin-bottom: 70px;
 	padding-top: 20px;
 	width: 100%;
+	position: relative;
 }
 
 @media screen and (min-width: 1024px) {
 	.inventario .metadata-mobile {
 		display: none;
 	}
+}
+
+.inventario .metadata-mobile .collapse-mobile-inferior {
+	position: absolute;
 }
 
 @media screen and (max-width: 1024px) {

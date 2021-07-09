@@ -28,8 +28,12 @@
         margin-bottom: 70px;
         padding-top: 20px;
         width: 100%;
+        position: relative;
         @media screen and (min-width: $screen__md) {
             display: none;
+        }
+        & .collapse-mobile-inferior{
+            position: absolute;
         }
     }
     & .metadata-mobile > div:last-child > div:last-child {
