@@ -21,7 +21,7 @@
             </h1>
             <div class="metadata-mobile">
                 <div class="header-collapse">
-                    <span>informações técnicas</span>
+                    <span><?php _("informações técnicas", 'iphan_inrc') ?></span>
                     <a type="button" class="plus-minus" data-toggle="collapse" data-target="#metadata-inventario" aria-controls="metadata-inventario" aria-expanded="false"></a>
                 </div>
                 <div id="metadata-inventario" class="collapse">
@@ -39,30 +39,29 @@
             </div>
             <div class="content">
                 <?php
-                    $item = tainacan_get_item(); 
-                    $post_id = url_to_postid($item->get_document());
+                $item = tainacan_get_item();
+                $post_id = url_to_postid($item->get_document());
 
-                    if ($post_id != 0 && get_post_type($post_id) == 'inventarios') {
+                if ($post_id != 0 && get_post_type($post_id) == 'inventarios') {
 
-                        global $wp_embed;
-                        $raw_content = get_the_content(null, false, $post_id);
-                        $content = $wp_embed->autoembed( $raw_content );
+                    global $wp_embed;
+                    $raw_content = get_the_content(null, false, $post_id);
+                    $content = $wp_embed->autoembed($raw_content);
 
-                        echo $content;
+                    echo $content;
+                }
 
-                    }
+                echo '<hr>';
 
-                    echo '<hr>';
-
-					get_template_part('template-parts/single-items-items-related-to-this');
-					do_action('iphan-inrc-single-item-after-items-related-to-this');
+                get_template_part('template-parts/single-items-items-related-to-this');
+                do_action('iphan-inrc-single-item-after-items-related-to-this');
                 ?>
-                
+
             </div>
             <?php comments_template(); ?>
         </div>
     </div>
-    
+
 </div>
 <div class="inventario-footer">
     <?php
