@@ -17,7 +17,7 @@
     & .barra-lateral {
         background: $color__barra-lateral-inventario;
         @media screen and (min-width: $screen__lg) {
-            width: auto ;
+            width: auto;
             border-right: 2px solid $color__vermelho1;
             height: 100%;
             max-height: 100%;
@@ -80,6 +80,9 @@
         @media screen and (min-width: $screen__sm) {
             margin-top: 130px;
         }
+        hr {
+            display: none;
+        }
     }
     & .barra-lateral > div:last-child {
         margin-bottom: 100px;
@@ -130,8 +133,8 @@
             margin-left: 50px;
         }
     }
-    .post-inventario .metadata-mobile #metadata-inventario > *,
-    .post-inventario .metadata-mobile > div > div:last-child > * {
+    .post-inventario .metadata-mobile #metadata-inventario > :not(*:last-child),
+    .post-inventario .metadata-mobile #metadata-inventario > *:last-child > * {
         @media screen and (max-width: $screen__md) {
             margin-left: 20px;
             margin-right: 20px;
