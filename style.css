@@ -14156,7 +14156,8 @@ article#page-404 .widget ul {
 }
 
 @media screen and (max-width: 1024px) {
-	.inventario .post-inventario .metadata-mobile #metadata-inventario > * {
+	.inventario .post-inventario .metadata-mobile #metadata-inventario > :not(*:last-child),
+	.inventario .post-inventario .metadata-mobile #metadata-inventario > *:last-child > * {
 		margin-left: 20px;
 		margin-right: 20px;
 	}

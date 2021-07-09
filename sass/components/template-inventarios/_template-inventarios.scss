@@ -131,7 +131,8 @@
             margin-left: 50px;
         }
     }
-    .post-inventario .metadata-mobile #metadata-inventario > * {
+    .post-inventario .metadata-mobile #metadata-inventario > :not(*:last-child),
+    .post-inventario .metadata-mobile #metadata-inventario > *:last-child > * {
         @media screen and (max-width: $screen__md) {
             margin-left: 20px;
             margin-right: 20px;
