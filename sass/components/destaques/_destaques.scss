@@ -1,4 +1,6 @@
-:is(.destaques, .destaques-noticias, .posts-relacionados) {
+.destaques,
+.destaques-noticias,
+.posts-relacionados {
     .grid-container {
         display: flex;
         @media screen and (min-width: $screen__sm) {
@@ -181,18 +183,21 @@
         display: none;
     }
 
-    :is(.swiper-button-prev, .swiper-button-next) {
+    & .swiper-button-prev,
+    .swiper-button-next {
         top: 100% !important;
     }
 
-    :is(.swiper-button-prev, .swiper-button-next) > i {
+    & .swiper-button-prev > i,
+    .swiper-button-next > i {
         color: $color__vermelho1;
         border: 1px solid $color__vermelho1;
         padding-left: 4px;
         padding-right: 4px;
     }
 
-    :is(.swiper-button-prev, .swiper-button-next):hover > i {
+    .swiper-button-prev:hover > i,
+    .swiper-button-next:hover > i {
         color: $color__branco;
         border: 1px solid $color__vermelho1;
         background-color: $color__vermelho1;
@@ -200,16 +205,17 @@
         padding-right: 4px;
     }
 
-    :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-prev {
+    .is-mobile-noticias + .navigation-destaques-swiper > .swiper-button-prev {
         left: 0px !important;
     }
 
-    :is(.is-mobile-noticias + .navigation-destaques-swiper) > .swiper-button-next {
+    .is-mobile-noticias + .navigation-destaques-swiper > .swiper-button-next {
         left: 35px !important;
     }
 
-    :is(a.swiper-slide),
-    :is(.is-desktop, .grid-container) a {
+    a.swiper-slide a,
+    .is-desktop a,
+    .grid-container a {
         background-color: $color__vermelho1;
     }
 
@@ -256,7 +262,12 @@
             "display-3-has-6 display-3-has-6 display-4-has-6 display-4-has-6 display-6-has-6 display-6-has-6";
     }
 
-    :is(.display-1-has-6, .display-2-has-6, .display-3-has-6, .display-4-has-6, .display-5-has-6, .display-6-has-6) {
+    .display-1-has-6,
+    .display-2-has-6,
+    .display-3-has-6,
+    .display-4-has-6,
+    .display-5-has-6,
+    .display-6-has-6 {
         @media screen and (min-width: $screen__sm) and (max-width: $screen__md) {
             width: 100%;
         }
@@ -466,7 +477,8 @@
     .grid-container-noticias > a {
         display: flex;
     }
-    :is(.grid-container-noticias, .grid-container) > a {
+    .grid-container-noticias > a,
+    .grid-container > a {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -498,8 +510,11 @@
             "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5"
             "display-2-noticias-has-5 display-2-noticias-has-5 display-2-noticias-has-5 display-3-noticias-has-5 display-5-noticias-has-5 display-5-noticias-has-5";
     }
-    &
-        :is(.display-1-noticias-has-5, .display-2-noticias-has-5, .display-3-noticias-has-5, .display-4-noticias-has-5, .display-5-noticias-has-5) {
+    & .display-1-noticias-has-5,
+    .display-2-noticias-has-5,
+    .display-3-noticias-has-5,
+    .display-4-noticias-has-5,
+    .display-5-noticias-has-5 {
         border-radius: 10px;
     }
     .display-1-noticias-has-5 {
@@ -546,7 +561,10 @@
             "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4"
             "display-2-noticias-has-4 display-2-noticias-has-4 display-2-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4 display-4-noticias-has-4";
     }
-    :is(.display-1-noticias-has-4, .display-2-noticias-has-4, .display-3-noticias-has-4, .display-4-noticias-has-4) {
+    .display-1-noticias-has-4,
+    .display-2-noticias-has-4,
+    .display-3-noticias-has-4,
+    .display-4-noticias-has-4 {
         border-radius: 10px;
     }
     .display-1-noticias-has-4 {
@@ -579,7 +597,9 @@
             "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3"
             "display-1-noticias-has-3 display-1-noticias-has-3 display-1-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3 display-3-noticias-has-3";
     }
-    :is(.display-1-noticias-has-3, .display-2-noticias-has-3, .display-3-noticias-has-3) {
+    .display-1-noticias-has-3,
+    .display-2-noticias-has-3,
+    .display-3-noticias-has-3 {
         border-radius: 10px;
     }
     .display-1-noticias-has-3 {
@@ -608,7 +628,8 @@
             "display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2"
             "display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2 display-2-noticias-has-2";
     }
-    :is(.display-1-noticias-has-2, .display-2-noticias-has-2) {
+    .display-1-noticias-has-2,
+    .display-2-noticias-has-2 {
         border-radius: 10px;
     }
     .display-1-noticias-has-2 {
@@ -633,14 +654,15 @@
             "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1"
             "display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1 display-1-noticias-has-1";
     }
-    :is(.display-1-noticias-has-1) {
+    .display-1-noticias-has-1 {
         border-radius: 10px;
     }
     .display-1-noticias-has-1 {
         grid-area: display-1-noticias-has-1;
     }
 
-    :is(.grid-container-noticias-has-0, .grid-container-has-0) {
+    .grid-container-noticias-has-0,
+    .grid-container-has-0 {
         display: none;
     }
 }

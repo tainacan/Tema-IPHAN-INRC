@@ -97,7 +97,6 @@ jQuery(document).on("ready", function () {
             jQuery('a[type="button"]').on("click", function () {
                 var element = document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode.lastElementChild
                 var filho = document.getElementById(jQuery(this).attr("id"));
-                console.log(filho.childNodes[0])
                 if (!element.className.includes('show')) {
                     jQuery(element).addClass('show')
                     jQuery(filho.childNodes[0]).removeClass('tainacan-icon-plus')

@@ -59,19 +59,18 @@
             flex-direction: row;
             display: flex;
         }
+        .plus-minus {
+            float: right;
+        }
 
         .plus-minus::after {
             @media screen and (max-width: $screen__sm) {
                 content: "+";
-                float: right;
-                margin-top: -9%;
             }
         }
         .active .plus-minus::after {
             @media screen and (max-width: $screen__sm) {
                 content: "-";
-                float: right;
-                margin-top: -9%;
             }
         }
     }
@@ -170,6 +169,7 @@
     margin-right: 0%;
 }
 
-.icons-footer > :not(a:last-child) > :is(i, img) {
+.icons-footer > :not(a:last-child) > i,
+.icons-footer > :not(a:last-child) > img {
     margin-right: 12px;
 }
