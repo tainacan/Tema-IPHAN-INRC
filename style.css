@@ -14077,6 +14077,11 @@ article#page-404 .widget ul {
 	}
 }
 
+.inventario .barra-lateral > div:first-child hr,
+.inventario .post-inventario hr {
+	display: none;
+}
+
 .inventario .barra-lateral > div:last-child {
 	margin-bottom: 100px;
 }
