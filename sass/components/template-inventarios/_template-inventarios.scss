@@ -1,6 +1,15 @@
 .inventario-header .breadcrumb {
     margin-bottom: 0px !important;
 }
+
+.inventario .entry-content>*{
+    width: 100% !important;
+    @media screen and (max-width: $screen__md) {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        max-width: 100% !important;
+    }
+}
 .inventario {
     display: flex;
     padding-left: 0px;
@@ -69,7 +78,7 @@
     & .barra-lateral > div:first-child,
     .post-inventario {
         @media screen and (min-width: $screen__sm) {
-            margin-top: 150px;
+            margin-top: 130px;
         }
     }
     & .barra-lateral > div:last-child {
@@ -103,10 +112,6 @@
         }
     }
     & .post-inventario {
-        @media screen and (min-width: $screen__md) {
-            margin-left: 50px;
-            padding-right: 4.73%;
-        }
         @media screen and (max-width: $screen__md) {
             position: relative;
             margin-top: 150px;
@@ -114,15 +119,12 @@
         width: 100%;
         padding-bottom: 100px;
     }
-    & .post-inventario .is-style-title-iphan-underscore,
-    .post-inventario .content {
+    & .post-inventario>.is-style-title-iphan-underscore {
         @media screen and (max-width: $screen__md) {
             margin-left: 40px;
             margin-right: 40px;
         }
     }
-    & .post-inventario .is-style-title-iphan-underscore,
-    .post-inventario .content,
     .post-inventario .metadata-mobile > :not(div:first-child) {
         @media screen and (min-width: $screen__md) {
             margin-left: 50px;

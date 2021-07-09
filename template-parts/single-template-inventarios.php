@@ -15,7 +15,7 @@
             get_template_part('template-parts/get-attachments-tainacan');
             ?>
         </div>
-        <div class="post-inventario">
+        <div class="entry-content post-inventario">
             <h1 class="is-style-title-iphan-underscore">
                 <?php echo tainacan_get_the_collection_name(); ?>
             </h1>
@@ -37,28 +37,25 @@
                     <a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="<?php _e('Compartilhar no Facebook', 'iphan_inrc'); ?>"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-facebook"></i></a>
                 </div>
             </div>
-            <div class="content">
-                <?php
-                    $item = tainacan_get_item(); 
-                    $post_id = url_to_postid($item->get_document());
+            <?php
+                $item = tainacan_get_item(); 
+                $post_id = url_to_postid($item->get_document());
 
-                    if ($post_id != 0 && get_post_type($post_id) == 'inventarios') {
+                if ($post_id != 0 && get_post_type($post_id) == 'inventarios') {
 
-                        global $wp_embed;
-                        $raw_content = get_the_content(null, false, $post_id);
-                        $content = $wp_embed->autoembed( $raw_content );
+                    global $wp_embed;
+                    $raw_content = get_the_content(null, false, $post_id);
+                    $content = $wp_embed->autoembed( $raw_content );
 
-                        echo $content;
+                    echo $content;
 
-                    }
+                }
 
-                    echo '<hr>';
+                echo '<hr>';
 
-					get_template_part('template-parts/single-items-items-related-to-this');
-					do_action('iphan-inrc-single-item-after-items-related-to-this');
-                ?>
-                
-            </div>
+                get_template_part('template-parts/single-items-items-related-to-this');
+                do_action('iphan-inrc-single-item-after-items-related-to-this');
+            ?>  
             <?php comments_template(); ?>
         </div>
     </div>
