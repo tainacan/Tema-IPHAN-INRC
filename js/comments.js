@@ -95,16 +95,21 @@ jQuery(document).on("ready", function () {
     jQuery(function () {
         try {
             jQuery('a[type="button"]').on("click", function () {
-                var element = document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode.lastElementChild
-                var filho = document.getElementById(jQuery(this).attr("id"));
-                if (!element.className.includes('show')) {
-                    jQuery(element).addClass('show')
-                    jQuery(filho.childNodes[0]).removeClass('tainacan-icon-plus')
-                    jQuery(filho.childNodes[0]).addClass('tainacan-icon-minus')
-                } else {
-                    jQuery(element).removeClass('show')
-                    jQuery(filho.childNodes[0]).addClass('tainacan-icon-plus')
-                    jQuery(filho.childNodes[0]).removeClass('tainacan-icon-minus')
+                if (document.getElementById((jQuery(this).attr("id"))).parentNode &&
+                    document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode &&
+                    document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode &&
+                    document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode.lastElementChild) {
+                    var element = document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode.lastElementChild
+                    var filho = document.getElementById(jQuery(this).attr("id"));
+                    if (!element.className.includes('show')) {
+                        jQuery(element).addClass('show')
+                        jQuery(filho.childNodes[0]).removeClass('tainacan-icon-plus')
+                        jQuery(filho.childNodes[0]).addClass('tainacan-icon-minus')
+                    } else {
+                        jQuery(element).removeClass('show')
+                        jQuery(filho.childNodes[0]).addClass('tainacan-icon-plus')
+                        jQuery(filho.childNodes[0]).removeClass('tainacan-icon-minus')
+                    }
                 }
             })
         }
