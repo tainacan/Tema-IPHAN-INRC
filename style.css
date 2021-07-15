@@ -14034,6 +14034,17 @@ article#page-404 .widget ul {
 	position: absolute;
 }
 
+.inventario .collapse-mobile-inferior {
+	right: 30px;
+	width: 30px;
+	border: 1px solid #58020b;
+}
+
+.inventario .collapse-mobile-inferior > i {
+	margin-left: 5px !important;
+	margin-right: 0px !important;
+}
+
 @media screen and (max-width: 1024px) {
 	.inventario .metadata-mobile > div:last-child > div:last-child {
 		border-bottom: 2px solid #58020b;

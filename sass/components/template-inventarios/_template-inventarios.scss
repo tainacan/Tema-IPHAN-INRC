@@ -32,9 +32,18 @@
         @media screen and (min-width: $screen__md) {
             display: none;
         }
-        & .collapse-mobile-inferior{
+        & .collapse-mobile-inferior {
             position: absolute;
         }
+    }
+    & .collapse-mobile-inferior {
+        right: 30px;
+        width: 30px;
+        border: 1px solid $color__vermelho1;
+    }
+    & .collapse-mobile-inferior > i {
+        margin-left: 5px !important;
+        margin-right: 0px !important;
     }
     & .metadata-mobile > div:last-child > div:last-child {
         @media screen and (max-width: $screen__md) {
