@@ -95,7 +95,8 @@ jQuery(document).on("ready", function () {
     jQuery(function () {
         try {
             jQuery('a[type="button"]').on("click", function () {
-                if (document.getElementById((jQuery(this).attr("id"))).parentNode &&
+                if (document.getElementById((jQuery(this).attr("id"))) &&
+                    document.getElementById((jQuery(this).attr("id"))).parentNode &&
                     document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode &&
                     document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode &&
                     document.getElementById((jQuery(this).attr("id"))).parentNode.parentNode.parentNode.lastElementChild) {
