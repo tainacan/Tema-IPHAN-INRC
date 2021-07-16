@@ -94,3 +94,6 @@ foreach ($attachments as $attachment) {
 		?>
 	</div>
 <?php } ?>
+<div>
+	<a type="button" class="collapse-mobile-inferior" data-toggle="collapse" data-target="#metadata-inventario" aria-controls="metadata-inventario" aria-expanded="false"><i class="tainacan-icon tainacan-icon-minus"></i></a>
+</div>

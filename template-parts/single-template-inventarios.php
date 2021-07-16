@@ -28,7 +28,6 @@
                     <?php echo tainacan_get_the_metadata();
                     get_template_part('template-parts/get-attachments-tainacan');
                     ?>
-                    <a type="button" class="collapse-mobile-inferior" data-toggle="collapse" data-target="#metadata-inventario" aria-controls="metadata-inventario" aria-expanded="false"><i class="tainacan-icon tainacan-icon-1-25em tainacan-icon-minus"></i></a>
                 </div>
             </div>
             <div class="entry-content meta-content">
