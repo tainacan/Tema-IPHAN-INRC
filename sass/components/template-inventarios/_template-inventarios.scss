@@ -51,6 +51,10 @@
         margin-right: 0px !important;
         font-size: 1.25rem;
     }
+    & .collapse-mobile-inferior > i::before {
+        font-weight: bold;
+        color: $color__vermelho1;
+    }
     & .metadata-mobile > div:last-child > div:last-child {
         @media screen and (max-width: $screen__md) {
             border-bottom: 2px solid $color__vermelho1;

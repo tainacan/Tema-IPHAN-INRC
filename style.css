@@ -14054,6 +14054,11 @@ article#page-404 .widget ul {
 	font-size: 1.25rem;
 }
 
+.inventario .collapse-mobile-inferior > i::before {
+	font-weight: bold;
+	color: #58020b;
+}
+
 @media screen and (max-width: 1024px) {
 	.inventario .metadata-mobile > div:last-child > div:last-child {
 		border-bottom: 2px solid #58020b;
