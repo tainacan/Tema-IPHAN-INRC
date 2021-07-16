@@ -14042,6 +14042,12 @@ article#page-404 .widget ul {
 	border: 1px solid #58020b;
 }
 
+@media screen and (min-width: 1024px) {
+	.inventario .collapse-mobile-inferior {
+		display: none;
+	}
+}
+
 .inventario .collapse-mobile-inferior > i {
 	margin-left: 5px !important;
 	margin-right: 0px !important;

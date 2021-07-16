@@ -42,6 +42,9 @@
         right: 30px;
         width: 30px;
         border: 1px solid $color__vermelho1;
+        @media screen and (min-width: $screen__md) {
+            display: none;
+        }
     }
     & .collapse-mobile-inferior > i {
         margin-left: 5px !important;
