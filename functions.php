@@ -119,6 +119,11 @@ if (!function_exists('iphan_inrc_setup')) :
 		/* Editor (Gutenberg side) Styles */
 		add_theme_support('editor-styles');
 		add_editor_style([get_template_directory_uri() . '/editor-style.css']);
+
+		/**
+		 * Removes support for Gutenberg widgets editor, by now...
+		 */
+		remove_theme_support( 'widgets-block-editor' );
 	}
 endif;
 add_action('after_setup_theme', 'iphan_inrc_setup');
