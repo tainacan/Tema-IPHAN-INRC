@@ -14197,6 +14197,7 @@ article#page-404 .widget ul {
 
 .inventario .alinhamento-template-inventarios {
 	display: flex;
+	align-items: flex-start;
 	width: 100%;
 }
 
