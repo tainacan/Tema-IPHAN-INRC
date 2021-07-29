@@ -14033,12 +14033,42 @@ article#page-404 .widget ul {
 	margin-bottom: 70px;
 	padding-top: 20px;
 	width: 100%;
+	position: relative;
 }
 
 @media screen and (min-width: 1024px) {
 	.inventario .metadata-mobile {
 		display: none;
 	}
+}
+
+.inventario .metadata-mobile .collapse-mobile-inferior {
+	position: absolute;
+	bottom: -15px;
+	background-color: #ffffff;
+}
+
+.inventario .collapse-mobile-inferior {
+	right: 30px;
+	width: 30px;
+	border: 1px solid #58020b;
+}
+
+@media screen and (min-width: 1024px) {
+	.inventario .collapse-mobile-inferior {
+		display: none;
+	}
+}
+
+.inventario .collapse-mobile-inferior > i {
+	margin-left: 5px !important;
+	margin-right: 0px !important;
+	font-size: 1.25rem;
+}
+
+.inventario .collapse-mobile-inferior > i::before {
+	font-weight: bold;
+	color: #58020b;
 }
 
 @media screen and (max-width: 1024px) {

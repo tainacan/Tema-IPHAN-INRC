@@ -21,7 +21,7 @@
             </h1>
             <div class="metadata-mobile">
                 <div class="header-collapse">
-                    <span>informações técnicas</span>
+                    <span><?php _e("informações técnicas", 'iphan_inrc') ?></span>
                     <a type="button" class="plus-minus" data-toggle="collapse" data-target="#metadata-inventario" aria-controls="metadata-inventario" aria-expanded="false"></a>
                 </div>
                 <div id="metadata-inventario" class="collapse">
@@ -59,7 +59,7 @@
             <?php comments_template(); ?>
         </div>
     </div>
-    
+
 </div>
 <div class="inventario-footer">
     <?php
