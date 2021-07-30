@@ -10956,7 +10956,7 @@ textarea {
 }
 
 .menu-toggle[aria-expanded="true"] {
-	background: #ffffff;
+	background: #ffffff !important;
 	border: 1px solid transparent;
 }
 

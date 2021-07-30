@@ -247,7 +247,7 @@
     background: $color__branco;
 }
 .menu-toggle[aria-expanded="true"] {
-    background: $color__branco;
+    background: $color__branco !important;
     border: 1px solid transparent;
 
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
