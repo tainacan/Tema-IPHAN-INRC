@@ -14032,6 +14032,8 @@ article#page-404 .widget ul {
 	background: #f0f0f0;
 	margin-bottom: 70px;
 	padding-top: 20px;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 	width: 100%;
 	position: relative;
 }
@@ -14190,8 +14192,8 @@ article#page-404 .widget ul {
 @media screen and (max-width: 1024px) {
 	.inventario .post-inventario .metadata-mobile #metadata-inventario > :not(*:last-child),
 	.inventario .post-inventario .metadata-mobile #metadata-inventario > *:last-child > * {
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 50px;
+		margin-right: 50px;
 	}
 }
 

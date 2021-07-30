@@ -2,7 +2,7 @@
     margin-bottom: 0px !important;
 }
 
-.inventario .entry-content>*{
+.inventario .entry-content > * {
     width: 100% !important;
     @media screen and (max-width: $screen__md) {
         margin-left: 0px !important;
@@ -36,6 +36,8 @@
         background: $color__barra-lateral-inventario;
         margin-bottom: 70px;
         padding-top: 20px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
         width: 100%;
         position: relative;
         @media screen and (min-width: $screen__md) {
@@ -145,7 +147,7 @@
         width: 100%;
         padding-bottom: 100px;
     }
-    & .post-inventario>.is-style-title-iphan-underscore {
+    & .post-inventario > .is-style-title-iphan-underscore {
         @media screen and (max-width: $screen__md) {
             margin-left: 40px;
             margin-right: 40px;
@@ -159,8 +161,8 @@
     .post-inventario .metadata-mobile #metadata-inventario > :not(*:last-child),
     .post-inventario .metadata-mobile #metadata-inventario > *:last-child > * {
         @media screen and (max-width: $screen__md) {
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
         }
     }
     & .alinhamento-template-inventarios {
