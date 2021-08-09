@@ -85,6 +85,7 @@ jQuery(document).on("ready", function () {
     /// Adicionar collapse aos comments
     jQuery(function () {
         try {
+            //Este children que faz com que a resposta da resposta suma, tem que pegar só o primeiro filho (fiz alguns testes, mas não consegui fazer funcionar direitinho e bonito, ainda bugava as vezes)
             jQuery('.children').addClass('collapse');
         } catch (e) {
             console.log(e.message)
