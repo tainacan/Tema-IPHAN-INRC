@@ -55,3 +55,7 @@ require get_template_directory() . '/custom-blocks/card-block/card-block.php';
 /* ----------------------------- SHORTCODES  ----------------------------- */
 
 require get_template_directory() . '/inc/shortcodes.php';
+
+/* ----------------------------- EXPANDED FILTERS  ----------------------------- */
+
+require get_template_directory() . '/inc/expanded_filter_relationship.php';
