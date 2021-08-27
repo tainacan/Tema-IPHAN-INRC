@@ -215,6 +215,127 @@ function iphan_inrc_enqueue_editor_scripts()
 }
 add_action('enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts');
 
+
+function iphan_inrc_customize_control_collection_css()
+{
+	$control_collection_ids = [];
+	$control_collection_ids = ['160611']; // TODO: Get from DB
+	
+	if ( !count($control_collection_ids) )
+		return;
+
+	$css = '';
+
+	foreach( $control_collection_ids as $control_collection_id ) {
+
+		$control_collection_metadatum_ids = [];
+		$control_collection_metadatum_ids = ['171169']; // TODO: Get from DB
+
+		foreach( $control_collection_metadatum_ids as $control_collection_metadatum_id ) {
+			$css .= '
+				/* Tweaks the relationship input on the collection that has relation to the control collection */
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tabs,
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tab-content>.tab-item:first-of-type {
+					display: none;
+					visibility: hidden;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tab-content>.tab-item:last-of-type {
+					display: block !important;
+					visibility: visible;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tainacan-modal .modal-content {
+					max-width: 640px !important;
+					max-height: 60vh !important;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tainacan-modal .modal-content iframe {
+					height: 59vh !important;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tainacan-relationship-results-container .tainacan-metadatum {
+					margin-left: 4px;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .add-link {
+					content: "";
+					color: transparent !important;
+					font-size: 0 !important;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .add-link>.icon {
+					font-size: 0.875rem;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .add-link::after {
+					content: "Adicionar valor";
+					color: var(--tainacan-secondary);
+					font-size: 0.75rem;
+				}
+			
+				/* Hides elements not necessary for control collections inside the item edition modal */
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type {
+					width: 100%%;
+					padding: 0;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:last-of-type,
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type>.columns,
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type>.b-tabs>.tabs,
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type>.b-tabs .sub-header {
+					display: none;
+					visibility: hidden;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .tainacan-page-title {
+					margin-bottom: 12px;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .tainacan-page-title h1 {
+					content: "";
+					color: transparent !important;
+					font-size: 0 !important;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .tainacan-page-title h1::after {
+					content: "Adicionar valor";
+					color: var(--tainacan-gray5);
+					font-size: 1.25rem;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .column.is-7 .tab-item > .field:last-child {
+					margin-bottom: 0 !important;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .form-submission-footer .button.is-secondary {
+					display: none !important;
+					visibility: hidden;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .footer {
+					position: fixed;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .form-submission-footer .button.is-success {
+					content: "";
+					color: transparent !important;
+					font-size: 0 !important;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .form-submission-footer .button.is-success::after {
+					content: "Adicionar";
+					color: white;
+					font-size: 0.875rem;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"] .status-tag {
+					display: none;
+					visibility: hidden;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"] .field {
+					padding-left: 0;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"] .field .collapse-handle,
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"] .field .collapse-handle .label {
+					margin-left: 0;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"] .field .collapse-handle .icon {
+					display: none;
+					visibility: hidden;
+				}
+			';
+		}
+	}
+	
+	echo '<style type="text/css" id="tainacan-control-collections-style">' . sprintf( $css ) . '</style>';
+
+}
+add_action('admin_head', 'iphan_inrc_customize_control_collection_css');
+
 require get_template_directory() . '/inc/imports.php';
 require get_template_directory() . '/inc/inventarios-post-type.php';
 

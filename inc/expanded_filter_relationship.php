@@ -15,32 +15,35 @@ function tainacan_expanded_filter_relationship_form() {
 
 	ob_start();
 	?>
-		<div class="field tainacan-expanded-filter-relationship">
+		<div 
+				class="field tainacan-expanded-filter-relationship"
+				style="margin: 1em -1.875em 2em -1.875em;">
 			<label class="label">
 				Expandir filtros
-			</label>
-			<label class="switch is-small is-rounded">
-				<select name="expanded_filter" id="cars">
-					<option value="yes">Sim</option>
-					<option value="no">Não</option>
-				</select>
-				<span class="control-label"></span>
-			</label>
-			<span class="help-wrapper">
-				<a class="help-button has-text-secondary">
-					<span class="icon is-small">
-						<i class="tainacan-icon tainacan-icon-help"></i>
-					</span>
-				</a>
-				<div class="help-tooltip">
-					<div class="help-tooltip-header">
-						<h5 class="has-text-color">Expandir filtros"</h5>
+				<span class="help-wrapper">
+					<a class="help-button has-text-secondary">
+						<span class="icon is-small">
+							<i class="tainacan-icon tainacan-icon-help"></i>
+						</span>
+					</a>
+					<div class="help-tooltip">
+						<div class="help-tooltip-header">
+							<h5 class="has-text-color">Expandir filtros"</h5>
+						</div>
+						<div class="help-tooltip-body">
+							<p>Essa opção adiciona à lista de filtros os metadados selecionados para exibição.</p>
+						</div>
 					</div>
-					<div class="help-tooltip-body">
-						<p>Essa opção adiciona à lista de filtros os metadados selecionados para exibição.</p>
-					</div>
-				</div>
-			</span>
+				</span>
+			</label>
+			<div class="control is-expanded">
+				<span class="select is-fullwidth">
+					<select name="expanded_filter" id="expanded-filter-select">
+						<option value="yes">Sim</option>
+						<option value="no">Não</option>
+					</select>
+				</span>
+			</div>
 		</div>
 	<?php
 	return ob_get_clean();
