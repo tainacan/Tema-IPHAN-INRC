@@ -1,6 +1,7 @@
 <?php
 
 /* ----------------------------- INC IMPORTS  ----------------------------- */
+require get_template_directory() . '/inc/traits/singleton.php';
 
 //Implement the Custom Header feature.
 require get_template_directory() . '/inc/custom-header.php';
@@ -59,3 +60,8 @@ require get_template_directory() . '/inc/shortcodes.php';
 /* ----------------------------- EXPANDED FILTERS  ----------------------------- */
 
 require get_template_directory() . '/inc/expanded_filter_relationship.php';
+
+
+/* ----------------------------- REGISTER TAXONOMY category ----------------------------- */
+
+require get_template_directory() . '/inc/register_category_taxonomy_collection_tainacan.php';
