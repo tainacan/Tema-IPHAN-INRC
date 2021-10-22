@@ -219,17 +219,39 @@ add_action('enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts');
 function iphan_inrc_customize_control_collection_css()
 {
 	$control_collection_ids = [];
-	$control_collection_ids = ['160611']; // TODO: Get from DB
-	
-	if ( !count($control_collection_ids) )
+	$control_collections = \IPHAN_INRC\IPHANCategoryCollection::get_instance()->get_iphan_control_collections();
+
+	if ( empty($control_collections) )
 		return;
 
+	$control_collection_ids = array_map(function($collection) {
+		return $collection->get_ID();
+	}, $control_collections);
+	
 	$css = '';
 
 	foreach( $control_collection_ids as $control_collection_id ) {
 
 		$control_collection_metadatum_ids = [];
-		$control_collection_metadatum_ids = ['171169']; // TODO: Get from DB
+		$control_collection_metadatas = \Tainacan\Repositories\Metadata::get_instance()->fetch([
+			'meta_query' => [
+				[
+					'key'   => 'metadata_type',
+					'value' => 'Tainacan\Metadata_Types\Relationship'
+				],
+				[
+					'key' => '_option_collection_id',
+					'value' => $control_collection_id
+				]
+			]
+		], 'OBJECT');
+
+		if ( empty($control_collection_metadatas) )
+			continue;
+		
+		$control_collection_metadatum_ids = array_map(function($metadatum) {
+			return $metadatum->get_ID();
+		}, $control_collection_metadatas);
 
 		foreach( $control_collection_metadatum_ids as $control_collection_metadatum_id ) {
 			$css .= '
@@ -250,8 +272,15 @@ function iphan_inrc_customize_control_collection_css()
 				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tainacan-modal .modal-content iframe {
 					height: 59vh !important;
 				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tainacan-relationship-results-container {
+					border: none;
+					padding-left: 0;
+				}
+				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tainacan-relationship-results-container  .tainacan-relationship-group > div > .multivalue-separator {
+					margin-left: 0;
+				}
 				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .tainacan-relationship-results-container .tainacan-metadatum {
-					margin-left: 4px;
+					margin-left: 0px;
 				}
 				#collection-page-container .tainacan-metadatum-component--tainacan-relationship.tainacan-metadatum-id--' . $control_collection_metadatum_id . ' .add-link {
 					content: "";
@@ -265,12 +294,13 @@ function iphan_inrc_customize_control_collection_css()
 					content: "Adicionar valor";
 					color: var(--tainacan-secondary);
 					font-size: 0.75rem;
+					margin-top: 6px;
 				}
 			
 				/* Hides elements not necessary for control collections inside the item edition modal */
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type {
 					width: 100%%;
-					padding: 0;
+					padding: 0 1rem;
 				}
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:last-of-type,
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type>.columns,
@@ -281,19 +311,28 @@ function iphan_inrc_customize_control_collection_css()
 				}
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .tainacan-page-title {
 					margin-bottom: 12px;
+					padding: 0 1.5rem;
 				}
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .tainacan-page-title h1 {
 					content: "";
 					color: transparent !important;
 					font-size: 0 !important;
 				}
-				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .tainacan-page-title h1::after {
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container.item-creation-container .tainacan-page-title h1::after {
 					content: "Adicionar valor";
+					color: var(--tainacan-gray5);
+					font-size: 1.25rem;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container.item-edition-container .tainacan-page-title h1::after {
+					content: "Editar valor";
 					color: var(--tainacan-gray5);
 					font-size: 1.25rem;
 				}
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .column.is-7 .tab-item > .field:last-child {
 					margin-bottom: 0 !important;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .column.is-7 .tainacan-finder-columns-container {
+					max-height: 50vh
 				}
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .form-submission-footer .button.is-secondary {
 					display: none !important;
@@ -301,14 +340,29 @@ function iphan_inrc_customize_control_collection_css()
 				}
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .footer {
 					position: fixed;
+					padding: 16px 1em;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .update-info-section {
+					margin-bottom: -2.5rem;
+					margin-left: 0;
 				}
 				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .form-submission-footer .button.is-success {
 					content: "";
 					color: transparent !important;
 					font-size: 0 !important;
+					margin-left: auto;
 				}
-				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .form-submission-footer .button.is-success::after {
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container .form-submission-footer .button.is-outlined {
+					display: none;
+					visibility: hidden;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container.item-creation-container .form-submission-footer .button.is-success::after {
 					content: "Adicionar";
+					color: white;
+					font-size: 0.875rem;
+				}
+				.tainacan-admin-iframe-mode #collection-page-container[collection-id="' . $control_collection_id . '"].page-container.item-edition-container .form-submission-footer .button.is-success::after {
+					content: "Concluir";
 					color: white;
 					font-size: 0.875rem;
 				}
