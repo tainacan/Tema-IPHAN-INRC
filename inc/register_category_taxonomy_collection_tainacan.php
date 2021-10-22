@@ -61,7 +61,6 @@ class IPHANCategoryCollection {
 		);
 		$categories = get_categories($args);
 		ob_start();
-		$this->get_iphan_control_collections();
 		?>
 			<div class="field tainacan-collection--section-header">
 				<label class="label">Tipo:</label>
