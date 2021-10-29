@@ -386,9 +386,33 @@ function iphan_inrc_customize_control_collection_css()
 	}
 	
 	echo '<style type="text/css" id="tainacan-control-collections-style">' . sprintf( $css ) . '</style>';
-
 }
 add_action('admin_head', 'iphan_inrc_customize_control_collection_css');
+
+function iphan_inrc_customize_form_hooks_css() {
+
+	$css = '
+		/* IPHAN-INRC Form Hooks */
+		.tainacan-category-taxonomy-collection .control {
+			column-count: 2;
+		}
+		.tainacan-category-taxonomy-collection .control .checkbox {
+			break-inside: avoid;
+		}
+
+		.form-hook-region {
+			display: none;
+			visibility: hidden;
+		}
+		.tainacan-metadatum-edition-form--type-tainacan-relationship .form-hook-region {
+			display: block;
+			visibility: visible;
+		}
+	';
+	
+	echo '<style type="text/css" id="tainacan-iphan-form-hooks-style">' . sprintf( $css ) . '</style>';
+}
+add_action('admin_head', 'iphan_inrc_customize_form_hooks_css');
 
 require get_template_directory() . '/inc/imports.php';
 require get_template_directory() . '/inc/inventarios-post-type.php';

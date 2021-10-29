@@ -62,15 +62,24 @@ class IPHANCategoryCollection {
 		$categories = get_categories($args);
 		ob_start();
 		?>
+		<div class="tainacan-category-taxonomy-collection"> 
 			<div class="field tainacan-collection--section-header">
-				<label class="label">Tipo:</label>
+				<h4><?php _e( 'Opções do IPHAN-INRC', 'iphan-inrc' ); ?></h4>
+				<hr>
+			</div>
+			<div class="field">
+				<label class="label"><?php _e('Tipo de Coleção:', 'iphan-inrc'); ?></label>
 				<div class="control is-clearfix">
 					<?php foreach ($categories as $category): ?>
-						<input type="checkbox" name="<?php echo $this->taxonomy_category; ?>" value="<?php echo $category->slug;?>">
-						<?php echo $category->name; ?><br>
+						<label class="b-checkbox checkbox is-inline-block">
+							<input type="checkbox" name="<?php echo $this->taxonomy_category; ?>" value="<?php echo $category->slug;?>">
+							<span class="check"></span>
+							<span class="control-label"><?php echo $category->name; ?></span>
+						</label>
 					<?php endforeach; ?>
 				</div>
 			</div>
+		</div>
 		<?php
 		return ob_get_clean();
 	}

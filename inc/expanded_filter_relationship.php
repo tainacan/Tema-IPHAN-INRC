@@ -15,34 +15,41 @@ function tainacan_expanded_filter_relationship_form() {
 
 	ob_start();
 	?>
-		<div 
-				class="field tainacan-expanded-filter-relationship"
-				style="margin: 1em -1.875em 2em -1.875em;">
-			<label class="label">
-				Expandir filtros
-				<span class="help-wrapper">
-					<a class="help-button has-text-secondary">
-						<span class="icon is-small">
-							<i class="tainacan-icon tainacan-icon-help"></i>
-						</span>
-					</a>
-					<div class="help-tooltip">
-						<div class="help-tooltip-header">
-							<h5 class="has-text-color">Expandir filtros"</h5>
+
+		<div class="tainacan-expanded-filter-relationship"> 
+			<div class="field tainacan-metadatum--section-header">
+				<h4><?php _e( 'Opções do IPHAN-INRC', 'iphan-inrc' ); ?></h4>
+				<hr>
+			</div>
+			<div 
+					class="field"
+					style="margin: 0.5em 0;">
+				<label class="label">
+					<?php _e('Expandir filtros', 'iphan-inrc'); ?>
+					<span class="help-wrapper">
+						<a class="help-button has-text-secondary">
+							<span class="icon is-small">
+								<i class="tainacan-icon tainacan-icon-help"></i>
+							</span>
+						</a>
+						<div class="help-tooltip">
+							<div class="help-tooltip-header">
+								<h5 class="has-text-color"><?php _e('Expandir filtros', 'iphan-inrc'); ?></h5>
+							</div>
+							<div class="help-tooltip-body">
+								<p><?php _e('Essa opção adiciona à lista de filtros os metadados selecionados para exibição.', 'iphan-inrc'); ?></p>
+							</div>
 						</div>
-						<div class="help-tooltip-body">
-							<p>Essa opção adiciona à lista de filtros os metadados selecionados para exibição.</p>
-						</div>
-					</div>
-				</span>
-			</label>
-			<div class="control is-expanded">
-				<span class="select is-fullwidth">
-					<select name="expanded_filter" id="expanded-filter-select">
-						<option value="yes">Sim</option>
-						<option value="no">Não</option>
-					</select>
-				</span>
+					</span>
+				</label>
+				<div class="control is-expanded">
+					<span class="select is-fullwidth">
+						<select name="expanded_filter" id="expanded-filter-select">
+							<option value="yes"><?php _e('Sim', 'iphan-inrc'); ?></option>
+							<option value="no"><?php _e('Não', 'iphan-inrc'); ?></option>
+						</select>
+					</span>
+				</div>
 			</div>
 		</div>
 	<?php
