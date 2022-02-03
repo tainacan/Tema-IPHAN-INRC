@@ -396,6 +396,7 @@ function iphan_inrc_customize_form_hooks_css() {
 		.tainacan-category-taxonomy-collection .control {
 			column-count: 2;
 		}
+
 		.tainacan-category-taxonomy-collection .control .checkbox {
 			break-inside: avoid;
 		}
@@ -404,7 +405,9 @@ function iphan_inrc_customize_form_hooks_css() {
 			display: none;
 			visibility: hidden;
 		}
-		.tainacan-metadatum-edition-form--type-tainacan-relationship .form-hook-region {
+
+		.tainacan-metadatum-edition-form--type-tainacan-relationship .form-hook-region,
+		#collection-page-container .form-hook-region {
 			display: block;
 			visibility: visible;
 		}
