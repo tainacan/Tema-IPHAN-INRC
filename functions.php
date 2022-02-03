@@ -414,6 +414,61 @@ function iphan_inrc_customize_form_hooks_css() {
 }
 add_action('admin_head', 'iphan_inrc_customize_form_hooks_css');
 
+/*
+ * Sends params to the Tainacan Admin Options to hide certain elements according to user caps
+ */
+function iphan_set_tainacan_admin_options($options) {
+	
+	if ( is_user_logged_in() ) {
+		$iphan_usuario_logado = 'tainacan-usuario_logado';
+		$user = wp_get_current_user();
+		$roles = ( array ) $user->roles;
+		
+		if ( in_array($iphan_usuario_logado, $roles) ) {
+			$iphan_tainacan_admin_options_for_usuario_logado = [
+				'hideRepositorySubheaderExportButton' => true,
+				'hideCollectionSubheader' => true,
+				'hidePrimaryMenu' => true,
+				'hideHomeRepositorySection' => true,
+				'hideHomeCollectionsButton' => true,
+				'hideTainacanHeaderSearchInput' => true,
+				'hideTainacanHeaderAdvancedSearch' => true,
+				'hideTainacanHeaderProcessesPopup' => true,
+            	'hideHomeCollectionSettingsButton' => true,
+            	'hideHomeCollectionMetadataButton' => true,
+            	'hideHomeCollectionFiltersButton' => true,
+            	'hideHomeCollectionActivitiesButton' => true,
+            	'hideHomeCollectionThemeCollectionButton' => true,
+            	'showHomeCollectionCreateItemButton' => true,
+				'hideItemsListBulkActionsButton' => true,
+				'hideItemsListMultipleSelection' => true,
+				'hideItemsListSelection' => true,
+				'hideItemsListExposersButton' => true,
+				'hideItemsListStatusTabs' => true,
+				'hideItemsListCreationDropdownBulkAdd' => true,
+            	'hideItemsListCreationDropdownImport' => true,
+				'hideItemsListContextMenu' => true,
+				'hideItemsListFilterCreationButton' => true,
+				'hideItemEditionCollectionName' => true,
+        		'hideItemEditionStatusOptions' => true,
+        		'hideItemEditionCommentsToggle' => true,
+        		'hideItemEditionThumbnail' => true,
+				'hideItemSingleCollectionName' => true,
+				'hideItemSingleCurrentStatus' => true,
+				'hideItemSingleCurrentVisibility' => true,
+				'hideItemSingleCommentsOpen' => true,
+				'hideItemSingleThumbnail' => true,
+				'hideItemSingleActivities' => true,
+				'hideItemSingleExposers' => true
+			];
+			$options = array_merge($options, $iphan_tainacan_admin_options_for_usuario_logado);
+		}
+	}
+	return $options;
+};
+add_filter('set_tainacan_admin_options', 'iphan_set_tainacan_admin_options');
+
+
 require get_template_directory() . '/inc/imports.php';
 require get_template_directory() . '/inc/inventarios-post-type.php';
 
