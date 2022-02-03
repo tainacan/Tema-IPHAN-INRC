@@ -417,6 +417,7 @@ function iphan_inrc_customize_form_hooks_css() {
 }
 add_action('admin_head', 'iphan_inrc_customize_form_hooks_css');
 
+require get_template_directory() . '/inc/user_has_cap_filter.php';
 require get_template_directory() . '/inc/imports.php';
 require get_template_directory() . '/inc/inventarios-post-type.php';
 
