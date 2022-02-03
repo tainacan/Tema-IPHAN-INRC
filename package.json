@@ -37,11 +37,11 @@
   },
   "scripts": {
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./ && node_modules/stylelint/bin/stylelint.js '*.css' --fix || true && node_modules/stylelint/bin/stylelint.js '*.css' --fix",
+    "compile:css": "node-sass sass/ -o ./ --source-map true --output-style compressed",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
-    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map",
+    "bundle": "node_modules/dir-archiver/cli.js --src . --dest ../iphan_inrc.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map",
     "dev": "wp-scripts build"
   },
   "dependencies": {
