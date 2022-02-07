@@ -4,7 +4,7 @@
 add_action( 'tainacan-register-admin-hooks', 'tainacan_expanded_filter_relationship_register_hook');
 function tainacan_expanded_filter_relationship_register_hook() {
 	if ( function_exists( 'tainacan_register_admin_hook' ) ) {
-		tainacan_register_admin_hook( 'metadatum', 'tainacan_expanded_filter_relationship_form' );
+		tainacan_register_admin_hook( 'metadatum', 'tainacan_expanded_filter_relationship_form', 'end-left', [ 'attribute' => 'metadata_type', 'value' => 'Tainacan\Metadata_Types\Relationship' ] );
 	}
 }
 
