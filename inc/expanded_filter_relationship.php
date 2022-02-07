@@ -58,7 +58,7 @@ function tainacan_expanded_filter_relationship_form() {
 
 \add_filter( 'tainacan-api-response-metadatum-meta', 'tainacan_expanded_filter_relationship_add_meta_to_response', 10, 2 );
 function tainacan_expanded_filter_relationship_add_meta_to_response( $extra_meta, $request ) {
-	$extra_meta = array('expanded_filter');
+	$extra_meta = array_merge($extra_meta, array('expanded_filter'));
 	return $extra_meta;
 }
 

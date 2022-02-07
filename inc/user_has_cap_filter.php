@@ -241,7 +241,7 @@ function tainacan_set_user_to_restrict_access_items_register_hook()
 {
 	if ( function_exists( 'tainacan_register_admin_hook' ) )
 	{
-		tainacan_register_admin_hook( 'metadatum', 'tainacan_set_user_to_restrict_access_items_form' );
+		tainacan_register_admin_hook( 'metadatum', 'tainacan_set_user_to_restrict_access_items_form', 'end-left', [ 'attribute' => 'metadata_type', 'value' => 'Tainacan\Metadata_Types\User' ] );
 	}
 }
 
@@ -297,7 +297,7 @@ function tainacan_set_user_to_restrict_access_items_form()
 \add_filter( 'tainacan-api-response-metadatum-meta', 'tainacan_set_user_to_restrict_access_items_add_meta_to_response', 10, 2 );
 function tainacan_set_user_to_restrict_access_items_add_meta_to_response( $extra_meta, $request )
 {
-	$extra_meta = array('set_user_to_restrict_access');
+	$extra_meta = array_merge($extra_meta, array('set_user_to_restrict_access'));
 	return $extra_meta;
 }
 
