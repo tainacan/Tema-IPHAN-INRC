@@ -466,7 +466,7 @@ function iphan_set_tainacan_admin_options($options) {
 };
 add_filter('set_tainacan_admin_options', 'iphan_set_tainacan_admin_options');
 
-
+require get_template_directory() . '/inc/user_has_cap_filter.php';
 require get_template_directory() . '/inc/imports.php';
 require get_template_directory() . '/inc/inventarios-post-type.php';
 

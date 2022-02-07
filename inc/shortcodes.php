@@ -30,7 +30,7 @@ function destaqueshome()
     $msg .= '</h1>';
     $msg .= '</div>';
     if (count($results) < 5) {
-        $msg .= '<div class="grid-container-has-' . count($results) + 1 . ' col-md-12 grid-container">';
+        $msg .= '<div class="grid-container-has-' . (count($results) + 1) . ' col-md-12 grid-container">';
     } else {
         $msg .= '<div class="grid-container-has-6 col-md-12 grid-container">';
     }
@@ -38,7 +38,7 @@ function destaqueshome()
         if (count($results) < 5) {
             $msg .= '<a class="display-';
             $msg .= $i + 1;
-            $msg .= '-has-' . count($results) + 1 . '" href="' . get_post_permalink($results[$i]->ID) . '" style="background-image: url(' . get_the_post_thumbnail_url($results[$i]->ID) . ')">';
+            $msg .= '-has-' . (count($results) + 1) . '" href="' . get_post_permalink($results[$i]->ID) . '" style="background-image: url(' . get_the_post_thumbnail_url($results[$i]->ID) . ')">';
         } else {
             $msg .= '<a class="display-';
             $msg .= $i + 1;
