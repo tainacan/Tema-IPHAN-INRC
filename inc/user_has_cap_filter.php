@@ -2,9 +2,8 @@
 
 function IPHAN_get_restrictive_roles() // PEGAR O SLUG DOS PERFIS QUE TERÃO OS DADOS RESTRINGIDOS!
 {
-	return array(
-		'tainacan-coletores'
-	);
+	$roles = get_option('IPHAN_set_role_to_restrict_access', []);
+	return $roles;
 }
 
 function IPHAN_get_restrictive_ids($type = 'items') //ADICIONAR UMA OPTIONS AO METADADO PARA HAIBILITAR ELE COMO UM META RESTRITIVO!
@@ -242,6 +241,7 @@ function tainacan_set_user_to_restrict_access_items_register_hook()
 	if ( function_exists( 'tainacan_register_admin_hook' ) )
 	{
 		tainacan_register_admin_hook( 'metadatum', 'tainacan_set_user_to_restrict_access_items_form', 'end-left', [ 'attribute' => 'metadata_type', 'value' => 'Tainacan\Metadata_Types\User' ] );
+		tainacan_register_admin_hook( 'role', 'tainacan_set_role_to_restrict_access_items_form' );
 	}
 }
 
@@ -306,13 +306,68 @@ function tainacan_set_user_to_restrict_access_items_create($metadatum) {
 	if ( !$metadatum instanceof \Tainacan\Entities\Metadatum || $metadatum->get_metadata_type() !== 'Tainacan\Metadata_Types\User') { 
 		return;
 	}
-	if ( !$metadatum->can_edit() ) {
+	if ( !$metadatum->can_edit() || !function_exists( 'tainacan_get_api_postdata' ) ) {
 		return;
 	}
 
 	$post = \tainacan_get_api_postdata();
 	$set_user_to_restrict_access = isset($post->set_user_to_restrict_access) ? 'yes' == $post->set_user_to_restrict_access : false;
 	update_post_meta( $metadatum->get_id(), 'set_user_to_restrict_access', $set_user_to_restrict_access ? 'yes' : 'no');
+}
+
+function tainacan_set_role_to_restrict_access_items_form()
+{
+	ob_start();
+	?>
+
+		<div class="tainacan-set-role-to-restrict-access"> 
+			<div class="field tainacan-metadatum--section-header">
+				<h4><?php _e( 'Opções do IPHAN-INRC', 'iphan-inrc' ); ?></h4>
+				<hr>
+			</div>
+			<div
+				class="field"
+				style="margin: 0.5em 0;">
+				<label class="label">
+					<?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan-inrc'); ?>
+				</label>
+				<div class="control is-expanded">
+					<span class="select is-fullwidth">
+						<select name="set_role_to_restrict_access" id="set-user-to-restrict-access-select">
+							<option value="yes"><?php _e('Sim', 'iphan-inrc'); ?></option>
+							<option value="no"><?php _e('Não', 'iphan-inrc'); ?></option>
+						</select>
+					</span>
+				</div>
+			</div>
+		</div>
+	<?php
+	return ob_get_clean();
+}
+
+\add_action( 'tainacan-api-role-prepare-for-response', 'tainacan_set_role_to_restrict_access_items_create', 10, 2 );
+function tainacan_set_role_to_restrict_access_items_create($role, $request) {
+	$slug = $role['slug'];
+	$roles = get_option('IPHAN_set_role_to_restrict_access', []);
+	if( isset($request['set_role_to_restrict_access']) )
+	{
+		if ($request['set_role_to_restrict_access'] == 'yes')
+		{
+			update_option('IPHAN_set_role_to_restrict_access', array_merge($roles, [ $slug ] ) );
+			$role['set_role_to_restrict_access'] = 'yes';
+		}
+		else
+		{
+			update_option('IPHAN_set_role_to_restrict_access', array_filter($roles, function($el) use ($slug) { return $el != $slug; } ) );
+			$role['set_role_to_restrict_access'] = 'no';
+		}
+	}
+	else
+	{
+		$set_role = in_array($slug, $roles);
+		$role['set_role_to_restrict_access'] = $set_role ? 'yes' : 'no';
+	}
+	return $role;
 }
 
 ?>
