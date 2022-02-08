@@ -241,7 +241,7 @@ function tainacan_set_user_to_restrict_access_items_register_hook()
 	if ( function_exists( 'tainacan_register_admin_hook' ) )
 	{
 		tainacan_register_admin_hook( 'metadatum', 'tainacan_set_user_to_restrict_access_items_form', 'end-left', [ 'attribute' => 'metadata_type', 'value' => 'Tainacan\Metadata_Types\User' ] );
-		tainacan_register_admin_hook( 'role', 'tainacan_set_role_to_restrict_access_items_form' );
+		tainacan_register_admin_hook( 'role', 'tainacan_set_role_to_restrict_access_items_form', 'begin-left' );
 	}
 }
 
@@ -320,27 +320,14 @@ function tainacan_set_role_to_restrict_access_items_form()
 	ob_start();
 	?>
 
-		<div class="tainacan-set-role-to-restrict-access"> 
-			<div class="field tainacan-metadatum--section-header">
-				<h4><?php _e( 'Opções do IPHAN-INRC', 'iphan-inrc' ); ?></h4>
-				<hr>
-			</div>
-			<div
-				class="field"
-				style="margin: 0.5em 0;">
-				<label class="label">
-					<?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan-inrc'); ?>
-				</label>
-				<div class="control is-expanded">
-					<span class="select is-fullwidth">
-						<select name="set_role_to_restrict_access" id="set-user-to-restrict-access-select">
-							<option value="yes"><?php _e('Sim', 'iphan-inrc'); ?></option>
-							<option value="no"><?php _e('Não', 'iphan-inrc'); ?></option>
-						</select>
-					</span>
-				</div>
-			</div>
+		<div class="name-edition-box tainacan-set-role-to-restrict-access">
+			<label data-v-66409e63="" for="set_role_to_restrict_access"><?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan-inrc'); ?></label>
+			<select name="set_role_to_restrict_access" id="set-user-to-restrict-access-select">
+				<option value="yes"><?php _e('Sim', 'iphan-inrc'); ?></option>
+				<option value="no"><?php _e('Não', 'iphan-inrc'); ?></option>
+			</select>
 		</div>
+
 	<?php
 	return ob_get_clean();
 }
