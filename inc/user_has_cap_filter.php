@@ -487,16 +487,26 @@ function tainacan_set_role_to_restrict_access_items_form()
 		</div>
 
 		<div class="name-edition-box tainacan-collections_access_by_role" >
-			<label for="collections_access_by_role"><?php _e('Limitar o acesso do papel as coleções:', 'iphan-inrc'); ?></label>
-			<select name="collections_access_by_role" id="collections_access_by_role" multiple>
+			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Limitar o acesso do papel as coleções:', 'iphan-inrc'); ?></h2>
+			<ul class="collections-container capabilities-list" style="justify-content: flex-start;">
 				<?php foreach($collections as $col): ?>
-					<option value="<?php echo $col->get_id(); ?>"> <?php echo $col->get_name(); ?> </option>
+					<li style="flex-basis: 400px; margin-right: unset;">
+						<span class="check-column">
+							<label for="<?php echo $col->get_id(); ?>" class="screen-reader-text">
+								<?php echo $col->get_name(); ?>
+							</label>
+							<input type="checkbox" name="collections_access_by_role[]" id="<?php echo $col->get_id(); ?>">
+						</span>
+						<span class="name column-name">
+							<?php echo $col->get_name(); ?>
+						</span>
+					</li>
 				<?php endforeach; ?>
-			</select>
+			</ul>
 		</div>
 
 		<div class="name-edition-box tainacan-admin-options-by-role" >
-			<label for="tainacan_admin_options_by_role"><?php _e('Opções da interface administrativa para os usuários desta função', 'iphan-inrc'); ?></label>
+			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Opções da interface administrativa para os usuários desta função', 'iphan-inrc'); ?></h2>
 			<div class="admin-options-container capabilities-list" style="justify-content: flex-start;">
 				<?php foreach(TAINACAN_ADMIN_OPTIONS as $tainacan_admin_options_group_name => $tainacan_admin_options_group) : ?>
 					<div 
