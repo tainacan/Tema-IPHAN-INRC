@@ -1,6 +1,6 @@
 <?php
 
-define('TAINACAN_ADMIN_OPTIONS', [
+define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 	'Navegação' => [
 		'hideTainacanHeaderSearchInput' => 'Esconder campo de busca no cabeçalho do Tainacan',
 		'hideTainacanHeaderAdvancedSearch' => 'Esconder busca avançada no cabeçalho do Tainacan',
@@ -508,7 +508,7 @@ function tainacan_set_role_to_restrict_access_items_form()
 		<div class="name-edition-box tainacan-admin-options-by-role" >
 			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Opções da interface administrativa para os usuários desta função', 'iphan-inrc'); ?></h2>
 			<div class="admin-options-container capabilities-list" style="justify-content: flex-start;">
-				<?php foreach(TAINACAN_ADMIN_OPTIONS as $tainacan_admin_options_group_name => $tainacan_admin_options_group) : ?>
+				<?php foreach(IPHAN_TAINACAN_ADMIN_OPTIONS as $tainacan_admin_options_group_name => $tainacan_admin_options_group) : ?>
 					<div 
 							style="flex-basis: 400px; margin-right: unset;"
 							class="capability-group">
@@ -520,7 +520,7 @@ function tainacan_set_role_to_restrict_access_items_form()
 										<label for="<?php echo $tainacan_admin_available_option_value ?>" class="screen-reader-text">
 											<?php _e($tainacan_admin_available_option_label, 'iphan_inrc'); ?>
 										</label>
-										<input type="checkbox" name="tainacan_admin_options_by_role[]" id="<?php echo $tainacan_admin_available_option_value ?>">
+										<input type="checkbox" name="tainacan_admin_options_by_role" id="<?php echo $tainacan_admin_available_option_value ?>" value="<?php echo $tainacan_admin_available_option_value ?>">
 									</span>
 									<span class="name column-name">
 										<?php _e($tainacan_admin_available_option_label, 'iphan_inrc'); ?>
@@ -543,7 +543,9 @@ function tainacan_set_role_to_restrict_access_items_create($role, $request) {
 	$slug = $role['slug'];
 	$roles = get_option('IPHAN_set_role_to_restrict_access', []);
 	$roles_collections = get_option('IPHAN_collections_access_by_role', []);
+	$admin_options_collections = get_option('IPHAN_tainacan_admin_options_by_role', []);
 	$roles_collections = is_array($roles_collections) ? $roles_collections : [];
+	$admin_options_collections = is_array($admin_options_collections) ? $admin_options_collections : [];
 
 	if( $request->get_method() != 'GET')
 	{
@@ -558,32 +560,42 @@ function tainacan_set_role_to_restrict_access_items_create($role, $request) {
 			if( isset($roles_collections[$slug]) ) unset($roles_collections[$slug]);
 			update_option('IPHAN_collections_access_by_role', $roles_collections );
 		}
-	}
-	else
-	{
-		$collections_role =  isset($roles_collections[$slug]) ? $roles_collections[$slug] : [];
-		$role['collections_access_by_role'] = $collections_role;
-	}
 
-	if( isset($request['set_role_to_restrict_access']) )
-	{
-		if ($request['set_role_to_restrict_access'] == 'yes')
+		if( isset($request['set_role_to_restrict_access']) )
 		{
-			update_option('IPHAN_set_role_to_restrict_access', array_merge($roles, [ $slug ] ) );
-			$role['set_role_to_restrict_access'] = 'yes';
+			if ($request['set_role_to_restrict_access'] == 'yes')
+			{
+				update_option('IPHAN_set_role_to_restrict_access', array_merge($roles, [ $slug ] ) );
+				$role['set_role_to_restrict_access'] = 'yes';
+			}
+			else
+			{
+				update_option('IPHAN_set_role_to_restrict_access', array_filter($roles, function($el) use ($slug) { return $el != $slug; } ) );
+				$role['set_role_to_restrict_access'] = 'no';
+			}
+		}
+
+		if( isset($request['tainacan_admin_options_by_role']) )
+		{
+			$update_options = $request['tainacan_admin_options_by_role'];
+			update_option('IPHAN_tainacan_admin_options_by_role', array_merge($admin_options_collections, [ $slug => $update_options ] ) );
+			$role['collections_access_by_role'] = $update_options;
 		}
 		else
 		{
-			update_option('IPHAN_set_role_to_restrict_access', array_filter($roles, function($el) use ($slug) { return $el != $slug; } ) );
-			$role['set_role_to_restrict_access'] = 'no';
+			if( isset($admin_options_collections[$slug]) ) unset($admin_options_collections[$slug]);
+			update_option('IPHAN_tainacan_admin_options_by_role', $admin_options_collections );
 		}
 	}
 	else
 	{
 		$set_role = in_array($slug, $roles);
+		$collections_role =  isset($roles_collections[$slug]) ? $roles_collections[$slug] : [];
+		$admin_options_collections = isset($admin_options_collections[$slug]) ? $admin_options_collections[$slug] : [];
+		$role['collections_access_by_role'] = $collections_role;
 		$role['set_role_to_restrict_access'] = $set_role ? 'yes' : 'no';
+		$role['tainacan_admin_options_by_role'] = $admin_options_collections;
 	}
-
 	return $role;
 }
 
