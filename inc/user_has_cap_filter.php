@@ -1,12 +1,28 @@
 <?php 
 
-function IPHAN_get_restrictive_roles() // PEGAR O SLUG DOS PERFIS QUE TERÃO OS DADOS RESTRINGIDOS!
+function IPHAN_get_restrictive_roles()
 {
 	$roles = get_option('IPHAN_set_role_to_restrict_access', []);
 	return $roles;
 }
 
-function IPHAN_get_restrictive_ids($type = 'items') //ADICIONAR UMA OPTIONS AO METADADO PARA HAIBILITAR ELE COMO UM META RESTRITIVO!
+function IPHAN_get_collections_access_by_user()
+{
+	$user = \wp_get_current_user();
+	$roles_collections = get_option('IPHAN_collections_access_by_role', []);
+	$collections_ids = [];
+	$roles = $user->roles;
+	foreach($roles as $role)
+	{
+		if( isset($roles_collections[$role]))
+		{
+			$collections_ids = array_merge($collections_ids, $roles_collections[$role]);
+		}
+	}
+	return empty($collections_ids) ? false : $collections_ids;
+}
+
+function IPHAN_get_restrictive_ids($type = 'items')
 {
 	$repositories_metadata = \tainacan_metadata();
 	$repositories_items = \tainacan_items();
@@ -166,63 +182,124 @@ function IPHAN_user_has_cap_filter( $allcaps, $caps, $args, $user )
 }
 add_filter( 'user_has_cap', 'IPHAN_user_has_cap_filter', 20, 4 );
 
+function IPHAN_tainacan_fetch_items_args($args, $user)
+{
+	$exist_roles = !empty(array_intersect(IPHAN_get_restrictive_roles(), $user->roles));
+	if(!$exist_roles)
+	{
+		return $args;
+	}
+
+	$post_type = $args['post_type'];
+	if( isset($post_type) && count($post_type) == 1 && \strpos($post_type[0], 'tnc_col_') === 0 )
+	{
+		$col_id = preg_replace('/[a-z_]+(\d+)[a-z_]+?$/', '$1', $post_type[0] );
+		if ( is_numeric($col_id) )
+		{
+			$repositories_metadata = \tainacan_metadata();
+			$repositories_collections = \tainacan_collections();
+			$collection = $repositories_collections->fetch($col_id);
+
+			$col_restrictive_ids = IPHAN_get_restrictive_ids('collections');
+			if($col_restrictive_ids === false)
+			{
+				return $args;
+			}
+			$metadatas = $repositories_metadata->fetch_by_collection($collection,
+				array(
+					'meta_query' => [
+						[
+							'key'   => 'metadata_type',
+							'value' => 'Tainacan\Metadata_Types\Relationship'
+						],
+						[
+							'key' => '_option_collection_id',
+							'value' => $col_restrictive_ids,
+							'compare' => 'IN'
+						]
+					]
+				)
+			);
+
+			foreach($metadatas as $metadata)
+			{
+				if( !isset($args['meta_query'] ) )
+				{
+					$args['meta_query'] = array();
+				}
+
+				$items_id = IPHAN_get_restrictive_ids('items');
+				if($items_id === false)
+				{
+					continue;
+				}
+				$args['meta_query'][] = [
+					'key' => $metadata->get_id(),
+					'value' => empty($items_id)? ['NOT_ITEM_ID'] : $items_id,
+					'compare' => 'IN'
+				];
+			}
+		}
+	}
+	return $args;
+}
+
+function IPHAN_tainacan_fetch_collections_args($args, $user)
+{
+	$roles = $user->roles;
+	$exist_restrictive_roles = !empty(array_intersect(IPHAN_get_restrictive_roles(), $roles));
+	if ($exist_restrictive_roles)
+	{
+		$repositories_metadata = \tainacan_metadata();
+		$col_restrictive_ids = IPHAN_get_restrictive_ids('collections');
+		if($col_restrictive_ids === false)
+		{
+			$args['post__in'] = [-1];
+		}
+		$metadatas = $repositories_metadata->fetch(
+			array(
+				'meta_query' => [
+					[
+						'key'   => 'metadata_type',
+						'value' => 'Tainacan\Metadata_Types\Relationship'
+					],
+					[
+						'key' => '_option_collection_id',
+						'value' => $col_restrictive_ids,
+						'compare' => 'IN'
+					]
+				]
+			), 'OBJECT'
+		);
+		if ( empty($metadatas) )
+		{
+			$args['post__in'] = [-1];
+		}
+		else
+		{
+			$collections_ids = array_map( function($el) { return $el->get_collection_id(); }, $metadatas );
+			$args['post__in'] = $collections_ids;
+		}
+	}
+	$col_ids = IPHAN_get_collections_access_by_user();
+	if ($col_ids !== false )
+	{
+		if( isset($args['post__in']) ) $col_ids = array_merge($col_ids, $args['post__in']);
+		$args['post__in'] = $col_ids;
+	}
+	return $args;
+}
+
 function IPHAN_tainacan_fetch_args($args, $type)
 {
 	$user = \wp_get_current_user();
-	$exist_roles = !empty(array_intersect(IPHAN_get_restrictive_roles(), $user->roles));
-	if( $type == 'items' && $exist_roles )
+	if( $type == 'items')
 	{
-		$post_type = $args['post_type'];
-		if( isset($post_type) && count($post_type) == 1 && \strpos($post_type[0], 'tnc_col_') === 0 )
-		{
-			$col_id = preg_replace('/[a-z_]+(\d+)[a-z_]+?$/', '$1', $post_type[0] );
-			if ( is_numeric($col_id) )
-			{
-				$repositories_metadata = \tainacan_metadata();
-				$repositories_collections = \tainacan_collections();
-				$collection = $repositories_collections->fetch($col_id);
-
-				$col_restrictive_ids = IPHAN_get_restrictive_ids('collections');
-				if($col_restrictive_ids === false)
-				{
-					return $args;
-				}
-				$metadatas = $repositories_metadata->fetch_by_collection($collection,
-					array(
-						'meta_query' => [
-							[
-								'key'   => 'metadata_type',
-								'value' => 'Tainacan\Metadata_Types\Relationship'
-							],
-							[
-								'key' => '_option_collection_id',
-								'value' => $col_restrictive_ids,
-								'compare' => 'IN'
-							]
-						]
-					)
-				);
-
-				foreach($metadatas as $metadata)
-				{
-					if( !isset($args['meta_query'] ) )
-					{
-						$args['meta_query'] = array();
-					}
-
-					$items_id = IPHAN_get_restrictive_ids('items');
-					if($items_id === false)
-					{
-						continue;
-					}
-					$args['meta_query'][] = [
-						'key' => $metadata->get_id(),
-						'value' => empty($items_id)? ['NOT_ITEM_ID'] : $items_id,
-						'compare' => 'IN'
-					];
-				}
-			}
-		}
+		$args = IPHAN_tainacan_fetch_items_args($args, $user);
+	}
+	elseif( $type == 'collections' )
+	{
+		$args = IPHAN_tainacan_fetch_collections_args($args, $user);
 	}
 
 	return $args;
@@ -234,14 +311,13 @@ add_filter( 'tainacan_fetch_args' , 'IPHAN_tainacan_fetch_args', 10, 2 );
 /*
  * FORM HOOK
 **/
-
 add_action( 'tainacan-register-admin-hooks', 'tainacan_set_user_to_restrict_access_items_register_hook');
 function tainacan_set_user_to_restrict_access_items_register_hook()
 {
 	if ( function_exists( 'tainacan_register_admin_hook' ) )
 	{
 		tainacan_register_admin_hook( 'metadatum', 'tainacan_set_user_to_restrict_access_items_form', 'end-left', [ 'attribute' => 'metadata_type', 'value' => 'Tainacan\Metadata_Types\User' ] );
-		tainacan_register_admin_hook( 'role', 'tainacan_set_role_to_restrict_access_items_form', 'begin-left' );
+		tainacan_register_admin_hook( 'role', 'tainacan_set_role_to_restrict_access_items_form', 'end-right' );
 	}
 }
 
@@ -317,15 +393,25 @@ function tainacan_set_user_to_restrict_access_items_create($metadatum) {
 
 function tainacan_set_role_to_restrict_access_items_form()
 {
+	$repositories_collections = \tainacan_collections();
+	$collections = $repositories_collections->fetch([], 'OBJECT');
 	ob_start();
 	?>
-
 		<div class="name-edition-box tainacan-set-role-to-restrict-access">
-			<label data-v-66409e63="" for="set_role_to_restrict_access"><?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan-inrc'); ?></label>
+			<label for="set_role_to_restrict_access"><?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan-inrc'); ?></label>
 			<select name="set_role_to_restrict_access" id="set-user-to-restrict-access-select">
 				<option value="yes"><?php _e('Sim', 'iphan-inrc'); ?></option>
 				<option value="no"><?php _e('Não', 'iphan-inrc'); ?></option>
 			</select>
+		</div>
+
+		<div class="name-edition-box tainacan-collections_access_by_role" >
+			<label for="collections_access_by_role"><?php _e('Limitar o acesso do papel as coleções:', 'iphan-inrc'); ?></label>
+			<div style="border:2px solid #ccc; width:300px; height: 100px; overflow-y: scroll;">
+			<?php foreach($collections as $col): ?>
+				<input type="checkbox" name="collections_access_by_role" value="<?php echo $col->get_id(); ?>"> <?php echo $col->get_name(); ?> </input> <br />
+			<?php endforeach; ?>
+			</div>
 		</div>
 
 	<?php
@@ -336,6 +422,19 @@ function tainacan_set_role_to_restrict_access_items_form()
 function tainacan_set_role_to_restrict_access_items_create($role, $request) {
 	$slug = $role['slug'];
 	$roles = get_option('IPHAN_set_role_to_restrict_access', []);
+	$roles_collections = get_option('IPHAN_collections_access_by_role', []);
+	if( isset($request['collections_access_by_role']) )
+	{
+		$update_col = $request['collections_access_by_role'];
+		update_option('IPHAN_collections_access_by_role', array_merge($roles_collections, [ $slug => $update_col ] ) );
+		$role['collections_access_by_role'] = $update_col;
+	}
+	else
+	{
+		$collections_role =  isset($roles_collections[$slug]) ? $roles_collections[$slug] : [];
+		$role['collections_access_by_role'] = $collections_role;
+	}
+
 	if( isset($request['set_role_to_restrict_access']) )
 	{
 		if ($request['set_role_to_restrict_access'] == 'yes')
@@ -354,6 +453,7 @@ function tainacan_set_role_to_restrict_access_items_create($role, $request) {
 		$set_role = in_array($slug, $roles);
 		$role['set_role_to_restrict_access'] = $set_role ? 'yes' : 'no';
 	}
+
 	return $role;
 }
 
