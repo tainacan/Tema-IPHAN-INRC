@@ -427,61 +427,14 @@ function iphan_set_tainacan_admin_options($options) {
 		$user = wp_get_current_user();
 		$roles = ( array ) $user->roles;
 		$iphan_tainacan_admin_options = [];
+		$admin_options_collections = get_option('IPHAN_tainacan_admin_options_by_role', []);
+		$admin_options_collections = is_array($admin_options_collections) ? $admin_options_collections : [];
 
-		if ( 
-				in_array(IPHAN_INRC_ROLES__usuario_logado, $roles) ||
-				in_array(IPHAN_INRC_ROLES__responsavel_formulario, $roles) ||
-				in_array(IPHAN_INRC_ROLES__responsavel_supervisao, $roles)
-			) {
-			$iphan_tainacan_admin_options = [
-				'hideRepositorySubheaderExportButton' => true,
-				'hideCollectionSubheader' => true,
-				'hidePrimaryMenu' => true,
-				'hideHomeRepositorySection' => true,
-				'hideHomeCollectionsButton' => true,
-				'hideTainacanHeaderSearchInput' => true,
-				'hideTainacanHeaderAdvancedSearch' => true,
-				'hideTainacanHeaderProcessesPopup' => true,
-				'hideHomeCollectionSettingsButton' => true,
-				'hideHomeCollectionMetadataButton' => true,
-				'hideHomeCollectionFiltersButton' => true,
-				'hideHomeCollectionActivitiesButton' => true,
-				'hideHomeCollectionThemeCollectionButton' => true,
-				'showHomeCollectionCreateItemButton' => true,
-				'homeCollectionsPerPage' => 18,
-				'hideItemsListBulkActionsButton' => true,
-				'hideItemsListMultipleSelection' => true,
-				'hideItemsListSelection' => true,
-				'hideItemsListExposersButton' => true,
-				'hideItemsListStatusTabs' => true,
-				'hideItemsListCreationDropdownBulkAdd' => true,
-				'hideItemsListCreationDropdownImport' => true,
-				'hideItemsListContextMenu' => true,
-				'hideItemsListFilterCreationButton' => true,
-				'hideItemEditionCollectionName' => true,
-				'hideItemEditionStatusOptions' => true,
-				'hideItemEditionCommentsToggle' => true,
-				'hideItemEditionThumbnail' => true,
-				'hideItemSingleCollectionName' => true,
-				'hideItemSingleCurrentStatus' => true,
-				'hideItemSingleCurrentVisibility' => true,
-				'hideItemSingleCommentsOpen' => true,
-				'hideItemSingleThumbnail' => true,
-				'hideItemSingleActivities' => true,
-				'hideItemSingleExposers' => true
-			];
-		} else if ( in_array(IPHAN_INRC_ROLES__administrador_tecnico, $roles) ) {
-			$iphan_tainacan_admin_options = [
-				'hideRepositorySubheaderExportButton' => true,
-				'hideCollectionSubheader' => true,
-				'hidePrimaryMenu' => true,
-				'hideHomeRepositorySection' => true,
-				'hideHomeCollectionsButton' => true,
-				'hideTainacanHeaderSearchInput' => true,
-				'hideTainacanHeaderAdvancedSearch' => true,
-				'hideItemsListExposersButton' => true,
-				'hideItemSingleExposers' => true
-			];
+		foreach($roles as $role) {
+			if( isset($admin_options_collections[$role])) {
+				foreach($admin_options_collections[$role] as $option)
+				$iphan_tainacan_admin_options[$option] = true;
+			}
 		}
 		$options = array_merge($options, $iphan_tainacan_admin_options);
 	}
