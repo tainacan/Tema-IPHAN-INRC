@@ -201,39 +201,71 @@ function IPHAN_tainacan_fetch_items_args($args, $user)
 			{
 				return $args;
 			}
-			$metadatas = $repositories_metadata->fetch_by_collection($collection,
-				array(
+
+			if( in_array($col_id, $col_restrictive_ids) )
+			{
+				$metadatas = $repositories_metadata->fetch_by_collection($collection, [
 					'meta_query' => [
 						[
 							'key'   => 'metadata_type',
-							'value' => 'Tainacan\Metadata_Types\Relationship'
-						],
-						[
-							'key' => '_option_collection_id',
-							'value' => $col_restrictive_ids,
-							'compare' => 'IN'
+							'value' => 'Tainacan\Metadata_Types\User'
+						]
+						,[
+							'key' => 'set_user_to_restrict_access',
+							'value' => 'yes'
 						]
 					]
-				)
-			);
+				], 'OBJECT');
+				foreach($metadatas as $metadata)
+				{
+					if( !isset($args['meta_query'] ) )
+					{
+						$args['meta_query'] = array();
+					}
 
-			foreach($metadatas as $metadata)
+					$args['meta_query'][] = [
+						'key' => $metadata->get_id(),
+						'value' => [$user->id],
+						'compare' => 'IN'
+					];
+				}
+			}
+			else
 			{
-				if( !isset($args['meta_query'] ) )
-				{
-					$args['meta_query'] = array();
-				}
+				$metadatas = $repositories_metadata->fetch_by_collection($collection,
+					array(
+						'meta_query' => [
+							[
+								'key'   => 'metadata_type',
+								'value' => 'Tainacan\Metadata_Types\Relationship'
+							],
+							[
+								'key' => '_option_collection_id',
+								'value' => $col_restrictive_ids,
+								'compare' => 'IN'
+							]
+						]
+					)
+				);
 
-				$items_id = IPHAN_get_restrictive_ids('items');
-				if($items_id === false)
+				foreach($metadatas as $metadata)
 				{
-					continue;
+					if( !isset($args['meta_query'] ) )
+					{
+						$args['meta_query'] = array();
+					}
+
+					$items_id = IPHAN_get_restrictive_ids('items');
+					if($items_id === false)
+					{
+						continue;
+					}
+					$args['meta_query'][] = [
+						'key' => $metadata->get_id(),
+						'value' => empty($items_id)? ['NOT_ITEM_ID'] : $items_id,
+						'compare' => 'IN'
+					];
 				}
-				$args['meta_query'][] = [
-					'key' => $metadata->get_id(),
-					'value' => empty($items_id)? ['NOT_ITEM_ID'] : $items_id,
-					'compare' => 'IN'
-				];
 			}
 		}
 	}
@@ -441,7 +473,6 @@ function tainacan_set_role_to_restrict_access_items_create($role, $request) {
 	}
 	else
 	{
-		error_log( json_encode( $roles_collections) );
 		$collections_role =  isset($roles_collections[$slug]) ? $roles_collections[$slug] : [];
 		$role['collections_access_by_role'] = $collections_role;
 	}
