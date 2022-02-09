@@ -62,7 +62,7 @@ function IPHAN_get_collections_access_by_user()
 	$roles = $user->roles;
 	foreach($roles as $role)
 	{
-		if( isset($roles_collections[$role]))
+		if( isset($roles_collections[$role]) && is_array($roles_collections[$role]) )
 		{
 			$collections_ids = array_merge($collections_ids, $roles_collections[$role]);
 		}
@@ -327,6 +327,7 @@ function IPHAN_tainacan_fetch_collections_args($args, $user)
 {
 	$roles = $user->roles;
 	$exist_restrictive_roles = !empty(array_intersect(IPHAN_get_restrictive_roles(), $roles));
+
 	if ($exist_restrictive_roles)
 	{
 		$repositories_metadata = \tainacan_metadata();
@@ -334,6 +335,7 @@ function IPHAN_tainacan_fetch_collections_args($args, $user)
 		if($col_restrictive_ids === false)
 		{
 			$args['post__in'] = [-1];
+
 		}
 		$metadatas = $repositories_metadata->fetch(
 			array(
@@ -486,11 +488,11 @@ function tainacan_set_role_to_restrict_access_items_form()
 
 		<div class="name-edition-box tainacan-collections_access_by_role" >
 			<label for="collections_access_by_role"><?php _e('Limitar o acesso do papel as coleções:', 'iphan-inrc'); ?></label>
-			<div style="border:2px solid #ccc; width:300px; height: 100px; overflow-y: scroll;">
-			<?php foreach($collections as $col): ?>
-				<input type="checkbox" name="collections_access_by_role" value="<?php echo $col->get_id(); ?>"> <?php echo $col->get_name(); ?> </input> <br />
-			<?php endforeach; ?>
-			</div>
+			<select name="collections_access_by_role" id="collections_access_by_role" multiple>
+				<?php foreach($collections as $col): ?>
+					<option value="<?php echo $col->get_id(); ?>"> <?php echo $col->get_name(); ?> </option>
+				<?php endforeach; ?>
+			</select>
 		</div>
 
 		<div class="name-edition-box tainacan-admin-options-by-role" >
