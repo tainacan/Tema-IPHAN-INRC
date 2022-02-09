@@ -1,4 +1,52 @@
-<?php 
+<?php
+
+define('TAINACAN_ADMIN_OPTIONS', [
+	'Navegação' => [
+		'hideTainacanHeaderSearchInput' => 'Esconder campo de busca no cabeçalho do Tainacan',
+		'hideTainacanHeaderAdvancedSearch' => 'Esconder busca avançada no cabeçalho do Tainacan',
+		'hideTainacanHeaderProcessesPopup' => 'Esconder popup de processos no cabeçalho do Tainacan',
+		'hideRepositorySubheaderExportButton' => 'Esconder cabeçalho do repositório',
+		'hideCollectionSubheader' => 'Esconder cabeçalho da coleção',
+		'hidePrimaryMenu' => 'Esconder menu lateral'
+	],
+	'Página inicial' => [
+		'hideHomeRepositorySection' => 'Esconder sessão do respositório',
+		'hideHomeCollectionsButton' => 'Esconder botão de coleções',
+		'hideHomeCollectionSettingsButton' => 'Esconder botão de configuração na sessão de coleções',
+		'hideHomeCollectionMetadataButton' => 'Esconder botão de metadados na sessão de coleções',
+		'hideHomeCollectionFiltersButton' => 'Esconder botão de filtros na sessão de coleções',
+		'hideHomeCollectionActivitiesButton' => 'Esconder botão de atividades na sessão de coleções',
+		'hideHomeCollectionThemeCollectionButton' => 'Esconder botão de "ver no tema" na sessão de coleções',
+		'showHomeCollectionCreateItemButton' => 'Mostrar botão de criar item na sessão de coleções',
+		'homeCollectionsPerPage' => 'Total de coleções mostradas'
+	],
+	'Lista de itens' => [
+		'hideItemsListBulkActionsButton' => 'Esconder botão de ações em massa',
+		'hideItemsListMultipleSelection' => 'Esconder multipla seleção de itens',
+		'hideItemsListSelection' => 'Esconder seleção individual de itens',
+		'hideItemsListExposersButton' => 'Esconder botão de "Ver como..."',
+		'hideItemsListStatusTabs' => 'Esconder abas de status',
+		'hideItemsListCreationDropdownBulkAdd' => 'Esconder botão de adicionar em massa no dropdown de criação',
+		'hideItemsListCreationDropdownImport' => 'Esconder botão de importar no dropdown de criação',
+		'hideItemsListContextMenu' => 'Esconder menu que aparece com o clique direito',
+		'hideItemsListFilterCreationButton' => 'Esconder botão de criar filtros'
+	],
+	'Página de edição do item' => [
+		'hideItemEditionCollectionName' => 'Esconder nome da coleção',
+		'hideItemEditionStatusOptions' => 'Esconder opções de status',
+		'hideItemEditionCommentsToggle' => 'Esconder opção de comentários',
+		'hideItemEditionThumbnail' => 'Esconder miniatura'
+	],
+	'Página do item' => [
+		'hideItemSingleCollectionName' => 'Esconder nome da coleção',
+		'hideItemSingleCurrentStatus' => 'Esconder status',
+		'hideItemSingleCurrentVisibility' => 'Esconder visibilidade',
+		'hideItemSingleCommentsOpen' => 'Esconder condição dos comentários',
+		'hideItemSingleThumbnail' => 'Esconder miniatura',
+		'hideItemSingleActivities' => 'Esconder atividades',
+		'hideItemSingleExposers' => 'Esconder botão de "Ver como..."'
+	]
+]);
 
 function IPHAN_get_restrictive_roles()
 {
@@ -411,6 +459,34 @@ function tainacan_set_role_to_restrict_access_items_form()
 			<?php foreach($collections as $col): ?>
 				<input type="checkbox" name="collections_access_by_role" value="<?php echo $col->get_id(); ?>"> <?php echo $col->get_name(); ?> </input> <br />
 			<?php endforeach; ?>
+			</div>
+		</div>
+
+		<div class="name-edition-box tainacan-admin-options-by-role" >
+			<label for="tainacan_admin_options_by_role"><?php _e('Opções da interface administrativa para os usuários desta função', 'iphan-inrc'); ?></label>
+			<div class="admin-options-container capabilities-list" style="justify-content: flex-start;">
+				<?php foreach(TAINACAN_ADMIN_OPTIONS as $tainacan_admin_options_group_name => $tainacan_admin_options_group) : ?>
+					<div 
+							style="flex-basis: 400px; margin-right: unset;"
+							class="capability-group">
+						<h3><?php _e($tainacan_admin_options_group_name, 'iphan_inrc'); ?></h3>
+						<ul>
+							<?php foreach($tainacan_admin_options_group as $tainacan_admin_available_option_value => $tainacan_admin_available_option_label) : ?>
+								<li style="width: 100%">
+									<span class="check-column">
+										<label for="<?php echo $tainacan_admin_available_option_value ?>" class="screen-reader-text">
+											<?php _e($tainacan_admin_available_option_label, 'iphan_inrc'); ?>
+										</label>
+										<input type="checkbox" name="tainacan_admin_options_by_role[]" id="<?php echo $tainacan_admin_available_option_value ?>">
+									</span>
+									<span class="name column-name">
+										<?php _e($tainacan_admin_available_option_label, 'iphan_inrc'); ?>
+									</span>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 
