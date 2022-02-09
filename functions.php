@@ -425,9 +425,15 @@ function iphan_set_tainacan_admin_options($options) {
 		$admin_options_collections = is_array($admin_options_collections) ? $admin_options_collections : [];
 
 		foreach($roles as $role) {
-			if( isset($admin_options_collections[$role])) {
-				foreach($admin_options_collections[$role] as $option)
-				$iphan_tainacan_admin_options[$option] = true;
+			if ( isset($admin_options_collections[$role])) {
+				foreach($admin_options_collections[$role] as $option) {
+					
+					$iphan_tainacan_admin_options[$option] = true;
+
+					if ($option == 'hideHomeCollectionsButton') {
+						$iphan_tainacan_admin_options['homeCollectionsPerPage'] = 18;
+					}
+				}
 			}
 		}
 		$options = array_merge($options, $iphan_tainacan_admin_options);
