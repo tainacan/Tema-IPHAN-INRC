@@ -10,8 +10,14 @@
 
 if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('IPHAN_INRC_VERSION', '0.0.4');
+	define('IPHAN_INRC_VERSION', '0.0.7');
 }
+
+define('IPHAN_INRC_ROLES__usuario_logado', 'tainacan-usuario_logado');
+define('IPHAN_INRC_ROLES__responsavel_formulario', 'tainacan-responsavel_por_formulario');
+define('IPHAN_INRC_ROLES__responsavel_supervisao', 'tainacan-responsavel_supervisao');
+define('IPHAN_INRC_ROLES__responsavel_projeto', 'tainacan-responsavel_projeto');
+define('IPHAN_INRC_ROLES__administrador_tecnico', 'tainacan-administrador_tecnico');
 
 if (!function_exists('iphan_inrc_setup')) :
 	/**
@@ -418,12 +424,16 @@ add_action('admin_head', 'iphan_inrc_customize_form_hooks_css');
 function iphan_set_tainacan_admin_options($options) {
 	
 	if ( is_user_logged_in() ) {
-		$iphan_usuario_logado = 'tainacan-usuario_logado';
 		$user = wp_get_current_user();
 		$roles = ( array ) $user->roles;
-		
-		if ( in_array($iphan_usuario_logado, $roles) ) {
-			$iphan_tainacan_admin_options_for_usuario_logado = [
+		$iphan_tainacan_admin_options = [];
+
+		if ( 
+				in_array(IPHAN_INRC_ROLES__usuario_logado, $roles) ||
+				in_array(IPHAN_INRC_ROLES__responsavel_formulario, $roles) ||
+				in_array(IPHAN_INRC_ROLES__responsavel_supervisao, $roles)
+			) {
+			$iphan_tainacan_admin_options = [
 				'hideRepositorySubheaderExportButton' => true,
 				'hideCollectionSubheader' => true,
 				'hidePrimaryMenu' => true,
@@ -438,6 +448,7 @@ function iphan_set_tainacan_admin_options($options) {
             	'hideHomeCollectionActivitiesButton' => true,
             	'hideHomeCollectionThemeCollectionButton' => true,
             	'showHomeCollectionCreateItemButton' => true,
+				'homeCollectionsPerPage' => 18,
 				'hideItemsListBulkActionsButton' => true,
 				'hideItemsListMultipleSelection' => true,
 				'hideItemsListSelection' => true,
@@ -459,8 +470,20 @@ function iphan_set_tainacan_admin_options($options) {
 				'hideItemSingleActivities' => true,
 				'hideItemSingleExposers' => true
 			];
-			$options = array_merge($options, $iphan_tainacan_admin_options_for_usuario_logado);
+		} else if ( in_array(IPHAN_INRC_ROLES__administrador_tecnico, $roles) ) {
+			$iphan_tainacan_admin_options = [
+				'hideRepositorySubheaderExportButton' => true,
+				'hideCollectionSubheader' => true,
+				'hidePrimaryMenu' => true,
+				'hideHomeRepositorySection' => true,
+				'hideHomeCollectionsButton' => true,
+				'hideTainacanHeaderSearchInput' => true,
+				'hideTainacanHeaderAdvancedSearch' => true,
+				'hideItemsListExposersButton' => true,
+				'hideItemSingleExposers' => true
+			];
 		}
+		$options = array_merge($options, $iphan_tainacan_admin_options);
 	}
 	return $options;
 };
