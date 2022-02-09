@@ -413,14 +413,14 @@ function tainacan_set_user_to_restrict_access_items_form()
 
 		<div class="tainacan-set-user-to-restrict-access"> 
 			<div class="field tainacan-metadatum--section-header">
-				<h4><?php _e( 'Opções do IPHAN-INRC', 'iphan-inrc' ); ?></h4>
+				<h4><?php _e( 'Opções do IPHAN-INRC', 'iphan_inrc' ); ?></h4>
 				<hr>
 			</div>
 			<div
 				class="field"
 				style="margin: 0.5em 0;">
 				<label class="label">
-					<?php _e('Restringir acesso dos usuários', 'iphan-inrc'); ?>
+					<?php _e('Restringir acesso dos usuários', 'iphan_inrc'); ?>
 					<span class="help-wrapper">
 						<a class="help-button has-text-secondary">
 							<span class="icon is-small">
@@ -429,10 +429,10 @@ function tainacan_set_user_to_restrict_access_items_form()
 						</a>
 						<div class="help-tooltip">
 							<div class="help-tooltip-header">
-								<h5 class="has-text-color"><?php _e('Restringir acesso', 'iphan-inrc'); ?></h5>
+								<h5 class="has-text-color"><?php _e('Restringir acesso', 'iphan_inrc'); ?></h5>
 							</div>
 							<div class="help-tooltip-body">
-								<p><?php _e('Ao ativar a restrição de acessos os usuários listados nesse metadado terão seu acesso aos itens restringido.', 'iphan-inrc'); ?></p>
+								<p><?php _e('Ao ativar a restrição de acessos os usuários listados nesse metadado terão seu acesso aos itens restringido.', 'iphan_inrc'); ?></p>
 							</div>
 						</div>
 					</span>
@@ -440,8 +440,8 @@ function tainacan_set_user_to_restrict_access_items_form()
 				<div class="control is-expanded">
 					<span class="select is-fullwidth">
 						<select name="set_user_to_restrict_access" id="set-user-to-restrict-access-select">
-							<option value="yes"><?php _e('Sim', 'iphan-inrc'); ?></option>
-							<option value="no"><?php _e('Não', 'iphan-inrc'); ?></option>
+							<option value="yes"><?php _e('Sim', 'iphan_inrc'); ?></option>
+							<option value="no"><?php _e('Não', 'iphan_inrc'); ?></option>
 						</select>
 					</span>
 				</div>
@@ -479,15 +479,15 @@ function tainacan_set_role_to_restrict_access_items_form()
 	ob_start();
 	?>
 		<div class="name-edition-box tainacan-set-role-to-restrict-access">
-			<label for="set_role_to_restrict_access"><?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan-inrc'); ?></label>
+			<label for="set_role_to_restrict_access"><?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan_inrc'); ?></label>
 			<select name="set_role_to_restrict_access" id="set-user-to-restrict-access-select">
-				<option value="yes"><?php _e('Sim', 'iphan-inrc'); ?></option>
-				<option value="no"><?php _e('Não', 'iphan-inrc'); ?></option>
+				<option value="yes"><?php _e('Sim', 'iphan_inrc'); ?></option>
+				<option value="no"><?php _e('Não', 'iphan_inrc'); ?></option>
 			</select>
 		</div>
 
 		<div class="name-edition-box tainacan-collections_access_by_role" >
-			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Limitar o acesso do papel as coleções:', 'iphan-inrc'); ?></h2>
+			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Limitar o acesso do papel as coleções:', 'iphan_inrc'); ?></h2>
 			<ul class="collections-container capabilities-list" style="justify-content: flex-start;">
 				<?php foreach($collections as $col): ?>
 					<li style="flex-basis: 400px; margin-right: unset;">
@@ -495,7 +495,7 @@ function tainacan_set_role_to_restrict_access_items_form()
 							<label for="<?php echo $col->get_id(); ?>" class="screen-reader-text">
 								<?php echo $col->get_name(); ?>
 							</label>
-							<input type="checkbox" name="collections_access_by_role[]" id="<?php echo $col->get_id(); ?>">
+							<input type="checkbox" name="collections_access_by_role" id="<?php echo $col->get_id(); ?>" value="<?php echo $col->get_id(); ?>">
 						</span>
 						<span class="name column-name">
 							<?php echo $col->get_name(); ?>
@@ -506,7 +506,7 @@ function tainacan_set_role_to_restrict_access_items_form()
 		</div>
 
 		<div class="name-edition-box tainacan-admin-options-by-role" >
-			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Opções da interface administrativa para os usuários desta função', 'iphan-inrc'); ?></h2>
+			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Opções da interface administrativa para os usuários desta função', 'iphan_inrc'); ?></h2>
 			<div class="admin-options-container capabilities-list" style="justify-content: flex-start;">
 				<?php foreach(IPHAN_TAINACAN_ADMIN_OPTIONS as $tainacan_admin_options_group_name => $tainacan_admin_options_group) : ?>
 					<div 
