@@ -13,12 +13,6 @@ if (!defined('IPHAN_INRC_VERSION')) {
 	define('IPHAN_INRC_VERSION', '0.0.7');
 }
 
-define('IPHAN_INRC_ROLES__usuario_logado', 'tainacan-usuario_logado');
-define('IPHAN_INRC_ROLES__responsavel_formulario', 'tainacan-responsavel_por_formulario');
-define('IPHAN_INRC_ROLES__responsavel_supervisao', 'tainacan-responsavel_supervisao');
-define('IPHAN_INRC_ROLES__responsavel_projeto', 'tainacan-responsavel_projeto');
-define('IPHAN_INRC_ROLES__administrador_tecnico', 'tainacan-administrador_tecnico');
-
 if (!function_exists('iphan_inrc_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
