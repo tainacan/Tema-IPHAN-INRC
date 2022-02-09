@@ -579,7 +579,7 @@ function tainacan_set_role_to_restrict_access_items_create($role, $request) {
 		{
 			$update_options = $request['tainacan_admin_options_by_role'];
 			update_option('IPHAN_tainacan_admin_options_by_role', array_merge($admin_options_collections, [ $slug => $update_options ] ) );
-			$role['collections_access_by_role'] = $update_options;
+			$role['tainacan_admin_options_by_role'] = $update_options;
 		}
 		else
 		{
