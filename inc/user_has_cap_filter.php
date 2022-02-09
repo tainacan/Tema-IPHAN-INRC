@@ -233,13 +233,9 @@ add_filter( 'user_has_cap', 'IPHAN_user_has_cap_filter', 20, 4 );
 function IPHAN_tainacan_fetch_items_args($args, $user)
 {
 	$exist_roles = !empty(array_intersect(IPHAN_get_restrictive_roles(), $user->roles));
-	if(!$exist_roles)
-	{
-		return $args;
-	}
 
 	$post_type = $args['post_type'];
-	if( isset($post_type) && count($post_type) == 1 && \strpos($post_type[0], 'tnc_col_') === 0 )
+	if($exist_roles && isset($post_type) && count($post_type) == 1 && \strpos($post_type[0], 'tnc_col_') === 0 )
 	{
 		$col_id = preg_replace('/[a-z_]+(\d+)[a-z_]+?$/', '$1', $post_type[0] );
 		if ( is_numeric($col_id) )
@@ -253,42 +249,77 @@ function IPHAN_tainacan_fetch_items_args($args, $user)
 			{
 				return $args;
 			}
-			$metadatas = $repositories_metadata->fetch_by_collection($collection,
-				array(
+
+			if( in_array($col_id, $col_restrictive_ids) )
+			{
+				$metadatas = $repositories_metadata->fetch_by_collection($collection, [
 					'meta_query' => [
 						[
 							'key'   => 'metadata_type',
-							'value' => 'Tainacan\Metadata_Types\Relationship'
-						],
-						[
-							'key' => '_option_collection_id',
-							'value' => $col_restrictive_ids,
-							'compare' => 'IN'
+							'value' => 'Tainacan\Metadata_Types\User'
+						]
+						,[
+							'key' => 'set_user_to_restrict_access',
+							'value' => 'yes'
 						]
 					]
-				)
-			);
+				], 'OBJECT');
+				foreach($metadatas as $metadata)
+				{
+					if( !isset($args['meta_query'] ) )
+					{
+						$args['meta_query'] = array();
+					}
 
-			foreach($metadatas as $metadata)
+					$args['meta_query'][] = [
+						'key' => $metadata->get_id(),
+						'value' => [$user->id],
+						'compare' => 'IN'
+					];
+				}
+			}
+			else
 			{
-				if( !isset($args['meta_query'] ) )
-				{
-					$args['meta_query'] = array();
-				}
+				$metadatas = $repositories_metadata->fetch_by_collection($collection,
+					array(
+						'meta_query' => [
+							[
+								'key'   => 'metadata_type',
+								'value' => 'Tainacan\Metadata_Types\Relationship'
+							],
+							[
+								'key' => '_option_collection_id',
+								'value' => $col_restrictive_ids,
+								'compare' => 'IN'
+							]
+						]
+					)
+				);
 
-				$items_id = IPHAN_get_restrictive_ids('items');
-				if($items_id === false)
+				foreach($metadatas as $metadata)
 				{
-					continue;
+					if( !isset($args['meta_query'] ) )
+					{
+						$args['meta_query'] = array();
+					}
+
+					$items_id = IPHAN_get_restrictive_ids('items');
+					if($items_id === false)
+					{
+						continue;
+					}
+					$args['meta_query'][] = [
+						'key' => $metadata->get_id(),
+						'value' => empty($items_id)? ['NOT_ITEM_ID'] : $items_id,
+						'compare' => 'IN'
+					];
 				}
-				$args['meta_query'][] = [
-					'key' => $metadata->get_id(),
-					'value' => empty($items_id)? ['NOT_ITEM_ID'] : $items_id,
-					'compare' => 'IN'
-				];
 			}
 		}
 	}
+
+
+
 	return $args;
 }
 
@@ -496,14 +527,25 @@ function tainacan_set_role_to_restrict_access_items_form()
 
 \add_action( 'tainacan-api-role-prepare-for-response', 'tainacan_set_role_to_restrict_access_items_create', 10, 2 );
 function tainacan_set_role_to_restrict_access_items_create($role, $request) {
+
 	$slug = $role['slug'];
 	$roles = get_option('IPHAN_set_role_to_restrict_access', []);
 	$roles_collections = get_option('IPHAN_collections_access_by_role', []);
-	if( isset($request['collections_access_by_role']) )
+	$roles_collections = is_array($roles_collections) ? $roles_collections : [];
+
+	if( $request->get_method() != 'GET')
 	{
-		$update_col = $request['collections_access_by_role'];
-		update_option('IPHAN_collections_access_by_role', array_merge($roles_collections, [ $slug => $update_col ] ) );
-		$role['collections_access_by_role'] = $update_col;
+		if ( isset($request['collections_access_by_role']) )
+		{
+			$update_col = $request['collections_access_by_role'];
+			update_option('IPHAN_collections_access_by_role', array_merge($roles_collections, [ $slug => $update_col ] ) );
+			$role['collections_access_by_role'] = $update_col;
+		}
+		else
+		{
+			if( isset($roles_collections[$slug]) ) unset($roles_collections[$slug]);
+			update_option('IPHAN_collections_access_by_role', $roles_collections );
+		}
 	}
 	else
 	{
