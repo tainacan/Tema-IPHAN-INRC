@@ -36,6 +36,7 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideItemsListSelection' => 'Esconder seleção individual de itens',
 		'hideItemsListExposersButton' => 'Esconder botão de "Ver como..."',
 		'hideItemsListStatusTabs' => 'Esconder abas de status',
+		'hideItemsListStatusTabsTotalItems' => 'Esconder o total de itens nas abas de status',
 		'hideItemsListCreationDropdownBulkAdd' => 'Esconder botão de adicionar em massa no dropdown de criação',
 		'hideItemsListCreationDropdownImport' => 'Esconder botão de importar no dropdown de criação',
 		'hideItemsListContextMenu' => 'Esconder menu que aparece com o clique direito',

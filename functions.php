@@ -432,6 +432,8 @@ function iphan_set_tainacan_admin_options($options) {
 
 					if ($option == 'hideHomeCollectionsButton') {
 						$iphan_tainacan_admin_options['homeCollectionsPerPage'] = 18;
+						$iphan_tainacan_admin_options['homeCollectionsOrderBy'] = 'title';
+						$iphan_tainacan_admin_options['homeCollectionsOrder'] = 'asc';
 					}
 				}
 			}
