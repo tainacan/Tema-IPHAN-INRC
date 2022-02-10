@@ -64,7 +64,7 @@ function tainacan_expanded_filter_relationship_add_meta_to_response( $extra_meta
 
 \add_action( 'tainacan-insert-tainacan-metadatum', 'tainacan_expanded_filter_relationship_create', 10, 2 );
 function tainacan_expanded_filter_relationship_create($metadatum) {
-	if ( !$metadatum instanceof \Tainacan\Entities\Metadatum || $metadatum->get_metadata_type() !== 'Tainacan\Metadata_Types\Relationship') { 
+	if ( !$metadatum instanceof \Tainacan\Entities\Metadatum || $metadatum->get_metadata_type() !== 'Tainacan\Metadata_Types\Relationship' || $metadatum->get_metadata_type() !== 'Tainacan\Metadata_Types\Compound') {
 		return;
 	}
 	if ( !$metadatum->can_edit() ) {
@@ -242,12 +242,14 @@ function tainacan_expanded_filter_relationship_update_filter_values($item_metada
 			$options = $item_metadatum->get_metadata_type_options();
 			$meta_id = $options['meta_id'];
 			$relationship_metadata = \tainacan_metadata()->fetch($meta_id);
-			$item_metadata = new \Tainacan\Entities\Item_Metadata_Entity( $relationship_item, $relationship_metadata );
-			$value = $relationship_metadata->is_multiple() ? $item_metadata->get_value() : [$item_metadata->get_value()];
-			if(!isset($values[$meta_id])) {
-				$values[$meta_id] = [];
+			if ($relationship_metadata->get_metadata_type() != 'Tainacan\Metadata_Types\Compound') {
+				$item_metadata = new \Tainacan\Entities\Item_Metadata_Entity( $relationship_item, $relationship_metadata );
+				$value = $relationship_metadata->is_multiple() ? $item_metadata->get_value() : [$item_metadata->get_value()];
+				if(!isset($values[$meta_id])) {
+					$values[$meta_id] = [];
+				}
+				$values[$meta_id] = array_merge($values[$meta_id], $value);
 			}
-			$values[$meta_id] = array_merge($values[$meta_id], $value);
 		}
 	}
 
