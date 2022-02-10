@@ -7,7 +7,18 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideTainacanHeaderProcessesPopup' => 'Esconder popup de processos no cabeçalho do Tainacan',
 		'hideRepositorySubheaderExportButton' => 'Esconder cabeçalho do repositório',
 		'hideCollectionSubheader' => 'Esconder cabeçalho da coleção',
-		'hidePrimaryMenu' => 'Esconder menu lateral'
+		'hidePrimaryMenu' => 'Esconder todo o menu lateral',
+		'hidePrimaryMenuCompressButton' => 'Esconder o botão de comprimir o menu lateral',
+        'hidePrimaryMenuRepositoryButton' => 'Esconder o botão do repositório do menu lateral',
+        'hidePrimaryMenuCollectionsButton' => 'Esconder o botão de coleções do menu lateral',
+        'hidePrimaryMenuItemsButton' => 'Esconder o botão de itens do menu lateral',
+        'hidePrimaryMenuTaxonomiesButton' => 'Esconder o botão de taxonomias do menu lateral',
+        'hidePrimaryMenuMetadataButton' => 'Esconder o botão de metadados do menu lateral',
+        'hidePrimaryMenuFiltersButton' => 'Esconder o botão de filtros do menu lateral',
+        'hidePrimaryMenuImportersButton' => 'Esconder o botão de importadores do menu lateral',
+        'hidePrimaryMenuExportersButton' => 'Esconder o botão de exportadores do menu lateral',
+        'hidePrimaryMenuActivitiesButton' => 'Esconder o botão de atividades do menu lateral',
+        'hidePrimaryMenuCapabilitiesButton' => 'Esconder o botão de permissões do menu lateral'
 	],
 	'Página inicial' => [
 		'hideHomeRepositorySection' => 'Esconder sessão do respositório',
@@ -17,8 +28,7 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideHomeCollectionFiltersButton' => 'Esconder botão de filtros na sessão de coleções',
 		'hideHomeCollectionActivitiesButton' => 'Esconder botão de atividades na sessão de coleções',
 		'hideHomeCollectionThemeCollectionButton' => 'Esconder botão de "ver no tema" na sessão de coleções',
-		'showHomeCollectionCreateItemButton' => 'Mostrar botão de criar item na sessão de coleções',
-		'homeCollectionsPerPage' => 'Total de coleções mostradas'
+		'showHomeCollectionCreateItemButton' => 'Mostrar botão de criar item na sessão de coleções'
 	],
 	'Lista de itens' => [
 		'hideItemsListBulkActionsButton' => 'Esconder botão de ações em massa',
@@ -26,6 +36,7 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideItemsListSelection' => 'Esconder seleção individual de itens',
 		'hideItemsListExposersButton' => 'Esconder botão de "Ver como..."',
 		'hideItemsListStatusTabs' => 'Esconder abas de status',
+		'hideItemsListStatusTabsTotalItems' => 'Esconder o total de itens nas abas de status',
 		'hideItemsListCreationDropdownBulkAdd' => 'Esconder botão de adicionar em massa no dropdown de criação',
 		'hideItemsListCreationDropdownImport' => 'Esconder botão de importar no dropdown de criação',
 		'hideItemsListContextMenu' => 'Esconder menu que aparece com o clique direito',
@@ -479,16 +490,16 @@ function tainacan_set_role_to_restrict_access_items_form()
 	ob_start();
 	?>
 		<div class="name-edition-box tainacan-set-role-to-restrict-access">
-			<label for="set_role_to_restrict_access"><?php _e('Usar esse papel para restringir o acesso dos usuários', 'iphan_inrc'); ?></label>
+			<label for="set_role_to_restrict_access"><?php _e('Restringir acesso dos itens aos que podem ser editados', 'iphan_inrc'); ?></label>
 			<select name="set_role_to_restrict_access" id="set-user-to-restrict-access-select">
 				<option value="yes"><?php _e('Sim', 'iphan_inrc'); ?></option>
 				<option value="no"><?php _e('Não', 'iphan_inrc'); ?></option>
 			</select>
 		</div>
-
+		<br>
 		<div class="name-edition-box tainacan-collections_access_by_role" >
-			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Limitar o acesso do papel as coleções:', 'iphan_inrc'); ?></h2>
-			<ul class="collections-container capabilities-list" style="justify-content: flex-start;">
+			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Restringir acesso apenas ao seguinte conjunto de coleções:', 'iphan_inrc'); ?></h2>
+			<ul class="collections-container capabilities-list" style="justify-content: flex-start; 0 0.5em 0.5em;">
 				<?php foreach($collections as $col): ?>
 					<li style="flex-basis: 400px; margin-right: unset;">
 						<span class="check-column">
@@ -503,10 +514,11 @@ function tainacan_set_role_to_restrict_access_items_form()
 					</li>
 				<?php endforeach; ?>
 			</ul>
+			<p><span class="dashicons dashicons-info"></span><?php _e('Se nenhuma coleção for marcada, todas as com direito de acesso serão vistas obedecendo seu status.', 'iphan_inrc'); ?></p>
 		</div>
-
+		<br>
 		<div class="name-edition-box tainacan-admin-options-by-role" >
-			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Opções da interface administrativa para os usuários desta função', 'iphan_inrc'); ?></h2>
+			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Opções de customização da interface administrativa', 'iphan_inrc'); ?></h2>
 			<div class="admin-options-container capabilities-list" style="justify-content: flex-start;">
 				<?php foreach(IPHAN_TAINACAN_ADMIN_OPTIONS as $tainacan_admin_options_group_name => $tainacan_admin_options_group) : ?>
 					<div 
