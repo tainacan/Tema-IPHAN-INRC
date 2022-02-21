@@ -6,6 +6,9 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideTainacanHeaderAdvancedSearch' => 'Esconder busca avançada no cabeçalho do Tainacan',
 		'hideTainacanHeaderProcessesPopup' => 'Esconder popup de processos no cabeçalho do Tainacan',
 		'hideRepositorySubheaderExportButton' => 'Esconder cabeçalho do repositório',
+		'hideRepositorySubheaderViewCollectionsButton' => 'Esconder botão de ver coleções no cabeçalho do repositório',
+    	'hideRepositorySubheaderViewCollectionButton' => 'Esconder botão de ver coleção no cabeçalho do repositório',
+    	'hideRepositorySubheaderExportButton' => 'Esconder botão de exportar no cabeçalho do repositório',
 		'hideCollectionSubheader' => 'Esconder cabeçalho da coleção',
 		'hidePrimaryMenu' => 'Esconder todo o menu lateral',
 		'hidePrimaryMenuCompressButton' => 'Esconder o botão de comprimir o menu lateral',
@@ -21,7 +24,15 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
         'hidePrimaryMenuCapabilitiesButton' => 'Esconder o botão de permissões do menu lateral'
 	],
 	'Página inicial' => [
-		'hideHomeRepositorySection' => 'Esconder sessão do respositório',
+		'hideHomeRepositorySection' => 'Esconder sessão do repositório',
+		'hideHomeThemeCollectionsButton' => 'Esconder botão das coleções no tema',
+        'hideHomeThemeItemsButton' => 'Esconder botão dos itens no tema',
+        'hideHomeTaxonomiesButton' => 'Esconder botão das taxonomias',
+        'hideHomeMetadataButton' => 'Esconder botão dos metadados nível repositório',
+        'hideHomeFiltersButton' => 'Esconder botão dos filtros nível repositório',
+        'hideHomeImportersButton' => 'Esconder botão dos importadores',
+        'hideHomeExportersButton' => 'Esconder botão dos exportadores',
+        'hideHomeActivitiesButton' => 'Esconder botão de atividades',
 		'hideHomeCollectionsButton' => 'Esconder botão de coleções',
 		'hideHomeCollectionSettingsButton' => 'Esconder botão de configuração na sessão de coleções',
 		'hideHomeCollectionMetadataButton' => 'Esconder botão de metadados na sessão de coleções',
@@ -45,7 +56,11 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 	'Página de edição do item' => [
 		'hideItemEditionCollectionName' => 'Esconder nome da coleção',
 		'hideItemEditionStatusOptions' => 'Esconder opções de status',
+		'hideItemEditionStatusPublishOption' => 'Esconder a opção de status público',
 		'hideItemEditionCommentsToggle' => 'Esconder opção de comentários',
+		'hideItemEditionDocumentFileInput' => 'Esconder entrada de documento tipo Arquivo',
+		'hideItemEditionDocumentTextInput' => 'Esconder entrada de documento tipo Texto',
+		'hideItemEditionDocumentUrlInput' => 'Esconder entrada de documento tipo URL',
 		'hideItemEditionThumbnail' => 'Esconder miniatura'
 	],
 	'Página do item' => [
