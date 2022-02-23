@@ -10,7 +10,7 @@
 
 if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('IPHAN_INRC_VERSION', '0.0.9');
+	define('IPHAN_INRC_VERSION', '0.0.11');
 }
 
 if (!function_exists('iphan_inrc_setup')) :
