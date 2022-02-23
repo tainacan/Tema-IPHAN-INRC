@@ -119,7 +119,8 @@ function IPHAN_get_restrictive_ids($type = 'items')
 								'value' => [get_current_user_id()],
 								'compare' => 'IN'
 							]
-						]
+							],
+						'per_page' => 1
 					),
 					$collection_id,
 					'WP_Query'
@@ -187,10 +188,11 @@ function IPHAN_get_allowed_users_id_cap($item)
 					$items_id = $el->get_value();
 					$items_id = is_array($items_id) ? $items_id: [$items_id];
 					foreach($items_id as $id) {
-						$_item = new \Tainacan\Entities\Item($id);
-						$_meta = new \Tainacan\Entities\Metadatum($group_manager_metadata_id[$idx]);
-						$_item_metadata = new Tainacan\Entities\Item_Metadata_Entity($_item, $_meta);
-						$_value = $_item_metadata->get_value();
+						// $_item = new \Tainacan\Entities\Item($id);
+						// $_meta = new \Tainacan\Entities\Metadatum($group_manager_metadata_id[$idx]);
+						// $_item_metadata = new Tainacan\Entities\Item_Metadata_Entity($_item, $_meta);
+						// $_value = $_item_metadata->get_value();
+						$_value = get_post_meta( $id, $group_manager_metadata_id[$idx] );
 						$_value = is_array($_value)? $_value: [$_value];
 						$ids = array_merge($ids, $_value);
 					}
