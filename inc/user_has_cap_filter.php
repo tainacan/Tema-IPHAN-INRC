@@ -107,8 +107,8 @@ function IPHAN_get_control_collections_ids() {
 					'field' => 'slug',
 					'terms' => 'control'
 				)
-			),
-		),
+			)
+		)
 	);
 	if ( $wp_query->have_posts() ) {
 		foreach ( $wp_query->posts as $p ) {
