@@ -396,6 +396,30 @@ function IPHAN_tainacan_fetch_collections_args($args, $user)
 		if( isset($args['post__in']) ) $col_ids = array_merge($col_ids, $args['post__in']);
 		$args['post__in'] = $col_ids;
 	}
+
+	if (!$user->has_cap('manage_tainacan')) {
+		$control_collections_ids = [];
+		$wp_query = new \WP_Query(
+			array(
+				'post_type' => \Tainacan\Entities\Collection::$post_type,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'category',
+						'field' => 'slug',
+						'terms' => 'control'
+					)
+				),
+			),
+		);
+		if ( $wp_query->have_posts() ) {
+			foreach ( $wp_query->posts as $p ) {
+				$control_collections_ids[] = $p->ID;
+			}
+		}
+		$args['post__not_in'] = $control_collections_ids;
+		
+		
+	}
 	return $args;
 }
 
