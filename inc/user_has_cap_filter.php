@@ -377,6 +377,10 @@ function IPHAN_tainacan_fetch_items_args($args, $user)
 
 function IPHAN_tainacan_fetch_collections_args($args, $user)
 {
+	if ( $args['posts_per_page'] == -1) {
+		return $args;
+	}
+
 	$roles = $user->roles;
 	$exist_restrictive_roles = !empty(array_intersect(IPHAN_get_restrictive_roles(), $roles));
 
@@ -421,10 +425,11 @@ function IPHAN_tainacan_fetch_collections_args($args, $user)
 		$args['post__in'] = $col_ids;
 	}
 
-	if (!$user->has_cap('manage_tainacan')) {
+	if (!$user->has_cap('manage_tainacan') ) {
 		$control_collections_ids = IPHAN_get_control_collections_ids();
 		$args['post__not_in'] = $control_collections_ids;
 	}
+
 	return $args;
 }
 
