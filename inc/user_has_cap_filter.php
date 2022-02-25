@@ -96,6 +96,28 @@ function IPHAN_get_collections_access_by_user()
 	return empty($collections_ids) ? false : $collections_ids;
 }
 
+function IPHAN_get_control_collections_ids() {
+	$control_collections_ids = [];
+	$wp_query = new \WP_Query(
+		array(
+			'post_type' => \Tainacan\Entities\Collection::$post_type,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'category',
+					'field' => 'slug',
+					'terms' => 'control'
+				)
+			),
+		),
+	);
+	if ( $wp_query->have_posts() ) {
+		foreach ( $wp_query->posts as $p ) {
+			$control_collections_ids[] = $p->ID;
+		}
+	}
+	return $control_collections_ids;
+}
+
 function IPHAN_get_restrictive_ids($type = 'items')
 {
 	$repositories_metadata = \tainacan_metadata();
@@ -229,11 +251,13 @@ function IPHAN_user_has_cap_filter( $allcaps, $caps, $args, $user )
 		if ( is_numeric( $entity_id ) )
 		{
 			$item = $repositories_items->fetch( (int) $entity_id );
-
 			if ( $item instanceof \Tainacan\Entities\Item && $item->get_status() != 'auto-draft')
 			{
+				$control_collections_ids = IPHAN_get_control_collections_ids();
+				$col_id = $item->get_collection_id();
+
 				$allowed_users_id = IPHAN_get_allowed_users_id_cap($item);
-				if($allowed_users_id === false)
+				if( $allowed_users_id === false || in_array($col_id, $control_collections_ids) )
 				{
 					return $allcaps;
 				}
@@ -398,27 +422,8 @@ function IPHAN_tainacan_fetch_collections_args($args, $user)
 	}
 
 	if (!$user->has_cap('manage_tainacan')) {
-		$control_collections_ids = [];
-		$wp_query = new \WP_Query(
-			array(
-				'post_type' => \Tainacan\Entities\Collection::$post_type,
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'category',
-						'field' => 'slug',
-						'terms' => 'control'
-					)
-				),
-			),
-		);
-		if ( $wp_query->have_posts() ) {
-			foreach ( $wp_query->posts as $p ) {
-				$control_collections_ids[] = $p->ID;
-			}
-		}
+		$control_collections_ids = IPHAN_get_control_collections_ids();
 		$args['post__not_in'] = $control_collections_ids;
-		
-		
 	}
 	return $args;
 }
