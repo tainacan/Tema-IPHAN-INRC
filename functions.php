@@ -243,7 +243,8 @@ function iphan_inrc_customize_control_collection_css()
 					'key' => '_option_collection_id',
 					'value' => $control_collection_id
 				]
-			]
+			],
+			'perpage' => -1
 		], 'OBJECT');
 
 		if ( empty($control_collection_metadatas) )

@@ -93,7 +93,8 @@ class IPHANCategoryCollection {
 					'field' => 'slug',
 					'terms' => 'control'
 				)
-			)
+			),
+			'perpage' => -1	
 		);
 		$collections = $collections_repository->fetch($args, 'OBJECT');
 		return $collections;
