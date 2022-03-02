@@ -58,6 +58,7 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideItemEditionStatusOptions' => 'Esconder opções de status',
 		'hideItemEditionStatusPublishOption' => 'Esconder a opção de status público',
 		'hideItemEditionCommentsToggle' => 'Esconder opção de comentários',
+		'hideItemEditionDocument' => 'Esconder por completo entrada de documento',
 		'hideItemEditionDocumentFileInput' => 'Esconder entrada de documento tipo Arquivo',
 		'hideItemEditionDocumentTextInput' => 'Esconder entrada de documento tipo Texto',
 		'hideItemEditionDocumentUrlInput' => 'Esconder entrada de documento tipo URL',
@@ -68,6 +69,7 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideItemSingleCurrentStatus' => 'Esconder status',
 		'hideItemSingleCurrentVisibility' => 'Esconder visibilidade',
 		'hideItemSingleCommentsOpen' => 'Esconder condição dos comentários',
+		'hideItemSingleDocument' => 'Esconder documento',
 		'hideItemSingleThumbnail' => 'Esconder miniatura',
 		'hideItemSingleActivities' => 'Esconder atividades',
 		'hideItemSingleExposers' => 'Esconder botão de "Ver como..."'
