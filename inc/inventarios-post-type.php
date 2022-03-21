@@ -115,9 +115,10 @@ function iphan_inrc_metabox_inventario_content($inventario) {
             Item
         </label>
         <select id="inventario-item-id" name="inventario-item-id">
+            <option value=""><?php echo __('Nenhum item selecionado.' , 'iphan-inrc'); ?></option>
             <?php 
                 foreach($items->posts as $item) {
-                    echo '<option value="' . $item->ID . '" ' . ($selected == $item->ID ? 'selected="selected"' : '') . '>' . $item->post_title . '</option>';
+                    echo '<option value="' . $item->ID . '" ' . (( !empty($selected) && $selected == $item->ID ) ? 'selected="selected"' : '') . '>' . $item->post_title . '</option>';
                 }
             ?>
         </select>

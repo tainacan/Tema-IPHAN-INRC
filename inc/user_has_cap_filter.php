@@ -62,7 +62,8 @@ define('IPHAN_TAINACAN_ADMIN_OPTIONS', [
 		'hideItemEditionDocumentFileInput' => 'Esconder entrada de documento tipo Arquivo',
 		'hideItemEditionDocumentTextInput' => 'Esconder entrada de documento tipo Texto',
 		'hideItemEditionDocumentUrlInput' => 'Esconder entrada de documento tipo URL',
-		'hideItemEditionThumbnail' => 'Esconder miniatura'
+		'hideItemEditionThumbnail' => 'Esconder miniatura',
+		'allowItemEditionModalInsideModal' => 'Permitir modal de criação de itens dentro de outro modal'
 	],
 	'Página do item' => [
 		'hideItemSingleCollectionName' => 'Esconder nome da coleção',

@@ -10,7 +10,7 @@
 
 if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('IPHAN_INRC_VERSION', '0.1.0');
+	define('IPHAN_INRC_VERSION', '0.1.3');
 }
 
 if (!function_exists('iphan_inrc_setup')) :
@@ -189,6 +189,7 @@ function iphan_inrc_scripts()
 
 	wp_enqueue_script('iphan_inrc-carousels', get_template_directory_uri() . '/js/carousel.js', array('jquery'), IPHAN_INRC_VERSION, true);
 
+
 	//register e enqueue swiper
 	wp_register_script('iphan-swiper',  get_template_directory_uri() . '/assets/swiper-bundle.js', array('jquery'), IPHAN_INRC_VERSION, true);
 	wp_enqueue_script('iphan-swiper');
@@ -208,6 +209,19 @@ function iphan_inrc_scripts()
 }
 add_action('wp_enqueue_scripts', 'iphan_inrc_scripts');
 
+function iphan_inrc_admin_scripts()
+{
+	if ( is_user_logged_in() ) {
+		$user = wp_get_current_user();
+		$roles = ( array ) $user->roles;
+
+		if ( in_array('tainacan-usuario_logado', $roles) ) {
+			wp_enqueue_script('iphan_redirects', get_template_directory_uri() . '/js/redirect.js', array(), IPHAN_INRC_VERSION, true);
+		}
+	}
+}
+add_action('admin_enqueue_scripts', 'iphan_inrc_admin_scripts');
+
 function iphan_inrc_enqueue_editor_scripts()
 {
 	// Logic for changing core/button via wp.hooks
@@ -215,6 +229,18 @@ function iphan_inrc_enqueue_editor_scripts()
 }
 add_action('enqueue_block_editor_assets', 'iphan_inrc_enqueue_editor_scripts');
 
+add_action('pre_get_posts', function($query) {
+    if ( !is_admin() && $query->is_archive() && is_post_type_archive( 'tainacan-collection' ) ) {
+        $tax_query = array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => 'control',
+            'operator'=> 'NOT IN' 
+        );
+        $query->tax_query->queries[] = $tax_query; 
+   		$query->query_vars['tax_query'] = $query->tax_query->queries;
+    }
+});
 
 function iphan_inrc_customize_control_collection_css()
 {
@@ -433,10 +459,10 @@ function iphan_set_tainacan_admin_options($options) {
 
 					if ($option == 'hideHomeCollectionsButton') {
 						$iphan_tainacan_admin_options['homeCollectionsPerPage'] = 18;
-						$iphan_tainacan_admin_options['homeCollectionsOrderBy'] = 'title';
-						$iphan_tainacan_admin_options['homeCollectionsOrder'] = 'asc';
 					}
 				}
+				$iphan_tainacan_admin_options['homeCollectionsOrderBy'] = 'title';
+				$iphan_tainacan_admin_options['homeCollectionsOrder'] = 'asc';
 			}
 		}
 		$options = array_merge($options, $iphan_tainacan_admin_options);
