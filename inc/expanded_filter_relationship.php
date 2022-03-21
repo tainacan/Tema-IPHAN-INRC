@@ -241,8 +241,8 @@ function tainacan_expanded_filter_relationship_update_filter_values($item_metada
 		foreach ($metadata as $item_metadatum) {
 			$options = $item_metadatum->get_metadata_type_options();
 			$meta_id = $options['meta_id'];
-			$relationship_metadata = \tainacan_metadata()->fetch($meta_id);
-			if ($relationship_metadata->get_metadata_type() != 'Tainacan\Metadata_Types\Compound') {
+			$relationship_metadata = \tainacan_metadata()->fetch($meta_id, 'OBJECT');
+			if ($relationship_metadata instanceof \Tainacan\Entities\Metadatum && $relationship_metadata->get_metadata_type() != 'Tainacan\Metadata_Types\Compound') {
 				$item_metadata = new \Tainacan\Entities\Item_Metadata_Entity( $relationship_item, $relationship_metadata );
 				$value = $relationship_metadata->is_multiple() ? $item_metadata->get_value() : [$item_metadata->get_value()];
 				if(!isset($values[$meta_id])) {
