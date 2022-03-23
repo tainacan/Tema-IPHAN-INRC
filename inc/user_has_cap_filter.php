@@ -110,7 +110,8 @@ function IPHAN_get_control_collections_ids() {
 					'field' => 'slug',
 					'terms' => 'control'
 				)
-			)
+			),
+			'posts_per_page' => -1
 		)
 	);
 	if ( $wp_query->have_posts() ) {
@@ -260,7 +261,13 @@ function IPHAN_user_has_cap_filter( $allcaps, $caps, $args, $user )
 				$col_id = $item->get_collection_id();
 
 				$allowed_users_id = IPHAN_get_allowed_users_id_cap($item);
-				if( $allowed_users_id === false || in_array($col_id, $control_collections_ids) )
+				$collections_access_by_user = IPHAN_get_collections_access_by_user();
+
+				if( 
+					$allowed_users_id === false 
+					|| in_array($col_id, $control_collections_ids) 
+					|| $collections_access_by_user !== false && in_array($col_id, $collections_access_by_user)
+					)
 				{
 					return $allcaps;
 				}
