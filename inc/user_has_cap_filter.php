@@ -266,7 +266,7 @@ function IPHAN_user_has_cap_filter( $allcaps, $caps, $args, $user )
 				if( 
 					$allowed_users_id === false 
 					|| in_array($col_id, $control_collections_ids) 
-					|| $collections_access_by_user !== false && in_array($col_id, $collections_access_by_user)
+					|| ($collections_access_by_user !== false && in_array($col_id, $collections_access_by_user))
 					)
 				{
 					return $allcaps;
