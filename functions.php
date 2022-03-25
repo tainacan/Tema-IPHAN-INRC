@@ -10,7 +10,7 @@
 
 if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('IPHAN_INRC_VERSION', '0.1.3');
+	define('IPHAN_INRC_VERSION', '0.1.5');
 }
 
 if (!function_exists('iphan_inrc_setup')) :
@@ -335,6 +335,9 @@ function iphan_inrc_customize_control_collection_css()
 				.columns.is-fullheight.tainacan-admin-collection-item-edition-mode>.column>#collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type>.b-tabs .sub-header {
 					display: none;
 					visibility: hidden;
+				}
+				.columns.is-fullheight.tainacan-admin-collection-item-edition-mode>.column>#collection-page-container[collection-id="' . $control_collection_id . '"]>.tainacan-form>.columns>.column:first-of-type>.b-tabs>.tab-content {
+					border-top: none;
 				}
 				.columns.is-fullheight.tainacan-admin-collection-item-edition-mode>.column>#collection-page-container[collection-id="' . $control_collection_id . '"].page-container .tainacan-page-title {
 					margin-bottom: 12px;

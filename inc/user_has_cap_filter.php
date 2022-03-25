@@ -544,15 +544,16 @@ function tainacan_set_role_to_restrict_access_items_form()
 	ob_start();
 	?>
 		<div class="name-edition-box tainacan-set-role-to-restrict-access">
-			<label for="set_role_to_restrict_access"><?php _e('Restringir acesso dos itens aos que podem ser editados', 'iphan_inrc'); ?></label>
+			<label for="set_role_to_restrict_access"><?php _e('Restringir edição dos itens baseado no relacionamento e equipe', 'iphan_inrc'); ?></label>
 			<select name="set_role_to_restrict_access" id="set-user-to-restrict-access-select">
 				<option value="yes"><?php _e('Sim', 'iphan_inrc'); ?></option>
 				<option value="no"><?php _e('Não', 'iphan_inrc'); ?></option>
 			</select>
+			<p><span class="dashicons dashicons-info"></span>&nbsp;<?php _e('Se um usuário desta função/papel estiver listado no metadado tipo usuário ("equipe") com a configuração "Restringir acesso aos usuários" de uma coleção A que também tiver um metadado de relacionamento com uma coleção B, este usuário somente poderá editar itens na coleção B, onde o metadado de relacionamento com a A tiver como valor coleção onde o usuário faz parte da equipe.', 'iphan_inrc'); ?></p>
 		</div>
 		<br>
 		<div class="name-edition-box tainacan-collections_access_by_role" >
-			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Restringir acesso apenas ao seguinte conjunto de coleções:', 'iphan_inrc'); ?></h2>
+			<h2 style="margin-bottom: -1em; font-size: 0.875rem;"><?php _e('Conceder acesso também ao seguinte conjunto de coleções:', 'iphan_inrc'); ?></h2>
 			<ul class="collections-container capabilities-list" style="justify-content: flex-start; 0 0.5em 0.5em;">
 				<?php foreach($collections as $col): ?>
 					<li style="flex-basis: 400px; margin-right: unset;">
@@ -568,7 +569,7 @@ function tainacan_set_role_to_restrict_access_items_form()
 					</li>
 				<?php endforeach; ?>
 			</ul>
-			<p><span class="dashicons dashicons-info"></span><?php _e('Se nenhuma coleção for marcada, todas as com direito de acesso serão vistas obedecendo seu status.', 'iphan_inrc'); ?></p>
+			<p><span class="dashicons dashicons-info"></span>&nbsp;<?php _e('Se nenhuma coleção for marcada, todas as com direito de acesso serão vistas obedecendo seu status.', 'iphan_inrc'); ?></p>
 		</div>
 		<br>
 		<div class="name-edition-box tainacan-admin-options-by-role" >
