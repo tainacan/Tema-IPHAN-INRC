@@ -155,11 +155,6 @@
             }
         }
     }
-    ul > li:first-child {
-        @media screen and (max-width: $screen__sm) {
-            margin-top: 30px;
-        }
-    }
     a {
         display: block;
         text-decoration: none;
@@ -253,8 +248,8 @@
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
         padding-top: 5px;
         border: none;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
         margin-left: 15px;
         padding-bottom: 10px;
         z-index: 2;
@@ -358,7 +353,10 @@
     }
 }
 
-.menu-menu-1-container {
+#site-navigation.toggled.main-navigation > button+div{
+    display: flex;
+    justify-content: flex-end;
+
     @media screen and (max-width: $screen__sm) and (orientation: landscape) {
         margin-top: 4%;
         position: absolute;
@@ -377,7 +375,7 @@
     }
 
     @media screen and (max-width: $screen__sm) and (orientation: portrait) {
-        margin-top: 7%;
+        margin-top: 22px;
         position: absolute;
         left: 0;
         background: $color__branco;
@@ -465,12 +463,10 @@
         }
         @media screen and (max-width: $screen__sm) and (orientation: portrait) {
             position: relative;
-            left: auto;
             background: $color__branco;
             width: 86%;
             height: auto;
             z-index: 20;
-            right: 64%;
         }
         @media screen and (max-width: $screen__sm) and (orientation: landscape) {
             position: absolute;
@@ -500,6 +496,7 @@
         border: 1px solid $color__vermelho1;
         padding-left: 4px;
         padding-right: 4px;
+        padding-top: 4px;
     }
     & > .tainacan-icon-showmore:before:hover {
         border: 1px solid $color__branco;

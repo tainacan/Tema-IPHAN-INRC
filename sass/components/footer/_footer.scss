@@ -10,6 +10,8 @@
     background-image: $gradiente__vermelho;
     color: $color__branco;
     font-family: $font__heading;
+    overflow-x: hidden;
+    max-width: 100%;
     a,
     a:hover,
     a:focus,

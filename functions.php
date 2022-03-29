@@ -10,7 +10,7 @@
 
 if (!defined('IPHAN_INRC_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('IPHAN_INRC_VERSION', '0.1.5');
+	define('IPHAN_INRC_VERSION', '0.1.6');
 }
 
 if (!function_exists('iphan_inrc_setup')) :
@@ -435,6 +435,18 @@ function iphan_inrc_customize_form_hooks_css() {
 		#collection-page-container .form-hook-region {
 			display: block;
 			visibility: visible;
+		}
+
+		/* Hides disabled inputs on the media frame when user does not have permission to edit them. Avoid frustration...*/
+		.tainacan-document-modal input:disabled,
+		.tainacan-document-modal input[readonly],
+		.tainacan-document-modal textarea:disabled,
+		.tainacan-document-modal textarea[readonly],
+		.tainacan-item-attachments-modal input:disabled,
+		.tainacan-item-attachments-modal input[readonly],
+		.tainacan-item-attachments-modal textarea:disabled,
+		.tainacan-item-attachments-modal textarea[readonly] {
+			display: none !important;
 		}
 	';
 	
